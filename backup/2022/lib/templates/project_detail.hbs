@@ -1,0 +1,36 @@
+
+	<h1>{{title}}</h1>
+
+	<p class="role">{{role}}</p>
+
+	<p class="link"><a href="{{url}}">{{url}}</a></p>
+
+    <figure>
+    	{{#if masthead.video}}
+			<video autoplay loop muted preload="auto" playsinline data-parallax="62" src="{{masthead.video}}" type="video/mp4">
+			</video>
+    	{{else}}
+    		{{#if masthead.image}}
+			<img src="{{masthead.image}}" alt="masthead.caption" data-parallax="40">
+			{{else}}
+			<img src="{{masthead}}" alt="title" data-parallax="40">
+    		{{/if}}
+    	{{/if}}			
+        <!-- {{#if masthead.caption}}<figcaption>{{masthead.caption}}</figcaption>{{/if}} -->
+    </figure>
+
+    <svg version="1.1" id="scrollhint" data-scrolltarget="summary" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="60px" height="20px" viewBox="0 0 53 20" enable-background="new 0 0 53 20" xml:space="preserve"><g><polygon points="26.5,17.688 9.114,3.779 10.303,2.312 26.5,15.269 42.697,2.313 43.886,3.779"></polygon></g></svg>
+
+</header>
+
+<div id="main">
+
+	{{#if summary}}
+	<div id="summary" class="description">
+		<p>{{{summary}}}</p>
+	</div>
+	{{/if}}
+
+	{{{content}}}
+
+</div>

@@ -1,0 +1,22 @@
+{{#each this}}
+    <article id="post-{{@index}}" {{#if slug}}data-slug="{{slug}}"{{/if}} class="post fade slide" data-spy="scroll">
+    {{#if thumbnail}}
+        <figure>
+            <a href="/blog/#/{{slug}}"><img src="{{thumbnail}}" alt=""></a>
+            <figcaption>{{masthead.caption}}</figcaption>
+        </figure>
+    {{/if}}
+    {{#if title}}
+        <h2><a href="/blog/#/{{slug}}">{{title}}</a></h2>
+        {{#if pubDate}}<h4 class="date">{{pubDate}}</h4>{{/if}}
+        {{#if summary}}<p class="description">{{summary}}</p>{{/if}}
+        <p class="readmore"><a href="/blog/#/{{slug}}">Read more</a></p>
+    {{else}}
+        <blockquote>{{text}}</blockquote>
+        {{#if pubDate}}<h4 class="date">{{pubDate}}</h4>{{/if}}
+    {{/if}}
+    </article>
+{{/each}}
+
+<nav id="pagination" class="pagination container"></nav>
+

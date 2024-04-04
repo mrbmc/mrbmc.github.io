@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Imagetoolbar" content="" />
+
+    <title>Portfolio | Brian McConnell</title>
+    <meta name="description" content="Brian McConnell is a design executive with a unique background in design, product, engineering and entrepreneurship. His mission as a leader is to create a competitive advantage through design.">
+
+    <link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png">
+    <link rel="apple-touch-icon" href="/img/favicon/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preload" as="font" type="font/woff" href="/css/fonts/socicon/socicon.woff" crossorigin>
+    <link rel="preload" as="style" href="/css/screen.min.css">
+	<!-- <link rel="preload" as="script" href="/js/handlebars.runtime.min.js"> -->
+	<link rel="preload" as="script" href="/js/mrbmc.min.js">
+	<link rel="preload" as="script" href="/js/portfolio.min.js">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/screen.min.css" />
+
+</head>
+
+<body class="portfolio" id="portfolio-body" data-target="#portfolio-nav" data-offset="100">
+
+{{> header }}
+
+<article id="item-detail"></article>
+
+{{> project_list }}
+
+<section id="projectGallery" class="gallery"></section>
+
+{{> footer }}
+
+
+<script type="text/javascript" language="javascript" src="/js/handlebars.runtime.min.js"></script>
+<script type="text/javascript" language="javascript" src="/js/mrbmc.min.js"></script>
+<script type="text/javascript" language="javascript" src="/js/portfolio.min.js"></script>
+
+</body>
+
+</html>

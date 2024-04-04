@@ -1,0 +1,17 @@
+<div class="detail in">
+	<img src="#" alt="" id="gallery-image">
+  <p class="caption" id="gallery-caption"></p>
+	<img src="/img/loading.svg" class="loading" alt="Loading">
+</div>
+<nav class="index">
+	{{#each this}}
+		<a href="/photos/#/{{id}}" class="thumbnail">
+			<img src="{{url_t}}" alt="{{title}}" border="0" />
+		</a>
+	{{/each}}
+</nav>
+<nav class="paging">
+	<a href="#" class="close">&#x2715;</a>
+  <a href="#" class="page-rev"><span class="icon-prev"></a>
+  <a href="#" class="page-fwd"><span class="icon-next"></a>
+</nav>

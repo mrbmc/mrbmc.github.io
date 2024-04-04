@@ -1,0 +1,24 @@
+	{{#each story}}
+	<section class="story" {{#if style}}style="{{style}}"{{/if}}>
+
+		<div class="description container">
+			{{#if title}}<h2>{{title}}</h2>{{/if}}
+			{{#if description}}<p>{{paragraphs description}}</p>{{/if}}
+		</div>
+
+		<div class="gallery col{{image.length}}">
+			<ul class="index">
+				{{#each image}}
+					<li class="thumbnail" data-src="{{this}}" data-title="{{title}}" data-index="{{@index}}">
+						<a href="{{this}}"><img src="{{this}}" alt="" border="0" /></a>
+					</li>
+				{{/each}}
+			</ul>
+		    <div class="paging">
+		      <a href="#" class="page-rev"><span class="icon-circle-left"></span></a>
+		      <a href="#" class="page-fwd"><span class="icon-circle-right"></span></a>
+		    </div>
+	    </div>
+
+	</section>
+	{{/each}}

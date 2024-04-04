@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Imagetoolbar" content="" />
+
+    <title>Portfolio | Brian McConnell</title>
+    <meta name="description" content="Brian McConnell is a design executive with a unique background in design, product, engineering and entrepreneurship. His mission as a leader is to create a competitive advantage through design.">
+
+    <link rel="icon" type="image/png" href="/img/favicon/favicon-32x32.png">
+    <link rel="apple-touch-icon" href="/img/favicon/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preload" as="font" type="font/woff" href="/css/fonts/socicon/socicon.woff" crossorigin>
+    <link rel="preload" as="style" href="/css/screen.min.css">
+	<!-- <link rel="preload" as="script" href="/js/handlebars.runtime.min.js"> -->
+	<link rel="preload" as="script" href="/js/mrbmc.min.js">
+	<link rel="preload" as="script" href="/js/portfolio.min.js">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/screen.min.css" />
+
+</head>
+
+<body class="portfolio" id="portfolio-body" data-target="#portfolio-nav" data-offset="100">
+
+<header id="header">
+    <a class="nav-home brand" href="/">BMC</a>
+    <nav id="menu">
+        <a href="javascript:history.back();" id="close-menu">Close</a>
+        <a class="nav-about" href="/about.html" title="About">About</a>
+        <a class="nav-portfolio" href="/portfolio/" title="Portfolio">Work</a>
+        <a class="nav-cv" href="/cv.html" title="Resumé">CV</a>
+        <a class="nav-photos" href="/photos.html" title="Gallery">Photos</a>
+        <a class="nav-blog" href="/blog/" title="Blog">Blog</a>
+        <a class="nav-contact" href="#contact" title="Contact">Contact</a>
+    </nav>
+    <a href="#menu" id="open-menu"></a>
+</header>
+
+<article id="item-detail"></article>
+
+<section id="item-list" class="portfolio">
+	<article id="project-0" data-slug="disney" class="project">
+		<a href="/portfolio/#/disney">
+			<img src="/img/portfolio/thumbs/disney-teaser-16x9.jpg" alt="Disney+" border="0" />
+		</a>
+	</article>
+	<article id="project-1" data-slug="espn" class="project">
+		<a href="/portfolio/#/espn">
+			<img src="/img/portfolio/thumbs/espn-teaser-16x9.jpg" alt="ESPN+" border="0" />
+		</a>
+	</article>
+	<article id="project-2" data-slug="eurosport" class="project">
+		<a href="/portfolio/#/eurosport">
+			<img src="/img/portfolio/eurosport-thumb.jpg" alt="Eurosport Player" border="0" />
+		</a>
+	</article>
+	<article id="project-3" data-slug="nhl" class="project">
+		<a href="/portfolio/#/nhl">
+			<img src="/img/portfolio/thumbs/nhl-teaser-16x9.jpg" alt="NHL.tv and apps" border="0" />
+		</a>
+	</article>
+	<article id="project-4" data-slug="securityscorecard" class="project">
+		<a href="/portfolio/#/securityscorecard">
+			<img src="/img/portfolio/thumbs/security-cover-16x9.jpg" alt="Security Scorecard" border="0" />
+		</a>
+	</article>
+	<article id="project-5" data-slug="blogtalkradio" class="project">
+		<a href="/portfolio/#/blogtalkradio">
+			<img src="/img/portfolio/thumbs/btr-cover-16x9.jpg" alt="BlogTalkRadio" border="0" />
+		</a>
+	</article>
+</section>
+
+<section id="projectGallery" class="gallery"></section>
+
+<footer>
+    <div class="container">
+        <nav>
+
+            <a href="#" data-part1="b" data-part2="brianmcconnell" data-part3="me" data-part4="Website inquiry" class="link-email">
+                <svg class="svg-icon" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M873.8 304.9l-367 211.9-357.6-206.4v-30.8c0-36.4 29.5-66 66-66H808c36.4 0 66 29.5 66 66v25.3z m0 76.1v359.6c0 36.4-29.5 66-66 66H215.1c-36.4 0-66-29.5-66-66V386.5l341.3 197c11.7 6.8 25.8 5.5 36-2 0.5-0.2 0.9-0.5 1.4-0.7l346-199.8z"  /></svg>
+            </a>
+            <script type="text/javascript">
+            //<![CDATA[
+            <!--
+            var links = document.getElementsByClassName('link-email');
+            for (const link of links) {
+              var attrs = link.dataset;
+              link.setAttribute(
+                "href",
+                `mailto:${attrs.part1}@${attrs.part2}.${attrs.part3}?subject=${attrs.part4}`
+              );
+            }
+            //-->
+            //]]>
+            </script>
+
+            <a href="http://linkedin.com/in/mrbmc" class="link-linkedin">
+                <svg height="72" viewBox="0 0 72 72" width="72" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M8,72 L64,72 C68.418278,72 72,68.418278 72,64 L72,8 C72,3.581722 68.418278,-8.11624501e-16 64,0 L8,0 C3.581722,8.11624501e-16 -5.41083001e-16,3.581722 0,8 L0,64 C5.41083001e-16,68.418278 3.581722,72 8,72 Z" fill="#007EBB"/><path d="M62,62 L51.315625,62 L51.315625,43.8021149 C51.315625,38.8127542 49.4197917,36.0245323 45.4707031,36.0245323 C41.1746094,36.0245323 38.9300781,38.9261103 38.9300781,43.8021149 L38.9300781,62 L28.6333333,62 L28.6333333,27.3333333 L38.9300781,27.3333333 L38.9300781,32.0029283 C38.9300781,32.0029283 42.0260417,26.2742151 49.3825521,26.2742151 C56.7356771,26.2742151 62,30.7644705 62,40.051212 L62,62 Z M16.349349,22.7940133 C12.8420573,22.7940133 10,19.9296567 10,16.3970067 C10,12.8643566 12.8420573,10 16.349349,10 C19.8566406,10 22.6970052,12.8643566 22.6970052,16.3970067 C22.6970052,19.9296567 19.8566406,22.7940133 16.349349,22.7940133 Z M11.0325521,62 L21.769401,62 L21.769401,27.3333333 L11.0325521,27.3333333 L11.0325521,62 Z" fill="#FFF"/></g><title>linkedin.com/in/mrbmc</title></svg>
+            </a>
+            <a href="https://mrbmc.medium.com/" class="link-medium">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1043.63 592.71" class="aa bb"><g data-name="Layer 2"><g data-name="Layer 1"><path d="M588.67 296.36c0 163.67-131.78 296.35-294.33 296.35S0 460 0
+    296.36 131.78 0 294.34 0s294.33 132.69 294.33 296.36M911.56 296.36c0
+    154.06-65.89 279-147.17 279s-147.17-124.94-147.17-279 65.88-279
+    147.16-279 147.17 124.9 147.17 279M1043.63 296.36c0 138-23.17 249.94-51.76
+    249.94s-51.75-111.91-51.75-249.94 23.17-249.94 51.75-249.94 51.76 111.9
+    51.76 249.94"></path></g></g><title>https://mrbmc.medium.com/</title></svg>
+            </a>
+            <a href="https://www.strava.com/athletes/773650" class="link-strava">
+                <svg height="512px" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="_x33_23-strava"><g><polygon points="226.172,26.001 90.149,288.345 170.29,288.345 226.172,184.036 281.605,288.345     361.116,288.345   " style="fill:#FF5500;"/><polygon points="361.116,288.345 321.675,367.586 281.605,288.345 220.871,288.345 321.675,485.999     421.851,288.345   " style="fill:#FFAF8A;"/></g></g><g id="Layer_1"/><title>strava.com/athletes/mrbmc</title></svg>
+            </a>
+        </nav>
+    </div>
+</footer>
+
+
+<script type="text/javascript" language="javascript" src="/js/handlebars.runtime.min.js"></script>
+<script type="text/javascript" language="javascript" src="/js/mrbmc.min.js"></script>
+<script type="text/javascript" language="javascript" src="/js/portfolio.min.js"></script>
+
+</body>
+
+</html>

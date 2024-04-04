@@ -1,0 +1,17 @@
+<section id="item-list" class="portfolio">
+	{{#each this.projects}}
+	<article id="project-{{@index}}" {{#if slug}}data-slug="{{slug}}"{{/if}} class="project">
+		<a href="/portfolio/#/{{slug}}">
+		{{#if thumbnail}}
+			<img src="{{thumbnail}}" alt="{{title}}" border="0" />
+		{{else}}
+			{{#if masthead }}
+				<img src="{{masthead}}" alt="{{title}}" border="0" />
+			{{else}}
+				<img src="{{slides.0.image}}" alt="{{title}}" border="0" />
+			{{/if}}
+		{{/if}}
+		</a>
+	</article>
+	{{/each}}
+</section>

@@ -1,0 +1,41 @@
+title: Blog Talk Radio
+summary: |
+A complete overhaul of the User Experience for creating & managing podcasts on BlogTalkRadio. Interviews and usability labs with users helped us identify pain points that we turned into opportunities.
+---
+## Key Results
+- 25% increase in total paid subscriptions.
+- 15% increase in monthly subscription revenue
+- 100%+ increase in user activation (host created 3+ episodes).
+
+## Podcast Studio
+
+The Studio is the heart of the BTR experience and it's the UI that hosts interact with during the highest stress moments of creating a podcast. User interviews with our host customers revealed important workflow hints around key features; and a lot about the emotional state during a live prodcast.
+
+##### Key UX research insights:
+- Producing a live interview for radio or podcast is a performance scenario which requires focus and preparation.
+- Discoverability is key in a high pressure operation
+- Sound clips are used for pre-baked intro and outros.
+- Multiple affordances for caller states help first-time hosts.
+- Feedback about the show state.
+
+<p>The art direction was inspired by high-end Audio & Video authoring applications. We wanted to convey a serious, professional grade application for our hosts to work with.</p>
+
+||!['BTR Studio'](/img/portfolio/btr-studio.png)||!['Ad Editor'](/img/portfolio/btr-ad-editor.png)||
+
+
+## Host Dashboard
+
+By far the most common workflow we saw almost every host take in the dashboard was viewing the listen numbers for their content. Hosts wanted to see a quantifiable reward for their effort. We surfaced these metrics and created new summary metrics in the dashboard to amplify the ROI for them.
+
+||![](/img/portfolio/btr-hosttools-dashboard.png)||
+
+## Podcast Writing Tips
+
+The metrics were a useful indicator for the podcast health but they didn't provide the qualitative guidance that hosts needed to improve those numbers. The competitive landscape of support for hosts focused mostly on technical guidance for sound quality and distribiution. There was no guidance on how to write a compellign script, structure the show intro, or write compelling titles that inspire the audience to listen.
+
+We knew from our own metrics that the first 30 seconds of a podcast episode were the most critical for engaging your audience and getting them hooked. How might we help hosts make the most of that opportunity?
+
+We built features, like *Signal Strength*, to help improve the podcast _content_ directly in the tools. We took some some light gamification inspired by other apps and guided hosts toward creating complete and compelling podcast tiles, descriptions and introdutions.
+
+||!['Podcast Writing Hints'](/img/portfolio/btr-hosttools-schedule.png)||![](/img/portfolio/btr-onramp.jpg)||
+
