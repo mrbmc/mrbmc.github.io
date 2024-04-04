@@ -1,0 +1,124 @@
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Brian's Skills Chart - jsFiddle demo by mrbmc</title>
+    <link rel="stylesheet" href="/css/chart.css">
+</head>
+<body>
+
+<div class="container">
+    <div id="chart"></div>
+</div>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
+<script type="text/javascript">//<![CDATA[ 
+
+$(function () {
+
+    $('#chart').highcharts({
+                
+        chart: {
+            polar: false,
+            type: 'area',
+            spacingBottom: 20,
+            spacingTop: 0,
+            spacingLeft: 0,
+            spacingRight: 0,
+            style: {
+                fontFamily: 'serif'
+            }
+        },
+        credits: {enabled:false},
+        legend: {enabled:false},
+        colors: [
+            '#ec5827',
+            '#0099CC'
+        ],
+        
+        title: {
+            text: 'Product Skills',
+            align: 'left',
+            x: -0,
+            y: 20,
+            style: {
+                fontFamily: '"Gotham",Helvetica',
+                fontWeight: 700,
+                fontSize: "21px",
+                color:"#675c5b"
+            }
+        },
+        
+        pane: {
+            size: '100%'
+        },
+        
+        xAxis: {
+            categories: [
+                'Project Management',
+                'Competitive Analysis',
+                'Customer Development',
+                'Technology',
+                'Design',
+                'Strategy'
+            ],
+            tickmarkPlacement: 'on',
+            lineWidth: 0,
+            labels: {
+                style: {
+                    fontFamily: '"Gotham",Helvetica',
+                    fontWeight: 300,
+                    whiteSpace: "nowrap"
+                }
+            }
+        },
+            
+        yAxis: {
+            gridLineInterpolation: 'polygon',
+            lineWidth: 0,
+            min: 0,
+            max:10,
+            labels: {
+                style: {
+                    fontFamily: '"Gotham",Helvetica',
+                    fontWeight: 300,
+                    whiteSpace: "nowrap"
+                }
+            }
+        },
+        
+        tooltip: {
+            shared: true,
+            pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
+        },
+        
+            style: {
+                fontFamily: '"Gotham",Helvetica',
+                fontWeight: 300,
+                fontSize: "18px"
+            },
+        legend: {
+            enabled: false,
+            align: 'right',
+            verticalAlign: 'top',
+            y: 70,
+            layout: 'vertical',
+            style: {
+                fontFamily: '"Gotham",Helvetica',
+                fontWeight: 300,
+                fontSize: "18px"
+            }
+        },
+        
+        series: [{
+            name: 'Design Skills',
+            data: [8, 5, 8, 9, 6, 7],
+            pointPlacement: 'on'
+         }]
+    });
+});
+//]]>
+
+</script>
+
+
+</body></html>
