@@ -30,9 +30,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "5923f0147c570187",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.5.12"
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -159,7 +169,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9aa1532018642bff",
+  "active": "5923f0147c570187",
   "lastOpenFiles": [
     "_images/uploads/bmc-flint_silicon-20221022.mp4",
     "_images/portfolio/disney-enterprise/ads-mission-control-scheduling.png",

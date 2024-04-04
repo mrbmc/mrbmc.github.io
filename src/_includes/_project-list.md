@@ -5,7 +5,7 @@
 {% if summary %}{{ summary }}{% endif %}
 
 {% for project in projectList %}{% if forloop.index0 < count %}
-<article class="project{%if label == "Work" %} full{% endif %}" onclick="location.href='{{project.url}}'">
+<article class="project{%if bodyclass != "home" %} full{% endif %}" onclick="location.href='{{project.url}}'">
 	<header>
 	<h3>{{ project.data.title }}</h3>
 	{% if project.data.timeline %}<p class="timeline">{{project.data.timeline}}</p>{% endif %}
