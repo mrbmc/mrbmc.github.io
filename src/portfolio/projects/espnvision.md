@@ -1,12 +1,12 @@
 ---
 title: ESPN Vision
-thumbnail: /images/portfolio/thumbs/espn-teaser-16x9.jpg
+thumbnail: /images/portfolio/terremoto-screenshots/espn+_01.png
 masthead-image: /images/portfolio/espn-masthead-16x9.jpg
 masthead-video: /images/portfolio/espn/ESPN-ORGANIC_MLP_Generic.mp4
 date: 2020-02-01
 category:
   - work
-summary: An experience vision for the future of streaming sports four years in the future.
+summary: An experience vision looking four years into the future of streaming sports.
 timeline: "2019"
 ---
 
