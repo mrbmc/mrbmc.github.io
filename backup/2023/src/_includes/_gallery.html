@@ -1,0 +1,21 @@
+<section class="gallery">
+	<div class="detail in">
+	    <img src="#" alt="" class="image-detail">
+	    <p class="caption" id="image-caption"></p>
+	    <img src="/images/loading.svg" class="loading" alt="Loading">
+	</div>
+	<nav class="index">
+	{% for p in pics %}<a href="#/{{p.id}}">
+			<img src="{{p.url_t}}" data-src="{{p.url_o}}" alt="{{ p.title }}" border="0" id="t-{{p.id}}" class="thumbnail" />
+	</a>{% endfor %}
+	</nav>
+	<nav class="paging">
+		<a href="#" class="close">&#x2715;</a>
+		<a href="#" class="page-rev"><span class="icon-prev"></span></a>
+		<a href="#" class="page-fwd"><span class="icon-next"></span></a>
+	</nav>
+</section>
+
+<script type="text/javascript" language="javascript">
+{% include "gallery-inline.js" %}
+</script>

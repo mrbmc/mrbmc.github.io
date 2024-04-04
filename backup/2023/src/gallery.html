@@ -1,0 +1,30 @@
+---
+layout: layout.html
+bodyclass: photos
+title: Brian McConnell | Photography
+pagination: 
+  data: photo_data.photos.photo
+  size: 10
+  reverse: false
+  alias: pics
+---
+
+
+{% include "_gallery.html" %}
+
+
+<nav class="pagination">
+{% for pageEntry in pagination.pages %}
+    <a href="{{ pagination.hrefs[ forloop.index0 ] }}"{% if page.url == pagination.hrefs[ forloop.index0 ] %} aria-current="page"{% endif %}>Page {{ forloop.index }}</a>
+{% endfor %}
+</nav>
+
+<style type="text/css">
+  #gallery-image {
+    content: a:target.attr('src');
+  }
+
+</style>
+
+<script type="text/javascript" language="javascript" src="/js/mrbmc.min.js"></script>
+<script type="text/javascript" language="javascript" src="/js/gallery.min.js"></script>

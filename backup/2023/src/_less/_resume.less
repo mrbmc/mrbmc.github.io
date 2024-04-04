@@ -1,0 +1,67 @@
+body.resume {
+    .two-col {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    .two-col div {
+        flex-basis: 45%;
+    }
+
+    p,li {
+        font-family: @serifFontFamily;
+        font-weight: @serifFontWeight;
+    }
+    h2 {
+        display: none;
+        font-weight: 500;
+    }
+    h3 {
+        margin-top: 1em;
+        font-weight: @boldFontWeight;
+    }
+    h5 {
+        font-weight: @boldFontWeight;
+        font-size: 120%;
+    }
+    h3,p,h5,ul,ol {
+        margin-bottom: 1em;
+        margin-left: 38%;
+    }
+    h3,h4 {
+        margin-bottom: 0.5rem;
+    }
+    h4,h4+p {
+        clear: both;
+        float: left;
+        width: 38%;
+        margin-left: 0;
+    }
+    h4 {
+        .typeset(@headingsFontFamily, @boldFontWeight, (1rem * pow(@typeScale,0)), 1.2, -0.0125em);
+        text-transform: inherit;
+    }
+
+    #education,.education {
+        padding: 1em 1em 0.5em 1em;
+        h2,h3, p, strong {
+            color: @white;
+        }
+        background: #5b0e9c url(/images/nyu-torch.gif) no-repeat center right;
+    }
+
+    @media (orientation: portrait) {
+        h4,h4+p {
+            float: none;
+            width: auto;
+        }
+        h3,p,h5,ul,ol {
+            margin-left: 0;
+        }
+    }
+}
+
+
+
+
+

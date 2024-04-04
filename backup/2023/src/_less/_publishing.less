@@ -1,0 +1,166 @@
+
+/* ==================================================
+these are mixins that are used to set up the blog, 
+portfolio, and gallery pages.
+================================================== */
+
+.item-list {
+    // .container();
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    article,&>ul li {
+    	list-style: none;
+	    margin: 0;
+	    padding: 0;
+	    box-sizing: border-box;
+	    cursor: pointer;
+	    position: relative;
+	    z-index: 2;
+    	overflow: hidden;
+
+        h1,h2 {
+            margin-bottom: 0;
+        }
+
+        figure {
+        	padding: 0;
+        	margin: 0 auto 0 auto;
+        	width: 100%;
+        	height: 100%;
+			z-index: -1;
+            background: @heroUnitBackground;
+        }
+
+	    // a {
+	    //     display: flex;
+        //     height: 100%;
+        //     width: 100%;
+	    //     img {
+        //         width: 100%;
+        //         height: 100%;
+	    //     	object-fit: cover;
+	    //     }
+	    // }
+    }	
+}
+.item-detail {
+	main {
+		.container();
+		.date {
+			color: @textOffColor;
+		}
+        p {
+            &>img,&>svg,&>video {
+                width: 100%;
+                max-height: 90vh;
+                &.canzoom {
+                    .transition(all @animateSpeed @animateEasing);
+                    &:hover {
+                        cursor: zoom-in;
+                    }
+                }
+                &.zoom {
+                    .fullWidth(100vw);
+                    max-height: 100vh;
+                    &:hover {
+                        cursor: zoom-out;
+                    }
+                }
+            }
+        }
+        iframe {
+            // .fullWidth(calc(90vh / .62));
+            // height: 90vh;
+        }
+        table {
+            overflow-x: scroll;
+        }
+	}
+}
+
+nav.pagination {
+	// .container();
+    clear: both;
+    padding: (@spacerVertical * 2) 0 @spacerVertical 0;
+
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	align-items: center;
+	a {
+		text-transform: inherit;
+		display: block;
+	}
+	@media (max-width: @breakpointPortrait-1) {
+		flex-direction: column-reverse;
+	}
+}
+
+p.gallery,div.gallery-wrap {
+    .fullWidth(100vw);
+    background: @wellBackground;
+    margin-bottom: @spacerVertical;
+
+    .image-detail {
+        width: 100%;
+        height: (70vh);
+        padding: 1em 0;
+        object-fit: contain;
+        display: block;
+        position: static;
+        object-position: center center;
+        box-sizing: border-box;
+        // .box-shadow(.5em 0 1em rgba(0,0,0,0.1));
+        cursor: zoom-in;
+
+        @media (max-width: @gridWidth) {
+            max-height: 62vw;
+        }
+    }
+
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+
+        overflow-x: scroll;
+        overflow-y: hidden;
+        &::-webkit-scrollbar {
+            -webkit-appearance: none;
+        }
+    // &::-webkit-scrollbar:horizontal {
+    //     height: 12px;
+    // }
+    // &::-webkit-scrollbar-thumb {
+    //     border-radius: 12px;
+    //     border: 2px solid @wellBackground; /* should match background, can't be transparent */
+    //     background-color: @textOffColor;
+    // }
+    // &::-webkit-scrollbar-track { 
+    //     background-color: @wellBackground; 
+    // } 
+
+        li {
+            list-style: none;
+            margin: 0 1em;
+            text-align: center;
+			color: @textOffColor;
+			.small();
+            img {
+                display: block;
+                height: 15vh;
+                width: 100%;
+                object-fit: contain;
+            }
+            p {
+                margin: 0;
+            }
+        }
+    }
+}

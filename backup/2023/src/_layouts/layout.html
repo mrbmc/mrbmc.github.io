@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Imagetoolbar" content="" />
+  <meta name="format-detection" content="telephone=no">
+  <meta name="google-site-verification" content="DQmdjO07WcpJ5bOxDYLGSBnPpovsUnGuSqIFdQaRjHA" />
+  <title>Brian McConnell | {{ title }}</title>
+  <meta name="description" content="{%if page-description %}{{ page-description }}{%else%}Brian McConnell is a design executive with a unique background in design, product, engineering and entrepreneurship. His mission as a leader is to create a competitive advantage through design.{%endif%}">
+  <link rel="icon" type="image/png" href="/images/favicon/favicon.png">
+  <!-- <link rel="apple-touch-icon" href="/images/favicon/apple-touch-icon.png"> -->
+  <link rel="preload" as="style" href="/css/screen.min.css">
+  <link rel="preload" as="style" href="/js/mrbmc.min.js">
+  <link rel="stylesheet" type="text/css" media="screen" href="/css/screen.min.css" />
+  <!-- <link rel="stylesheet" type="text/css" media="print" href="/css/print.min.css" /> -->
+</head>
+
+<body class="{{ bodyclass }}">
+
+{% include "_header.html" %}
+
+{% if masthead-video or masthead-image %}
+  {% unless isblog %}
+{% include "_masthead.html" %}
+  {% endunless %}
+{% endif %}
+
+<main id="main">
+
+{{ content }}
+
+</main>
+
+{% include "_footer.html" %}
+
+<script type="text/javascript" language="javascript" src="/js/mrbmc.min.js"></script>
+
+</body>
+</html>

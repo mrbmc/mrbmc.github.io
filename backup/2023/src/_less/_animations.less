@@ -1,0 +1,125 @@
+// Transitions
+.transition(@transition) {
+  -webkit-transition: @transition;
+     -moz-transition: @transition;
+       -o-transition: @transition;
+          transition: @transition;
+}
+
+.translate(@x, @y) {
+  -webkit-transform: translate(@x, @y);
+     -moz-transform: translate(@x, @y);
+      -ms-transform: translate(@x, @y);
+       -o-transform: translate(@x, @y);
+          transform: translate(@x, @y);
+}
+.scale(@ratio) {
+  -webkit-transform: scale(@ratio);
+     -moz-transform: scale(@ratio);
+      -ms-transform: scale(@ratio);
+       -o-transform: scale(@ratio);
+          transform: scale(@ratio);
+}
+// .scale(_scale) {//:1.0
+//     -webkit-transform: scale(_scale);
+//     -moz-transform: scale(_scale);
+//     -ms-transform: scale(_scale);
+//     -o-transform: scale(_scale);
+// }
+
+.rotate(@degrees) {
+    -webkit-transform: rotate(@degrees);
+    -moz-transform: rotate(@degrees);
+    -ms-transform: rotate(@degrees);
+    -o-transform: rotate(@degrees);
+    transform: rotate(@degrees);
+}
+
+.buildin {
+    .translate(0, 20%);
+    .opacity(0);
+    &.in {
+        .transition(all @animateSpeed @animateEasing);
+        .opacity(100);
+        .translate(0, 0);
+    }
+}
+
+.fade {
+    .opacity(0);
+    &.in {
+        .transition(opacity @animateSpeed*2 @animateEasing);
+        .opacity(100);
+    }
+}
+
+.pop {
+    .transition(all @animateSpeed @animateEasing);
+    .scale(.01);
+
+    &.in {
+        .scale(1);
+    }
+}
+
+[class*="slide"] {
+    position: relative;
+    .translate(0, 10%);
+
+    &.slide-left {
+        .translate(-20%, 0);
+    }
+    &.slide-right {
+        .translate(20%, 0);
+    }
+    &.in {
+        .transition(all @animateSpeed @animateEasing);
+        .translate(0, 0);
+    }
+}
+
+@-webkit-keyframes updown {
+    from {
+        -webkit-transform: translate(0em, 0em);
+    }
+
+    to {
+        -webkit-transform: translate(0em, -1em);
+    }
+}
+
+@-moz-keyframes updown {
+    from {
+        -moz-transform: translate(0em, 0em);
+    }
+
+    to {
+        -moz-transform: translate(0em, -1em);
+    }
+}
+
+@-o-keyframes updown {
+    from {
+        -o-transform: translate(0em, 0em);
+    }
+
+    to {
+        -o-transform: translate(0em, -1em);
+    }
+}
+
+@keyframes updown {
+    from {
+        transform: translate(0em, 0em);
+    }
+
+    to {
+        transform: translate(0em, -1em);
+    }
+}
+// Phones up to Tablets
+@media (max-width: @breakpointPortrait-1) {
+    .buildin {
+        .translate(0, 10%);
+    }
+}

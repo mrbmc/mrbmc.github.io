@@ -1,0 +1,182 @@
+[class^="icon-"],
+[class*=" icon-"],
+[class*="soc-"] {
+	@iconSize: 1.25em;
+	font-size: @iconSize;
+	width: @iconSize;
+	height: @iconSize;
+	line-height: @iconSize;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	overflow: hidden;
+	text-decoration: none;
+	text-align: center;
+	overflow: hidden;
+	white-space: nowrap;
+	display: block;
+	float: left;
+	&:before {
+		display: block;
+	}
+}
+
+
+/* ===================================================================
+UI Icons
+=================================================================== */
+
+@font-face {
+	font-family: 'icomoon';
+	src: url('fonts/icomoon/icomoon.eot?5c2l89');
+	src: url('fonts/icomoon/icomoon.eot?5c2l89#iefix') format('embedded-opentype'),
+		url('fonts/icomoon/icomoon.ttf?5c2l89') format('truetype'),
+		url('fonts/icomoon/icomoon.woff?5c2l89') format('woff'),
+		url('fonts/icomoon/icomoon.svg?5c2l89#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+	// font-family: 'icomoon' !important;
+}
+
+.icon-printer:before {
+	content: "\e954";
+}
+
+.icon-circle-right:before {
+	content: "\ea42";
+}
+
+.icon-circle-left:before {
+	content: "\ea44";
+}
+
+.icon-mail:before {
+	content: "\ea83";
+}
+
+.icon-instagram:before {
+	content: "\ea92";
+}
+
+.icon-github:before {
+	content: "\eab0";
+}
+
+.icon-tumblr:before {
+	content: "\eab9";
+}
+
+.icon-linkedin:before {
+	content: "\eac9";
+}
+
+.icon-file-pdf:before {
+	content: "\eadf";
+}
+
+.icon-next:before {
+	content: "\203A";
+}
+
+.icon-prev:before {
+	content: "\2039";
+}
+
+
+
+/* ===================================================================
+Social Icons
+=================================================================== */
+
+@font-face {
+	font-family: 'si';
+	src: url('fonts/socicon/socicon.eot');
+	src: url('fonts/socicon/socicon.eot?#iefix') format('embedded-opentype'),
+		url('fonts/socicon/socicon.woff') format('woff'),
+		url('fonts/socicon/socicon.ttf') format('truetype'),
+		url('fonts/socicon/socicon.svg#icomoonregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+	font-display: block;
+}
+
+[class*="soc-"] {
+	font-family: si !important;
+	.border-radius(50%);
+	&:before {
+		font-size: .618em;
+		color: @white;
+	}
+}
+
+.soc-email{
+	&:before {
+		content: '';
+	}
+	&:hover {
+		background-color: @brandColor;
+	}
+
+}
+
+.soc-twitter {
+	&:before {
+		content: '\e040';
+	}
+	&:hover {
+		background-color: #4da7de;
+	}
+}
+
+.soc-linkedin {
+	&:before {
+		content: '\e049';
+	}
+	&:hover {
+		background-color: #3371b7;
+	}
+}
+
+.soc-behance:before {
+	content: '\e027';
+}
+
+.soc-instagram:before {
+	content: '\e057';
+	background-color: #C13584;
+}
+
+.soc-youtube:before {
+	content: '\e051';
+	background-color: #e02a20;
+}
+
+.soc-github:before {
+	content: '\e032';
+	background-color: #221e1b;
+}
+
+.soc-medium {
+	&:before {
+		content: '\e06d';
+	}
+	&:hover {
+		background-color: #000000;
+	}
+}
+
+.soc-strava {
+	&:before {
+		content: '';
+	}
+	&:hover {
+		background-color: #FC5201;
+	}
+}

@@ -1,0 +1,160 @@
+body.home {
+    #header {
+        position: absolute;
+        left: 0;
+        right: 0;
+        a#open-menu {
+            &:before,&:after {
+                background: @heroUnitHeadingColor;
+            }
+        }
+        #menu {
+            a {
+                color: @heroUnitHeadingColor;
+                &:hover {
+                    color: @navbarLinkColorHover;
+                }
+            }
+            &:target {
+                a {
+                    color: @navbarLinkColor;
+                }
+            }
+        }
+        .brand {
+            // filter: invert(0%);
+            color: @white;
+        }
+    }
+    #masthead,#bio,.bio {
+
+        .fullWidth(100vw);
+        justify-content: center;
+        align-items: flex-start;
+
+        @media (orientation: landscape) {
+            padding-left: 19vw;
+            padding-right: 19vw;
+            height: (100vh);
+        }
+        @media (orientation: portrait) {
+            height: 90vh;
+        }
+
+        // moving gradients
+        background: 
+                    radial-gradient(62% 62% at 100% 20%,     hsla(340, 50%,100%,30%) 0%, hsla(hue(@brandColor), 0%, 0%, 0) 100%)
+                    ,radial-gradient(62% 38% at 0% 80%,      hsla(188, 50%,70%, 30%) 0%,     hsla(hue(@brandColor), 100%, 0%, 0) 100%)
+                    ,radial-gradient(62% 130% at 50% 0%,     hsla(238, 30%,30%, 50%) 0%,      hsla(hue(@brandColor), 100%, 0%, 0) 100%)
+                    ,radial-gradient(100% 100% at 50% 100%,  hsla(238, 30%,10%, 50%) 0%,      hsla(hue(@brandColor), 100%, 0%, 0) 100%)
+                    ,@heroUnitBackground;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        animation: gradient 24000ms ease-in-out infinite;
+
+        &:before {
+            content: "";
+            background-image: url("/images/noise.svg");
+            // background-color: #f0f;
+            background-size: 1000px;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+        }
+
+        color: @white;
+
+
+        @media (orientation: portrait) {
+            padding: @spacerVerticalPhone @spacerHorizontalPhone;
+            // .headshot {
+            //     flex-basis: inherit;
+            //     width: 50vw;
+            //     height: 50vw;
+            //     margin: 0 auto;
+            //     position: static;
+            // }
+        }
+
+        a {
+            color: @white;
+        }
+
+        figure {
+            display: none;
+        }
+
+        h1 {
+            // padding-left: clamp(@gridGutterWidth, 25vw, (@gridWidth/3));
+            // color: @white;
+            // z-index: 1;
+            text-align: left;
+        }
+        p {
+            .largeType();
+            z-index: 1;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+        // .headshot {
+        //     clip-path: url(#headshotMask);
+        //     width: clamp(10vw,22vw,(@gridWidth/3));
+        //     height: clamp(10vw,22vw,(@gridWidth/3));
+        //     padding: 0;
+        //     margin: 0;
+        //     position: absolute;
+        //     img {
+        //         height: 100%;
+        //         width: 100%;
+        //         object-fit: cover;
+        //     }
+        // }
+
+        .scrollhint {
+            display: block;
+        }
+    }
+
+
+    main {
+        padding-top: 0;
+    }
+
+    .project-list,.blog {
+        padding-top: @spacerVertical * 2;
+        // padding-bottom: @spacerVertical;
+    }
+}
+
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+        background-size: 100% 100%;
+    }
+    20% {
+        background-position: 50% 0%;
+        background-size: 200% 100%;
+    }
+    40% {
+        background-position: 100% 0%;
+        background-size: 200% 100%;
+    }
+    60% {
+        background-position: 0% 0%;
+        background-size: 100% 200%;
+    }
+    80% {
+        background-position: 0% 100%;
+        background-size: 100% 200%;
+    }
+    100% {
+        background-position: 0% 0%;
+        background-size: 100% 100%;
+    }
+}
+

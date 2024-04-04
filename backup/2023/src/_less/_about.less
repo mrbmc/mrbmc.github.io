@@ -1,0 +1,111 @@
+body.about,body.home {
+
+
+    main,#main {
+        // h2 {
+        //     background: @bodyBackground;
+        //     padding: 0.5em;
+        //     width: calc(100%);
+        //     margin-top: -2em;
+        //     margin-left: -0.5em;
+        //     z-index: 1;
+        //     position: relative;
+        // }
+        .gallery{
+            .fullWidth(90vw);
+        }
+    }
+
+    img[alt="Disney"] {
+        height: (@baseLineHeight * 1em);
+        width:auto;
+        display:inline;
+        margin-bottom: -.4em;
+        @media (prefers-color-scheme: light) {
+            filter: invert(100%);
+        }
+
+        margin-right: .25em;
+    }
+    #travel-map {
+        width: 100%;
+        height: auto;
+        // filter: hue-rotate(60deg);
+    }
+    #strava-rides,#strava-profile {
+        height: 454px;
+        width: 100%;
+    }
+
+    img.cover {
+        @w: 100vw;
+        .fullWidth(@w);
+        overflow: hidden;
+        object-fit: cover;
+        // height: (100vw / 2.31);
+        height: (@w / 4);
+
+        &.family {
+            filter: sepia(10%) hue-rotate(0deg) saturate(50%) brightness(100%);
+        }
+
+        @media (orientation: portrait) {
+            height: 33vh;
+        }
+
+    }
+}
+
+
+
+
+ul.timeline {
+    li {
+        margin-left: 0;
+        // margin-top: 0;
+        // margin-bottom: 0;
+        // padding: 8px 8px 8px 24px;
+        position: relative;
+        padding-left: 1em;
+        border-left: 2px solid var(--black);
+        list-style: none;
+        padding-bottom: 0.5em;
+        &:last-of-type {
+            padding-bottom: 0;
+        }
+        &:before {
+            display: inline-block;
+            content: "";
+            width: 12px;
+            height: 12px;
+            .border-radius(10px);
+            margin-left: calc(-1em - 7px);
+            margin-right: 1em;
+            background: var(--black);
+        }
+    }
+}
+
+#mantras,.mantras {
+    .fullWidth(100vw);
+    background: @brandColor;
+    h2 {
+        .container();
+        color: @white;
+    }
+    ul,ol {
+        .container();
+        padding-top: 0;
+        li {
+            .card();
+            list-style: none;
+            margin: 0;
+        }
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 1em;
+        @media (orientation: portrait) {
+            grid-template-columns: 1fr;
+        }
+    }
+}

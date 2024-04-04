@@ -1,0 +1,199 @@
+#header {
+    .container();
+    padding-top: 0;
+    padding-bottom: 0;
+
+    background: @navbarBackground;
+    border: @navbarBorder;
+
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+    z-index: 10;
+    height: @navbarHeight;
+    align-items: center;
+    overflow: hidden;
+
+    a {
+        -webkit-backface-visibility: hidden;
+        -webkit-tap-highlight-color: transparent;
+        color: @navbarLinkColor;
+    }
+
+
+    .brand {
+        z-index: 3;
+        text-decoration: none;
+        font-weight: @displayFontWeight;
+        font-family: @displayFontFamily;
+        // color: transparent !important;
+        // background: url(/images/logo-bmc.svg);
+        // background-size: 100%;
+        // background-repeat: no-repeat;
+        // background-position: left center;
+        // height: 1.4em;
+        // width: 3.5em;
+        display: flex;
+        img,svg {
+            width: 3.6em;
+            // height: 1.4em;
+        }
+        @media (prefers-color-scheme: light) {
+            // filter: invert(100%);
+        }
+    }
+
+    #menu {
+        box-sizing: border-box;
+        background: @navbarBackground;
+        flex-basis: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin: 0;
+        z-index: 2;
+
+        a {
+            padding: .25em .75em;
+            margin: 0 0 0 1em;
+            .border-radius(4px);
+            &:last-of-type {
+                margin-right: -.75em;
+            }
+            &.nav-cv,&.nav-resume,&.nav-photos {
+                display: none;
+            }
+        }
+        .nav-contact {
+            .hide();
+        }
+
+    }
+
+    a#open-menu, a#close-menu {
+        display: none;
+        overflow: hidden;
+    }
+}
+
+.active_nav {
+    background: @navbarLinkBackgroundActive;
+    color: @navbarLinkColorActive;
+}
+body.about #header #menu a[href="/about/"],
+body.portfolio #header #menu a[href="/portfolio/"],
+body.blog #header #menu a[href="/blog/"],
+body.resume #header #menu a[href="/about/"] {
+    .active_nav();
+}
+
+
+// phones up to tablets
+// @media (max-width: @breakpointPortrait-1) {
+@media (orientation: portrait) {
+    @burgerSize: 1rem;
+    @btnLine: 1.5px;
+
+    #header {
+
+        justify-content: space-between;
+        height: auto;
+
+        a#open-menu, a#close-menu {
+
+            display: block;
+            height: @burgerSize;
+            background: transparent;
+            padding: 0;
+            margin: 0;
+            width: @burgerSize;
+            position: relative;
+            z-index: 3;
+            color: transparent !important;
+
+            .transition(transform @animateSpeed @animateEasing);
+
+            &:before,&:after {
+                display: block;
+                content: "";
+                width: 100%;
+                box-sizing: border-box;
+
+                background: transparent;
+                height: @btnLine;
+                background: @textBoldColor;
+                // height: calc((@burgerSize * .31) + (@btnLine/2));
+                // border: @btnLine solid @textBoldColor;
+                // border-width: @btnLine 0;
+
+                position: absolute;
+                left: 0;
+                top: 20%;
+                .transition(transform @animateSpeed @animateEasing);
+            }
+            &:after {
+                top: inherit;
+                bottom: 20%;
+                // border-width: 0 0 @btnLine 0;
+            }
+        }
+        a#open-menu {
+            // display: block;
+        }
+        a#close-menu {
+            // display: none;
+        }
+
+        #menu {
+            background: @wellBackground;
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            padding: @spacerVerticalPhone @gridGutterWidth;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            box-sizing: content-box;
+
+            .transition(opacity @animateSpeed @animateEasing);
+            .translate(-100%,0%);
+            .opacity(0);
+
+            z-index: 2;
+            a:not(#close-menu) {
+                font-size: 150%;
+                line-height: @baseLineHeight;
+                margin: 0 0 (@spacerVerticalPhone*2) 0;
+            }
+            &:target {
+                .translate(0%,0%);
+                .opacity(100);
+                & ~ a#open-menu {
+                    display: none;
+                }
+                & > a#close-menu {
+                    display: block;
+                    position: absolute;
+                    top: @spacerVerticalPhone;
+                    right: @gridGutterWidth;
+                    &:before,
+                    &:after {
+                        top: 50%;
+                    }
+                    &:before {
+                        .rotate(45deg);
+                    }
+                    &:after {
+                        .rotate(-45deg);
+                    }
+
+                }
+            }
+        }
+        .brand {
+            z-index: 100;
+        }
+    }
+}

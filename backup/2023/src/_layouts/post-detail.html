@@ -1,0 +1,32 @@
+---
+layout: layout.html
+bodyclass: blog post
+title: Blog
+parallaxHeading: true
+page-description: Stories about design, building products, and life by a veteran designer.
+---
+
+{% unless masthead-image or masthead-video %}
+<h1>{{ title }}</h1>
+
+<p class="date">
+    {{ date | date: "%B %d, %Y" }}
+    &bull;
+    {{ content | timeToRead }} to read
+</p>
+{% endunless %}
+
+{{ content }}
+
+<nav class="related-posts">
+    <h2>Related Posts</h2>
+    {% assign similar = collections.posts | similarPosts: page.inputPath, tags %}
+    {% for post in similar limit: 3 %}
+    <p class="post">
+        <span class="date">{{ post.data.date | date: "%Y-%m-%d" }}</span>
+        <a href="{{ post.url }}">
+            {{ post.data.title }}
+        </a>
+    </p>
+    {% endfor %}
+</nav>

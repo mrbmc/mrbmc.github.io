@@ -1,0 +1,89 @@
+---
+layout: layout.html
+bodyclass: photos
+title: Brian McConnell | Photography
+pagination: 
+  data: collections.gallery
+  size: 20
+  reverse: false
+  alias: pics
+---
+
+<section id="masthead">
+  <h1>Photography</h1>
+  <p>Mostly horizons, textures, and silhouettes.</p>
+</section>
+
+<section class="gallery">
+
+  {% for p in pics %}
+  <p id="{{p.id}}">
+    <img src="#" data-src="{{p.path}}" alt="{{ p.title }}" data-spy="scroll" class="fade" />
+  </p>
+  {% endfor %}
+
+</section>
+
+<nav id="thumbnails">
+  {% for p in pics %}
+  <a href="#{{p.id}}">
+    <img src="{{p.thumb}}" alt="{{ p.title }}" />
+  </a>
+  {% endfor %}
+</nav>
+
+
+{%if pagination.pages.length > 1 %}
+<nav class="pagination">
+{% for pageEntry in pagination.pages %}
+    <a href="{{ pagination.hrefs[ forloop.index0 ] }}"{% if page.url == pagination.hrefs[ forloop.index0 ] %} aria-current="page"{% endif %}>Page {{ forloop.index }}</a>
+{% endfor %}
+</nav>
+{% endif %}
+
+<style type="text/css">
+html {
+    scroll-snap-type: y mandatory;
+}
+</style>
+
+<!-- <script type="text/javascript" language="javascript" src="/js/mrbmc.min.js"></script>
+<script type="text/javascript" language="javascript" src="/js/photos.min.js"></script>
+ -->
+
+<script type="text/javascript" language="javascript">
+var DEBUG = (document.location.hostname == "localhost" || document.location.href.includes('debug')),
+    VERBOSE = false && DEBUG,
+    last_known_scroll_position = 0,
+    ticking = false;
+
+var oldPage = 0;
+
+function onScroll() {
+    if(DEBUG) console.log('photos.onScroll');
+    "use strict";
+    var spies = document.querySelectorAll('[data-spy="scroll"]');
+    if(VERBOSE) console.log('scrollSpy.spies',spies.length);
+    spies.forEach(function(value,index,array){
+        var me = array[index],
+            b = isInViewport(me),
+            oldClass = me.className,
+            newClass = b ?  (oldClass.indexOf(' in')>=0 ? oldClass : oldClass + " in") : oldClass.replaceAll(' in', '');
+        me.className = newClass;
+        if(b)
+          me.src = me.dataset.src;
+    });
+}
+
+window.addEventListener('scroll', onScroll, false);
+
+window.addEventListener('load', function() {
+    "use strict";
+    if(DEBUG) console.log('photos.window.load',arguments);
+
+    onScroll();
+});
+
+
+</script>
+

@@ -1,0 +1,67 @@
+// IE10 Metro responsive
+// Required for Windows 8 Metro split-screen snapping with IE10
+// Source: http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
+
+@-ms-viewport{
+  width: device-width;
+}
+
+
+// REPEAT VARIABLES & MIXINS
+// -------------------------
+// Required since we compile the responsive stuff separately
+
+//@import "variables.less"; // Modify this for custom colors, font-sizes, etc
+//@import "mixins.less";
+
+
+
+// MEDIA QUERIES
+// ------------------
+@media screen {
+    .hidden-screen {
+        display: none;
+    }
+}
+
+@media print {
+    .hidden-print {
+        display: none;
+    }
+}
+
+// WEARABLES
+@media (max-width:@breakpointPhone) {
+}
+
+
+
+// Phones up to Tablets
+@media (max-width: @breakpointPortrait-1) {
+    #footer,.footer {
+        position: relative;
+        text-align: center;
+    }
+    ul.soc {
+        font-size: 2rem;
+        li {
+            // flex-basis: 20%;
+            a {
+                margin-right: .5em;
+            }
+        }
+    }
+
+}
+
+// Desktops
+@media (min-width: @breakpointPortrait) AND (max-width: @breakpointWidescreen-1) {
+}
+
+
+// WIDESCREEN
+@media (min-width: @breakpointWidescreen) {
+    // we had to put this rule inside the main .container {} declaration
+    // .container {
+    // }
+}

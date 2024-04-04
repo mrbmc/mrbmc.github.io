@@ -1,0 +1,114 @@
+// COLOR
+// -------------------------
+@_indigo:               hsl(238,70%,39%);//#1E22AA;
+@_rose:                 hsl(340,70%,70%);
+@_pink:                 hsl(340, 100%,70%);
+@_sunshine:             hsl(58, 100%, 45%);
+// @_cyan:              hsl(180,100%,50%);
+@_teal:                 hsl(188,100%,40%);
+@_orange:               #FF4F00;//international orange
+
+@white:                 hsl(hue(@brandColor), 0%,100%);
+@gray-950:              hsl(hue(@brandColor), 2%,96%);
+@gray-900:              hsl(hue(@brandColor), 5%,91%);
+@gray-800:              hsl(hue(@brandColor), 8%,82%);
+@gray-700:              hsl(hue(@brandColor),10%,71%);
+@gray-600:              hsl(hue(@brandColor),10%,62%);
+@gray-500:              hsl(hue(@brandColor),13%,50%);
+@gray-400:              hsl(hue(@brandColor),17%,42%);
+@gray-300:              hsl(hue(@brandColor),21%,31%);
+@gray-200:              hsl(hue(@brandColor),28%,20%);
+@gray-100:              hsl(hue(@brandColor),34%,12%);
+@gray-050:              hsl(hue(@brandColor),55%, 4%);
+@black:                 hsl(hue(@brandColor),0%, 0%);
+
+@brandColor:            @_indigo;
+@brandColor20:          hsla(hue(@brandColor),saturation(@brandColor),lightness(@brandColor),20%);
+@brandColor60:          hsla(hue(@brandColor),saturation(@brandColor),lightness(@brandColor),62%);
+@brandColor80:          hsla(hue(@brandColor),saturation(@brandColor),lightness(@brandColor),80%);
+@brandAccent:           @_teal;
+@brandAccent20:         hsla(hue(@brandAccent),saturation(@brandAccent),lightness(@brandAccent),30%);
+@brandAccent80:         hsla(hue(@brandAccent),saturation(@brandAccent),lightness(@brandAccent),80%);
+@brandComplement:       @_pink;
+@brandComplement20:     hsla(hue(@brandComplement),saturation(@brandComplement),lightness(@brandComplement),30%);
+@brandComplement80:     hsla(hue(@brandComplement),saturation(@brandComplement),lightness(@brandComplement),80%);
+@brandSecondary:        @_orange;
+
+// TYPE
+// -------------------------
+@textColor:             var(--gray-100);
+@textBoldColor:         var(--black);
+@textOffColor:          var(--gray-500);
+@linkColor:             var(--black);
+@displayTextColor:      var(--black);
+@linkColorHover:        @brandComplement;
+@selectionColor:        @brandComplement;
+
+// Scaffolding
+// -------------------------
+@bodyBackground:        var(--white);
+@wellBackground:        var(--gray-900);
+@borderColor: 			var(--gray-900);
+@heroUnitBackground:    @gray-100;
+@heroUnitHeadingColor:  @white;
+@heroUnitLeadColor:     @gray-800;
+
+// Navbar
+// -------------------------
+@navbarBackground:                transparent;
+@navbarBackgroundHighlight:       transparent;
+@navbarBorder:                    solid 0 0 2px 0 var(--gray-900);
+@navbarText:                      @textColor;
+@navbarLinkColor:                 @textBoldColor;
+@navbarLinkColorHover:            @linkColorHover;
+@navbarLinkBackgroundHover:       transparent;
+@navbarLinkColorActive:           var(--gray-900);
+@navbarLinkBackgroundActive:      var(--gray-100);
+@navbarBrandColor:                @navbarLinkColor;
+
+
+// GRID
+// --------------------------------------------------
+@gridColumns:             12;
+// @gridWidth:            @breakpointWidescreen;
+// @gridGutterWidth:          2rem;
+@gridWidth:               72vw;
+@gridGutterWidth:         5vw;
+@gridColumnWidth:         ((@gridWidth - ((@gridColumns - 1) * @gridGutterWidth)) / @gridColumns);
+
+@spacerHorizontal:          1rem;
+@spacerVertical:            (@baseLineHeight * 1em);
+@spacerHorizontalPhone:     1rem;
+@spacerVerticalPhone:       1rem;
+
+@breakpointWidescreen:      1201px;
+@breakpointWidescreen-1:    (@breakpointWidescreen - 1px);
+@breakpointDesktop:         961px;
+@breakpointDesktop-1:       @breakpointDesktop - 1;
+@breakpointPortrait:        769px;
+@breakpointPortrait-1:      @breakpointPortrait - 1;
+@breakpointPhone:           480px;
+
+
+
+@inputHeight:               1.25rem;
+@navbarHeight:              3rem;
+
+
+@shadowColor: 		hsla(hue(@brandColor), 100%, 12%, 0.1);
+@shadowDepth: 		2em;
+@shadowOffset: 		(@shadowDepth / 4);
+
+
+// ANIMATION
+// --------------------------------------------------
+@animateSpeed:      450ms;
+@easingBounce:      cubic-bezier(0.175, 0.885, 0.320, 1.275);
+@easingGetSet:      cubic-bezier(0.955, -1.00, 0.850, 0.490);
+@easingInQuart:     cubic-bezier(0.500, 0.000, 0.750, 0.000);
+@easingOutQuart:    cubic-bezier(0.165, 0.840, 0.440, 1.000);
+@easingInOutQuart:  cubic-bezier(0.770, 0.000, 0.175, 1.000);
+@animateEasing:     @easingInOutQuart;
+@animateEquation:   @animateEasing;
+
+

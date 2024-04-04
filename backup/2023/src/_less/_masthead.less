@@ -1,0 +1,101 @@
+#masthead {
+    min-height: 40vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    color: @heroUnitLeadColor;
+
+    h1,h2,h3 {
+        color: @heroUnitHeadingColor;
+        z-index: 2;
+        text-align: center;
+    }
+    h1 + p {
+        margin-top: -0.75em;
+    }
+    // p {
+    //     .container();
+    //     padding-top: 0;
+    //     padding-bottom: 0;
+    //     &:last-of-type {
+    //         margin-bottom: 0;
+    //     }
+    //     &.large {
+    //         color: @heroUnitHeadingColor;
+    //     }
+    // }
+
+    figure {
+        background: @heroUnitBackground;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+        z-index: -1;
+
+        img,video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            .opacity(65);
+            &[data-parallax]{
+                height: calc(100% + 10vh);
+                margin-top: -10vh;
+            }
+        }
+        video::-webkit-media-controls-fullscreen-button {
+            display: none !important;
+        }
+        figcaption,caption {
+            position: absolute;
+            right: @spacerHorizontal;
+            bottom: @spacerVertical;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.8);
+            color: @white;
+        }
+
+
+    }
+
+    @media (orientation: portrait) {
+        min-height: 100vw;
+    }
+
+}// end masthead
+#scrollhint,.scrollhint {
+    @size: 48px;
+
+    width: @size;
+    height: @size;
+    // fill: @white;
+    position: absolute;
+    left: ~"calc(50% - "(@size / 2)~")";
+    bottom: @size;
+    // color: transparent;
+    text-indent: -100vw;
+
+    z-index: 1;
+    &:hover {
+        cursor: pointer;
+    }
+    @media (orientation: portrait) {
+        display: none;
+    }
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZpZXdCb3g9IjAgMCA1MyAyMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PHBvbHlnb24gcG9pbnRzPSIyNi41LDE3LjY4OCA5LjExNCwzLjc3OSAxMC4zMDMsMi4zMTIgMjYuNSwxNS4yNjkgNDIuNjk3LDIuMzEzIDQzLjg4NiwzLjc3OSIgZmlsbD0iI0ZGRkZGRiI+PC9wb2x5Z29uPjwvZz48L3N2Zz4=");
+
+    display: none;
+}
+

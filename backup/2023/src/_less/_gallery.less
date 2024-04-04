@@ -1,0 +1,185 @@
+section.gallery {
+    @pagingSize: 48px;
+    @thumbSize: 10vh;
+    position: relative;
+    padding: 0;
+
+    .loader{
+      svg {
+          width: 10vh;
+          height: 10vh;
+          path,rect{
+              fill: @brandAccent;
+          }
+
+      }
+    }
+
+
+    &>p {
+        scroll-snap-align: start;
+        img {
+            height: 90vh;
+            padding: 5vh 0;
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .detail {
+        height: ~"calc(" (100vh - @thumbSize) ~" - " @navbarHeight ~")";
+        background: @black;
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        .image-detail {
+            max-height: 100%;
+            max-width: 100%;
+            .opacity(0);
+            .transition(opacity @animateSpeed @animateEasing);
+            position: relative;
+            z-index: 2;
+        }
+        .image-caption {
+            bottom: 0;
+            color: @white;
+            line-height: 2;
+            position: absolute;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            #gradient > .vertical(hsla(hue(@black),saturation(@black),lightness(@black),0%), @black);
+            .translate(0%,100%);
+            .opacity(0);
+            .transition(all @animateSpeed @animateEasing);
+        }
+        &:hover {
+            .caption {
+                .opacity(100);
+                .translate(0,0);
+            }
+        }
+        &.in {
+            .image-detail {
+                .opacity(100);
+            }
+        }
+    }
+
+    img.loading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        .scale(2);
+        svg {
+            fill: #f0f;
+        }
+    }
+
+    nav.index {
+        position: relative;
+        z-index: 5;
+        background: @bodyBackground;
+        white-space: nowrap;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        width: 100%;
+        height: @thumbSize;
+        text-align: center;
+        white-space: nowrap;
+
+        &>a,.thumbnail {
+            display: inline-block;
+            padding: 1vh 0.5vh;
+            box-sizing: border-box;
+            height: @thumbSize;
+            .opacity(68);
+            .transition(all @animateSpeed @animateEasing);
+            img {
+                height: 100%;
+                width: auto;
+                box-sizing: border-box;
+                border: solid 2px transparent;
+                // .border-radius(4px);
+            }
+
+            &.active,&:hover,&:focus {
+                .opacity(100);
+                .scale(1.2);
+            }
+            &.active {
+                img {
+                    border-color: @brandComplement;
+                }
+            }
+
+        }
+    }
+
+    .close {
+        position: absolute;
+        top: 1em;
+        right: 1em;
+        z-index: 6;
+    }
+
+    nav.paging {
+        position: absolute;
+        // height: ~"calc(" (100vh - @thumbSize) ~" - " @navbarHeight ~")";
+        height: 100%;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 3;
+
+        a[class*="page-"] {
+            color: @white;
+            display: block;
+            font-size: @pagingSize;
+            position: absolute;
+            z-index: 2;
+            margin-top: calc((@pagingSize/-2) ~"- ("@thumbSize~"/2)");
+            top: 50%;
+            .opacity(20);
+            .transition(all 125ms);
+
+            &>span {
+                display: block;
+            }
+
+            &:hover {
+                text-decoration: none;
+                .opacity(67);
+            }
+            &:active,&:focus {
+                text-decoration: none;
+                // .opacity(20);
+            }
+            &.page-up {
+                top: @pagingSize;
+            }
+            &.page-rev {
+                left: 2vw;
+            }
+            &.page-fwd {
+                right: 2vw;
+            }
+        }
+    }
+}
+
+
+//tablets & phones
+@media (max-width: @breakpointPortrait-1) {
+    .gallery {
+        .detail {
+            height: 100vw;
+            &>img {
+            }
+        }
+    }
+}

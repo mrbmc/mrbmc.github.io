@@ -1,0 +1,184 @@
+{
+  "main": {
+    "id": "cea1f332b704e9b6",
+    "type": "split",
+    "children": [
+      {
+        "id": "84f85c66adebdb3b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "70aa2e1eced7d85d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "espn.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "stacked": true
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "6981fe8dde5717ca",
+    "type": "split",
+    "children": [
+      {
+        "id": "8bcbd96e28ed60e2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4043110cffe5704f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "3f9d975367931b5f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "de3c301b67bc4bc3",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "5bfe92cbf2646c3f",
+    "type": "split",
+    "children": [
+      {
+        "id": "6d217e97eaecc38b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "681c54a58d688ed1",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "espn.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "8837b611792c1d8c",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "espn.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "54c5d209edf86d42",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "892a5ad0d964c298",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "espn.md"
+              }
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "70aa2e1eced7d85d",
+  "lastOpenFiles": [
+    "espn.md",
+    "disney-groupwatch.md",
+    "disney.md",
+    "blogtalkradio.md",
+    "steelgills.md",
+    "Untitled.md",
+    "disney-growth.md",
+    "nhl.md",
+    "rhythmism.md",
+    "images/portfolio/rhythmism-ui.jpg.md",
+    "images/portfolio",
+    "images",
+    "images/portfolio/disney-growth/tv-signup-6.jpg.md",
+    "images/portfolio/disney-growth",
+    "pal-9100.md",
+    "optumus.md",
+    "flint-and-silicon.md",
+    "eurosport.md",
+    "images/portfolio/disney-growth/pod-slide.svg.md",
+    "images/portfolio/disney-growth/espn-ott-known-flow.jpg.md",
+    "boids.md",
+    "design-prototyping-201.md",
+    "team-culture-workshop.md",
+    "images/portfolio/culture-workshop/EXD-workshop-voting.JPG.md",
+    "images/portfolio/culture-workshop",
+    "securityscorecard.md",
+    "images/portfolio/steelgills-teaser.jpg.md",
+    "images/portfolio/disney-growth/signup-web-simple-flow.jpeg.md",
+    "images/portfolio/disney-growth.png.md",
+    "images/portfolio/btr-studio.png.md",
+    "PAL9100 - Active Pattern.png"
+  ]
+}

@@ -1,0 +1,160 @@
+
+body.portfolio {
+    main {
+        section {
+        }
+    }
+}
+
+.project-list,#portfolio {
+    .item-list();
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    @media (orientation: landscape) {
+        // min-height: calc(100vh - @navbarHeight);
+    }
+
+    &>h2 {
+        width: 100%;
+    }
+
+    p {
+        width: 100%;
+    }
+
+    .project {
+        display: flex;
+        padding: 0;
+        margin: 0;
+        #flexColumns(3);
+        @media (orientation: portrait) {
+            #flexColumns(2);
+        }
+        @media (max-width: @breakpointPhone) {
+            #flexColumns(1);
+        }
+        .box-shadow(0 2px 8px hsla(hue(@brandColor),saturation(@brandColor), 25%, 0.25));
+        h2 {
+            display: none;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: saturate(50%);
+        }
+        .scale(1);
+        .transition(all @animateSpeed @animateEasing);
+
+        &:hover {
+            z-index: 3;
+            .box-shadow(0 8px 64px hsla(hue(@brandColor),saturation(@brandColor), 25%, 0.20));
+            .scale(1.1);
+            img {
+                filter: saturate(100%);
+            }           
+        }
+    }
+}
+
+body.project {
+    .item-detail();
+    #masthead {
+        // .fullHeight();
+        @media (orientation: portrait) {
+            height: 50vh;
+        }
+        h1 {
+            // text-align: center;
+            // margin: 0;
+        }
+    }
+
+    main {
+    }
+}
+
+body.portfolio {
+    #portfolio,.project-list {
+        // PHONES & PORTRAIT TABLETS
+        @media (max-width: @breakpointPortrait-1) {
+            min-height: auto;
+        }
+    }
+}
+
+ol.sidenav {
+    position: sticky;
+    top: 0;//calc(100vh + 3em);
+
+position: fixed;
+left: 0;
+top: calc(50% - (@baseLineHeight * 2.5em));
+
+    list-style-type: none;
+    background: @bodyBackground;
+    padding: .5em 0;
+    display: flex;
+    justify-content: center;
+    // .box-shadow(0 @shadowOffset @shadowDepth @shadowColor);
+    .box-shadow(@shadowOffset 0 @shadowDepth @shadowColor);
+
+flex-direction: column;
+
+    &>li {
+        position: relative;
+        display: inline-block;
+
+display: block;
+        padding: 0.25em 0.5em;
+        margin: 0;
+        &:hover {
+            ol {
+                display: block;
+            }
+        }
+    }
+
+    &.stuck {
+        // width: 17vw;
+        margin-left: -19vw;
+    }
+    ol {
+        display: none;
+        position: absolute;
+        background: @bodyBackground;
+        top: -0.5em;
+        left: 100%;
+        .border-radius(.25em);
+        .box-shadow(0 @shadowOffset @shadowDepth @shadowColor);
+
+        li {
+            list-style: none;
+            white-space: nowrap;
+            padding: 0.25em 0.5em;
+            margin: 0;
+        }
+    }
+}
+
+@media (orientation: portrait) {
+    #project-detail {
+        #scrollhint {
+            display: none;
+        }
+    }
+}
+ul.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(1em,2fr));
+    grid-gap: 1em;
+    li {
+        .card();
+        list-style: none;
+        margin: 0;
+    }
+
+}
