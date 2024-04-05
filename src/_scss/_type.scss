@@ -1,7 +1,7 @@
-@font-face {
-    font-family:"Tomato";
-    src:url('/css/fonts/Tomato Grotesk VF.woff2') format('woff');
-}
+// @font-face {
+//     font-family:"Tomato";
+//     src:url('/css/fonts/Tomato Grotesk VF.woff2') format('woff');
+// }
 // Typography
 // -------------------------
 $systemFontFamily:      system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue","HelveticaNeue", Helvetica, sans-serif;
@@ -10,17 +10,17 @@ $serifFontFamily:       "Palatino","Georgia","Roboto Serif",Times,serif;
 $monoFontFamily:        "Courier New", monospace;
 
 $baseFontFamily:        $sansFontFamily;
-$baseFontWeight:        350;
-$boldFontWeight:        550;
+$baseFontWeight:        400;
+$boldFontWeight:        600;
 $baseFontSize:          math.div(24px, 16);//16px is the browser default so the numerator is your desired p size
 $baseLineHeight:        1.62;
 $serifFontWeight:       200;
 
 $headingsFontFamily:    $sansFontFamily;
-$headingsFontWeight:    $baseFontWeight;
+$headingsFontWeight:    $boldFontWeight;
 
 $displayFontFamily:     $headingsFontFamily;
-$displayFontWeight:     $baseFontWeight;
+$displayFontWeight:     $boldFontWeight;
 
 $navbarFontFamily:      $baseFontFamily;
 $navbarFontWeight:      $baseFontWeight;
@@ -77,15 +77,15 @@ h1,h2,h3,h4,h5 {
 }
 $typeScale: 1.3;//each size is this much larger than the predecessor
 h1 {
-    @include typeset($displayFontFamily, $displayFontWeight, (1rem * pow($typeScale,4)), 1.2, -0.0625em);
+    @include typeset($displayFontFamily, $displayFontWeight, (1rem * pow($typeScale,4)), 1.2, -0.05em);
     // text-transform: uppercase;
 }
 h2 {
-    @include typeset($headingsFontFamily, $headingsFontWeight, (1rem * pow($typeScale,3)), 1.2, -0.05em);
+    @include typeset($headingsFontFamily, $headingsFontWeight, (1rem * pow($typeScale,3)), 1.2, -0.0375em);
     // text-transform: uppercase;
 }
 h3 {
-    @include typeset($headingsFontFamily, $headingsFontWeight, (1rem * pow($typeScale,2)), 1.2, -0.0125em);
+    @include typeset($headingsFontFamily, $headingsFontWeight, (1rem * pow($typeScale,2)), 1.2, -0.0250em);
     // text-transform: uppercase;
 }
 h4 {
