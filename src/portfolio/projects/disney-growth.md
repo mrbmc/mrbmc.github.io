@@ -1,6 +1,6 @@
 ---
 title: Disney+ Growth Design
-masthead-image: /images/portfolio/disney-growth/disney-growth.png
+masthead-video: /images/portfolio/disney/disney-WelcomeLandingSizzleReel.mp4
 date: 2020-12-01
 thumbnail: /images/portfolio/disney-growth/disney-growth.png
 eleventyExcludeFromCollections: false
@@ -9,11 +9,11 @@ category:
 summary: I built the Growth Design program for Disney from 0-1. We grew Disney+ to 105 Million healthy subscribers in its first two years.
 timeline: 2018-2020
 ---
-The launch of Disney+ was the first time Disney would make its unparalleled library of stories & characters available directly to consumers. My mission was to build a program - the team, process, and business outcomes - for **Growth Design** that would welcome guests to a new streaming service, while providing a "Disney level of care" to anyone, anywhere in the world, on any device.{.large}
+This is the story of how we launched Disney+ and grew it from **0 to 105M subscribers** in two years. My role was building Growth Design - the team, process, and outcomes - from inception into a 13 person cross-discipline program.{.large}
 
-| Role                      | Responsibilities                                                                        | Team                         | Timeline            |
-| :------------------------ | :-------------------------------------------------------------------------------------- | :--------------------------- | :------------------ |
-| Director of Growth Design | Design Strategy, Standards of Quality, Hiring & Team Management, Stakeholder Management | 7 Designers<br>2 Researchers | Dec 2018 - Dec 2020 |
+| Role                      | Responsibilities                                                                        | Team                                                         | Timeline            |
+| :------------------------ | :-------------------------------------------------------------------------------------- | :----------------------------------------------------------- | :------------------ |
+| Director of Growth Design | Design Strategy, Standards of Quality, Hiring & Team Management, Stakeholder Management | 7 Product Designers<br>2 Researchers<br>4 Design Specialists | Dec 2018 - Dec 2020 |
 
 {.rotate}
 
@@ -49,8 +49,10 @@ Building Disney+ was an adventure. Adventures rarely follow a straight line of p
 
 ## The Strategy{#strategy}
 
+Understanding Disney's overarching strategy is important for rationalizing design decisions we made later.
 ### Strategic Diagnosis 
-The Disney+ strategy was multi-layered. In 2017 Disney recognized declining revenue from legacy distribution channels: theatrical, cable, DVD, and licensing. That decline, coupled with a dependency on third-parties for customer data, was creating significant headwinds for the business.
+
+In 2017 Disney recognized declining revenue from legacy distribution channels: theatrical, cable, DVD, and licensing. That decline, coupled with a dependency on third-parties for customer data, was creating significant headwinds for the business.
 
 At the same time, the business model for The Walt Disney Company is different from their competitors thanks to a diverse set of revenue streams. Establishing a direct relationship with consumers could be used to drive the flywheel for other lines of business.
 
@@ -59,10 +61,13 @@ At the same time, the business model for The Walt Disney Company is different fr
 ### Strategic Policy
 
 The internally stated goal for Disney+ was to acquire as many subscribers as possible. Profitability was a distant goal on the horizon. We aimed to accomplish this goal with two main tactics:
-1. Affordable Pricing  
+
+1. **Broad Distribution**  
+   Make Disney+ available on every device that could stream video, with a purchase flow that was *native* to those devices.
+2. **Wide Availability**  
+   Roll out Disney+ globally with a signup experience that complied with cultural, legal, and fiscal norms in each region.
+3. **Affordable Pricing**  
    The $5.99 price at launch was far below competitors.
-2. Wide Distribution & Availability  
-   Make it as easy as possible to sign up for Disney by making it available on every device that could stream video, with a purchase flow that was native to those devices.
 
 ## Growth Origin Story {#origin-story}
 ### Situation
@@ -279,7 +284,9 @@ The least awful place for us to advertise another service was at the end of the 
 
 ### Situation and Challenge
 
-Design for TV devices has a few unique requirements (quirky!) that web and mobile don't have. The two big considerations are controller types (D-Pad vs Game Controller) and Payment Method (Direct Billing vs In-App-Purchase).
+Design for TV devices has unique requirements that web and mobile don't have. The input paradigm of focus control is distinct from WIMP or Touch inputs, type and color accessibility is different on TV screens, and the canvas size is fixed. 
+
+Relevant to Growth Design, the two big considerations are controller types (D-Pad vs Game Controller) and Payment Method (Direct Billing vs In-App-Purchase).
 ### Playstation 4
 
 Playstation is an example of a platform with a game controller, a power-user base, and direct billing payments.
@@ -533,7 +540,7 @@ I'd like to think the foundation we created enabled the continued growth over th
 
 <style>
 #_masthead {margin-bottom: 0;}
-#masthead h1 {display:none;}
+#_masthead h1 {display:none;}
 ._stickynav {margin-top: -2rem;position:sticky;margin-left:-19vw;}
 @media (prefers-color-scheme: dark) {
 #main img[src*="svg"] { filter:invert(1) hue-rotate(180deg);}

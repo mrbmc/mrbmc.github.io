@@ -12,9 +12,7 @@ masthead-video: /images/portfolio/disney-groupwatch/GWMPT.mp4
 ---
 # Storytelling is a fundamental human need.
 
-Stories connect us even when we're separated by distance. Conversely, streaming is highly individual and defined by an audience of one. How might we make TV social again and bring people together through the stories and characters they love?
-
-I led a team of 20+ product designers, researchers, animators, marketers, and illustrators from ideation through international roll-out over 18 months from 2019-2020 on this social viewing feature for Disney+.
+**How might we build social connection into the streaming experience?** I led a cross-discipline team of 20+ product designers, researchers, animators, marketers, and illustrators from deep user research through international roll-out to try and answer this question. We built a beloved feature for Disney+ that connected people when they could not be together.
 
 * [Discover](#discover) 
 * [Define](#define) 
