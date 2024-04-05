@@ -7,7 +7,7 @@ permalink: /about/
 ---
 # Designer, product builder, and polymath.
 
-I am a results-oriented design leader with a proven track record of building teams, products, and partnerships that drive business impact. I have scaled design organizations at startups and enterprises. My deepest subject matter expertise is in design for growth, creative tooling, and enterprise SAAS products.
+I am a results-oriented design leader with a proven track record of building teams, products, and partnerships that drive business impact. I have scaled design organizations at startups and enterprises. My deepest subject matter expertise is in design for growth & monetization, creative tooling, and enterprise SAAS products.
 
 * [Recent Highlights](#highlights)
 * [Design Leadership](#leadership) 
