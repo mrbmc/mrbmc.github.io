@@ -4,11 +4,9 @@
     margin-bottom: $spacerVertical;
     height: calc(100vh - $navbarHeight);
     flex-direction: column;
-    // justify-content: flex-end;
-    // align-items: center;
-        justify-content: center;
-        align-items: flex-start;
-        padding: 0 1rem;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 $spacerHorizontal;
     position: relative;
     box-sizing: border-box;
     overflow: hidden;

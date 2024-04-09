@@ -21,19 +21,12 @@ body,html {
 .fullheight {
     @include fullHeight(90vh);
 }
-// .container {
-// 	@include container;
-// }
 
-h1,h2,h3,h4,h5 {
-    margin: 0 0 1rem 0;
-    padding: 0;
-}
+h1,h2,h3,h4,h5,
 p,ul,ol,dl,blockquote,.blockquote {
     margin: 0 0 1rem 0;
     padding: 0;
 }
-
 li, dt {
     margin-left: 1em;
     box-sizing: border-box;

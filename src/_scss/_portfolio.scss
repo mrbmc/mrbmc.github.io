@@ -28,7 +28,7 @@ body.portfolio.list {
     }
 
     column-gap: $spacerHorizontal;
-    // row-gap: $spacerHorizontal;
+    // row-gap: $spacerVertical;
     .project {
         display: flex;
         flex-direction: column;

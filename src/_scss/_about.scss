@@ -113,7 +113,8 @@ body.about,body.home {
         &.hero {
             display: grid;
             grid-template-columns: 1fr;
-            grid-gap: $spacerHorizontal;
+            row-gap: $spacerVertical;
+            column-gap: $spacerHorizontal;
             box-sizing: border-box;
             strong {
                 font-size: 144%;

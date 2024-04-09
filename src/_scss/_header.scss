@@ -26,7 +26,7 @@
         -webkit-tap-highlight-color: transparent;
         color: $navbarLinkColor;
 
-        padding: 0 .5em;
+        padding: 0 1em;
         margin: 0;
         @include border-radius(4px);
         &.nav-cv,&.nav-resume,&.nav-photos {
@@ -210,10 +210,10 @@ body.resume #header #menu a[href="/about/"] {
         white-space: nowrap;
 
         &:first-of-type {
-            border-radius: 1rem 0 0 1rem;
+            border-radius: 1em 0 0 1em;
         }
         &:last-of-type {
-            border-radius: 0 1rem 1rem 0;
+            border-radius: 0 1em 1em 0;
         }
 
         //SUBNAVS
@@ -247,7 +247,7 @@ body.resume #header #menu a[href="/about/"] {
 
         a {
             display: flex;
-            padding: 0 $spacerHorizontal;
+            padding: 0 1em;
             white-space: nowrap;
             text-decoration: none;
         }
