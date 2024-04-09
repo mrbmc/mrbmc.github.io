@@ -14,6 +14,7 @@
     overflow: hidden;
     z-index: 10;
 
+    background: $heroUnitBackground;
     color: $heroUnitLeadColor;
 
     h1,h2,h3 {
@@ -28,7 +29,6 @@
     }
 
     figure {
-        background: $black;
         width: 100%;
         height: 120%;//calc(100vh + $navbarHeight);
         position: absolute;

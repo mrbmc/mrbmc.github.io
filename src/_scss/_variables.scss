@@ -42,7 +42,7 @@ $black:                 hslToHex(hue($brandColor),00%,00%);
 $black80:               hslToHex(hue($brandColor),55%,04%)+CC;
 
 // SEMANTIC MAPPING
-$gray-light:$gray-700;
+$gray-light:$gray-800;
 $gray-mid:	$gray-500;
 $gray-dark: $gray-200;
 
@@ -63,9 +63,9 @@ $selectionColor:        $brandAccent;
 $bodyBackground:        var(--white);
 $wellBackground:        var(--gray-light);
 $borderColor: 			var(--gray-light);
-$heroUnitBackground:    $black;
+$heroUnitBackground:    $gray-050;
 $heroUnitHeadingColor:  $white;
-$heroUnitLeadColor:     $white;
+$heroUnitLeadColor:     $gray-light;
 
 // Navbar
 // -------------------------

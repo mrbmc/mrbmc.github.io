@@ -63,9 +63,9 @@ body {
 :root {
     --black80:     #{$black80};
     --black:        #{$gray-050};
-    --gray-dark:    #{$gray-200};
-    --gray-mid:     #{$gray-500};
-    --gray-light:   #{$gray-800};
+    --gray-dark:    #{$gray-dark};
+    --gray-mid:     #{$gray-mid};
+    --gray-light:   #{$gray-light};
     --white:        #{$white};
     --white80:     #{$white80};
     --brandColor: #{$brandColor};
