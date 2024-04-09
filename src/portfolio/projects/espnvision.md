@@ -8,6 +8,7 @@ category:
   - work
 summary: An experience vision looking four years into the future of streaming sports.
 timeline: "2019"
+eleventyExcludeFromCollections: true
 ---
 
 In 2019 Disney leadership asked my team **how might we watch sports 5 years in the future** amidst a landscape of shifting consumer habits and increasingly competitive rights deals? This project leans on years of UX research, and experience operating sports streaming products, to propose a fan-centric future state of the TV apps for ESPN's forthcoming streaming service.
