@@ -10,7 +10,7 @@ eleventyExcludeFromCollections: false
 
 # Design Is A Strategic Lever.
 
-My name is Brian but my friends call me BMC. I have been designing products, teams, and partnerships with purpose since the late 1900s. I have a knack for connecting the dots between user needs and business outcomes.
+I believe Product Design offers a unique competitive advantage by unlocking critical thinking. The design process combines user insights and high craft to give form to ideas.
 
 {% comment %}
 * [linkedin](https://linkedin.com/in/mrbmc)

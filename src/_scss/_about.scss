@@ -1,17 +1,17 @@
 body.about {
 
-
     main,#main {
+        padding-top: 0;
         .gallery{
             @include fullWidth(90vw);
         }
     }
 
     h1 {
-        margin-top: $spacerVertical;
+        margin: ($spacerVertical * 2) 0 $spacerVertical;
     }
     h1 + p {
-        margin: ($spacerVertical * 2) 0;
+        margin: $spacerVertical 0 ($spacerVertical * 2);
     }
 
     img[alt="Disney"] {

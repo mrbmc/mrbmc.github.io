@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "about.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index.md",
+                "file": "about.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "index.md",
+                "file": "about.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "index.md"
+                "file": "about.md"
               }
             }
           }
@@ -173,6 +173,8 @@
   },
   "active": "5923f0147c570187",
   "lastOpenFiles": [
+    "index.md",
+    "about.md",
     "_includes/_post-list.html",
     "_includes/_post-list.md",
     "_includes/post-list.html",
@@ -187,8 +189,6 @@
     "_images/about/about-wireframes-l.jpg",
     "_images/about/about-books-xl.jpg",
     "_includes/leadership.md",
-    "index.md",
-    "about.md",
     "blog/posts/Book Review - Worn.md",
     "blog/posts/Untitled.md",
     "portfolio/projects/Untitled.md",
