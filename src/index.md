@@ -20,7 +20,7 @@ I have been designing products, teams, and partnerships with purpose since the l
 
 {% include "_project-list.md", projectList: collections.work, label: "Selected Work", count: 6 %}
 
-{% include "_post-list.md", postList: collections.posts, label: "Recent Posts", count: 4 %}
+{% include "_post-list.html", postList: collections.posts, label: "Recent Posts", count: 4 %}
 
 
 <!-- <style type="text/css">

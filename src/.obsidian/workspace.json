@@ -173,6 +173,10 @@
   },
   "active": "5923f0147c570187",
   "lastOpenFiles": [
+    "_includes/_post-list.html",
+    "_includes/_post-list.md",
+    "_includes/post-list.html",
+    "_images/blog/girl-turntable.jpg",
     "_images/about/about-workshopmess-m.jpg",
     "_images/about/about-workshopmess-bw-m.jpg",
     "_images/about/about-workshopmess-bw-l.jpg",
@@ -182,8 +186,6 @@
     "_images/about/about-wireframes-m.jpg",
     "_images/about/about-wireframes-l.jpg",
     "_images/about/about-books-xl.jpg",
-    "_images/about/about-books-m.jpg",
-    "_images/about/about-books-1.0-m.jpg",
     "_includes/leadership.md",
     "index.md",
     "about.md",
@@ -199,8 +201,6 @@
     "_images/portfolio/disney-enterprise/dev-portal.jpgpng",
     "colophon.md",
     "_images/portfolio/disney-growth/Career Highlights/Disney+ Growth",
-    "_images/portfolio/disney-growth/Career Highlights",
-    "_images/portfolio/disney-growth/Growth",
     "_scss/colophon.scss.md",
     "Untitled.md",
     "_includes/process.md",
@@ -217,7 +217,6 @@
     "404.md",
     "error.md",
     "blog/index.md",
-    "blog.md",
-    "blog/tags.md"
+    "blog.md"
   ]
 }

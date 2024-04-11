@@ -1,0 +1,24 @@
+{% if postList.length > 0 %}<section id="blog" class="blog">
+
+{% if label %}## {{ label }}{% endif %}
+
+{% if summary %}{{ summary }}{% endif %}
+
+{% for post in postList %}{% if forloop.index0 < count %}
+<div class="post" role="article" onclick="location.href='{{post.url}}'">
+
+<summary>
+
+### [{{post.data.title}}]({{ post.url }})
+
+{{ post.data.date | date: "%Y-%m-%d" }}{.date}
+
+</summary>
+
+{% if post.data.masthead-image %}<img src="{{ post.data.masthead-image }}" />{% endif %}
+
+</div>
+
+{% endif %}{% endfor %}
+
+</section>{% endif %}
