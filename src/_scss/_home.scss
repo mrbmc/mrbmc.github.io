@@ -33,9 +33,12 @@ body.home {
         padding-top: 0;
     }
     #masthead {
-        justify-content: center;
-        align-items: flex-start;
-
+        &>* {
+            max-width: $gridLimit;
+            margin-left: auto;
+            margin-right: auto;
+            width: 100%;
+        }
         @media (orientation: landscape) {
             padding: 0 $gridMargin;
             height: (100vh);
@@ -72,27 +75,33 @@ body.home {
 
         // moving gradients
         &:before {
-            content: "";
             // background: 
             //     radial-gradient(38% 81% at 100% 81%,   $brandAccent20 25%,  $brandColor00 100%)
             //     ,radial-gradient(38% 130% at 62% 0%,    $brandComplement20 0%,   $brandColor00 100%)
             //     ,radial-gradient(38% 100% at 20% 100%,  $brandSecondary20 0%,      $brandColor00 100%)
-            //     // ,radial-gradient(100% 100% at 0% 0%,  $brandColor80 0%,    $brandColor00 100%)
+            //     ,radial-gradient(100% 100% at 0% 0%,  $brandColor80 0%,    $brandColor00 100%)
             //     ,$heroUnitBackground;
-            background-image: url('/images/backgrounds/clouds-small.jpg');
+
+            // background-image: url('/images/backgrounds/bg-machu-pichu.jpg');
+            // filter: saturate(100%) brightness(0.50);
+
+            background-image: url('/images/blog/mobius.png');
+            filter: blur(2rem) saturate(150%) brightness(0.8);
+            transform: scale(1.2);
+
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: 100% 100%;
-            filter: blur(3rem) saturate(150%) brightness(0.9);
+
             // animation: gradient 30000ms $animateEasing infinite;
 
+            content: "";
             width: 100%;
             height: 100%;
             position: absolute;
             left: -0vw;
             top: -0vh;
             z-index: -2;
-            transform: scale(1.2);
         }
 
         &:after {
@@ -103,57 +112,59 @@ body.home {
             position: absolute;
             left: 0;
             top: 0;
-            z-index: 0;
+            z-index: -1;
             filter: url(#noiseFilter) opacity(25%);
         }
+/*
         #gradient-canvas {
-            // display: none;
-          width:100%;
-          height:100%;
-          position: absolute;
-          top: 0;
-          left: 0;
-          z-index: 0;
-          opacity: 0.2;
-          // filter: saturate(50%);
-          // --gradient-color-1: #{$brandColor};
-          // --gradient-color-2: #{$brandSecondary};
-          // --gradient-color-3: #{$brandColor};
-          // --gradient-color-4: #{$brandAccent};
-          --gradient-color-1: #{$white};
-          --gradient-color-2: #{$gray-900};
-          --gradient-color-3: #{$gray-800};
-          --gradient-color-4: #{$gray-700};
-          @media (prefers-color-scheme: dark) {
-              --gradient-color-1: #{$black};
-              --gradient-color-2: #{$gray-200};
-              --gradient-color-3: #{$gray-300};
-              --gradient-color-4: #{$gray-400};
-          }
+            display: none;
+            width:100%;
+            height:100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            opacity: 0.2;
+            // filter: saturate(50%);
+            // --gradient-color-1: #{$brandColor};
+            // --gradient-color-2: #{$brandSecondary};
+            // --gradient-color-3: #{$brandColor};
+            // --gradient-color-4: #{$brandAccent};
+            --gradient-color-1: #{$white};
+            --gradient-color-2: #{$gray-900};
+            --gradient-color-3: #{$gray-800};
+            --gradient-color-4: #{$gray-700};
+            @media (prefers-color-scheme: dark) {
+            --gradient-color-1: #{$black};
+            --gradient-color-2: #{$gray-200};
+            --gradient-color-3: #{$gray-300};
+            --gradient-color-4: #{$gray-400};
+            }
         }
-
+*/
     }
     .project-list,.blog {
         padding-top: $spacerVertical;
         // padding-bottom: $spacerVertical;
     }
     .project-list {
-        column-gap: 10vw;
-        @include fullWidth(96vw);
         h2 {
             text-align: center;
         }
-         .project {
-            flex: 1 0 44%;
+
+        .project {
+            flex: 1 0 calc(50% - $spacerHorizontal);
             flex-direction: column-reverse;
+            header {
+            }
             h3 {
-                margin: 0.5em 0 0 0;
+                margin: 0;
             }
             img {
                 background: $wellBackground;
                 width: 100%;
                 object-fit: cover;
-                height: calc(44vw * .62);
+                height: 19vw;
             }
             @media (orientation: landscape) {
                 // scroll-snap-align: start;

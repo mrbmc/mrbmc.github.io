@@ -84,14 +84,15 @@ $navbarBrandColor:                $navbarLinkColor;
 // GRID
 // --------------------------------------------------
 $gridColumns:             12;
-$gridWidth:               62vw;
-$gridGutterWidth:         4vw;
+$gridWidth:               96vw;
+$gridGutterWidth:         2vw;
 $gridColumnWidth:         math.div(($gridWidth - (($gridColumns - 1) * $gridGutterWidth)), $gridColumns);
 $gridMargin: 			  math.div((100vw - $gridWidth),2);
+$gridLimit: 			  40rem;
 
-$spacerHorizontal:          1rem;
+$spacerHorizontal:          $gridGutterWidth;
 $spacerVertical:            2rem;
-$spacerHorizontalPhone:     1rem;
+$spacerHorizontalPhone:     ($gridGutterWidth * 2);
 $spacerVerticalPhone:       1rem;
 
 $breakpointWidescreen:      1201px;

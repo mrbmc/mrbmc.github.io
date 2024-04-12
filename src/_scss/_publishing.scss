@@ -123,7 +123,7 @@ p.gallery,div.gallery-wrap {
         // .box-shadow(.5em 0 1em rgba(0,0,0,0.1));
         cursor: zoom-in;
 
-        @media (max-width: $gridWidth) {
+        @media (orientation: portrait) {
             max-height: 62vw;
         }
     }

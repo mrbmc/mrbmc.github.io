@@ -1,14 +1,13 @@
 #masthead {
 
     @include fullWidth(100vw);
+
     margin-bottom: $spacerVertical;
     height: calc(100vh - $navbarHeight);
     flex-direction: column;
-    // justify-content: flex-end;
-    // align-items: center;
-        justify-content: center;
-        align-items: flex-start;
-        padding: 0 1rem;
+    justify-content: center;
+
+    padding: 0 $spacerHorizontal;
     position: relative;
     box-sizing: border-box;
     overflow: hidden;
@@ -60,18 +59,10 @@
     }
 
     @media (orientation: portrait) {
-        // min-height: 100vw;
-        // min-height: auto;
         height: auto;
         min-height: 62vw;
 
         figure {
-        //     height: auto;
-        //     top: 0;
-            // img {
-            //     height: auto;
-            //     object-fit: contain;
-            // }
         }
     }
 

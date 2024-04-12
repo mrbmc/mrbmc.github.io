@@ -8,6 +8,7 @@ tags:
   - art
   - focus
   - growth
+masthead-image: /images/blog/girl-turntable.jpg
 ---
 On the last night of Channukah, I gave each of my kids their first vinyl record from their *current* favorite artist (Taylor Swift and Imagine Dragons respectively but that's not important to the story.) The physical records were not the real gift. My real goal was to give them a special kind of experience.
 
