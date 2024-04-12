@@ -33,6 +33,9 @@ body {
         }
         a {
             color: $heroUnitLeadColor;
+            &:hover {
+                color: $heroUnitHeadingColor;
+            }
         }
 
         &>div {

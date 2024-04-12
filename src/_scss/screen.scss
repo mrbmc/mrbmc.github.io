@@ -274,6 +274,10 @@ blockquote,.blockquote {
     // box-shadow: 0 8px 24px hsla(hue($brandColor), 50%, 10%, 20%);;
     box-shadow: inset 0px 1px 1px 0px $white, 0 math.div($shadowOffset, 2) math.div($shadowDepth,2) $shadowColor, 0 $shadowOffset $shadowDepth $shadowColor;
 
+    &:hover {
+        color: $heroUnitHeadingColor;
+    }
+
     @media (prefers-color-scheme: dark) {
         // color: $heroUnitBackground;
         // background: $heroUnitLeadColor;
