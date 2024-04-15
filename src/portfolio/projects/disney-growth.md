@@ -9,13 +9,15 @@ category:
 summary: I built the Growth Design program for Disney from 0-1. We grew Disney+ to 105 Million healthy subscribers in its first two years.
 timeline: 2018-2020
 ---
-This is the story of how we launched Disney+ and grew it from **0 to 105M subscribers** in two years. My mission was building "Growth Design" - the team, process, and outcomes - from inception into a 13 person cross-discipline program.{.large}
+This is the story of how we launched Disney+ and grew it from **0 to 105M subscribers** in two years. It was my mission to build "Growth Design" - the team, process, and outcomes - from inception into a 13-person cross-discipline program.{.large}
 
-| Role                      | Responsibilities                                                                        | Team                                                         | Timeline            |
-| :------------------------ | :-------------------------------------------------------------------------------------- | :----------------------------------------------------------- | :------------------ |
-| Director of Growth Design | Design Strategy, Standards of Quality, Hiring & Team Management, Stakeholder Management | 7 Product Designers<br>2 Researchers<br>4 Design Specialists | Dec 2018 - Dec 2020 |
+| Role                            | Responsibilities                                                                     | Team                                                         | Timeline            |
+| :------------------------------ | :----------------------------------------------------------------------------------- | :----------------------------------------------------------- | :------------------ |
+| Senior Director, Product Design | Design Strategy, Hiring &  Management, Organizational Design, Stakeholder Management | 7 Product Designers<br>2 Researchers<br>4 Design Specialists | Dec 2018 - Dec 2020 |
 
 {.rotate}
+
+*Note: This is a long and unconventional case study. For quick reference, you can jump to [project context](#strategy), [team leadership](#project-team), [design principles](#ux-tenets), [launch UI](#ascent), [expansion UI](#summit)* 
 
 1. [Basecamp](#basecamp)
 	1. [The Strategy](#strategy)
