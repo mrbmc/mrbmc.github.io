@@ -1,7 +1,7 @@
 ---
 title: A Londoner's Guide to New York Cycling
 date: 2014-05-22
-masthead-image: /images/blog/nyc-cycling.jpeg
+masthead-image: /images/blog/nyc-cycling.jpg
 tags:
   - cycling
   - parody
