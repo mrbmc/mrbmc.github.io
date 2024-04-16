@@ -127,7 +127,11 @@ blockquote,.blockquote {
         text-decoration: none;
         @include typeset($navbarFontFamily, $navbarFontWeight, 0.8rem, ($navbarHeight * .62), -0.0125em);
         text-transform: uppercase;
+
+        @include transition(all $animateSpeed $animateEasing);
+
         &:hover {
+            @include transition(all ($animateSpeed * .5) $animateEasing);
             color: $navbarLinkColorHover;
             background: $navbarLinkBackgroundHover;
             text-decoration: none;

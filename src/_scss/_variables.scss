@@ -54,7 +54,7 @@ $textBoldColor:         var(--black);
 $textOffColor:          var(--gray-mid);
 $displayTextColor:      var(--black);
 $linkColor:             var(--black);
-$linkColorHover:        $linkColor;
+$linkColorHover:        var(--brandColor);
 $selectionColor:        $brandAccent;
 
 

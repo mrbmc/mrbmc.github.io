@@ -2,8 +2,8 @@
 
 @import "./_mixins.scss"; 
 @import "./_variables.scss";
-@import "./_type.scss";
 @import "./_animations.scss";
+@import "./_type.scss";
 
 
 // ======================================================================
@@ -78,6 +78,7 @@ body {
     --gray-light:   #{$gray-200};
     --white:        #{$gray-050};
     --white80:      #{$black80};
+    --brandColor:   #{$brandAccent};
     };
 }
 html {
