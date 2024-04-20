@@ -4,7 +4,8 @@ OUT="$(dirname "$0")/www";
 
 
 function build_js () {
-	echo "- JAVASCRIPT";
+	echo "---------------------------------------------";
+	echo "- COMPILING JAVASCRIPT";
 
 	echo " Main JS";
 	mkdir -m755 -p $OUT/js;
@@ -57,8 +58,7 @@ function build_js () {
 }
 
 function build_thumbs () {
-	echo "---------------------------------------------";
-	echo "BUILDING THUMBNAILS";
+	echo "Build Thumbnails";
 
 	for entry in "$SRC/_images/blog"/*
 	do
@@ -148,7 +148,7 @@ if [[ "$1" == "build" ]]; then
 	mkdir -m755 -p $OUT;
 
 	echo "---------------------------------------------";
-	echo "- Compiling SASS";
+	echo "- COMPILING SASS";
 	/opt/homebrew/bin/sass $SRC/_scss/screen.scss $OUT/css/screen.css --style compressed;
 
 	build_js;

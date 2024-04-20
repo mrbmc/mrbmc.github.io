@@ -11,20 +11,56 @@ timeline: 2013-2015
 ---
 How might we reward podcast hosts with a fair income from their work?
 
-BlogTalkRadio was one of the first platforms to support a true **Creator Economy**. We partnered with hosts on a flywheel of success: 
+BlogTalkRadio was one of the first platforms to support a **Creator Economy** by compensating hosts for generating engagement through their content. 
+
+
+| Role                     | Responsibilities                                                                         | Team                                                | Timeline               | Impact                                                           |
+| :----------------------- | :--------------------------------------------------------------------------------------- | :-------------------------------------------------- | :--------------------- | ---------------------------------------------------------------- |
+| Director of Product & UX | KPI and OKR definition<br>roadmap prioritization<br>customer research<br>market research | 5 Engineers<br>2 UI Designers<br>1 Content Designer | June 2013 - April 2015 | Grew ad revenue by 37% YoY <br>Grew subscription revenue 42% YoY |
+
+----
+
+## Product Strategy
+
+The success of the platform relied on a flywheel of incentives: 
+
+![Flywheel of incentives](/images/portfolio/btr/dynamo-illustration.svg){style="height:50vh;"}
+
 - Educating hosts on podcast best practices elevated the quality of their shows →
 - Boosted listener engagement 200% YoY →
 - Increased advertising revenue 100%  →
 - Tripled host activation (creating 3+ episodes) raised Pro Subscription revenue 20%
 
-
 ----
 
 ### Growing Healthy Hosts
 
-How might we guide hosts through the emotional labor of creating a show?
+How might we guide hosts through the emotional labor of creating a show? We created a Journey Map to help align our cross-functional teams between product, design, engineering, marketing, and community management. This helped us identify key leverage points in the UX for building habituation to prioritize:
 
-!['Journey Map'](/images/portfolio/btr/customer-experience-map-hosts.jpg)
+Some of the biggest UX challenges for new hosts were:
+- Getting to your third episode
+- Running a first test show
+- Inviting your first guests
+- Writing a short repeatable intro to keep guests engaged
+- Designing compelling cover art that scales across distribution channels
+
+!['Journey Map'](/images/portfolio/btr/customer-experience-map-hosts.jpg){.fullwidth}
+
+## Host Dashboard
+
+By far the most common workflow we saw almost every host take in the dashboard was viewing the listen numbers for their content. Hosts wanted to see a quantifiable reward for their efforts. We surfaced these metrics and created new summary metrics in the dashboard to amplify the ROI for them.
+
+![Podcast Host Dashboard](/images/portfolio/btr/btr-hosttools-dashboard.png)
+
+### Gamify Podcast Planning
+
+The metrics were a useful indicator for the podcast health but they didn't provide the qualitative guidance that hosts needed to improve those numbers. The competitive landscape of support for hosts focused mostly on technical guidance for sound quality and distribution. There was no guidance on how to write a compelling script, structure the show intro, or write compelling titles that inspire the audience to listen.
+
+We knew from our own metrics that the first 30 seconds of a podcast episode were the most critical for engaging your audience and getting them hooked. How might we help hosts make the most of that opportunity?
+
+We built features, like **Signal Strength**, and **Template Episodes** to help improve the podcast _content_ directly in the tools. We used some light gamification inspired by other apps and guided hosts toward creating complete and compelling podcast titles, descriptions, and introductions.
+
+!['Podcast Writing Hints'](/images/portfolio/btr/btr-hosttools-schedule.jpg)
 
 
 ---
@@ -44,21 +80,6 @@ The Studio is the heart of the BTR experience and it's the UI that hosts interac
 !['BTR Studio'](/images/portfolio/btr/btr-studio-teaser.jpg)
 !['Ad Editor'](/images/portfolio/btr/btr-ad-editor.png)
 
-## Host Dashboard
-
-By far the most common workflow we saw almost every host take in the dashboard was viewing the listen numbers for their content. Hosts wanted to see a quantifiable reward for their efforts. We surfaced these metrics and created new summary metrics in the dashboard to amplify the ROI for them.
-
-![Podcast Host Dashboard](/images/portfolio/btr/btr-hosttools-dashboard.png)
-
-## Gamify Podcast Planning
-
-The metrics were a useful indicator for the podcast health but they didn't provide the qualitative guidance that hosts needed to improve those numbers. The competitive landscape of support for hosts focused mostly on technical guidance for sound quality and distribution. There was no guidance on how to write a compelling script, structure the show intro, or write compelling titles that inspire the audience to listen.
-
-We knew from our own metrics that the first 30 seconds of a podcast episode were the most critical for engaging your audience and getting them hooked. How might we help hosts make the most of that opportunity?
-
-We built features, like **Signal Strength**, and **Template Episodes** to help improve the podcast _content_ directly in the tools. We used some light gamification inspired by other apps and guided hosts toward creating complete and compelling podcast titles, descriptions, and introductions.
-
-!['Podcast Writing Hints'](/images/portfolio/btr/btr-hosttools-schedule.png)
 
 ----
 

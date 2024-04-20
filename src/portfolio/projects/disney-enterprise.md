@@ -9,76 +9,30 @@ category:
 summary: This suite of 30+ enterprise SAAS products behind Disney+, Hulu, and ESPN saved Disney $100M/pa in operating costs and doubled AARPU.
 timeline: 2019-2023
 ---
-"StreamEngine" is a suite of 30+ purpose-built tools that operate Disney+, Hulu, ESPN+, and STAR+. Our team of designers partnered with *hundreds* of developers & product managers across Disney to build SAAS products that could each be a startup in their own right. 
+"StreamEngine" is a suite of ~35 purpose-built tools that operate Disney+, Hulu, ESPN+, and STAR+. Our team of designers partnered with *hundreds* of developers & product managers across Disney to build SAAS products that could each be a startup in their own right. 
 
-These products collectively **saved $100M p/a in operating costs** and **supported a 3x growth in AARPU**. More significantly, they opened up new creative possibilities for cast members to serve our guests better.
+| Role & Responsibility                                                                                                                                          | Team                                     | Timeline            | Impact                                                                       |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- | ---------------------------------------------------------------------------- |
+| **Sr. Director, Product Design**<br><br>Team hiring, management, and organization design. Design strategy. Partner management. Budgeting. Culture development. | 12 FT Designers + 4-6 Design Contractors | Jan 2019 - Aug 2023 | saved **$100M** p/a in operating costs<br>supported a **2x growth in AARPU** |
 
 ## Legacy Of Tool Innovation
 
-Why build custom software tools? To create something truly novel you need novel tools.
+Why build custom software tools? **To create something truly novel you need novel tools.**
 
 Disney has a rich history of building new tools that unlock creative possibilities. One famous example was the Multi-plane camera which massively accelerated animation and enabled parallax motion techniques.
 
-![Multiplane Camera](/images/portfolio/Walt_Disney_Multiplane_Camera_2.jpeg)
+![Multiplane Camera](/images/portfolio/Walt_Disney_Multiplane_Camera_2.jpeg){.fullwidth style="height:62vh;object-position: 50% 38%;"}
 
 
-### Tools We Worked On
+### Streaming Video is Hard
 
-Machine Learning Dashboard  
-Commerce & Offer Operations  
-Streaming QoE Insights  
-Developer Portal  
-Content Experience Management  
-Unified Messaging Platform  
-Experimentation   
-EXD Design System  
-Dictionary & Translation  
-Support Agent Console   
-Data Activation Framework   
-CDN Management Console  
-Metadata Mapping & Visualization  
-VX Dashboard  
-Data Portal   
-Disney Edge Controller (DEC)  
-Content Portal (hulu live, sVOD)  
-Commerce Config Tool  
-DATA instrumentation library  
-Partner Portal  
-Content delivery Preview  
-Responder Files (DATA Feature Market)  
-Player Config Service  
-Content Catalog Browser  
-Fraud Management Service  
-Audience Segmentation  
-Hulu Ad Revenue Processing Service  
-Hulu Ad Manager  
-Hulu Ad Mission Control  
-Anti-Piracy Operations  
-SRE Dashboard  
+Building a global streaming platform that delivers flawless video to paying customers in the language & currency of their choice requires a lot of custom software. Operating at the scale, and legal exposure, that Disney does often requires us to build, not buy, solutions. 
 
-## The Team
+Here are some of the tools we designed:
 
-![linda](/images/portfolio/disney-enterprise/exd-team-linda.png)![caroline](/images/portfolio/disney-enterprise/exd-team-caroline.png)![dan](/images/portfolio/disney-enterprise/exd-team-dan.png)![alexaf](/images/portfolio/disney-enterprise/exd-team-alexaf.png)![daria](/images/portfolio/disney-enterprise/exd-team-daria.png)![takeem](/images/portfolio/disney-enterprise/exd-team-takeem.png)![alexac](/images/portfolio/disney-enterprise/exd-team-alexac.png)![jenny](/images/portfolio/disney-enterprise/exd-team-jenny.png)![willet](/images/portfolio/disney-enterprise/exd-team-willet.png)![sarah](/images/portfolio/disney-enterprise/exd-team-sarah.png)![kda](/images/portfolio/disney-enterprise/exd-team-kda.png)![cathy](/images/portfolio/disney-enterprise/exd-team-cathy.png)![carol](/images/portfolio/disney-enterprise/exd-team-carol.png)![jon](/images/portfolio/disney-enterprise/exd-team-jon.png)![agency](/images/portfolio/disney-enterprise/exd-team-agency.png)
-{.team}
+Anti-Piracy Operations, Audience Segmentation, CDN Management Console, Commerce & Offer Operations, Commerce Config Tool, Content Catalog Browser, Content delivery Preview, Content Experience Management, Content Portal (hulu live, sVOD), CX Dashboard  , Data Activation Framework , DATA instrumentation library, Data Portal , Developer Portal, Dictionary & Translation, Disney Edge Controller (DEC), EXD Design System, Experimentation , Fraud Management Service, Hulu Ad Manager, Hulu Ad Mission Control, Hulu Ad Revenue Processing Service, Machine Learning Dashboard, Metadata Mapping & Visualization, Partner Portal, Player Config Service, Responder Files (DATA Feature Market), SRE Dashboard
+Streaming QoE Insights, Support Agent Console , Unified Messaging Platform{.small .card}
 
-## Pods
-
-To tackle such a large surface area, we organized the team into pods for each topical area. These subjects aligned with business outcomes as well.
-
-![](/images/portfolio/disney-enterprise/exd-pods.png){.card}
-
-## Products
-
-These are a few of the 0-1 products that we created.
-
-<!-- - ![Commerce Portal](/images/portfolio/disney-enterprise/genie.png)
-- ![CMS Dictionary](/images/portfolio/disney-enterprise/cypher-1.png)
-- ![CMS Curation](/images/portfolio/disney-enterprise/maestro.png)
-- ![Experimentation](/images/portfolio/disney-enterprise/weaponx.png)
-- ![Streaming Quality Analytics](/images/portfolio/disney-enterprise/enterprise-optumus-session.png)
-- ![Support Agent Portal](/images/portfolio/disney-enterprise/baymax.png)
-{.gallery}
- -->
 
  
 - ![Commerce Portal](/images/portfolio/disney-enterprise/commerces-offer-detail.jpg)
@@ -92,6 +46,22 @@ These are a few of the 0-1 products that we created.
 - ![Advertising](/images/portfolio/disney-enterprise/ads-mission-control-scheduling.jpg)
 - ![Developer Productivity](/images/portfolio/disney-enterprise/dev-portal.jpg)
 {.gallery}
+
+
+## The Team
+
+A team is greater than the sum of the individuals. It's a singular unit with a shared purpose. The secret ingredient that binds a group of people together is the culture. I'm proud to say the Enterprise XD team at Disney had a strong culture of **psychological safety**, **authenticity**, and **shared growth**.
+
+Culture can be designed with intentional reinforcement of the behaviors that align with our values. Other teams at Disney saw this and asked for an open-source toolkit for our [culture workshop](/portfolio/team-culture-workshop/).
+
+![linda](/images/portfolio/disney-enterprise/exd-team-linda.png)![caroline](/images/portfolio/disney-enterprise/exd-team-caroline.png)![dan](/images/portfolio/disney-enterprise/exd-team-dan.png)![alexaf](/images/portfolio/disney-enterprise/exd-team-alexaf.png)![daria](/images/portfolio/disney-enterprise/exd-team-daria.png)![takeem](/images/portfolio/disney-enterprise/exd-team-takeem.png)![alexac](/images/portfolio/disney-enterprise/exd-team-alexac.png)![jenny](/images/portfolio/disney-enterprise/exd-team-jenny.png)![willet](/images/portfolio/disney-enterprise/exd-team-willet.png)![sarah](/images/portfolio/disney-enterprise/exd-team-sarah.png)![kda](/images/portfolio/disney-enterprise/exd-team-kda.png)![cathy](/images/portfolio/disney-enterprise/exd-team-cathy.png)![carol](/images/portfolio/disney-enterprise/exd-team-carol.png)![jon](/images/portfolio/disney-enterprise/exd-team-jon.png)![agency](/images/portfolio/disney-enterprise/exd-team-agency.png)
+{.team}
+
+## Pods
+
+To tackle such a large surface area, we organized the team into pods for each topical area. These subjects aligned with business outcomes as well.
+
+![](/images/portfolio/disney-enterprise/exd-pods.png){.card}
 
 
 ## Design System
@@ -110,15 +80,24 @@ We partnered with an team of engineers who cared deeply about developer producti
 <!--  -->
 
 <style>
-  .team img {
+.team {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+row-gap: 1em;
+}
+.team img {
+flex: 1 1;
+}
+  ._team img {
       margin: 0 1rem 1rem 0;
       display: inline-block;
   }
   @media (orientation: landscape) {
-    .team img {
+    ._team img {
       width: calc((62vw - 5rem) / 6);
     }
-    .team img:nth-of-type(5n) {
+    ._team img:nth-of-type(5n) {
       margin-right: 0;
     }  
   }

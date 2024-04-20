@@ -8,11 +8,16 @@
   },
   "scripts": {
     "watch:sass": "sass --watch src/_scss:www/css",
-    "watch:eleventy": "npx @11ty/eleventy --serve --incremental",
+    "watch:eleventy": "npx @11ty/eleventy --serve --incremental --ignore-initial",
+
+    "build:all": "./build.sh build",
     "build:sass": "sass src/_scss:www/css --style compressed",
+    "build:js": "./build.sh buildjs verbose",
     "build:eleventy": "npx @11ty/eleventy",
+
+
     "build": "npm-run-all build:*",
-    "start": "npm-run-all build:sass --parallel watch:*",
+    "start": "npm-run-all --parallel watch:*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
