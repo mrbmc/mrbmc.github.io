@@ -73,23 +73,11 @@ body.home {
 
 
 
-        // moving gradients
         &:before {
-            // background: 
-            //     radial-gradient(38% 81% at 100% 81%,   $brandAccent20 25%,  $brandColor00 100%)
-            //     ,radial-gradient(38% 130% at 62% 0%,    $brandComplement20 0%,   $brandColor00 100%)
-            //     ,radial-gradient(38% 100% at 20% 100%,  $brandSecondary20 0%,      $brandColor00 100%)
-            //     ,radial-gradient(100% 100% at 0% 0%,  $brandColor80 0%,    $brandColor00 100%)
-            //     ,$heroUnitBackground;
-
-            // background-image: url('/images/backgrounds/bg-machu-pichu.jpg');
-            // filter: saturate(100%) brightness(0.50);
-
             background-image: url('/images/blog/mobius.png');
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: 100% 100%;
-            // animation: gradient 30000ms $animateEasing infinite;
             filter: blur(2rem) saturate(150%) brightness(0.8);
             transform: translateZ(0) scale(1.2);
 
