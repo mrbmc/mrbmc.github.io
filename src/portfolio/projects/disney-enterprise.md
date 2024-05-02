@@ -19,18 +19,18 @@ timeline: 2019-2023
 
 Operating at the scale, and legal exposure, that Disney does often requires us to build, not buy, solutions due to cost or privacy constraints. *The scale of this platform was comparable to an entire industry.* Many of the products we built matched the scale of commercial products:
 
-| Disney Product              | Purpose                                                                              | Commercial Analog(s)                                                 |
-| --------------------------- | ------------------------------------------------------------------------------------ | -------------------------------------------------------------------- |
-| Genie                       | Billing and SKU management                                                           | [Orb](https://www.withorb.com/), [Metronome](https://metronome.com/) |
-| Baymax                      | Customer Support Portal                                                              | Zendesk                                                              |
-| WeaponX                     | Experimentation & Feature Flagging                                                   | Optimizely, Launch Darkly                                            |
-| Polaris                     | Content Curation                                                                     | Contentful                                                           |
-| Optumus                     | Streaming Quality Analysis                                                           | [Conviva](https://www.conviva.com/)                                  |
-| Developer Platform          |                                                                                      | n/a                                                                  |
-| DATA Platform               | A one-stop shop for all metrics and analytics of our streaming services.             | Tableau, Zoho                                                        |
-| Ad Manager, Mission Control | Advertising curation, provisioning, and deployment.                                  | [Google AdSense](https://adsense.google.com/), Amazon Advertising    |
-| Partner Portal              |                                                                                      | GitLabs                                                              |
-| Galaxy                      | Platform for sending personalized targeted messages (Email, SMS, Push) to our users. | salesforce, omnisend, braze                                          |
+| Disney Product              | Purpose                                                                                     | Commercial Analog(s)                                                                    |
+| --------------------------- | ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| Genie                       | Billing and SKU management                                                                  | [Orb](https://www.withorb.com/), [Metronome](https://metronome.com/)                    |
+| Baymax                      | Customer Support Portal                                                                     | [Zendesk](https://www.zendesk.com/)                                                     |
+| WeaponX                     | Experimentation & Feature Flagging                                                          | Optimizely, Launch Darkly                                                               |
+| Polaris                     | Content Curation                                                                            | [Contentful](https://www.contentful.com/)  + [ContentStudio](https://contentstudio.io/) |
+| Optumus                     | Streaming Quality Analysis                                                                  | [Conviva](https://www.conviva.com/)                                                     |
+| Developer Platform          | Centralized resources for managing developer resources (services, APIs, documentation, etc) | n/a                                                                                     |
+| DATA Platform               | A one-stop shop for all metrics and analytics of our streaming services.                    | [Tableau](https://www.tableau.com/), [Zoho](https://www.zoho.com/analytics/)            |
+| Ad Manager, Mission Control | Advertising curation, provisioning, and deployment.                                         | [Google AdSense](https://adsense.google.com/), Amazon Advertising                       |
+| Partner Portal              | Testing APIs, documentation, and issue tracking for developers building with Disney's SDK.  | [GitLabs](https://about.gitlab.com/)                                                    |
+| Galaxy                      | Platform for sending personalized targeted messages (Email, SMS, Push) to our users.        | [salesforce](https://www.salesforce.com/) + [braze](https://www.braze.com/)             |
 
 All of the products we designed or consulted on:
 
