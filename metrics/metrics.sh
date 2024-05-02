@@ -25,7 +25,7 @@ echo "UNZIPPING LOGS"
 gunzip -c -k -f $BASE/logs/E1TNSK7JF24IAY*gz > $BASE/log_raw
 
 echo "SCRUBBING CRAWLERS & BOTS"
-grep  -E -v -i -f $BASE/blacklist.txt log_raw > log_clean
+grep  -E -v -i -f $BASE/blacklist.txt $BASE/log_raw > $BASE/log_clean
 
 # echo "SPLITTING LOG INTO MONTH LOGS"
 # for i in {01..12}
@@ -35,13 +35,14 @@ grep  -E -v -i -f $BASE/blacklist.txt log_raw > log_clean
 # done
 
 echo "ANALYZING LOGS"
+mkdir -m 755 $BASE/../www/metrics
 goaccess $BASE/log_raw -o $BASE/../www/metrics/raw.html --log-format=CLOUDFRONT
 goaccess $BASE/log_clean -o $BASE/../www/metrics/index.html --log-format=CLOUDFRONT --no-query-string --agent-list --ignore-crawlers --unknowns-as-crawlers --tz="America/New York"
 
 echo "GENERATING MOTHLY REPORTS"
 for i in {04..05}
 do
-	sed -n '/2024\-'$i'\-15/,/2024\-'$i'\-31/ p' $BASE/log_clean | goaccess -a -o $BASE/../www/metrics/2024$i.html --log-format=CLOUDFRONT --ignore-crawlers --unknowns-as-crawlers --tz="America/New York"
+	sed -n '/2024\-'$i'\-01/,/2024\-'$i'\-31/ p' $BASE/log_clean | goaccess -a -o $BASE/../www/metrics/2024$i.html --log-format=CLOUDFRONT --ignore-crawlers --unknowns-as-crawlers --tz="America/New York"
 done
 
 

@@ -4,11 +4,13 @@
 admin
 ads.txt
 amazonbot
+ClaudeBot
 crawler
 dbweb
 drupal
 go-http-client
 googlebot
+ImagesiftBot
 mj12bot
 python-request
 sellers

@@ -163,6 +163,7 @@ if [[ "$1" == "build" ]]; then
 	echo "GARBAGE COLLECTION";
 	find $(dirname "$0") -name ".DS_Store" -type f -delete
 	rm -Rf $OUT/*/node_modules; 
+	rm -Rf $OUT/metrics; 
 	chmod -Rf 755 $OUT/
 
 	echo "* * * * * * * * * * * * * * * * * * * * * * *";
