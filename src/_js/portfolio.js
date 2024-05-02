@@ -1,3 +1,14 @@
+var DEBUG = (document.location.hostname == "localhost" || document.location.href.includes('debug')),
+    VERBOSE = false && DEBUG,
+    last_known_scroll_position = 0,
+    ticking = false;
+
+function wrapElement (el, wrapper) {
+    el.parentNode.insertBefore(wrapper, el);
+    wrapper.appendChild(el);
+}
+
+
 window.addEventListener('keydown', function(e) {
     console.log('onkeydown',e);
     galleryKeyPress(e);
