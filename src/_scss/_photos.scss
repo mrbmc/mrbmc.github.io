@@ -1,12 +1,16 @@
 body.photos {
+    $thumbSize: 6vh;
     #header {
          scroll-snap-align: start;
     }
     footer {
         scroll-snap-align: end;
     }
+    #main {
+        padding: 0;
+    }
     #masthead {
-        height: calc(100vh - $navbarHeight - 10vh);
+        height: calc(100vh - $navbarHeight - $thumbSize);
         h1 {
             color: $textBoldColor;
         }
@@ -17,17 +21,18 @@ body.photos {
 
         &>p {
             scroll-snap-align: center;
+            display: block;
+            height: 100vh;
+            box-sizing: border-box;
+            padding: $thumbSize 0 ($thumbSize * 2) 0;
             img {
-                height: 90vh;
-                padding: 1vh 0 4vh;
-                width: 100%;
+                height: 100%;
                 object-fit: contain;
             }
         }
     }
 
     nav#thumbnails {
-        $thumbSize: 5vh;
         position: fixed;
         z-index: 5;
         background: $wellBackground;
