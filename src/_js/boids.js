@@ -3,20 +3,21 @@
 let width = 150;
 let height = 150;
 
-var numBoids = 300;
-var boidSize = 8;
+var numBoids = 800;
+var boidSize = 4;
 // const boidColor = "#29201D";//"#00ccFF";
 const DRAW_TRAIL = false;
-const tailLength = 200;
+const tailLength = 250;
 const boidShape = "triangle";//options: circle (default), square, triangle, cross
 
 //these variables control the motion
-const visualRange = 75; // default 75, really controls how quickly boids coalesce
-var minDistance = boidSize * 1.5; // The distance to stay away from other boids; default 20
-const avoidFactor = 0.09; // Adjust velocity by this %; default 0.05
-const matchingFactor = 0.1; // Adjust by this % of average velocity; default 0.05
-var speedLimit = 10; //default 15
-const centeringFactor = 0.0005; // default .005
+const visualRange = (!DRAW_TRAIL) ? 75 : 25; // default 75, really controls how quickly boids coalesce
+var minDistance = 10;//boidSize * 3; // The distance to stay away from other boids; default 20
+const avoidFactor = 0.05; // Adjust velocity by this %; default 0.05
+const matchingFactor = 50; // Adjust by this % of average velocity; default 50
+var speedLimit = (!DRAW_TRAIL) ? 5 : 100; //default 15
+const centeringFactor = 5; // default 5
+const boidColor = "#00CCCC";//"#201c1D";//"#00ccFF";
 
 
 
@@ -28,6 +29,7 @@ function setBoidSize () {
   var diagnal = Math.sqrt(Math.pow(width,2) + Math.pow(height,2));
   boidSize = Math.abs(diagnal/150);
   minDistance = boidSize * 1.1;
+  return true;
 }
 
 function setSpeedLimit () {
@@ -79,29 +81,37 @@ function sizeCanvas() {
   canvas.width = width;
   canvas.height = height;
 
-  numBoids = (width * height) / 2000;
-  setBoidSize();
-  setSpeedLimit();
+  numBoids = (width * height) / 1000;
+  // setBoidSize();
+  // setSpeedLimit();
   initBoids();
 }
 
 // Constrain a boid to within the window. If it gets too close to an edge,
 // nudge it back in and reverse its direction.
 function keepWithinBounds(boid) {
-  var margin = boidSize * 0;
+  var margin = boidSize * 0.5;
   var turnFactor = 1;
 
   if (boid.x < margin) {
-    boid.dx += turnFactor;
+    if(Math.random()>0.5 && !DRAW_TRAIL) boid.x += (width - margin);
+    else boid.dx *= -1;
+    // else boid.dx += turnFactor;
   }
   if (boid.x > width - margin) {
-    boid.dx -= turnFactor
+    if(Math.random()>0.5 && !DRAW_TRAIL)  boid.x -= (width - margin);
+    else boid.dx *= -1;
+    // else boid.dx -= turnFactor;
   }
   if (boid.y < margin) {
-    boid.dy += turnFactor;
+    if(Math.random()>0.5 && !DRAW_TRAIL) boid.y += (height - margin);
+    else boid.dy *= -1;
+    // boid.dy += turnFactor;
   }
   if (boid.y > height - margin) {
-    boid.dy -= turnFactor;
+    if(Math.random()>0.5 && !DRAW_TRAIL) boid.y -= (height - margin);
+    else boid.dy *= -1;
+    // boid.dy -= turnFactor;
   }
 }
 
@@ -124,8 +134,8 @@ function flyTowardsCenter(boid) {
     centerX = centerX / numNeighbors;
     centerY = centerY / numNeighbors;
 
-    boid.dx += (centerX - boid.x) * centeringFactor;
-    boid.dy += (centerY - boid.y) * centeringFactor;
+    boid.dx += (centerX - boid.x) * (centeringFactor/1000);
+    boid.dy += (centerY - boid.y) * (centeringFactor/1000);
   }
 }
 
@@ -165,8 +175,8 @@ function matchVelocity(boid) {
     avgDX = avgDX / numNeighbors;
     avgDY = avgDY / numNeighbors;
 
-    boid.dx += (avgDX - boid.dx) * matchingFactor;
-    boid.dy += (avgDY - boid.dy) * matchingFactor;
+    boid.dx += (avgDX - boid.dx) * (matchingFactor / 1000);
+    boid.dy += (avgDY - boid.dy) * (matchingFactor / 1000);
   }
 }
 
@@ -174,6 +184,7 @@ function matchVelocity(boid) {
 // arbitrarily fast.
 function limitSpeed(boid) {
   const speed = Math.sqrt(boid.dx * boid.dx + boid.dy * boid.dy);
+  // console.log('speed',speed)
   if (speed > speedLimit) {
     boid.dx = (boid.dx / speed) * speedLimit;
     boid.dy = (boid.dy / speed) * speedLimit;
@@ -182,7 +193,7 @@ function limitSpeed(boid) {
 
 function drawBoid(ctx, boid) {
   const angle = Math.atan2(boid.dy, boid.dx);
-  var alpha = Math.round(boid.a * 256).toString(16);
+  var alpha = (!DRAW_TRAIL) ? Math.round(boid.a * 256).toString(16) : 50;
   ctx.translate(boid.x, boid.y);
   ctx.rotate(angle);
   ctx.translate(-boid.x, -boid.y);
@@ -215,12 +226,14 @@ function drawBoid(ctx, boid) {
       ctx.lineTo(boid.x + boidSize/2, boid.y - (boidSize/2));
       // ctx.lineTo(boid.x, boid.y);
       break;
-    default:
-      var radius = boidSize/2; // Arc radius
+    // default:
+    case "circle":
+      var radius = boidSize / 2; // Arc radius
       var startAngle = 0; // Starting point on circle
       var endAngle = 360;//Math.PI + (Math.PI * j) / 2; // End point on circle
       var counterclockwise = false;// i % 2 !== 0; // clockwise or counterclockwise
       ctx.arc(boid.x, boid.y, radius, startAngle, endAngle, counterclockwise);
+      break;
   }
   if(boidShape != "cross") {
     ctx.fill();
