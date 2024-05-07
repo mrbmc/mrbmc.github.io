@@ -3,13 +3,14 @@
 .php
 admin
 ads.txt
+AhrefsBot
 amazonbot
 ClaudeBot
 crawler
 dbweb
 drupal
 go-http-client
-googlebot
+Googlebot
 ImagesiftBot
 mj12bot
 python-request
