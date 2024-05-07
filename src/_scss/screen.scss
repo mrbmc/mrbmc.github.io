@@ -197,6 +197,8 @@ table {
     th {
         border: 0 solid $borderColor;
         border-width: 0 0 1px 0;
+        text-align: left;
+        color: var(--gray-mid);
     }
     &.rotate {
         @include transpose_table;

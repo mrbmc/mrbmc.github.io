@@ -153,19 +153,15 @@ body.blog {
 table {
     thead {
         th {
-            // font-family: $monoFontFamily;
             font-weight: $boldFontWeight;
             line-height: 1;
-            color: var(--gray-mid);
             @include smallType;
         }
     }
     tbody {
         td {
-            font-family: $monoFontFamily;
             line-height: 1;
             @include smallType;
-            // color: var(--black),
         }
     }
 }
