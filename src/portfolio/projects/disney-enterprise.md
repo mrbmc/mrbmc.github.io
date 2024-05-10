@@ -1,23 +1,26 @@
 ---
 title: Disney StreamEngine
-masthead-image: /images/portfolio/disney-enterprise/optumus-mockup.jpg
 date: 2020-02-02
 thumbnail: /images/portfolio/disney-enterprise/optumus-mockup.jpg
 eleventyExcludeFromCollections: false
 category:
   - work
-summary: This suite of 35+- enterprise SAAS products behind Disney+, Hulu, and ESPN saved Disney $100M/pa in operating costs and doubled AARPU.
+summary: This suite of 35+- enterprise SAAS products behind Disney+, Hulu, and ESPN saved Disney $80M/pa in operating costs and doubled AARPU.
 timeline: 2019-2023
 ---
 <!-- "StreamEngine" is a suite of ~35 purpose-built tools that operate Disney+, Hulu, ESPN+, and STAR+. Our team of designers partnered with *hundreds* of developers & product managers across Disney to build SAAS products that could each be a startup in their own right.  -->
 
-| Role & Responsibility                                                                                                                                          | Team                                     | Timeline            | Impact                                                                       |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- | ---------------------------------------------------------------------------- |
-| **Sr. Director, Product Design**<br><br>Team hiring, management, and organization design. Design strategy. Partner management. Budgeting. Culture development. | 12 FT Designers + 4-6 Design Contractors | Jan 2019 - Aug 2023 | saved **$100M** p/a in operating costs<br>supported a **2x growth in AARPU** |
+![Streaming QoS Analysis](/images/portfolio/disney-enterprise/optumus-mockup.jpg){.fullwidth}
+
+| Role & Responsibility                                                                                                                                          | Team                                     | Timeline            | Impact                                                                      |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- | --------------------------------------------------------------------------- |
+| **Sr. Director, Product Design**<br><br>Team hiring, management, and organization design. Design strategy. Partner management. Budgeting. Culture development. | 12 FT Designers + 4-6 Design Contractors | Jan 2019 - Aug 2023 | saved **$80M** p/a in operating costs<br>supported a **2x growth in AARPU** |
 
 ## Streaming Video is Hard
 
-Operating at the scale, and legal exposure, that Disney does often requires us to build, not buy, solutions due to cost or privacy constraints. *The scale of this platform was comparable to an entire industry.* Many of the products we built matched the scale of commercial products:
+Operating at the scale, and legal exposure, that Disney does often requires us to build, not buy, solutions due to cost or privacy constraints. *The scale of this platform was comparable to an entire industry.* Many of the products we built matched the scale of commercial products.
+
+As the executive accountable for product design my mission was to invest design effort in the products that could make the biggest business impact through customer acquisition, cost optimization, increasing agility, or improving decision quality.
 
 | Disney Product              | Purpose                                                                                     | Commercial Analog(s)                                                                    |
 | --------------------------- | ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
@@ -36,15 +39,6 @@ All of the products we designed or consulted on:
 
 Anti-Piracy Operations, Audience Segmentation, CDN Management Console, Commerce & Offer Operations, Commerce Config Tool, Content Catalog Browser, Content delivery Preview, Content Experience Management, Content Portal (hulu live, sVOD), CX Dashboard  , Data Activation Framework , DATA instrumentation library, Data Portal , Developer Portal, Dictionary & Translation, Disney Edge Controller (DEC), EXD Design System, Experimentation , Fraud Management Service, Hulu Ad Manager, Hulu Ad Mission Control, Hulu Ad Revenue Processing Service, Machine Learning Dashboard, Metadata Mapping & Visualization, Partner Portal, Player Config Service, Responder Files (DATA Feature Market), SRE Dashboard, Streaming QoS Insights, Support Agent Console, Unified Messaging Platform{.small .card}
 
-## Legacy Of Tool Innovation
-
-Why build custom software tools? 
-
-**To create something truly novel you need novel tools.**
-
-Disney has a rich history of building new tools that unlock creative possibilities. One famous example was the Multi-plane camera which massively accelerated animation and enabled parallax motion techniques.
-
-![Multiplane Camera](/images/portfolio/Walt_Disney_Multiplane_Camera_2.jpeg){.fullwidth style="height:62vh;object-position: 50% 38%;"}
 
  
 - ![Commerce Portal](/images/portfolio/disney-enterprise/commerces-offer-detail.jpg)
@@ -59,6 +53,15 @@ Disney has a rich history of building new tools that unlock creative possibiliti
 - ![Developer Productivity](/images/portfolio/disney-enterprise/dev-portal.jpg)
 {.gallery}
 
+## Legacy Of Tool Innovation
+
+Why build custom software tools? 
+
+**To create something truly novel you need novel tools.**
+
+Disney has a rich history of building new tools that unlock creative possibilities. One famous example was the Multi-plane camera which massively accelerated animation and enabled parallax motion techniques.
+
+![Multiplane Camera](/images/portfolio/Walt_Disney_Multiplane_Camera_2.jpeg){.fullwidth style="height:62vh;object-position: 50% 38%;"}
 
 ## The Team
 
