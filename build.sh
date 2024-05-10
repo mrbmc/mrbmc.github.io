@@ -49,11 +49,17 @@ function build_js () {
 		-o $OUT/js/boids.min.js \
 		$SRC/_js/boids.js;
 
-	echo " Contrails JS";
+	echo " Life JS";
 	uglifyjs -m -c sequences=true,dead_code,conditionals,booleans,unused,if_return,join_vars \
-		 --source-map url=contrails.min.js.map \
-		-o $OUT/js/contrails.min.js \
-		$SRC/_js/contrails.js;
+		 --source-map url=live.min.js.map \
+		-o $OUT/js/life.min.js \
+		$SRC/_js/life.js;
+
+	# echo " Contrails JS";
+	# uglifyjs -m -c sequences=true,dead_code,conditionals,booleans,unused,if_return,join_vars \
+	# 	 --source-map url=contrails.min.js.map \
+	# 	-o $OUT/js/contrails.min.js \
+	# 	$SRC/_js/contrails.js;
 
 }
 
