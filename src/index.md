@@ -21,24 +21,9 @@ I believe Product Design offers a unique competitive advantage by unlocking crit
 
 <a href="#selected-work"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 53 20" xml:space="preserve"><g><polygon points="26.5,17.688 9.114,3.779 10.303,2.312 26.5,15.269 42.697,2.313 43.886,3.779" fill="currentColor"></polygon></g></svg></a>{.scrollhint}
 
-{% comment %}
-<canvas width="1024" height="1024" id="gradient-canvas"></canvas>
-{% endcomment %}
-
 </section>
 
 {% include "_project-list.md", projectList: collections.work, label: "Selected Work", count: 6 %}
 
 {% include "_post-list.html", postList: collections.posts, label: "Recent Posts", count: 4 %}
 
-
-{% comment %}
-<!-- 
-<style type="text/css">
-html {
-    scroll-snap-type: y mandatory;
-}
-</style>
- -->
-<!-- <script type="text/javascript" language="javascript" src="/js/home.min.js"></script> -->
-{% endcomment %}
