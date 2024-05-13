@@ -43,6 +43,7 @@ echo "GENERATING MOTHLY REPORTS"
 for i in {04..05}
 do
 	sed -n '/2024\-'$i'\-01/,/2024\-'$i'\-31/ p' $BASE/log_clean | goaccess -a -o $BASE/../www/metrics/2024$i.html --log-format=CLOUDFRONT --ignore-crawlers --unknowns-as-crawlers --tz="America/New York"
+	sed -n '/2024\-'$i'\-01/,/2024\-'$i'\-31/ p' $BASE/log_raw | goaccess -a -o $BASE/../www/metrics/2024$i-raw.html --log-format=CLOUDFRONT --tz="America/New York"
 done
 
 
