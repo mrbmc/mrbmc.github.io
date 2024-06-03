@@ -1,4 +1,4 @@
-const DEBUG = (document.location.hostname == "localhost" || document.location.href.includes('debug'));
+let DEBUG = (document.location.hostname == "localhost" || document.location.href.includes('debug'));
 
 //ANIMATION MANAGEMENT
 var oFPS = {
@@ -233,7 +233,9 @@ function updateStats(_fps) {
       str +="alv: " + (Math.round(GameWorld.aliveCells / GameWorld.numCells * 10000)/100) + "%\n";
       str +="chg: " + GameWorld.changesNow;
 
-  document.getElementById("fps").textContent = str;
+	document.getElementById("debugger").textContent = str;
+	document.getElementById("debugger").style.display = DEBUG?"block":"none";
+
 }
 
 
@@ -260,6 +262,16 @@ window.onload = () => {
 	initGame();
 
 	if(!DEBUG) {
-		document.getElementById("fps").style.display = "none";
+		document.getElementById("debugger").style.display = "none";
 	}
 };
+window.addEventListener('keydown', function(e){ 
+		console.log("keydown",e.keyCode);
+	switch(e.keyCode) {
+		case 68://escape
+			DEBUG = !DEBUG;
+			break;
+		default:
+	}
+
+})
