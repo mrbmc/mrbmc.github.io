@@ -2,7 +2,7 @@ const DEBUG = (document.location.hostname == "localhost" || document.location.hr
 
 //ANIMATION MANAGEMENT
 var oFPS = {
-	fps: 60,
+	fps: 30,
 	now: window.performance.now(),
 	prev: window.performance.now(),
 	timeout: {},
@@ -21,7 +21,9 @@ class GameWorld
 	static maxCells = 1000;
 	// static numCells = 0;
 	static aliveCells = 0;
-	static minPopulation = 0;
+	static changesNow = 0;
+	static changesPrev = 0;
+	static minPopulation = 3.2;
 	static numRows = 60;
 	static numColumns = 100;
 	static cells = [];
@@ -145,10 +147,15 @@ function updateCells() {
     }
 
     GameWorld.aliveCells = 0;
+    GameWorld.changesNow = 0;
 	// Apply the new state to all the cells at once
 	for(n = 0;n < GameWorld.numCells; n++) {
+		if(GameWorld.cells[n].isAlive != GameWorld.cells[n].isAliveNextFrame)
+			GameWorld.changesNow++;
+		if(GameWorld.cells[n].isAliveNextFrame)
+			GameWorld.aliveCells++;
 		GameWorld.cells[n].isAlive = GameWorld.cells[n].isAliveNextFrame;
-		GameWorld.aliveCells += (GameWorld.cells[n].isAlive) ? 1 : 0;
+		// GameWorld.aliveCells += (GameWorld.cells[n].isAlive) ? 1 : 0;
 	}
 }
 
@@ -201,21 +208,30 @@ function animationLoop (argument) {
     updateCells();
     drawCells();
 
-	// var p = (GameWorld.aliveCells / GameWorld.numCells * 100);
-	// if(p <= GameWorld.minPopulation || oFPS.generations >= 1200) {
-	// 	setTimeout(initGame,5000);
+
+    // if(GameWorld.changesNow == GameWorld.changesPrev && GameWorld.changesNow<100)
+	// 	initGame();
+	// else
+	// 	GameWorld.changesPrev = GameWorld.changesNow;
+
+    // var pAlive = Math.round(GameWorld.aliveCells / GameWorld.numCells * 10000)/100;
+	// if(pAlive <= GameWorld.minPopulation || oFPS.generations >= 1200) {
+		// setTimeout(initGame,5000);
 	// }
 
 	oFPS.prev = oFPS.now;
 	oFPS.generations++;
 	updateStats(1000 / msPassed);
+
+
 }
 
 function updateStats(_fps) {
   var str = "fps: " + Math.round(_fps) + "\n";
       str +="gen: " + oFPS.generations + "\n";
       str +="obj: " + GameWorld.numCells + "\n";
-      str +="alv: " + Math.round(GameWorld.aliveCells / GameWorld.numCells * 100) + "%";
+      str +="alv: " + (Math.round(GameWorld.aliveCells / GameWorld.numCells * 10000)/100) + "%\n";
+      str +="chg: " + GameWorld.changesNow;
 
   document.getElementById("fps").textContent = str;
 }
@@ -234,6 +250,8 @@ function initGame(argument) {
 
 	// Schedule the main animation loop
 	window.requestAnimationFrame(animationLoop);
+
+	setTimeout(initGame,60000);
 }
 
 window.onload = () => {

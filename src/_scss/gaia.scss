@@ -1,0 +1,22 @@
+body {
+  margin:0;
+  background: #201c1D;
+  background: linear-gradient(0deg, hsl(198,38%,13%) 0%, hsl(203,100%,05%) 100%);
+}
+canvas {
+  width: 100vw;
+  height: 100vh;
+}
+#fps {
+  background: #00000080;
+  color: #0cF;
+  border: transparent;
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  z-index: 55;
+  font-family: monospace;
+  padding: 0;
+  margin: 0;
+  height: 6em;
+}
