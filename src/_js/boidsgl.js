@@ -164,9 +164,9 @@ function updateBoids(){
 GRID OPTIMIZATION
 ---------------------------------------- */
 class Grid {
-    constructor(size) {
-        console.log('new Grid',size);
-        var side = Math.ceil(Math.sqrt(size));
+    constructor(side) {
+        if(DEBUG) console.log('new Grid',this);
+        // var side = Math.ceil(Math.sqrt(size));
         this.cols = side;
         this.rows = side;
         this.cells = Array.from({ length: (side * side) }, () => []);
@@ -198,9 +198,6 @@ class Grid {
 }
 
 
-
-
-
 /* ----------------------------------------
 ANIMATION ENGINE
 ---------------------------------------- */
@@ -208,6 +205,7 @@ class Engine {
     static fps = 120;
 
     constructor(){
+        if(DEBUG) console.log('new Engine',this);
         this.framePrev = window.performance.now();
         this.frameTime = Math.floor(1000 / Engine.fps);
         this.history = Array(10);
