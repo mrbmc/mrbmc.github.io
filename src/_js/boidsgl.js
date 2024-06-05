@@ -6,8 +6,7 @@ Math.clamp = function(val,min,max) {
 /* ----------------------------------------
 BOIDS DEFINITIONS
 ---------------------------------------- */
-const numBoids = 1000;
-let boids = [];
+let boids = Array(1000);
 
 class Boid {
     static size = 0.01;
@@ -205,7 +204,7 @@ class Boid {
 function createBoids () {
     if(DEBUG) console.log('createBoids',arguments);
 
-    boids = Array.from({ length: numBoids }, () => new Boid());
+    boids = Array.from({ length: boids.length }, () => new Boid());
 
     let _positions = new Float32Array(boids.flatMap(boid => boid.getVertices()));
     gl.bindBuffer(gl.ARRAY_BUFFER, shader.positionBuffer);
@@ -301,6 +300,8 @@ class Engine {
         gl.enableVertexAttribArray(shader.programInfo.attribLocations.vertexPosition);
         gl.useProgram(shader.programInfo.program);
 
+        gl.drawArrays(gl.TRIANGLES, 0, boids.length);
+
         requestAnimationFrame(engine.drawFrame);
     }
 
@@ -313,7 +314,7 @@ class Engine {
 
         updateBoids();
 
-        gl.drawArrays(gl.TRIANGLES, 0, numBoids);
+        gl.drawArrays(gl.TRIANGLES, 0, boids.length);
 
         engine.debug();
         engine.framePrev = window.performance.now();
