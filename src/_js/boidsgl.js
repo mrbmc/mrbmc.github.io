@@ -10,6 +10,9 @@ const numBoids = 1000;
 let boids = [];
 
 class Boid {
+    static size = 0.01;
+    static _color = "#00DDFF33";
+
     //these variables control the motion
     static minDistance = 0.01;
     static range = 0.1; // default 75, really controls how quickly boids coalesce
@@ -18,12 +21,21 @@ class Boid {
     static cohesion = 0.1; // How strong the clusters are, default 0.3
     static _speedLimit = 7; //default 15
 
-    static size = 4;
-    static color = "#00CCFF";
-
     static get speedLimit () {
         var fpsFactor = 120 / engine.avgFPS;
         return Boid._speedLimit / 1000 * fpsFactor;
+    }
+
+    static get glColor () {
+        let hex = Boid._color.replace(/^#/, '');
+        let r, g, b, a = 1;
+        r = parseInt(hex.substring(0, 2), 16) / 255;
+        g = parseInt(hex.substring(2, 4), 16) / 255;
+        b = parseInt(hex.substring(4, 6), 16) / 255;
+        if (hex.length === 8)
+            a = parseInt(hex.substring(6, 8), 16) / 255;
+
+        return [r, g, b, a].toString();
     }
 
     constructor(){
@@ -289,7 +301,7 @@ class Shader
 
     static fsSource = `
         void main(void) {
-            gl_FragColor = vec4(0.0, 1.0, 1.0, 1.0);
+            gl_FragColor = vec4(`+ Boid.glColor +`);
         }
     `;
 
