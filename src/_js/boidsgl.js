@@ -41,8 +41,6 @@ class Boid {
     constructor(){
         this.x = Math.random() * 2 - 1;
         this.y = Math.random() * 2 - 1;
-        // this.vx = Math.random() * 0.02 - 0.01;
-        // this.vy = Math.random() * 0.02 - 0.01;
         this.dx = Math.random() * .1 - 0.05;
         this.dy = Math.random() * .1 - 0.05;
         this.history = [];
@@ -134,7 +132,6 @@ class Boid {
     move () {
         this.x += this.dx;
         this.y += this.dy;
-        // this.history.push([this.x, this.y, this.a]);
     }
 
     getVertices () {
