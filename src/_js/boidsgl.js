@@ -11,10 +11,10 @@ let boids = [];
 
 class Boid {
     //these variables control the motion
-    static minDistance = 0.02;
+    static minDistance = 0.01;
     static range = 0.1; // default 75, really controls how quickly boids coalesce
     static separation = 0.25; // Adjust velocity by this %; default 0.05
-    static alignment = 0.75; // Adjust by this % of average velocity; default 0.5
+    static alignment = 0.4; // Adjust by this % of average velocity; default 0.5
     static cohesion = 0.1; // How strong the clusters are, default 0.3
     static _speedLimit = 7; //default 15
 
@@ -60,8 +60,8 @@ class Boid {
             centerX = centerX / numNeighbors;
             centerY = centerY / numNeighbors;
 
-            this.dx += (centerX - this.x) * (Boid.cohesion/100);
-            this.dy += (centerY - this.y) * (Boid.cohesion/100);
+            this.dx += (centerX - this.x) * (Boid.cohesion/500);
+            this.dy += (centerY - this.y) * (Boid.cohesion/500);
         }
     }
     avoid (otherBoid) {
@@ -77,8 +77,8 @@ class Boid {
             }
         }
 
-        this.dx += moveX * (Boid.separation / 10);
-        this.dy += moveY * (Boid.separation / 10);
+        this.dx += moveX * (Boid.separation / 1);
+        this.dy += moveY * (Boid.separation / 1);
     }
     matchVelocity(boid) {
         let avgDX = 0;
@@ -99,8 +99,8 @@ class Boid {
             avgDX = avgDX / numNeighbors;
             avgDY = avgDY / numNeighbors;
 
-            this.dx += (avgDX - this.dx) * (Boid.alignment / 10);
-            this.dy += (avgDY - this.dy) * (Boid.alignment / 10);
+            this.dx += (avgDX - this.dx) * (Boid.alignment / 5);
+            this.dy += (avgDY - this.dy) * (Boid.alignment / 5);
         }
     }
     limitSpeed() {
@@ -124,7 +124,6 @@ class Boid {
         this.y += this.dy;
         this.history.push([this.x, this.y, this.a]);
     }
-
 }
 
 function createBoids () {
