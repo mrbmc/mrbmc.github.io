@@ -261,9 +261,8 @@ window.onload = () => {
 
 	initGame();
 
-	if(!DEBUG) {
-		document.getElementById("debugger").style.display = "none";
-	}
+    document.getElementById('debugger').style.display = (DEBUG) ? "block" : "none";
+    document.getElementById('controls').style.display = (DEBUG) ? "block" : "none";
 };
 window.addEventListener('keydown', function(e){ 
 		console.log("keydown",e.keyCode);
