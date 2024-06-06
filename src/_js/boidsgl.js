@@ -12,12 +12,12 @@ class Boid {
     static size = 0.01;
     static _color = "#00DDFF33";
 
-    //these variables control the motion
+    // These variables control the motion
     static minDistance = Boid.size;
     static range = 0.2;
-    static separation = 0.5;
-    static alignment = 0.2;
-    static cohesion = 0.2;
+    static separation = 0.3;
+    static alignment = 0.3;
+    static cohesion = 0.7;
     static _speedLimit = 7;
 
     static get speedLimit() {
