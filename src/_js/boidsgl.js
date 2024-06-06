@@ -13,11 +13,11 @@ class Boid {
     static _color = "#00DDFF33";
 
     //these variables control the motion
-    static minDistance = 0.01;
-    static range = 0.1; // default 75, really controls how quickly boids coalesce
-    static separation = 0.25; // Adjust velocity by this %; default 0.05
-    static alignment = 0.4; // Adjust by this % of average velocity; default 0.5
-    static cohesion = 0.1; // How strong the clusters are, default 0.3
+    static minDistance = Boid.size;
+    static range = 0.2; // controls how quickly boids coalesce
+    static separation = 0.5; // Adjust velocity by this %; default 0.05
+    static alignment = 0.2; // Adjust by this % of average velocity; default 0.5
+    static cohesion = 0.2; // How strong the clusters are, default 0.3
     static _speedLimit = 7; //default 15
 
     static get speedLimit () {
@@ -50,7 +50,7 @@ class Boid {
             (this.y - otherBoid.y) * (this.y - otherBoid.y)
         );
     }
-    flyTowardsCenter() {
+    coalesce () {
         let centerX = 0;
         let centerY = 0;
         let numNeighbors = 0;
@@ -73,7 +73,7 @@ class Boid {
             this.dy += (centerY - this.y) * (Boid.cohesion/500);
         }
     }
-    avoid (otherBoid) {
+    separate (otherBoid) {
         let moveX = 0;
         let moveY = 0;
 
@@ -89,7 +89,7 @@ class Boid {
         this.dx += moveX * (Boid.separation / 1);
         this.dy += moveY * (Boid.separation / 1);
     }
-    matchVelocity(boid) {
+    align (boid) {
         let avgDX = 0;
         let avgDY = 0;
         let numNeighbors = 0;
@@ -218,9 +218,9 @@ function updateBoids(){
     for (let i = 0; i < boids.length; i++) {
         let boid = boids[i];
 
-        boid.flyTowardsCenter();
-        boid.avoid();
-        boid.matchVelocity();
+        boid.coalesce();
+        boid.separate();
+        boid.align();
         boid.limitSpeed();
         boid.keepWithinBounds();
 
