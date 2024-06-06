@@ -42,7 +42,6 @@ class Boid {
         this.y = Math.random() * 2 - 1;
         this.dx = Math.random() * 0.1 - 0.05;
         this.dy = Math.random() * 0.1 - 0.05;
-        this.history = [];
     }
 
     distance(otherBoid) {
@@ -56,7 +55,7 @@ class Boid {
         let centerY = 0;
         let numNeighbors = 0;
 
-        let friends = grid.getFriends(this);
+        let friends = quadTree.query(new Rectangle(this.x, this.y, Boid.range, Boid.range));
         for (let otherBoid of friends) {
             if (otherBoid === this) continue;
             if (this.distance(otherBoid) < Boid.range) {
@@ -79,7 +78,7 @@ class Boid {
         let moveX = 0;
         let moveY = 0;
 
-        let friends = grid.getFriends(this);
+        let friends = quadTree.query(new Rectangle(this.x, this.y, Boid.range, Boid.range));
         for (let otherBoid of friends) {
             if (otherBoid === this) continue;
             if (this.distance(otherBoid) < Boid.minDistance) {
@@ -88,8 +87,8 @@ class Boid {
             }
         }
 
-        this.dx += moveX * (Boid.separation / 1);
-        this.dy += moveY * (Boid.separation / 1);
+        this.dx += moveX * Boid.separation;
+        this.dy += moveY * Boid.separation;
     }
 
     align() {
@@ -97,7 +96,7 @@ class Boid {
         let avgDY = 0;
         let numNeighbors = 0;
 
-        let friends = grid.getFriends(this);
+        let friends = quadTree.query(new Rectangle(this.x, this.y, Boid.range, Boid.range));
         for (let otherBoid of friends) {
             if (otherBoid === this) continue;
             if (this.distance(otherBoid) < Boid.range) {
@@ -175,24 +174,23 @@ class Boid {
     }
 }
 
-function createBoids () {
-    if(DEBUG) console.log('createBoids',arguments);
-
+function createBoids() {
     boids = Array.from({ length: boids.length }, () => new Boid());
     updateBuffer();
 }
 
 function updateBoids() {
-    for (let boid of boids) {
+    boids.forEach(boid => {
         boid.coalesce();
         boid.separate();
         boid.align();
         boid.limitSpeed();
         boid.keepWithinBounds();
         boid.move();
-    }
+    });
 
-    grid.storeBoids();
+    quadTree.clear();
+    boids.forEach(boid => quadTree.insert(boid));
     updateBuffer();
 }
 
@@ -203,44 +201,106 @@ function updateBuffer() {
 }
 
 /* ----------------------------------------
-GRID OPTIMIZATION
+QUADTREE FOR OPTIMIZATION
 ---------------------------------------- */
-class Grid {
-    constructor(side) {
-        if(DEBUG) console.log('new Grid',this);
-        this.cols = side;
-        this.rows = side;
-        this.cells = Array.from({ length: (side * side) }, () => []);
+class QuadTree {
+    constructor(boundary, capacity) {
+        this.boundary = boundary;
+        this.capacity = capacity;
+        this.boids = [];
+        this.divided = false;
     }
 
-    getFriends(boid) {
-        const cellID = this.getCell(boid);
-        return this.cells[cellID];
+    subdivide() {
+        const { x, y, w, h } = this.boundary;
+
+        const nw = new Rectangle(x - w / 2, y - h / 2, w / 2, h / 2);
+        this.northwest = new QuadTree(nw, this.capacity);
+        const ne = new Rectangle(x + w / 2, y - h / 2, w / 2, h / 2);
+        this.northeast = new QuadTree(ne, this.capacity);
+        const sw = new Rectangle(x - w / 2, y + h / 2, w / 2, h / 2);
+        this.southwest = new QuadTree(sw, this.capacity);
+        const se = new Rectangle(x + w / 2, y + h / 2, w / 2, h / 2);
+        this.southeast = new QuadTree(se, this.capacity);
+
+        this.divided = true;
     }
 
-    storeBoids() {
-        this.cells = Array.from({ length: (this.cols * this.rows) }, () => []);
-        for (let boid of boids) {
-            this.storeBoid(boid);
+    insert(boid) {
+        if (!this.boundary.contains(boid)) {
+            return false;
         }
-        return this.cells;
+
+        if (this.boids.length < this.capacity) {
+            this.boids.push(boid);
+            return true;
+        } else {
+            if (!this.divided) {
+                this.subdivide();
+            }
+            if (this.northwest.insert(boid)) return true;
+            if (this.northeast.insert(boid)) return true;
+            if (this.southwest.insert(boid)) return true;
+            if (this.southeast.insert(boid)) return true;
+        }
     }
 
-    storeBoid(boid) {
-        const cellID = this.getCell(boid);
-        this.cells[cellID].push(boid);
+    query(range, found) {
+        if (!found) {
+            found = [];
+        }
+
+        if (!this.boundary.intersects(range)) {
+            return found;
+        }
+
+        for (let boid of this.boids) {
+            if (range.contains(boid)) {
+                found.push(boid);
+            }
+        }
+
+        if (this.divided) {
+            this.northwest.query(range, found);
+            this.northeast.query(range, found);
+            this.southwest.query(range, found);
+            this.southeast.query(range, found);
+        }
+
+        return found;
     }
 
-    getCell(boid) {
-        const px = ((boid.x + 1) / 2) * canvas.width;
-        const py = ((boid.y + 1) / 2) * canvas.height;
-        const colSize = canvas.width / this.cols;
-        const rowSize = canvas.height / this.rows;
-        const col = Math.floor(px / colSize);
-        const row = Math.floor(py / rowSize);
-        const cellID = row * this.cols + col;
+    clear() {
+        this.boids = [];
+        if (this.divided) {
+            this.northwest.clear();
+            this.northeast.clear();
+            this.southwest.clear();
+            this.southeast.clear();
+        }
+    }
+}
 
-        return Math.clamp(cellID, 0, this.cells.length - 1);
+class Rectangle {
+    constructor(x, y, w, h) {
+        this.x = x;
+        this.y = y;
+        this.w = w;
+        this.h = h;
+    }
+
+    contains(boid) {
+        return (boid.x >= this.x - this.w &&
+            boid.x < this.x + this.w &&
+            boid.y >= this.y - this.h &&
+            boid.y < this.y + this.h);
+    }
+
+    intersects(range) {
+        return !(range.x - range.w > this.x + this.w ||
+            range.x + range.w < this.x - this.w ||
+            range.y - range.h > this.y + this.h ||
+            range.y + range.h < this.y - this.h);
     }
 }
 
@@ -302,7 +362,7 @@ class Engine {
         }
         this.avgFPS = Math.round(this.fpsHistory.reduce((a, b) => a + b) / avgSize);
 
-        const str = `fps: ${this.avgFPS}\nbds: ${boids.length}\ngrid: ${grid.cells.length}\n`;
+        const str = `FPS: ${this.avgFPS}\nBoids: ${boids.length}\nquadTree: ${quadTree}\n`;
 
         const debugElem = document.getElementById("debugger");
         debugElem.textContent = str;
@@ -334,7 +394,6 @@ class Shader {
     `;
 
     constructor() {
-        if(DEBUG) console.log('new Shader',this);
         this.positionBuffer = gl.createBuffer();
         this.shaderProgram = this.initShaderProgram(gl, Shader.vsSource, Shader.fsSource);
         this.programInfo = {
@@ -408,7 +467,8 @@ function initControls() {
 }
 
 function setup() {
-    window.grid = new Grid(3);
+    const boundary = new Rectangle(0, 0, 2, 2);
+    window.quadTree = new QuadTree(boundary, 10);
     window.engine = new Engine();
     window.shader = new Shader();
 
