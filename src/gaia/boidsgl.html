@@ -9,12 +9,7 @@
 <body>
     <canvas id="glcanvas" width="640" height="360"></canvas>
     <textarea id="debugger"></textarea>
-<!-- 
-    static visualRange = 0.1; // default 75, really controls how quickly boids coalesce
-    static avoidFactor = 0.01; // Adjust velocity by this %; default 0.05
-    static matchingFactor = 50; // Adjust by this % of average velocity; default 50
-    static centeringFactor = 0.3; // How strong the clusters are, default 5
- -->
+
     <div id="controls">
         <div>
             <label for="range">Visual Range: <span id="rangeValue"></span></label>
@@ -35,10 +30,6 @@
         <div>
             <button id="reset">Reset Simulation</button>
         </div>
-        <!-- <div>
-            <label for="distance">Max velocity: <span id="velocityValue">0.5</span></label>
-            <input type="range" id="velocity" class="slider" min="0" max="1" step=".02" value="0.5">
-        </div> -->
     </div>
     <script src="/js/boidsgl.min.js"></script>
 </body>
