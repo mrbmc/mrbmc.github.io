@@ -6,14 +6,14 @@ Math.clamp = function(val, min, max) {
 /* ----------------------------------------
 BOIDS DEFINITIONS
 ---------------------------------------- */
-let boids = Array(1500);
+let boids = Array(2000);
 
 class Boid {
-    static size = 0.01;
+    static size = 0.005;
     static _color = "#00DDFF33";
 
     // These variables control the motion
-    static minDistance = Boid.size;
+    static minDistance = Boid.size * 2;
     static range = 0.2;
     static separation = 0.3;
     static alignment = 0.3;
@@ -38,6 +38,7 @@ class Boid {
     }
 
     constructor() {
+        this.cell = 0;
         this.x = Math.random() * 2 - 1;
         this.y = Math.random() * 2 - 1;
         this.dx = Math.random() * 0.1 - 0.05;
@@ -51,70 +52,70 @@ class Boid {
         return Math.sqrt(dx * dx + dy * dy);
     }
 
-    coalesce() {
-        let centerX = 0;
-        let centerY = 0;
-        let numNeighbors = 0;
+    // coalesce() {
+    //     let centerX = 0;
+    //     let centerY = 0;
+    //     let numNeighbors = 0;
 
-        let friends = grid.getFriends(this);
-        for (let otherBoid of friends) {
-            if (otherBoid === this) continue;
-            if (this.distance(otherBoid) < Boid.range) {
-                centerX += otherBoid.x;
-                centerY += otherBoid.y;
-                numNeighbors += 1;
-            }
-        }
+    //     let friends = grid.getFriends(this);
+    //     for (let otherBoid of friends) {
+    //         if (otherBoid === this) continue;
+    //         if (this.distance(otherBoid) < Boid.range) {
+    //             centerX += otherBoid.x;
+    //             centerY += otherBoid.y;
+    //             numNeighbors += 1;
+    //         }
+    //     }
 
-        if (numNeighbors) {
-            centerX /= numNeighbors;
-            centerY /= numNeighbors;
+    //     if (numNeighbors) {
+    //         centerX /= numNeighbors;
+    //         centerY /= numNeighbors;
 
-            this.dx += (centerX - this.x) * (Boid.cohesion / 500);
-            this.dy += (centerY - this.y) * (Boid.cohesion / 500);
-        }
-    }
+    //         this.dx += (centerX - this.x) * (Boid.cohesion / 500);
+    //         this.dy += (centerY - this.y) * (Boid.cohesion / 500);
+    //     }
+    // }
 
-    align(_friends) {
-        let avgDX = 0;
-        let avgDY = 0;
-        let numNeighbors = 0;
+    // align(_friends) {
+    //     let avgDX = 0;
+    //     let avgDY = 0;
+    //     let numNeighbors = 0;
 
-        let friends = (_friends) ? _friends : grid.getFriends(this);
-        for (let otherBoid of friends) {
-            if (otherBoid === this) continue;
-            if (this.distance(otherBoid) < Boid.range) {
-                avgDX += otherBoid.dx;
-                avgDY += otherBoid.dy;
-                numNeighbors += 1;
-            }
-        }
+    //     let friends = (_friends) ? _friends : grid.getFriends(this);
+    //     for (let otherBoid of friends) {
+    //         if (otherBoid === this) continue;
+    //         if (this.distance(otherBoid) < Boid.range) {
+    //             avgDX += otherBoid.dx;
+    //             avgDY += otherBoid.dy;
+    //             numNeighbors += 1;
+    //         }
+    //     }
 
-        if (numNeighbors) {
-            avgDX /= numNeighbors;
-            avgDY /= numNeighbors;
+    //     if (numNeighbors) {
+    //         avgDX /= numNeighbors;
+    //         avgDY /= numNeighbors;
 
-            this.dx += (avgDX - this.dx) * (Boid.alignment / 5);
-            this.dy += (avgDY - this.dy) * (Boid.alignment / 5);
-        }
-    }
+    //         this.dx += (avgDX - this.dx) * (Boid.alignment / 5);
+    //         this.dy += (avgDY - this.dy) * (Boid.alignment / 5);
+    //     }
+    // }
 
-    separate(_friends) {
-        let moveX = 0;
-        let moveY = 0;
+    // separate(_friends) {
+    //     let moveX = 0;
+    //     let moveY = 0;
 
-        let friends = (_friends) ? _friends : grid.getFriends(this);
-        for (let otherBoid of friends) {
-            if (otherBoid === this) continue;
-            if (this.distance(otherBoid) < Boid.minDistance) {
-                moveX += this.x - otherBoid.x;
-                moveY += this.y - otherBoid.y;
-            }
-        }
+    //     let friends = (_friends) ? _friends : grid.getFriends(this);
+    //     for (let otherBoid of friends) {
+    //         if (otherBoid === this) continue;
+    //         if (this.distance(otherBoid) < Boid.minDistance) {
+    //             moveX += this.x - otherBoid.x;
+    //             moveY += this.y - otherBoid.y;
+    //         }
+    //     }
 
-        this.dx += moveX * (Boid.separation / 1);
-        this.dy += moveY * (Boid.separation / 1);
-    }
+    //     this.dx += moveX * (Boid.separation / 1);
+    //     this.dy += moveY * (Boid.separation / 1);
+    // }
 
     limitSpeed() {
         const speed = Math.sqrt(this.dx * this.dx + this.dy * this.dy);
@@ -188,10 +189,13 @@ function createBoids () {
     boids = Array.from({ length: boids.length }, () => new Boid());
     updateBuffer();
 }
+let friendsCount = 0;
 
 function updateBoids() {
-    for (let boid of boids) {
+    let cells = Array.from({ length: (grid.size * grid.size) }, () => []);
+    friendsCount = 0;
 
+    for (let boid of boids) {
 
         let centerX = 0;
         let centerY = 0;
@@ -201,6 +205,8 @@ function updateBoids() {
         let moveY = 0;
         let numNeighbors = 0;
         let friends = grid.getFriends(boid);
+        friendsCount = Math.max(friendsCount,friends.length);
+
         for (let otherBoid of friends) {
             if (otherBoid === boid) continue;
             if (boid.distance(otherBoid) < Boid.range) {
@@ -243,9 +249,13 @@ function updateBoids() {
         boid.limitSpeed();
         boid.keepWithinBounds();
         boid.move();
+
+        cells[grid.getCell(boid)].push(boid);
     }
 
-    grid.storeBoids();
+    // grid.storeBoids();
+    grid.cells = cells;
+
     updateBuffer();
 }
 
@@ -259,25 +269,25 @@ function updateBuffer() {
 GRID OPTIMIZATION
 ---------------------------------------- */
 class Grid {
-    constructor(side) {
+    constructor(size) {
         if(DEBUG) console.log('new Grid',this);
-        this.cols = side;
-        this.rows = side;
-        this.cells = Array.from({ length: (side * side) }, () => []);
+        this.size = size;
+        this.cells = Array.from({ length: (size * size) }, () => []);
     }
 
     getFriends(boid) {
         const cellID = this.getCell(boid);
-        return this.cells[cellID];
+        // return this.cells[cellID];
+        return this.cells[cellID].slice(0,1000);
     }
 
-    storeBoids() {
-        this.cells = Array.from({ length: (this.cols * this.rows) }, () => []);
-        for (let boid of boids) {
-            this.storeBoid(boid);
-        }
-        return this.cells;
-    }
+    // storeBoids() {
+    //     this.cells = Array.from({ length: (this.size * this.size) }, () => []);
+    //     for (let boid of boids) {
+    //         this.storeBoid(boid);
+    //     }
+    //     return this.cells;
+    // }
 
     storeBoid(boid) {
         const cellID = this.getCell(boid);
@@ -287,12 +297,13 @@ class Grid {
     getCell(boid) {
         const px = ((boid.x + 1) / 2) * canvas.width;
         const py = ((boid.y + 1) / 2) * canvas.height;
-        const colSize = canvas.width / this.cols;
-        const rowSize = canvas.height / this.rows;
+        const colSize = canvas.width / this.size;
+        const rowSize = canvas.height / this.size;
         const col = Math.floor(px / colSize);
         const row = Math.floor(py / rowSize);
-        const cellID = row * this.cols + col;
+        const cellID = row * this.size + col;
 
+        // return Math.round(cellID);
         return Math.clamp(cellID, 0, this.cells.length - 1);
     }
 }
@@ -330,14 +341,14 @@ class Engine {
     }
 
     drawFrame() {
-        requestAnimationFrame(engine.drawFrame);
-
         updateBoids();
 
         gl.drawArrays(gl.TRIANGLES, 0, boids.length * 3);
 
         engine.debug();
         engine.framePrev = window.performance.now();
+
+        requestAnimationFrame(engine.drawFrame);
     }
 
     get fps() {
@@ -355,7 +366,10 @@ class Engine {
         }
         this.avgFPS = Math.round(this.fpsHistory.reduce((a, b) => a + b) / avgSize);
 
-        const str = `fps: ${this.avgFPS}\nbds: ${boids.length}\ngrid: ${grid.cells.length}\n`;
+        let str = `fps: ${this.avgFPS}\n`;
+            str += `bds: ${boids.length}\n`;
+            str += `friends: ${friendsCount}\n`;
+            str += `grid: ${grid.cells.length}\n`;
 
         const debugElem = document.getElementById("debugger");
         debugElem.textContent = str;
@@ -461,7 +475,7 @@ function initControls() {
 }
 
 function setup() {
-    window.grid = new Grid(5);
+    window.grid = new Grid(4);
     window.engine = new Engine();
     window.shader = new Shader();
 
