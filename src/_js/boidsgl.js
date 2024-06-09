@@ -75,19 +75,12 @@ class Boid {
 
     getVertices() {
         const angleRad = calculateAngle(this).radians;
-
-        // const deltaX = (this.x + this.dx) - this.x;
-        // const deltaY = (this.y + this.dy) - this.y;
-        // const velo = Math.sqrt(Math.abs(deltaX * deltaX) + Math.abs(deltaY * deltaY));
-        // const size = ((velo/0.01) * (Boid.size)) + (Boid.size * 0.25);
-        const size = Boid.size;
-        
-        const height = (Math.sqrt(3) / 1) * size;
+        const height = (Math.sqrt(3) / 1) * Boid.size;
         const centerToVertex = height / Math.sqrt(3);
 
         const vertex1 = [this.x, this.y - centerToVertex];
-        const vertex2 = [this.x - (size / 2), this.y + (height / 2)];
-        const vertex3 = [this.x + (size / 2), this.y + (height / 2)];
+        const vertex2 = [this.x - (Boid.size / 2), this.y + (height / 2)];
+        const vertex3 = [this.x + (Boid.size / 2), this.y + (height / 2)];
 
 
         function calculateAngle(boid) {
