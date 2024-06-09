@@ -3,10 +3,12 @@ Math.clamp = function(val, min, max) {
     return Math.max(Math.min(val, max), min);
 }
 
+const optimizer = "grid";//or "grid"
+
 /* ----------------------------------------
 BOIDS DEFINITIONS
 ---------------------------------------- */
-let boids = Array(2000);
+let boids = Array(1500);
 
 class Boid {
     static size = 0.005;
@@ -47,75 +49,10 @@ class Boid {
     }
 
     distance(otherBoid) {
-        let dx = this.x - otherBoid.x;
-        let dy = this.y - otherBoid.y;
-        return Math.sqrt(dx * dx + dy * dy);
+        var dx = this.x - otherBoid.x;
+        var dy = this.y - otherBoid.y;
+        return (dx * dx + dy * dy);
     }
-
-    // coalesce() {
-    //     let centerX = 0;
-    //     let centerY = 0;
-    //     let numNeighbors = 0;
-
-    //     let friends = grid.getFriends(this);
-    //     for (let otherBoid of friends) {
-    //         if (otherBoid === this) continue;
-    //         if (this.distance(otherBoid) < Boid.range) {
-    //             centerX += otherBoid.x;
-    //             centerY += otherBoid.y;
-    //             numNeighbors += 1;
-    //         }
-    //     }
-
-    //     if (numNeighbors) {
-    //         centerX /= numNeighbors;
-    //         centerY /= numNeighbors;
-
-    //         this.dx += (centerX - this.x) * (Boid.cohesion / 500);
-    //         this.dy += (centerY - this.y) * (Boid.cohesion / 500);
-    //     }
-    // }
-
-    // align(_friends) {
-    //     let avgDX = 0;
-    //     let avgDY = 0;
-    //     let numNeighbors = 0;
-
-    //     let friends = (_friends) ? _friends : grid.getFriends(this);
-    //     for (let otherBoid of friends) {
-    //         if (otherBoid === this) continue;
-    //         if (this.distance(otherBoid) < Boid.range) {
-    //             avgDX += otherBoid.dx;
-    //             avgDY += otherBoid.dy;
-    //             numNeighbors += 1;
-    //         }
-    //     }
-
-    //     if (numNeighbors) {
-    //         avgDX /= numNeighbors;
-    //         avgDY /= numNeighbors;
-
-    //         this.dx += (avgDX - this.dx) * (Boid.alignment / 5);
-    //         this.dy += (avgDY - this.dy) * (Boid.alignment / 5);
-    //     }
-    // }
-
-    // separate(_friends) {
-    //     let moveX = 0;
-    //     let moveY = 0;
-
-    //     let friends = (_friends) ? _friends : grid.getFriends(this);
-    //     for (let otherBoid of friends) {
-    //         if (otherBoid === this) continue;
-    //         if (this.distance(otherBoid) < Boid.minDistance) {
-    //             moveX += this.x - otherBoid.x;
-    //             moveY += this.y - otherBoid.y;
-    //         }
-    //     }
-
-    //     this.dx += moveX * (Boid.separation / 1);
-    //     this.dy += moveY * (Boid.separation / 1);
-    // }
 
     limitSpeed() {
         const speed = Math.sqrt(this.dx * this.dx + this.dy * this.dy);
@@ -189,11 +126,19 @@ function createBoids () {
     boids = Array.from({ length: boids.length }, () => new Boid());
     updateBuffer();
 }
-let friendsCount = 0;
+
+var friendsCount = 0;
+var tempGrid = [];
 
 function updateBoids() {
-    let cells = Array.from({ length: (grid.size * grid.size) }, () => []);
+
     friendsCount = 0;
+    if(optimizer == "grid") {
+        tempGrid = Array.from({ length: (grid.size * grid.size) }, () => []);
+    } else {
+        const boundary = new Rectangle(0, 0, 2, 2);
+        var _quadTree = new QuadTree(boundary, quadTree.capacity);
+    }
 
     for (let boid of boids) {
 
@@ -204,12 +149,21 @@ function updateBoids() {
         let moveX = 0;
         let moveY = 0;
         let numNeighbors = 0;
-        let friends = grid.getFriends(boid);
+
+        let friends = [];
+        if(optimizer == "grid") {
+            friends = grid.getFriends(boid);
+        } else {
+            friends = quadTree.query(new Rectangle(boid.x, boid.y, Boid.range, Boid.range));
+        }
+
         friendsCount = Math.max(friendsCount,friends.length);
 
         for (let otherBoid of friends) {
             if (otherBoid === boid) continue;
-            if (boid.distance(otherBoid) < Boid.range) {
+            const distanceSquared = boid.distance(otherBoid);
+            // const distanceSquared = 0;
+            if (distanceSquared < (Boid.range * Boid.range)) {
                 //coalesce
                 centerX += otherBoid.x;
                 centerY += otherBoid.y;
@@ -220,7 +174,7 @@ function updateBoids() {
                 numNeighbors++;
             }
             //separate
-            if (boid.distance(otherBoid) < Boid.minDistance) {
+            if (distanceSquared < (Boid.minDistance * Boid.minDistance)) {
                 moveX += boid.x - otherBoid.x;
                 moveY += boid.y - otherBoid.y;
             }
@@ -242,19 +196,23 @@ function updateBoids() {
         boid.dx += moveX * (Boid.separation / 1);
         boid.dy += moveY * (Boid.separation / 1);
 
-        // boid.coalesce();
-        // boid.separate();
-        // boid.align();
-
         boid.limitSpeed();
         boid.keepWithinBounds();
         boid.move();
 
-        cells[grid.getCell(boid)].push(boid);
+        if(optimizer == "grid") {
+            tempGrid[grid.getCell(boid)].push(boid);
+        } else {
+            _quadTree.insert(boid);
+        }
     }
 
-    // grid.storeBoids();
-    grid.cells = cells;
+
+    if(optimizer == "grid") {
+        grid.cells = tempGrid;
+    } else {
+        quadTree = _quadTree;
+    }
 
     updateBuffer();
 }
@@ -266,6 +224,113 @@ function updateBuffer() {
 }
 
 /* ----------------------------------------
+QUADTREE OPTIMIZATION
+---------------------------------------- */
+class QuadTree {
+    constructor(boundary, capacity) {
+        // if(DEBUG) console.log('new QuadTree',this);
+        this.boundary = boundary;
+        this.capacity = capacity;
+        this.boids = [];
+        this.divided = false;
+        boids.forEach(boid => this.insert(boid));
+    }
+
+    subdivide() {
+        const { x, y, w, h } = this.boundary;
+
+        const nw = new Rectangle(x - w / 2, y - h / 2, w / 2, h / 2);
+        this.northwest = new QuadTree(nw, this.capacity);
+        const ne = new Rectangle(x + w / 2, y - h / 2, w / 2, h / 2);
+        this.northeast = new QuadTree(ne, this.capacity);
+        const sw = new Rectangle(x - w / 2, y + h / 2, w / 2, h / 2);
+        this.southwest = new QuadTree(sw, this.capacity);
+        const se = new Rectangle(x + w / 2, y + h / 2, w / 2, h / 2);
+        this.southeast = new QuadTree(se, this.capacity);
+
+        this.divided = true;
+    }
+
+    insert(boid) {
+        if (!this.boundary.contains(boid)) {
+            return false;
+        }
+
+        if (this.boids.length < this.capacity) {
+            this.boids.push(boid);
+            return true;
+        } else {
+            if (!this.divided) {
+                this.subdivide();
+            }
+            if (this.northwest.insert(boid)) return true;
+            if (this.northeast.insert(boid)) return true;
+            if (this.southwest.insert(boid)) return true;
+            if (this.southeast.insert(boid)) return true;
+        }
+    }
+
+    query(range, found) {
+        if (!found) {
+            found = [];
+        }
+
+        if (!this.boundary.intersects(range)) {
+            return found;
+        }
+
+        for (let boid of this.boids) {
+            if (range.contains(boid)) {
+                found.push(boid);
+            }
+        }
+
+        if (this.divided) {
+            this.northwest.query(range, found);
+            this.northeast.query(range, found);
+            this.southwest.query(range, found);
+            this.southeast.query(range, found);
+        }
+
+        return found;
+    }
+
+    clear() {
+        this.boids = [];
+        if (this.divided) {
+            this.northwest.clear();
+            this.northeast.clear();
+            this.southwest.clear();
+            this.southeast.clear();
+        }
+    }
+}
+
+class Rectangle {
+    constructor(x, y, w, h) {
+        this.x = x;
+        this.y = y;
+        this.w = w;
+        this.h = h;
+    }
+
+    contains(boid) {
+        return (boid.x >= this.x - this.w &&
+            boid.x < this.x + this.w &&
+            boid.y >= this.y - this.h &&
+            boid.y < this.y + this.h);
+    }
+
+    intersects(range) {
+        return !(range.x - range.w > this.x + this.w ||
+            range.x + range.w < this.x - this.w ||
+            range.y - range.h > this.y + this.h ||
+            range.y + range.h < this.y - this.h);
+    }
+}
+
+
+/* ----------------------------------------
 GRID OPTIMIZATION
 ---------------------------------------- */
 class Grid {
@@ -273,23 +338,28 @@ class Grid {
         if(DEBUG) console.log('new Grid',this);
         this.size = size;
         this.cells = Array.from({ length: (size * size) }, () => []);
+        boids.forEach(boid => this.insert(boid));
     }
 
     getFriends(boid) {
         const cellID = this.getCell(boid);
-        // return this.cells[cellID];
-        return this.cells[cellID].slice(0,1000);
+
+        //only return the friends within viewing distance. 
+        //it's an expensive filter but reduces the ^N complexity of the algorithm
+        // return this.cells[cellID].filter((friend) => {
+        //     return (boid.distance(friend) < (Boid.range * Boid.range));
+        // });
+
+        return this.cells[cellID];
     }
 
-    // storeBoids() {
-    //     this.cells = Array.from({ length: (this.size * this.size) }, () => []);
-    //     for (let boid of boids) {
-    //         this.storeBoid(boid);
-    //     }
-    //     return this.cells;
-    // }
+    storeBoids() {
+        this.cells = Array.from({ length: (this.size * this.size) }, () => []);
+        boids.forEach(boid => this.insert(boid));
+        return this.cells;
+    }
 
-    storeBoid(boid) {
+    insert(boid) {
         const cellID = this.getCell(boid);
         this.cells[cellID].push(boid);
     }
@@ -369,7 +439,7 @@ class Engine {
         let str = `fps: ${this.avgFPS}\n`;
             str += `bds: ${boids.length}\n`;
             str += `friends: ${friendsCount}\n`;
-            str += `grid: ${grid.cells.length}\n`;
+            str += `optimizer: ${optimizer}\n`;
 
         const debugElem = document.getElementById("debugger");
         debugElem.textContent = str;
@@ -381,8 +451,8 @@ class Engine {
 SETUP THE WEBGL SHADER
 ---------------------------------------- */
 const canvas = document.getElementById('glcanvas');
-canvas.width = canvas.clientWidth;
-canvas.height = canvas.clientHeight;
+// canvas.width = canvas.clientWidth;
+// canvas.height = canvas.clientHeight;
 const gl = canvas.getContext('webgl');
 
 class Shader {
@@ -475,12 +545,19 @@ function initControls() {
 }
 
 function setup() {
-    window.grid = new Grid(4);
+
     window.engine = new Engine();
     window.shader = new Shader();
+    createBoids();
+
+    if(optimizer == "grid") {
+        window.grid = new Grid(2);
+    } else {
+        const boundary = new Rectangle(0, 0, 2, 2);
+        window.quadTree = new QuadTree(boundary, 100);
+    }
 
     initControls();
-    createBoids();
     engine.drawFirstFrame();
 }
 
