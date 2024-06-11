@@ -358,15 +358,9 @@ class Grid {
     }
 
     getCell(boid) {
-        const px = ((boid.x + 1) / 2) * canvas.width;
-        const py = ((boid.y + 1) / 2) * canvas.height;
-        const colSize = canvas.width / this.size;
-        const rowSize = canvas.height / this.size;
-        const col = Math.floor(px / colSize);
-        const row = Math.floor(py / rowSize);
+        const col = Math.min(Math.floor(((boid.x + 1) / 2) * this.size),(this.size - 1));
+        const row = Math.min(Math.floor(((boid.x + 1) / 2) * this.size),(this.size - 1));
         const cellID = row * this.size + col;
-
-        // return Math.round(cellID);
         return Math.clamp(cellID, 0, this.cells.length - 1);
     }
 }
@@ -444,8 +438,8 @@ class Engine {
 SETUP THE WEBGL SHADER
 ---------------------------------------- */
 const canvas = document.getElementById('glcanvas');
-// canvas.width = canvas.clientWidth;
-// canvas.height = canvas.clientHeight;
+canvas.width = canvas.clientWidth;
+canvas.height = canvas.clientHeight;
 const gl = canvas.getContext('webgl');
 
 class Shader {
@@ -544,7 +538,7 @@ function setup() {
     createBoids();
 
     if(optimizer == "grid") {
-        window.grid = new Grid(2);
+        window.grid = new Grid(6);
     } else {
         const boundary = new Rectangle(0, 0, 2, 2);
         window.quadTree = new QuadTree(boundary, 100);
