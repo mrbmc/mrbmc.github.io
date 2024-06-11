@@ -1,4 +1,6 @@
 let DEBUG = (document.location.hostname == "localhost" || document.location.href.includes('debug'));
+var PLAY = true;
+
 clamp = function(val, min, max) {
     return Math.max(Math.min(val, max), min);
 }
@@ -405,6 +407,7 @@ class Engine {
         engine.debug();
         engine.framePrev = window.performance.now();
 
+        if(PLAY!==true) return;
         requestAnimationFrame(engine.drawFrame);
     }
 
@@ -525,6 +528,13 @@ function initControls() {
         document.getElementById(prop + 'Value').innerText = Boid[prop].toFixed(2);
     });
 
+    document.getElementById('pause').addEventListener('click', e => {
+        console.log('PAUSE',PLAY);
+        PLAY = !PLAY;
+        if(PLAY===true) {
+            engine.drawFrame();
+        }
+    });
     document.getElementById('reset').addEventListener('click', createBoids);
 
     document.getElementById('debugger').style.display = (DEBUG) ? "block" : "none";
