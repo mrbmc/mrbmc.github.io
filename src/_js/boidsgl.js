@@ -5,12 +5,12 @@ clamp = function(val, min, max) {
     return Math.max(Math.min(val, max), min);
 }
 
-const optimizer = "grid";//or "grid"
+const OPTIMIZATION_TYPE = "quadTree";//or "grid"
 
 /* ----------------------------------------
 BOIDS DEFINITIONS
 ---------------------------------------- */
-const BOID_COUNT = 1500;
+const BOID_COUNT = 1200;
 let boids = Array(BOID_COUNT);
 
 class Boid {
@@ -124,16 +124,15 @@ function createBoids () {
 }
 
 var mostFriends = 0;
-var tempGrid = [];
+var tempOptimizer = [];
 
 function updateBoids() {
-
     mostFriends = 0;
-    if(optimizer == "grid") {
-        tempGrid = Array.from({ length: (grid.size * grid.size) }, () => []);
+
+    if(OPTIMIZATION_TYPE == "grid") {
+        tempOptimizer = new Grid(optimizer.size);
     } else {
-        const boundary = new Rectangle(0, 0, 2, 2);
-        var _quadTree = new QuadTree(boundary, quadTree.capacity);
+        tempOptimizer = new QuadTree(new Rectangle(0, 0, 2, 2), optimizer.capacity);
     }
 
     for (let boid of boids) {
@@ -146,12 +145,7 @@ function updateBoids() {
         let moveY = 0;
         let numNeighbors = 1;
 
-        let friends = [];
-        if(optimizer == "grid") {
-            friends = grid.getFriends(boid);
-        } else {
-            friends = quadTree.query(new Rectangle(boid.x, boid.y, Boid.range, Boid.range));
-        }
+        var friends = optimizer.getFriends(boid);
 
         //for debugging
         mostFriends = Math.max(mostFriends,friends.length);
@@ -201,19 +195,10 @@ function updateBoids() {
         boid.keepWithinBounds();
         boid.move();
 
-        if(optimizer == "grid") {
-            tempGrid[grid.getCell(boid)].push(boid);
-        } else {
-            _quadTree.insert(boid);
-        }
+        tempOptimizer.insert(boid);
     }
 
-
-    if(optimizer == "grid") {
-        grid.cells = tempGrid;
-    } else {
-        quadTree = _quadTree;
-    }
+    optimizer = tempOptimizer;
 
     updateBuffer();
 }
@@ -256,8 +241,7 @@ class QuadTree {
         if (!this.boundary.contains(boid)) {
             return false;
         }
-
-        if (this.BOID_COUNT < this.capacity) {
+        if (this.boids.length < this.capacity) {
             this.boids.push(boid);
             return true;
         } else {
@@ -269,6 +253,10 @@ class QuadTree {
             if (this.southwest.insert(boid)) return true;
             if (this.southeast.insert(boid)) return true;
         }
+    }
+
+    getFriends(boid) {
+        return this.query(new Rectangle(boid.x, boid.y, Boid.range, Boid.range));
     }
 
     query(range, found) {
@@ -339,7 +327,8 @@ class Grid {
         if(DEBUG) console.log('new Grid',this);
         this.size = size;
         this.cells = Array.from({ length: (size * size) }, () => []);
-        boids.forEach(boid => this.insert(boid));
+
+        this.insertBoids();
     }
 
     getFriends(boid) {
@@ -354,7 +343,7 @@ class Grid {
         return this.cells[cellID];
     }
 
-    storeBoids() {
+    insertBoids() {
         this.cells = Array.from({ length: (this.size * this.size) }, () => []);
         boids.forEach(boid => this.insert(boid));
         return this.cells;
@@ -435,7 +424,7 @@ class Engine {
         let str = `fps: ${this.avgFPS}\n`;
             str += `bds: ${BOID_COUNT}\n`;
             str += `friends: ${mostFriends}\n`;
-            str += `optimizer: ${optimizer}\n`;
+            str += `optimizer: ${OPTIMIZATION_TYPE}\n`;
 
         const debugElem = document.getElementById("debugger");
         debugElem.textContent = str;
@@ -553,11 +542,10 @@ function setup() {
     window.shader = new Shader();
     createBoids();
 
-    if(optimizer == "grid") {
-        window.grid = new Grid(6);
+    if(OPTIMIZATION_TYPE == "grid") {
+        window.optimizer = new Grid(6);
     } else {
-        const boundary = new Rectangle(0, 0, 2, 2);
-        window.quadTree = new QuadTree(boundary, 100);
+        window.optimizer = new QuadTree(new Rectangle(0, 0, 2, 2), 640);
     }
 
     initControls();
