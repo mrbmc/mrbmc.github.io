@@ -72,8 +72,11 @@ The R&D team created a proof of concept build using the core technology and desi
 
 Our executive leaders wanted to ensure there was a viable market for social-viewing. I partnered with our product marketing team, a VP of Product, and an external research firm to interview users about their co-viewing use and validate user perception of this feature.
  
-![](/images/portfolio/disney-groupwatch/groupwatch-research-frame1.jpg){style="width:30%" .canzoom}![](/images/portfolio/disney-groupwatch/groupwatch-research-frame2.jpg){style="width:30%" .canzoom}![](/images/portfolio/disney-groupwatch/groupwatch-research-frame3.jpg){style="width:30%" .canzoom}
-{.fullwidth .inverse style="display:flex;justify-content:space-evenly;"}
+* ![](/images/portfolio/disney-groupwatch/groupwatch-research-frame1.jpg)
+* ![](/images/portfolio/disney-groupwatch/groupwatch-research-frame2.jpg)
+* ![](/images/portfolio/disney-groupwatch/groupwatch-research-frame3.jpg)
+* ![](/images/portfolio/disney-groupwatch/groupwatch-research-frame4.jpg)
+{.gallery .inverse style=""}
 
 ### Objectives & Key Results
 <div class="card">
@@ -232,5 +235,9 @@ GroupWatch found traction quickly with a solid cohort of subscribers. Over time 
 img.doublediamond { height:2rem;width:auto;margin:0 auto 3rem auto;display:block;}
 @media (orientation: landscape) {
 #scrollhint,.scrollhint { display: block;}
+}
+div.gallery-wrap .image-detail {
+height: 62vh;
+margin-top: 1rem;
 }
 </style>

@@ -1,6 +1,6 @@
 ---
 title: Disney+ Growth Design
-date: 2020-12-01
+date: 2020-02-01
 thumbnail: /images/portfolio/disney-growth/disney-growth.png
 eleventyExcludeFromCollections: false
 category:
