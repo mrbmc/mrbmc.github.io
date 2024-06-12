@@ -122,12 +122,12 @@ function createBoids () {
     updateBuffer();
 }
 
-var friendsCount = 0;
+var mostFriends = 0;
 var tempGrid = [];
 
 function updateBoids() {
 
-    friendsCount = 0;
+    mostFriends = 0;
     if(optimizer == "grid") {
         tempGrid = Array.from({ length: (grid.size * grid.size) }, () => []);
     } else {
@@ -152,7 +152,8 @@ function updateBoids() {
             friends = quadTree.query(new Rectangle(boid.x, boid.y, Boid.range, Boid.range));
         }
 
-        friendsCount = Math.max(friendsCount,friends.length);
+        //for debugging
+        mostFriends = Math.max(mostFriends,friends.length);
 
         for (let otherBoid of friends) {
             if (otherBoid === boid || otherBoid===undefined) continue;
@@ -433,7 +434,7 @@ class Engine {
 
         let str = `fps: ${this.avgFPS}\n`;
             str += `bds: ${boids.length}\n`;
-            str += `friends: ${friendsCount}\n`;
+            str += `friends: ${mostFriends}\n`;
             str += `optimizer: ${optimizer}\n`;
 
         const debugElem = document.getElementById("debugger");
