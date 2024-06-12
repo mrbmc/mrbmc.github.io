@@ -143,7 +143,7 @@ function updateBoids() {
         let avgDY = 0;
         let moveX = 0;
         let moveY = 0;
-        let numNeighbors = 0;
+        let numNeighbors = 1;
 
         let friends = [];
         if(optimizer == "grid") {
