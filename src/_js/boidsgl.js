@@ -125,6 +125,40 @@ let positions = [];
 function updateBoids() {
     mostFriends = 0;
 
+    for(let cell of optimizer.cells) {
+
+        var centerX = cell.reduce((sum, currentValue) => sum + currentValue.x, 0) / cell.length;
+        var centerY = cell.reduce((sum, currentValue) => sum + currentValue.y, 0) / cell.length;
+        var avgDX = cell.reduce((sum, currentValue) => sum + currentValue.dx, 0) / cell.length;
+        var avgDY = cell.reduce((sum, currentValue) => sum + currentValue.dy, 0) / cell.length;
+
+        // for (let boid of cell) {
+        for (let i=0;i<cell.length;i++) {
+            boid=cell[i];
+
+            boid.dx += (centerX - boid.x) * (Boid.cohesion / 10);
+            boid.dy += (centerY - boid.y) * (Boid.cohesion / 10);
+            boid.dx += (avgDX - boid.dx) * (Boid.alignment / 5);
+            boid.dy += (avgDY - boid.dy) * (Boid.alignment / 5);
+
+            //separate
+            boid.dx += (Math.random() * Boid.separation * avgDX);// - (Boid.separation * 5);
+            boid.dy += (Math.random() * Boid.separation * avgDY);// - (Boid.separation * 5);
+
+            boid.limitSpeed();
+            boid.keepWithinBounds();
+            boid.move();
+        }
+
+        mostFriends = Math.max(mostFriends,cell.length);
+    }
+
+    optimizer.insertBoids();
+
+    updateBuffer();
+
+    return;
+
     for (let boid of boids) {
 
         let centerX = 0;
@@ -580,7 +614,7 @@ function setup() {
     createBoids();
 
     if(OPTIMIZATION_TYPE == "grid") {
-        window.optimizer = new Grid(2);
+        window.optimizer = new Grid(48);
     } else if(OPTIMIZATION_TYPE == "quadTree") {
         window.optimizer = new QuadTree(new Rectangle(0, 0, 2, 2), 48);
     } else if(OPTIMIZATION_TYPE == "geoMap") {
