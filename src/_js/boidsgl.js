@@ -1,14 +1,15 @@
 let DEBUG = (document.location.hostname == "localhost" || document.location.href.includes('debug'));
 var PLAY = true;
 const OPTIMIZATION_TYPE = "grid";//"grid" or "quadTree" or "geoMap"
-const BOID_COUNT = 1200;
+const BOID_COUNT = 2400;
 
 /* ----------------------------------------
 BOIDS DEFINITIONS
 ---------------------------------------- */
 let boids = Array(BOID_COUNT);
 
-class Boid {
+class Boid 
+{
     static size = 0.005;
     static _color = "#00DDFF33";
 
@@ -123,34 +124,6 @@ let positions = [];
 
 function updateBoids() {
     mostFriends = 0;
-
-    // for(let cell of optimizer.cells) {
-
-    //     var centerX = cell.reduce((sum, currentValue) => sum + currentValue.x, 0) / cell.length;
-    //     var centerY = cell.reduce((sum, currentValue) => sum + currentValue.Y, 0) / cell.length;
-    //     var avgDX = cell.reduce((sum, currentValue) => sum + currentValue.dx, 0) / cell.length;
-    //     var avgDY = cell.reduce((sum, currentValue) => sum + currentValue.dY, 0) / cell.length;
-
-    //     console.log('centerX',centerX);
-
-    //     for (let boid of cell) {
-    //         boid.dx += (centerX - boid.x) * (Boid.cohesion / 500);
-    //         boid.dy += (centerY - boid.y) * (Boid.cohesion / 500);
-    //         boid.dx += (avgDX - boid.dx) * (Boid.alignment / 5);
-    //         boid.dy += (avgDY - boid.dy) * (Boid.alignment / 5);
-
-
-    //         boid.limitSpeed();
-    //         boid.keepWithinBounds();
-    //         boid.move();
-    //     }
-
-    //     mostFriends = Math.max(mostFriends,cell.length);
-    // }
-
-    // optimizer.insertBoids();
-    // updateBuffer();
-    // return;
 
     for (let boid of boids) {
 
@@ -394,11 +367,6 @@ class Grid
 
     getFriends(boid) {
         const cellID = this.getCell(boid);
-        //only return the friends within viewing distance. 
-        //it's an expensive filter but reduces the ^N complexity of the algorithm
-        // return this.cells[cellID].filter((friend) => {
-        //     return (boid.distance(friend) < (Boid.range * Boid.range));
-        // });
         return this.cells[cellID];//.slice(100);
     }
 
