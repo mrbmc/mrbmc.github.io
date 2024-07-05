@@ -8,46 +8,41 @@ body.home {
 
         a#open-menu {
             &:before,&:after {
-                background: $heroUnitHeadingColor;
+                // background: $heroUnitHeadingColor;
             }
         }
         #menu {
             a {
-                color: $heroUnitHeadingColor;
+                // color: $heroUnitHeadingColor;
                 &:hover {
-                    color: $navbarLinkColorHover;
+                    // color: $navbarLinkColorHover;
                 }
             }
             &:target {
                 a {
-                    color: $navbarLinkColor;
+                    // color: $navbarLinkColor;
                 }
             }
         }
         .brand {
             // filter: invert(0%);
-            color: $heroUnitHeadingColor;
+            // color: $navbarLinkColor;
+            &:before {
+                display: none;
+            }
         }
     }
     main,#main {
         padding-top: 0;
     }
     #masthead {
-        &>* {
-            max-width: $gridLimit;
-            margin-left: auto;
-            margin-right: auto;
-            width: 100%;
-        }
+        background: $bodyBackground;
+        color: $textColor;
         @media (orientation: landscape) {
-            padding: 0 $gridMargin;
             height: (100vh);
         }
         @media (orientation: portrait) {
-            height: 80vh;
-        }
-        @media (orientation: portrait) {
-            padding: $spacerVerticalPhone $spacerHorizontalPhone;
+            height: 62vh;
         }
 
         figure {
@@ -55,7 +50,38 @@ body.home {
         }
 
         h1,h2,h3 {
-            // color: $textBoldColor;
+            color: $textBoldColor;
+        }
+        h1{
+            &:before {
+                content: "";
+                background: url(/images/profile/kageki-crane.svg);
+                background-repeat: no-repeat;
+                display: block;
+                filter: invert(34%) sepia(77%) saturate(1900%) hue-rotate(8deg) brightness(98%) contrast(104%);
+                $iconsize: 3.6em;
+                @media (orientation: landscape) {
+                    float: right;
+                    width: $iconsize;
+                    height: $iconsize;
+                    background-size: $iconsize;
+                    background-position: right center;
+                }
+                @media (orientation: portrait) {
+                    // $iconsize: 2em;
+                    width: 100%;
+                    height: $iconsize;
+                    background-size: $iconsize;
+                    background-position: left center;
+                }
+            }
+            & > em {
+                    background: linear-gradient($_indigo, $_teal, $_pink);
+                    background: linear-gradient($brandAccent, $brandColor, $brandComplement);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    font-style: normal;
+            }
         }
         p {
             // @include largeType;
@@ -73,35 +99,35 @@ body.home {
 
 
 
-        &:before {
-            background-image: url('/images/blog/mobius.png');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: 100% 100%;
-            filter: blur(2rem) saturate(150%) brightness(0.8);
-            transform: translateZ(0) scale(1.2);
+        // &:before {
+        //     background-image: url('/images/blog/mobius.png');
+        //     background-repeat: no-repeat;
+        //     background-attachment: fixed;
+        //     background-size: 100% 100%;
+        //     filter: blur(2rem) saturate(150%) brightness(0.8);
+        //     transform: translateZ(0) scale(1.2);
 
-            content: "";
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            left: -0vw;
-            top: -0vh;
-            z-index: -2;
-        }
+        //     content: "";
+        //     width: 100%;
+        //     height: 100%;
+        //     position: absolute;
+        //     left: -0vw;
+        //     top: -0vh;
+        //     z-index: -2;
+        // }
 
-        &:after {
-            content: "";
-            background-size: 1000px;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            left: 0;
-            top: 0;
-            z-index: 0;
-            filter: url(#noiseFilter) opacity(25%);
-            transform: translateZ(0);
-        }
+        // &:after {
+        //     content: "";
+        //     background-size: 1000px;
+        //     width: 100%;
+        //     height: 100%;
+        //     position: absolute;
+        //     left: 0;
+        //     top: 0;
+        //     z-index: 0;
+        //     filter: url(#noiseFilter) opacity(25%);
+        //     transform: translateZ(0);
+        // }
 /*
         #gradient-canvas {
             display: none;
@@ -128,24 +154,24 @@ body.home {
             text-align: center;
         }
 
-        .project {
-            flex: 1 0 calc(50% - $spacerHorizontal);
-            flex-direction: column-reverse;
-            header {
-            }
-            h3 {
-                margin: 0;
-            }
-            img {
-                background: $wellBackground;
-                width: 100%;
-                object-fit: cover;
-                height: 19vw;
-            }
-            @media (orientation: landscape) {
-                // scroll-snap-align: start;
-            }
-         }
+        // .project {
+        //     flex: 1 0 calc(50% - $spacerHorizontal);
+        //     flex-direction: column-reverse;
+        //     header {
+        //     }
+        //     h3 {
+        //         margin: 0;
+        //     }
+        //     img {
+        //         background: $wellBackground;
+        //         width: 100%;
+        //         object-fit: cover;
+        //         height: 19vw;
+        //     }
+        //     @media (orientation: landscape) {
+        //         // scroll-snap-align: start;
+        //     }
+        //  }
         @media (orientation: portrait) {
             padding: 0 $spacerHorizontalPhone;
             .project {

@@ -35,15 +35,10 @@ body {
     main, #main {
         box-sizing: border-box;
         margin: 0 auto;
-        padding: $spacerVertical 0;
-        width: $gridWidth;
-
+        width: 100%;
         max-width: $gridLimit;
-
         @media (orientation: portrait) {
-            width: 100%;
             padding: 0 $spacerHorizontalPhone;
-            overflow-x: hidden;
         }
     }
 }

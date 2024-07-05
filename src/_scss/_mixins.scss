@@ -148,19 +148,18 @@
 
 @mixin fullWidth($limit:100vw) {
     width: $limit;
-    // max-width: $limit;
-    margin-left: calc((($gridWidth - $limit) / 2));
     display: flex;
-
+    margin-right: auto;
 
     @media (min-width: $gridLimit) {
         margin-left: calc((100vw - $gridLimit) * -0.5);
     }
 
     @media (orientation: portrait) {
-        width: 100vw;
-        // max-width: 100vw;
+        width: $limit;
         margin-left: (0 - $spacerHorizontalPhone);
+        // width: 100vw;
+        // margin-left: auto;
     }
 }
 @mixin fullHeight($limit:calc(100vh - $navbarHeight)) {

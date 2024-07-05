@@ -60,23 +60,25 @@ The primary typeface is Helvetica Neue.
 
 For extended prose we use a native serif: Hoefler on MacOS & iOS, Palatino on Android and Windows.
 
-# H1 Titular Heading
+{% assign typefactor = 1.3 %}
 
-## H2 Section Heading Title
+# H1 Titular Heading ({{ typefactor | times: typefactor | times: typefactor | times: typefactor | round: 4 }}rem)
 
-### H3 Sub-Section Heading Title
+## H2 Section Heading Title ({{ typefactor | times: typefactor | times: typefactor | round: 4 }}rem)
 
-#### H4 Component Heading Title
+### H3 Sub-Section Heading Title ({{ typefactor | times: typefactor | round: 4 }}rem)
 
-##### H5 Component Sub-Heading Title
+#### H4 Component Heading Title ({{ 1 | times: 1 | round: 4 }}rem)
 
-Body:  
+##### H5 Component Sub-Heading Title ({{ 1 | times: typefactor | round: 4 }}rem)
+
+Body:  (1rem)  
 It is a way I have of driving off the spleen and regulating the circulation.
 
-Body.Large:  
+Body.Large:  ({{ 1 | times: typefactor | round: 4 }}rem)  
 It is a way I have of driving off the spleen and regulating the circulation.{.largeType}
 
-Body.Small:  
+Body.Small:  ({{ 1 | divided_by: typefactor | round: 4 }}rem)  
 It is a way I have of driving off the spleen and regulating the circulation.{.smallType}
 
 Prose:  

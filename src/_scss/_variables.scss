@@ -10,18 +10,18 @@ $_sunshine:             #e6de00;//hsl(58, 100%, 45%);//
 $_teal:                 #00b1cc;//hsl(188,100%,40%);//
 $_orange:               #FF4F00;//international orange
 
-$brandColor:            $_indigo;
+$brandColor:            $_orange;
 $brandColor00:          #{$brandColor + "00"};
 $brandColor20:          #{$brandColor + "33"};
 $brandColor60:          #{$brandColor + "9E"};
 $brandColor80:          #{$brandColor + CC};
-$brandAccent:           $_pink;
+$brandAccent:           $_sunshine;
 $brandAccent20:         #{$brandAccent + "4D"};
 $brandAccent80:         #{$brandAccent + "CC"};
-$brandComplement:       $_sunshine;
+$brandComplement:       $_indigo;
 $brandComplement20:     #{$brandComplement + "4D"};
 $brandComplement80:     #{$brandComplement + "CC"};
-$brandSecondary:        $_teal;
+$brandSecondary:        $_pink;
 $brandSecondary20:      #{$brandSecondary + "4D"};
 $brandSecondary80:      #{$brandSecondary + "BB"};
 

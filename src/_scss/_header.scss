@@ -3,6 +3,10 @@
     padding: ($navbarHeight * .19) $spacerHorizontal;
     margin: 0 auto;
 
+    // padding: ($navbarHeight * .19) 0;
+    // width: $gridWidth;
+    // max-width: $gridLimit;
+
     box-sizing: border-box;
     height: $navbarHeight;
 
@@ -49,6 +53,25 @@
         text-decoration: none;
         display: flex;
         padding: 0;
+        margin: 0;
+        color: transparent;
+        &:hover {
+        color: transparent;
+
+        }
+        &:before {
+            content: "";
+            background: url(/images/profile/kageki-crane.svg);
+            background-size: 1.2em;
+            background-position: 0 0;
+            background-repeat: no-repeat;
+            width: 1.62em;
+            height: 1.2em;
+            display: inline-block;
+            @media (prefers-color-scheme: dark) {
+                filter: invert(100%);
+            }
+        }
     }
 
     a#open-menu, a#close-menu {
