@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "disney-growth.md",
+                "file": "team-charter-workshop.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "disney-growth.md",
+                "file": "team-charter-workshop.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "disney-growth.md",
+                "file": "team-charter-workshop.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "disney-growth.md"
+                "file": "team-charter-workshop.md"
               }
             }
           }
@@ -150,8 +150,9 @@
   "active": "4c8d9e1284880496",
   "lastOpenFiles": [
     "disney-enterprise.md",
-    "disney-groupwatch.md",
+    "team-charter-workshop.md",
     "disney-growth.md",
+    "disney-groupwatch.md",
     "espn.md",
     "disney.md",
     "Untitled.md",
@@ -160,7 +161,6 @@
     "espnvision.md",
     "espnplus.md",
     "nhltv.md",
-    "team-culture-workshop.md",
     "Pasted image 20240129092628.png",
     "exd-team-agency.png",
     "exd-team-agency 1.png",

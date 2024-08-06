@@ -30,9 +30,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "b8cd44b47494677d",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.6.5"
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -160,7 +170,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3208adf153159279",
+  "active": "b8cd44b47494677d",
   "lastOpenFiles": [
     "Book Review - Worn.md",
     "intentional-consumption.md",
