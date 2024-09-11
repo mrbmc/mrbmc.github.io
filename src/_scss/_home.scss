@@ -53,37 +53,7 @@ body.home {
         h1,h2,h3 {
             color: $textBoldColor;
         }
-        h1{
-            $iconsize: 3.6em;
-            position: relative;
-            padding-right: calc($iconsize + $spacerHorizontal);
-            box-sizing: border-box;
-            &:before {
-                position: absolute;
-                right: 0;
-                top: 50%;
-                margin-top: ($iconsize * -0.5);
-                content: "";
-                background: url(/images/profile/kageki-crane.svg);
-                background-repeat: no-repeat;
-                display: block;
-                filter: invert(34%) sepia(77%) saturate(1900%) hue-rotate(8deg) brightness(98%) contrast(104%);
-                @media (orientation: landscape) {
-                    float: right;
-                    width: $iconsize;
-                    height: $iconsize;
-                    background-size: $iconsize;
-                    background-position: right center;
-                }
-                @media (orientation: portrait) {
-                    position: static;
-                    // $iconsize: 2em;
-                    width: 100%;
-                    height: $iconsize;
-                    background-size: $iconsize;
-                    background-position: center center;
-                }
-            }
+        h1,h2 {
             @media (orientation: portrait) {
                 padding-right: 0;
             }
@@ -95,6 +65,7 @@ body.home {
                     font-style: normal;
             }
         }
+    
         p {
             // @include largeType;
             z-index: 1;
@@ -109,15 +80,51 @@ body.home {
             }
         }
 
+        $iconsize: 13rem;
+        h1, p.bio {
+            box-sizing: border-box;
+            padding-right: calc($iconsize + $spacerHorizontal);
+        }
+        .crane {
+            position: absolute;
+            max-width: $gridLimit;
+            left: calc((100vw - $gridLimit)/2);
+            // margin-top: ($iconsize * -0.5);
+            content: "";
+            text-align: right;
+            filter: invert(34%) sepia(77%) saturate(1900%) hue-rotate(8deg) brightness(98%) contrast(104%);
+            img{
+                width: auto;
+                height: 100%;
+                display: inline-block;
+            }
+            @media (orientation: landscape) {
+                // float: right;
+                // width: $iconsize;
+                height: $iconsize;
+                background-size: $iconsize;
+                background-position: right center;
+            }
+            @media (orientation: portrait) {
+                position: static;
+                $iconsize: 5rem;
+                // width: 100%;
+                text-align: center;
+                height: $iconsize;
+            }
+        }
 
 
         // &:before {
-        //     background-image: url('/images/blog/mobius.png');
         //     background-repeat: no-repeat;
         //     background-attachment: fixed;
         //     background-size: 100% 100%;
-        //     filter: blur(2rem) saturate(150%) brightness(0.8);
-        //     transform: translateZ(0) scale(1.2);
+
+        //     background-color: $brandColor;
+        //     background-image:
+        //     radial-gradient(ellipse 100% 162% at 62% -19%, $brandAccent 0px, transparent 50%),
+        //     radial-gradient(ellipse 200% 81% at 119% 62%, $brandComplement 0px, transparent 50%),
+        //     radial-gradient(ellipse 81% 162% at 19% 81%, $brandSecondary 0px, transparent 50%);
 
         //     content: "";
         //     width: 100%;
