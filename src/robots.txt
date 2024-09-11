@@ -19,6 +19,12 @@ Disallow: /
 User-agent: ia_archiver
 Disallow: /
 
+User-agent: SeznamBot
+Disallow: /
+
+User-agent: ZoominfoBot
+Disallow: /
+
 User-agent: *
 Disallow: /wp-admin
 Disallow: /wp

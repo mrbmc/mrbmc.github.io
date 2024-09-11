@@ -1,56 +1,133 @@
 #!/bin/zsh
 
-# function week2date () {
-#   local year=$1
-#   local week=$2
-#   local dayofweek=$3
-#   date -d "$year-01-01 +$(( $week * 7 + 1 - $(date -d "$year-01-04" +%u ) - 3 )) days -2 days + $dayofweek days" +"%Y-%m-%d"
-# }
-
-# date +"So this is week: %U of %Y"
-
-# week2date $1 $2
-
-
-
-# exit;
-
-
 BASE=$(dirname "$0");
+todate=$(date +%d)
+tomonth=$(date +%m)
 
-echo "DOWNLOADING LOGS FROM S3"
-aws s3 sync s3://brianmcconnell.me $BASE/logs
+local flag_skipdownload flag_verbose flag_help 
+local arg_term=(all)
+local usage=(
+"metrics.sh [-h|--help]"
+"metrics-sh [-v|--verbose] [-t|--term=<duration>] [<message...>]"
+)
 
-echo "UNZIPPING LOGS"
-gunzip -c -k -f $BASE/logs/E1TNSK7JF24IAY*gz > $BASE/log_raw
-
-echo "SCRUBBING CRAWLERS & BOTS"
-grep  -E -v -i -f $BASE/blacklist.txt $BASE/log_raw > $BASE/log_clean
-
-# echo "SPLITTING LOG INTO MONTH LOGS"
-# for i in {01..12}
-# do
-#     sed -n '/2024\-'$i'\-15/,/2024\-'$i'\-31/ p' log_clean > log_clean-2024$i;
-#    goaccess $BASE/log_clean-2024$i -o $BASE/../www/metrics/2024$i.html --log-format=CLOUDFRONT;
-# done
-
-echo "ANALYZING LOGS"
-mkdir -m 755 $BASE/../www/metrics
-goaccess $BASE/log_raw -o $BASE/../www/metrics/raw.html --log-format=CLOUDFRONT
-goaccess $BASE/log_clean -o $BASE/../www/metrics/index.html --log-format=CLOUDFRONT --no-query-string --agent-list --ignore-crawlers --unknowns-as-crawlers --tz="America/New York"
-
-echo "GENERATING MOTHLY REPORTS"
-for i in {01..12}
-do
-	sed -n '/2024\-'$i'\-01/,/2024\-'$i'\-31/ p' $BASE/log_clean | goaccess -a -o $BASE/../www/metrics/2024$i.html --log-format=CLOUDFRONT --ignore-crawlers --unknowns-as-crawlers --tz="America/New York"
-	sed -n '/2024\-'$i'\-01/,/2024\-'$i'\-31/ p' $BASE/log_raw | goaccess -a -o $BASE/../www/metrics/2024$i-raw.html --log-format=CLOUDFRONT --tz="America/New York"
-done
+local startm=01;
+local endm=12;
 
 
 
-#echo "GARBAGE COLLECTION"
+
+zmodload zsh/zutil
+zparseopts -D -F -K -- \
+{h,-help}=flag_help \
+{s,-skipdownload}=flag_skipdownload \
+{v,-verbose}=flag_verbose \
+{t,-term}:=arg_term ||
+return 1
+
+[[ -z "$flag_help" ]] || { print -l $usage && return }
+if (( $#flag_verbose )); then
+print "verbose mode"
+fi
+
+# echo "--verbose: $flag_verbose"
+# echo "--skipdownload: $flag_skipdownload"
+# echo "--term: $arg_term[-1]"
+# echo "positional: $@"
+
+
+
+function download () {
+	echo "* * * * * * * * * * * * * * * * * *";
+	echo "DOWNLOADING DATA";
+	echo "* * * * * * * * * * * * * * * * * *";
+
+	echo "DOWNLOADING LOGS FROM S3"
+	aws s3 sync s3://brianmcconnell.me $BASE/downloads
+
+	echo "UNZIPPING LOGS"
+	for i in {$startm..$endm}
+	do
+		echo "2024-$i unzipping";
+		gunzip -c -k -f $BASE'/downloads/E1TNSK7JF24IAY.2024-'$i*'gz' > $BASE'/logs/log_raw_2024-'$i
+	done
+
+}
+
+
+function parse () {
+	echo "* * * * * * * * * * * * * * * * * *";
+	echo "PREPARING DATA" $1;
+	echo "* * * * * * * * * * * * * * * * * *";
+
+	for i in {$startm..$endm}
+	do
+		echo "2024-$i scrubbing";
+		grep  -E -v -i -f $BASE/blacklist.txt $BASE'/logs/log_raw_2024-'$i > $BASE'/logs/log_clean_2024-'$i
+	done
+
+	echo "concatenating"
+	zcat -f $BASE/logs/log_clean_2024-* > $BASE/logs/log_clean;
+}
+
+
+
+function analyze () {
+
+	echo "* * * * * * * * * * * * * * * * * *";
+	echo "ANALYZING DATA";
+	echo "* * * * * * * * * * * * * * * * * *";
+
+	for i in {$startm..$endm}
+	do
+		# echo "2024-$i analyzing";
+		goaccess $BASE'/logs/log_clean_2024-'$i -o $BASE'/../metrics/www/2024'$i'.html' --log-format=CLOUDFRONT --no-query-string --agent-list --ignore-crawlers --unknowns-as-crawlers --tz="America/New York"
+		# goaccess $BASE'/logs/log_raw_2024-'$i -o $BASE'/../metrics/www/2024'$i'-raw.html' --log-format=CLOUDFRONT --no-query-string --tz="America/New York"
+	done
+
+	echo "Analyzing Periods";
+	sed -n '/2024\-'$(date -v-7d +%m)'\-'$(date -v-7d +%d)'/,/2024\-'$tomonth'\-'$todate'/ p' $BASE/logs/log_clean | goaccess -a -o $BASE/../metrics/www/l7.html --log-format=CLOUDFRONT --ignore-crawlers --unknowns-as-crawlers --tz="America/New York"
+	sed -n '/2024\-'$(date -v-30d +%m)'\-'$(date -v-30d +%d)'/,/2024\-'$tomonth'\-'$todate'/ p' $BASE/logs/log_clean | goaccess -a -o $BASE/../metrics/www/l30.html --log-format=CLOUDFRONT --ignore-crawlers --unknowns-as-crawlers --tz="America/New York"
+
+	if [[ "$arg_term[-1]" = "all" ]]; then
+		sed -n '/2024\-'$(date -v-90d +%m)'\-'$(date -v-90d +%d)'/,/2024\-'$tomonth'\-'$todate'/ p' $BASE/logs/log_clean | goaccess -a -o $BASE/../metrics/www/l90.html --log-format=CLOUDFRONT --ignore-crawlers --unknowns-as-crawlers --tz="America/New York"	
+
+		echo "Analyzing 2024";
+		zcat -f $BASE/logs/log_clean_2024-* | goaccess  -o $BASE'/../metrics/www/2024.html' --log-format=CLOUDFRONT --no-query-string --agent-list --ignore-crawlers --unknowns-as-crawlers --tz="America/New York"
+	fi
+
+}
+
+
+
+
+# if [ $# -eq 0 ]; then
+# 	echo "* * * * * * * * * * * * * * * * * * * * * * *";
+#     echo "Please enter a command. Options are 'all', 'process', or 'download'";
+# 	exit;
+# fi
+
+if [[ "$arg_term[-1]" = "recent" ]]; then
+	echo "RECENT ONLY";
+	startm=$(date -v-30d +%m);
+	endm=$(date +%m);
+fi
+
+if (( $#flag_skipdownload )); then
+	echo "SKIP DOWNLOAD"
+else
+	download;
+fi
+
+parse;
+
+analyze;
+
+
+
 
 exit;
 
-
-
+#NOTE: you can't unzip all files for a year. too many files.
+gunzip -c -k -f $BASE'/downloads/E1TNSK7JF24IAY.2024-0'* | grep  -E -v -i -f ../blacklist.txt | goaccess  -o ../www/2024.html --log-format=CLOUDFRONT --no-query-string --agent-list --ignore-crawlers --unknowns-as-crawlers --tz="America/New York"
+zcat -f logs/log_clean0* 
