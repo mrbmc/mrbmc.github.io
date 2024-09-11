@@ -20,7 +20,7 @@ The "Boids" Algorithm is a simulation of flocking behavior found in fish and fow
 
 I think the resulting patterns are mesmerizing.
 
-[Launch Boids](/boids/){.button}
+[Launch Boids](/gaia/boids/){.button}
 
 
 

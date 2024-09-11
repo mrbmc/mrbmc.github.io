@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "team-charter-workshop.md",
+                "file": "design-prototyping-201.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "team-charter-workshop.md",
+                "file": "design-prototyping-201.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "team-charter-workshop.md",
+                "file": "design-prototyping-201.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "team-charter-workshop.md"
+                "file": "design-prototyping-201.md"
               }
             }
           }
@@ -149,11 +149,15 @@
   },
   "active": "4c8d9e1284880496",
   "lastOpenFiles": [
-    "disney-enterprise.md",
-    "team-charter-workshop.md",
+    "boids.md",
+    "design-prototyping-201.md",
+    "espn.md",
+    "disney-growth-long.md",
     "disney-growth.md",
     "disney-groupwatch.md",
-    "espn.md",
+    "blogtalkradio.md",
+    "team-charter-workshop.md",
+    "disney-enterprise.md",
     "disney.md",
     "Untitled.md",
     "disney-groupwatch-bak.md",
@@ -174,8 +178,6 @@
     "nhlgameflow.md",
     "nhl.md",
     "optumus.md",
-    "boids.md",
-    "blogtalkradio.md",
     "rhythmism.md",
     "securityscorecard.md",
     "steelgills.md",
@@ -186,8 +188,6 @@
     "images/portfolio/disney-growth",
     "pal-9100.md",
     "flint-and-silicon.md",
-    "images/portfolio/disney-growth/pod-slide.svg.md",
-    "images/portfolio/disney-growth/espn-ott-known-flow.jpg.md",
     "images/portfolio/culture-workshop"
   ]
 }
