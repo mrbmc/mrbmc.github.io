@@ -78,19 +78,6 @@ Our executive leaders wanted to ensure there was a viable market for social-view
 * ![](/images/portfolio/disney-groupwatch/groupwatch-research-frame4.jpg)
 {.gallery .inverse style=""}
 
-### Objectives & Key Results
-<div class="card">
-
-#### Objective  
-Demonstrate Disney’s commitment to innovation and improving the guest experience.  
-
-#### Key Results  
-* Positive press coverage and guest sentiment  
-* 20% user activation  
-* Increase Recency, Frequency, and Engagement metrics  (churn indicators)
-
-</div>
-
 ### Experience Guidelines
 
 The market research we collected along with the previous UX research gave us a foundation to start defining guidelines that would guide future product, design, and technology decisions. These were co-authored by teammates from Design, Product, and Product Marketing.
@@ -120,6 +107,19 @@ Principles are a powerful way to align teams in big programs and guide decisions
 {.grid}
 
 -->
+
+### Objectives & Key Results
+<div class="card">
+
+#### Objective  
+Demonstrate Disney’s commitment to innovation and improving the guest experience.  
+
+#### Key Results  
+* Positive press coverage and guest sentiment  
+* 20% user activation  
+* Increase Recency, Frequency, and Engagement metrics  (churn indicators)
+
+</div>
 
 ## Develop{#develop}
 ![Double Diamond](/images/portfolio/doublediamond-develop.png){.doublediamond}

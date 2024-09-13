@@ -74,8 +74,6 @@ The Growth Design team began work long before Disney+ launched; before Disney ac
 
 18 months before Disney+ we designed & built Disney's first direct-to-consumer offering in **ESPN+**. That [project deserves its own case study](/portfolio/espn), but I want to call out that much of the foundation for **Signup**, **Payment**, **Login**, and Subscription Management was established in the ESPN+ launch. The core of the Growth Design team carried over from that project.
 
-![Signup on Web, direct payment, anonymous users](/images/portfolio/disney-growth/espn-web-anon-flow.jpg){.canzoom style="height:50vh;object-fit:fill;"}
-
 ### The Mountain of Scope {#full-scope}
 
 The complete scope of surface areas for Disney+ Growth can be organized around several vectors. This intersectionality means each feature might have **9 variations** of interaction design.
@@ -119,7 +117,8 @@ The complete scope of surface areas for Disney+ Growth can be organized around s
 
 #### Situation & Challenge
 
-At the inception of work on Disney+ the "Growth" design team was 3 designers + 1 UX researcher.  We worked well with engineers and product owners needed to grow the team in breadth and depth.
+At the inception of work on Disney+ the "Growth" design team was small and generalist.  We worked well with engineers and product owners but needed to grow in breadth and depth.
+
 ![Growth Team in 2018](/images/portfolio/disney-growth/growth-team-start.png){.center style="padding: 4rem;box-sizing:border-box;"}
 Growth Team - January 2019{.caption}
 #### Solution

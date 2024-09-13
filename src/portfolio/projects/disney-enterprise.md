@@ -8,18 +8,40 @@ category:
 summary: This suite of 36 enterprise SAAS products behind Disney+, Hulu, and ESPN saved Disney $80M/pa in operating costs and grew MRR 25%.
 timeline: 2019-2023
 ---
+- ![Commerce Portal](/images/portfolio/disney-enterprise/genie.png)
+- ![Content Management](/images/portfolio/disney-enterprise/maestro.png)
+- ![Support Agent Portal](/images/portfolio/disney-enterprise/baymax.png)
+- ![Experimentation](/images/portfolio/disney-enterprise/weaponx.png)
+- ![Content Dictionary](/images/portfolio/disney-enterprise/cypher-1.png)
+- ![Messaging Portal](/images/portfolio/disney-enterprise/messaging-new-email.jpg)
+- ![Streaming Quality](/images/portfolio/disney-enterprise/enterprise-optumus-session.png)
+- ![Data Portal](/images/portfolio/disney-enterprise/dataportal.png)
+- ![Advertising](/images/portfolio/disney-enterprise/ads-mission-control-scheduling.jpg)
+- ![Developer Productivity](/images/portfolio/disney-enterprise/dev-portal.jpg)
+- ![Metadata Portal](/images/portfolio/disney-enterprise/knowsmore.jpg)
+- ![Content Portal](/images/portfolio/disney-enterprise/content-portal-episode.jpg)
+{.gallery}
 
-![Streaming QoS Analysis](/images/portfolio/disney-enterprise/optumus-mockup.jpg){.fullwidth}
 
-| Role & Responsibility                                                                                                                                          | Team                                     | Timeline            | Impact                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- | ------------------- | --------------------------------------------------------------------------- |
-| **Sr. Director, Product Design**<br><br>Team hiring, management, and organization design. Design strategy. Partner management. Budgeting. Culture development. | 12 FT Designers + 4-6 Design Contractors | Jan 2019 - Aug 2023 | saved **$80M** p/a in operating costs<br>supported a **2x growth in AARPU** |
+1. [The Strategy](#strategy)
+2. [The Team](#team)
+3. [The Products](#products)
 
-## Streaming Video is Hard
+{.stickynav}
 
-Operating at the scale, and legal exposure, that Disney does often requires us to build, not buy, solutions due to cost or privacy constraints. *The scale of this platform was comparable to an entire industry.* Many of the products we built matched the scale of commercial products.
+| Role & Responsibility                                                                                                                                          | Team                                   | Timeline            | Impact                                                                     |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- | ------------------- | -------------------------------------------------------------------------- |
+| **Sr. Director, Product Design**<br><br>Team hiring, management, and organization design. Design strategy. Partner management. Budgeting. Culture development. | 12 FT Designers + 6 Design Contractors | Jan 2019 - Aug 2023 | saved **$80M** p/a in operating costs<br>supported a **25% growth in MRR** |
 
-As the executive accountable for product design my mission was to invest design effort in the products that could make the biggest business impact through customer acquisition, cost optimization, increasing agility, or improving decision quality.
+## Streaming Video is Hard{#strategy}
+
+_To create something truly novel you need novel tools._
+
+Creating a global streaming service that meets consumers where they are, requires a constellation of powerful software components: routing video across the globe, programming the content in every region, setting pricing for dozens of currencies, supporting thousands of support castmembers, messaging guests about their favorite content...
+
+Operating at the scale that Disney does often requires us to build our own solutions. Off-the-shelf options are not viable due to cost or privacy constraints. Those existing solutions
+
+As the executive accountable for product design of these tools my mission was to invest design effort in the products that could make the biggest business impact through customer acquisition, cost optimization, increasing agility, or improving decision quality.
 
 | Disney Product              | Purpose                                                                                     | Commercial Analog(s)                                                                    |
 | --------------------------- | ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
@@ -33,36 +55,9 @@ As the executive accountable for product design my mission was to invest design 
 | Ad Manager, Mission Control | Advertising curation, provisioning, and deployment.                                         | [Google AdSense](https://adsense.google.com/), Amazon Advertising                       |
 | Partner Portal              | Testing APIs, documentation, and issue tracking for developers building with Disney's SDK.  | [GitLabs](https://about.gitlab.com/)                                                    |
 | Galaxy                      | Platform for sending personalized targeted messages (Email, SMS, Push) to our users.        | [salesforce](https://www.salesforce.com/) + [braze](https://www.braze.com/)             |
+*The scale of this platform was comparable to an entire industry.* 
 
-All of the products we designed or consulted on:
-
-Anti-Piracy Operations, Audience Segmentation, CDN Management Console, Commerce & Offer Operations, Commerce Config Tool, Content Catalog Browser, Content delivery Preview, Content Experience Management, Content Portal (hulu live, sVOD), CX Dashboard  , Data Activation Framework , DATA instrumentation library, Data Portal , Developer Portal, Dictionary & Translation, Disney Edge Controller (DEC), EXD Design System, Experimentation , Fraud Management Service, Hulu Ad Manager, Hulu Ad Mission Control, Hulu Ad Revenue Processing Service, Machine Learning Dashboard, Metadata Mapping & Visualization, Partner Portal, Player Config Service, Responder Files (DATA Feature Market), SRE Dashboard, Streaming QoS Insights, Support Agent Console, Unified Messaging Platform{.small .card}
-
-
- 
-- ![Commerce Portal](/images/portfolio/disney-enterprise/commerces-offer-detail.jpg)
-- ![Messaging Portal](/images/portfolio/disney-enterprise/messaging-new-email.jpg)
-- ![Metadata Portal](/images/portfolio/disney-enterprise/knowsmore.jpg)
-- ![Content Portal](/images/portfolio/disney-enterprise/content-portal-episode.jpg)
-- ![Streaming Quality](/images/portfolio/disney-enterprise/qos-spotlight.jpg)
-- ![Support Agent Portal](/images/portfolio/disney-enterprise/sisu-customer-details.jpg)
-- ![Experimentation](/images/portfolio/disney-enterprise/experiments-results.jpg)
-- ![Content Management](/images/portfolio/disney-enterprise/cypher.jpg)
-- ![Advertising](/images/portfolio/disney-enterprise/ads-mission-control-scheduling.jpg)
-- ![Developer Productivity](/images/portfolio/disney-enterprise/dev-portal.jpg)
-{.gallery}
-
-## Legacy Of Tool Innovation
-
-Why build custom software tools? 
-
-**To create something truly novel you need novel tools.**
-
-Disney has a rich history of building new tools that unlock creative possibilities. One famous example was the Multi-plane camera which massively accelerated animation and enabled parallax motion techniques.
-
-![Multiplane Camera](/images/portfolio/Walt_Disney_Multiplane_Camera_2.jpeg){.fullwidth style="height:62vh;object-position: 50% 38%;"}
-
-## The Team
+## The Team{#team}
 
 A team is greater than the sum of the individuals. It's a singular unit with a shared purpose. The secret ingredient that binds a group of people together is the culture. I'm proud to say the Enterprise XD team at Disney had a strong culture of **psychological safety**, **authenticity**, and **shared growth**.
 
@@ -78,9 +73,25 @@ To tackle such a large surface area, we organized the team into pods for each to
 ![](/images/portfolio/disney-enterprise/exd-pods.png){.card}
 
 
-## Design System
+## Products{#products}
 
-We partnered with an team of engineers who cared deeply about developer productivity to create a design system and a visual language that was unique to disney. This design system provides a high quality, rapid, and robust UI framework across all these products.
+### Commerce
+
+How might we manage 1000+ offer combinations of currency, service 
+
+![](/images/portfolio/disney-enterprise/genie.png){.fullwidth}
+
+### Content
+
+### Customers
+
+### Experiments
+
+### Analytics
+
+### Design System
+
+We partnered with a team of engineers who cared deeply about developer productivity to create a design system and a visual language that was unique to disney. This design system provides a high quality, rapid, and robust UI framework across all these products.
 
 ![Trek Overview](/images/portfolio/disney-enterprise/exd-design-system-overview.jpg){.fullwidth}
 
@@ -91,7 +102,20 @@ We partnered with an team of engineers who cared deeply about developer producti
 - ![Navigation](/images/portfolio/disney-enterprise/trek-navigation.jpg)
 {.gallery}
 
-<!--  -->
+
+- ![Commerce Portal](/images/portfolio/disney-enterprise/commerces-offer-detail.jpg)
+- ![Content Management](/images/portfolio/disney-enterprise/cypher.jpg)
+- ![Support Agent Portal](/images/portfolio/disney-enterprise/sisu-customer-details.jpg)
+- ![Experimentation](/images/portfolio/disney-enterprise/experiments-results.jpg)
+- ![Messaging Portal](/images/portfolio/disney-enterprise/messaging-new-email.jpg)
+- ![Streaming Quality](/images/portfolio/disney-enterprise/qos-spotlight.jpg)
+- ![Advertising](/images/portfolio/disney-enterprise/ads-mission-control-scheduling.jpg)
+- ![Developer Productivity](/images/portfolio/disney-enterprise/dev-portal.jpg)
+- ![Metadata Portal](/images/portfolio/disney-enterprise/knowsmore.jpg)
+- ![Content Portal](/images/portfolio/disney-enterprise/content-portal-episode.jpg)
+{.gallery}
+
+
 
 <style>
 .team {
@@ -132,7 +156,8 @@ flex: 1 1;
   overflow: hidden;
   object-position: top center;
   width:  125vh;
-  height: 90vh;
+  max-height: 90vh;
+  height: auto;
   margin: 0 auto;
   }
   div.gallery-wrap ul li img {
@@ -144,3 +169,20 @@ flex: 1 1;
 <!--
 
 -->
+
+All of the products we designed or consulted on:
+
+Anti-Piracy Operations, Audience Segmentation, CDN Management Console, Commerce & Offer Operations, Commerce Config Tool, Content Catalog Browser, Content delivery Preview, Content Experience Management, Content Portal (hulu live, sVOD), CX Dashboard  , Data Activation Framework , DATA instrumentation library, Data Portal , Developer Portal, Dictionary & Translation, Disney Edge Controller (DEC), EXD Design System, Experimentation , Fraud Management Service, Hulu Ad Manager, Hulu Ad Mission Control, Hulu Ad Revenue Processing Service, Machine Learning Dashboard, Metadata Mapping & Visualization, Partner Portal, Player Config Service, Responder Files (DATA Feature Market), SRE Dashboard, Streaming QoS Insights, Support Agent Console, Unified Messaging Platform{.small .card}
+
+![Streaming QoS Analysis](/images/portfolio/disney-enterprise/optumus-mockup.jpg){.fullwidth}
+
+
+### Legacy Of Tool Innovation
+
+Why build custom software tools? 
+
+**To create something truly novel you need novel tools.**
+
+Disney has a rich history of building new tools that unlock creative possibilities. One famous example was the Multi-plane camera which massively accelerated animation and enabled parallax motion techniques.
+
+![Multiplane Camera](/images/portfolio/Walt_Disney_Multiplane_Camera_2.jpeg){.fullwidth style="height:62vh;object-position: 50% 38%;"}
