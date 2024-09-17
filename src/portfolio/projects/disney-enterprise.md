@@ -150,20 +150,6 @@ flex: 1 1;
   .team img:last-of-type {
     width:  16vw;
   }
-
-  div.gallery-wrap .image-detail {
-  object-fit: cover;
-  overflow: hidden;
-  object-position: top center;
-  width:  125vh;
-  max-height: 90vh;
-  height: auto;
-  margin: 0 auto;
-  }
-  div.gallery-wrap ul li img {
-    object-fit: cover;
-  }
-
 </style>
 
 <!--
