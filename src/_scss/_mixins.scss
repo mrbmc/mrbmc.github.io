@@ -176,6 +176,14 @@
         padding: $spacerVerticalPhone $spacerHorizontalPhone;
     }
 }
+// @mixin span ($s:1) {
+//   width: ($s * $gridColumnWidth) + (($s - 1) * $gridGutterWidth);
+//   margin: $spacerVertical 0 $spacerVertical $gridGutterWidth;
+//   float: left;
+//   &:first-of-type {
+//     margin-left: 0;
+//   }
+// }
 
 // @function hsl-str($color) {
 //   @return unquote("hsl(#{hue($color)}, #{saturation($color)}, #{lightness($color)})");

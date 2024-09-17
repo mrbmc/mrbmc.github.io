@@ -13,7 +13,6 @@ tags:
 >*noun*{.small}  
 >An unusual and exciting, typically *hazardous*, experience or activity.
 
-
 In August 2023 I rode my bike across the Green Mountains of Vermont, zig-zagging over mountain passes, abandoned logging roads, and working dairy farms. It was the most demanding endurance challenge of my life (I think). It provided an extended opportunity for reflection on why we do hard things. 
 
 ### By the Numbers:
@@ -23,13 +22,20 @@ In August 2023 I rode my bike across the Green Mountains of Vermont, zig-zagging
 | 417.43 km | 5960 m | 22h 21m| 9495 kjul |
 |259 mi| 18,667 ft| | |
 
+1. [But Why](#why)
+3. [The Plan](#plan)
+4. [The Gear](#gear)  
+1. [Reflections](#results)
+
+{.stickynav}
+
 <video autoplay loop src="/images/blog/vt-ride-1.mp4" class="fullwidth"></video>
 
 [Photo Gallery](https://photos.app.goo.gl/KCDqsEEAQieps4eLA)
 
 &nbsp;
 
-## Why Go On An Adventure
+## Why Go On An Adventure{#why}
 
 Everyone I told about my plans had an effusive reaction: "That's so cool!" That kind of enthusiasm validates my decision to go but I still wanted an intentional reason for putting my time & energy into this.
 ### I have a mild case of wanderlust
@@ -40,6 +46,7 @@ I also have a well-documented love of cycling. One of my favorite aspects of cyc
 > “It is by riding a bicycle that you learn the contours of a country best, since you have to sweat up the hills and coast down them.” – Ernest Hemingway
 
 Paradoxically for me, these two passions have never intersected. Bike touring has intrigued me for years but only as a fantasy that I haven't fit into my life. The brightest silver lining of being laid off is that it opened most of the space I needed to give it a shot. The layoff wasn't the reason, it was the excuse.
+
 ### Going on an adventure gives you a heightened sense of reality. 
 
 Most of what you perceive to be real on a routine day is a framework constructed by your brain based on past experiences. Processing and framing the flood of stimulation in everyday reality is energy-intensive. The human brain will do just about anything to avoid extra work. You may think you taste your morning coffee but what you are perceiving is the brain replaying what it has tasted in the past. "Oh coffee? I know what that is. I don't need to figure it out again." 
@@ -60,43 +67,7 @@ Riding this route *well* would require me to train my body. I couldn't just hop 
 
 ---
 
-## After The Ride:  Reflections and Ruminations
-
-Riding your bike alone for four days provides a lot of time for reflection. Some of the themes were cliché and some of them might be novel...
-### You should go on an adventure every year.
-
-This is a cliché for a reason but you really should go chase your dream adventure. If there’s something you’ve always dreamed of doing - going on a bike tour, visiting a country, starting a business - you can do it! You can overcome the obstacles that are stopping you. 
-
->The mountains in the future always look like molehills in the past.
-### The Human Body Is ... *Amazing*
-
-You can do more than you think you can. Your legs will send messages of pain with every pedal stroke. Your mind will start bargaining. "If I just make it to the next gas station, I can stop." Pay those messages no mind. **The Fear** is a safety mechanism that your brain can overcome.  True success is achieved by breaking through those limits.
-
->Endurance riding is about mind over matter. If you don't mind. It doesn't matter.
-
-I did my best to physically prepare for this ride but there are limits to what you can do before the moment of truth. Each morning my legs were a little stiffer and the bags under my eyes a little darker. Just 10 minutes into riding each morning my legs would feel on fire triggering... **The Fear**. "Maybe i can't do this." 
-
-**Yes, you can.**
-
-Your body will adapt to stress at astonishing speed if you make it. Know that you can conquer The Fear if you can recognize that this suffering is impermanent. After 20 minutes the pain will stop. After 60 minutes your strength will return. After 180 minutes you'll forget that you ever felt any discomfort. Just turn the pedals over one more time. Now do it again. And again.
-
-To fully test these limits I planned the single most difficult stretch of the trip on the last day. After 350km of riding and 4500m of climbing I arrived at the base of the [Lincoln Gap](https://pjammcycling.com/climb/723.Lincoln%2520Gap), which included the 2nd steepest paved kilometer in the United States. Oh, and it rained that morning.
-
-### It's about the smiles, not the miles...
-
-
-Vermont is a gorgeous outdoor paradise. Colonial French settlers named the area  *Verde Monte* because of the lush, verdant, mountains. The state attracts visitors all year round. Maple festivals in early spring,  mountain meadows & secluded swimming holes beat the summer heat, stunning fall foliage, and of course winter Skiing.
-
-It's busy, except... Summer weekdays.
-
-I found that most towns I stopped in were *very* quiet. Many local businesses shut down Monday - Thursday. Good food & drink is one of the great joys of travel and I planned my route through towns known to have good restaurants & cafes. In practice, I often found myself scrambling to find whatever was still open and had fresh food.
-### Cycling is a team sport
-
-I never could have done this without the support of my wife. She gave me the time and space to prepare, focus, and go on this adventure. In turn, I will support her in an adventure.
-
-----
-
-## Planning The Route
+## Planning The Route{#plan}
 
 Planning a good route is a design challenge. You need to consider your goals, constraints, and assets. Then map those against the variables of terrain, weather, and public services. It's emotional labor to find the route that produces the ride you want.
 
@@ -141,10 +112,9 @@ Strava had a great route planning tool for individual days and integration with 
 
 Ultimately I used Komoot for the trip because it had the best mix of route planning features and live tracking.
 
----
+----
 
-
-## The Bike Rig & Gear
+## The Bike Rig & Gear{#gear}
 
 The right tool for the right job. Some people really care a lot about this so here goes:
 #### The Bike
@@ -180,4 +150,40 @@ Just kidding. I had two bags:
 - Blackburn frame bag
 - [Ron's Bikes Fabio's Chest Small](https://ronsbikes.com/products/copy-of-fabios-chest-large-x50-tech?variant=39777753563224)
 
+
+---
+
+## After The Ride:  Reflections and Ruminations{#results}
+
+Riding your bike alone for four days provides a lot of time for reflection. Some of the themes were cliché and some of them might be novel...
+### You should go on an adventure every year.
+
+This is a cliché for a reason but you really should go chase your dream adventure. If there’s something you’ve always dreamed of doing - going on a bike tour, visiting a country, starting a business - you can do it! You can overcome the obstacles that are stopping you. 
+
+>The mountains in the future always look like molehills in the past.
+### The Human Body Is ... *Amazing*
+
+You can do more than you think you can. Your legs will send messages of pain with every pedal stroke. Your mind will start bargaining. "If I just make it to the next gas station, I can stop." Pay those messages no mind. **The Fear** is a safety mechanism that your brain can overcome.  True success is achieved by breaking through those limits.
+
+>Endurance riding is about mind over matter. If you don't mind. It doesn't matter.
+
+I did my best to physically prepare for this ride but there are limits to what you can do before the moment of truth. Each morning my legs were a little stiffer and the bags under my eyes a little darker. Just 10 minutes into riding each morning my legs would feel on fire triggering... **The Fear**. "Maybe i can't do this." 
+
+**Yes, you can.**
+
+Your body will adapt to stress at astonishing speed if you make it. Know that you can conquer The Fear if you can recognize that this suffering is impermanent. After 20 minutes the pain will stop. After 60 minutes your strength will return. After 180 minutes you'll forget that you ever felt any discomfort. Just turn the pedals over one more time. Now do it again. And again.
+
+To fully test these limits I planned the single most difficult stretch of the trip on the last day. After 350km of riding and 4500m of climbing I arrived at the base of the [Lincoln Gap](https://pjammcycling.com/climb/723.Lincoln%2520Gap), which included the 2nd steepest paved kilometer in the United States. Oh, and it rained that morning.
+
+### It's about the smiles, not the miles...
+
+
+Vermont is a gorgeous outdoor paradise. Colonial French settlers named the area  *Verde Monte* because of the lush, verdant, mountains. The state attracts visitors all year round. Maple festivals in early spring,  mountain meadows & secluded swimming holes beat the summer heat, stunning fall foliage, and of course winter Skiing.
+
+It's busy, except... Summer weekdays.
+
+I found that most towns I stopped in were *very* quiet. Many local businesses shut down Monday - Thursday. Good food & drink is one of the great joys of travel and I planned my route through towns known to have good restaurants & cafes. In practice, I often found myself scrambling to find whatever was still open and had fresh food.
+### Cycling is a team sport
+
+I never could have done this without the support of my wife. She gave me the time and space to prepare, focus, and go on this adventure. In turn, I will support her in an adventure.
 

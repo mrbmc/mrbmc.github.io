@@ -83,16 +83,17 @@ $navbarBrandColor:                $navbarLinkColor;
 
 // GRID
 // --------------------------------------------------
-$gridColumns:             12;
-$gridWidth:               40rem;
-$gridGutterWidth:         1rem;
-$gridColumnWidth:         math.div(($gridWidth - (($gridColumns - 1) * $gridGutterWidth)), $gridColumns);
-$gridMargin: 			  math.div(calc(100vw - $gridWidth),2);
-
-$spacerHorizontal:          $gridGutterWidth;
+$spacerHorizontal:          1rem;
 $spacerVertical:            2rem;
-$spacerHorizontalPhone:     ($gridGutterWidth * 2);
+
+$spacerHorizontalPhone:     2rem;
 $spacerVerticalPhone:       1rem;
+
+$gridColumns:             	6;
+$gridWidth:               	40rem;
+$gridGutterWidth:         	$spacerHorizontal;
+$gridColumnWidth:         	math.div(($gridWidth - (($gridColumns - 1) * $gridGutterWidth)), $gridColumns);
+$gridMargin: 			  	math.div(calc(100vw - $gridWidth),2);
 
 $breakpointWidescreen:      1201px;
 $breakpointWidescreen-1:    ($breakpointWidescreen - 1px);
@@ -108,9 +109,9 @@ $inputHeight:               1.25rem;
 $navbarHeight:              2rem;
 
 
-$shadowColor: 		hsla(hue($brandColor), 100%, 12%, 0.2);
-$shadowDepth: 		1rem;
-$shadowOffset: 		math.div($shadowDepth, 4);
+$shadowColor: 				hsla(hue($brandColor), 100%, 12%, 0.2);
+$shadowDepth: 				$spacerVertical;
+$shadowOffset: 				math.div($shadowDepth, 4);
 $shadow: 0 $shadowOffset $shadowDepth $shadowColor;
 
 
