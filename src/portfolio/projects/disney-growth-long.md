@@ -208,7 +208,7 @@ Disney had already been on a long and steady brand transformation to appeal to a
 
 The goal of Disney+ was to deepen our guests' relationship with the stories & characters they love, not to optimize short-term revenue. We accept as an article of faith that this approach maximizes revenue in the long term.
 
-We targeted several business metrics with the design: CVR, LTV, and AARPU. The commitment we made to shareholders for the first two years of operation was a singular KPI: 
+We targeted several business metrics with the design: CVR, LTV, and MRR. The commitment we made to shareholders for the first two years of operation was a singular KPI: 
 
 **net subscribers**. 
 
@@ -246,7 +246,7 @@ The homepage evolved from early 2018 until mid-2021 starting as an FPO stimulus 
 + ![Show more content to enforce the value prop](/images/portfolio/disney-growth/olp-v4.jpg)
 {.gallery}
 
-### Web and Mobile SIgnup {#signup}
+### Web and Mobile Signup {#signup}
 
 #### Situation
 Prior to launching Disney+, Disney had a large cohort of user accounts through websites, storefronts, and fan clubs. We estimated it could be 20% of our users in the first *year*. 
@@ -356,7 +356,7 @@ In order to get this solution to market more efficiently the first shipped versi
 
 We ran usability studies to determine whether QR codes or "license plate" would be usable to our guests. This was before QR codes were normalized in the pandemic. **96% of participants preferred the QR code** to the existing solution of entering info manually. 45% of those participants had *never used a QR code before* but still completed preferred that UX.
 
-In-market we saw a **33% decrease**{.negative} in conversion rate, which was alarming. Fortunately that was offset by a **200% increase**{.positive} in our Bundle take-rate. The increase in bundle sales boosted LTV & AARPU making this new design a solid win for users and the business.
+In-market we saw a **33% decrease**{.negative} in conversion rate, which was alarming. Fortunately that was offset by a **200% increase**{.positive} in our Bundle take-rate. The increase in bundle sales boosted LTV & MRR making this new design a solid win for users and the business.
 
 ### Expanded Distribtion {#b2b2c}
 
@@ -442,7 +442,7 @@ This project was a profound learning experience for the company. We learned a lo
 
 #### Situation
 
-In 2021 as Disney+ subscriber numbers climbed and cable carriage fees dropped, we faced some new questions about our goals. Our Finance teams confirmed that our biggest lever for increasing AARPU (or LTV) would be increasing sales of the Disney Bundle with Hulu and ESPN+. The Disney Bundle provided significantly higher user satisfaction and LTV:
+In 2021 as Disney+ subscriber numbers climbed and cable carriage fees dropped, we faced some new questions about our goals. Our Finance teams confirmed that our biggest lever for increasing MRR (or LTV) would be increasing sales of the Disney Bundle with Hulu and ESPN+. The Disney Bundle provided significantly higher user satisfaction and LTV:
 
 | Product | LTV |
 |---- | ----|
@@ -471,7 +471,7 @@ A/B flows comparison{.caption}
 
 The experiment produced good news and bad news.  
 **+0.8% Total CVR**  
-**-X.X% AARPU**  
+**-X.X% MRR**  
 
 | Standalone CVR | Standalone Take % | Bundle CVR | Bundle Take % |
 | ---- | ---- | ---- | ---- |
@@ -479,7 +479,7 @@ The experiment produced good news and bad news.
 
 Overall conversion rate increased; supported by much higher conversions on the Disney+ standalone offer. Unfortunately, this came at the expense of Bundle sales that went down, bringing overall revenue down with it.
 
-This test result forced a reckoning within Disney+ Growth teams to decide if we were ready to fully commit to focusing on Revenue Growth over Subscriber Growth. Disney made new commitments to investors for the profitability of Disney+. Our focus formally moved from net subscribers to AARPU. 
+This test result forced a reckoning within Disney+ Growth teams to decide if we were ready to fully commit to focusing on Revenue Growth over Subscriber Growth. Disney made new commitments to investors for the profitability of Disney+. Our focus formally moved from net subscribers to MRR. 
 
 ### V2 Workshop {#workshop}
 
@@ -517,7 +517,7 @@ Disney+ became the fastest-growing streaming service *ever*.
 
 <div class="grid"><dl class="kpi"><dt>Net Subscribers</dt>
 <dd>+103.6 million</dd>
-<dt>Aug 2019 - Dec 2020</dt></dl><dl class="kpi"><dt>AARPU</dt>
+<dt>Aug 2019 - Dec 2020</dt></dl><dl class="kpi"><dt>MRR</dt>
 <dd>+$48.36</dd>
 <dt>Aug 2019 - Dec 2020</dt></dl></div>
 
