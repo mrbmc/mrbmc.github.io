@@ -4,8 +4,8 @@ BASE=$(dirname "$0");
 todate=$(date +%d)
 tomonth=$(date +%m)
 
-local flag_skipdownload flag_verbose flag_help 
-local arg_term=(all)
+local flag_skipdownload flag_verbose flag_help flag_raw
+local arg_duration=(all)
 local usage=(
 "metrics.sh [-h|--help]"
 "metrics-sh [-v|--verbose] [-t|--term=<duration>] [<message...>]"
@@ -22,8 +22,9 @@ zmodload zsh/zutil
 zparseopts -D -F -K -- \
 {h,-help}=flag_help \
 {s,-skipdownload}=flag_skipdownload \
+{r,-raw}=flag_raw \
 {v,-verbose}=flag_verbose \
-{t,-term}:=arg_term ||
+{t,-term}:=arg_duration ||
 return 1
 
 [[ -z "$flag_help" ]] || { print -l $usage && return }
@@ -33,7 +34,7 @@ fi
 
 # echo "--verbose: $flag_verbose"
 # echo "--skipdownload: $flag_skipdownload"
-# echo "--term: $arg_term[-1]"
+# echo "--term: $arg_duration[-1]"
 # echo "positional: $@"
 
 
@@ -61,10 +62,18 @@ function parse () {
 	echo "PREPARING DATA" $1;
 	echo "* * * * * * * * * * * * * * * * * *";
 
+
+	if (( $#flag_raw )); then
+		echo "Concatenating 2024 raw"
+		zcat -f $BASE/logs/log_raw_2024-* > $BASE/logs/log_raw;
+		return true;
+	fi
+
 	for i in {$startm..$endm}
 	do
 		echo "Cleaning 2024-$i";
-		grep  -E -v -i -f $BASE/blacklist.txt $BASE'/logs/log_raw_2024-'$i > $BASE'/logs/log_clean_2024-'$i
+		grep  -E -v -i -f $BASE/blacklist-agents.txt $BASE'/logs/log_raw_2024-'$i > $BASE'/logs/log_clean_2024-'$i
+		grep  -E -v -i -f $BASE/blacklist-urls.txt $BASE'/logs/log_raw_2024-'$i > $BASE'/logs/log_clean_2024-'$i
 	done
 
 	echo "Concatenating 2024"
@@ -81,17 +90,18 @@ function analyze () {
 
 	for i in {$startm..$endm}
 	do
-		# clean logs
-
 		echo "Analyzing 2024-$i";
-		goaccess_cmd="goaccess $BASE/logs/log_clean_2024-$i -o $BASE/www/2024$i.html ";
+
+		if (( $#flag_raw )); then
+			# raw logs
+			goaccess_cmd="goaccess $BASE/logs/log_raw_2024-$i -o $BASE/www/2024$i-raw.html ";
+		else
+			# clean logs
+			goaccess_cmd="goaccess $BASE/logs/log_clean_2024-$i -o $BASE/www/2024$i.html ";
+		fi
+
 		goaccess_cmd+="$goaccess_opt";
 		eval ${goaccess_cmd}
-
-		# raw logs
-		goaccess_cmd="goaccess $BASE/logs/log_raw_2024-$i -o $BASE/www/2024$i-raw.html ";
-		goaccess_cmd+="$goaccess_opt";
-		# eval ${goaccess_cmd}
 	done
 
 
@@ -100,11 +110,15 @@ function analyze () {
 	for n in $periods_opt
 	do
 		echo "Analyzing -$n";
-		sed_cmd="sed -n '/2024\-'$(date -v-$n +%m)'\-'$(date -v-$n +%d)'/,/2024\-'$tomonth'\-'$todate'/ p' $BASE/logs/log_clean | goaccess -a -o $BASE/../metrics/www/l$n.html $goaccess_opt";
+		if (( $#flag_raw )); then
+			sed_cmd="sed -n '/2024\-'$(date -v-$n +%m)'\-'$(date -v-$n +%d)'/,/2024\-'$tomonth'\-'$todate'/ p' $BASE/logs/log_raw | goaccess -a -o $BASE/../metrics/www/l$n-raw.html $goaccess_opt";
+		else
+			sed_cmd="sed -n '/2024\-'$(date -v-$n +%m)'\-'$(date -v-$n +%d)'/,/2024\-'$tomonth'\-'$todate'/ p' $BASE/logs/log_clean | goaccess -a -o $BASE/../metrics/www/l$n.html $goaccess_opt";
+		fi
 		eval ${sed_cmd}
 	done
 
-	if [[ "$arg_term[-1]" = "all" ]]; then
+	if [[ "$arg_duration[-1]" = "all" ]]; then
 		echo "Analyzing 2024";
 		sed_cmd="zcat -f $BASE/logs/log_clean_2024-* | goaccess  -o $BASE'/../metrics/www/2024.html' $goaccess_opt";
 		eval ${sed_cmd}
@@ -121,7 +135,7 @@ function analyze () {
 # 	exit;
 # fi
 
-if [[ "$arg_term[-1]" = "recent" ]]; then
+if [[ "$arg_duration[-1]" = "recent" ]]; then
 	echo "RECENT ONLY";
 	startm=$(date -v-30d +%m);
 	endm=$(date +%m);
