@@ -83,22 +83,22 @@ We then expanded this model to more teams from Data and Marketing (and eventuall
 ![Pods](/images/portfolio/disney-growth/pod-structure.png)  
 Example Pod{.caption}
 
-Each pod was able to create their own ways of working, but generally, they found a 2 week cadence of ceremonies to stay in sync, prioritize work, flatten issues, and break out working groups.
+Each pod had the autonomy to define their ways of working, but generally, they found a 2-week cadence of ceremonies to stay in sync, prioritize work, flatten issues, and break out working groups.
 
 ![Pods](/images/portfolio/disney-growth/pod-cadence.svg)  {.fullwidth}
 
 #### Outcomes
 
-Over the 18 months from inception until Launch, I grew the Growth team to 1 Design Manager, 1 Principal Designer, 5 product designers, 2 researchers, and 1 program manager. We also had specialists embedded in the growth team from our Motion Studio, Prototyping, Design Systems, and International UX teams.
+Over the 18 months from inception until Launch, I grew the Growth team to 1 Design Manager, 1 Principal Designer, 5 product designers, 2 researchers, and 1 program manager. We also had specialists from our Motion Studio, Prototyping, Design Systems, and International UX teams embedded in the growth team.
 
-I was able to mentor two new designer leaders into positions leading their own teams, with autonomy to deliver against clear KPIs.
+I mentored two new designer leaders into positions leading their teams, with the autonomy to deliver against clear KPIs.
 
 ![](/images/portfolio/disney-growth/growth-team-end.png){.center}
 Growth Team in December 2020 {.caption}
 
 ### Experience Tenets (aka Principles or Axioms){#ux-tenets}
 
-The use of **Experience Principles** improves the quality of design decisions on complex projects, so we established them for Disney+ as well. Writing these with our cross-functional team made these real living ideas that you would hear people say while collaborating.
+We established  **Experience Principles** for Disney+ because we've seen them improve the quality of design decisions on complex projects. Writing these with our cross-functional team made these real living ideas that people would say while collaborating.
 
 <details>
 	<summary>"First stream, first."</summary>
@@ -112,7 +112,6 @@ We believed escorting guests into a curated browsing experience to get them to a
 
 While this may all sound obvious, it wasn't how many of our competitors were operating in 2018. It was also not how Disney had operated and required significant stakeholder education, reinforced by our 3rd tenet.
 </details>
-
 <details>
 	<summary>"Disney... Aged up"</summary>
 	<div>
@@ -175,11 +174,11 @@ The homepage evolved from early 2018 until mid-2021 starting as an FPO stimulus 
 
 #### Challenge
 
-TV is the biggest platform for engagement, with 70% of views on living room devices. The challenge for Growth Design is that there are *dozens of platforms* to design for: Roku, Fire TV, Samsung TVs, tvOS, Playstation, XBox; not to mention all the Smart TVs and Cable Boxes. Each of these devices have different style remotes, payment terms, and graphics rendering capabilities.
+TV is the biggest platform for engagement, with 70% of views on living room devices. The challenge for Growth Design is that there are *dozens of platforms* to design for: Roku, Fire TV, Samsung TVs, tvOS, Playstation, XBox; not to mention all the Smart TVs and Cable Boxes. Each device has different remote controls, payment terms, and graphics rendering capabilities.
 
 #### Reference Design
 
-Our solution is to create a "reference" design and then make adjustments for each major platforms.
+Our solution is to create a "reference" design and then make adjustments for each major platform.
 
 + ![Signup TV Reference](/images/portfolio/disney-growth/tv-reference-signup-1.png)
 + ![Signup TV Reference](/images/portfolio/disney-growth/tv-reference-signup-2.png)
@@ -213,12 +212,12 @@ This purchase flow was the most complex of all TV devices due to Apple's relucta
 
 #### Optimizing Signup On TV {#qr-codes}
 
-Soon after launch we could see that login and signups were a usability issue for people with signup completion rates 20%! of those on Mobile and Web. **HOW MIGHT WE make signup on TV easier?**
+Soon after launch, we could see that login and signups were a usability issue for people with signup completion rates *20%* of those on Mobile and Web. **HOW MIGHT WE make signup on TV easier?**
 
 We learned two things from qualitative research: 
 1. TV remotes are hard to use
-2. We don't do enough to build on TV like we can on Web by showing more content and features.
-3. There are more product offerings on web
+2. We don't do enough to build on TV like we can on the Web by showing more content and features.
+3. There are more product offerings on the web purchase flow
 
 ##### Our hypothesis
 
@@ -235,24 +234,24 @@ Direct people off the TV to the mobile web for login and signup by using QR Code
 
 ##### Results & Outcomes
 
-We ran usability studies to determine whether QR codes or "license plate" would be usable to our guests. This was before QR codes were normalized in the pandemic. **96% of participants preferred the QR code** to the existing solution of entering info manually. 45% of those participants had *never used a QR code before* but still completed preferred that UX.
+We ran usability studies to determine whether QR codes or "license plate" would be usable to our guests. This was before QR codes were normalized in the pandemic. **96% of participants preferred the QR code** to the existing solution of entering info manually. 45% of those participants had *never used a QR code before* but still preferred that UX.
 
 ![UX research](/images/portfolio/disney-growth/tv-off-device-research-4x1.jpg){.fullwidth}
 
-In-market we saw a **33% decrease**{.negative} in conversion rate, which was alarming. Fortunately that was offset by a **200% increase**{.positive} in our Bundle take-rate. The increase in bundle sales boosted LTV & MRR making this new design a solid win for users and the business.
+In-market we saw a **33% decrease**{.negative} in conversion rate, which was alarming. Fortunately, that was offset by a **200% increase**{.positive} in our Bundle take-rate. The rise in bundle sales boosted LTV & MRR making this new design a solid win for users and the business.
 
 
 ### Global expansion{#global-expansion}
 
 #### Challenge
 
-A common growth tactivc is horizontal expansion into new geographic markets, and as a global company this was an obvious goal for Disney.
+A common growth tactic is horizontal expansion into new geographic markets, and as a global company, this was an obvious goal for Disney.
 
-Each region has unique standards for signing a subscription contract, payment methods, and content ratings. The Growth Design team partnered with our international UX team (IUXD) to learn how these different regions would impact the signup experience. Here were some notable new requirements:
+Each region has unique standards for signing a subscription contract, payment methods, and content ratings. The Growth Design team partnered with our international UX team (IUXD) to learn how these regions would impact the signup experience. Here were some notable new requirements:
 
-+ In Europe, the GDPR privacy regulations passed by the EU, and local restrictions in Germany, France, and the UK required users to be presented with the EULA for signature before subscribing to a service.
-+ In Latin America, notably Argentina & Chile, there are unique tax laws that require more billing information to be collected.
-+ In both Europe and Latin America, credit cards are far less common than bank debit cards, or digital wallets like PayPal (namely Pagomercado in LATAM).
++ The GDPR privacy regulations passed by the EU, and local restrictions in Germany, France, and the UK required users to be presented with the *EULA* for signature before subscribing to a service.
++ Tax laws in some Latin American countries, notably Argentina & Chile, require additional billing information collected.
++ Credit cards are far less common than bank debit cards in Europe and Latin America, or digital wallets like PayPal (e.g. Pagomercado in LATAM).
 
 #### Solution
 
@@ -280,14 +279,14 @@ Each new region that we rolled out provided a basis change in growth for Disney+
 
 In 2021 as Disney+ subscriber numbers climbed and cable carriage fees dropped, we faced some new questions about our goals. Our Finance teams confirmed that our biggest lever for increasing MRR (or LTV) would be increasing sales of the Disney Bundle with Hulu and ESPN+. The Disney Bundle provided significantly higher user satisfaction and LTV:
 
-| Product | LTV |
-|---- | ----|
-|Disney+ Monthly Standalone|1x|
-|Disney+ Annual Standalone|2x|
-|Disney Monthly Bundle|4x|
+| Product                    | LTV |
+| -------------------------- | --- |
+| Disney+ Monthly Standalone | 1x  |
+| Disney+ Annual Standalone  | 2x  |
+| Disney Monthly Bundle      | 4x  |
 #### Challenge
 
-*How might we redesign the signup flow to encourage customers to sign up for the Bundle?* 
+*How might we encourage customers to sign up for the Bundle if we redesign the signup flow?* 
 
 One hypothesis was to showcase the different plan options better to guests. A "plan picker" pattern was familiar to people signing up for streaming services, and it would provide more space to explain the benefits of the Bundle. This would introduce a new step in the purchase flow for users but we believed the tradeoff was worthwhile.
 
@@ -315,14 +314,14 @@ The experiment produced good news and bad news.
 
 Overall conversion rate increased; supported by much higher conversions on the Disney+ standalone offer. Unfortunately, this came at the expense of Bundle sales that went down, bringing overall revenue down with it.
 
-This test result forced a reckoning within Disney+ Growth teams to decide if we were ready to fully commit to focusing on Revenue Growth over Subscriber Growth. Disney made new commitments to investors for the profitability of Disney+. Our focus formally moved from net subscribers to MRR. 
+This test result forced a reckoning within Disney+ Growth teams to decide if we were ready to fully commit to focusing on Revenue Growth over Subscriber Growth. Disney made new profitability commitments to investors. Our focus formally moved from **net subscribers** to **MRR**. 
 
 ### V2 Workshop {#workshop}
 
 #### Situation 
 As I wrote earlier, launching a global streaming service is a climb up a mountain that requires overcoming obstacles.  The working group had been heads down working so hard that we lost sight of the larger vision. How might we create an experience that was authentically Disney? 
 
-For the past year we had been saying the same words but they meant different things to each of us. Everyone had an idea of what type of users we were dealing with but our conversation often became confusing and convoluted due to a lack of a common language.
+Over the previous year, we had all been using the same words, but they meant different things to each of us. Everyone had an idea of what type of users we were dealing with but our conversation often became confusing and convoluted due to a lack of a common language.
 
 We had three things we wanted for the team.
 
@@ -367,9 +366,7 @@ I don't believe that the Growth Design was responsible for all that. Disney+ was
 
 In mid-2021 I took on a new opportunity within Disney Streaming to lead design for [STAR+](https://www.starplus.com) our new general entertainment service in Latin America. I handed off the Growth Design team, roadmaps, and partnerships to my colleague.
 
-I'd like to think the foundation we created enabled the continued growth over the next 18 months and beyond. 
-
-
+I like to think we enabled the continued growth over the next 18 months and beyond thanks to the foundation we built. 
 
 <style>
 @media (prefers-color-scheme: dark) {
