@@ -5,7 +5,7 @@ thumbnail: /images/portfolio/disney-growth/disney-growth.png
 eleventyExcludeFromCollections: false
 category:
   - work
-summary: The story of building Growth Design - the team, process, and product - to launch Disney+ from 0 to 105M subscribers in two years.
+summary: Building the team, process, and product to grow Disney+ from 0 to 105M subscribers in two years.
 timeline: 2018-2020
 parallaxHeading:
   - "-1"

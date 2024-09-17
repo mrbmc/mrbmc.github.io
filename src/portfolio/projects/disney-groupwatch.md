@@ -5,7 +5,7 @@ thumbnail: /images/portfolio/disney-groupwatch/disney-groupwatch-devices.png
 eleventyExcludeFromCollections: false
 category:
   - work
-summary: Disney's social viewing feature connects people through the stories they love even when they're apart.
+summary: Social viewing connects people through the stories they love even when they're apart.
 timeline: 2019-2020
 ---
 ![GroupWatch Devices](/images/portfolio/disney-groupwatch/disney-groupwatch-devices.png){.fullwidth}
