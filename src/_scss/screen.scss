@@ -53,7 +53,7 @@ body {
 
 :root {
     --black80:     #{$black80};
-    --black:        #{$gray-050};
+    --black:        #{$black};
     --gray-dark:    #{$gray-dark};
     --gray-mid:     #{$gray-mid};
     --gray-light:   #{$gray-light};
@@ -68,10 +68,10 @@ body {
     :root {
         --black80:      #{$white80};
         --black:        #{$white};
-        --gray-dark:    #{$gray-800};
-        --gray-mid:     #{$gray-500};
-        --gray-light:   #{$gray-200};
-        --white:        #{$gray-050};
+        --gray-dark:    #{$gray-light};
+        --gray-mid:     #{$gray-mid};
+        --gray-light:   #{$gray-dark};
+        --white:        #{$black};
         --white80:      #{$black80};
         --brandColor:   #{$brandAccent};
     };

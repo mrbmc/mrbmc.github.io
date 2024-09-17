@@ -27,19 +27,19 @@ $brandSecondary80:      #{$brandSecondary + "BB"};
 
 $white80:               hslToHex(hue($brandColor),00%,100%)+AA;
 $white:                 hslToHex(hue($brandColor),00%,100%);
-$gray-950:              hslToHex(hue($brandColor),02%,96%);
-$gray-900:              hslToHex(hue($brandColor),05%,91%);
-$gray-800:              hslToHex(hue($brandColor),08%,82%);
-$gray-700:              hslToHex(hue($brandColor),10%,71%);
-$gray-600:              hslToHex(hue($brandColor),13%,62%);
-$gray-500:              hslToHex(hue($brandColor),13%,50%);
-$gray-400:              hslToHex(hue($brandColor),17%,42%);
-$gray-300:              hslToHex(hue($brandColor),21%,31%);
-$gray-200:              hslToHex(hue($brandColor),28%,20%);
-$gray-100:              hslToHex(hue($brandColor),34%,12%);
-$gray-050:              hslToHex(hue($brandColor),55%,04%);
-$black:                 hslToHex(hue($brandColor),00%,00%);
-$black80:               hslToHex(hue($brandColor),55%,04%)+CC;
+$gray-950:              hslToHex(hue($brandColor),01%,96%);
+$gray-900:              hslToHex(hue($brandColor),01%,91%);
+$gray-800:              hslToHex(hue($brandColor),02%,82%);
+$gray-700:              hslToHex(hue($brandColor),02%,71%);
+$gray-600:              hslToHex(hue($brandColor),03%,62%);
+$gray-500:              hslToHex(hue($brandColor),03%,50%);
+$gray-400:              hslToHex(hue($brandColor),05%,42%);
+$gray-300:              hslToHex(hue($brandColor),05%,31%);
+$gray-200:              hslToHex(hue($brandColor),05%,20%);
+$gray-100:              hslToHex(hue($brandColor),13%,12%);
+$gray-050:              hslToHex(hue($brandColor),21%,04%);
+$black:                 hslToHex(hue($brandColor),34%,02%);
+$black80:               hslToHex(hue($brandColor),34%,04%)+CC;
 
 // SEMANTIC MAPPING
 $gray-light:$gray-800;
@@ -109,9 +109,10 @@ $inputHeight:               1.25rem;
 $navbarHeight:              2rem;
 
 
-$shadowColor: 		hsla(hue($brandColor), 100%, 12%, 0.08);
+$shadowColor: 		hsla(hue($brandColor), 100%, 12%, 0.2);
 $shadowDepth: 		1rem;
 $shadowOffset: 		math.div($shadowDepth, 4);
+$shadow: 0 $shadowOffset $shadowDepth $shadowColor;
 
 
 // ANIMATION
