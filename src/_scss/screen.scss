@@ -425,6 +425,21 @@ ul.nav,ol.nav {
     @include kpi;
 }
 
+details {
+    @include card();
+    summary {
+        @include typeset($headingsFontFamily, $headingsFontWeight, 1.0rem, 1.2, -0.0125em);
+        cursor: pointer;
+    }
+    &[open] {
+        summary {
+            margin-bottom: $spacerVertical;
+        }
+        & > summary:before {
+            transform: rotate(90deg);
+        }
+    }
+}
 
 
 

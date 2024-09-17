@@ -54,7 +54,7 @@ body.about {
 
     }
 
-    #mantras,ul.hero {
+    #mantras,.hero {
         @include inverse();
 
         @include fullWidth(100vw);
@@ -62,55 +62,16 @@ body.about {
         padding: $spacerVertical $gridMargin;
 
         flex-direction: column;
-        // display: grid;
-        // grid-template-columns: 1fr;
         row-gap: $spacerVertical;
-        // column-gap: $spacerHorizontal;
-        // box-sizing: border-box;
-
 
         li {
-            @include card();
             list-style: none;
-            margin: 0 auto;
             width: 100%;
             max-width: $gridWidth;
+            margin: 0 auto;
 
             details {
-                padding: $spacerHorizontal;
-                summary {
-                    list-style-position: outside;
-                    @include typeset($headingsFontFamily, $headingsFontWeight, 1.62rem, 1.2, -0.0125em);
-
-                    display: block;
-                    padding: 1rem;
-                    margin: ($spacerHorizontal * -1) ($spacerHorizontal * -1) ($spacerHorizontal * -1) ($spacerHorizontal * -2);
-                    padding-left: 2.2rem;
-                    position: relative;
-                    cursor: pointer;
-                    user-select: none;
-
-                    &:before {
-                      content: '';
-                      border-width: .4rem;
-                      border-style: solid;
-                      border-color: transparent transparent transparent $textColor;
-                      position: absolute;
-                      top: 1.62rem;
-                      left: 1rem;
-                      transform: rotate(0);
-                      transform-origin: .2rem 50%;
-                      transition: $animateSpeed transform $animateEasing;
-                    }
-                }
-                &[open] {
-                    summary {
-                        margin-bottom: 0.5em;
-                    }
-                    & > summary:before {
-                        transform: rotate(90deg);
-                    }
-                }
+                margin: 0;
             }
             strong,em {
                 display: block;

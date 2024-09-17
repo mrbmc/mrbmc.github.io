@@ -153,12 +153,12 @@ body.project {
     }
 }
 
-ul.grid {
+.grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(1em,2fr));
     grid-gap: 1em;
-    li {
-        @include card();
+    li,.card,details {
+        // @include card();
         list-style: none;
         margin: 0;
     }
