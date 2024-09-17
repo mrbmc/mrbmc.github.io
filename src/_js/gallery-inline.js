@@ -29,6 +29,22 @@ function galleryLoad (e) {
             newImg.src = src;
             newImg.setAttribute('class','image-detail');
         wrapper.prepend(newImg);
+
+
+        //create pagination
+        var next_link = document.createElement('a');
+            next_link.setAttribute('class','next');
+            next_link.setAttribute('href','#next');
+            next_link.textContent = "Next";
+        var prev_link = document.createElement('a');
+            prev_link.setAttribute('class','prev');
+            prev_link.setAttribute('href','#prev');
+            prev_link.textContent = "Prev";
+        wrapper.prepend(next_link);
+        wrapper.prepend(prev_link);
+
+        next_link.addEventListener('click',clickNextOrPrevLink);
+        prev_link.addEventListener('click',clickNextOrPrevLink);
     });
 
     var details = document.getElementsByClassName('image-detail');
@@ -44,9 +60,31 @@ function galleryLoad (e) {
 
 };
 
+function clickNextOrPrevLink (e) {
+    console.log('clickNextOrPrevLink',e);
+
+    e.preventDefault();
+
+    //get the gallery
+    var gallery = e.srcElement.parentElement;
+    //get the first image
+    var firstImage = gallery.getElementsByTagName('img')[0];
+    var firstImageURL = firstImage.getAttribute('src');
+    // console.log(url);
+    //set the url to that image
+    window.location.hash = firstImageURL;
+
+    // then call NextImage/PrevImage
+    if(e.srcElement.className=="next") 
+        nextImage(e);
+    else if(e.srcElement.className=="prev") 
+        prevImage();
+}
+
 function updateDetailImage (e) {
 
     var hash = window.location.hash;
+
     if(hash.match(/gif|png|jpg|jpeg|webp|mp4/g)==null) {
         e.preventDefault();
         return false;
