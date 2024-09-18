@@ -81,35 +81,26 @@ body.home {
         }
 
         $iconsize: 13rem;
-        h1, p.bio {
-            box-sizing: border-box;
-            padding-right: calc($iconsize + $spacerHorizontal);
-        }
-        .crane {
-            position: absolute;
-            max-width: $gridWidth;
-            left: calc((100vw - $gridWidth)/2);
-            // margin-top: ($iconsize * -0.5);
-            content: "";
-            text-align: right;
-            filter: invert(34%) sepia(77%) saturate(1900%) hue-rotate(8deg) brightness(98%) contrast(104%);
-            img{
-                width: auto;
-                height: 100%;
-                display: inline-block;
+        @media (orientation: landscape) {
+            h1,h2,p.bio {
+                box-sizing: border-box;
+                padding-right: calc($iconsize + $spacerHorizontal);
             }
+        }
+        *:has(img.crane) {
+            position: absolute;
+            right: calc((100vw - $gridWidth)/2);
+            text-align: center;
+            filter: invert(34%) sepia(77%) saturate(1900%) hue-rotate(8deg) brightness(98%) contrast(104%);
             @media (orientation: landscape) {
-                // float: right;
-                // width: $iconsize;
+                width: $iconsize;
                 height: $iconsize;
-                background-size: $iconsize;
-                background-position: right center;
             }
             @media (orientation: portrait) {
                 position: static;
+
                 $iconsize: 5rem;
-                // width: 100%;
-                text-align: center;
+                width: $iconsize;
                 height: $iconsize;
             }
         }
