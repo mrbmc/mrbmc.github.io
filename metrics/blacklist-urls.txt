@@ -22,6 +22,7 @@ cart.json
 config.json
 dbweb
 drupal
+robots.txt
 sellers
 shopdb
 spider

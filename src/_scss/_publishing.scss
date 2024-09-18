@@ -128,7 +128,7 @@ p.gallery,div.gallery-wrap {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        justify-content: center;
+        justify-content: space-evenly;
         margin: 0 0 ($spacerVertical * 0.25);
         padding: 0;
 

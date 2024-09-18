@@ -72,8 +72,10 @@ function parse () {
 	for i in {$startm..$endm}
 	do
 		echo "Cleaning 2024-$i";
-		grep  -E -v -i -f $BASE/blacklist-agents.txt $BASE'/logs/log_raw_2024-'$i > $BASE'/logs/log_clean_2024-'$i
-		grep  -E -v -i -f $BASE/blacklist-urls.txt $BASE'/logs/log_raw_2024-'$i > $BASE'/logs/log_clean_2024-'$i
+		cat  $BASE'/logs/log_raw_2024-'$i |\
+		grep -E -v -i -f $BASE/blacklist-agents.txt |\
+		grep -E -v -i -f $BASE/blacklist-urls.txt\
+		> $BASE'/logs/log_clean_2024-'$i
 	done
 
 	echo "Concatenating 2024"

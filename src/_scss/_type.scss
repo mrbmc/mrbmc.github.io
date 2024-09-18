@@ -44,6 +44,9 @@ html {
     // font-smooth: never;
     // font-size: $baseFontSize;
     font-size: clamp(18px, 1.8vw, 32px);
+    @media (orientation: portrait) {
+        font-size: clamp(18px, 2.4vh, 32px);
+    }
 }
 
 body {
@@ -66,15 +69,12 @@ h1,h2,h3,h4,h5 {
 $typeScale: 1.19;//each size is this much larger than the predecessor
 h1 {
     @include typeset($displayFontFamily, $displayFontWeight, (1rem * pow($typeScale,5)), 1.2, -0.05em);
-    // text-transform: uppercase;
 }
 h2 {
     @include typeset($headingsFontFamily, $headingsFontWeight, (1rem * pow($typeScale,3)), 1.2, -0.0375em);
-    // text-transform: uppercase;
 }
 h3 {
     @include typeset($baseFontFamily, $boldFontWeight, (1rem * pow($typeScale,2)), 1.2, -0.0250em);
-    // text-transform: uppercase;
 }
 h4 {
     @include typeset($headingsFontFamily, $headingsFontWeight, (1rem * pow($typeScale,0)), 1.2, 0.25em);

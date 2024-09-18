@@ -32,9 +32,6 @@ body.home {
             }
         }
     }
-    main,#main {
-        padding-top: 0;
-    }
     #masthead {
         background: $bodyBackground;
         color: $textColor;
@@ -43,7 +40,6 @@ body.home {
         }
         @media (orientation: portrait) {
             height: auto;
-            min-height: (68vh);
         }
 
         figure {
@@ -98,6 +94,7 @@ body.home {
             }
             @media (orientation: portrait) {
                 position: static;
+                margin: $spacerVerticalPhone auto;
 
                 $iconsize: 5rem;
                 width: $iconsize;
@@ -153,7 +150,6 @@ body.home {
             
         }
         @media (orientation: portrait) {
-            padding: 0 $spacerHorizontalPhone;
             .project {
                 flex: 1 0 100%;
                 img {

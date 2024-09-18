@@ -237,9 +237,7 @@ body.resume #header #menu a[href="/about/"] {
             display: none;
             background: $bodyBackground;
             position: absolute;
-                padding: 0;
             padding: .19rem 0rem;
-            // border-radius: .19rem;
             box-shadow: 0 $shadowOffset $shadowDepth $shadowColor;
 
             li {

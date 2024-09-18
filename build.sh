@@ -4,9 +4,6 @@ OUT="$(dirname "$0")/www";
 
 
 function build_js () {
-	echo "---------------------------------------------";
-	echo "- COMPILING JAVASCRIPT";
-
 	# echo " Gradient JS";
 	# mkdir -m755 -p $OUT/js;
 	# uglifyjs -m \
@@ -95,16 +92,12 @@ function build_thumbs () {
 }
 
 function build_static () {
-	echo "---------------------------------------------";
-	echo "- DEPLOYING STATIC ASSETS";
 
 	echo "Deploy fonts";
 	rsync -au --delete-after $SRC/_fonts/ $OUT/css/fonts;
 
 	build_thumbs;
 
-	# images are now managed live by 11ty as of 2023-10-24
-	# but we could still run this as a belt & suspenders approach, and to delete old files.
 	echo "Deploy images";
 	rsync -au --delete-after $SRC/_images/ $OUT/images;
 
@@ -169,16 +162,23 @@ if [[ "$1" == "build" ]]; then
 	mkdir -m755 -p $OUT;
 
 	echo "---------------------------------------------";
-	echo "- COMPILING SASS";
-	/opt/homebrew/bin/sass $SRC/_scss/screen.scss $OUT/css/screen.css --style compressed;
+	echo "- COMPILING JAVASCRIPT";
 
 	build_js;
 
 	echo "---------------------------------------------";
-	echo "- BUILDING HTML";
+	echo "- BUILDING HTML & CSS";
+
+	echo "Building CSS..........";
+	/opt/homebrew/bin/sass $SRC/_scss/screen.scss $OUT/css/screen.css --style compressed --verbose;
+
+	echo "Building HTML..........";
 	npx @11ty/eleventy --quiet;
 
-	build_static;
+	# images, fonts, and thumbs are now managed live by 11ty as of 2023-10-24
+	# echo "---------------------------------------------";
+	# echo "- DEPLOYING ASSETS";
+	# build_static;
 
 	echo "---------------------------------------------";
 	echo "GARBAGE COLLECTION";

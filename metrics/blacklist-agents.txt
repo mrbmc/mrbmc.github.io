@@ -1,3 +1,4 @@
+114.119.1
 Not-A.Brand
 AhrefsBot
 amazonbot
@@ -9,10 +10,11 @@ dbweb
 drupal
 go-http-client
 Googlebot
+HeadlessChrome
+HUAWEILIO
 ImagesiftBot
 mj12bot
 python-request
-sellers
 spider
 traffic-advice
 UCBrowser
