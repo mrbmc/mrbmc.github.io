@@ -21,7 +21,7 @@ My family calls me Brian but my friends call me BMC. I've been making products t
 {.nav}
 {% endcomment %}
 
-<a href="#selected-work"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 53 20" xml:space="preserve"><g><polygon points="26.5,17.688 9.114,3.779 10.303,2.312 26.5,15.269 42.697,2.313 43.886,3.779" fill="currentColor"></polygon></g></svg></a>{.scrollhint}
+<a href="#content" class="scrollhint"><svg viewBox="0 0 53 20"><g><polygon points="26.5,17.688 9.114,3.779 10.303,2.312 26.5,15.269 42.697,2.313 43.886,3.779" fill="currentColor"></polygon></g></svg></a>
 
 </section>
 

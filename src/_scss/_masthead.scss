@@ -3,7 +3,7 @@
     @include fullWidth(100vw);
 
     margin-bottom: $spacerVertical;
-    padding: 0 $spacerHorizontal;
+    padding: $spacerVertical calc((100vw - $gridWidth)/2);
     height: calc(100vh - $navbarHeight);
     flex-direction: column;
     justify-content: center;
@@ -16,13 +16,6 @@
     background: $heroUnitBackground;
     color: $heroUnitLeadColor;
 
-    & > h1, &>div, &>p {
-        width: 100%;
-        max-width: $gridWidth;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
     h1,h2,h3 {
         color: $heroUnitHeadingColor;
         z-index: 2;
@@ -31,7 +24,7 @@
         color: $heroUnitLeadColor;
     }
     h1 + p {
-        margin-top: -0.75em;
+        margin-bottom: 0em;
     }
 
     figure {
@@ -60,42 +53,35 @@
             text-shadow: 0 1px 4px rgba(0,0,0,0.8);
             color: $white;
         }
-
-
     }
 
     @media (orientation: portrait) {
         height: auto;
-        min-height: 62vw;
-        padding: 0 $spacerHorizontalPhone;
+        padding: $spacerVerticalPhone $spacerHorizontalPhone 0;
+    }
 
-        figure {
+    p:has(.scrollhint),p.scrollhint {
+        $size: 3rem;
+
+        width: $size;
+        height: $size;
+        @media (orientation: landscape) {
+            position: absolute;
+            left: calc(50% - math.div($size, 2));
+            bottom: $spacerVertical;
+        }
+        @media (orientation: portrait) {
+        }
+        margin: 0 auto;
+        z-index: 10;
+        &:hover {
+            cursor: pointer;
+        }
+        a,svg {
+            display: block;
+            width: $size;
+            height: $size;
         }
     }
 
 }// end masthead
-#scrollhint,.scrollhint {
-    $size: 48px;
-
-    width: $size;
-    height: $size;
-    position: absolute;
-    left: calc(50% - math.div($size, 2));
-    bottom: $size;
-    margin: 0;
-    color: $heroUnitLeadColor;
-
-    z-index: 10;
-    &:hover {
-        cursor: pointer;
-    }
-    a {
-        display: block;
-        width: $size;
-        height: $size;
-    }
-    // background-repeat: no-repeat;
-    // background-size: 100% 100%;
-    // background-image: url("data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZpZXdCb3g9IjAgMCA1MyAyMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PHBvbHlnb24gcG9pbnRzPSIyNi41LDE3LjY4OCA5LjExNCwzLjc3OSAxMC4zMDMsMi4zMTIgMjYuNSwxNS4yNjkgNDIuNjk3LDIuMzEzIDQzLjg4NiwzLjc3OSIgZmlsbD0iY3VycmVudENvbG9yIj48L3BvbHlnb24+PC9nPjwvc3ZnPg==");
-}
-
