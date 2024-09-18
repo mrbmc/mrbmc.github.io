@@ -4,6 +4,9 @@ Disallow: /
 User-agent: GPTBot
 Disallow: /
 
+User-agent: Go-http-client
+Disallow: /
+
 User-agent: ImagesiftBot
 Disallow: /
 
@@ -17,6 +20,12 @@ User-agent: YaBrowser
 Disallow: /
 
 User-agent: ia_archiver
+Disallow: /
+
+User-agent: HUAWEILIO
+Disallow: /
+
+User-agent: python-requests
 Disallow: /
 
 User-agent: SeznamBot
