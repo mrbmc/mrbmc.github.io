@@ -241,6 +241,8 @@ We ran usability studies to determine whether QR codes or "license plate" would 
 In-market we saw a **33% decrease**{.negative} in conversion rate, which was alarming. Fortunately, that was offset by a **200% increase**{.positive} in our Bundle take-rate. The rise in bundle sales boosted LTV & MRR making this new design a solid win for users and the business.
 
 
+## Chapter 3: Summit{#summit .section}
+
 ### Global expansion{#global-expansion}
 
 #### Challenge
@@ -273,7 +275,7 @@ Latin America required additional fields for Tax collection in Argentina and Chi
 
 Each new region that we rolled out provided a basis change in growth for Disney+.
 
-### Subscribers vs Revenue {#plan-picker}
+### Optimizing Growth {#plan-picker}
 
 #### Situation
 
