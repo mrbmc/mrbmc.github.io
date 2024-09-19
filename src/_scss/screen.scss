@@ -38,7 +38,7 @@ body {
         width: 100%;
         max-width: $gridWidth;
         @media (orientation: portrait) {
-            padding: 0 $spacerHorizontalPhone;
+            padding: 0 $spacerHorizontal;
         }
     }
 }
@@ -198,12 +198,6 @@ table {
     &.rotate {
         @include transpose_table;
     }
-    @media (orientation: portrait) {
-        width: calc(100vw - $spacerHorizontalPhone);
-        display: block;
-        // overflow: hidden;
-        overflow-x: scroll;
-    }
 }
 .positive {
     color: $_teal;
@@ -251,14 +245,13 @@ figure {
 }
 
 blockquote,.blockquote {
-    padding: 0 0 0 $spacerHorizontal;
+    padding: 0 $spacerHorizontal;
     margin: $spacerVertical 0 $spacerVertical ($spacerHorizontal * -1);
     border-left: solid 4px $textOffColor;
     color: $textOffColor;
 
     @media (orientation: portrait) {
-        padding: 0 0 0 $spacerHorizontalPhone;
-        margin: $spacerVerticalPhone 0;
+        margin-left: 0;
     }
 }
 

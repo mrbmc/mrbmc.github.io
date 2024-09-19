@@ -149,7 +149,7 @@ body.resume #header #menu a[href="/about/"] {
             top: 0;
             right: 0;
             bottom: 0;
-            padding: $spacerVerticalPhone $spacerHorizontalPhone;
+            padding: $spacerHorizontal;
             flex-direction: column;
             justify-content: center;
             align-items: flex-end;
@@ -164,7 +164,7 @@ body.resume #header #menu a[href="/about/"] {
                 &:not(#close-menu) {
                     font-size: 150%;
                     line-height: $baseLineHeight;
-                    margin: 0 0 ($spacerVerticalPhone*2) 0;
+                    margin: 0 0 $spacerVertical 0;
                 }
             }
 
@@ -178,7 +178,7 @@ body.resume #header #menu a[href="/about/"] {
                     display: block;
                     position: absolute;
                     top: $navbarHeight * .19;
-                    right: $spacerHorizontalPhone;
+                    right: $spacerHorizontal;
                     &:before,
                     &:after {
                         top: 50%;

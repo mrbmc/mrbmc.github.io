@@ -148,34 +148,22 @@
 
 @mixin fullWidth($limit:100vw) {
     width: $limit;
-    display: flex;
     margin-right: auto;
+    display: block;
 
     @media (min-width: $gridWidth) {
-        margin-left: calc((100vw - $gridWidth) * -0.5);
+        margin-left: calc(($limit - $gridWidth) * -0.5);
     }
 
     @media (orientation: portrait) {
-        width: $limit;
-        margin-left: (0 - $spacerHorizontalPhone);
-        // width: 100vw;
-        // margin-left: auto;
+        margin-left: ($spacerHorizontal * -1);
     }
 }
 @mixin fullHeight($limit:calc(100vh - $navbarHeight)) {
   height: $limit;
   max-height: $limit;
 }
-@mixin container {
-    box-sizing: border-box;
-    width: $gridWidth;
-    padding: 0;
-    margin: 0 auto;
-    @media (orientation: portrait) {
-        width: 100%;
-        padding: $spacerVerticalPhone $spacerHorizontalPhone;
-    }
-}
+
 // @mixin span ($s:1) {
 //   width: ($s * $gridColumnWidth) + (($s - 1) * $gridGutterWidth);
 //   margin: $spacerVertical 0 $spacerVertical $gridGutterWidth;

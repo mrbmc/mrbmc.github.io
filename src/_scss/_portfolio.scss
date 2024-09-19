@@ -95,10 +95,10 @@ body.portfolio.list {
             flex: 1 0 100%;
             height: auto;
             column-gap: $spacerHorizontal;
+            row-gap: $spacerVertical;
 
             @media (orientation: portrait) {
                 flex-direction: column-reverse;
-                row-gap: $spacerVerticalPhone;
             }
 
 

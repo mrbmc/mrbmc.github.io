@@ -94,7 +94,7 @@ body.home {
             }
             @media (orientation: portrait) {
                 position: static;
-                margin: $spacerVerticalPhone auto;
+                margin: $spacerVertical auto;
 
                 $iconsize: 19vh;
                 width: $iconsize;
@@ -139,12 +139,6 @@ body.home {
     // .project-list,.blog {
     //     padding-top: $spacerVertical;
     // }
-    section {
-        margin-bottom: $spacerVertical;
-        @media (orientation: portrait) {
-            margin-bottom: $spacerVerticalPhone;
-        }
-    }
     .project-list {
         h2 {
             text-align: center;
