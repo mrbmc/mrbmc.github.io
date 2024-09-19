@@ -359,7 +359,7 @@ Disney+ became the fastest-growing streaming service *ever*.
 <dt>Aug 2019 - Dec 2020</dt></dl></div>
 
 
-![growth chart](/images/portfolio/disney-growth/growth-stats.svg)
+![growth chart](/images/portfolio/disney-growth/chart-disney-growth.svg)
 
 I don't believe that the Growth Design was responsible for all that. Disney+ was a desirable product offered at the right time. However, I believe that we did the work necessary – all the user archetypes, devices, payment methods, partnerships, and design systems –  to maximize the opportunity. 
 
