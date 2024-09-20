@@ -1,21 +1,24 @@
 #!/bin/zsh
 
 BASE=$(dirname "$0");
-todate=$(date +%d)
-tomonth=$(date +%m)
+
+startdate=$(date +%Y%m%d);
+stopdate=$(date +%Y%m%d);
+stopdateday=$(date -j -f %Y%m%d $stopdate +%d);
+stopdatemonth=$(date -j -f %Y%m%d $stopdate +%m);
+startm=01;
+endm=12;
 
 local flag_skipdownload flag_verbose flag_help flag_raw
-local arg_duration=(all)
 local usage=(
 "metrics.sh [-h|--help]"
 "metrics-sh [-v|--verbose] [-t|--term=<duration>] [<message...>]"
 )
 
-local startm=01;
-local endm=12;
+
+
 
 goaccess_opt="--no-progress --log-format=CLOUDFRONT --no-query-string --agent-list --ignore-crawlers --unknowns-as-crawlers --tz='America/New York'"
-
 
 
 zmodload zsh/zutil
@@ -24,7 +27,8 @@ zparseopts -D -F -K -- \
 {s,-skipdownload}=flag_skipdownload \
 {r,-raw}=flag_raw \
 {v,-verbose}=flag_verbose \
-{t,-term}:=arg_duration ||
+{t,-term}:=arg_duration \
+{d,-date}:=arg_startdate ||
 return 1
 
 [[ -z "$flag_help" ]] || { print -l $usage && return }
@@ -109,13 +113,13 @@ function analyze () {
 
 
 	periods_opt=('7d' '30d' '90d')
-	for n in $periods_opt
+	for duration in $periods_opt
 	do
-		echo "Analyzing -$n";
+		echo "Analyzing -$duration";
 		if (( $#flag_raw )); then
-			sed_cmd="sed -n '/2024\-'$(date -v-$n +%m)'\-'$(date -v-$n +%d)'/,/2024\-'$tomonth'\-'$todate'/ p' $BASE/logs/log_raw | goaccess -a -o $BASE/../metrics/www/l$n-raw.html $goaccess_opt";
+			sed_cmd="sed -n '/2024\-'$(date -v-$duration +%m)'\-'$(date -v-$duration +%d)'/,/2024\-'$stopdatemonth'\-'$stopdateday'/ p' $BASE/logs/log_raw | goaccess -a -o $BASE/../metrics/www/l$n-raw.html $goaccess_opt";
 		else
-			sed_cmd="sed -n '/2024\-'$(date -v-$n +%m)'\-'$(date -v-$n +%d)'/,/2024\-'$tomonth'\-'$todate'/ p' $BASE/logs/log_clean | goaccess -a -o $BASE/../metrics/www/l$n.html $goaccess_opt";
+			sed_cmd="sed -n '/2024\-'$(date -v-$duration +%m)'\-'$(date -v-$duration +%d)'/,/2024\-'$stopdatemonth'\-'$stopdateday'/ p' $BASE/logs/log_clean | goaccess -a -o $BASE/../metrics/www/l$n.html $goaccess_opt";
 		fi
 		eval ${sed_cmd}
 	done
@@ -129,13 +133,40 @@ function analyze () {
 }
 
 
-
-
 # if [ $# -eq 0 ]; then
 # 	echo "* * * * * * * * * * * * * * * * * * * * * * *";
 #     echo "Please enter a command. Options are 'all', 'process', or 'download'";
 # 	exit;
 # fi
+
+
+if [[ "$arg_startdate[-1]" ]]; then
+	#if a date is set, and the duration is NOT set
+	#calculate the start date
+	#set the stop date
+	#set the output to the date
+
+	targetdate=$(date -j -f %Y%m%d $arg_startdate[-1] +%Y%m%d);
+
+	sed_cmd="sed -n '" \
+	sed_cmd+="/2024\-'$(date -j -f %Y%m%d $targetdate +%m)'\-'$(date -j -f %Y%m%d $targetdate +%d)'/"
+	sed_cmd+=" p' $BASE/logs/log_clean | goaccess -a -o $BASE/../metrics/www/$targetdate.html "
+	sed_cmd+="$goaccess_opt";
+	echo "Analyzing $targetdate"
+	eval ${sed_cmd}
+
+
+	sed_cmd="sed -n '" \
+	sed_cmd+="/2024\-'$(date -j -f %Y%m%d $targetdate +%m)'\-'$(date -j -f %Y%m%d $targetdate +%d)'/"
+	sed_cmd+=" p' $BASE/logs/log_raw | goaccess -a -o $BASE/../metrics/www/$targetdate-raw.html "
+	sed_cmd+="$goaccess_opt";
+	echo "Analyzing $targetdate"
+	eval ${sed_cmd}
+
+
+	exit;
+fi
+
 
 if [[ "$arg_duration[-1]" = "recent" ]]; then
 	echo "RECENT ONLY";
