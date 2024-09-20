@@ -1,6 +1,6 @@
 ---
 title: NHL Game Flow
-thumbnail: /images/portfolio/nhl/nhl-gameflow.png
+thumbnail: /images/portfolio/nhl/nhl-gameflow-thumbnail.jpg
 masthead-image: /images/portfolio/nhl/nhl-teaser-2x1.jpg
 masthead-video: /images/portfolio/nhl/gameflow.mp4
 date: 2019-12-05

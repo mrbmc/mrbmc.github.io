@@ -49,15 +49,15 @@ body.portfolio.list {
                 display: none;
             }
         }
+        transition: all $animation-speed $animation-easing;
         figure {
             width: 100%;
             margin: 0;
             padding: 0;
-            border-radius: .5rem;
+            border-radius: $border-radius;
             // box-shadow: 0 2px 8px $shadow-color, 0 8px 24px $shadow-color;
             transform: scale(1);
             background: transparent;
-            transition: all $animation-speed $animation-easing;
             a {
                 display: block;
             }
@@ -79,8 +79,8 @@ body.portfolio.list {
 
         &:hover {
             z-index: 3;
+            transform: scale(1.05);
             figure {
-                transform: scale(1.05);
             }
             img {
                 filter: saturate(150%);

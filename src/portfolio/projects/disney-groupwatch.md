@@ -1,7 +1,7 @@
 ---
 title: Disney+ Groupwatch
 date: 2020-09-01
-thumbnail: /images/portfolio/disney-groupwatch/disney-groupwatch-devices.png
+thumbnail: /images/portfolio/disney-groupwatch/disney-groupwatch-preview.jpg
 eleventyExcludeFromCollections: false
 category:
   - work

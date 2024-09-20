@@ -139,23 +139,43 @@ body.home {
     //     padding-top: $spacer-vertical;
     // }
     .project-list {
+
+        @include fullWidth();
+
+        padding: 0 $spacer-horizontal;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: $spacer-horizontal;
+        @media (orientation: landscape) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
         h2 {
             text-align: center;
         }
         .project {
+            flex: 1 0 100%;
+            flex-direction: column-reverse;
+            justify-content: flex-end;
+            margin: 0;
+            padding: 0;
             header p {
                 display: none;
             }
-            
-        }
-        @media (orientation: portrait) {
-            .project {
-                flex: 1 0 100%;
-                img {
-                    height: 60vw;
-                }
-
+            h3 {
+                margin: 0;
             }
+            img {
+                width: calc((100vw - ($spacer-horizontal * 3))/2);
+                height: calc((100vw - ($spacer-horizontal * 3))/2);
+                background: $well-background;
+                object-fit: cover;
+                @media (orientation: landscape) {
+                    width: calc((100vw - ($spacer-horizontal * 4))/3);
+                    height: calc((100vw - ($spacer-horizontal * 4))/3);
+                }
+            }
+            
         }
     }
     #masthead {

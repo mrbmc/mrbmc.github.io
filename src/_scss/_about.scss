@@ -95,7 +95,9 @@ body.about {
 ul.timeline {
     @include card;
 
-    margin: $spacer-vertical ($spacer-horizontal * 2);
+    @media (orientation: landscape) {
+        margin: $spacer-vertical ($spacer-horizontal * 2);
+    }
 
     li {
         margin: 0;
