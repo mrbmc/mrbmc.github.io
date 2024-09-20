@@ -1,6 +1,6 @@
 ---
 title: Disney Enterprise XD
-date: 2020-06-02
+date: 2020-10-01
 thumbnail: /images/portfolio/disney-enterprise/optumus-mockup.jpg
 eleventyExcludeFromCollections: false
 category:
@@ -13,12 +13,13 @@ timeline: 2019-2023
 2. [Team Building](#team)
 3. [Product Domains](#products)
    1. [Commerce](#commerce)
-   2. [Content](#content)
+   2. [Content](#content-tools)
    4. [Business Intelligence](#analytics)
    3. [Developer Experience](#developer)
 
 {.stickynav}
 
+{% comment %}
 - ![Support Agent Portal](/images/portfolio/disney-enterprise/baymax-customer.jpg)
 - ![Commerce Portal](/images/portfolio/disney-enterprise/genie-offers.jpg)
 - ![Commerce Portal](/images/portfolio/disney-enterprise/web-genie.jpg)
@@ -38,6 +39,7 @@ timeline: 2019-2023
 - ![Content Management](/images/portfolio/disney-enterprise/web-maestro.jpg)
 - ![Content Portal](/images/portfolio/disney-enterprise/new/content-portal-episode.jpg)
 {.gallery}
+{% endcomment %}
 
 | Role & Responsibility                                                                                                                                          | Team                                   | Timeline            | Impact                                                                     |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- | ------------------- | -------------------------------------------------------------------------- |
@@ -55,19 +57,20 @@ Operating at the scale that Disney does often requires us to build our own solut
 
 As the executive accountable for product design of these tools my mission was to invest design effort in the products that could make the biggest business impact through customer acquisition, cost optimization, increasing agility, or improving decision quality.
 
-| Disney Product              | Purpose                                                                                     | Commercial Analog(s)                                                                    |
-| --------------------------- | ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| Genie                       | Billing and SKU management                                                                  | [Orb](https://www.withorb.com/), [Metronome](https://metronome.com/)                    |
-| Baymax                      | Customer Support Portal                                                                     | [Zendesk](https://www.zendesk.com/)                                                     |
-| WeaponX                     | Experimentation & Feature Flagging                                                          | Optimizely, Launch Darkly                                                               |
-| Polaris                     | Content Curation                                                                            | [Contentful](https://www.contentful.com/)  + [ContentStudio](https://contentstudio.io/) |
-| Optumus                     | Streaming Quality Analysis                                                                  | [Conviva](https://www.conviva.com/)                                                     |
-| Developer Platform          | Centralized resources for managing developer resources (services, APIs, documentation, etc) | n/a                                                                                     |
-| DATA Platform               | A one-stop shop for all metrics and analytics of our streaming services.                    | [Tableau](https://www.tableau.com/), [Zoho](https://www.zoho.com/analytics/)            |
-| Ad Manager, Mission Control | Advertising curation, provisioning, and deployment.                                         | [Google AdSense](https://adsense.google.com/), Amazon Advertising                       |
-| Partner Portal              | Testing APIs, documentation, and issue tracking for developers building with Disney's SDK.  | [GitLabs](https://about.gitlab.com/)                                                    |
-| Galaxy                      | Platform for sending personalized targeted messages (Email, SMS, Push) to our users.        | [salesforce](https://www.salesforce.com/) + [braze](https://www.braze.com/)             |
-*The scale of this platform was comparable to an entire industry.* 
+| Disney Product              | Purpose                                                                                     | Kpi | Commercial Analog(s)                                                                    |
+| --------------------------- | ------------------------------------------------------------------------------------------- | - | --------------------------------------------------------------------------------------- |
+| Genie                       | Billing and SKU management                                                                  | Net Subs, MRR | [Orb](https://www.withorb.com/), [Metronome](https://metronome.com/)                    |
+| Baymax                      | Customer Support Portal                                                                     | OpEx, Gross Margin | [Zendesk](https://www.zendesk.com/)                                                     |
+| WeaponX                     | Experimentation & Feature Flagging                                                          | Net Subs, MRR, [RFE](#) | Optimizely, Launch Darkly                                                               |
+| Polaris                     | Content Curation                                                                            | RFE | [Contentful](https://www.contentful.com/) |
+| Tesseract                     | Content Review                                                                            | RFE, OpEx | [ContentStudio](https://contentstudio.io/) |
+| Optumus                     | Streaming Quality Analysis                                                                  | OpEx | [Conviva](https://www.conviva.com/)                                                     |
+| Developer Platform          | Centralized resources for managing developer resources (services, APIs, documentation, etc) | OpEx | n/a                                                                                     |
+| DATA Portal               | A one-stop shop for all metrics and analytics of our streaming services.                    | n/a | [Tableau](https://www.tableau.com/), [Zoho](https://www.zoho.com/analytics/)            |
+| Ad Manager, Mission Control | Advertising curation, provisioning, and deployment.                                         | MRR | [Google AdSense](https://adsense.google.com/), Amazon Advertising                       |
+| Partner Portal              | Testing APIs, documentation, and issue tracking for developers building with Disney's SDK.  | Net Subs, MRR | [GitLabs](https://about.gitlab.com/)                                                    |
+| Galaxy                      | Platform for sending personalized targeted messages (Email, SMS, Push) to our users.        | Net Subs, MRR | [salesforce](https://www.salesforce.com/) + [braze](https://www.braze.com/)             |
+_The scale of this platform was comparable to an entire industry._  
 
 ## The Team{#team}
 
@@ -90,7 +93,7 @@ To tackle such a large surface area, we organized the team into pods for each to
 
 ## Product Domains{#products}
 
-### Commerce {#commerce}
+### Commerce Tools{#commerce}
 
 How might we manage 1000+ offer combinations of currency, service 
 
@@ -98,17 +101,56 @@ How might we manage 1000+ offer combinations of currency, service
 - ![genie 1](/images/portfolio/disney-enterprise/genie-campaign.png)
 {.gallery}
 
-<!-- ### Content{#content}
+#### Lifecycle Messaging
 
-### Customers{#customers}
+Messaging our guests on the device and content they prefer.
 
-### Experiments{#experiments}
- -->
+![Messaging Portal](/images/portfolio/disney-enterprise/new/messaging-new-email.jpg)
+
+#### Support Agent Tools
+
+Disney provides its guests and exceptional level of care. Disney+ is no exception, but it can be a significant cost center as well. Optimizing the tools for our support agents to reduce case resolution times and contact volume saved Disney **million$ in operating expenses**.
+
+![Support Agent Portal](/images/portfolio/disney-enterprise/baymax-customer.jpg)
+
+
+### Content Platform{#content-tools}
+
+The content strategy for most streaming services, including Disney+, is to create an audience of one. Each user experiences a bespoke presentation of content.
+![content strategy](/images/portfolio/disney-enterprise/disney-content-strategy.jpg)
+
+
+Our tactic to achieve this was an "Algotorial" presentation that leveraged the best attributes of human curation and machine learning.
+A team of editors steeped in knowledge of the Disney catalog created hundreds of content collections around themes, brands, characters. Those collections were further optimized by algorithms. The order of collections presented was mostly machine optimized with a few human overrides for proven tactics [redacted].
+
+- ![Content Curation](/images/portfolio/disney-enterprise/polaris-browse.jpg)
+- ![Content Curation](/images/portfolio/disney-enterprise/polaris-set.jpg)
+- ![Metadata Browsing](/images/portfolio/disney-enterprise/tesseract-browse.jpg)
+- ![Metadata Detail](/images/portfolio/disney-enterprise/tesseract-detail.jpg)
+- ![Metadata Portal](/images/portfolio/disney-enterprise/new/knowsmore.jpg)
+{.gallery}
+
 ### Analytics{#analytics}
+
+Improve the quality of decision making for everyone at Disney.
+
+#### Data Portal
+
+![Data Portal](/images/portfolio/disney-enterprise/web-dataportal.jpg)
+
+#### Streaming Analytics
 
 ![Streaming QoS Analysis](/images/portfolio/disney-enterprise/optumus-mockup.jpg)
 
+#### Experimentation, A/B Testing, Feature Flagging
+
+- ![Experimentation](/images/portfolio/disney-enterprise/weaponx-dashboard.jpg)
+- ![Experimentation](/images/portfolio/disney-enterprise/weaponx.png)
+{.gallery}
+
 ### Developer Experience{#developer}
+
+#### Enterprise Design System
 
 We partnered with a team of engineers who cared deeply about developer productivity to create a design system and a visual language that was unique to disney. This design system provides a high quality, rapid, and robust UI framework across all these products.
 
@@ -141,37 +183,18 @@ We partnered with a team of engineers who cared deeply about developer productiv
 
 <style>
 .team {
-display: flex;
-flex-wrap: wrap;
-justify-content: space-between;
-row-gap: 1em;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  @media (orientation: portrait) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 .team img {
-flex: 1 1;
+  height: 100%;
+  object-position: 50% 50%;
+  object-fit: contain;
 }
-  ._team img {
-      margin: 0 1rem 1rem 0;
-      display: inline-block;
-  }
-  @media (orientation: landscape) {
-    ._team img {
-      width: calc((62vw - 5rem) / 6);
-    }
-    ._team img:nth-of-type(5n) {
-      margin-right: 0;
-    }  
-  }
-  @media (orientation: portrait) {
-    .team img {
-      width: calc((100vw - 2rem - 3rem) / 4);
-    }
-    .team img:nth-of-type(4n) {
-      margin-right: 0;
-    }  
-  }
-  .team img:last-of-type {
-    width:  16vw;
-  }
 </style>
 
 <!--
