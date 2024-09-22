@@ -83,6 +83,7 @@ body.portfolio.list {
             figure {
             }
             img {
+                box-shadow: $shadow;
                 filter: saturate(150%);
             }           
         }
