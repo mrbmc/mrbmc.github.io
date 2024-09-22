@@ -37,12 +37,12 @@
 		}
 		summary {
 			// flex-basis: 75%;
-			width: calc(75% - $spacer-horizontal);
+			width: calc(62% - $spacer-horizontal);
 		}
 		img {
 			// display: flex;
 			// flex-basis: 25%;
-			width: 25%;
+			width: 38%;
 			border-radius: $border-radius;
 	        transition: all $animation-speed $animation-easing;
 		}
