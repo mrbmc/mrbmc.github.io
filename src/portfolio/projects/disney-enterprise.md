@@ -49,11 +49,7 @@ timeline: 2019-2023
 
 _To create something truly novel you need novel tools._
 
-![golden circle](/images/portfolio/disney-enterprise/EXD-Golden-Circle.png){style="box-shadow:0 1em 1.38em 0.38em rgba(0,0,0,0.13);"}
-
-Creating a global streaming service that meets consumers where they are, requires a constellation of powerful software components: routing video across the globe, programming the content in every region, setting pricing for dozens of currencies, supporting thousands of support castmembers, messaging guests about their favorite content...
-
-Operating at the scale that Disney does often requires us to build our own solutions. Off-the-shelf options are not viable due to cost or privacy constraints. Those existing solutions
+Creating a global streaming service that meets consumers where they are, requires a constellation of powerful software components: routing video across the globe, programming the content in every region, setting pricing for dozens of currencies, supporting thousands of support castmembers, messaging guests about their favorite content... Operating at the scale that Disney does often requires us to build our own solutions. Off-the-shelf options are not viable due to cost or privacy constraints. 
 
 As the executive accountable for product design of these tools my mission was to invest design effort in the products that could make the biggest business impact through customer acquisition, cost optimization, increasing agility, or improving decision quality.
 
@@ -78,7 +74,10 @@ _The scale of this platform was comparable to an entire industry._
 {.team}
 
 ### Defining Culture
+
 A team is greater than the sum of the individuals. It's a singular unit with a shared purpose. The secret ingredient that binds a group of people together is the culture. I'm proud to say the Enterprise XD team at Disney had a strong culture of **psychological safety**, **authenticity**, and **shared growth**.
+
+![golden circle](/images/portfolio/disney-enterprise/EXD-Golden-Circle.png){style="box-shadow:0 1em 1.38em 0.38em rgba(0,0,0,0.13);"}
 
 Culture can be designed with intentional reinforcement of the behaviors that align with our values. Other teams at Disney saw this and asked for an open-source toolkit for our [culture workshop](/portfolio/team-culture-workshop/).
 

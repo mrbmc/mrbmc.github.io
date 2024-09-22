@@ -1,40 +1,52 @@
 {
   "main": {
-    "id": "cea1f332b704e9b6",
+    "id": "d4b5fed86d007f78",
     "type": "split",
     "children": [
       {
-        "id": "1e309d98c2296bf7",
+        "id": "6f06be330d9700b7",
         "type": "tabs",
         "children": [
           {
-            "id": "4c8d9e1284880496",
+            "id": "4f912c9250b9fe4c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "design-prototyping-201.md",
+                "file": "disney-growth-long.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "798af14f21009bb3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "eurosport.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "stacked": true
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "6981fe8dde5717ca",
+    "id": "5851e3f0d2626874",
     "type": "split",
     "children": [
       {
-        "id": "8bcbd96e28ed60e2",
+        "id": "94c40dcba078e99b",
         "type": "tabs",
         "children": [
           {
-            "id": "4043110cffe5704f",
+            "id": "ac39235f87c4c098",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -44,7 +56,7 @@
             }
           },
           {
-            "id": "3f9d975367931b5f",
+            "id": "99e8c14b76567bd8",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -59,7 +71,7 @@
             }
           },
           {
-            "id": "de3c301b67bc4bc3",
+            "id": "0241fbc859e61ee3",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -70,23 +82,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 300
   },
   "right": {
-    "id": "5bfe92cbf2646c3f",
+    "id": "bf59bdf4d1f7182b",
     "type": "split",
     "children": [
       {
-        "id": "6d217e97eaecc38b",
+        "id": "5f3e3804f5093c75",
         "type": "tabs",
         "children": [
           {
-            "id": "681c54a58d688ed1",
+            "id": "c30342341a6e10af",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "design-prototyping-201.md",
+                "file": "eurosport.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,19 +110,19 @@
             }
           },
           {
-            "id": "8837b611792c1d8c",
+            "id": "86e7660c2e55c3b1",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "design-prototyping-201.md",
+                "file": "eurosport.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "54c5d209edf86d42",
+            "id": "8aaf5c22b4197fb8",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -121,12 +133,12 @@
             }
           },
           {
-            "id": "892a5ad0d964c298",
+            "id": "4e2b3bd7ee3a3705",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "design-prototyping-201.md"
+                "file": "eurosport.md"
               }
             }
           }
@@ -147,47 +159,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4c8d9e1284880496",
+  "active": "ac39235f87c4c098",
   "lastOpenFiles": [
-    "boids.md",
-    "design-prototyping-201.md",
-    "espn.md",
-    "disney-growth-long.md",
+    "flint-and-silicon.md",
+    "eurosport.md",
+    "nhl.md",
+    "nhlgameflow.md",
+    "nhltv.md",
+    "optumus.md",
     "disney-growth.md",
     "disney-groupwatch.md",
-    "blogtalkradio.md",
-    "team-charter-workshop.md",
     "disney-enterprise.md",
-    "disney.md",
-    "Untitled.md",
-    "disney-groupwatch-bak.md",
-    "eurosport.md",
-    "espnvision.md",
-    "espnplus.md",
-    "nhltv.md",
-    "Pasted image 20240129092628.png",
-    "exd-team-agency.png",
-    "exd-team-agency 1.png",
-    "exd-team-jon 1.png",
-    "exd-team-carol 1.png",
-    "exd-team-cathy 1.png",
-    "exd-team-kda 1.png",
-    "exd-team-sarah 1.png",
-    "exd-team-willet 1.png",
-    "exd-team-jenny 1.png",
-    "nhlgameflow.md",
-    "nhl.md",
-    "optumus.md",
-    "rhythmism.md",
-    "securityscorecard.md",
-    "steelgills.md",
-    "images/portfolio/rhythmism-ui.jpg.md",
-    "images/portfolio",
-    "images",
-    "images/portfolio/disney-growth/tv-signup-6.jpg.md",
-    "images/portfolio/disney-growth",
-    "pal-9100.md",
-    "flint-and-silicon.md",
-    "images/portfolio/culture-workshop"
+    "disney-growth-long.md",
+    "team-charter-workshop.md",
+    "espn.md",
+    "portfolio/espn.md"
   ]
 }
