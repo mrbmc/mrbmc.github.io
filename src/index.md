@@ -8,7 +8,7 @@ eleventyExcludeFromCollections: false
 
 <section id="masthead" class="bio">
 
-# Designing products that connect _human_ needs with business outcomes.
+# Designing products that connect human _needs_ with business **outcomes**.
 
 {% comment %}
 * [linkedin](https://linkedin.com/in/mrbmc)

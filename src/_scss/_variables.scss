@@ -13,16 +13,19 @@ $_orange:               #FF4F00;//international orange
 $brand-color:            $_orange;
 $brand-color-00:          #{$brand-color + "00"};
 $brand-color-20:          #{$brand-color + "33"};
-$brand-color-60:          #{$brand-color + "9E"};
+$brand-color-50:          #{$brand-color + "80"};
 $brand-color-80:          #{$brand-color + CC};
 $brand-accent:           $_sunshine;
 $brand-accent-20:         #{$brand-accent + "4D"};
+$brand-accent-50:         #{$brand-accent + "80"};
 $brand-accent-80:         #{$brand-accent + "CC"};
 $brand-complement:       $_indigo;
 $brand-complement-20:     #{$brand-complement + "4D"};
+$brand-complement-50:     #{$brand-complement + "80"};
 $brand-complement-80:     #{$brand-complement + "CC"};
 $brand-secondary:        $_pink;
 $brand-secondary-20:      #{$brand-secondary + "4D"};
+$brand-secondary-50:      #{$brand-secondary + "80"};
 $brand-secondary-80:      #{$brand-secondary + "BB"};
 
 $white-20:               hslToHex(hue($brand-color),00%,100%)+66;

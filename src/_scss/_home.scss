@@ -30,11 +30,21 @@ body.home {
                 padding-right: 0;
             }
             & > em {
+                    color: $brand-accent;
                     background: $white;
-                    background-image: linear-gradient($brand-accent-80, $brand-color-80, $brand-complement-20);
+                    background-image: linear-gradient($brand-accent-50, $brand-color-50);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
                     font-style: normal;
+            }
+            & > strong {
+                    color: $brand-color;
+                    background: $white;
+                    background-image: linear-gradient($brand-secondary-50, $brand-complement-50);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    font-style: normal;
+                    font-weight: $base-font-weight;
             }
         }
     
