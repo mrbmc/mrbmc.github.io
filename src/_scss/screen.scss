@@ -36,7 +36,10 @@ body {
         width: 100%;
         max-width: $grid-width;
         @media (orientation: portrait) {
-            padding: 0 $spacer-horizontal;
+            padding: $spacer-vertical $spacer-horizontal;
+        }
+        h1:first-child {
+            padding-top: $spacer-vertical;
         }
     }
 }

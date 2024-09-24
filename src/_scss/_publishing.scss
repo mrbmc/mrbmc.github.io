@@ -36,7 +36,6 @@ portfolio, and gallery pages.
 }
 @mixin item-detail {
 	main,#main {
-        padding-top: 0;
         p {
             &>img,&>svg,&>video {
                 &.canzoom {

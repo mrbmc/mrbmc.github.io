@@ -1,20 +1,13 @@
 body.about {
 
     main,#main {
-        padding-top: 0;
-
         & > section {
             border-top: solid 1px $border-color;
             padding-top: $spacer-vertical * 2;
             margin-top: $spacer-vertical * 2;
         }
-
-
     }
 
-    h1 {
-        margin: ($spacer-vertical * 2) 0 $spacer-vertical;
-    }
     h1 + p {
         margin: $spacer-vertical 0 ($spacer-vertical * 2);
     }
