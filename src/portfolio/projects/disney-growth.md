@@ -5,15 +5,21 @@ thumbnail: /images/portfolio/disney-growth/disney-growth-thumb.jpg
 eleventyExcludeFromCollections: false
 category:
   - work
-summary: Building the team, process, and product to grow Disney+ from 0 to 105M subscribers in two years.
+summary: Designing the product, team, and program that launched Disney+ from 0 to 105M subscribers.
 timeline: 2018-2020
 parallaxHeading:
   - "-1"
 ---
+![Disney+ Welcome on All Devices](/images/portfolio/disney-growth/disney-growth.png){.fullwidth style="object-fit:contain;"}
 
+&nbsp;
 
+Disney+ launched in 2019 to become the fastest growing streaming service ever. My contributions to this success as a design leader hinged on these things:
 
-![](/images/portfolio/disney-growth/disney-growth.png){.fullwidth style="object-fit:contain;"}
+1. [Build a team]($project-team) and empower them to pursue the right outcomes.
+2. Define [experience principles](#ux-tenets) that can align cross-functional teams spread across timezones and product areas.
+4. [Communicate the product value](#landing-page) clearly to consumers.
+3. Present a [native experience](#tv-signup) on every device and [global region](#global-expansion).
 
 | Role                            | Responsibilities                                                                     | Team                                                         | Timeline            |
 | :------------------------------ | :----------------------------------------------------------------------------------- | :----------------------------------------------------------- | :------------------ |
@@ -21,17 +27,16 @@ parallaxHeading:
 
 {.rotate}
 
-
 1. [Basecamp](#basecamp)
 	1. [The Mountain of Scope](#full-scope)
 	1. [Assembling the team](#project-team)
 	1. [Experience Tenets](#ux-tenets)
 2. [Ascent](#ascent)
 	1. [Landing Page](#landing-page)
-	1. [TV & CD Signup](#tv-signup)
+	1. [TV Signup](#tv-signup)
 3. [Summit](#summit)
 	1. [Global expansion](#global-expansion)
-	1. [Optimizing Growth](#plan-picker)
+	1. [Optimizing Revenue](#plan-picker)
 	1. [V2 Workshop](#workshop)
 4. [Descent](#descent)  
 	1. [Outcomes](#outcomes)
@@ -41,12 +46,11 @@ parallaxHeading:
 
 ## Chapter 1: Basecamp{#basecamp .section}
 
-
 ### The Mountain of Scope {#full-scope}
 
-The complete scope of surface areas for Disney+ Growth can be organized around a few key vectors that intersect. That intersectionality means each feature might have 9 variations of interaction design.
+The complete scope for Disney+ Growth is a product of intersecting vectors: features, devices, payment methods, and global regions (currencies, laws, language). This intersectionality means each feature might have 9 design variants. e.g. Signup on a Roku in the US is very different than iOS in Europe.
 
-> Features  x Devices x Payment Terms
+> Features  x Devices x Payment Terms x Regions
 
 | Box Office | Turnstiles | Concession Stand | Closing Credits | Theater Amenities |
 | ---- | ---- | ---- | ---- | ---- |
@@ -137,10 +141,12 @@ _Spoiler: this would change six months after the launch._
 <details>
 	<summary>"Disney Hospitality."</summary>
 	<div>
+	
 * No dark or deceptive patterns.
 * Disney goes above and beyond legal requirements.
 * The Disney Voice is friendly, direct, and accessible - even for legal contracts. 
 * Practice unreasonable hospitality. 
+
 	</div>
 </details>
 
@@ -149,11 +155,9 @@ _Spoiler: this would change six months after the launch._
 
 ### Landing Page{#landing-page}
 
-The biggest challenge for any growth designer is **communicating value**. Growth Design has two big variables we can influence: motivation and friction. 
+The biggest challenge for any growth designer is **communicating value**. Understand what your users truly care about so you can present *the right offer at the right time* to fortify their buying decisions. The organic landing page is a powerful lever for growth because it is a canvas for communicating value. 
 
->Growth = Motivation / Friction
-
-We can **increase motivation** by presenting the value proposition in a way that resonates with people; assuming you understand your users' needs and the product can meet them. We can **reduce friction** by removing effort for the user, simplifying language, and automating chores. The front page is one of the biggest levers for growth because it is a bigger canvas for communicating value that can increase motivation. 
+What was important to Disney+ subscribers? A variety of content for their whole family.
 
 + ![Stimulus for research](/images/portfolio/disney-growth/olp-v0.jpg)
 + ![V1 for beta testing](/images/portfolio/disney-growth/olp-v1.jpg)
@@ -162,7 +166,7 @@ We can **increase motivation** by presenting the value proposition in a way that
 + ![Show more content to enforce the value prop](/images/portfolio/disney-growth/olp-v4.jpg)
 {.gallery}
 
-The homepage evolved from early 2018 until mid-2021 starting as an FPO stimulus for research teams (marketing and UXR), and evolving into an optimized proven product with shared ownership between Marketing and Product.  Some changes to call out:
+The homepage evolved from early 2018 until mid-2021 starting as a stimulus for research teams (marketing and UXR) to help us learn more about our guests, and evolving over time into an optimized proven product with shared ownership between Marketing and Product.  Some changes to call out:
 
 + The **tagline** shorted as we learned what features and values resonated with consumers. Eventually, awareness reached a point where we didn't need any tagline.
 + The **artwork** grew more complex over time. We always knew that people needed validation of Disney+'s value proposition by *seeing* the content they'd get, but operationally we needed to evolve to keep the titles fresh and localized.
@@ -170,7 +174,7 @@ The homepage evolved from early 2018 until mid-2021 starting as an FPO stimulus 
 
 
 
-### TV & Connected Devices {#tv-signup}
+### TV & Connected Devices Signup {#tv-signup}
 
 #### Challenge
 
@@ -334,7 +338,7 @@ We had three things we wanted for the team.
 
 My direct reports organized a cross-functional summit for everyone working on Growth and Onboarding. This included people from all our cross-functional growth Pods.
 
-![Growth Summit](/images/portfolio/disney-growth/workshop-pictogram.jpg)
+![Growth Summit](/images/portfolio/disney-growth/workshop-pictogram.jpg){.fullwidth}
 
 ![Growth Summit](/images/portfolio/disney-growth/workshop-agenda.jpg)
 
