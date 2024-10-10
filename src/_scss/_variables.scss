@@ -28,8 +28,9 @@ $brand-secondary-20:      #{$brand-secondary + "4D"};
 $brand-secondary-50:      #{$brand-secondary + "80"};
 $brand-secondary-80:      #{$brand-secondary + "BB"};
 
-$white-20:               hslToHex(hue($brand-color),00%,100%)+66;
-$white-80:               hslToHex(hue($brand-color),00%,100%)+AA;
+$white-20:              hslToHex(hue($brand-color),00%,100%)+33;
+$white-50:              hslToHex(hue($brand-color),00%,100%)+88;
+$white-80:              hslToHex(hue($brand-color),00%,100%)+AA;
 $white:                 hslToHex(hue($brand-color),00%,100%);
 $gray-950:              hslToHex(hue($brand-color),01%,96%);
 $gray-900:              hslToHex(hue($brand-color),01%,91%);
@@ -43,7 +44,9 @@ $gray-200:              hslToHex(hue($brand-color),05%,20%);
 $gray-100:              hslToHex(hue($brand-color),13%,12%);
 $gray-050:              hslToHex(hue($brand-color),21%,04%);
 $black:                 hslToHex(hue($brand-color),34%,02%);
-$black80:               hslToHex(hue($brand-color),34%,04%)+CC;
+$black-20:              hslToHex(hue($brand-color),34%,02%)+33;
+$black-50:              hslToHex(hue($brand-color),34%,02%)+88;
+$black-80:              hslToHex(hue($brand-color),34%,04%)+CC;
 
 // SEMANTIC MAPPING
 $gray-light:$gray-800;
@@ -72,7 +75,7 @@ $border-color: 			var(--gray-light);
 
 // Navbar
 // -------------------------
-$navbar-background:                var(--white-20);
+$navbar-background:                var(--white-50);
 $navbar-background-highlight:       transparent;
 $navbar-border:                    none;//.0125rem solid var(--gray-light);
 $navbar-text:                      	$text-color;

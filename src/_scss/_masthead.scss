@@ -3,7 +3,8 @@
     @include fullWidth(100vw);
     // padding: $spacer-vertical calc((100vw - $grid-width)/2);
     padding: $spacer-vertical $spacer-horizontal;
-    height: calc(100vh - $navbar-height);
+    // height: calc(100vh - $navbar-height);
+    height: calc(100vh);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

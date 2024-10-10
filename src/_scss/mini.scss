@@ -55,13 +55,16 @@ body {
 // CORE STYLES
 
 :root {
-    --black80:     #{$black80};
-    --black:        #{$gray-050};
+    --black-20:     #{$black-20};
+    --black-50:     #{$black-50};
+    --black-80:     #{$black-80};
+    --black:        #{$black};
     --gray-dark:    #{$gray-dark};
     --gray-mid:     #{$gray-mid};
     --gray-light:   #{$gray-light};
     --white:        #{$white};
     --white-80:     #{$white-80};
+    --white-50:     #{$white-50};
     --white-20:     #{$white-20};
     --brandColor: #{$brand-color};
     --brandComplement: #{$brand-complement};
@@ -70,14 +73,17 @@ body {
 }
 @media (prefers-color-scheme: dark) {
     :root {
-        --black80:      #{$white-80};
+        --black-20:      #{$white-20};
+        --black-50:      #{$white-50};
+        --black-80:      #{$white-80};
         --black:        #{$white};
-        --gray-dark:    #{$gray-800};
-        --gray-mid:     #{$gray-500};
-        --gray-light:   #{$gray-200};
-        --white:        #{$gray-050};
-        --white-80:      #{$black80};
-        --white-20:      #{$black80};
+        --gray-dark:    #{$gray-light};
+        --gray-mid:     #{$gray-mid};
+        --gray-light:   #{$gray-dark};
+        --white:        #{$black};
+        --white-80:      #{$black-80};
+        --white-50:      #{$black-50};
+        --white-20:      #{$black-20};
         --brandColor:   #{$brand-accent};
     };
 }
