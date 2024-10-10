@@ -40,3 +40,16 @@
       0   0   0   1   0" />
   </filter>
 </svg>
+<script type="text/javascript" language="javascript">
+window.addEventListener('load', function(e) {
+    "use strict";
+    var links = document.getElementsByClassName('link-email');
+    for (const link of links) {
+      var attrs = link.dataset;
+      link.setAttribute(
+        "href",
+        `mailto:${attrs.part1}@${attrs.part2}.${attrs.part3}?subject=${attrs.part4}`
+      );
+    }
+},false);
+</script>
