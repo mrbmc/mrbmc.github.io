@@ -10,7 +10,7 @@ tags:
   - war
   - sports
 ---
-You're probably glued to the news this week. No, not due to the impending Russian invasion of Ukraine (we'll get to that) but because of the XXIV Olympic Winter Games.
+If your family is like mine, you're probably glued to the news this week. No, not due to the impending Russian invasion of Ukraine (we'll get to that) but because of the XXIV Olympic Winter Games.
 
 Olympics fever has gripped the McConnell household as I’m sure it has for many of you. It’s brought my family together (on the couch at least) to stream new feats of speed, agility, and mental fortitude each night. Luge and Freestyle Skiing have been the big draw so far but we’re looking forward to the Bobsled this weekend.
 
