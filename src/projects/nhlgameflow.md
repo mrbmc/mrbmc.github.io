@@ -4,7 +4,7 @@ thumbnail: /images/portfolio/nhl/nhl-gameflow-thumbnail.jpg
 masthead-image: /images/portfolio/nhl/nhl-teaser-2x1.jpg
 masthead-video: /images/portfolio/nhl/gameflow.mp4
 date: 2019-12-05
-category:
+tags:
   - work
 eleventyExcludeFromCollections: false
 summary: GameFlow™ was a real-time visualization of momentum in a hockey game that gave fans, players, and teams deeper insights into the most exciting moments.
@@ -33,6 +33,6 @@ My role as director was assembling the team of designers, prototypers, and resea
 
 To secure buy-in from NHL and Disney leadership we needed to shop the feature in context. We built a VisionType in Keynote to walk execs through the experience. It also facilitated collaboration with services and client engineering. Our Apple developers in particular were eager to build new PiP capabiliites in TVOs, and experiment with synchronization capabilities between Apple devices.
 
-<video src="/images/portfolio/nhl/GameFlow-Demo.mp4" controls class="fullwidth" />
+<video src="/images/portfolio/nhl/GameFlow-Demo.mp4" controls class="fullwidth" /></video>
 
 [GameFlow™ Press Release](https://www.nhl.com/news/nhl-launching-gameflow-interactive-experience-312169252)

@@ -3,7 +3,7 @@ title: BTR Dynamo™
 thumbnail: /images/portfolio/btr/btr-cover-16x9.jpg
 masthead-image: /images/portfolio/btr/btr-hosttools-teaser-2x1.jpg
 date: 2014-01-01
-category:
+tags:
   - work
 masthead-title: BlogTalkRadio
 summary: Dynamo was a creator-economy ecosystem. We built an advertising platform that paid podcast hosts a fair income for their work.

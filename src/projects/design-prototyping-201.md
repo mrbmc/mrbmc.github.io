@@ -1,11 +1,12 @@
 ---
 title: Rapid Prototyping 101
-category:
-  - talk
 date: 2015-10-15
 tags:
+  - talk
   - design
   - prototyping
+  - rapid prototyping
+  - design thinking
 masthead-image: /images/portfolio/prototyping-talk/bamtech-prototyping-masthead.jpg
 thumbnail: /images/portfolio/prototyping-talk/bamtech-prototyping-thumb.jpg
 eleventyExcludeFromCollections: false

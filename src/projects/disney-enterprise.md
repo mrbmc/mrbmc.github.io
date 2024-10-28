@@ -3,7 +3,7 @@ title: Disney Enterprise XD
 date: 2020-10-01
 thumbnail: /images/portfolio/disney-enterprise/optumus-mockup.jpg
 eleventyExcludeFromCollections: false
-category:
+tags:
   - work
 summary: A suite of enterprise SAAS products behind Disney+, Hulu, and ESPN saved $80M/pa and grew MRR 25%.
 timeline: 2019-2023
@@ -19,37 +19,17 @@ timeline: 2019-2023
 
 {.stickynav}
 
-{% comment %}
-- ![Support Agent Portal](/images/portfolio/disney-enterprise/baymax-customer.jpg)
-- ![Commerce Portal](/images/portfolio/disney-enterprise/genie-offers.jpg)
-- ![Commerce Portal](/images/portfolio/disney-enterprise/web-genie.jpg)
-- ![Content Management](/images/portfolio/disney-enterprise/polaris-browse.jpg)
-- ![Content Management](/images/portfolio/disney-enterprise/polaris-set.jpg)
-- ![Metadata Browsing](/images/portfolio/disney-enterprise/tesseract-browse.jpg)
-- ![Metadata Detail](/images/portfolio/disney-enterprise/tesseract-detail.jpg)
-- ![Experimentation](/images/portfolio/disney-enterprise/web-weaponx.jpg)
-- ![Content Dictionary](/images/portfolio/disney-enterprise/web-cypher-dictionary.jpg)
-- ![Content Analytics](/images/portfolio/disney-enterprise/arc-heatmap.jpg)
-- ![Content Analytics](/images/portfolio/disney-enterprise/arc-content.jpg)
-- ![Messaging Portal](/images/portfolio/disney-enterprise/new/messaging-new-email.jpg)
-- ![Streaming Quality](/images/portfolio/disney-enterprise/web-enterprise-optumus-session.jpg)
-- ![Data Portal](/images/portfolio/disney-enterprise/web-dataportal.jpg)
-- ![Advertising](/images/portfolio/disney-enterprise/new/ads-mission-control-scheduling.jpg)
-- ![Developer Productivity](/images/portfolio/disney-enterprise/new/dev-portal.jpg)
-- ![Content Management](/images/portfolio/disney-enterprise/web-maestro.jpg)
-- ![Content Portal](/images/portfolio/disney-enterprise/new/content-portal-episode.jpg)
-{.gallery}
-{% endcomment %}
-
 | Role & Responsibility                                                                                                                                          | Team                                   | Timeline            | Impact                                                                     |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- | ------------------- | -------------------------------------------------------------------------- |
 | **Sr. Director, Product Design**<br><br>Team hiring, management, and organization design. Design strategy. Partner management. Budgeting. Culture development. | 12 FT Designers + 6 Design Contractors | Jan 2019 - Aug 2023 | saved **$80M** p/a in operating costs<br>supported a **25% growth in MRR** |
 
 ## Streaming Video is Hard{#strategy}
 
-_To create something truly novel you need novel tools._
+>_To create something truly novel you need novel tools._
 
-Creating a global streaming service that meets consumers where they are, requires a constellation of powerful software components: routing video across the globe, programming the content in every region, setting pricing for dozens of currencies, supporting thousands of support castmembers, messaging guests about their favorite content... Operating at the scale that Disney does often requires us to build our own solutions. Off-the-shelf options are not viable due to cost or privacy constraints. 
+Building a global streaming service that fully meets consumer needs requires a constellation of software components in commerce, content, support, data insights, and developer tools. Disney's scale often requires us to build novel solutions due to cost or privacy constraints. 
+
+: video routing, editorial programming, pricing & bundle management, thousands of support castmembers, messaging guests about their favorite content... Operating at 
 
 As the executive accountable for product design of these tools my mission was to invest design effort in the products that could make the biggest business impact through customer acquisition, cost optimization, increasing agility, or improving decision quality.
 
@@ -213,3 +193,25 @@ Disney has a rich history of building new tools that unlock creative possibiliti
 ![Multiplane Camera](/images/portfolio/Walt_Disney_Multiplane_Camera_2.jpeg){.fullwidth style="height:62vh;object-position: 50% 38%;"}
 -->
 
+
+{% comment %}
+- ![Support Agent Portal](/images/portfolio/disney-enterprise/baymax-customer.jpg)
+- ![Commerce Portal](/images/portfolio/disney-enterprise/genie-offers.jpg)
+- ![Commerce Portal](/images/portfolio/disney-enterprise/web-genie.jpg)
+- ![Content Management](/images/portfolio/disney-enterprise/polaris-browse.jpg)
+- ![Content Management](/images/portfolio/disney-enterprise/polaris-set.jpg)
+- ![Metadata Browsing](/images/portfolio/disney-enterprise/tesseract-browse.jpg)
+- ![Metadata Detail](/images/portfolio/disney-enterprise/tesseract-detail.jpg)
+- ![Experimentation](/images/portfolio/disney-enterprise/web-weaponx.jpg)
+- ![Content Dictionary](/images/portfolio/disney-enterprise/web-cypher-dictionary.jpg)
+- ![Content Analytics](/images/portfolio/disney-enterprise/arc-heatmap.jpg)
+- ![Content Analytics](/images/portfolio/disney-enterprise/arc-content.jpg)
+- ![Messaging Portal](/images/portfolio/disney-enterprise/new/messaging-new-email.jpg)
+- ![Streaming Quality](/images/portfolio/disney-enterprise/web-enterprise-optumus-session.jpg)
+- ![Data Portal](/images/portfolio/disney-enterprise/web-dataportal.jpg)
+- ![Advertising](/images/portfolio/disney-enterprise/new/ads-mission-control-scheduling.jpg)
+- ![Developer Productivity](/images/portfolio/disney-enterprise/new/dev-portal.jpg)
+- ![Content Management](/images/portfolio/disney-enterprise/web-maestro.jpg)
+- ![Content Portal](/images/portfolio/disney-enterprise/new/content-portal-episode.jpg)
+{.gallery}
+{% endcomment %}

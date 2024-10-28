@@ -4,7 +4,7 @@ thumbnail: /images/portfolio/terremoto-screenshots/espn+_01.png
 masthead-image: /images/portfolio/espn-masthead-16x9.jpg
 masthead-video: /images/portfolio/espn/ESPN-ORGANIC_MLP_Generic.mp4
 date: 2020-02-01
-category:
+tags:
   - work
 summary: An experience vision looking four years into the future of streaming sports.
 timeline: "2019"

@@ -4,7 +4,7 @@ thumbnail: /images/portfolio/thumbs/espn-teaser-16x9.jpg
 masthead-image: /images/portfolio/espn-masthead-16x9.jpg
 masthead-video: /images/portfolio/espn/ESPN-ORGANIC_MLP_Generic.mp4
 date: 2018-04-12
-category:
+tags:
   - work
 eleventyExcludeFromCollections: true
 ---

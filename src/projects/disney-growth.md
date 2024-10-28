@@ -3,7 +3,7 @@ title: Disney+ Growth Design
 date: 2020-12-01
 thumbnail: /images/portfolio/disney-growth/disney-growth-thumb.jpg
 eleventyExcludeFromCollections: false
-category:
+tags:
   - work
 summary: Designing the product, team, and program that launched Disney+ from 0 to 105M subscribers.
 timeline: 2018-2020

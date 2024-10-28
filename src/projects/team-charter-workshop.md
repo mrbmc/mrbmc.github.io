@@ -1,11 +1,10 @@
 ---
 title: Team Charter Workshop
-category:
-  - talk
 date: 2022-05-22
 thumbnail: /images/portfolio/culture-workshop/culture-workshop.001.jpeg
 masthead-video: /images/portfolio/culture-workshop/EXD-workshop-timelapse.mp4
 tags:
+  - talk
   - culture
   - workshop
   - leadership

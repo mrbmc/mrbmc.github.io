@@ -5,6 +5,7 @@ thumbnail: /images/portfolio/boids-thumb.png
 masthead-image: /images/portfolio/boids-masthead.png
 masthead-video: /images/portfolio/boids.mp4
 tags:
+  - personal
   - tools
   - performance
   - UI-design

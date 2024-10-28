@@ -4,7 +4,7 @@ thumbnail: /images/portfolio/thumbs/disney-teaser-16x9.jpg
 title: Disney+
 masthead-video: /images/portfolio/disney/DSS_screen_white.mp4
 masthead-image: /images/portfolio/disney-tiles-16x9.jpg
-category:
+tags:
   - work
 eleventyExcludeFromCollections: true
 ---

@@ -1,9 +1,8 @@
 ---
 title: Flint & Silicon
-category:
-  - talk
 date: 2022-10-22
 tags:
+  - talk
   - UI-design
   - design
   - futurism

@@ -20,27 +20,6 @@ module.exports = function(eleventyConfig) {
   // ========================================
   // CONTENT PREP
 
-  // COLLECTION FOR BLOG POSTS
-  eleventyConfig.addCollection("posts", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("**/blog/posts/*.md").sort(function(a,b) {
-      // return a.date - b.date; // sort by date - ascending
-      return b.date - a.date; // sort by date - descending
-    });
-  });
-
-  // COLLECTION FOR WORK PROJECTS
-  eleventyConfig.addCollection("work", function(collectionApi) {
-    return collectionApi.getFilteredByTag('project').filter(item => item.data.category == "work").reverse();
-  });
-
-  eleventyConfig.addCollection("personal", function(collectionApi) {
-    return collectionApi.getFilteredByTag('project').filter(item => item.data.category == "personal").reverse();
-  });
-
-  eleventyConfig.addCollection("talk", function(collectionApi) {
-    return collectionApi.getFilteredByTag('project').filter(item => item.data.category == "talk").reverse();
-  });
-
   // COLLECTION FOR PHOTO GALLERY
   eleventyConfig.addCollection('gallery', async collectionApi => {
     let files = await glob('./src/_images/gallery/*.jpg');

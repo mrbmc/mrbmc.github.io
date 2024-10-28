@@ -4,9 +4,8 @@ date: 2005-01-01
 thumbnail: /images/portfolio/rhythmism/rhythmism-card.png
 masthead-image: /images/portfolio/rhythmism/rhythmism_teaser.jpg
 eleventyExcludeFromCollections: true
-category:
-  - personal
 tags:
+  - personal
   - UI-design
   - product
 ---

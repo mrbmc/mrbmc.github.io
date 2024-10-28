@@ -2,7 +2,7 @@
 title: Eurosport Player
 thumbnail: /images/portfolio/eurosport/eurosport-thumb.jpg
 date: 2018-01-01
-category:
+tags:
   - work
 eleventyExcludeFromCollections: false
 summary: I led an end-to-end redesign across TV, Mobile and Web of Europe's largest streaming sports service (analogous to ESPN in the US).

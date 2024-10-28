@@ -4,7 +4,7 @@ thumbnail: /images/portfolio/thumbs/nhl-teaser-16x9.jpg
 masthead-image: /images/portfolio/nhl/nhl-teaser-2x1.jpg
 masthead-video: /images/portfolio/nhl/nhl-masthead.mp4
 date: 2017-01-01
-category:
+tags:
   - work
 summary: NHL.tv was the hockey league's official streaming service. I directed the design of the entire experience on TV devices, web, and mobile.
 timeline: 2015-2018
@@ -44,4 +44,4 @@ This feature was a cross-functional effort to align the data feeds, UI build and
 
 See the feature in action.
 
-<video src="/images/portfolio/nhl/nhl-around-the-league.mp4" controls />
+<video src="/images/portfolio/nhl/nhl-around-the-league.mp4" controls></video>

@@ -4,7 +4,7 @@ date: 2017-01-01
 thumbnail: /images/portfolio/steelgills/steelgills-thumb.jpg
 masthead-image: /images/portfolio/steelgills/steelgills-teaser.jpg
 eleventyExcludeFromCollections: false
-category:
+tags:
   - personal
 ---
 This is a matter of life and death.

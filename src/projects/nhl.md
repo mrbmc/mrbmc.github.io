@@ -4,7 +4,7 @@ thumbnail: /images/portfolio/thumbs/nhl-teaser-16x9.jpg
 masthead-image: /images/portfolio/nhl/nhl-teaser-2x1.jpg
 masthead-video: /images/portfolio/nhl/nhl-masthead.mp4
 date: 2017-01-01
-category:
+tags:
   - work
 eleventyExcludeFromCollections: true
 ---

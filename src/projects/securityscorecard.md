@@ -4,7 +4,7 @@ thumbnail: /images/portfolio/thumbs/security-cover-16x9.jpg
 masthead-image: /images/portfolio/security-teaser.jpg
 date: 2015-07-01
 eleventyExcludeFromCollections: true
-category:
+tags:
   - work
 ---
 Security Scorecard provides an objective audit of your company's security posture. I consulted with Security Scorecard on refining their brand positioning and the core product experience.

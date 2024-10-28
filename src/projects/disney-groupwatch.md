@@ -3,7 +3,7 @@ title: Disney+ Groupwatch
 date: 2020-09-01
 thumbnail: /images/portfolio/disney-groupwatch/disney-groupwatch-preview.jpg
 eleventyExcludeFromCollections: false
-category:
+tags:
   - work
 summary: Social viewing connects people through the stories they love even when they're apart.
 timeline: 2019-2020
