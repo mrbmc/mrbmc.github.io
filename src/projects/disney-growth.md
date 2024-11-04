@@ -30,7 +30,7 @@ Disney+ launched in 2019 to become the fastest growing streaming service ever. M
 1. [Basecamp](#basecamp)
 	1. [The Mountain of Scope](#full-scope)
 	1. [Assembling the team](#project-team)
-	1. [Experience Tenets](#ux-tenets)
+	1. [Experience Principles](#ux-tenets)
 2. [Ascent](#ascent)
 	1. [Landing Page](#landing-page)
 	1. [TV Signup](#tv-signup)
@@ -100,7 +100,7 @@ I mentored two new designer leaders into positions leading their teams, with the
 ![](/images/portfolio/disney-growth/growth-team-end.png){.center}
 Growth Team in December 2020 {.caption}
 
-### Experience Tenets (aka Principles or Axioms){#ux-tenets}
+### Experience Principles (aka Tenets or Axioms){#ux-tenets}
 
 We established  **Experience Principles** for Disney+ because we've seen them improve the quality of design decisions on complex projects. Writing these with our cross-functional team made these real living ideas that people would say while collaborating.
 

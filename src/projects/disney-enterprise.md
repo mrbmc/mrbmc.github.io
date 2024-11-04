@@ -29,24 +29,28 @@ timeline: 2019-2023
 
 Building a global streaming service that fully meets consumer needs requires a constellation of software components in commerce, content, support, data insights, and developer tools. Disney's scale often requires us to build novel solutions due to cost or privacy constraints. 
 
-: video routing, editorial programming, pricing & bundle management, thousands of support castmembers, messaging guests about their favorite content... Operating at 
-
 As the executive accountable for product design of these tools my mission was to invest design effort in the products that could make the biggest business impact through customer acquisition, cost optimization, increasing agility, or improving decision quality.
 
-| Disney Product              | Purpose                                                                                     | Kpi | Commercial Analog(s)                                                                    |
-| --------------------------- | ------------------------------------------------------------------------------------------- | - | --------------------------------------------------------------------------------------- |
-| [Genie](#genie)                       | Billing and SKU management                                                                  | Net Subs, MRR | [Orb](https://www.withorb.com/), [Metronome](https://metronome.com/)                    |
-| [Baymax](#baymax)                      | Customer Support Portal                                                                     | OpEx, Gross Margin | [Zendesk](https://www.zendesk.com/)                                                     |
-| [WeaponX](#weaponx)                     | Experimentation & Feature Flagging                                                          | Net Subs, MRR, [RFE](#) | Optimizely, Launch Darkly                                                               |
-| [Polaris](#content-tools)                     | Content Curation                                                                            | RFE | [Contentful](https://www.contentful.com/) |
-| [Tesseract](#content-tools)                     | Content Review                                                                            | RFE, OpEx | [ContentStudio](https://contentstudio.io/) |
-| [Optumus](#optumus)                     | Streaming Quality Analysis                                                                  | OpEx | [Conviva](https://www.conviva.com/)                                                     |
-| Developer Platform          | Centralized resources for managing developer resources (services, APIs, documentation, etc) | OpEx | n/a                                                                                     |
-| [DATA Portal](#dataportal)               | A one-stop shop for all metrics and analytics of our streaming services.                    | n/a | [Tableau](https://www.tableau.com/), [Zoho](https://www.zoho.com/analytics/)            |
-| Ad Manager, Mission Control | Advertising curation, provisioning, and deployment.                                         | MRR | [Google AdSense](https://adsense.google.com/), Amazon Advertising                       |
-| Partner Portal              | Testing APIs, documentation, and issue tracking for developers building with Disney's SDK.  | Net Subs, MRR | [GitLabs](https://about.gitlab.com/)                                                    |
-| [Galaxy](#galaxy)                      | Platform for sending personalized targeted messages (Email, SMS, Push) to our users.        | Net Subs, MRR | [salesforce](https://www.salesforce.com/) + [braze](https://www.braze.com/)             |
+| Disney Product              | Purpose                                                                                     | Kpi                     | Commercial Analog(s)                                                         |
+| --------------------------- | ------------------------------------------------------------------------------------------- | ----------------------- | ---------------------------------------------------------------------------- |
+| [Genie](#genie)             | Billing and SKU management                                                                  | Net Subs, MRR           | [Orb](https://www.withorb.com/), [Metronome](https://metronome.com/)         |
+| [Baymax](#baymax)           | Customer Support Portal                                                                     | OpEx, Gross Margin      | [Zendesk](https://www.zendesk.com/)                                          |
+| [WeaponX](#weaponx)         | Experimentation & Feature Flagging                                                          | Net Subs, MRR, [RFE](#) | Optimizely, Launch Darkly                                                    |
+| [Polaris](#content-tools)   | Content Curation                                                                            | RFE                     | [Contentful](https://www.contentful.com/)                                    |
+| [Tesseract](#content-tools) | Content Review                                                                              | RFE, OpEx               | [ContentStudio](https://contentstudio.io/)                                   |
+| [Optumus](#optumus)         | Streaming Quality Analysis                                                                  | OpEx                    | [Conviva](https://www.conviva.com/)                                          |
+| Developer Platform          | Centralized resources for managing developer resources (services, APIs, documentation, etc) | OpEx                    | n/a                                                                          |
+| [DATA Portal](#dataportal)  | A one-stop shop for all metrics and analytics of our streaming services.                    | n/a                     | [Tableau](https://www.tableau.com/), [Zoho](https://www.zoho.com/analytics/) |
+| Ad Manager, Mission Control | Advertising curation, provisioning, and deployment.                                         | MRR                     | [Google AdSense](https://adsense.google.com/), Amazon Advertising            |
+| Partner Portal              | Testing APIs, documentation, and issue tracking for developers building with Disney's SDK.  | Net Subs, MRR           | [GitLabs](https://about.gitlab.com/)                                         |
+| [Galaxy](#galaxy)           | Platform for sending personalized targeted messages (Email, SMS, Push) to our users.        | Net Subs, MRR           | [salesforce](https://www.salesforce.com/) + [braze](https://www.braze.com/)  |
 _The scale of this platform was comparable to an entire industry._  
+
+To prioritize investment in each of these products, I used a Growth Framework, to compare the potential commercial impact for each. This helped in securing funding for staffing, contract, and roadmap priority.
+
+
+![Enterprise ROI](/images/portfolio/disney-enterprise/exd-roi-framework.png)
+
 
 ## The Team{#team}
 
