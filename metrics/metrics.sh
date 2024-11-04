@@ -36,6 +36,7 @@ function download () {
 	if [[ "$flag_skipdownload" ]]; then
 		echo "========================================";
 		echo "SKIP DOWNLOAD";
+		echo "----------------------------------------";
 		return;
 	fi
 
@@ -52,6 +53,9 @@ function download () {
 		tempstartmonth=$stopdatemonth;
 	fi
 
+	#NOTE: you can't unzip all files for a year so we go month by month
+	#gunzip -c -k -f $BASE'/downloads/E1TNSK7JF24IAY.2024-0'* | grep  -E -v -i -f ../blacklist.txt | goaccess  -o ../www/2024.html --log-format=CLOUDFRONT --no-query-string --agent-list --ignore-crawlers --unknowns-as-crawlers --tz="America/New York"
+	#zcat -f logs/log_clean0* 
 	for i in {$tempstartmonth..$stopdatemonth}
 	do
 		echo "2024-$i unzipping";
@@ -66,32 +70,30 @@ function parse () {
 	echo "----------------------------------------";
 
 
-	if (( $#flag_raw )); then
-		echo "Concatenating 2024 raw"
-		zcat -f $BASE/logs/log_raw_2024-* > $BASE/logs/log_raw;
-		return true;
-	fi
-
 	tempstartmonth=$startdatemonth;
+	# this optimizes parsing by not skipping past month that haven't changed but it's really not needed and messes up the L30 et al
 	# if [[ "$arg_duration[-1]" != "all" ]]; then
 	# 	tempstartmonth=$stopdatemonth;
 	# fi
 
-	for i in {$tempstartmonth..$stopdatemonth}
-	do
-		echo "Cleaning 2024-$i";
-		cat  $BASE'/logs/log_raw_2024-'$i |\
-		grep -E -v -i -f $BASE/blacklist-agents.txt |\
-		grep -E -v -i -f $BASE/blacklist-urls.txt\
-		> $BASE'/logs/log_clean_2024-'$i
-	done
+	if (( $#flag_raw )); then
+		echo "Concatenating 2024 raw"
+		zcat -f $BASE/logs/log_raw_2024-* > $BASE/logs/log_raw;
+		return true;
+	else
 
-	echo "Concatenating 2024"
-	zcat -f $BASE/logs/log_clean_2024-* > $BASE/logs/log_clean;
+		for i in {$tempstartmonth..$stopdatemonth}
+		do
+			echo "Cleaning 2024-$i";
+			cat  $BASE'/logs/log_raw_2024-'$i |\
+			grep -E -v -i -f $BASE/blacklist-agents.txt |\
+			grep -E -v -i -f $BASE/blacklist-urls.txt\
+			> $BASE'/logs/log_clean_2024-'$i
+		done
 
-#NOTE: you can't unzip all files for a year. too many files.
-#gunzip -c -k -f $BASE'/downloads/E1TNSK7JF24IAY.2024-0'* | grep  -E -v -i -f ../blacklist.txt | goaccess  -o ../www/2024.html --log-format=CLOUDFRONT --no-query-string --agent-list --ignore-crawlers --unknowns-as-crawlers --tz="America/New York"
-#zcat -f logs/log_clean0* 
+		echo "Concatenating 2024 clean"
+		zcat -f $BASE/logs/log_clean_2024-* > $BASE/logs/log_clean;
+	fi
 
 }
 
@@ -110,19 +112,17 @@ function analyze () {
 
 
 	tempstartmonth=$startdatemonth;
-	# if [[ "$arg_duration[-1]" != "all" ]]; then
-	# 	tempstartmonth=$stopdatemonth;
-	# fi
 
 	for i in {$tempstartmonth..$stopdatemonth}
 	do
-		echo "Analyzing 2024-$i";
 
 		if (( $#flag_raw )); then
 			# raw logs
+			echo "Analyzing 2024-$i RAW";
 			goaccess_cmd="goaccess $BASE/logs/log_raw_2024-$i -o $BASE/www/2024$i-raw.html ";
 		else
 			# clean logs
+			echo "Analyzing 2024-$i CLEAN";
 			goaccess_cmd="goaccess $BASE/logs/log_clean_2024-$i -o $BASE/www/2024$i.html ";
 		fi
 
@@ -130,14 +130,17 @@ function analyze () {
 		eval ${goaccess_cmd}
 	done
 
-	periods_opt=('7d' '30d' '90d')
+	periods_opt=('7d' '30d')# '90d')
+	sedhackmon=$(date -v+1d +%m);
+	sedhackday=$(date -v+1d +%d);
 	for duration in $periods_opt
 	do
-		echo "Analyzing -$duration";
 		if (( $#flag_raw )); then
-			sed_cmd="sed -n '/2024\-'$(date -v-$duration +%m)'\-'$(date -v-$duration +%d)'/,/2024\-'$stopdatemonth'\-'$stopdateday'/ p' $BASE/logs/log_raw | goaccess -a -o $BASE/../metrics/www/l$duration-raw.html $goaccess_opt";
+			echo "Analyzing -$duration RAW";
+			sed_cmd="sed -n '/2024-'$(date -v-$duration +%m)'-'$(date -v-$duration +%d)'/,/2024-'$sedhackmon'-'$sedhackday'/ p' $BASE/logs/log_raw | goaccess -a -o $BASE/../metrics/www/l$duration-raw.html $goaccess_opt";
 		else
-			sed_cmd="sed -n '/2024\-'$(date -v-$duration +%m)'\-'$(date -v-$duration +%d)'/,/2024\-'$stopdatemonth'\-'$stopdateday'/ p' $BASE/logs/log_clean | goaccess -a -o $BASE/../metrics/www/l$duration.html $goaccess_opt";
+			echo "Analyzing -$duration CLEAN";
+			sed_cmd="sed -n '/2024-$(date -v-$duration +%m)-$(date -v-$duration +%d)/,/2024-$sedhackmon-$sedhackday/ p' $BASE/logs/log_clean | goaccess -a -o $BASE/../metrics/www/l$duration.html $goaccess_opt";
 		fi
 		eval ${sed_cmd}
 	done
