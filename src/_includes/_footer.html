@@ -27,7 +27,7 @@
             <a href="/colophon/">Colophon</a>
             <a href="/privacy/">Privacy</a>
         </nav>
-        <p class="small" id="modified">© <script>document.write( document.lastModified );</script> &nbsp; Brian McConnell</p>
+        <p class="updated-timestamp">© <span id="mod-date"></span> Brian McConnell</p>
     </div>
 </footer>
 <svg viewBox="0 0 320 320" xmlns='http://www.w3.org/2000/svg' id="noiseImage">
@@ -41,6 +41,10 @@
   </filter>
 </svg>
 <script type="text/javascript" language="javascript">
+
+const date = new Date(Date.parse(document.lastModified));
+document.getElementById('mod-date').innerText = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`;
+
 window.addEventListener('load', function(e) {
     "use strict";
     var links = document.getElementsByClassName('link-email');

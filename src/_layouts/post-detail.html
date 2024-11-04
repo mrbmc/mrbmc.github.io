@@ -21,7 +21,7 @@ parallaxHeading: true
 
 <nav class="related-posts">
     <h2>Related Posts</h2>
-    {% assign similar = collections.posts | similarPosts: page.inputPath, tags %}
+    {% assign similar = collections.post | similarPosts: page.inputPath, tags %}
     {% for post in similar limit: 3 %}
     <p class="post">
         <span class="date">{{ post.data.date | date: "%Y-%m-%d" }}</span>

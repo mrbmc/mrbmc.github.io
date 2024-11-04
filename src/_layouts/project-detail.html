@@ -2,7 +2,6 @@
 layout: layout.html
 bodyclass: portfolio project
 ---
-
 {% if masthead-video or masthead-image %}
 {% include "_masthead.html" %}
 {% else %}
@@ -14,12 +13,11 @@ bodyclass: portfolio project
 
 {{ content }}
 
-{% assign nextPost = collections[category] | getPreviousCollectionItem: page %}
-{% assign previousPost = collections[category] | getNextCollectionItem: page %}
+{% assign nextPost = collections[tags[0]] | getPreviousCollectionItem: page %}
+{% assign previousPost = collections[tags[0]] | getNextCollectionItem: page %}
 <nav class="pagination">
     {% if previousPost %}<a href="{{ previousPost.url }}">← Previous Project: {{ previousPost.data.title }}</a>{% endif %}
     {% if nextPost %}<a href="{{ nextPost.url }}">Next Project: {{ nextPost.data.title }} →</a>{% endif %}
 </nav>
-
 
 <script type="text/javascript" language="javascript" src="/js/portfolio.min.js"></script>
