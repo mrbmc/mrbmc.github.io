@@ -92,8 +92,8 @@ body.resume #header #menu a[href="/about/"] {
     margin: $spacer-vertical auto;
     box-shadow: 0 $shadow-offset $shadow-depth $shadow-color;
     border-radius: 2rem;
-    -webkit-backdrop-filter: blur(.25rem);
-    backdrop-filter: blur(.25rem);
+    -webkit-backdrop-filter: blur(.2rem);
+    backdrop-filter: blur(.2rem);
 
 
     &>li {
