@@ -1,10 +1,9 @@
 @use 'sass:math';
 
-@import "./_mixins.scss"; 
 @import "./_variables.scss";
+@import "./_mixins.scss"; 
 @import "./_animations.scss";
 @import "./_type.scss";
-
 
 // ======================================================================
 // LAYOUT
@@ -288,8 +287,6 @@ blockquote,.blockquote {
 
 @import "_footer.scss";
 
-@import "_publishing.scss";
-
 ol.sidenav {
     position: sticky;
     top: 0;//calc(100vh + 3em);
@@ -389,6 +386,12 @@ details {
 
 
 
+
+
+// ======================================================================
+// SHARED CODE
+
+@import "_publishing.scss";
 
 
 // ======================================================================
