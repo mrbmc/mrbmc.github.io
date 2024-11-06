@@ -104,19 +104,18 @@ Growth Team in December 2020 {.caption}
 
 We established  **Experience Principles** for Disney+ because we've seen them improve the quality of design decisions on complex projects. Writing these with our cross-functional team made these real living ideas that people would say while collaborating.
 
-<details>
+<div class="grid x2x2 fullwidth90">
+	<details class="card">
 	<summary>"First stream, first."</summary>
-This was the most important tenet that we aligned with company leadership. Disney's primary competitive advantage is that the content catalog is **already known and beloved**.
-
-We believed escorting guests into a curated browsing experience to get them to a view as quickly as possible was more valuable than collecting more information at signup, or a guided onboarding UI to set up personalization.
+Disney's competitive advantage is that their content is <strong>already known and beloved</strong>. We believed escorting guests into a browsing experience of familiar content would lead them to their <em>first view</em> as quickly as possible. The first view was more valuable to us than collecting marketing information, or personalized onboarding.
 
 - Remove *all* unnecessary signup fields (at the expense of marketing and advertising).
 - Defer all onboarding features (in favor of implicit personalization).
 - Minimize and humanize legal language.
 
-While this may all sound obvious, it wasn't how many of our competitors were operating in 2018. It was also not how Disney had operated and required significant stakeholder education, reinforced by our 3rd tenet.
+This sounds obvious, but it wasn't how our competitors were operating in 2018, or how Disney operated. This mindset shift required significant stakeholder education, reinforced by our 3rd tenet.
 </details>
-<details>
+<details class="card">
 	<summary>"Disney... Aged up"</summary>
 	<div>
 "Aged up" was a phrase that everyone on the design team used on a nearly daily basis. It was a shorthand for explaining that the design needed to be as premium & modern, as it was magical. The dark color palette, modern san-serif type, and restrained graphics exist in service of this tenet.
@@ -125,7 +124,7 @@ Disney had already been on a long and steady brand transformation to appeal to a
 	</div>
 
 </details>
-<details>
+<details class="card">
 	<summary>"Subscribers, Then Revenue"</summary>
 	<div>
 The goal of Disney+ was to deepen our guests' relationship with the stories & characters they love, not to optimize short-term revenue. We accept as an article of faith that this approach maximizes revenue in the long term.
@@ -138,7 +137,7 @@ _Spoiler: this would change six months after the launch._
 	</div>
 
 </details>
-<details>
+<details class="card">
 	<summary>"Disney Hospitality."</summary>
 	<div>
 	
@@ -149,6 +148,7 @@ _Spoiler: this would change six months after the launch._
 
 	</div>
 </details>
+</div>
 
 
 ## Chapter 2: Ascent {#ascent .section}
@@ -356,9 +356,9 @@ We also had a list of 6 viable ideas to prototype and test with users.
 
 Disney+ became the fastest-growing streaming service *ever*. 
 
-<div class="grid"><dl class="kpi"><dt>Net Subscribers</dt>
+<div class="grid"><dl class="card kpi"><dt>Net Subscribers</dt>
 <dd>+103.6 million</dd>
-<dt>Aug 2019 - Dec 2020</dt></dl><dl class="kpi"><dt>MRR</dt>
+<dt>Aug 2019 - Dec 2020</dt></dl><dl class="card kpi"><dt>MRR</dt>
 <dd>+$48.36</dd>
 <dt>Aug 2019 - Dec 2020</dt></dl></div>
 
@@ -376,7 +376,7 @@ I like to think we enabled the continued growth over the next 18 months and beyo
 
 <style>
 @media (prefers-color-scheme: dark) {
-##main img[src*="svg"] { filter:invert(1) hue-rotate(180deg);}
+/* 	#main img[src*="svg"] { filter:invert(1) hue-rotate(180deg);} */
 }
 h2#basecamp:before {
     background-image: url(/images/portfolio/disney-growth/everest-basecamp-web.jpg);
