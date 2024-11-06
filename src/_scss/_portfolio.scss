@@ -127,6 +127,8 @@ body.project {
     @include item-detail();
 
     #main {
+        display: flex;
+        flex-direction: column;
         p.summary {
             margin-bottom: ($spacer-vertical * 2);
         }
