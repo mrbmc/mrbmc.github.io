@@ -132,6 +132,10 @@ body.project {
         p.summary {
             margin-bottom: ($spacer-vertical * 2);
         }
+        h2,h3 {
+            margin-top: ($spacer-vertical * 4);
+            margin-bottom: ($spacer-vertical * 2);
+        }
     }
     @media (orientation: portrait) {
         #scrollhint {
