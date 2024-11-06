@@ -7,15 +7,13 @@
     "lib": "lib"
   },
   "scripts": {
-    "build:sass": "sass src/_scss:www/css --style compressed",
     "build:js": "./build.sh buildjs verbose",
+    "build:sass": "sass src/_scss:www/css --style compressed",
     "build:eleventy": "npx @11ty/eleventy",
     "build": "npm-run-all build:*",
-
-    "watch:sass": "sass --watch src/_scss:www/css",
+    "watch:sass": "sass --watch src/_scss:www/css --style compressed",
     "watch:eleventy": "npx @11ty/eleventy --serve --incremental --ignore-initial",
     "watch": "npm-run-all watch:*",
-
     "start": "npm-run-all --parallel watch:*",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
