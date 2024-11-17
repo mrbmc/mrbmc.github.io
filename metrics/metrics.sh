@@ -130,7 +130,7 @@ function analyze () {
 		eval ${goaccess_cmd}
 	done
 
-	periods_opt=('7d' '30d')# '90d')
+	periods_opt=('7d' '30d' '90d')
 	sedhackmon=$(date -v+1d +%m);
 	sedhackday=$(date -v+1d +%d);
 	for duration in $periods_opt

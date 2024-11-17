@@ -31,12 +31,12 @@ module.exports = function(eleventyConfig) {
     outputDir: "www/images/optimized/",
 
     // optional, output image formats
-    formats: ["auto"],
-    // formats: ["webp", "avif"],
+    // formats: ["auto"],
+    formats: ["webp"],
 
     // optional, output image widths
-    // widths: ["auto"],
-    widths: [1280],
+    widths: ["auto"],
+    // widths: [1280],
 
     // optional, attributes assigned on <img> override these values.
     defaultAttributes: {

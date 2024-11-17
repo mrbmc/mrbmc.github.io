@@ -40,8 +40,7 @@ These research studies helped us identify three specific problems we wanted to s
 
 ### Inventions And Innovation
 
-![The patent application for the synchronization technology](/images/portfolio/disney-groupwatch/groupwatch-patent.jpg)The patent application for Groupwatch's underlying technology.{.pullleft .caption}
-
+![The patent application for the synchronization technology](/images/portfolio/disney-groupwatch/groupwatch-patent.jpg){.pullleft}
 At the same time the Design team was doing user research, an R&D technology team had invented a new method for synchronizing video across multiple devices. Their patented method made synchronization fast, scalable (supporting many devices and long distances), and unique to this method it was feasible on TV devices. This new tech had several potential applications such as remote controls, safety features, and co-viewing. 
 
 ### Alignment Workshop
@@ -83,12 +82,14 @@ Our executive leaders wanted to ensure there was a viable market for social-view
 The market research we collected along with the previous UX research gave us a foundation to start defining guidelines that would guide future product, design, and technology decisions. These were co-authored by teammates from Design, Product, and Product Marketing.
 
 1. **GroupWatch must foster a feeling of being together**  
-    Strengthen social bonds through a positive shared experience. Build on features that touch people simultaneously, like reactions, playback control and rally points.
+    Strengthen social bonds through a positive shared experience. Build on features that touch people simultaneously, like reactions, playback control and rally points.{.card}
+    
 2. **GroupWatch is for intimate groups, i.e. family & close friends**   
-   GroupWatch will be most used by groups of 2-4 people, as opposed to community viewing (theatre) or massive social viewing party (Twitch).
+   GroupWatch will be most used by groups of 2-4 people, as opposed to community viewing (theatre) or massive social viewing party (Twitch).{.card}
+   
 3. **GroupWatch is additive to existing behaviors**   
-   Use mobile devices for communication and TVs for viewing. Tap into existing social norms for planning and watching.
-
+   Use mobile devices for communication and TVs for viewing. Tap into existing social norms for planning and watching.{.card}
+{.hero .grid .x3x1}
 ### Design Principles
 
 Principles are a powerful way to align teams in big programs and guide decisions about tradeoffs in the design. Principles must address the specific user goals and business constraints of a project. Generic principles about "ease of use" and "delightful" do not aid critical thinking in a specific context.

@@ -6,76 +6,6 @@
 @import "./_type.scss";
 
 // ======================================================================
-// LAYOUT
-body,html {
-    // overflow-x: hidden;
-    overscroll-behavior-x: none;
-}
-
-.fullwidth {
-    @include fullWidth(100vw);
-}
-.fullwidth90 {
-    @include fullWidth(90vw);
-}
-.fullheight {
-    @include fullHeight(90vh);
-}
-
-h1,h2,h3,h4,h5{
-    margin: 1em 0 1rem 0;
-    padding: 0;
-}
-p,ul,ol,dl,blockquote,.blockquote {
-    margin: 0 0 1rem 0;
-    padding: 0;
-}
-li, dt {
-    margin-left: 1em;
-    box-sizing: border-box;
-}
-body {
-    > main {
-        box-sizing: border-box;
-        margin: 0 auto;
-        width: 100%;
-        max-width: $grid-width;
-        @media (orientation: portrait) {
-            padding: 0 $spacer-horizontal;
-            max-width: 75vh;
-        }
-        >h1:first-child,>section:first-child {
-            padding-top: $spacer-vertical;
-        }
-    }
-}
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(1em,2fr));
-    grid-auto-flow: column;
-    grid-gap: ($spacer-horizontal * 2);
-    margin-top: $spacer-vertical;
-    margin-bottom: $spacer-vertical;
-
-    &>* {
-        list-style: none;
-        margin: 0;
-    }
-    @media (orientation: portrait) {
-        grid-auto-flow: row;
-    }
-    &.x2x2 {
-        grid-auto-flow: row;
-        grid-template-columns: 50% 50%;
-    }
-}
-
-
-
-
-
-
-// ======================================================================
 // CORE STYLES
 html {
     scroll-behavior: smooth;
@@ -116,11 +46,9 @@ a {
     margin-right: auto;
     text-indent: 0;
 }
-
 @mixin hide {
     display: none !important;
 }
-
 img,video {
     width: 100%;
     height: auto;
@@ -150,27 +78,6 @@ ul.inline,ol.inline {
         float: left;
     }
 }
-ul.soc {
-    list-style:none;
-    display: flex;
-    margin: 0;
-    font-size: 1.25rem;
-    li {
-        margin: 0;
-        a {
-            margin-right: 2em;
-        }
-        &:last-of-type {
-            a {
-                margin-right: 0;
-            }
-        }
-        .soc-medium,
-        .soc-github {
-            display: none;
-        }
-    }
-}
 hr {
     background: none;
     margin: ($spacer-vertical * 1) auto;
@@ -180,7 +87,6 @@ hr {
     border: none;
     border-top: 1px solid $border-color;
 }
-
 table {
     width: 100%;
     max-width: 100%;
@@ -207,15 +113,6 @@ table {
 }
 .negative {
     color: $_orange;
-}
-
-figure {
-    img,video {
-        width: 100%;
-    }
-}
-main > section {
-    margin-bottom: $spacer-vertical * 2;
 }
 
 
@@ -274,6 +171,7 @@ blockquote,.blockquote {
 .inverse {
     @include inverse();
 }
+
 
 
 
@@ -384,6 +282,79 @@ details {
 }
 
 
+
+
+// ======================================================================
+// LAYOUT
+body,html {
+    // overflow-x: hidden;
+    overscroll-behavior-x: none;
+}
+
+.fullwidth {
+    @include fullWidth(100vw);
+}
+.fullwidth90 {
+    @include fullWidth(90vw);
+}
+.fullheight {
+    @include fullHeight(90vh);
+}
+
+h1,h2,h3,h4,h5{
+    margin: 1em 0 1rem 0;
+    padding: 0;
+}
+p,ul,ol,dl,blockquote,.blockquote {
+    margin: 0 0 1rem 0;
+    padding: 0;
+}
+li, dt {
+    margin-left: 1em;
+    box-sizing: border-box;
+}
+body {
+    > main {
+        box-sizing: border-box;
+        margin: 0 auto;
+        width: 100%;
+        max-width: $grid-width;
+        @media (orientation: portrait) {
+            padding: 0 $spacer-horizontal;
+            max-width: 75vh;
+        }
+        >h1:first-child,>section:first-child {
+            padding-top: $spacer-vertical;
+        }
+    }
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(1em,2fr));
+    grid-auto-flow: column;
+    grid-gap: ($spacer-horizontal * 2);
+    margin-top: $spacer-vertical;
+    margin-bottom: $spacer-vertical;
+
+    &>* {
+        list-style: none;
+        margin: 0;
+    }
+    @media (orientation: portrait) {
+        grid-auto-flow: row;
+    }
+    &.x2x2 {
+        grid-auto-flow: row;
+        grid-template-columns: 50% 50%;
+    }
+    &.x3x1 {
+        grid-auto-flow: row;
+        grid-template-columns: 33% 33% 33%;
+    }
+}
+main > section {
+    margin-bottom: $spacer-vertical * 2;
+}
 
 
 

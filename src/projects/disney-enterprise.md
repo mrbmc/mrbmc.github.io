@@ -10,8 +10,8 @@ timeline: 2019-2023
 ---
 
 1. [The Strategy](#strategy)
-2. [Team Building](#team)
-3. [Product Domains](#products)
+2. [The Team](#team)
+3. [The Products](#products)
    1. [Commerce](#commerce)
    2. [Content](#content-tools)
    4. [Business Intelligence](#analytics)
@@ -23,7 +23,7 @@ timeline: 2019-2023
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- | ------------------- | -------------------------------------------------------------------------- |
 | **Sr. Director, Product Design**<br><br>Team hiring, management, and organization design. Design strategy. Partner management. Budgeting. Culture development. | 12 FT Designers + 6 Design Contractors | Jan 2019 - Aug 2023 | saved **$80M** p/a in operating costs<br>supported a **25% growth in MRR** |
 
-## Streaming Video is Hard{#strategy}
+## The Strategy of Streaming{#strategy}
 
 >_To create something truly novel you need novel tools._
 
@@ -74,12 +74,17 @@ To tackle such a large surface area, we organized the team into pods for each to
 ![](/images/portfolio/disney-enterprise/exd-pods.png){.card}
 
 
-## Product Domains{#products}
+## The Products {#products}
 
 ### Commerce Tools{#commerce}
 
-#### Genie{#genie}
-This tool was built to manage 1000+ offer combinations of currency, content rights, and devices. Running our commerce stack enabled Disney+'s global expansion, bundles & special offers, and price changes; all of which significantly grew MRR.
+#### Offer Management {#genie}
+
+*codename "Genie"*
+
+Putting the right offer in front of the right user at the right time is depetively complex. At global scale that means 1000+ combinations of content rights, currency, payment terms, and devices. Running our own commerce stack unlocked Disney+'s global expansion from 25M domestic subscribers to 105M global **net subscribers**.
+
+Features for managine automated price changes grew **MRR** by 25% YoY.
 
 - ![props 2](/images/portfolio/disney-enterprise/props-list.jpg)
 - ![genie 1](/images/portfolio/disney-enterprise/genie-offers.jpg)
@@ -88,11 +93,17 @@ This tool was built to manage 1000+ offer combinations of currency, content righ
 
 #### Support Agent Tools{#baymax}
 
-Disney provides its guests and exceptional level of care. Disney+ is no exception, but it can be a significant cost center as well. Optimizing the tools for our support agents to reduce case resolution times and contact volume saved Disney **million$ in operating expenses**.
+*codename Baymax*
+
+Disney provides its guests and exceptional level of care. Disney+ is no exception, but it can be a significant cost center as well. These custom built tools for our agents saved Disney **$20M/pa in operating expenses** 
+
+We focused on shortening **case resolution time**, increasing **CSAT** scores, and giving agents upsell capability.
 
 ![Support Agent Portal](/images/portfolio/disney-enterprise/baymax-customer.jpg)
 
 #### Lifecycle Messaging{#galaxy}
+
+*codename Galaxy*
 
 Messaging our guests on the device and content they prefer.
 
@@ -100,6 +111,8 @@ Messaging our guests on the device and content they prefer.
 
 
 ### Content Platform{#content-tools}
+
+*codenames Polaris & Tesseract*
 
 The content strategy for most streaming services, including Disney+, is to create an audience of one. Each user experiences a bespoke presentation of content.
 ![content strategy](/images/portfolio/disney-enterprise/disney-content-strategy.jpg)
@@ -124,7 +137,18 @@ Improve the quality of decision making for everyone at Disney.
 
 #### Streaming Analytics{#optumus}
 
-![Streaming QoS Analysis](/images/portfolio/disney-enterprise/optumus-mockup.jpg)
+*codename Optumus*
+
+The internet is not built for persistent delivery of high bandwidth http packets. Making good on our promise of sterling quality video to consumers on any device in any region, required specialized tools that could pro-actively identify issues and notify engineers with actionable insights.
+
+The team used participatory design methods that included the users - delivery engineers - into the design process to ensure the product was usable and useful to real world use cases.
+
+Building this product internally saved Disney **$30M/pa** over comparable third party products.
+
+- ![Streaming QoS Analysis](/images/portfolio/disney-enterprise/enterprise-optumus-dashboard.png)
+- ![Streaming QoS Analysis](/images/portfolio/disney-enterprise/enterprise-optumus-session.png)
+- ![Streaming QoS Analysis](/images/portfolio/disney-enterprise/enterprise-optumus-spotlight.png)
+{.gallery}
 
 #### Experimentation, A/B Testing, Feature Flagging {#weaponx}
 
