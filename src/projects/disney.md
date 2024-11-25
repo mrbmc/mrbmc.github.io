@@ -20,7 +20,7 @@ I joined Disney through their acquisition of MLB/BAMTech to launch their streami
 
 ## Growth Design
 
-[![Growth Design](/images/portfolio/disney-growth/disney-growth.png)](/portfolio/disney-growth)
+[![Growth Design](/images/portfolio/disney-growth/disney-growth.png)](/portfolio/disney-growth/)
 
 How might we onboard guests to a brand-new streaming service from the most beloved entertainment brand in the world? 
 
@@ -28,7 +28,7 @@ How might we onboard guests to a brand-new streaming service from the most belov
 
 **The result: 110 Million subscribers in two years**
 
-[Read the full case study on launching Disney+ Growth](/portfolio/disney-growth)
+[Read the full case study on launching Disney+ Growth](/portfolio/disney-growth/)
 
 ----
 
@@ -54,6 +54,6 @@ Collectively these products ***saved Disney $100M p/a in operating costs***; but
 - ![Global Dictionary](/images/portfolio/disney-enterprise/cypher-dictionary.png)
 - ![Editorial + Algorithmic content management](/images/portfolio/disney-enterprise/maestro.png)
 - ![A/B/N Experiments & Feature Flagging](/images/portfolio/disney-enterprise/weaponx.png)
-- ![Streaming Quality Analytics](/images/portfolio/disney-enterprise/enterprise-optumus-session.png)
+- ![Streaming Quality Analytics](/images/portfolio/disney-enterprise/optumus-session.png)
 - ![Customer Support Tooling](/images/portfolio/disney-enterprise/baymax.png)
 {.gallery}

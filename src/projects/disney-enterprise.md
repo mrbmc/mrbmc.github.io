@@ -1,6 +1,6 @@
 ---
 title: Disney Enterprise XD
-date: 2020-10-01
+date: 2020-09-01
 thumbnail: /images/portfolio/disney-enterprise/optumus-mockup.jpg
 eleventyExcludeFromCollections: false
 tags:
@@ -23,9 +23,10 @@ timeline: 2019-2023
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- | ------------------- | -------------------------------------------------------------------------- |
 | **Sr. Director, Product Design**<br><br>Team hiring, management, and organization design. Design strategy. Partner management. Budgeting. Culture development. | 12 FT Designers + 6 Design Contractors | Jan 2019 - Aug 2023 | saved **$80M** p/a in operating costs<br>supported a **25% growth in MRR** |
 
-## The Strategy of Streaming{#strategy}
+## The Strategy ( of Streaming){#strategy}
 
->_To create something truly novel you need novel tools._
+>To create something truly novel you need novel tools.  
+-Brian McConnell
 
 Building a global streaming service that fully meets consumer needs requires a constellation of software components in commerce, content, support, data insights, and developer tools. Disney's scale often requires us to build novel solutions due to cost or privacy constraints. 
 
@@ -63,7 +64,7 @@ A team is greater than the sum of the individuals. It's a singular unit with a s
 
 ![golden circle](/images/portfolio/disney-enterprise/EXD-Golden-Circle.png){style="box-shadow:0 1em 1.38em 0.38em rgba(0,0,0,0.13);"}
 
-Culture can be designed with intentional reinforcement of the behaviors that align with our values. Other teams at Disney saw this and asked for an open-source toolkit for our [culture workshop](/portfolio/team-culture-workshop/).
+Culture can be designed with intentional reinforcement of the behaviors that align with our values. Other teams at Disney saw this and asked for an open-source toolkit for our [Team Charter Workshop](/portfolio/team-charter-workshop/).
 
 <video src="/images/portfolio/culture-workshop/EXD-workshop-timelapse.mp4" autoplay muted loop ></video>
 
@@ -82,14 +83,14 @@ To tackle such a large surface area, we organized the team into pods for each to
 
 *codename "Genie"*
 
-Putting the right offer in front of the right user at the right time is depetively complex. At global scale that means 1000+ combinations of content rights, currency, payment terms, and devices. Running our own commerce stack unlocked Disney+'s global expansion from 25M domestic subscribers to 105M global **net subscribers**.
+Putting the right offer in front of the right user at the right time is depetively complex. At global scale that means 1000+ combinations of content rights, currency, payment terms, and devices. Running our own commerce stack unlocked Disney+'s global expansion from 25M subscribers domestically to **105M net subscribers** globally.
 
-Features for managine automated price changes grew **MRR** by 25% YoY.
+Features for managine automated price changes grew **MRR by 25% YoY**.
 
-- ![props 2](/images/portfolio/disney-enterprise/props-list.jpg)
-- ![genie 1](/images/portfolio/disney-enterprise/genie-offers.jpg)
-- ![genie 2](/images/portfolio/disney-enterprise/genie-campaign.png)
-{.gallery}
+- ![props 2](/images/portfolio/disney-enterprise/props-list.jpg) {.col4}
+- ![genie 2](/images/portfolio/disney-enterprise/genie-campaign.png) {.col8 .row2}
+- ![genie 1](/images/portfolio/disney-enterprise/genie-offers.jpg) {.col4}
+{.mosaic}
 
 #### Support Agent Tools{#baymax}
 
@@ -99,7 +100,10 @@ Disney provides its guests and exceptional level of care. Disney+ is no exceptio
 
 We focused on shortening **case resolution time**, increasing **CSAT** scores, and giving agents upsell capability.
 
-![Support Agent Portal](/images/portfolio/disney-enterprise/baymax-customer.jpg)
+- ![Support Agent Portal](/images/portfolio/disney-enterprise/baymax-customer.jpg) {.col8 .row2}
+- ![Support Agent Portal](/images/portfolio/disney-enterprise/baymax-search_results.png) {.col4}
+- ![Support Agent Portal](/images/portfolio/disney-enterprise/baymax-cancel.png) {.col4}
+{.mosaic}
 
 #### Lifecycle Messaging{#galaxy}
 
@@ -114,18 +118,26 @@ Messaging our guests on the device and content they prefer.
 
 *codenames Polaris & Tesseract*
 
+A team of editors steeped in knowledge of the Disney catalog created hundreds of content collections around themes, brands, characters. We built a WYSIWYG editor that showed the custom artwork for each title so editors could organize collections in a visually harmonious way. _We saw engagement and CVR lift from doing this._
+
+- ![Visual Browsing](/images/portfolio/disney-enterprise/polaris-search.png) {.col4 .contain}
+- ![Visual Browsing](/images/portfolio/disney-enterprise/polaris-visualbrowse.png) {.col4 .contain}
+- ![Content Curation](/images/portfolio/disney-enterprise/polaris-set-pcs.png) {.col4}
+{.mosaic}
+
+#### An Audience of One
+
 The content strategy for most streaming services, including Disney+, is to create an audience of one. Each user experiences a bespoke presentation of content.
+
 ![content strategy](/images/portfolio/disney-enterprise/disney-content-strategy.jpg)
 
-Our tactic to achieve this was an "Algotorial" presentation that leveraged the best attributes of human curation and machine learning.
-A team of editors steeped in knowledge of the Disney catalog created hundreds of content collections around themes, brands, characters. Those collections were further optimized by algorithms. The order of collections presented was mostly machine optimized with a few human overrides for proven tactics [redacted].
+ Our tactic to achieve this was an "Algotorial" presentation that leveraged the best attributes of human curation and machine learning. Editorial collections were ML optimized, and the display order was optimized with a few human overrides for ~~redacted tactic~~.
 
-- ![Content Curation](/images/portfolio/disney-enterprise/polaris-browse.jpg)
-- ![Content Curation](/images/portfolio/disney-enterprise/polaris-set.jpg)
-- ![Metadata Browsing](/images/portfolio/disney-enterprise/tesseract-browse.jpg)
-- ![Metadata Detail](/images/portfolio/disney-enterprise/tesseract-detail.jpg)
-- ![Metadata Portal](/images/portfolio/disney-enterprise/new/knowsmore.jpg)
-{.gallery}
+
+- ![Content Targeting](/images/portfolio/disney-enterprise/polaris-edit_cta.png) {.col3 .contain}
+- ![Content Targeting](/images/portfolio/disney-enterprise/polaris-collection.png) {.col6 .contain}
+- ![Content Targeting](/images/portfolio/disney-enterprise/polaris-browse.jpg) {.col3 .contain}
+{.mosaic}
 
 ### Analytics{#analytics}
 
@@ -133,7 +145,7 @@ Improve the quality of decision making for everyone at Disney.
 
 #### Data Portal{#dataportal}
 
-![Data Portal](/images/portfolio/disney-enterprise/web-dataportal.jpg)
+![Data Portal](/images/portfolio/disney-enterprise/dataportal.png)
 
 #### Streaming Analytics{#optumus}
 
@@ -145,16 +157,20 @@ The team used participatory design methods that included the users - delivery en
 
 Building this product internally saved Disney **$30M/pa** over comparable third party products.
 
-- ![Streaming QoS Analysis](/images/portfolio/disney-enterprise/enterprise-optumus-dashboard.png)
-- ![Streaming QoS Analysis](/images/portfolio/disney-enterprise/enterprise-optumus-session.png)
-- ![Streaming QoS Analysis](/images/portfolio/disney-enterprise/enterprise-optumus-spotlight.png)
-{.gallery}
+- ![Streaming QoS Analysis](/images/portfolio/disney-enterprise/optumus-session.png) {.col8 .row2}
+- ![Streaming QoS Analysis](/images/portfolio/disney-enterprise/optumus-dashboard.png) {.col4 .contain}
+- ![Streaming QoS Analysis](/images/portfolio/disney-enterprise/optumus-spotlight.png) {.col4 .contain}
+{.mosaic}
 
 #### Experimentation, A/B Testing, Feature Flagging {#weaponx}
 
-- ![Experimentation](/images/portfolio/disney-enterprise/weaponx-dashboard.jpg)
-- ![Experimentation](/images/portfolio/disney-enterprise/weaponx.png)
-{.gallery}
+*codename WeaponX*
+
+Make better decisions faster.
+
+- ![Experimentation](/images/portfolio/disney-enterprise/weaponx-dashboard.jpg) {.col6}
+- ![Experimentation](/images/portfolio/disney-enterprise/weaponx.png) {.col6}
+{.mosaic}
 
 ### Developer Experience{#developer}
 
@@ -162,31 +178,31 @@ Building this product internally saved Disney **$30M/pa** over comparable third 
 
 We partnered with a team of engineers who cared deeply about developer productivity to create a design system and a visual language that was unique to disney. This design system provides a high quality, rapid, and robust UI framework across all these products.
 
-![Trek Overview](/images/portfolio/disney-enterprise/exd-design-system-overview.jpg)
+![Trek Overview](/images/portfolio/disney-enterprise/exd-design-system-overview.jpg){.card}
 
-- ![Color Tokens](/images/portfolio/disney-enterprise/trek-colors.jpg)
-- ![Type Tokens](/images/portfolio/disney-enterprise/trek-type.jpg)
-- ![Buttons](/images/portfolio/disney-enterprise/trek-buttons.jpg)
-- ![Inputs](/images/portfolio/disney-enterprise/trek-inputs.jpg)
-- ![Navigation](/images/portfolio/disney-enterprise/trek-navigation.jpg)
-{.gallery}
+- ![Inputs](/images/portfolio/disney-enterprise/trek-inputs.jpg) {.col6 .row2}
+- ![Color Tokens](/images/portfolio/disney-enterprise/trek-colors.jpg) {.col3}
+- ![Type Tokens](/images/portfolio/disney-enterprise/trek-type.jpg) {.col3}
+- ![Navigation](/images/portfolio/disney-enterprise/trek-navigation.jpg) {.col6 .row2}
+- ![Buttons](/images/portfolio/disney-enterprise/trek-buttons.jpg) {.col3}
+{.mosaic}
 
 
 ## Unified Platform Vision
 
+Evangelizing design system adoption begins with a promise of a better future. We buy on emotion and rationalize with facts (stability and scalability for developers; operational savings and velocity for business owners; usability and brand trust for designers). We designed a vision-state for a platform of feature products with a shared visual language.
 
-- ![Commerce Portal](/images/portfolio/disney-enterprise/new/commerce-offer-detail.jpg)
-- ![Content Management](/images/portfolio/disney-enterprise/new/cypher-dictionary.jpg)
-- ![Support Agent Portal](/images/portfolio/disney-enterprise/new/sisu-customer-details.jpg)
-- ![Experimentation](/images/portfolio/disney-enterprise/new/experiments-results.jpg)
-- ![Messaging Portal](/images/portfolio/disney-enterprise/new/messaging-new-email.jpg)
-- ![Streaming Quality](/images/portfolio/disney-enterprise/new/qos-spotlight.jpg)
-- ![Advertising](/images/portfolio/disney-enterprise/new/ads-mission-control-scheduling.jpg)
-- ![Developer Productivity](/images/portfolio/disney-enterprise/new/dev-portal.jpg)
-- ![Metadata Portal](/images/portfolio/disney-enterprise/new/knowsmore.jpg)
-- ![Content Portal](/images/portfolio/disney-enterprise/new/content-portal-episode.jpg)
-{.gallery}
-
+- ![Commerce Portal](/images/portfolio/disney-enterprise/new/commerce-offer-detail.jpg) {.col4}
+- ![Support Agent Portal](/images/portfolio/disney-enterprise/new/sisu-customer-details.jpg) {.col4}
+- ![Messaging Portal](/images/portfolio/disney-enterprise/new/messaging-new-email.jpg) {.col4}
+- ![Content Management](/images/portfolio/disney-enterprise/new/cypher-dictionary.jpg) {.col4}
+- ![Content Portal](/images/portfolio/disney-enterprise/new/content-portal-episode.jpg) {.col4}
+- ![Metadata Portal](/images/portfolio/disney-enterprise/new/knowsmore.jpg) {.col4}
+- ![Streaming Quality](/images/portfolio/disney-enterprise/new/qos-spotlight.jpg) {.col4}
+- ![Experimentation](/images/portfolio/disney-enterprise/new/experiments-results.jpg) {.col4}
+- ![Advertising](/images/portfolio/disney-enterprise/new/ads-mission-control-scheduling.jpg) {.col4}
+- ![Developer Productivity](/images/portfolio/disney-enterprise/new/dev-portal.jpg) {.col4}
+{.mosaic}
 
 
 <style>
@@ -204,6 +220,7 @@ We partnered with a team of engineers who cared deeply about developer productiv
   object-fit: contain;
 }
 </style>
+{% comment %}
 
 <!--
 
@@ -222,24 +239,27 @@ Disney has a rich history of building new tools that unlock creative possibiliti
 -->
 
 
-{% comment %}
 - ![Support Agent Portal](/images/portfolio/disney-enterprise/baymax-customer.jpg)
 - ![Commerce Portal](/images/portfolio/disney-enterprise/genie-offers.jpg)
-- ![Commerce Portal](/images/portfolio/disney-enterprise/web-genie.jpg)
+- ![Commerce Portal](/images/portfolio/disney-enterprise/genie-campaign.png)
 - ![Content Management](/images/portfolio/disney-enterprise/polaris-browse.jpg)
 - ![Content Management](/images/portfolio/disney-enterprise/polaris-set.jpg)
 - ![Metadata Browsing](/images/portfolio/disney-enterprise/tesseract-browse.jpg)
 - ![Metadata Detail](/images/portfolio/disney-enterprise/tesseract-detail.jpg)
-- ![Experimentation](/images/portfolio/disney-enterprise/web-weaponx.jpg)
-- ![Content Dictionary](/images/portfolio/disney-enterprise/web-cypher-dictionary.jpg)
+- ![Experimentation](/images/portfolio/disney-enterprise/weaponx.png)
+- ![Content Dictionary](/images/portfolio/disney-enterprise/cypher-dictionary.png)
 - ![Content Analytics](/images/portfolio/disney-enterprise/arc-heatmap.jpg)
 - ![Content Analytics](/images/portfolio/disney-enterprise/arc-content.jpg)
 - ![Messaging Portal](/images/portfolio/disney-enterprise/new/messaging-new-email.jpg)
-- ![Streaming Quality](/images/portfolio/disney-enterprise/web-enterprise-optumus-session.jpg)
-- ![Data Portal](/images/portfolio/disney-enterprise/web-dataportal.jpg)
+- ![Streaming Quality](/images/portfolio/disney-enterprise/optumus-session.png)
+- ![Data Portal](/images/portfolio/disney-enterprise/dataportal.png)
 - ![Advertising](/images/portfolio/disney-enterprise/new/ads-mission-control-scheduling.jpg)
 - ![Developer Productivity](/images/portfolio/disney-enterprise/new/dev-portal.jpg)
-- ![Content Management](/images/portfolio/disney-enterprise/web-maestro.jpg)
+- ![Content Management](/images/portfolio/disney-enterprise/maestro.png)
 - ![Content Portal](/images/portfolio/disney-enterprise/new/content-portal-episode.jpg)
+
+
+- ![Metadata Detail](/images/portfolio/disney-enterprise/tesseract-detail.jpg) {.col4 .contain}
+- ![Metadata Portal](/images/portfolio/disney-enterprise/new/knowsmore.jpg) {.col4 .contain}
 {.gallery}
 {% endcomment %}

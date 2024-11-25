@@ -1,6 +1,6 @@
 ---
 title: Disney+ Groupwatch
-date: 2020-09-01
+date: 2020-10-01
 thumbnail: /images/portfolio/disney-groupwatch/disney-groupwatch-preview.jpg
 eleventyExcludeFromCollections: false
 tags:
@@ -8,7 +8,7 @@ tags:
 summary: Social viewing connects people through the stories they love even when they're apart.
 timeline: 2019-2020
 ---
-![GroupWatch Devices](/images/portfolio/disney-groupwatch/disney-groupwatch-devices.png){.fullwidth}
+![GroupWatch Devices](/images/portfolio/disney-groupwatch/disney-groupwatch-devices.png){.fullwidth .blur-in}
 
 ### Storytelling is a fundamental human need.
 
