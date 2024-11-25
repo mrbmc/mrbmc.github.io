@@ -5,8 +5,8 @@ bodyclass: portfolio project
 {% if masthead-video or masthead-image %}
 {% include "_masthead.html" %}
 {% else %}
-<h1>{{ title }}</h1>
-{% if summary %}<p class="summary large">{{ summary }}</p>{% endif %}
+<h1 class="blur-in">{{ title }}</h1>
+{% if summary %}<p class="summary large blur-in">{{ summary }}</p>{% endif %}
 {% endif %}
 
 <a id="content"></a>
@@ -19,5 +19,7 @@ bodyclass: portfolio project
     {% if previousPost %}<a href="{{ previousPost.url }}">← Previous Project: {{ previousPost.data.title }}</a>{% endif %}
     {% if nextPost %}<a href="{{ nextPost.url }}">Next Project: {{ nextPost.data.title }} →</a>{% endif %}
 </nav>
+
+<div id="lightbox" class=""></div>
 
 <script type="text/javascript" language="javascript" src="/js/portfolio.min.js"></script>
