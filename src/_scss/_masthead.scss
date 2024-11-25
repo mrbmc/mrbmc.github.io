@@ -6,28 +6,22 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-
     position: relative;
     box-sizing: border-box;
     overflow: hidden;
     z-index: 10;
 
-    background: $well-background;
-    color: $well-text-color;
+    @include inverse();
 
     h1,h2,h3 {
-        color: $well-bold-color;
         z-index: 2;
         margin-top: 0;
-    }
-    a {
-        color: $well-bold-color;
     }
     h1 + p {
         margin-bottom: 0em;
     }
     .summary {
-        color: $well-bold-color;
+        // color: $well-bold-color;
     }
 
     figure {
@@ -44,7 +38,7 @@
         img,video {
             height: 100%;
             object-fit: cover;
-            opacity: 0.80;
+            filter: brightness(0.8);
         }
         video::-webkit-media-controls-fullscreen-button {
             display: none !important;

@@ -6,8 +6,6 @@
   &:after {
     display: table;
     content: "";
-    // Fixes Opera/contenteditable bug:
-    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
     line-height: 0;
   }
   &:after {
@@ -165,48 +163,42 @@
 @mixin inverse {
     position: relative;
     overflow: hidden;
+    background-color: $hero-background;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    // background-attachment: fixed;
+    background-image:
+    radial-gradient(ellipse 81% 119% at 10% -19%, transparentize($brand-accent,0.8) 0%, transparent 100%),
+    radial-gradient(ellipse 100% 100% at 100% 81%, transparentize($brand-complement,0.8) 0px, transparent 100%),
+    conic-gradient(from 0.025turn at 0% 119%, transparent 0%, transparentize($brand-color,0.8) 12.5%, transparent 25%, transparent 99%),
+    conic-gradient(from 0.66turn at 119% 8%, transparent 0%, transparentize($brand-color,0.8) 5%, transparent 10%, transparent 99%),
+    ;
 
-    color: $well-text-color;
-    a {
-      color: $well-bold-color;
+    color: $hero-text-color;
+    h1,h2,h3,h4,a {
+      color: $hero-bold-color;
       &:hover {
-        color: $well-bold-color;
+        color: $hero-text-color;
       }
     }
 
-    &:before {
+   &:before {
         content: "";
+        // width: 100vw;
+        // height: 100vh;
         width: 100%;
         height: 100%;
+        // width: 3160px;
+        // height: 2400px;
         position: absolute;
         top: 0;
         left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: -2;
-
-        background-repeat: no-repeat;
-        // background-attachment: fixed;
-        background-size: 100% 100%;
-
-        background-color: $well-background;
-        background-image:
-        radial-gradient(ellipse 81% 119% at 10% -19%, transparentize($brand-accent,0.8) 0%, transparent 100%),
-        radial-gradient(ellipse 100% 100% at 100% 81%, transparentize($brand-complement,0.8) 0px, transparent 100%),
-        conic-gradient(from 0.025turn at 0% 119%, transparent 0%, transparentize($brand-color,0.8) 12.5%, transparent 25%, transparent 99%),
-        conic-gradient(from 0.66turn at 119% 8%, transparent 0%, transparentize($brand-color,0.8) 5%, transparent 10%, transparent 99%),
-        ;
-
+        // z-index: -1;
+        filter: url(#noiseFilter) opacity(10%);
     }
-    &:after {
-        content: "";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        z-index: -1;
-        filter: url(#noiseFilter) opacity(30%);
+    &>* {
+      // position: relative;
+      z-index: 1;
     }
 }
 

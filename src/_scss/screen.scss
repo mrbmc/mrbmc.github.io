@@ -104,6 +104,9 @@ table {
         text-align: left;
         color: $text-color-bold;
     }
+    td {
+        vertical-align: top;
+    }
     &.rotate {
         @include transpose_table;
     }
@@ -305,7 +308,7 @@ h1,h2,h3,h4,h5{
     margin: 1em 0 1rem 0;
     padding: 0;
 }
-p,ul,ol,dl,blockquote,.blockquote {
+p,ul,ol,dl {
     margin: 0 0 1rem 0;
     padding: 0;
 }
@@ -345,11 +348,53 @@ body {
     }
     &.x2x2 {
         grid-auto-flow: row;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: repeat(2, 1fr);
     }
     &.x3x1 {
         grid-auto-flow: row;
-        grid-template-columns: 33% 33% 33%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+.mosaic {
+    display: grid;
+    gap: $spacer-horizontal;
+    grid-template-columns: repeat(12, 1fr);
+    background: $well-background;
+    grid-auto-flow: row;
+    list-style: none;
+    margin-top: $spacer-vertical;
+    margin-bottom: $spacer-vertical;
+    padding: $spacer-vertical $spacer-horizontal;
+    box-sizing: border-box;
+
+    li {
+        padding: 0;
+        margin: 0;
+        img {
+            display: block;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: 50% 0%;
+        }
+        &.contain {
+            img {
+                object-fit: contain;
+                object-position: 50% 50%;
+            }
+        }
+        @for $i from 1 through 12 {
+            &.col#{$i} {
+                grid-column: span $i;
+            }
+            &.row#{$i} {
+                grid-row: span $i;
+            }
+        }
+        &.clear {
+            grid-row: 3 / span 2;
+        }
     }
 }
 main > section {

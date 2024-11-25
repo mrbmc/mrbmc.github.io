@@ -78,15 +78,16 @@ p.gallery,div.gallery-wrap {
     @include fullWidth(100vw);
     display: block;
     margin-bottom: $spacer-vertical;
-    background: $well-background;
+    background: $hero-background;
     box-shadow: inset $shadow;
     overflow: auto;//this prevents collapsing margins
 
     .image-detail {
-        width: auto;
+        width: 98vw;
         height: calc(84vh - ($spacer-vertical * 1));
+        object-fit: contain;
         padding: 0;
-        margin: ($spacer-vertical * 0.5) auto;
+        margin: 0 auto;
         display: block;
 
         @media (orientation: portrait) {
@@ -99,11 +100,11 @@ p.gallery,div.gallery-wrap {
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-evenly;
-        margin: 0 0 ($spacer-vertical * 0.25);
+        margin: 0;
         padding: 0;
 
-        overflow-x: scroll;
-        overflow-y: auto;
+        // overflow-x: auto;
+        // overflow-y: auto;
         &::-webkit-scrollbar {
             -webkit-appearance: none;
         }

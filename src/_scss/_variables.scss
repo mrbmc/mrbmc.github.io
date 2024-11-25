@@ -82,10 +82,15 @@ $border-color: 			var(--gray-light);
 $card-background:       var(--white);
 $card-text-color:       var(--gray-dark);
 $card-bold-color:       var(--black);
-$well-background:    	var(--black);
-$well-text-color:     	var(--gray-light);
-$well-bold-color:  		var(--white);
-
+$well-background:    	var(--gray-light);
+$well-text-color:     	$text-color;
+$well-bold-color:  		$text-color-bold;
+$hero-background:       #{$neutral-0};
+$hero-text-color:       #{$neutral-90};
+$hero-bold-color:       #{$neutral-100};
+// $hero-background:       var(--black);
+// $hero-text-color:       var(--white);
+// $hero-bold-color:       var(--white);
 
 // Navbar
 // -------------------------
