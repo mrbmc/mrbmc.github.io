@@ -1,0 +1,7 @@
+#Access file
+order allow,deny
+allow from all
+require group site2
+Authname WebStats
+Authtype Basic
+AuthAuthoritative off

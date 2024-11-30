@@ -1,0 +1,19 @@
+&option1=the mission
+&option2=the people
+&option3=the work
+&option4=the site
+&option5=. . .
+&option6=. . .
+&loaded=go
+&
+
+
+
+option1=..:option1;
+option2=..:option2;
+option3=..:option3;
+option4=..:option4;
+option5=..:option5;
+option6=..:option6;
+loaded="go";
+

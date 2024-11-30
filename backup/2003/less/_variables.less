@@ -1,0 +1,104 @@
+// COLOR
+// -------------------------
+//@white:               #FFFDFB;
+@brandColor:            hsl(15, 84%, 54%);
+@brandAccent:           hsl(190, 37%,66%);
+@brandComplement:       hsl(48, 90%,74%);
+
+@grayDarker:            hsl(hue(@brandColor),20%,28%);
+@grayDark:              hsl(hue(@brandColor),6%,38%);
+@gray:                  #808080;
+@grayLight:             #ccc9c4;
+@grayLighter:           #f0eeeb;
+@white:                 #ffffff;
+@black:                 hsl(hue(@brandColor),20%,10%);
+
+
+// Scaffolding
+// -------------------------
+@bodyBackground:        @white;
+@textColor:             @grayDark;
+@textBoldColor:         darken(@textColor, 10%);
+
+// Links
+// -------------------------
+@linkColor:             @brandColor;
+@linkColorHover:        lighten(@linkColor, 10%);
+
+
+// Typography
+// -------------------------
+@sansFontFamily:        "Gotham",Times,"Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+@serifFontFamily:       "Quattrocento","Palatino","Georgia",Times,serif;
+@monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
+@headingsFontFamily:    @sansFontFamily;
+
+@baseFontSize:          18px;
+@baseFontFamily:        @sansFontFamily;
+@baseLineHeight:        @baseFontSize*1.5;
+@baseFontWeight:        300;
+@boldFontWeight:        800;
+
+@headingsFontFamily:    @sansFontFamily;
+@headingsFontWeight:    @baseFontWeight;//@boldFontWeight;
+@headingsColor:         darken(@textColor,10%); // empty to use BS default, @textColor
+
+// Navbar
+// -------------------------
+@navbarBackground:                transparent;//@linkColor;
+@navbarBackgroundHighlight:       transparent;//lighten(@navbarBackground,5%);
+@navbarBorder:                    transparent;
+
+@navbarText:                      @white;
+@navbarLinkColor:                 @white;
+@navbarLinkColorHover:            darken(@linkColor,10%);
+
+@navbarLinkColorActive:           darken(@linkColor,10%);
+//@navbarLinkBackgroundHover:       transparent;
+@navbarLinkBackgroundActive:      @white;
+
+@navbarBrandColor:                @navbarLinkColor;
+
+// GRID
+// --------------------------------------------------
+// Default 940px grid
+// -------------------------
+@gridColumns:             12;
+@gridColumnWidth:         42px;
+@gridGutterWidth:         40px;
+@gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
+
+// 1200px min
+@gridColumnWidth1200:     60px;
+@gridGutterWidth1200:     40px;
+@gridRowWidth1200:        (@gridColumns * @gridColumnWidth1200) + (@gridGutterWidth1200 * (@gridColumns - 1));
+
+// Phones
+@gridGutterWidthPhone:    10px;
+
+@fluidGridColumnWidth:    percentage(@gridColumnWidth/@gridRowWidth);
+@fluidGridGutterWidth:    percentage(@gridGutterWidth/@gridRowWidth);
+
+@breakpointDesktop: @gridRowWidth;
+@breakpointDesktop-1: @gridRowWidth - 1;
+@breakpointWidescreen: @gridRowWidth1200;
+@breakpointPortrait: 768px;
+@breakpointPortrait-1: 767px;
+@breakpointPhone: 480px;
+
+
+// Wells
+// -------------------------
+@wellBackground:                  @grayLight;
+
+// Hero unit
+// -------------------------
+@heroUnitBackground:              @white;
+@heroUnitHeadingColor:            inherit;
+@heroUnitLeadColor:               inherit;
+
+@animateSpeed:          .750s;
+
+
+@inputHeight: 1.25em;
+

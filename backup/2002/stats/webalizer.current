@@ -1,0 +1,333 @@
+# Webalizer V2.01-06 Incremental Data - 06/21/2002 16:34:24
+2002 6 21 16 34 24
+566 516 27 41 10 17 1216249 473 33 0
+1 2 446 1 21
+442 439 81802 1 425 1
+3 1 3454 2 1 1
+52 39 692544 3 13 3
+38 20 65955 7 17 15
+4 2 4166 2 2 2
+0 0 0 0 0 0
+5 0 1152 1 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+1 0 645 1 0 0
+0 0 0 0 0 0
+1 1 2152 1 1 1
+2 1 2797 1 1 1
+2 1 5648 1 2 1
+2 1 2797 1 1 1
+0 0 0 0 0 0
+3 3 330951 2 2 2
+6 4 8056 2 5 2
+3 2 4949 2 2 2
+0 0 0 0 0 0
+2 2 9181 1 1 1
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0 0 0
+0 0 0 0
+0 0 0 0
+1 1 2164 1
+8 2 9364 3
+1 0 233 0
+0 0 0 0
+3 2 8209 2
+0 0 0 0
+1 1 2152 1
+6 4 8506 4
+3 1 3442 1
+1 1 2152 1
+0 0 0 0
+2 1 6057 1
+5 4 333298 4
+4 2 5594 2
+10 6 32473 2
+2 1 2797 1
+0 0 0 0
+50 37 683564 11
+13 7 11420 7
+454 445 99839 431
+2 1 4985 1
+0 0 0 0
+0
+0
+0
+516
+0
+0
+0
+0
+0
+0
+0
+2
+11
+0
+1
+0
+0
+0
+0
+0
+0
+36
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+0
+# -urls- 
+/2001/ux_brand.swf
+0 1 0 328063 0 0
+/2000/elements/ii.swf
+0 1 0 6231 0 0
+/2000/elements/ux.swf
+0 1 0 44462 0 0
+/
+0 17 0 36644 16 1
+/2000/
+0 2 0 2100 1 0
+/2001/
+0 5 0 27060 1 1
+/2000/elements/color_form.swf
+0 1 0 73303 0 0
+/2000/elements/i.swf
+0 2 0 9166 0 0
+/2000/blue.swf
+0 1 0 32390 0 0
+/2001/poll.cgi
+0 423 0 21549 0 0
+/2001/imnotfrench.css
+0 4 0 3656 0 0
+/2000/elements/tube.swf
+0 1 0 3963 0 0
+/2000/elements/oddpix.swf
+0 1 0 106799 0 0
+/2001/elements/caution.swf
+0 2 0 26378 0 0
+/2000/elements/nav.swf
+0 1 0 88205 0 0
+/2001/images/up.gif
+1 2 0 232 0 0
+/resume/
+0 1 0 8267 1 0
+/2000/elements/grid_fast.swf
+0 1 0 8599 0 0
+/2001/dir.shtml
+0 1 0 18801 0 0
+/2001/upgradeyourdamnbrowser.shtml
+0 2 0 48876 0 0
+/2001/images/icon_client.gif
+1 2 0 258 0 0
+/2001/content.pl
+0 14 0 21071 10 7
+/2000/elements/v.swf
+0 1 0 9972 0 0
+/1999/
+0 1 0 4135 1 0
+/2001/js/pulldown.js
+0 3 0 684 0 0
+/2001/ux.html
+0 3 0 2172 2 0
+/2000/elements/flight.swf
+0 1 0 1414 0 0
+/2000/elements/tatoo.swf
+0 1 0 20125 0 0
+/2001/images/icon_email.gif
+1 2 0 388 0 0
+/2001/images/icon_download.gif
+1 2 0 250 0 0
+/2000/elements/iii.swf
+0 1 0 20751 0 0
+/2001/js/scroll.js
+0 2 0 6190 0 0
+/2000/elements/jack.swf
+0 1 0 27277 0 0
+/2000/elements/ecbt.swf
+0 1 0 101552 0 0
+/2000/elements/deepnav.swf
+0 1 0 42675 0 0
+/2001/images/icon_flash.gif
+1 2 0 400 0 0
+/2001/images/icon_blog.gif
+1 2 0 346 0 0
+/2001/poll.swf
+0 2 0 13720 0 0
+/2000/elements/sound2.swf
+0 1 0 21140 0 0
+/2001/images/down.gif
+1 2 0 236 0 0
+/2001/images/icon_audio.gif
+1 2 0 378 0 0
+# End Of Table - urls
+# -sites- (monthly)
+64.133.130.211
+0 2 2 9181 1 1024677263
+/resume/
+67.105.135.163
+0 47 36 681538 1 1023133838
+-
+208.51.0.74
+0 3 2 8209 1 1023085146
+/2001/
+64.209.3.185
+0 442 439 81802 1 1022966140
+/2001/poll.cgi
+207.253.45.220
+0 1 1 2164 1 1024307655
+/
+209.123.128.13
+0 1 1 2152 1 1024487705
+/
+66.196.65.11
+0 2 1 2797 1 1023012911
+/
+66.196.65.13
+0 2 1 2797 1 1023204952
+/
+66.196.65.16
+0 2 1 2797 1 1024457082
+/
+66.196.65.18
+0 2 1 2797 1 1023297698
+/
+66.196.72.108
+0 2 1 5648 1 1024025062
+/2001/
+64.39.31.110
+0 1 1 2152 1 1023870672
+/
+66.28.250.171
+0 10 5 12157 3 1023226033
+/2000/
+66.28.250.172
+0 6 3 23860 2 1023226170
+/2001/content.pl
+66.28.250.173
+0 6 3 9223 3 1023230606
+/2001/content.pl
+66.28.250.174
+0 6 3 5793 3 1023226268
+/2001/content.pl
+66.28.250.175
+0 7 4 9961 2 1023225454
+/1999/
+66.28.250.176
+0 5 0 1152 0 0
+-
+66.28.250.178
+0 2 1 2797 1 1023138644
+/
+65.194.117.7
+0 2 2 328787 1 1024325228
+/2001/ux.html
+65.116.145.15
+0 1 0 657 0 0
+-
+64.152.75.70
+0 3 2 4511 1 1024411393
+/
+64.152.75.74
+0 4 2 5594 2 1024153825
+/
+64.109.65.104
+0 1 1 2164 1 1023157640
+/
+66.77.73.63
+0 1 0 645 0 0
+-
+216.239.46.164
+0 2 1 1369 1 1023303776
+/2001/ux.html
+213.252.152.11
+0 3 2 3545 1 1024393350
+/2001/ux.html
+# End Of Table - sites (monthly)
+# -sites- (daily)
+64.133.130.211
+0 2 2 9181 1 1024677263
+/resume/
+# End Of Table - sites (daily)
+# -referrers- 
+http://www.imnotfrench.com/2001/
+1 2
+- (Direct Request)
+0 545
+http://www.netfactual.com/survey/
+0 1
+http://www.imnotfrench.com/resume/
+1 1
+http://www.imnotfrench.com/2000/ennui/index.html
+1 1
+http://www.imnotfrench.com/2000/grid.zip
+1 1
+http://www.imnotfrench.com/
+1 1
+http://www.kageki.com/work.html
+0 1
+http://www.imnotfrench.com/200
+1 1
+http://www.imnotfrench.com/2001/upgradeyourdamnbrowser.shtml
+1 12
+# End Of Table - referrers
+# -agents- 
+Mozilla/4.0 (WinNT)
+0 1
+Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; Q312461)
+0 442
+Mozilla/3.0 (Slurp/si; slurp@inktomi.com; http://www.inktomi.
+0 8
+Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 4.0; obot)
+0 3
+FAST-WebCrawler/3.6 (atw-crawler at fast dot no; http://fast.
+0 1
+Java1.3.1_02
+0 1
+Mozilla/2.0 (compatible; T-H-U-N-D-E-R-S-T-O-N-E)
+0 3
+Scooter-3.2
+0 4
+Mozilla/5.0 (Slurp/cat; slurp@inktomi.com; http://www.inktomi
+0 2
+Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)
+0 47
+Scooter-ARS-1.1
+0 3
+Mozilla/4.0 (compatible; MSIE 5.01; Windows NT 5.0)
+0 2
+Mozilla/4.0 (compatible; MSIE 5.13; Mac_PowerPC)
+0 2
+Googlebot/2.1 (+http://www.googlebot.com/bot.html)
+0 2
+Mozilla/4.0 compatible ZyBorg/1.0 (ZyBorg@WISEnutbot.com; htt
+0 1
+ia_archiver
+0 42
+Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0)
+0 1
+# End Of Table - agents
+# -search strings- 
+# End Of Table - search strings
+# -usernames- 
+# End Of Table - usernames

@@ -1,0 +1,85 @@
+<HTML>
+<HEAD>
+<TITLE> | </TITLE>
+
+<script>
+function PopUp(url,w,h) {
+var dim = eval('"width=' + w + ',height=' + h + '"');
+Npop = window.open(url,"pop",dim);
+}
+
+function netscapeIsBad()
+{
+	if (navigator.appName = "Netscape") 
+	{
+		self.location.reload();
+		self.location.href = self.location.href;
+	}
+}
+
+</script>
+<SCRIPT SRC="bg.js">
+<!--
+
+//-->
+</SCRIPT>
+
+</HEAD>
+
+
+
+<BODY marginheight=0 marginwidth=0 topmargin=0 leftmargin=0 bgcolor=#172748 onResize="netscapeIsBad();">
+
+<SCRIPT LANGUAGE="JavaScript1.2">
+<!--
+
+makeIm();
+
+//-->
+</SCRIPT>
+
+
+<TABLE BORDER=0 WIDTH=100% height=100% CELLSPACING=0 CELLPADDING=0>
+	<TR>
+		<TD ALIGN=right VALIGN=middle>
+
+<SCRIPT LANGUAGE=JavaScript>
+<!--
+var InternetExplorer = navigator.appName.indexOf("Microsoft") != -1;
+// Handle all the the FSCommand messages in a Flash movie
+function portfolio2_DoFSCommand(command, args) {
+  var portfolio2Obj = InternetExplorer ? portfolio2 : document.portfolio2;
+  //
+  // Place your code here...
+  //
+}
+// Hook for Internet Explorer 
+if (navigator.appName && navigator.appName.indexOf("Microsoft") != -1 && 
+	  navigator.userAgent.indexOf("Windows") != -1 && navigator.userAgent.indexOf("Windows 3.1") == -1) {
+	document.write('<SCRIPT LANGUAGE=VBScript\> \n');
+	document.write('on error resume next \n');
+	document.write('Sub portfolio2_FSCommand(ByVal command, ByVal args)\n');
+	document.write('  call portfolio2_DoFSCommand(command, args)\n');
+	document.write('end sub\n');
+	document.write('</SCRIPT\> \n');
+}
+//-->
+</SCRIPT>
+<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+ codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=4,0,0,0"
+ ID=portfolio2 WIDTH=570 HEIGHT=315>
+ <PARAM NAME=movie VALUE=bmac.swf> 
+ <PARAM NAME=menu VALUE=false> 
+ <PARAM NAME=quality VALUE=high> 
+ <PARAM NAME=scale VALUE=exactfit> 
+ 
+ <EMBED src=bmac.swf menu=false quality=high scale=exactfit   WIDTH=570 HEIGHT=315	swLiveConnect=true
+ TYPE=application/x-shockwave-flash PLUGINSPAGE=http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash></EMBED>
+</OBJECT>
+
+		</TD>
+	</TR>
+</TABLE>
+
+</BODY>
+</HTML>

@@ -1,0 +1,195 @@
+<!-- | | | | | | | | | | | | | | | | | | | | | |
+
+
+
+
+			welcome to the kageki
+
+
+
+
+  feel free to take anything here and use it, 
+  but try to recognize and add something to 
+  the cause or make it your own in some way.
+
+  If you rip me off you'll just be a chump, and
+  i'll still be making the new new style.
+
+
+
+
+			  brian@kageki.com
+
+| | | | | | | | | | | | | | | | | | | | | |  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+			"http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+
+	<title>+ k a g e k i + ghetto browser version</title>
+
+	<meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<meta NAME="ROBOTS" CONTENT="ALL">
+	<meta name="DESCRIPTION" content="kageki ++ beyond intense and saturated with thought">
+	<meta name="KEYWORDS" content="web site design, content, entertainment, HTML, flash, source, backgrounds, music, synthesis, ad,  advertising, graveyard, eastcoastbraintrust, east coast brain trust, braintrust, konkrete, a list apart, MP3, chiptune">
+	<meta name="AUTHOR" content="brian mcconnell for www.kageki.com">
+
+	<link rel="STYLESHEET" type="text/css" href="kageki.css">
+
+	<script src="js/scroll.js"></script>
+	<script src="js/pulldown.js"></script>
+
+	<script type="text/javascript" language="javascript" srcr="js/stage.js">
+	<!--
+
+
+	//-->
+	</script>
+
+
+</head>
+<body bgcolor="#DFDFDF" marginheight=0 marginwidth=0 topmargin=0 leftmargin=0 text=#330066 onLoad="init();">
+
+<div id="scrollMeUp" style="position:absolute; z-index:3; left: 755px; top: 10px">
+<a href="#" onMouseOver="scrollIt('Scroll Up',1); return true"
+onMouseout="scrollIt('',0); return true" onfocus="this.blur();"><img src="images/up.gif" width="15" height="15" border="0"></a>
+</div>
+
+<div id="scrollMeDown" style="position:absolute; z-index:3; left: 755px; top: 330px">
+<a href="#" onMouseOver="scrollIt('Scroll Down',2); return true"
+onMouseout="scrollIt('',0); return true" onfocus="this.blur();"><img src="images/down.gif" width="15" height="15" border="0"></a>
+</div>
+
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+
+<td width=5 nowrap><br></td>
+
+	<td width=408>
+	<!-- |||| stage begin - this is where the fun starts ||||  -->
+	<IFRAME NAME="stage" SRC="content.pl?action=flash&src=caution" width="408" HEIGHT="408" FRAMEBORDER="0" SCROLLING="auto" marginheight=0 marginwidth=0 topmargin=0 leftmargin=0>
+
+ 	<ILAYER NAME="theilayer" WIDTH="408" HEIGHT="408">
+ 
+	<NOLAYER><!-- put some html here for old browsers--></NOLAYER>
+
+	</ILAYER>	
+
+	</IFRAME>
+	<!-- |||| stage ends |||| -->
+	</td>
+
+<td width=5 nowrap><br></td>
+<td width=1 bgcolor="#666666" nowrap><br></td>
+<td width=5 nowrap><br></td>
+
+	<td width=50 nowrap>
+	<!-- |||| poll begin |||| -->
+	<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://active.macromedia.com/flash2/cabs/swflash.cab#version=4,0,0,0" ID=poll WIDTH=50 HEIGHT=404>
+	<PARAM NAME=movie VALUE="poll.swf">
+	<PARAM NAME=quality VALUE=high>
+	<PARAM NAME=bgcolor VALUE=#DFDFDF>
+	 
+	<EMBED src="poll.swf" quality=high  WIDTH=50 HEIGHT=404 bgcolor=#DFDFDF TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash">
+
+	</EMBED>
+	</OBJECT>
+	<!-- |||| poll end |||| -->
+	</td>
+	
+<td width=5 nowrap><br></td>
+<td width=1 bgcolor="#666666" nowrap><br></td>
+<td width=5 nowrap><br></td>
+
+	<td width=280 nowrap valign=bottom><br>
+
+	<table border="0" width="280" height="26" cellspacing="0" cellpadding="0">
+	<tr>
+		<td align=center>
+		<FORM name="formy" method="post">
+			<SELECT name="comrades" onChange="pull1(this)">
+			<option selected>comrades</option>
+			<option value="www.braquage.com">braquage</option>
+			<option value="www.concreteblonde.com">concrete blonde</option>
+			<option value="www.diskerror.com">disk error</option>
+			<option value="www.errortype.com">error type</option>
+			<option value="www.tabibian.org">tabibian</option>
+			<option value="www.kootaro.com">koo</option>
+			<option value="www.littlerobots.com">little robots</option>
+			<option value="www.pixelcadet.com">pixel cadet</option>
+			<option value="www.stevenowicki.com">Steve Nowicki</option>
+			<option value="www.tapioca.net">tapioca</option>
+			<option value="www.thirdrate.com">thirdrate</option>
+			<option value="www.tonx.com">TonX</option>
+			<option value="www.vivavictoria.com">Viva Viktoria</option>
+			<option value="www.wildlifeanalysis.org">wildlife analyis</option>
+			</select>
+		</td>
+		<td rowspan=2 align=center>
+			<a href="mailto:contact@kageki.com?subject=the kageki"><img src="images/icon_email.gif" alt="contact" width="15" height="15" border="0"></a></td>
+		</td>
+		<tr>
+		<td align=center>
+			<br>
+			<SELECT name="affiliates" onChange="pull2(this)">
+			<option value="www.eastcoastbraintrust.org">ECBT</option>
+			<option value="www.konkrete.org">konkrete</option>
+			<option value="www.imnotfrench.com">i'm not french</option>
+			<option value="www.buynukes.com">buy nukes</option>
+			<option value="www.onearmedman.com">one armed man</option>
+			<option value="www.raji.com">raji k</option>
+			<option selected>affiliates</option>
+			</select>
+			<br>
+		</td>
+	</tr>
+	</table>
+
+
+	</td>
+
+
+
+</tr>
+</table>
+		</FORM>
+	<!-- |||| directory of stuff to do |||| -->
+	<div id="newsClipping" style="position:absolute; width:265px; height:340px; z-index:2; left: 490px; top: 5px; clip:rect(0px,265px,340px,0px);">
+	<div id="news" style="position:absolute; width:265px; z-index:1; left: 0px; top: 0px;">
+
+	<!--#include file="dir.html"-->
+	<!--end include-->
+
+	</div>
+	</div>
+	<!-- |||| directory end |||| -->
+
+
+<!-- # # # # # this is the iLayer for Nutscrape # # # # # -->
+<LAYER NAME="stage" SRC="content.pl?action=flash&src=caution" WIDTH="408" HEIGHT="408" VISIBILITY="hidden" onLoad="moveToAbsolute((theilayer.pageX), (theilayer.pageY)); clip.width=408; clip.HEIGHT=408; visibility=true;"></LAYER>
+
+</body>
+</html>

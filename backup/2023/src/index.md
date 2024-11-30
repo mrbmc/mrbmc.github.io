@@ -11,7 +11,7 @@ eleventyExcludeFromCollections: false
 
 # Hello there.
 
-My family calls me Brian, but my friends call me BMC. I am a father 👧🏻 👦🏻, [husband](https://www.bettykang.com/) 👩🏻, New Yorker 🗽, [design leader](/about/) 🧑‍✈️, ️[cyclist](https://www.strava.com/athletes/773650) 🚲, [divemaster](https://www.steelgills.com/@mrbmc) 🤿, and [world traveler](https://www.google.com/maps/d/u/0/edit?mid=1jAS6t-WP2zKeOYag3KsGKZtqxERvSfE) 🌎.
+My family calls me Brian, but my friends call me BMC. I am a father 👧🏻 👦🏻, [husband](https://www.bettykang.com/) 👩🏻, New Yorker 🗽, [design leader](/2023/about/) 🧑‍✈️, ️[cyclist](https://www.strava.com/athletes/773650) 🚲, [divemaster](https://www.steelgills.com/@mrbmc) 🤿, and [world traveler](https://www.google.com/maps/d/u/0/edit?mid=1jAS6t-WP2zKeOYag3KsGKZtqxERvSfE) 🌎.
 
 <div><a class="scrollhint" href="#portfolio">Scroll</a></div>
 

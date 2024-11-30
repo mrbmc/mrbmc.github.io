@@ -125,12 +125,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
 
   eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
-  eleventyConfig.addPassthroughCopy({"backup/2015":"2015"});
-  eleventyConfig.addPassthroughCopy({"backup/2022":"2022"});
-  eleventyConfig.addPassthroughCopy({"backup/2023/www":"2023"});
-  eleventyConfig.addPassthroughCopy({"src/images":"images"});
-  eleventyConfig.addPassthroughCopy({"src/_fonts":"css/fonts"});
   eleventyConfig.addPassthroughCopy({"src/images/favicon/favicon.ico":"favicon.ico"});
+  // eleventyConfig.addPassthroughCopy({"src/images":"images"});
 
 
   eleventyConfig.setServerOptions({

@@ -1,0 +1,35 @@
+12.24.2000
+
+<b>The state of the Art</b>
+
+This site has no popup windows.  
+This site has no loading screens.  
+This site has no intro animation.  
+This site has no splash screen.  
+This site isn't a fixed width.  
+The content fits on your screen without scrolling.
+This site has few heavy graphics SO IT LOADS ALREADY DAMNIT.
+This site is NOT under redesign.  Even if it's mediocre, it's up.
+This site will use all your CPU power.
+
+Did you notice any of that before i said it?  I didn't think so.  That's ok, because good design, should be transparent, it should facilitate the task at hand.  This site, has no task at hand really, it's just mental masturbation, but at least it loads fast :D  To quote the great Ben Running, "This is site is amazingly full of yet deviod of real content at the same time."
+
+SO FUCKING WHAT?  You ask.  These days <a href="http://www.useit.com/alertbox/20001029.html" target="link">everybody</a> is talking about usability and weilding <a href="http://www.flazoom.com/news/99proof_01112001.shtml" target="link">the power</a> that tools like flash offer us responsibly.  Yo know know what?  This is common sense, but i guess common sense isn't really common at all.  When is it design and not just photoshop masturbation.
+
+<b>Why is ths site the way it is?</b>
+
+We have a basic html list of toys and blogs instead of a fancy flash interface so as to leave your processor free to munch away on the flash experiments over on the left.  besides... It would be stupid to create a fancy interface to navigate fancy interfaces wouldn't it?
+
+We have a key so maybe you'll know what you're getting into when you click.
+
+What's up with the poll?  Did you vote?  I think that explains it.
+
+We use iFrames because your browser's built in scroller is way better than a DHTML or Flash widget and it kind of uses a <i>lingua franca</i> interface device.  See... that's latin.  Latin is like smart and stuff.
+
+I had waffles for breakfast.
+
+Did you know we created a whole 'nother version of this site for 4.0 browsers?  That's because *sniff* *sniff*  we love you.  If you're on webTV, then you're just fucked and this site wouldn't amuse you anyway.
+
+I'm giving everything away!  <a href="/2001/source/">here be the source</a>.  Now you just gueess what i think of napster and hotline (^_^)
+
+do you like this site?  If you think this site sucks or is just kinda mediocre, then <a href="mailto:contact@kageki.com?subject=the+kageki">tell me so</a>.

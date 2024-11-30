@@ -6,7 +6,7 @@
 
 {% for post in postList %}
 {% if forloop.index0 < postCount %}
-<span class="date">{{ post.data.date | date: "%Y-%d-%m" }}</span> [{{post.data.title}}]({{ post.url }})
+<span class="date">{{ post.data.date | date: "%Y-%d-%m" }}</span> [{{post.data.title}}](/2023{{ post.url }})
 {.post}{% endif %}
 {% endfor %}
 

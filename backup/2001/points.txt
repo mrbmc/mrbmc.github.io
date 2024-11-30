@@ -1,0 +1,75 @@
+&option1=the list&
+&option2=great albums&
+&option3=first memory&
+&option4=ECBT&
+&option5=booze&
+&option6=got content?&
+&option7=got content?&
+&option8=got content?&
+&option1Data=design a beatuiful web site \*
+record an album
+be a dive master \*
+learn to fly
+learn to play \"tocata and fugue\"
+drive across america on a motorcylce
+cure a disease
+have grandkids
+write a book
+teach a college course
+discover a planet
+learn the constellations
+learn the names of clouds \*
+sail across the atlantic
+travel to 100 countries
+keep a journal for a year \*
+spend a week with out talking
+learn a martial art
+surf
+become a justice of the peace
+get a tatoo \*
+build a house
+grow my own food
+draw a children's story book
+vint my own wine&
+&option2Data=these are records which rock.  albums that have been important in my life
+
+nine inch nails: the downward spiral
+nine inch nails: pretty hate machine
+autechre: tri repatae
+aphex twin: i care because you do
+future sound of london: isdn
+jane's addiction: nothing's shocking
+portisehead: dummy
+tom waits: bone machine
+miles davis: original birth of the cool
+beethoven:  symphonies 3 and 6
+amon tobin: bricolage
+Bob Marley:  Exodus
+Tchaikovsky:  Symphony Pathetique
+Bjšrk: post
+front 242: tyranny > for you <
+
+and of course all the house, trance, techno, drum 'n' bass i've heard at every club i've been to in the last 6 years&
+
+&option3Data=     i remember on my third birthday, our dog was hit by a car.
+    i don't remember the dog, whose name was P.T., actually being hit because i didn't witness it, but i remember seeing my mother cry.  She was sitting on the couch across the room from me crying while i sat on somebody's lap (my dad?).  There were other people around the room, but nobody sitting with her consoling her.  I thought that was odd at the time, that my mother was so upset but nobody hugged her.  She always hugged me when i cried.
+     i remember the scene and the room very clearly probably becuase i've been there many times since; to my godmother's beach house.  The setting is solidly engraved in my mind and i guess it's easy to attach other memories to it.  We adopted a new dog the next day and i named him skipper.  He died of old age 15 years later.&
+
+&option5Data=I start with sake.   Sake is a good starter becuase you know, it tastes ok and it comes in cool bottles.  I'll work my way to the scotch after dinner, but right now sake is enough.  I usually start with the scotch but the freezer's busted and we're out of ice.
+
+Scotch is real poison.  It's not the effect of that particular breed of ethanol that's poisonous, it's the toxins and pollutants imbued during fermentation.  Peat smoke... good stuff.  I drink it anyway in the hopes that it will dissolve the deposits of ketraset chloride in my liver and kidneys.  I don't care what else it dissolves as long as it gets that damned animal tranquilizer.  bad stuff.
+
+A good buzz going now... "I need a RISING sound."   Cheers to those who recognize my samoan lawyer's quote.
+
+bye&
+
+&optionSub3Data=In the mess of warm bodies that rushed into the Internet and technologies industries, it has proved invaluable and beneficial to all to identify talented people who have unique skills to offer. The ECBT is a coalition of like-minded individuals, based out of New York although located worldwide, who share common goals in life and professional endeavors.
+
+The hub of this personal network is this Internet site, with the intent of providing for people powerful tools to communicate with each other and easily aggregate those communications. This manifests itself in numerous ways; from something as simple as getting the folks together to get a beer after work, to assembling a team for a web enterprise.&
+
+&optionSub4Data=TWILO
+Sacred Noise
+Konkrete.org
+Maniac Love&
+
+&loaded=go&

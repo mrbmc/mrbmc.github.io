@@ -1,0 +1,196 @@
+<html>
+<head>
+
+	<title>++ i'm not french ++</title>
+
+	<meta HTTP-EQUIV="pragma" CONTENT="no-cache">
+	<meta NAME="ROBOTS" CONTENT="ALL">
+	<meta name="DESCRIPTION" content="kageki ++ intense media and design">
+	<meta name="KEYWORDS" content="kageki, web site design, flash, HTML, dhtml, content, entertainment, source, backgrounds, music, synthesis, ad,  advertising, graveyard, eastcoastbraintrust, east coast brain trust, braintrust, konkrete, a list apart, MP3, chiptune">
+	<meta name="AUTHOR" content="brian mcconnell for www.kageki.com">
+
+<script language="JavaScript">
+<!--
+// initialize a variable to test for JavaScript 1.1.
+// which is necessary for the window.location.replace method
+var javascriptVersion1_1 = false;
+// -->
+</script>
+
+
+<script language="JavaScript1.1">
+<!--
+javascriptVersion1_1 = true;
+// -->
+</script>
+
+
+<script language="JavaScript">
+<!--
+
+/*function detectJapanese {
+if(navigator.language==ja){JAPANESE = 1}
+	else{JAPANESE = 0}
+}*/
+
+// initialize global variables
+var detectableWithVB = false;
+var pluginFound = false;
+
+
+function goURL(daURL) {
+    // if the browser can do it, use replace to preserve back button
+    if(javascriptVersion1_1) {
+	window.location.replace(daURL);
+    } else {
+	window.location = daURL;
+    }
+    return;
+}
+
+function oldBrowsers() {
+
+	//detect old browers
+	var plat = navigator.appVersion;
+	if (plat.charAt(0) == "3") {VERSION = 3;}
+	if (plat.charAt(0) == "4") {VERSION = 4;}
+	if (plat.charAt(0) == "5" || plat.indexOf("MSIE 5") != -1) {VERSION = 5;}
+	if (plat.charAt(0) == "6") {VERSION = 6;}
+
+	if (VERSION < 5) {
+
+		if ((navigator.appName == "Microsoft Internet Explorer") && (navigator.appVersion.indexOf("Mac") != -1)) {
+			ERROR_MSG = "You are running an older version of IE on a Mac, so we can't detect if you have Macromedia's Flash Player.<br><br>if you do have Flash installed then you can <a href=2001/upgradeyourdamnbrowser.shtml>enter the site here<\/a><br><br>We highly reccomend you upgrade to <a href=http://www.microsoft.com/mac/products/ie/>Internet Explorer 5 for Mac<\/a>.  It's probably the best browser available.";
+		} else { ERROR_MSG = "<br><br><br><font face=helvetica>you can't see this site because you have an old ghetto booty, non standard browser.  If you don't give a damn, you can proceed into the oldbrowser version of the site <a href=2001/upgradeyourdamnbrowser.shtml>here<\/a>";
+		}
+		redirectURL = "2001/upgradeyourdamnbrowser.shtml";
+	} else { ERROR_MSG = "<br><br><br><font face=helvetica>you can't see this site because do not have <b><a href=http://macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash target=link>Flash<\/a><\/b> installed<br><br>you can download it <a href=http://macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash target=link>here<\/a> and install it in less than 60 seconds<br><br>if you think you receive this message in error, you can proceed into the site <a href=2001/>here<\/a><\/font>";
+	}
+
+}
+
+function redirectCheck(pluginFound, redirectURL, redirectIfFound) {
+    // check for redirection
+    if( redirectURL && ((pluginFound && redirectIfFound) || 
+	  (!pluginFound && !redirectIfFound)) ) {
+	// go away
+	oldBrowsers();
+	goURL(redirectURL);
+	return pluginFound;
+    } else {
+	oldBrowsers();
+	// stay here and return result of plugin detection
+	document.write(ERROR_MSG);
+	return pluginFound;
+    }	
+}
+
+function canDetectPlugins() {
+    if( detectableWithVB || (navigator.plugins && navigator.plugins.length > 0) ) {
+	return true;
+    } else {
+	return false;
+    }
+}
+
+function detectFlash(redirectURL, redirectIfFound) {
+    pluginFound = detectPlugin('Shockwave','Flash'); 
+    // if not found, try to detect with VisualBasic
+    if(!pluginFound && detectableWithVB) {
+	pluginFound = detectActiveXControl('ShockwaveFlash.ShockwaveFlash.1');
+    }
+    // check for redirection
+    return redirectCheck(pluginFound, redirectURL, redirectIfFound);
+}
+
+function detectPlugin() {
+    // allow for multiple checks in a single pass
+    var daPlugins = detectPlugin.arguments;
+    // consider pluginFound to be false until proven true
+    var pluginFound = false;
+    // if plugins array is there and not fake
+    if (navigator.plugins && navigator.plugins.length > 0) {
+	var pluginsArrayLength = navigator.plugins.length;
+	// for each plugin...
+	for (pluginsArrayCounter=0; pluginsArrayCounter < pluginsArrayLength; pluginsArrayCounter++ ) {
+	    // loop through all desired names and check each against the current plugin name
+	    var numFound = 0;
+	    for(namesCounter=0; namesCounter < daPlugins.length; namesCounter++) {
+		// if desired plugin name is found in either plugin name or description
+		if( (navigator.plugins[pluginsArrayCounter].name.indexOf(daPlugins[namesCounter]) >= 0) || 
+		    (navigator.plugins[pluginsArrayCounter].description.indexOf(daPlugins[namesCounter]) >= 0) ) {
+		    // this name was found
+		    numFound++;
+		}   
+	    }
+	    // now that we have checked all the required names against this one plugin,
+	    // if the number we found matches the total number provided then we were successful
+	    if(numFound == daPlugins.length) {
+		pluginFound = true;
+		// if we've found the plugin, we can stop looking through at the rest of the plugins
+		break;
+	    }
+	}
+    }
+    return pluginFound;
+} // detectPlugin
+
+
+// Here we write out the VBScript block for MSIE Windows
+if ((navigator.userAgent.indexOf('MSIE') != -1) && (navigator.userAgent.indexOf('Win') != -1)) {
+    document.writeln('<script language="VBscript">');
+
+    document.writeln('\'do a one-time test for a version of VBScript that can handle this code');
+    document.writeln('detectableWithVB = False');
+    document.writeln('If ScriptEngineMajorVersion >= 2 then');
+    document.writeln('  detectableWithVB = True');
+    document.writeln('End If');
+
+    document.writeln('\'this next function will detect most plugins');
+    document.writeln('Function detectActiveXControl(activeXControlName)');
+    document.writeln('  on error resume next');
+    document.writeln('  detectActiveXControl = False');
+    document.writeln('  If detectableWithVB Then');
+    document.writeln('     detectActiveXControl = IsObject(CreateObject(activeXControlName))');
+    document.writeln('  End If');
+    document.writeln('End Function');
+
+    document.writeln('\'and the following function handles QuickTime');
+    document.writeln('Function detectQuickTimeActiveXControl()');
+    document.writeln('  on error resume next');
+    document.writeln('  detectQuickTimeActiveXControl = False');
+    document.writeln('  If detectableWithVB Then');
+    document.writeln('    detectQuickTimeActiveXControl = False');
+    document.writeln('    hasQuickTimeChecker = false');
+    document.writeln('    Set hasQuickTimeChecker = CreateObject("QuickTimeCheckObject.QuickTimeCheck.1")');
+    document.writeln('    If IsObject(hasQuickTimeChecker) Then');
+    document.writeln('      If hasQuickTimeChecker.IsQuickTimeAvailable(0) Then ');
+    document.writeln('        detectQuickTimeActiveXControl = True');
+    document.writeln('      End If');
+    document.writeln('    End If');
+    document.writeln('  End If');
+    document.writeln('End Function');
+
+    document.writeln('</scr' + 'ipt>');
+}
+// -->
+</script>
+
+</head>
+<body>
+<center>
+
+<script language="JavaScript"><!--
+	detectFlash('2001/index.html',1);
+
+//--></script>
+
+<noscript>
+look mate... this won't do at all<br>
+<br>
+it's time to get yourself a <a href="http://www.microsoft.com/ie/">decent browser</a>.
+</noscript>
+
+<center>
+</body>
+</html>

@@ -2,10 +2,24 @@
 SRC="$(dirname "$0")/src";
 OUT="$(dirname "$0")/www";
 
+NOCOLOR='\033[0m';
+Black='\033[1;30m';
+Red='\033[1;31m';
+YELLOW='\033[1;33m';
+Blue='\033[1;34m';
+PURPLE='\033[1;35m';
+CYAN='\033[1;36m';
+GRAY='\033[1;37m';
 
 function build_js () {
+	echo "${YELLOW}---------------------------------------------";
+	echo "- COMPILING JAVASCRIPT";
+	echo "---------------------------------------------${GRAY}";
+
+	if [ ! -d "$OUT/js" ]; then
+		mkdir -m755 -p $OUT/js;
+	fi;
 	# echo " Gradient JS";
-	# mkdir -m755 -p $OUT/js;
 	# uglifyjs -m \
 	# 	-c sequences=true,dead_code,conditionals,booleans,unused,if_return,join_vars \
 	# 	--source-map url=gradient.min.js.map \
@@ -73,6 +87,7 @@ function build_js () {
 		-o $OUT/js/mrbmc.min.js \
 		$SRC/_js/mrbmc.js;
 
+		echo "${NOCOLOR}";
 }
 
 function build_thumbs () {
@@ -91,41 +106,81 @@ function build_thumbs () {
 
 }
 
+function build_assets () {
+
+	echo "${YELLOW}---------------------------------------------";
+	echo "- DEPLOYING STATIC ASSETS";
+	echo "---------------------------------------------${NOCOLOR}";
+
+	echo "${YELLOW}- Deploy fonts";
+	echo "---------------------------------------------${NOCOLOR}";
+	rsync -av --delete-after $SRC/_fonts/ $OUT/css/fonts;
+
+	# build_thumbs;
+
+	echo "${YELLOW}---------------------------------------------";
+	echo "- Deploy images";
+	echo "---------------------------------------------${NOCOLOR}";
+	rsync -av --exclude 'portfolio' $SRC/images/ $OUT/images;
+
+
+	echo "${YELLOW}---------------------------------------------";
+	echo "- Sync old versions";
+	echo "---------------------------------------------${GRAY}";
+	rsync -av $(dirname "$0")/backup/1999/ $OUT/1999;
+	rsync -av $(dirname "$0")/backup/2000/ $OUT/2000;
+	rsync -av $(dirname "$0")/backup/2001/ $OUT/2001;
+	rsync -av $(dirname "$0")/backup/2001/ $OUT/2002;
+	rsync -av $(dirname "$0")/backup/2001/ $OUT/2015;
+	rsync -av $(dirname "$0")/backup/2022/ $OUT/2022;
+	rsync -av $(dirname "$0")/backup/2023/www/ $OUT/2023;
+	echo "${NOCOLOR}";
+
+}
+
 function build_static () {
+	echo "${YELLOW}---------------------------------------------";
+	echo "- BUILDING HTML & CSS";
+	echo "---------------------------------------------${GRAY}";
 
-	echo "Deploy fonts";
-	rsync -au --delete-after $SRC/_fonts/ $OUT/css/fonts;
+	echo "Building CSS..........";
+	echo "---------------------------------------------";
+	/opt/homebrew/bin/sass $SRC/_scss/screen.scss $OUT/css/screen.css --style compressed --no-source-map --verbose;
 
-	build_thumbs;
+	echo "Building HTML..........";
+	echo "---------------------------------------------";
+	npx @11ty/eleventy;
 
-	echo "Deploy images";
-	rsync -au --delete-after $SRC/_images/ $OUT/images;
+
+
+}
+
+function build_garbage(){
+
+	echo "${RED}---------------------------------------------";
+	echo "GARBAGE COLLECTION${GRAY}";
+	find $(dirname "$0") -name ".DS_Store" -type f -delete
+	rm -Rf $OUT/*/node_modules; 
+	rm -Rf $OUT/metrics; 
+	chmod -Rf 755 $OUT/
 
 }
 
 
-
-if [ $# -eq 0 ]; then
-	echo "* * * * * * * * * * * * * * * * * * * * * * *";
-    echo "Please enter a command. Options are 'build', 'backup', or 'deploy'";
-	exit;
-fi
-
-
-
-if [[ "$1" == "buildjs" ]]; then
+if [[ "$1" == "js" ]]; then
 
 	build_js;
 
 exit;
 fi;
 
-
-
 if [[ "$1" == "thumbs" ]]; then
-
 	build_thumbs;
+exit;
+fi;
 
+if [[ "$1" == "assets" ]]; then
+	build_assets;
 exit;
 fi;
 
@@ -133,7 +188,7 @@ fi;
 if [[ "$1" == "backup" ]]; then
 	echo "* * * * * * * * * * * * * * * * * * * * * * *";
 	echo "Backing up files to gDrive";
-	rsync -auv --delete ~brianmcconnell/Sites/mrbmc/ ~brianmcconnell/Google\ Drive/My\ Drive/Sites/mrbmc;
+	rsync -av ~brianmcconnell/Sites/mrbmc/ --exclude 'metrics/logs/*' ~brianmcconnell/Google\ Drive/My\ Drive/Sites/mrbmc;
 	exit;
 fi
 
@@ -155,43 +210,33 @@ fi
 
 if [[ "$1" == "build" ]]; then
 
-	echo "* * * * * * * * * * * * * * * * * * * * * * *";
-	echo "BUILDING mrbmc.com";
+	echo "${CYAN}* * * * * * * * * * * * * * * * * * * * * * *";
+	echo "* BUILDING mrbmc.com";
 	echo "$SRC > $OUT";
 	cd "$(dirname "$0")";
-	mkdir -m755 -p $OUT;
-
-	echo "---------------------------------------------";
-	echo "- COMPILING JAVASCRIPT";
+	if [ ! -d "$OUT" ]; then
+		mkdir -m755 -p $OUT;
+	fi;
+	echo "${NOCOLOR}";
 
 	build_js;
 
-	echo "---------------------------------------------";
-	echo "- BUILDING HTML & CSS";
+	build_static;
 
-	echo "Building CSS..........";
-	/opt/homebrew/bin/sass $SRC/_scss/screen.scss $OUT/css/screen.css --style compressed --verbose;
+	build_assets;
 
-	echo "Building HTML..........";
-	npx @11ty/eleventy --quiet;
+	build_garbage;
 
-	# images, fonts, and thumbs are now managed live by 11ty as of 2023-10-24
-	# echo "---------------------------------------------";
-	# echo "- DEPLOYING ASSETS";
-	# build_static;
-
-	echo "---------------------------------------------";
-	echo "GARBAGE COLLECTION";
-	find $(dirname "$0") -name ".DS_Store" -type f -delete
-	rm -Rf $OUT/*/node_modules; 
-	rm -Rf $OUT/metrics; 
-	chmod -Rf 755 $OUT/
-
-	echo "* * * * * * * * * * * * * * * * * * * * * * *";
+	echo "${CYAN}* * * * * * * * * * * * * * * * * * * * * * *";
+	echo "BUILD COMPLETE";
+	echo "* * * * * * * * * * * * * * * * * * * * * * *${NOCOLOR}";
 
 exit;
 fi;
 
 
 echo "We could not execute the '$1' command.";
+echo "Available options are 'build', 'js', 'assets', 'thumbs', 'backup', or 'deploy'";
+exit;
+
 exit;

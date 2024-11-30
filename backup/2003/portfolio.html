@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:og="http://ogp.me/ns#">
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Portfolio - Brian McConnell</title>
+    <link href="./css/screen.css" rel="stylesheet" type="text/css" media="all" />
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="portfolio" id="portfolio-body" data-spy="scroll" data-target="#portfolio-nav" data-offset="100">
+
+<div class="navbar navbar-fixed-top" id="header">
+  <div class="navbar-inner">
+	<div class="container">
+	    <a class="brand" href="/">Brian McConnell</a>
+		<a href="#" class="btn-navbar" id="nav-toggle" data-toggle="collapse" data-target=".nav-collapse"><span></span></a>
+		<a href="#" class="btn-navbar hide" id="portfolio-toggle">
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="24px" viewBox="0 0 16 24" enable-background="new 0 0 16 24" xml:space="preserve">
+				<rect x="12" y="5" width="4" height="2"></rect>
+				<rect x="6" y="5" width="4" height="2"></rect>
+				<rect y="5" width="4" height="2"></rect>
+				<rect x="12" y="11" width="4" height="2"></rect>
+				<rect x="6" y="11" width="4" height="2"></rect>
+				<rect y="11" width="4" height="2"></rect>
+				<rect x="12" y="17" width="4" height="2"></rect>
+				<rect x="6" y="17" width="4" height="2"></rect>
+				<rect y="17" width="4" height="2"></rect>
+			</svg>
+		</a>
+	    <ul id="primary-nav" class="nav nav-collapse collapse">
+			<!-- <li><a href="/" title="About">About</a></li> -->
+			<li><a href="/cv" title="Resumé">CV</a></li>
+			<li class="active"><a href="/portfolio" onclick="$closeProject();return false;" title="Portfolio">Portfolio</a></li>
+			<li><a href="http://blog.brianmcconnell.me/" title="Blog">Journal</a></li>
+			<li><a href="/gallery" title="Gallery">Photos</a></li>
+            <li class="social">
+                <a href="http://twitter.com/mrbmc"><span class="icon Twitter"></span></a>
+                &nbsp;
+                <a href="http://mrbmc.tumblr.com"><span class="icon Tumblr"></span></a>
+                &nbsp;
+                <a href="skype:mr_bmc?chat"><span class="icon Skype"></span></a>
+                &nbsp;
+                <a href="http://linkedin.com/in/mrbmc" title="LinkedIn"><span class="icon LinkedIn">LinkedIn</span></a>
+            </li>
+	    </ul>
+	</div>
+  </div>
+</div>
+
+
+
+<div id="portfolio-paging">
+  <a href="#" class="page-rev" onclick="$gotoProject(-1);return false;">&#9666;</a>
+  <a href="#" class="page-fwd" onclick="$gotoProject(1);return false;" style="font-family: u2400;">&#9656;</a>
+</div>
+
+<section id="portfolio-index">
+	<div class="container"></div>
+</section>
+
+<section id="project-detail"></section>
+
+<script type="text/x-handlebars-template" id="project-list-template" class="template">
+{{#each this}}
+{{#unless private}}
+<div id="{{slug}}" class="project" data-skills="{{#each skills}}{{this}} {{/each}}" data-project="{{slug}}" data-title="{{title}}">
+	<div class="teaser">
+		<a href="#{{slug}}">
+		{{#if image }}
+			<img src="{{image}}" alt="" border="0" />
+		{{else}}
+			<img src="{{slides.0.image}}" alt="" border="0" />
+		{{/if}}
+		</a>
+	</div>
+	<div class="caption">
+		<h3><a href="#{{slug}}">{{title}}</a></h3>
+		<h5 class="role">{{role}} &nbsp;</h5>
+	</div>
+</div>
+{{/unless}}
+{{/each}}
+</script>
+<script type="text/x-handlebars-template" id="project-detail-template" class="template">
+<div class="teaser" style="background-image:url('{{image}}');">
+	<div class="container">
+		<h2>{{title}}</h2>
+		<p class="link"><a href="{{url}}">{{url}}</a></p>
+	</div>
+</div>
+<div class="container">
+	<div class="row-fluid description">
+		<div class="span12">
+
+			{{#if description}}
+				<p>{{nl2br description}}</p>
+			{{else}}
+				<br />
+			{{/if}}
+
+			<h5 class="role">Role:</h5><em>{{role}}</em> &nbsp;
+		</div>
+	</div>
+
+	{{#each story}}
+	<div class="row-fluid sample">
+		<div class="span12">
+			{{#if title}}<h3 class="">{{title}}</h3>{{/if}}
+			{{#if image}}<div class="description">
+				{{#if description}}<p>{{nl2br description}}</p>{{/if}}
+			</div>{{/if}}
+			{{#if image}}<a href="{{image}}"><img src="{{image}}" alt="" border="0" /></a>{{else}}
+				{{#if description}}<p>{{nl2br description}}</p>{{/if}}
+			{{/if}}
+		</div>
+	</div>
+	{{/each}}
+	<a href="#{{slug}}" class="close">Close</a>
+</div>
+</script> <!--/project-detail-template-->
+
+
+
+<div class="footer wrapper inverse">
+	<div class="container">
+		<div class="row">
+			<div class="span8">
+				<h3>UX Design &amp; Product Management.</h3>
+				<p>
+					Crafted with Love in Brooklyn &copy; <script type="text/javascript">document.write(new Date().getFullYear());</script>
+				</p>
+			</div>
+			<div class="span4">
+				<ul class="unstyled">
+					<li><br /></li>
+					<li>
+						<script type="text/javascript">
+						//<![CDATA[
+						<!--
+						var x="function f(x){var i,o=\"\",l=x.length;for(i=l-1;i>=0;i--) {try{o+=x.c" +
+						"harAt(i);}catch(e){}}return o;}f(\")\\\"function f(x,y){var i,o=\\\"\\\\\\\""+
+						"\\\\,l=x.length;for(i=0;i<l;i++){if(i==42)y+=i;y%=127;o+=String.fromCharCod" +
+						"e(x.charCodeAt(i)^(y++));}return o;}f(\\\"\\\\NDOXCJ^E\\\\\\\\034DF\\\\\\\\" +
+						"\\\\\\\\BRTW\\\\\\\\022\\\\\\\\031\\\\\\\\000\\\\\\\\\\\\\\\\\\\\\\\\036W2$" +
+						"$~\\\\\\\\030g+&!%>$v/<&1?\\\\\\\\022>\\\\\\\\014bla-gjk[*)~bxak2L3W~u|z7Uk" +
+						"4;^P]C\\\\\\\\002\\\\\\\\037@QMDHgE[HFO\\\\\\\\003M@]\\\\\\\\r\\\\\\\\035R\\"+
+						"\\\\\\n\\\\\\\\027\\\\\\\\037\\\\\\\\014\\\\\\\\010\\\\\\\\002\\\"\\\\,42)\\"+
+						"\"(f};)lo,0(rtsbus.o nruter};)i(tArahc.x=+o{)--i;0=>i;1-l=i(rof}}{)e(hctac}" +
+						";l=+l;x=+x{yrt{)05=!)31/l(tAedoCrahc.x(elihw;lo=l,htgnel.x=lo,\\\"\\\"=o,i " +
+						"rav{)x(f noitcnuf\")"                                                        ;
+						while(x=eval(x));
+						//-->
+						//]]>
+						</script>
+					</li>
+					<li><br /></li>
+					<li>
+						<a href="http://twitter.com/mrbmc"><span class="icon Twitter"></span></a>
+						&nbsp;
+						<a href="http://mrbmc.tumblr.com"><span class="icon Tumblr"></span></a>
+						&nbsp;
+						<a href="skype:mr_bmc?chat"><span class="icon Skype"></span></a>
+						&nbsp;
+						<a href="http://linkedin.com/in/mrbmc" title="LinkedIn"><span class="icon LinkedIn">LinkedIn</span></a>
+					</li>
+					<!--<li>
+							&nbsp; <a href="http://twitter.com/mrbmc" title="Twitter"><span class="icon Twitter small">Twitter</span></a>
+							&nbsp; <a href="skype:mr_bmc?chat" title="Skype"><span class="icon Skype small">Skype</span></a>
+							&nbsp; <a href="http://linkedin.com/in/mrbmc" title="LinkedIn"><span class="icon LinkedIn small">LinkedIn</span></a>
+					</li>-->
+				</ul>
+				<a href="#portfolio-index" class="center visible-phone">Scroll to Top</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" language="javascript" src="/js/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" language="javascript" src="/js/mrbmc.js"></script>
+<script type="text/javascript" language="javascript" src="/js/handlebars-1.0.0.js"></script>
+<script type="text/javascript" language="javascript" src="/js/jquery.scrollto.min.js"></script>
+<script type="text/javascript" language="javascript" src="/js/jquery.easing.min.js"></script>
+<script type="text/javascript" language="javascript" src="/js/portfolio.min.js"></script>
+
+
+
+
+</body>
+
+
+</html>

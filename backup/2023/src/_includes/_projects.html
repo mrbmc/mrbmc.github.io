@@ -2,13 +2,13 @@
     <h2>{{label}}</h2>
     {% for project in projectList %}
     <article id="project-{{ forloop.index }}" class="project">
-        <h2><a href="{{ project.url }}">{{ project.data.title }}</a></h2>
+        <h2><a href="/2023{{ project.url }}">{{ project.data.title }}</a></h2>
         {% if project.data.summary %}
         <p class="summary">{{ project.data.summary }}</p>
         {% endif %}
         <figure>
-            <a href="{{ project.url }}">
-                <img src="{{ project.data.thumbnail }}" alt="{{project.data.title}}" />
+            <a href="/2023{{ project.url }}">
+                <img src="/2023{{ project.data.thumbnail }}" alt="{{project.data.title}}" />
             </a>            
         </figure>
     </article>

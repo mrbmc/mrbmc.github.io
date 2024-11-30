@@ -1,0 +1,55 @@
+&option1=the list&
+&option2=great albums&
+&option3=first memory&
+&option4=ECBT&
+&option5=got content?&
+&option6=got content?&
+&option7=got content?&
+&option8=got content?&
+&option1Data=design a beatuiful web site \*
+record an album
+be a dive master \*
+learn to fly
+learn to play \"tocata and fugue\"
+drive across america on a motorcylce
+cure a disease
+have grandkids
+write a book
+teach a college course
+discover a planet
+learn the constellations
+learn the names of clouds \*
+sail across the atlantic
+travel to 100 countries
+keep a journal for a year \*
+spend a week with out talking
+learn a martial art
+surf
+become a justice of the peace
+get a tatoo \*
+build a house
+grow my own food
+draw a children's story book&
+&option2Data=these are albums which rock.  albums that have been important in my life
+
+nine inch nails: the downward spiral
+nine inch nails: pretty hate machine
+autechre: tri repatae
+aphex twin: i care because you do
+future sound of london: isdn
+jane's addiction: nothing's shocking
+portisehead: dummy
+tom waits: bone machine
+miles davis: original birth of the cool
+ludwig van beethoven:  symphonies 3,5,6,7,9
+amon tobin: bricolage
+marylin manson: antichrist superstar&
+
+&option3Data=     i remember on my third birthday, our dog was hit by a car.
+    i don't remember the dog, whose name was P.T., actually being hit because i didn't witness it, but i remember seeing my mother cry.  She was sitting on the couch across the room from me crying while i sat on somebody's lap (my dad?).  There were other people around the room, but nobody sitting with her consoling her.  I thought that was odd at the time, that my mother was so upset but nobody hugged her.  She always hugged me when i cried.
+     i remember the scene and the room very clearly probably becuase i've been there many times since; to my godmother's beach house.  The setting is solidly engraved in my mind and i guess it's easy to attach other memories to it.  We adopted a new dog the next day and i named him skipper.  He died of old age 15 years later.&
+
+
+
+
+&loaded=go&

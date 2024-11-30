@@ -1,0 +1,244 @@
+@font-face {
+	font-family:"Gotham";
+	font-weight: 300;
+	src:url('/css/fonts/gotham/Gotham-Light.eot');
+    src:url('/css/fonts/gotham/Gotham-Light.eot?#iefix') format('embedded-opentype'),
+	    url('/css/fonts/gotham/Gotham-Light.ttf') format('truetype');
+	src:url('/css/fonts/gotham/Gotham-Light.woff') format('woff');
+}
+@font-face {
+	font-family:"Gotham";
+	font-weight: 700;
+	src:url('/css/fonts/gotham/Gotham-Bold.eot');
+    src:url('/css/fonts/gotham/Gotham-Bold.eot?#iefix') format('embedded-opentype'),
+	    url('/css/fonts/gotham/Gotham-Bold.ttf') format('truetype');
+	src:url('/css/fonts/gotham/Gotham-Bold.woff') format('woff');
+}
+@import url(http://fonts.googleapis.com/css?family=Quattrocento);
+
+
+@import "_variables.less";
+@import "_mixins.less";
+
+@sansFontFamily:        "Gotham", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@serifFontFamily:       "Quattrocento","Georgia","Palatino","Times New Roman", Times,serif;
+@monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
+@headingsFontFamily: 	@sansFontFamily;
+@baseFontFamily: @sansFontFamily;
+
+@border-margin: .8em;
+
+
+@charset "utf-8";
+@media all {
+  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; } /* Black prints faster: h5bp.com/s */
+  a, a:visited { text-decoration: underline; }
+  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+  thead { display: table-header-group; } /* h5bp.com/t */
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important;width: 100%; }
+  @page { margin: 0.5cm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}
+
+div, p, td, th, li, dt, dd, strong, b, em {
+	font-family: @baseFontFamily;
+	font-size: 12px;
+}
+h1,h2,h3,h4 {
+	display: block;
+	clear: both;
+	font-family: @headingsFontFamily;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+h2 {
+    border-bottom: 1px solid #CCC;
+    font-size: 1.25em;
+    line-height: 1.25;
+    margin: 0 0 1em 0;
+    padding: 0;
+}
+h4 {
+	margin: 0;
+}
+strong, b {
+	font-weight: bold;
+}
+p {
+	margin: 0 0 1em 0;
+}
+p.text-scaled {
+	font-size: 16px !important;
+	line-height: 1.4;
+}
+a {
+	color: #000;
+	text-decoration: none;
+}
+.navbar,.footer {
+	display: none !important;
+}
+dt, dt a, dt a:visited {
+	font-weight: normal;
+}
+dl,ul {
+	margin: 0;
+}
+
+
+// --------------------------------------------------
+// GRID
+
+.container {
+	max-width: 1600px;
+	margin: 0 auto;
+}
+#grid(@fluidGridColumnWidth, @fluidGridGutterWidth);
+
+.hidden-print {
+	display: none !important;
+}
+
+
+
+
+body {
+	&.portfolio {
+		#portfolio {
+			.project {
+				h3 {
+					font-size: 21px;
+					margin: 0 0 .2em 0;
+				}
+				.project-thumb {
+					.teaser {
+						height: 10em;
+						overflow: hidden;
+					}
+				}
+				.project-detail {
+					display: none;
+					.sample {
+						margin-top: 2em;
+					}
+				}
+				&.active {
+					.project-thumb {
+						display: none;
+					}
+					.project-detail {
+						display: block;
+					}
+				}
+			}
+		}
+		#portfolio-paging {
+			display: none !important;
+		}
+	}
+}
+
+
+
+// ----------------------------------------
+// RESUME
+body#resume:after {
+	content: url('/img/turtle-loggerhead.png');
+	display: block;
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	right: 0%;
+	bottom: 2%;
+	z-index: -1;
+
+	clear: both;
+}
+#pedigree {
+	h1 {
+		font-size: 1.75em;
+		margin: 0;
+	}
+	h2,h3,h4 {
+		margin: 0;
+	}
+}
+#timeline {
+	max-width: 100%;
+	padding: 0;
+	margin: 0;
+	img {
+		max-width: (1200px*1.2);
+		padding: 0;
+		margin: 0;
+	}
+}
+#competencies {
+	width: 28%;
+	float: right;
+	dt {
+		padding: 0;
+		margin: 1em 0 0 0;
+	  h4 {
+	  	margin-bottom: 0;
+	  }
+	}
+	dd {
+	  padding: 0em 0 0 0%;
+	  margin: 0em 0 0 0;
+	}
+	h4 {
+		margin-top: 0;
+	}
+}
+#experience {
+	margin-top: -1em;
+	width: 70%;
+	float: left;
+	ul {
+		margin-top: -.5em;
+		margin-bottom: .5em;
+	}
+	dt {
+		display: block;
+		padding: 0;
+		margin: 1em 0 0 0;
+		div {
+			display: inline;
+		}
+	}
+	dd {
+		display: block;
+		padding: 0;
+		margin: 0;
+		h5 {
+			margin: @border-margin 0 0 0;
+		}
+	}
+	.job-firm {
+		display: block;
+		font-family: @headingsFontFamily;
+		a {
+			text-decoration: none;
+		}
+	}
+	.job-title {
+		font-style: italic;
+		font-family: @headingsFontFamily;
+		&:after {
+			content:  ", ";
+			display: inline;
+		}
+	}
+	.job-date {
+		font-family: @headingsFontFamily;
+		font-style: italic;
+	}
+}
+#education {
+	margin-top: -1em;
+	float: right;
+	width: 28%;
+}

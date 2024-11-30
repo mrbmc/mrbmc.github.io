@@ -1,0 +1,8 @@
+&ScrollText=9/20
+
+Left shoulder itches.
+
+*scratch* *scratch*
+
+&loaded=go
+&

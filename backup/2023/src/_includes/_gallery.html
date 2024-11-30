@@ -2,11 +2,11 @@
 	<div class="detail in">
 	    <img src="#" alt="" class="image-detail">
 	    <p class="caption" id="image-caption"></p>
-	    <img src="/images/loading.svg" class="loading" alt="Loading">
+	    <img src="/2023/images/loading.svg" class="loading" alt="Loading">
 	</div>
 	<nav class="index">
 	{% for p in pics %}<a href="#/{{p.id}}">
-			<img src="{{p.url_t}}" data-src="{{p.url_o}}" alt="{{ p.title }}" border="0" id="t-{{p.id}}" class="thumbnail" />
+			<img src="/2023{{p.url_t}}" data-src="/2023{{p.url_o}}" alt="{{ p.title }}" border="0" id="t-{{p.id}}" class="thumbnail" />
 	</a>{% endfor %}
 	</nav>
 	<nav class="paging">

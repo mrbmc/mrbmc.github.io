@@ -4,19 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "f24455d88c5f9c7b",
+        "id": "ef2d32c3954038f6",
         "type": "tabs",
         "children": [
           {
-            "id": "75684717df7cb422",
+            "id": "0124eb2d6edf372b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "disney-enterprise.md",
+                "file": "disney-groupwatch.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "disney-groupwatch"
             }
           }
         ]
@@ -39,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -54,7 +58,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -62,7 +68,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -85,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "disney-enterprise.md",
+                "file": "disney-groupwatch.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -93,7 +101,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for disney-groupwatch"
             }
           },
           {
@@ -102,10 +112,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "disney-enterprise.md",
+                "file": "disney-groupwatch.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from disney-groupwatch"
             }
           },
           {
@@ -116,7 +128,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -125,8 +139,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "disney-enterprise.md"
-              }
+                "file": "disney-groupwatch.md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of disney-groupwatch"
             }
           }
         ],
@@ -146,17 +162,21 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "75684717df7cb422",
+  "active": "0124eb2d6edf372b",
   "lastOpenFiles": [
+    "nhl.md",
+    "disney-enterprise.md",
+    "disney-growth.md",
+    "disney-groupwatch.md",
+    "eurosport.md",
+    "exd-roi-framework.png",
     "disney-growth-long.md",
     "securityscorecard.md",
-    "disney-growth.md",
     "steelgills.md",
     "rhythmism.md",
     "pal-9100.md",
     "optumus.md",
     "nhlgameflow.md",
-    "nhl.md",
     "nhltv.md",
     "blogtalkradio.md",
     "boids.md",
@@ -164,10 +184,7 @@
     "disney.md",
     "espnplus.md",
     "espnvision.md",
-    "eurosport.md",
     "flint-and-silicon.md",
-    "disney-groupwatch.md",
-    "disney-enterprise.md",
     "team-charter-workshop.md",
     "espn.md",
     "portfolio/espn.md"

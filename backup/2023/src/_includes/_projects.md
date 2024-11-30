@@ -6,7 +6,7 @@
 
 {% for project in projectList %}
 
-[![{{project.data.title}}]({{ project.data.thumbnail }})]({{ project.url }}) {.project}
+[![{{project.data.title}}](/2023{{ project.data.thumbnail }})](/2023{{ project.url }}) {.project}
 
 {% endfor %}
 

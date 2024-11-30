@@ -11,8 +11,8 @@
     {% if masthead-image or masthead-video %}
     <figure data-fade="75">
         {% if masthead-video %}
-        <video src="{{masthead-video}}" autoplay loop muted preload="auto" playsinline data-parallax="100" type="video/mp4" id="masthead-video"></video>{% else 
-        %}<img src="{{ masthead-image }}" alt="{{ masthead-title }}" data-parallax="60">
+        <video src="/2023{{masthead-video}}" autoplay loop muted preload="auto" playsinline data-parallax="100" type="video/mp4" id="masthead-video"></video>{% else 
+        %}<img src="/2023{{ masthead-image }}" alt="{{ masthead-title }}" data-parallax="60">
         {% endif %}
     </figure>
     {% endif %}

@@ -14,7 +14,7 @@ const markdownLib = markdownIt(markdownItOptions).use(markdownItAttrs);
 //   return categoriesA.filter(Set.prototype.has, new Set(categoriesB)).length;
 // }
 
-module.exports = function(eleventyConfig) {
+module.exports = function (eleventyConfig) {
 
   // ========================================
   // CONTENT PREP
@@ -103,21 +103,15 @@ module.exports = function(eleventyConfig) {
   // BUILD ASSETS
   eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
 
-  // eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
+  eleventyConfig.addPassthroughCopy({ 'src/robots.txt': '/robots.txt' });
+  eleventyConfig.addPassthroughCopy({"src/_images/favicon/favicon.ico":"favicon.ico"});
   // eleventyConfig.addPassthroughCopy({"backup/2015":"2015"});
   // eleventyConfig.addPassthroughCopy({"backup/2022":"2022"});
   // eleventyConfig.addPassthroughCopy({"backup/2023/www":"2023"});
-  // eleventyConfig.addPassthroughCopy({"src/_images":"images"});
-  // eleventyConfig.addPassthroughCopy({"src/_fonts":"css/fonts"});
-  // eleventyConfig.addPassthroughCopy({"src/_images/favicon/favicon.ico":"favicon.ico"});
+  eleventyConfig.addPassthroughCopy({"src/_images":"images"});
+  eleventyConfig.addPassthroughCopy({"src/_fonts":"css/fonts"});
 
   eleventyConfig.setServerOptions({
-  //   // Default values are shown:
-  //   // Use a local key/certificate to opt-in to local HTTP/2 with https
-  //   https: {
-  //     // key: "./localhost.key",
-  //     // cert: "./localhost.cert",
-  //   },
     showVersion: true,
     watch: ["www/css/screen.css","www/js/*.js"],
   });

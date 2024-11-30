@@ -1,0 +1,442 @@
+[{
+	"title":"Securty Scorecard",
+	"slug":"securityscorecard",
+	"url":"http://securityscorecard.com",
+	"role":"UX Design, UI Design",
+	"skills":["ux","ui"],
+	"image":"/img/portfolio/security-teaser.jpg",
+	"description":"Security Scorecard provides an external audit of your security position. The design challenges here were stylistic and editorial. The visual langauge had to have gravitas and credibility as a security expert. The report needed to consolidate massive amounts of information into a scannable package.<br /><br />We found inspiration in Edward Tufte's theories for the visualizations.",
+	"public":false,
+	"story": [
+		{
+			"image":"/img/portfolio/scorecard-Detailed-Summary@2x.png",
+			"description":"Summarize an organizations cyber secuirty footprint in a periodic report."
+		},
+		{
+			"image":"/img/portfolio/scorecard-executive-report.png",
+			"description":"The challenge is presenting critical security threats to the executive suite without being alarmist."
+		}
+	]
+},
+{
+	"title":"BlogTalkRadio.com",
+	"slug":"btr",
+	"url":"http://blogtalkradio.com",
+	"role":"UX Design, UX Research, UI Design",
+	"skills":["ux","ui","pm"],
+	"image":"/img/portfolio/btr-teaser.jpg",
+	"description":"I joined BlogTalkRadio with the mission of helping it transition from a startup app with traction into a profitable podcasting platform. There were disparate visual languages and layers of design debt. The transformation into a modern media property was a 2+ year long project. We began with a deep dive into the data to help prioritize user needs. We steadily through layers of technical and design debt overhauling the site, email communications, and social media footprint.",
+	"story": [
+		{
+			"description":"<big>95%</big> increase in organic visits\n<big>37.3%</big> increase in organic page views"
+		},
+		{
+			"title":"The Process",
+			"image":"/img/portfolio/btr-maps.jpg",
+			"description":"The Roadmap, Customer Experience Map and Sitemap described our plan for BlogTalkRadio. Articulating these ideas helped us marry business goals with user goals."
+		},
+		{
+			"title":"Homepage",
+			"image":"/img/portfolio/btr-homepage-wireframe-review-short.jpg",
+			"description":"I directed the redesign introducing a new visual language to unite the platform. The homepage content is managed through a mix of editorial and algorithmic controls. Personalized content is fed by a newsfeed and recommendations. The rest of the content is hand curated by a new editorial team to appeal to alien visitors.\nThis resulted in increased homepage return visits and direct listen engagement."
+		},
+		{
+			"title":"",
+			"image":"/img/portfolio/btr-homepage.jpg",
+			"description":"Cross-functional collaboration between design, editorial and engineering increased velocity and quality."
+		},
+		{
+			"title":"Directory pages",
+			"image":"/img/portfolio/btr-category.jpg",
+			"description":"Pages for top level categories were developed with techniques found on topic specific content verticals. A heavy focus on SEO and a design catering to landing visitors boosted listening engagement here."
+		},
+		{
+			"title":"User Onboarding & Acquisition",
+			"image":"/img/portfolio/btr-signup.jpg",
+			"description":"Rigorous multi-variate testing of our offer pages and registration process helped us double sign-up rates. Guiding people into creating their first podcast or radio show was a major initiative. It directly fed revenue and product expansion."
+		},
+		{
+			"title":"",
+			"image":"/img/portfolio/btr-registration-flow.jpg",
+			"description":""
+		},
+		{
+			"title":"Email Product Suite",
+			"image":"/img/portfolio/btr-email.jpg",
+			"description":"I consider email an entire product suite due to the diverse UX of differnet publications working in concert: <ul><li>Newsletters</li><li>Show reminders</li><li>Acquisition streams</li></ul> Email was a fascinating project because it allowed daily iteration as we improved the UX. It was also encouraging to see engagment correlate strongly improvements in the UX; from plain text to HTML, adding responsive layouts and customized subject & preview text. "
+		},
+		{
+			"title":"Responsive Designs",
+			"image":"/img/portfolio/btr-responsive.jpg",
+			"description":"There is no longer a desktop or mobile web. I implemented responsive layouts to allow the site to work on a wide range of devices. We saw an immediate lift in mobile and tablet engagement."
+		}
+	],
+	"bak": [
+		{
+			"title":"Responsive Designs",
+			"image":"",
+			"description":"There is no longer a desktop or mobile web. I implemented responsive layouts to allow the site to work on a wide range of devices. We saw an immediate lift in mobile and tablet engagement."
+		},
+		{
+			"title":"Before & After",
+			"image":"/img/portfolio/btr-beforeafter.jpg",
+			"description":""
+		},
+		{
+			"image":"/img/portfolio/btr-landingpage.jpg",
+			"caption":"A series of landing pages featuring testimonials from real hosts and the benefits of signing up. These two cues were extremely effective."
+		},
+		{
+			"image":"/img/portfolio/btr-styleguide.jpg",
+			"caption":"A live HTML styleguide acted as a contract between designers and developers."
+		},
+		{ "description":"Free Host subscriptions increased 35% after the redesign while Paid Host subscriptions increased 16%."}
+	]
+},
+{
+	"title":"BlogTalkRadio Creator Tools",
+	"slug":"btr-hosts",
+	"url":"http://blogtalkradio.com",
+	"role":"UX Design, UX Research, UI design",
+	"skills":["ux","ui","pm"],
+	"image":"/img/portfolio/btr-hosttools-teaser.jpg",
+	"description":"A complete overhaul of the User Experience for creating & managing podcasts on BlogTalkRadio. Interviews and usability labs with users helped us identify pain points that we turned into opportunities.<h5>Key wins</h5><ul><li>15% increase in monthly subscription revenue</li><li>100%+ increase in user activation</li></ul>",
+	"story": [
+		{
+			"title":"Dashboard Stats",
+			"image":"/img/portfolio/btr-hosttools-dashboard.jpg",
+			"description":"In observing hosts we saw by far the most common workflow almost every host take was attempting to view the listen numbers for their content. Hosts wanted to see a quantifiable reward for their effort. We surfaced these metrics and created new summary metrics in the dashboard to amplify the ROI for them."
+		},
+		{
+			"title":"Dashboard Newsfeed",
+			"image":"/img/portfolio/btr-dashboard-newsfeed.jpg",
+			"description":"Another pain point we observed hosts experience was pogo-sticking between episode pages and their profile. In interviews we leared they did this to interact with their audience where they were. We used a news feed pattern to consolidate all their audience interactions in one place. This central control facilitated more comments, follows, and sharing."
+		},
+		{
+			"title":"The process",
+			"image":"/img/portfolio/btr-mybtr-process.jpg",
+			"description":"The host dashboard went through a full formal design process from sketches, to grid system, wireframes, prototypes and pixel perfect composites. Each step allowed us to further refine the goals of the application resulting in a much more streamlined experience."
+		},
+		{
+			"description":"Wireframes were developed as HTML prototypes. The beneits to this approach were rapid iterations, lifelike tools for <strong>usability testing</strong>, clear communication with executives and engineers, and richer interaction design.\n\n<a href='http://mybtr.mrbmc.com/?profile=novice'>See wireframes for novice users</a>\n<a href='http://mybtr.mrbmc.com/?profile=expert'>See wireframes for expert Users</a>"
+		},
+		{
+			"image":"/img/portfolio/btr-onramp.jpg",
+			"description":"There are many obstacles to creating content: writer's block, stage fright, technical confusion and apathy.\nWe used carefully written messaging and an array of features (emails, landing pages, inline help, alerts) to guide people over these obstacles and on the air."
+		},
+		{
+			"title":"Creating an Episode",
+			"image":"/img/portfolio/btr-hosttools-schedule.jpg",
+			"description":"The overhaul to the content creation tools focused on 3 changes: guidance on the quality of the content itself, active feedback on errors, and cleaner aesthetics. I'm proud of the balance we struck between novice, intermediate and advanced users by following the pareto principle: 80% of users only touch 20% of the features. All features are exposed but collapsed, instructions are context sensitive."
+		}
+	],
+	"bak": [
+		{
+			"title":"The Results",
+			"description":"<big>41.3%</big> increase in monthly subscription revenue\n<big>25%</big> decrease in subscriber churn\n<big>10%</big> increase in subscriber activation"
+		},
+		{
+			"title":"User-Centered Design",
+			"image":"#",
+			"description":"We ran a full suite of user research including quantitative analysis of user behavior, multi-variate testing of designs, qualitative user research, and in-person usability testing.\n This work produced countless insights into customer pain points around evaluating the success of their shows, connecting with to their audience, and managing their assets. Solving these pain points had a direct correlation with subscription revenue."			
+		},
+		{
+			"title":"Prototypes",
+			"image":"/img/portfolio/btr-mybtr-prototype.jpg",
+			"description":"Clickable html prototypes allowed usability tests with real customers. The prototypes enabled us to drill down into real use cases and uncover pain points we didn't know existed."
+		}
+	]
+},
+{
+	"title": "Cinchcast Web App",
+	"slug":"cinchcast",
+	"url":"https://platform.cinchcast.com",
+	"role": "UX Design, UX research, UI design.",
+	"image": "/img/portfolio/cinchcast-cms-teaser.jpg",
+	"skills":["ux","ui"],
+	"description":"Cinchcast Connect is a web application for managing large-scale conference calls. As the director of User Experience my role with Cinchcast required building a design culture and practice in the organization.",
+	"story": [
+		{
+			"title":"The Studio",
+			"image": "/img/portfolio/Cinchcast-Studio.jpg",
+			"description": "The Studio is the heart of the Cinchcast product. It's the application for controling a live conference or broadcast event."
+		},
+		{
+			"title":"Responsive Designs",
+			"image":"/img/portfolio/cinchcast-cms-responsive.jpg",
+			"description":"It was imperative that the application be accessible from all manner of devices. CSS media queries provided the tools to port the site from desktop, to tablet, to phone."
+		},
+		{
+			"title":"The Process",
+			"image": "/img/portfolio/cinchcast-agileux.jpg",
+			"description":"Our approach to mitigating these risks was an <strong>Agile UX</strong> process. Collaborative sketching between engineers and designers coupled with a live style guide allowed us to iterate through ideas quickly and reach market faster,"
+		},
+		{
+			"title":"Living Style Guide",
+			"image": "/img/portfolio/cinchcast-styleguide.jpg",
+			"description": "A live styleguide was use to promote a Lean UX workflow and reduce deliverables from the design team to development."
+		},
+		{
+			"title":"Design Principles",
+			"image":"/img/portfolio/cinchcast-principles.gif",
+			"description":"The unique challenge was creating a Professional grade application that could be used by amateurs who might never overcome a typical learning curve. Untrainted users needed to be able to manage a high-stress live event with minimal training."
+		},
+		{
+			"title":"Cinchcast.com Homepage",
+			"image": "/img/portfolio/cinchcast-com-slide3.jpg",
+			"description": ""
+		}
+	],
+	"bak": [
+		{
+			"title":"The Challenge",
+			"image":"#",
+			"description":"Creatng a new product from scratch carries many risks: establishing product market fit, prioritizing features, honing a visual identity, stabilizing bugs, and creating a workflow that makes sense for the team. \n "
+		},
+		{
+			"image": "/img/portfolio/cinchcast-cms.jpg",
+			"caption": "The CMS for managing events and content within Cinchcast."
+		}
+	]
+},
+{
+	"title": "Cinchcast iPhone App",
+	"slug":"cinchcast-ios",
+	"url":"https://platform.cinchcast.com",
+	"role": "UX Design, User research, UI design.",
+	"image": "/img/portfolio/cinchcast-iphone-teaser.jpg",
+	"skills":["ux","ui"],
+	"description":"",
+	"story": [
+		{
+			"title":"Native App for iPhone",
+			"image": "/img/portfolio/cinchcast-iphone.jpg",
+			"description": "The iPhone app allowed high fidelity recordings that fed the web publishing tools."
+		},
+		{
+			"title":"Interactive Prototypes",
+			"image": "/img/portfolio/cinchcast-iphone-wireframes.jpg",
+			"description": "Wireframes are not sufficient for designing an app. We iterated dozens of times through clickable prototypes to refine the interaction to where we wanted it.\n<a href=\"/downloads/cinchcast-iphone-prototype.pdf\">Download the prototype</a>"
+		}
+	]
+},
+{
+	"title":"BlogTalkRadio Studio",
+	"slug":"btr-studio",
+	"url":"http://blogtalkradio.com",
+	"role":"UX Design, UX Research, UI design",
+	"skills":["ux","ui"],
+	"image":"/img/portfolio/btr-studio.jpg",
+	"description":"A complete revamp of the core content creation app. After and before shots shown.",
+	"story": [
+		{
+			"title":"The Results",
+			"image":"/img/portfolio/btr-studio.jpg",
+			"description":"The aesthetics of the studio were inpsired by high-end Audio & Video authoring applications. We wanted to convey a serious, professional grade application for our hosts to work with."
+		},
+		{
+			"title":"Before and After",
+			"image":"/img/portfolio/btr-studio-transformation.jpg",
+			"description":""
+		}
+	]
+},
+{
+	"title": "buzzd",
+	"slug": "buzzd",
+	"role": "UX Design, UI Design, Project Management",
+	"image": "/img/portfolio/buzzd-teaser.jpg",
+	"skills":["ux","ui","dev","pm"],
+	"description":"I joined buzzd late in its product lifespan with the mission of increasing engagement. I oversaw a complete redesign of the platform, starting with the flagship app on iPhone. We then launched Android, BlackBerry and Mobile Web apps to follow suit.",
+	"story": [
+		{
+			"title": "Results.",
+			"image": "",
+			"description":"Checkins increased by <strong style='color:#093;'>185%</strong>.\nUser churn decreased by <strong style='color:#093;'>20%</strong>."
+		},
+		{
+			"title": "buzzd for iPhone.",
+			"image": "/img/portfolio/buzzd-iphone.jpg",
+			"description":"User interviews helped us prioritize the features we would build. These conversations uncovered problems with the brand positioning and the complexity of basic operations. We revamed the aesthetic to be less nightlife focused and streamlined core features."
+		},
+		{
+			"title":"The Process",
+			"image":"/img/portfolio/buzzd-iphone-steps.jpg",
+			"description":"We began with sketches. Then we added fidelity through wireframes and photoshop comps."
+		},
+		{
+			"title":"",
+			"image": "/img/portfolio/buzzd-express-checkin.jpg", 
+			"description": "Several features - especially the Express Check-In - required refined interaction maps to streamline edge cases and workload. The express check-in feature boosted user activity by 200%."
+		},
+		{
+			"title":"",
+			"image": "/img/portfolio/buzzd_iphone_sitemap.png",
+			"description": ""
+		},
+		{
+			"title": "buzzd for Android",
+			"image": "/img/portfolio/buzzd-android.jpg",
+			"description":""
+		},
+		{
+			"title": "buzzd.com homepage",
+			"image": "/img/portfolio/buzzd-homepage.jpg",
+			"description":""
+		}
+	],
+	"bak": [
+		{
+			"title":"",
+			"image": "/img/portfolio/buzzd_iphone_sketch.gif",
+			"description": "Initial mockups were sketched on a public whiteboard so the team could participate."
+		},
+		{
+			"title":"",
+			"image": "/img/portfolio/buzzd-iphone-wireframe3d.jpg",
+			"description": "High fidelity clickable wireframes allowed us to iterate ideas with real data and provide detailed specifications for the developers."
+		}
+	]
+			
+},
+
+{
+	"title": "Steel Gills",
+	"slug":"steelgills",
+	"role": "UX Design, UI Design, Brand Design, Development",
+	"skills":["ux","ui","gd","dev","pm"],
+	"url": "http://steelgills.com",
+	"image": "/img/portfolio/steelgills_teaser.jpg",
+	"description": "I wasn't satisfied with the existing tools for logging dives and divesites. I set out to design a better one.\n The market for digital dive logs exposed countless pain points: lack of web access, overy technical aimed at professional divers. no social connections and a total lack of usability best practices.",
+	"story": [
+		{
+			"title":"User Centered Design",
+			"image": "/img/portfolio/steelgills-personas.jpg",
+			"description": "We interviewed fellow divers on dive expeditions. From these interviews we could construct personas that illustrate the goals and obstacles each faced. We confirmed our thesis and found serious pain points in the logging process that other apps do not address and opportunities for social interaction."
+		},
+		{
+			"title":"Dive Logbook",
+			"image": "/img/portfolio/steelgills-divelog.jpg",
+			"description": "This form for logging dives uses more visual cues than other online tools. I also incorporated references familiar to users of paper logbooks."
+		},
+		{
+			"title":"Dive-Site Map",
+			"image": "/img/portfolio/steelgills-map.jpg",
+			"description": "We provide an interactive map for finding divesites and graphs that visualize your dive history."
+		},
+		{
+			"title":"One Click Sign-up",
+			"image": "/img/portfolio/steelgills-thumb.jpg",
+			"description": "Signup is a barrier for many people. To overcome that we've offered one-click signup with Twitter &amp; Facebook. We've also streamlined our traditional registration by reducing the number of fields and using a more intuitive CAPTCHA system."
+		},
+		{
+			"title":"CAPTCHA that doesn't suck",
+			"image": "/img/portfolio/steelgills-captcha.jpg",
+			"description": "We also used the signup process as an opportunity improve CAPTCHA. Everyone struggles with squiggly lines, inscrutable characters, and case errors. I used a semantic matching scheme with pictures instead."
+		}
+	]
+},
+
+{
+	"title": "American Heart Association",
+	"slug":"aha",
+	"subtitle": "'Start Tracker' Web Application",
+	"role": "UX Design",
+	"skills":["ux"],
+	"url": "http://startwalkingnow.org/mystart_tracker.jsp",
+	"image": "/img/portfolio/aha-start-teaser.jpg",
+	"description": "The Start Tracker was a exercise and diet tracking tool we created for the American Heart Association's START campaign. Some design challenges we tackled were: tracking daily activity accurately as exercise, enabling desktop and offline use, and supporting communities and teams within corporate sponsors.",
+	"story": [
+		{"image": "/img/portfolio/aha-start-ui.jpg"},
+		{"image": "/img/portfolio/aha-start-wire_activity.gif"},
+		{"image": "/img/portfolio/aha-start-wire_form.gif"},
+		{"image": "/img/portfolio/aha-start-wire_scoreboard.gif"},
+		{"image": "/img/portfolio/aha-start-wire_routes.gif"}
+	]
+},
+
+{
+	"title": "LandOfWineAndFood.com",
+	"slug":"lowaf",
+	"role": "UX Design",
+	"skills":["ux"],
+	"url": "http://landofwineandfood.com",
+	"image":"/img/portfolio/cttc_teaser.jpg",
+	"story": [
+		{
+			"image": "/img/portfolio/cttc_sitemap.png",
+			"description": "The sitemap was required because much of the content was hidden behind AJAX enabled interaction."
+		},
+		{
+			"image": "/img/portfolio/cttc_wireframe.png",
+			"description": "The client wanted the homepage to be a rich interactive showcase. This fit with their brand vision and intended audience of technological sophisticated tourists. This homepage features Google Maps' API, Youtube's API for videos, and dynamically loaded search results."
+		},
+		{
+			"image": "/img/portfolio/cttc_winefinder_wire.jpg",
+			"description": "The Wine Explorer was an interactive application that allows you to search California's wine country by varietal or region."
+		},
+		{
+			"image": "/img/portfolio/cttc-wire-blog.gif",
+			"description": "CTTC recruited esteemed chefs, vintners and food writers to contribute blogs to the site."
+		}
+	]
+},
+
+{
+	"title": "Rhythmism.com",
+	"slug":"rhythmism",
+	"role": "UX Design, UI Design, Project Management, Development",
+	"skills":["ux","ui","gd","dev","pm"],
+	"url": "http://Rhythmism.com",
+	"image":"/img/portfolio/rhythmism_teaser.jpg",
+	"description":"New York's premier community for fans of electronic dance music. Founded in February, 2004, it grew to sustain 5000 daily visitors and has been profitable since 2007.",
+	"story": [
+		{
+			"title":"Homepage",
+			"image": "/img/portfolio/rhythmism-ui.jpg",
+			"description": ""
+		},
+		{
+			"title":"IA Sketches",
+			"image": "/img/portfolio/rhythmism-sketch.png",
+			"description": "Initial sitemap and wireframes were sketched on whiteboard."
+		},
+		{
+			"title":"HTML Wireframes",
+			"image": "/img/portfolio/rhythmism-wireframe.gif",
+			"description": "Wireframes were built as HTML prototypes. This allowed more accurate layouts and animations. It also provided a faster transition to template development."
+		},
+		{
+			"title":"Mobilism Feature Interaction Design",
+			"image": "/img/portfolio/rhythmism-flow-mobilism.png",
+			"description": "The Mobilism feature - which allows people to send photos from their photo - required a complex interaction map to filter spam and authenticate users."
+		}
+	]
+},
+{
+	"title": "Sacred Noise",
+	"url": "http://kageki.com/sacrednoise",
+	"slug":"snoise",
+	"description": "I designed &amp; built the website and portfolio of this award winning music production studio in New York.",
+	"skills":["ux","ui","dev"],
+	"role": "Art Direction, UI design. Engineering",
+	"date": "2002",
+	"image": "/img/portfolio/sacrednoise-intro.jpg",
+	"story": [
+		{
+			"title":"",
+			"description":"",
+			"image": "/img/portfolio/sacrednoise-nav.jpg"
+		},
+		{
+			"title":"Animation",
+			"image": "/img/portfolio/sacrednoise-intro.jpg",
+			"description": "Intro animations don't have to suck. Fast-paced, rich, engaging graphics can draw users in and connect actions together."
+		},
+		{
+			"title":"Inspiration",
+			"image": "/img/portfolio/sacrednoise-dior.jpg",
+			"description": "The aesthetics and angular features of the design were inspired by the façade of the Dior building on 57th Street."
+		}
+	]
+}]

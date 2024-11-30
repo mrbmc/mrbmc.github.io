@@ -1,0 +1,85 @@
+@font-face {
+  font-family: "Gotham";
+  font-weight: 200;
+  src: url('/css/fonts/gotham/Gotham-Thin.eot');
+  src: url('/css/fonts/gotham/Gotham-Thin.eot?#iefix') format('embedded-opentype'), url('/css/fonts/gotham/Gotham-Thin.ttf') format('truetype');
+  src: url('/css/fonts/gotham/Gotham-Thin.woff') format('woff');
+}
+@font-face {
+  font-family: "Gotham";
+  font-weight: 300;
+  src: url('/css/fonts/gotham/Gotham-Light.eot');
+  src: url('/css/fonts/gotham/Gotham-Light.eot?#iefix') format('embedded-opentype'), url('/css/fonts/gotham/Gotham-Light.ttf') format('truetype');
+  src: url('/css/fonts/gotham/Gotham-Light.woff') format('woff');
+}
+@font-face {
+  font-family: "Gotham";
+  font-weight: 900;
+  src: url('/css/fonts/gotham/Gotham-Ultra.eot');
+  src: url('/css/fonts/gotham/Gotham-Ultra.eot?#iefix') format('embedded-opentype'), url('/css/fonts/gotham/Gotham-Ultra.ttf') format('truetype');
+  src: url('/css/fonts/gotham/Gotham-Ultra.woff') format('woff');
+}
+body {
+  font-weight: 300;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin-top: 0;
+}
+h1,
+h2 {
+  font-family: "Gibson", "Gotham", Times, "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 900;
+}
+h3,
+h4,
+h5 {
+  font-family: "Gibson", "Gotham", Times, "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+}
+h1 {
+  font-size: 41.94px;
+}
+h2 {
+  font-size: 27px;
+  text-transform: uppercase;
+}
+h3 {
+  font-size: 22.5px;
+  text-transform: uppercase;
+}
+h4 {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+h5 {
+  font-size: 15.3px;
+  text-transform: uppercase;
+}
+div,
+p,
+span,
+li {
+  line-height: 27px;
+}
+strong {
+  font-weight: 700;
+}
+.text-scaled,
+.description {
+  color: #808080;
+}
+blockquote {
+  border-left-color: #ffffff;
+}
+.container {
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto 20px;
+}
+#chart {
+  height: 320px;
+}
