@@ -23,7 +23,7 @@ timeline: 2019-2023
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- | ------------------- | -------------------------------------------------------------------------- |
 | **Sr. Director, Product Design**<br><br>Team hiring, management, and organization design. Design strategy. Partner management. Budgeting. Culture development. | 12 FT Designers + 6 Design Contractors | Jan 2019 - Aug 2023 | saved **$80M** p/a in operating costs<br>supported a **25% growth in MRR** |
 
-## The Strategy ( of Streaming){#strategy}
+## The Strategy (of Streaming){#strategy}
 
 >To create something truly novel you need novel tools.  
 -Brian McConnell

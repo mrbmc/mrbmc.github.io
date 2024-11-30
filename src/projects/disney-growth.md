@@ -270,7 +270,7 @@ Latin America required additional fields for Tax collection in Argentina and Chi
 
 Each new region that we rolled out provided a basis change in growth for Disney+.
 
-### Optimizing Growth {#plan-picker}
+### Optimizing Subscribers Or Revenue {#plan-picker}
 
 #### Situation
 
