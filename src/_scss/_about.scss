@@ -114,7 +114,7 @@ ul.timeline {
         margin: 0;
         position: relative;
         padding: 0 0 grid.$gutter-xl grid.$gutter;
-        border-left: 2px solid colors.$text-color-subdued;
+        border-left: 2px solid colors.$text-secondary;
         list-style: none;
         &:last-of-type {
             padding-bottom: 0;
@@ -127,7 +127,7 @@ ul.timeline {
             height: $bullet-size;
             @include border-radius(1em);
             margin: 0 grid.$gutter 0 calc((grid.$gutter * -1) - ($bullet-size * .5) - 1px);
-            background: colors.$text-color-subdued;
+            background: colors.$text-secondary;
         }
 
     }

@@ -10,7 +10,7 @@ body.home {
     }
     #masthead {
         background: colors.$body-background;
-        color: colors.$text-color;
+        color: colors.$text-primary;
         justify-content: center;
         @media (orientation: landscape) {
             min-height: calc(81vh);
@@ -20,12 +20,12 @@ body.home {
             padding-top: (grid.$gutter + $navbar-height);
         }
         h1,p {
-            color: colors.$text-color-bold;
+            color: colors.$text-tertiary;
         }
         h1 {
             & > em {
                     color: colors.$brand-color;
-                    background: colors.$text-color;
+                    background: colors.$text-primary;
                     background-image: linear-gradient(transparentize(colors.$brand-accent,0.5) 19%, transparentize(colors.$brand-color,0.2) 81%);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
@@ -35,7 +35,7 @@ body.home {
             }
             & > strong {
                     color: colors.$brand-complement;
-                    background: colors.$text-color;
+                    background: colors.$text-primary;
                     background-image: linear-gradient(transparentize(colors.$brand-color,0.5) 19%, transparentize(colors.$brand-complement,0.2) 81%);
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
@@ -53,7 +53,7 @@ body.home {
         }
 
         $crane-size: 10vw;
-        $crane-color: colors.$text-color;
+        $crane-color: colors.$text-primary;
         @media (orientation: landscape) {
             h1,h2,p.bio {
                 max-width: grid.$width;
@@ -90,12 +90,11 @@ body.home {
 
     .project-list {
         @include fullWidth();
-        padding: 0 grid.$gutter;
-
+        padding: grid.$gutter;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
         @media (orientation: landscape) {
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: repeat(3, 1fr);
         }
 
 

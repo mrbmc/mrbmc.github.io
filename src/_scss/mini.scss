@@ -62,10 +62,10 @@ html {
 body {
     margin: 0;
     background: colors.$body-background;
-    color: colors.$text-color;
+    color: colors.$text-primary;
 }
 h1,h2,h3,h4,h5 {
-    color: colors.$text-color-bold;
+    color: colors.$text-tertiary;
 }
 a {
     color: colors.$link-color;
@@ -106,8 +106,8 @@ a {
 blockquote,.blockquote {
     padding: 0 0 0 grid.$gutter;
     margin: grid.$gutter 0 grid.$gutter (grid.$gutter * -1);
-    border-left: solid 4px colors.$text-color-subdued;
-    color: colors.$text-color-subdued;
+    border-left: solid 4px colors.$text-secondary;
+    color: colors.$text-secondary;
 }
 
 .button, button {

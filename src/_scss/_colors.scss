@@ -37,9 +37,9 @@ $neutral-90:            hslToHex($brand-hue,01%,92%);
 $neutral-80:            hslToHex($brand-hue,02%,82%);
 $neutral-70:            hslToHex($brand-hue,02%,71%);
 $neutral-60:            hslToHex($brand-hue,03%,62%);
-$neutral-50:            hslToHex($brand-hue,05%,50%);
+$neutral-50:            hslToHex($brand-hue,08%,49%);
 $neutral-40:            hslToHex($brand-hue,08%,42%);
-$neutral-30:            hslToHex($brand-hue,13%,31%);
+$neutral-30:            hslToHex($brand-hue,13%,30%);
 $neutral-20:            hslToHex($brand-hue,21%,20%);
 $neutral-10:            hslToHex($brand-hue,34%,12%);
 $neutral-05:            hslToHex($brand-hue,55%,04%);
@@ -70,13 +70,13 @@ $neutral-0:             hslToHex($brand-hue,89%,02%);
 
 // TYPE
 // -------------------------
-$text-color:             var(--gray-dark);
-$text-color-bold:        var(--black);
-$text-color-subdued:     var(--gray-mid);
-$link-color:             var(--black);
-$link-color-hover:       var(--gray-dark);
-$selection-color:        $brand-accent;
-$on-brand-color: 		 $neutral-100;
+$text-primary:          var(--gray-dark);
+$text-secondary:        var(--gray-mid);
+$text-tertiary:         var(--black);
+$link-color:            var(--black);
+$link-color-hover:      var(--gray-dark);
+$selection-color:       $brand-accent;
+$on-brand-color:        $neutral-100;
 
 // Scaffolding
 // -------------------------
@@ -86,8 +86,8 @@ $card-background:       var(--white);
 $card-text-color:       var(--gray-dark);
 $card-bold-color:       var(--black);
 $well-background:    	var(--gray-light);
-$well-text-color:     	$text-color;
-$well-bold-color:  		$text-color-bold;
+$well-text-color:     	$text-primary;
+$well-bold-color:  		$text-tertiary;
 $hero-background:       #{$neutral-0};
 $hero-text-color:       #{$neutral-90};
 $hero-bold-color:       #{$neutral-100};
@@ -96,11 +96,11 @@ $hero-bold-color:       #{$neutral-100};
 // -------------------------
 $navbar-background:                 $body-background;
 $navbar-border:                     $border-color;
-$navbar-text:                       $text-color;
+$navbar-text:                       $text-primary;
 $navbar-brand-color:                $brand-color;
 $navbar-link-color:                 $link-color;
 $navbar-link-hover-color:           $link-color-hover;
 $navbar-link-hover-background:      $well-background;
 $navbar-link-active-color:          $body-background;
-$navbar-link-active-background:     $text-color;
+$navbar-link-active-background:     $text-primary;
 

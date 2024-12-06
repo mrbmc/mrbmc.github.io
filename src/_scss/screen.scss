@@ -15,10 +15,10 @@ html {
 body {
     margin: 0;
     background: colors.$body-background;
-    color: colors.$text-color;
+    color: colors.$text-primary;
 }
 h1,h2,h3,h4,h5 {
-    color: colors.$text-color-bold;
+    color: colors.$text-tertiary;
 }
 a {
     color: colors.$link-color;
@@ -74,11 +74,14 @@ video {
         margin: -10vw 0 0 -10vw;
     }
 }
-strong,b {
-    color: colors.$text-color-bold;
-}
+// strong,b {
+//     color: colors.$text-color-bold;
+// }
 .caption,.legal {
-    color: colors.$text-color-subdued;
+    color: colors.$text-secondary;
+}
+code,.code {
+    color: colors.$text-secondary;
 }
 ul.inline,ol.inline {
     &>li {
@@ -110,7 +113,7 @@ table {
         border: 0 solid colors.$border-color;
         border-width: 0 0 1px 0;
         text-align: left;
-        color: colors.$text-color-bold;
+        color: colors.$text-secondary;
     }
     td {
         vertical-align: top;
@@ -119,10 +122,10 @@ table {
         @include transpose_table;
     }
 }
-.positive {
+.positive,.success {
     color: colors.$success;
 }
-.negative {
+.negative,.failure {
     color: colors.$error;
 }
 
@@ -156,8 +159,8 @@ table {
 blockquote,.blockquote {
     padding: 0 grid.$gutter;
     margin: grid.$gutter 0 grid.$gutter (grid.$gutter * -1);
-    border-left: solid 4px colors.$text-color-subdued;
-    color: colors.$text-color-subdued;
+    border-left: solid 4px colors.$text-secondary;
+    color: colors.$text-secondary;
 
     @media (orientation: portrait) {
         margin-left: 0;
@@ -283,11 +286,11 @@ details {
         width: 100%;
     }
     em,i,dd+dt {
-        color: colors.$text-color-subdued;
+        color: colors.$text-secondary;
         @include small-type();
     }
     b,strong,dd {
-        color: colors.$text-color-bold;
+        color: colors.$text-tertiary;
     }
 }
 

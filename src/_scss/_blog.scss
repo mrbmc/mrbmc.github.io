@@ -42,7 +42,7 @@
 		p.date {
 			margin-bottom: 0;
 			@include small-type();
-			color: colors.$text-color-subdued;
+			color: colors.$text-secondary;
 		}
 		summary {
 			// flex-basis: 75%;

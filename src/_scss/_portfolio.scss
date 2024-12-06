@@ -41,7 +41,7 @@ body.portfolio.list {
             p {
                 // @include small-type;
                 margin-bottom: 0;
-                color: colors.$text-color-subdued;                
+                color: colors.$text-secondary;                
             }
             p.timeline{
                 display: none;
@@ -119,11 +119,6 @@ body.project {
             margin-top: (grid.$gutter * 4);
             margin-bottom: (grid.$gutter * 2);
         }
-
-        .mosaic{
-            @include fullWidth(100vw);
-        }
-
     }
     @media (orientation: portrait) {
         #scrollhint {

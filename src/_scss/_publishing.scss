@@ -126,7 +126,7 @@ p.gallery,div.gallery-wrap {
         li {
             list-style: none;
             margin: 0 (grid.$gutter * 0.5);
-			color: colors.$text-color-subdued;
+			color: colors.$text-secondary;
 			@include small-type();
             img {
                 display: block;

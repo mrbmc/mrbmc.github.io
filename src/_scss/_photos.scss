@@ -16,9 +16,6 @@ body.photos {
     }
     #masthead {
         height: calc(100vh - $navbar-height - $thumbSize);
-        h1 {
-            color: colors.$text-color-bold;
-        }
     }
     section.gallery {
         position: relative;
