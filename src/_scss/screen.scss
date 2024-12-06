@@ -29,7 +29,28 @@ a {
 ::selection {
     background: colors.$selection-color;
 }
-
+:root {
+    --black:            #{colors.$neutral-10};
+    --gray-dark:        #{colors.$neutral-30};
+    --gray-mid:         #{colors.$neutral-50};
+    --gray-light:       #{colors.$neutral-90};
+    --white:            #{colors.$neutral-100};
+    --white-semi:       #{colors.$neutral-100}54;
+    --brand-color:      #{colors.$brand-color};
+    --brand-complement: #{colors.$brand-complement};
+    --brand-accent:     #{colors.$brand-accent};
+    --breakpoint:       #{grid.$breakpoint};
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --black:        #{colors.$neutral-100};
+        --gray-dark:    #{colors.$neutral-90};
+        --gray-mid:     #{colors.$neutral-50};
+        --gray-light:   #{colors.$neutral-30};
+        --white:        #{colors.$neutral-10};
+        --white-semi:   #{colors.$neutral-10}54;
+    };
+}
 
 
 
