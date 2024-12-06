@@ -6,6 +6,7 @@ masthead-video: /images/portfolio/nhl/nhl-masthead.mp4
 date: 2017-01-01
 tags:
   - work
+eleventyExcludeFromCollections: true
 summary: NHL.tv was the hockey league's official streaming service. I directed the design of the entire experience on TV devices, web, and mobile.
 timeline: 2015-2018
 ---
@@ -38,10 +39,8 @@ One feature we were especially proud of was "Around the League". This was a user
 
 This feature was a cross-functional effort to align the data feeds, UI build and design into a seamles UX.
 
-- ![Shelf](/images/portfolio/nhl/nhl-aroundtheleague-shelf.jpg)
-- ![Picture in Picture](/images/portfolio/nhl/nhl-aroundtheleague-pip.jpg)
-{.gallery}
+- ![Shelf](/images/portfolio/nhl/nhl-aroundtheleague-shelf.jpg) {.col4}
+- <video src="/images/portfolio/nhl/nhl-around-the-league.mp4" controls mute muted playslinline autoplay></video> {.col8 .row2}
+- ![Picture in Picture](/images/portfolio/nhl/nhl-aroundtheleague-pip.jpg) {.col4}
+{.mosaic}
 
-See the feature in action.
-
-<video src="/images/portfolio/nhl/nhl-around-the-league.mp4" controls></video>

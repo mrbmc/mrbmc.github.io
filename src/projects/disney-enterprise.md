@@ -87,10 +87,10 @@ Putting the right offer in front of the right user at the right time is depetive
 
 Features for managine automated price changes grew **MRR by 25% YoY**.
 
-- ![props 2](/images/portfolio/disney-enterprise/props-list.jpg) {.col4}
+- ![props 2](/images/portfolio/disney-enterprise/props-list.jpg)  {.col4}
 - ![genie 2](/images/portfolio/disney-enterprise/genie-campaign.png) {.col8 .row2}
 - ![genie 1](/images/portfolio/disney-enterprise/genie-offers.jpg) {.col4}
-{.mosaic}
+{.mosaic .fullwidth}
 
 #### Support Agent Tools{#baymax}
 
@@ -103,27 +103,31 @@ We focused on shortening **case resolution time**, increasing **CSAT** scores, a
 - ![Support Agent Portal](/images/portfolio/disney-enterprise/baymax-customer.jpg) {.col8 .row2}
 - ![Support Agent Portal](/images/portfolio/disney-enterprise/baymax-search_results.png) {.col4}
 - ![Support Agent Portal](/images/portfolio/disney-enterprise/baymax-cancel.png) {.col4}
-{.mosaic}
+{.mosaic .fullwidth}
 
 #### Lifecycle Messaging{#galaxy}
 
 *codename Galaxy*
 
-Messaging our guests on the device and content they prefer.
+A guiding UX principle across Disney+ is to **put the right offer in front of the right user at the right time**. Creating personalized messages with third-party tools was not possible without violating privacy laws, or prohibitively expensive brittle integrations of multiple apps.
 
-![Messaging Portal](/images/portfolio/disney-enterprise/new/messaging-new-email.jpg)
+"Galaxy" supported email and push notifications, translated into each language Disney+ supports, populated with unique recommendations for each account.
 
+- ![Messag Localization](/images/portfolio/disney-enterprise/galaxy-localization-1.png) {.col6}
+- ![Personalized Messaging](/images/portfolio/disney-enterprise/galaxy-v1.png){style="object-fit:contain;max-height:none;"} {.col6 .row2}
+- ![Push Messaging](/images/portfolio/disney-enterprise/galaxy-push.png){style="object-fit:contain;"} {.col6}
+{.mosaic .fullwidth}
 
 ### Content Platform{#content-tools}
 
 *codenames Polaris & Tesseract*
 
-A team of editors steeped in knowledge of the Disney catalog created hundreds of content collections around themes, brands, characters. We built a WYSIWYG editor that showed the custom artwork for each title so editors could organize collections in a visually harmonious way. _We saw engagement and CVR lift from doing this._
+A team of editors steeped in knowledge of the Disney catalog created hundreds of content collections around themes, brands, characters. We built a WYSIWYG editor that showed the custom artwork for each title so editors could organize collections in a visually harmonious way. We saw **engagement**{.success} and **CVR**{.success} lift from doing this.
 
 - ![Visual Browsing](/images/portfolio/disney-enterprise/polaris-search.png) {.col4 .contain}
 - ![Visual Browsing](/images/portfolio/disney-enterprise/polaris-visualbrowse.png) {.col4 .contain}
 - ![Content Curation](/images/portfolio/disney-enterprise/polaris-set-pcs.png) {.col4}
-{.mosaic}
+{.mosaic .fullwidth}
 
 #### An Audience of One
 
@@ -137,7 +141,7 @@ The content strategy for most streaming services, including Disney+, is to creat
 - ![Content Targeting](/images/portfolio/disney-enterprise/polaris-edit_cta.png) {.col3 .contain}
 - ![Content Targeting](/images/portfolio/disney-enterprise/polaris-collection.png) {.col6 .contain}
 - ![Content Targeting](/images/portfolio/disney-enterprise/polaris-browse.jpg) {.col3 .contain}
-{.mosaic}
+{.mosaic .fullwidth}
 
 ### Analytics{#analytics}
 
@@ -160,7 +164,7 @@ Building this product internally saved Disney **$30M/pa** over comparable third 
 - ![Streaming QoS Analysis](/images/portfolio/disney-enterprise/optumus-session.png) {.col8 .row2}
 - ![Streaming QoS Analysis](/images/portfolio/disney-enterprise/optumus-dashboard.png) {.col4 .contain}
 - ![Streaming QoS Analysis](/images/portfolio/disney-enterprise/optumus-spotlight.png) {.col4 .contain}
-{.mosaic}
+{.mosaic .fullwidth}
 
 #### Experimentation, A/B Testing, Feature Flagging {#weaponx}
 
@@ -170,7 +174,7 @@ Make better decisions faster.
 
 - ![Experimentation](/images/portfolio/disney-enterprise/weaponx-dashboard.jpg) {.col6}
 - ![Experimentation](/images/portfolio/disney-enterprise/weaponx.png) {.col6}
-{.mosaic}
+{.mosaic .fullwidth}
 
 ### Developer Experience{#developer}
 
@@ -202,7 +206,7 @@ Evangelizing design system adoption begins with a promise of a better future. We
 - ![Experimentation](/images/portfolio/disney-enterprise/new/experiments-results.jpg) {.col4}
 - ![Advertising](/images/portfolio/disney-enterprise/new/ads-mission-control-scheduling.jpg) {.col4}
 - ![Developer Productivity](/images/portfolio/disney-enterprise/new/dev-portal.jpg) {.col4}
-{.mosaic}
+{.mosaic .fullwidth}
 
 
 <style>

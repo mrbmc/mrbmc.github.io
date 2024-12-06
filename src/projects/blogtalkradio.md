@@ -24,7 +24,7 @@ BlogTalkRadio was one of the first platforms to support a **Creator Economy** by
 
 The success of the platform relied on a flywheel of incentives: 
 
-![Flywheel of incentives](/images/portfolio/btr/dynamo-illustration.svg){style="height:50vh;"}
+![Flywheel of incentives](/images/portfolio/btr/dynamo-illustration.svg){style="width:62%;margin: 0 auto;display:block;"}
 
 - Educating hosts on podcast best practices elevated the quality of their shows →
 - Boosted listener engagement 200% YoY →
@@ -83,15 +83,15 @@ The Studio is the heart of the BTR experience and it's the UI that hosts interac
 
 ----
 
-## Improved Show Cover Art
+## Improved Artwork
 
 For many of our hosts, their subject matter expertise is the topic of their show. It's rarely graphic design or marketing. Creating usable, engaging, professional cover art for their show was a struggle.  Improving the artwork has multiple downstream benefits: 
 
-1. Improved engagement from listeners.
-2. Longer show lifespan from hosts.
+1. Improved engagement from listeners. (`RFE`)
+2. Longer show lifespan from hosts (`LTV`)
 3. A more professional media book for advertisers.
 
-We contracted several graphic designers to overhaul the cover art for our top 300 shows at no charge to the hosts. I provided the creative direction, review, and production guidelines to the designers.
+We contracted several graphic designers to overhaul the cover art for our top 300 shows at no charge to the hosts. I provided the creative direction, review, and production guidelines.
 
 ![New Artwork](/images/portfolio/btr/btr-homepage.jpg)
 
