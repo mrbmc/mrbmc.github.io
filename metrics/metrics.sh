@@ -182,13 +182,13 @@ function investigate () {
 		echo "----------------------------------------";
 	}
 
-	duration='7d';
+	duration='30d';
 	the_cmd="sed -n '/'$(date -v-$duration +%Y-%m-%d)'/,/$(date -v+1d +%Y-%m-%d)/ p' $BASE/logs/log_raw"
 
 	# the_cmd="cat ";
 	# the_cmd+=$BASE'/logs/log_raw_2024-12';
 	the_cmd+=" | grep "$arg_ipmask[-1];
-	# the_cmd+=" | grep -vi images";
+	# the_cmd+=" | grep -vi optimized";
 	the_cmd+=" > "$BASE"/logs/investigation.log;";
 
 	[[ -z "$flag_verbose" ]] || { 
