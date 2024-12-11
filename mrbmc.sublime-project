@@ -48,7 +48,7 @@
     [
         {
             "name": "MRBMC",
-			"shell_cmd": "/Users/brianmcconnell/Sites/mrbmc/build.sh buildjs",
+			"shell_cmd": "/Users/brianmcconnell/Sites/mrbmc/build.sh js",
         }
 	],
 }

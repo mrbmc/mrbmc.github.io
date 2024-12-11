@@ -13,6 +13,11 @@ I founded, hired, mentored, and led the team that designed the official site, ap
 
 It was also an opportunity to build centers of excellence around UX Research and Prototyping for BAMTech Media.
 
+* [NHL.tv](#nhl-tv) 
+* [Mobile Product Led Growth](#mobile-plg) 
+* [GameFlow](#gameflow) 
+{.stickynav}
+
 ### Project Highlights
 
 - **2015** conducted the first user research at MLB
@@ -24,7 +29,7 @@ It was also an opportunity to build centers of excellence around UX Research and
 
 ---
 
-## NHL.tv
+## NHL.tv{#nhl-tv}
 
 In 2016 we redesigned and relaunched NHL's streaming streaming service across mobile, web and TV devices.  My team redesigned the streaming experience and new user acquisition funnels.
 
@@ -50,10 +55,10 @@ This feature was a cross-functional effort to align the data feeds, UI build and
 {.mosaic .fullwidth}
 
 
-## Product Led Growth - Mobile Redesign
+## Mobile Redesign - Product Led Growth{#mobile-plg}
 
 **Team:**   
-*Design:* Brian McConnell, Connor Paglia, Paul Amsbary
+*Design:* Brian McConnell, Connor Paglia, Paul Amsbary  
 *Product:* David Singer, Tom Kozlowski, Benji Gottlieb
 
 ### Situation
@@ -73,7 +78,7 @@ We formed a hypothesis that a light redesign of the team home pages (the most vi
 ### Results
 We saw a **150% increase ↗**{.positive} in  `Recency` and `Frequency`  engagement metrics measuring video consumption. This netted a **25% increase ↗**{.positive} in ad impressions despite the lower fill rate.
 
-### Keeping up the momentun
+### Web - Keeping up the momentum
 
 Based on these findings we carried over the same idea of improving curated playlists and non-blocking browsing to the web experience. We branded this new feature "On The Fly". The results were not quite as impressive as on mobile but still positive.
 
@@ -82,7 +87,7 @@ Based on these findings we carried over the same idea of improving curated playl
 
 ----
 
-## GameFlow
+## GameFlow{#gameflow}
 
 GameFlow™ introduced a groundbreaking way to visualize the momentum of action in a hockey game. This feature in the NHL app uses real-time data from the rink to render a graph of how much offensive pressure each team is applying.
 
@@ -108,7 +113,7 @@ My role as director was assembling the team of designers, prototypers, and resea
 
 ### VisionType
 
-To secure buy-in from NHL and Disney leadership we needed to shop the feature in context. We built a VisionType in Keynote to walk execs through the experience. It also facilitated collaboration with services and client engineering. Our Apple developers in particular were eager to build new PiP capabiliites in TVOs, and experiment with synchronization capabilities between Apple devices.
+To secure buy-in from NHL and Disney leadership we needed to shop the feature in context. We built a VisionType in Keynote to walk execs through the experience. It also facilitated collaboration with services and client engineering. Our Apple developers in particular were eager to build new PiP capabilities in TVOs, and experiment with synchronization capabilities between Apple devices.
 
 <video src="/images/portfolio/nhl/GameFlow-Demo.mp4" controls playsinline muted autoplay autoplay="autoplay" class="fullwidth"></video>
 

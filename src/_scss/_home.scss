@@ -71,11 +71,6 @@ body.home {
 
     }
 
-    // @media (max-width:grid.$breakpoint) {
-      //     padding-right: 0;
-      //
-    // }
-
     // add a mesh gradient background
     & {
       background-repeat: no-repeat;
@@ -105,10 +100,6 @@ body.home {
 
     @media (min-width:grid.$breakpoint) {
       grid-template-columns: repeat(3, 1fr);
-    }
-
-    @media (min-width:grid.$breakpoint-widescreen) {
-      grid-template-columns: repeat(4, 1fr);
     }
 
     h2 {

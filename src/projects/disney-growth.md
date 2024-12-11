@@ -294,7 +294,7 @@ One hypothesis was to showcase the different plan options better to guests. A "p
 + ![Email](/images/portfolio/disney-growth/plan-picker-test-3.jpg) {.col4}
 + ![Password](/images/portfolio/disney-growth/plan-picker-test-4.jpg) {.col4}
 + ![Billing](/images/portfolio/disney-growth/plan-picker-test-5.jpg) {.col4 .row1}
-{.mosaic}
+{.mosaic .fullwidth}
 
 [![Plan Picker Test](/images/portfolio/disney-growth/plan-picker-test-slide.001.jpeg)](/images/portfolio/disney-growth/plan-picker-test-slide.001.jpeg)
 A/B flows comparison{.caption}
@@ -332,7 +332,7 @@ My direct reports organized a cross-functional summit for everyone working on Gr
 #### Solution
 
 
-![Growth Summit](/images/portfolio/disney-growth/workshop-pictogram.jpg){.fullwidth}
+![Growth Summit](/images/portfolio/disney-growth/workshop-pictogram.jpg)
 
 ![Growth Summit](/images/portfolio/disney-growth/workshop-agenda.jpg)
 

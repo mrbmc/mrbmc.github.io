@@ -1,4 +1,5 @@
 {
   "layout": "project-detail.html",
+  "tag":"projcet",
   "permalink": "/portfolio/{{page.fileSlug}}/"
 }
