@@ -110,14 +110,19 @@ body.home {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 
-    @media (min-width:grid.$breakpoint) {
-      grid-template-columns: repeat(3, 1fr);
+    h2 {
+      display: flex;
+      grid-column-start: 1;
+      grid-column-end: 3;
     }
 
-    h2 {
-      display: none;
-      text-align: center;
+    @media (min-width:grid.$breakpoint) {
+      grid-template-columns: repeat(3, 1fr);
+      h2 {
+        grid-column-end: 4;
+      }
     }
+
 
     .project {
       flex-direction: column-reverse;

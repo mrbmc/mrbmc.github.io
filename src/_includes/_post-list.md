@@ -1,8 +1,8 @@
-<section id="post-list">
+{% section "post-list" %}
 
 {% if heading %}## {{ heading }}{% endif %}
 
-{% if description %}{{ description }}{% endif %}
+{% if _description %}{{ _description }}{% endif %}
 
 {% for post in postList reversed %}{% if forloop.index0 < count %}
 <article class="post" role="article" onclick="location.href='{{post.url}}'">
@@ -21,4 +21,4 @@
 
 {% endif %}{% endfor %}
 
-</section>
+{% endsection %}

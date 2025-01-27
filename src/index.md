@@ -6,20 +6,12 @@ description: Brian McConnell is a design executive with a unique background as a
 eleventyExcludeFromCollections: false
 ---
 
-<section id="masthead" class="bio">
+{% section "masthead" %}
 
 # UX <em>design</em>, product <em>discovery</em>, and cross-functional <em>leadership</em>.{.blur-in}
 
-{% comment %}
-* [linkedin](https://linkedin.com/in/mrbmc)
-* [Figma](https://www.figma.com/@brianmcconnell) 
-* [ADPList](https://adplist.org/mentors/brian-mcconnell) 
-{.nav}
-{% endcomment %}
+{% endsection %}
 
-<!-- <a href="#selected-work" class="scrollhint"><svg viewBox="0 0 53 20"><g><polygon points="26.5,17.688 9.114,3.779 10.303,2.312 26.5,15.269 42.697,2.313 43.886,3.779" fill="currentColor"></polygon></g></svg></a> -->
+{% include "_project-list.md", projectList: collections.work, heading: "Selected Work" count: 6 %}
 
-</section>
-
-{% include "_project-list.md", projectList: collections.work, label: "Selected Work" count: 6 %}
-{% include "_post-list.html", postList: collections.post, heading: "Recent Posts", count: 4 %}
+{% include "_post-list.md", postList: collections.post, heading: "Recent Posts", count: 4 %}

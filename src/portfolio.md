@@ -11,17 +11,17 @@ title: "Portfolio"
 {.stickynav}
 
 {% if collections.work.length > 0 %}
-{% include "_project-list.md", projectList: collections.work, label: "Work", count:12 %}
+{% include "_project-list.md", projectList: collections.work, heading: "Work", count:12 %}
 {% endif %}
 
 [CV & Resumé](/resume/) {.center}
 
 {% if collections.talk.length > 0 %}
-{% include "_project-list.md", projectList: collections.talk, label: "Speak", description: "A great way to learn is to share what you think you know.", count:3 %}
+{% include "_project-list.md", projectList: collections.talk, heading: "Speak", _description: "A great way to learn is to share what you think you know.", count:3 %}
 {% endif %}
 
 {% if collections.personal.length > 0 %}
-{% include "_project-list.md", projectList: collections.personal, label: "Play", description: "As a Kinesthetic Learner, I need create new things to refine my thinking, and develop new skills.", count:4 %}
+{% include "_project-list.md", projectList: collections.personal, heading: "Play", _description: "As a Kinesthetic Learner, I need create new things to refine my thinking, and develop new skills.", count:4 %}
 {% endif %}
 
 <style type="text/css">

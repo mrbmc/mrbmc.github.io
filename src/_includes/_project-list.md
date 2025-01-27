@@ -1,8 +1,8 @@
 <section class="project-list" id="{{label | slug}}">
 
-{% if label %}## {{ label }}{% endif %}
+{% if heading %}## {{ heading }}{% endif %}
 
-{% if description %}{{ description }}{% endif %}
+{% if _description %}{{ _description }}{% endif %}
 
 {% for project in projectList reversed %}{% if forloop.index0 < count %}
 <article class="project{%if bodyclass != "home" %} full{% endif %}" onclick="location.href='{{project.url}}'">
