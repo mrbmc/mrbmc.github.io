@@ -214,7 +214,7 @@ if [[ "$1" == "deploy" ]]; then
 	aws s3 sync $OUT s3://$S3BUCKET --delete
 
 	aws cloudfront  create-invalidation --distribution-id $CLOUDFRONT --paths \
-	"/images/*" "/css/*" "/js/*" \
+	"/css/*" "/js/*" \
 	"/portfolio/*" "/blog/*" "/resume/*" \
 	"/about/*" "/gaia/*" "/colophon/*" \
 	"/index.html" "/404.html" "/error.html" "/" "/sitemap.xml";
