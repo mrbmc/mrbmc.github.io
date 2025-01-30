@@ -1,6 +1,6 @@
 @use 'sass:math';
 @use '_colors.scss';
-@use '_grid.scss';
+@use '_variables.scss';
 
 @mixin clearfix {
   *zoom: 1;
@@ -33,7 +33,7 @@
           box-shadow: $shadow;
 }
 
-@mixin neon($neonColor:$brand-color) {
+@mixin neon($neonColor:$primary) {
   text-shadow:
     0 0 7px #fff,
     0 0 10px $neonColor,
@@ -76,11 +76,11 @@
 @mixin fullWidth($limit:100vw) {
     width: $limit;
 
-    @media (min-width: grid.$breakpoint) {
-        margin-left: calc((($limit - grid.$width) * -0.5));
+    @media (min-width: variables.$breakpoint) {
+        margin-left: calc((($limit - variables.$width) * -0.5));
     }
-    @media (max-width: grid.$breakpoint) {
-        margin-left: (grid.$gutter * -1);
+    @media (max-width: variables.$breakpoint) {
+        margin-left: (variables.$gutter * -1);
     }
 }
 @mixin fullHeight($limit:calc(100vh - $navbar-height)) {
@@ -89,12 +89,12 @@
 }
 
 @mixin inverse {
-  background-color: colors.$hero-background;
-  color: colors.$hero-text-color;
+  background-color: var(--hero-background);
+  color: var(--hero-text-color);
   h1,h2,h3,h4,a {
-    color: colors.$hero-bold-color;
+    color: var(--hero-bold-color);
     &:hover {
-      color: colors.$hero-text-color;
+      color: var(--hero-text-color);
     }
   }
 }
@@ -107,10 +107,10 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-image:
-    radial-gradient(ellipse 81% 119% at 10% -19%, transparentize(colors.$brand-accent,0.8) 0%, transparent 100%),
-    radial-gradient(ellipse 100% 100% at 100% 81%, transparentize(colors.$brand-complement,0.8) 0px, transparent 100%),
-    conic-gradient(from 0.025turn at 0% 119%, transparent 0%, transparentize(colors.$brand-color,0.8) 12.5%, transparent 25%, transparent 99%),
-    conic-gradient(from 0.66turn at 119% 8%, transparent 0%, transparentize(colors.$brand-color,0.8) 5%, transparent 10%, transparent 99%),
+    radial-gradient(ellipse 81% 119% at 10% -19%, transparentize(colors.$secondary,0.8) 0%, transparent 100%),
+    radial-gradient(ellipse 100% 100% at 100% 81%, transparentize(colors.$tertiary,0.8) 0px, transparent 100%),
+    conic-gradient(from 0.025turn at 0% 119%, transparent 0%, transparentize(colors.$primary,0.8) 12.5%, transparent 25%, transparent 99%),
+    conic-gradient(from 0.66turn at 119% 8%, transparent 0%, transparentize(colors.$primary,0.8) 5%, transparent 10%, transparent 99%),
     ;
 
    &:before {

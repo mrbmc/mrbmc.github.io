@@ -1,6 +1,6 @@
 ---
-layout: layout-micro.html
-bodyclass: links inverse
+layout: layout.html
+bodyclass: links
 title: Links
 header: false
 ---
@@ -19,6 +19,9 @@ header: false
 {.links}
 
 <style type="text/css">
+	main h2 {
+		margin-top: 0;
+	}
 	main p { text-align:center; }
 	main>h1,main>h2,main>h3,main>h4 { text-align: center; }
 	.portrait {
@@ -36,8 +39,8 @@ header: false
 	}
 	.links a.button {
 		display: block;
-		background: var(--brand-color);
-		color: var(--on-brand-color);
+		background: var(--primary);
+		color: var(--on-primary);
 		text-align: center;
 	}
 	ul.links li svg {

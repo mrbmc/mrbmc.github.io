@@ -9,8 +9,8 @@
   "scripts": {
     "build": "./build.sh build verbose",
     "deploy": "./build.sh deploy",
-    "watch:sass": "sass --watch src/_scss:www/css",
-    "watch:eleventy": "npx @11ty/eleventy --ignore-initial --incremental --serve",
+    "watch:sass": "sass --watch src/_scss:src/css --style compressed",
+    "watch:eleventy": "npx @11ty/eleventy --ignore-initial --serve",
     "watch": "npm-run-all watch:*",
     "start": "npm-run-all --parallel watch:*",
     "test": "echo \"Error: no test specified\" && exit 1"

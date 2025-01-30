@@ -78,6 +78,7 @@ module.exports = function(eleventyConfig) {
     return result;
   });
 
+  eleventyConfig.addWatchTarget("./src/css");
 
 
 
@@ -87,10 +88,6 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPlugin(timeToRead);
   eleventyConfig.setLibrary('md', markdownLib);
-
-  eleventyConfig.addPairedShortcode('section', (children,id) => {
-    return `<section id="${id}">${children}</section>`;
-  });
 
   // RELATED POSTS
   const getSimilarCategories = function(categoriesA, categoriesB) {
@@ -104,8 +101,8 @@ module.exports = function(eleventyConfig) {
     });
   });
 
-  eleventyConfig.addPairedShortcode('section', (children,id) => {
-    return `<section id="${id}">${children}</section>`;
+  eleventyConfig.addPairedShortcode('section', (children,id,_class) => {
+    return `<section id="${id}" class="${_class}">${children}</section>`;
   });
 
   // REGEX REPLACE FILTER
@@ -153,6 +150,8 @@ module.exports = function(eleventyConfig) {
 
   // We enable the passthrough for development purposes.
   // This updates the build with realtime image updates.
+  // eleventyConfig.addPassthroughCopy({"src/css":"css"});
+  eleventyConfig.addPassthroughCopy({"src/css/screen.*":"css/"});
   eleventyConfig.addPassthroughCopy({"src/images":"images"});
 
 
@@ -165,7 +164,7 @@ module.exports = function(eleventyConfig) {
   //   },
     port: 10000,
     showVersion: true,
-    watch: ["www/css/screen.css","www/css/gaia.css","www/js/mrbmc.min.js"],
+    watch: ["www/css/","www/js/mrbmc.min.js"],
   });
 
   // ========================================

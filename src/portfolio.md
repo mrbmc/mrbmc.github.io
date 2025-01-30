@@ -2,6 +2,7 @@
 layout: layout.html
 bodyclass: portfolio list
 title: "Portfolio"
+cssfile: "css/portfolio.css"
 ---
 
 1. [Work](#work)

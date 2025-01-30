@@ -1,0 +1,77 @@
+@use 'sass:math';
+@use 'sass:color';
+@use '_colors.scss';
+@use '_variables.scss';
+@use '_mixins.scss';
+
+@import "_publishing.scss";
+
+@import "_masthead.scss";
+
+body.project {
+    @include item-detail();
+
+    #main {
+        display: flex;
+        flex-direction: column;
+        p.summary {
+            margin-bottom: (variables.$gutter * 2);
+        }
+        h2,h3 {
+            margin-top: (variables.$gutter * 4);
+            margin-bottom: (variables.$gutter * 2);
+        }
+    }
+    @media (max-width: variables.$breakpoint) {
+        #scrollhint {
+            display: none;
+        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+        img[src$=".svg"] {
+            filter: contrast(0.01) brightness(2);
+        }
+    }
+
+    #lightbox {
+        display: none;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        background: #000000cc;
+        padding: variables.$gutter variables.$gutter;
+        box-sizing: border-box;
+        &.in {
+            display: block;
+        }
+        img {
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    h1.section,h2.section {
+        @include mixins.fullWidth();
+        padding: variables.$gutter;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        height: 83.3vh;
+        color: var(--hero-text-color);
+        position: relative;
+
+        // background-size: 120%;
+        background-position: center center;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @media (max-width: variables.$breakpoint) {
+            height: 56.25vw;
+        }
+    }
+}

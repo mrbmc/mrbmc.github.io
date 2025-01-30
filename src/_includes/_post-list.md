@@ -4,21 +4,20 @@
 
 {% if _description %}{{ _description }}{% endif %}
 
-{% for post in postList reversed %}{% if forloop.index0 < count %}
-<article class="post" role="article" onclick="location.href='{{post.url}}'">
+{% for post in postList reversed %}{% if forloop.index0 < count %}<article class="post" role="article" onclick="location.href='{{post.url}}'">
 
-<summary>
+<header>
 
 ### [{{post.data.title}}]({{ post.url }})
 
 {{ post.data.date | date: "%Y-%m-%d" }}{.date}
 
-</summary>
+</header>
 
-{% if post.data.masthead-image %}<img src="{{ post.data.masthead-image }}" alt="{{ post.data.title }}" loading="lazy" />{% endif %}
+{% if post.data.masthead-image %}
+[![{{ post.data.title }}]({{ post.data.masthead-image }})]({{ post.url }}) {.figure}
+{% endif %}
 
-</article>
-
-{% endif %}{% endfor %}
+</article>{% endif %}{% endfor %}
 
 {% endsection %}

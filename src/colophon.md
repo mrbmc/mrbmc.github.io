@@ -3,25 +3,27 @@ layout: layout.html
 title: Brian McConnell | Design & Product Leadership
 bodyclass: colophon
 masthead: -1
+cssfile: "css/colophon.css"
 ---
 
 # Colophon
 
 ## Site Info
-This is a static website because reasons:
+This is a static website because static architecture aligns with my design principles:
+
 * **Performance** Static websites load faster than web apps.
 * **Durability** I don't have to maintain frameworks and libraries to make it work because it's based on standard web technology.
 * **Flexibility** The simplicity of the build makes it very easy to make changes
 * **Portability:** Just grab the files and go. 
-* **Cost:** hosting a static site is only 12¢ a month.
+* **Cost:** hosting a static site costs 12¢ a month.
 
 ## Key Apps
 
-* [11ty](https://www.11ty.dev/) is my preferred site generator.
+* [11ty](https://www.11ty.dev/) is my site generator.
 * [Sublime Text](https://www.sublimetext.com/) is my code editor.
-* [Obsidian](https://obsidian.md/) is my markdown editor for blog entries and portfolio case studies.
+* [One Markdown](https://apps.apple.com/us/app/one-markdown/id1507139439) is my markdown editor for blog entries and portfolio case studies.
 * [Awesome Screenshot](https://chrome.google.com/webstore/detail/alelhddbbhepgpmgidjdcjakblofbmce) is my favorite tool for grabbing screensots and recordings.
-* [Amazon S3](https://aws.amazon.com/) & [Cloudfront](https://aws.amazon.com/) for hosting. I don't love Amazon but I do love paying 10¢ / month.
+* [Amazon S3](https://aws.amazon.com/) & [Cloudfront](https://aws.amazon.com/) for hosting. I don't love Amazon but I do love paying pennies for hosting.
 
 ## Production Support
 
@@ -56,39 +58,43 @@ Transportation provided by custom-built bikes:
 
 ### Typography
 
-The primary typeface is Helvetica Neue.
+The primary typeface is Helvetica Neue because it aligns with my design principles: modern, pragmatic, and versatile.
 
 For extended prose we use a native serif: Hoefler on MacOS & iOS, Palatino on Android and Windows.
 
 {% assign typefactor = 1.19 %}
 
-# H1 Titular Heading ({{ typefactor | times: typefactor | times: typefactor | times: typefactor | times: typefactor | round: 3 }}rem)
+# H1 Display ({{ typefactor | times: typefactor | times: typefactor | times: typefactor | times: typefactor | round: 3 }}rem)
 
-## H2 Section Heading Title ({{ typefactor | times: typefactor | times: typefactor | round: 3 }}rem)
+## H2 Section Heading ({{ typefactor | times: typefactor | times: typefactor | round: 3 }}rem)
 
-### H3 Sub-Section Heading Title ({{ typefactor | times: typefactor | round: 3 }}rem)
+### H3 Sub-Section Heading ({{ typefactor | times: typefactor | round: 3 }}rem)
 
-#### H4 Component Heading Title ({{ 1 | times: 1 | round: 3 }}rem)
+#### H4 Component Heading ({{ 1 | times: 1 | round: 3 }}rem)
 
-##### H5 Component Sub-Heading Title ({{ 1 | times: typefactor | round: 3 }}rem)
+##### H5 Component Sub-Heading ({{ 1 | times: typefactor | round: 3 }}rem)
 
-Body:  (1rem)  
+#### Body:  (1rem)
+
 Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world. It is a way I have of driving off the spleen and regulating the circulation.
 
-Body.Large:  ({{ 1 | times: typefactor | round: 3 }}rem)  
+#### Body.Large:  ({{ 1 | times: typefactor | round: 3 }}rem)
+
 Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world. It is a way I have of driving off the spleen and regulating the circulation.{.largeType}
 
-Body.Small:  ({{ 2 | minus: typefactor | round: 3 }}rem)  
-Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world. It is a way I have of driving off the spleen and regulating the circulation.{.small-type}
+#### Body.Small:  ({{ 2 | minus: typefactor | round: 3 }}rem)
 
-Prose:  
-Whenever I find myself growing grim about the mouth; whenever it is a damp, drizzly November in my soul; whenever I find myself involuntarily pausing before coffin warehouses, and bringing up the rear of every funeral I meet; and especially whenever my hypos get such an upper hand of me, that it requires a strong moral principle to prevent me from deliberately stepping into the street, and methodically knocking people’s hats off—then, I account it high time to get to sea as soon as I can. {.serif}
+Whenever I find myself growing grim about the mouth; whenever it is a damp, drizzly November in my soul; whenever I find myself involuntarily pausing before coffin warehouses, and bringing up the rear of every funeral I meet; and especially whenever my hypos get such an upper hand of me, that it requires a strong moral principle to prevent me from deliberately stepping into the street, and methodically knocking people's hats off - then, I account it high time to get to sea as soon as I can.{.small-type}
+
+#### Prose:
+
+This is my substitute for pistol and ball. With a philosophical flourish Cato throws himself upon his sword; I quietly take to the ship. There is nothing surprising in this. If they but knew it, almost all men in their degree, some time or other, cherish very nearly the same feelings towards the ocean with me. {.serif}
 
 ### Color
 
 Neutral-00{.chip .black}
 
-Neutral-30{.chip .gray-dark}
+Neutral-20{.chip .gray-dark}
 
 Neutral-50{.chip .gray-mid}
 
@@ -96,17 +102,17 @@ Neutral-80{.chip .gray-light}
 
 Neutral-100{.chip .white}
 
-Brand {.chip .brand}
+Primary {.chip .primary}
 
-Accent {.chip .accent}
+Secondary {.chip .accent}
 
-Complement {.chip .complement}
+Tertiary {.chip .complement}
 
-&nbsp;{.chip .white}
+Success{.chip .success}
 
-&nbsp;{.chip .white}
+Error{.chip .error}
 
-Brand80 {.chip .brand80}
+Brand80 {.chip .primary80}
 
 Accent80 {.chip .accent80}
 
@@ -116,7 +122,7 @@ Complement80 {.chip .complement80}
 
 &nbsp;{.chip .white}
 
-Brand20 {.chip .brand20}
+Brand20 {.chip .primary20}
 
 Accent20 {.chip .accent20}
 

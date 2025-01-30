@@ -1,17 +1,2 @@
 @use 'sass:math';
 
-// GRID
-// --------------------------------------------------
-$gutter:          			1.5rem;
-$gutter-xl:            		3rem;
-
-$columns:             		6;
-$width:               		40rem;
-$column:         			math.div(($width - (($columns - 1) * $gutter)), $columns);
-$margin: 			  		calc((100vw - $width) / 2);
-
-$breakpoint:					$width + $gutter + $gutter;
-$breakpoint-widescreen:      	1440px;
-// $breakpoint-desktop:         	960px;
-// $breakpoint-portrait:        	768px;
-// $breakpoint-phone:           	480px;

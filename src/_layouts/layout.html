@@ -28,6 +28,10 @@
 
 <body class="{{ bodyclass }}">
 
+{% if cssfile %}
+<style type="text/css">{% include cssfile %}</style>
+{% endif %}
+
 {% include "_header.html" %}
 
 <main id="main">

@@ -1,34 +1,14 @@
 @use 'sass:math';
 @use '_colors.scss';
 @use '_grid.scss';
-@use '_animation.scss';
+@use '_variables.scss';
 
-@import "./_variables.scss";
+@import "./_animation.scss";
 @import "./_mixins.scss"; 
 @import "./_type.scss";
 
 // ======================================================================
 // CORE STYLES
-html {
-    scroll-behavior: smooth;
-}
-body {
-    margin: 0;
-    background: colors.$body-background;
-    color: colors.$text-primary;
-}
-h1,h2,h3,h4,h5 {
-    color: colors.$text-tertiary;
-}
-a {
-    color: colors.$link-color;
-    &:hover {
-        color: colors.$link-color-hover;
-    }
-}
-::selection {
-    background: colors.$selection-color;
-}
 :root {
     --black:            #{colors.$neutral-10};
     --gray-dark:        #{colors.$neutral-30};
@@ -36,11 +16,37 @@ a {
     --gray-light:       #{colors.$neutral-90};
     --white:            #{colors.$neutral-100};
     --white-semi:       #{colors.$neutral-100}54;
-    --brand-color:      #{colors.$brand-color};
-    --on-brand-color:   #{colors.$neutral-100};
-    --brand-complement: #{colors.$brand-complement};
-    --brand-accent:     #{colors.$brand-accent};
-    --breakpoint:       #{grid.$breakpoint};
+
+    --primary:          #{colors.$primary};
+    --on-primary:       #{colors.$neutral-100};
+    --tertiary:         #{colors.$tertiary};
+    --secondary:        #{colors.$secondary};
+    --breakpoint:       #{variables.$breakpoint};
+    --success:          #{colors.$success};
+    --error:            #{colors.$error};
+
+
+    // TYPE
+    // -------------------------
+    --text-primary:          var(--gray-dark);
+    --text-secondary:        var(--gray-mid);
+    --link-color:            var(--black);
+    --link-color-hover:      var(--gray-dark);
+
+    // Scaffolding
+    // -------------------------
+    --body-background:       var(--white);
+    --border-color:          var(--gray-light);
+    --card-background:       var(--white);
+    --card-text-color:       var(--gray-dark);
+    --card-bold-color:       var(--black);
+    --well-background:       var(--gray-light);
+    --well-text-color:       var(--gray-dark);
+    --well-bold-color:       var(--black);
+    --hero-background:       #{colors.$neutral-30};
+    --hero-text-color:       #{colors.$neutral-90};
+    --hero-bold-color:       #{colors.$neutral-100};
+
 }
 @media (prefers-color-scheme: dark) {
     :root {
@@ -50,9 +56,30 @@ a {
         --gray-light:   #{colors.$neutral-30};
         --white:        #{colors.$neutral-10};
         --white-semi:   #{colors.$neutral-10}54;
+
+        --primary:      #{colors.$primary-inverse};
     };
 }
-
+::selection {
+    background: var(--secondary);
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    background: var(--body-background);
+    color: var(--text-primary);
+}
+h1,h2,h3,h4,h5 {
+    color: var(--text-primary);
+}
+a {
+    color: var(--link-color);
+    &:hover {
+        color: var(--link-color-hover);
+    }
+}
 
 
 
@@ -63,16 +90,6 @@ a {
 // ======================================================================
 // ATOMIC STYLES
 
-.center {
-    display: block;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    text-indent: 0;
-}
-@mixin hide {
-    display: none !important;
-}
 img,video {
     width: 100%;
     height: auto;
@@ -85,25 +102,35 @@ video {
         display: block;
     }
 }
-.video-wrapper {
-    position: relative;
-    svg.play {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        width: 20vw;
-        height: 20vw;
-        margin: -10vw 0 0 -10vw;
-    }
-}
-// strong,b {
-//     color: colors.$text-color-bold;
+// .video-wrapper {
+//     position: relative;
+//     svg.play {
+//         position: absolute;
+//         left: 50%;
+//         top: 50%;
+//         width: 20vw;
+//         height: 20vw;
+//         margin: -10vw 0 0 -10vw;
+//     }
 // }
+strong,b {
+    color: var(--text-secondary);
+}
+.center {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    text-indent: 0;
+}
+.hide {
+    display: none !important;
+}
 .caption,.legal {
-    color: colors.$text-secondary;
+    color: var(--text-secondary);
 }
 code,.code {
-    color: colors.$text-secondary;
+    color: var(--text-secondary);
 }
 ul.inline,ol.inline {
     &>li {
@@ -113,29 +140,29 @@ ul.inline,ol.inline {
 }
 hr {
     background: none;
-    margin: grid.$gutter-xl auto;
+    margin: variables.$gutter-xl auto;
     height: 0px;
     width: 38w;
     max-width: 80%;
     border: none;
-    border-top: 1px solid colors.$border-color;
+    border-top: 1px solid var(--border-color);
 }
 table {
     width: 100%;
     max-width: 100%;
     border-spacing: 0em;
-    margin-bottom: ($base-line-height * 1em);
-    background: colors.$body-background;
+    margin-bottom: (variables.$base-line-height * 1em);
+    background: var(--body-background);
     overflow-x: scroll;
     display: block;
     th,td {
         padding: .5em 1em;
     }
     th {
-        border: 0 solid colors.$border-color;
+        border: 0 solid var(--border-color);
         border-width: 0 0 1px 0;
         text-align: left;
-        color: colors.$text-secondary;
+        color: var(--text-secondary);
     }
     td {
         vertical-align: top;
@@ -147,7 +174,7 @@ table {
 .positive,.success {
     color: colors.$success;
 }
-.negative,.failure {
+.negative,.failure,.error {
     color: colors.$error;
 }
 
@@ -160,50 +187,62 @@ table {
 .card {
     box-sizing: border-box;
     width: 100%;
-    padding: grid.$gutter;
-    border: 1px solid colors.$border-color;
-    border-radius: $border-radius;
-    box-shadow: inset 1px 1px 0px rgba(255,255,255,.08), inset -1px 1px 0px rgba(255,255,255,.05), 0 $shadow-offset $shadow-depth $shadow-color;
+    padding: variables.$gutter;
+    border: 1px solid var(--border-color);
+    border-radius: variables.$border-radius;
+    box-shadow: inset 1px 1px 0px rgba(255,255,255,.08), inset -1px 1px 0px rgba(255,255,255,.05), 0 variables.$shadow-offset variables.$shadow-depth variables.$shadow-color;
 
-    background: colors.$card-background;
-    color: colors.$card-text-color;
+    background: var(--card-background);
+    color: var(--card-text-color);
     h1,h2,h3,h4,strong,b {
-        color: colors.$card-bold-color;
+        color: var(--card-bold-color);
+    }
+}
+.well {
+    background: var(--well-background);
+    color: var(--well-text-color);
+    padding: variables.$gutter;
+    box-sizing: border-box;
+
+    &.fullwidth {
+        @media (min-width: variables.$breakpoint) {
+            padding: variables.$gutter variables.$margin;
+        }
     }
 }
 .hero {
     @include fullWidth(100vw);
     @include inverse();
     box-sizing: border-box;
-    padding: grid.$gutter;
+    padding: variables.$gutter;
 
-    @media (min-width: grid.$breakpoint) {
-        padding: grid.$gutter grid.$margin;
+    @media (min-width: variables.$breakpoint) {
+        padding: variables.$gutter variables.$margin;
     }
 }
 
 blockquote,.blockquote {
-    padding: 0 grid.$gutter;
-    margin: grid.$gutter 0 grid.$gutter (grid.$gutter * -1);
-    border-left: solid 4px colors.$text-secondary;
-    color: colors.$text-secondary;
+    padding: 0 variables.$gutter;
+    margin: variables.$gutter 0 variables.$gutter (variables.$gutter * -1);
+    border-left: solid 4px var(--text-secondary);
+    color: var(--text-secondary);
 
-    @media (max-width: grid.$breakpoint) {
+    @media (max-width: variables.$breakpoint) {
         margin-left: 0;
     }
 }
 
 .button, button {
-    background: colors.$brand-color;
-    color: colors.$on-brand-color;
+    background: colors.$primary;
+    color: var(--on-primary);
 
     padding: .5em 1em;
-    border-radius: $border-radius;
+    border-radius: variables.$border-radius;
     text-decoration: none;
-    box-shadow: inset 0px 1px 1px 0px colors.$neutral-100, 0 math.div($shadow-offset, 2) math.div($shadow-depth,2) $shadow-color, 0 $shadow-offset $shadow-depth $shadow-color;
+    box-shadow: inset 0px 1px 1px 0px colors.$neutral-100, 0 math.div(variables.$shadow-offset, 2) math.div(variables.$shadow-depth,2) variables.$shadow-color, 0 variables.$shadow-offset variables.$shadow-depth variables.$shadow-color;
 
     &:hover {
-        color: colors.$well-bold-color;
+        color: var(--well-bold-color);
     }
 }
 
@@ -218,8 +257,6 @@ blockquote,.blockquote {
 // ======================================================================
 // ORGANISM STYLES
 
-@import "_masthead.scss";
-
 @import "_header.scss";
 
 @import "_footer.scss";
@@ -230,14 +267,14 @@ ol.sidenav {
 
     position: fixed;
     left: 0;
-    top: calc(50% - ($base-line-height * 2.5em));
+    top: calc(50% - (variables.$base-line-height * 2.5em));
 
     list-style-type: none;
-    background: colors.$body-background;
+    background: var(--body-background);
     padding: .5em 0;
     display: flex;
     justify-content: center;
-    box-shadow: $shadow-offset 0 $shadow-depth $shadow-color;
+    box-shadow: variables.$shadow-offset 0 variables.$shadow-depth variables.$shadow-color;
 
     flex-direction: column;
 
@@ -256,11 +293,11 @@ ol.sidenav {
     ol {
         display: none;
         position: absolute;
-        background: colors.$body-background;
+        background: var(--body-background);
         top: -0.5em;
         left: 100%;
-        border-radius: $border-radius;
-        box-shadow: 0 $shadow-offset $shadow-depth $shadow-color;
+        border-radius: variables.$border-radius;
+        box-shadow: 0 variables.$shadow-offset variables.$shadow-depth variables.$shadow-color;
 
         li {
             list-style: none;
@@ -297,7 +334,7 @@ details {
     }
     &[open] {
         summary {
-            margin-bottom: grid.$gutter;
+            margin-bottom: variables.$gutter;
         }
         & > summary:before {
             transform: rotate(90deg);
@@ -312,11 +349,11 @@ details {
         width: 100%;
     }
     em,i,dd+dt {
-        color: colors.$text-secondary;
-        @include small-type();
+        color: var(--text-secondary);
+        font-size: variables.$small-font-size;
     }
     b,strong,dd {
-        color: colors.$text-tertiary;
+        color: var(--text-tertiary);
     }
 }
 
@@ -330,7 +367,7 @@ body,html {
     overscroll-behavior-x: none;
 }
 
-.fullwidth {
+.fullwidth,.fullWidth {
     @include fullWidth(100vw);
 }
 .fullwidth90 {
@@ -355,11 +392,11 @@ li, dt {
 body {
     > main {
         box-sizing: border-box;
-        max-width: grid.$width;
+        max-width: variables.$width;
         margin: 0 auto;
         padding: 0;
-        @media (max-width: grid.$breakpoint) {
-            margin: 0 grid.$gutter;
+        @media (max-width: variables.$breakpoint) {
+            margin: 0 variables.$gutter;
         }
     }
 }
@@ -367,9 +404,9 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(1em,2fr));
     grid-auto-flow: column;
-    grid-gap: (grid.$gutter * 2);
-    margin-top: grid.$gutter;
-    margin-bottom: grid.$gutter;
+    grid-gap: (variables.$gutter * 2);
+    margin-top: variables.$gutter;
+    margin-bottom: variables.$gutter;
 
     &>* {
         list-style: none;
@@ -384,20 +421,20 @@ body {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    @media (max-width: grid.$breakpoint) {
+    @media (max-width: variables.$breakpoint) {
         grid-auto-flow: column;
     }
 }
 .mosaic {
     display: grid;
-    gap: grid.$gutter;
+    gap: variables.$gutter;
     grid-template-columns: repeat(12, 1fr);
-    background: colors.$well-background;
+    background: var(--well-background);
     grid-auto-flow: row;
     list-style: none;
-    margin-top: grid.$gutter;
-    margin-bottom: grid.$gutter;
-    padding: grid.$gutter grid.$gutter;
+    margin-top: variables.$gutter;
+    margin-bottom: variables.$gutter;
+    padding: variables.$gutter variables.$gutter;
     box-sizing: border-box;
 
     li {
@@ -430,7 +467,7 @@ body {
     }
 }
 main > section {
-    margin-bottom: grid.$gutter * 2;
+    margin-bottom: variables.$gutter * 2;
 }
 
 
@@ -439,22 +476,22 @@ main > section {
 // ======================================================================
 // SHARED CODE
 
-@import "_publishing.scss";
+// @import "_publishing.scss";
 
 
 // ======================================================================
 // SUB-PAGES
 
-@import "_home.scss";
+// @import "_home.scss";
 
-@import "_about.scss";
+// @import "_about.scss";
 
-@import "_portfolio.scss";
+// @import "_portfolio.scss";
 
-@import "_blog.scss";
+// @import "_blog.scss";
 
-@import "_resume.scss";
+// @import "_resume.scss";
 
-@import "_photos.scss";
+// @import "_photos.scss";
 
-@import "_colophon.scss";
+// @import "_colophon.scss";

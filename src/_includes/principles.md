@@ -7,4 +7,4 @@ Principles help guide consistent high-quality decisions. These are mantras that 
 + <details class="card"><summary>"If you want to go fast, go alone. If you want to go far, go together."</summary>Few things are more hazardous to healthy products than the myth of the lone genius creator. Building and shipping products at scale is a team sport depending on collaboration from experts with diverse skills. Designers are uniquely poised to level up large teams thanks to creative skills that make abstract conversations tactile.</details>
 + <details class="card"><summary>Momentum is more valuable than analysis.</summary>
   It's so much easier to pivot or accelerate if you're already in motion. A sealion balances a ball on its nose by intentionally moving the ball where it wants to go. Designers can shape our future by always learning more about the problem they're working on.<a href="/blog/a-little-feedback-often/">Design Momentum</a></details>
-{.hero .grid .x2x2}
+{.well .fullwidth .grid .x2x2}

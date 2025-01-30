@@ -3,8 +3,9 @@ layout: layout.html
 bodyclass: resume
 title: Brian McConnell | Design & Product Leadership
 permalink: /resume/
+cssfile: "css/resume.css"
 ---
-Executive design leader with a proven track record of scaling design organizations and driving multi-billion dollar business growth through human-centered product development. Known for building and leading UX teams that transform streaming media businesses, having scaled Disney+ from launch to 126M+ subscribers and grown design teams from 2 to 26+ across global locations. Consistently deliver breakthrough products by combining evidence-based design strategies with exceptional craft.{.large .two-col}
+Executive design leader with a proven track record of scaling design organizations and driving multi-billion dollar business growth through human-centered product development. Known for building and leading UX teams that transform streaming media businesses, having scaled Disney+ from launch to 126M subscribers and grown design teams from 2 to 26 across global locations. Consistently deliver breakthrough products by combining evidence-based design strategies with exceptional craft.{.large .two-col}
 
 1. **24** years experience{.card .kpi}
 2. **40+** products built{.card .kpi}
@@ -12,18 +13,18 @@ Executive design leader with a proven track record of scaling design organizatio
 4. **26** largest team{.card .kpi}
 {.stats .grid}
 
-[Download 1-Page Resumé](/images/uploads/Brian_McConnell-Resume.pdf){.button .hidden-print}
+[Download 2-Page Resumé](/images/uploads/Brian_McConnell-Resume.pdf){.button .hidden-print}
 
 ---
 
 ## Experience
 
 ### The Walt Disney Company
-*Née MLB Advanced Media / BAMTech, acquired in August 2017*
 
 #### Senior Director, Product Design  
 April 2018 - August 2023
 
+*Née MLB Advanced Media / BAMTech, acquired in August 2017*  
 Led design strategy and operations for Disney's streaming portfolio (Disney+, ESPN+, Hulu, STAR+), driving exceptional business growth and operational efficiency:
 
 - Scaled Disney+ and ESPN+ from launch to 126M subscribers in two years through strategic design leadership, innovative Growth Design programs, and cross-functional collaboration

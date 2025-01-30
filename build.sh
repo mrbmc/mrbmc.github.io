@@ -21,12 +21,13 @@ function build_js () {
 	if [ ! -d "$OUT/js" ]; then
 		mkdir -m755 -p $OUT/js;
 	fi;
-	# echo " Gradient JS";
-	# uglifyjs -m \
-	# 	-c sequences=true,dead_code,conditionals,booleans,unused,if_return,join_vars \
-	# 	--source-map url=gradient.min.js.map \
-	# 	-o $OUT/js/gradient.min.js \
-	# 	$SRC/_js/gradient.js;
+
+	echo " Gradient JS";
+	uglifyjs -m \
+		-c sequences=true,dead_code,conditionals,booleans,unused,if_return,join_vars \
+		--source-map url=gradient.min.js.map \
+		-o $OUT/js/gradient.min.js \
+		$SRC/_js/gradient.js;
 
 	# echo " home JS";
 	# mkdir -m755 -p $OUT/js;
@@ -120,9 +121,9 @@ function build_assets () {
 	echo "- DEPLOYING STATIC ASSETS";
 	echo "---------------------------------------------${NOCOLOR}";
 
-	echo "${YELLOW}- Deploy fonts";
-	echo "---------------------------------------------${NOCOLOR}";
-	rsync -av --delete-after $SRC/_fonts/ $OUT/css/fonts;
+	# echo "${YELLOW}- Deploy fonts";
+	# echo "---------------------------------------------${NOCOLOR}";
+	# rsync -av --delete-after $SRC/_fonts/ $OUT/css/fonts;
 
 	# build_thumbs;
 
@@ -153,7 +154,8 @@ function build_static () {
 
 	echo "Building CSS..........";
 	echo "---------------------------------------------";
-	/opt/homebrew/bin/sass $SRC/_scss/screen.scss $OUT/css/screen.css --style compressed --no-source-map --verbose;
+	# /opt/homebrew/bin/sass $SRC/_scss/screen.scss $OUT/css/screen.css --style compressed --no-source-map --verbose;
+	/opt/homebrew/bin/sass $SRC/_scss:$src/css --style compressed --no-source-map --verbose;
 
 	echo "Building HTML..........";
 	echo "---------------------------------------------";

@@ -28,40 +28,49 @@ body.colophon {
 			background: var(--white);
 			box-shadow: inset 0 0 0 1px var(--gray-light);
 		}
-		&.brand {
-			background: var(--brand-color);
-			color: var(--white);
+		&.primary {
+			background: var(--primary);
+			color: var(--on-primary);
 		}
 		&.complement {
-			background: var(--brand-complement);
-			color: var(--white);
+			background: var(--tertiary);
+			color: var(--on-primary);
 		}
 		&.accent {
-			background: var(--brand-accent);
+			background: var(--secondary);
+			color: var(--on-primary);
 		}
-		&.brand80 {
-			background: transparentize(colors.$brand-color,0.2);
+		&.success {
+			background: var(--success);
+			color: var(--on-primary);
+		}
+		&.error {
+			background: var(--error);
+			color: var(--on-primary);
+		}
+		&.primary80 {
+			background: transparentize(colors.$primary,0.2);
 			color: transparent;
 		}
 		&.complement80 {
-			background: transparentize(colors.$brand-complement,0.2);
+			background: transparentize(colors.$tertiary,0.2);
 			color: transparent;
 		}
 		&.accent80 {
-			background: transparentize(colors.$brand-accent,0.2);
+			background: transparentize(colors.$secondary,0.2);
 			color: transparent;
 		}
-		&.brand20 {
-			background: transparentize(colors.$brand-color,0.8);
+		&.primary20 {
+			background: transparentize(colors.$primary,0.8);
 			color: var(--gray-light);
 			color: transparent;
 		}
 		&.complement20 {
-			background: transparentize(colors.$brand-complement,0.8);
+			background: transparentize(colors.$tertiary,0.8);
 			color: transparent;
 		}
 		&.accent20 {
-			background: transparentize(colors.$brand-accent,0.8);
+			background: transparentize(colors.$secondary,0.8);
 			color: transparent;
 		}
 	}

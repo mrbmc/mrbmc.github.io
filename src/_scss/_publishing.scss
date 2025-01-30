@@ -1,6 +1,8 @@
+@use 'sass:math';
+@use 'sass:color';
 @use '_colors.scss';
-@use '_grid.scss';
-@use '_animation.scss';
+@use '_variables.scss';
+@use '_mixins.scss';
 
 /* ==================================================
 these are mixins that are used to set up the blog, 
@@ -12,13 +14,13 @@ portfolio, and gallery pages.
         p {
             &>img,&>svg,&>video {
                 &.canzoom {
-                    transition: all animation.$speed animation.$easing;
+                    transition: all variables.$speed variables.$easing;
                     &:hover {
                         cursor: zoom-in,
                     }
                 }
                 &.zoom {
-                    @include fullWidth(100vw);
+                    @include mixins.fullWidth(100vw);
                     max-height: 100vh;
                     &:hover {
                         cursor: zoom-out;
@@ -31,20 +33,20 @@ portfolio, and gallery pages.
             }
         }
         img.pullleft {
-            @media (min-width: grid.$breakpoint) {
+            @media (min-width: variables.$breakpoint) {
                 // width: 62%;
-                // margin-left: (0 - grid.$margin);
+                // margin-left: (0 - variables.$margin);
                 width: 38%;
-                margin-right: grid.$gutter;
+                margin-right: variables.$gutter;
                 float: left;
             }
         }
         img.pullright {
-            @media (min-width: grid.$breakpoint) {
+            @media (min-width: variables.$breakpoint) {
                 // width: 62%;
-                // margin-right: (0 - grid.$margin);
+                // margin-right: (0 - variables.$margin);
                 width: 38%;
-                margin-left: grid.$gutter;
+                margin-left: variables.$gutter;
                 float: right;
             }
         }
@@ -61,7 +63,7 @@ portfolio, and gallery pages.
 
 nav.pagination {
     clear: both;
-    padding: grid.$gutter 0;
+    padding: variables.$gutter 0;
 
 	display: flex;
 	justify-content: space-between;
@@ -72,28 +74,28 @@ nav.pagination {
 		text-transform: inherit;
 		display: block;
 	}
-	@media (max-width: grid.$breakpoint) {
+	@media (max-width: variables.$breakpoint) {
 		flex-direction: column-reverse;
 	}
 }
 
 p#gallery,div#gallery-wrap {
-    @include fullWidth(100vw);
+    @include mixins.fullWidth(100vw);
     display: block;
-    margin-bottom: grid.$gutter;
-    background: colors.$hero-background;
-    box-shadow: inset $shadow;
+    margin-bottom: variables.$gutter;
+    background: var(--hero-background);
+    box-shadow: inset variables.$shadow;
     overflow: auto;//this prevents collapsing margins
 
     .image-detail {
         width: 98vw;
-        height: calc(84vh - grid.$gutter);
+        height: calc(84vh - variables.$gutter);
         object-fit: contain;
         padding: 0;
         margin: 0 auto;
         display: block;
 
-        @media (max-width: grid.$breakpoint) {
+        @media (max-width: variables.$breakpoint) {
             max-height: 62vw;
         }
     }
@@ -112,25 +114,25 @@ p#gallery,div#gallery-wrap {
             -webkit-appearance: none;
         }
         &::-webkit-scrollbar:horizontal {
-            height: (grid.$gutter * 0.25);
+            height: (variables.$gutter * 0.25);
         }
         &::-webkit-scrollbar-thumb {
-            border-radius: grid.$gutter;
-            border: 2px solid colors.$well-background; /* should match background, can't be transparent */
-            background-color: transparentize(colors.$brand-color,0.8);
+            border-radius: variables.$gutter;
+            border: 2px solid var(--well-background); /* should match background, can't be transparent */
+            background-color: transparentize(colors.$primary,0.8);
         }
         &::-webkit-scrollbar-track { 
-            background-color: colors.$well-background; 
+            background-color: var(--well-background); 
         } 
 
         li {
             list-style: none;
-            margin: 0 (grid.$gutter * 0.5);
-			color: colors.$text-secondary;
-			@include small-type();
+            margin: 0 (variables.$gutter * 0.5);
+			color: var(--text-secondary);
+			font-size: variables.$small-font-size;
             img {
                 display: block;
-                height: calc(16vh - (grid.$gutter * 0.5));
+                height: calc(16vh - (variables.$gutter * 0.5));
                 width: auto;
                 object-position: top center;
                 object-fit: cover;
@@ -166,12 +168,12 @@ p#gallery,div#gallery-wrap {
         &:before {
             transform: rotate(90deg);
         }
-        left: grid.$gutter;
+        left: variables.$gutter;
     }
     a.next {
         &:before {
             transform: rotate(-90deg);
         }
-        right: grid.$gutter;
+        right: variables.$gutter;
     }
 }

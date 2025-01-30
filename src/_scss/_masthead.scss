@@ -1,8 +1,14 @@
+@use 'sass:color';
+@use 'sass:math';
+@use '_colors.scss';
+@use '_variables.scss';
+@use '_mixins.scss';
+
 #masthead {
 
-    @include fullWidth(100vw);
-    padding: grid.$gutter grid.$gutter;
-    height: calc(100vh - $navbar-height);
+    @include mixins.fullWidth(100vw);
+    padding: variables.$gutter variables.$gutter;
+    height: calc(100vh - variables.$navbar-height);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -11,7 +17,7 @@
     overflow: hidden;
     z-index: 10;
 
-    @include hero();
+    @include mixins.hero();
     &:before {
         filter: none;
     }
@@ -24,14 +30,14 @@
         margin-bottom: 0em;
     }
     .summary {
-        // color: $well-bold-color;
+        // color: var(--well-bold-color);
     }
 
     figure {
         width: 100%;
         height: 120%;
         position: absolute;
-        top: 0 - $navbar-height;
+        top: 0 - variables.$navbar-height;
         left: 0;
         right: 0;
         z-index: -1;
@@ -48,14 +54,14 @@
         }
         figcaption,caption {
             position: absolute;
-            right: grid.$gutter;
-            bottom: grid.$gutter;
+            right: variables.$gutter;
+            bottom: variables.$gutter;
             text-shadow: 0 1px 4px rgba(0,0,0,0.8);
-            color: colors.$well-bold-color;
+            color: var(--well-bold-color);
         }
     }
 
-    @media (max-width: grid.$breakpoint) {
+    @media (max-width: variables.$breakpoint) {
         min-height: 56.25vw;
         height: auto;
     }
@@ -65,10 +71,10 @@
 
         width: $size;
         height: $size;
-        @media (min-width: grid.$breakpoint) {
+        @media (min-width: variables.$breakpoint) {
             position: absolute;
             left: calc(50% - math.div($size, 2));
-            bottom: grid.$gutter;
+            bottom: variables.$gutter;
         }
         margin: 0 auto;
         z-index: 10;

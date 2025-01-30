@@ -1,0 +1,59 @@
+@use 'sass:math';
+@use '_colors.scss';
+@use '_grid.scss';
+@use '_variables.scss';
+
+#post-list {
+
+    @media (max-width: variables.$breakpoint) {
+        margin-top: 0;
+    }
+
+    .post {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        column-gap: variables.$gutter;
+        margin-bottom: variables.$gutter-xl;
+        transition: all variables.$speed variables.$easing;
+
+        header {
+            flex-basis: 62%;
+            h3 {
+                margin: 0;
+            }
+            p.date {
+                margin-bottom: 0;
+                color: var(--text-secondary);
+            }
+        }
+        figure,.figure {
+            flex-basis: 38%;
+            border-radius: variables.$border-radius;
+            overflow: hidden;
+            margin-bottom: 0;
+            a {
+              display: block;
+            }
+            img {
+              display: block;
+            }
+        }
+
+        &:hover {
+            cursor: pointer;
+            z-index: 3;
+            figure,.figure {
+                box-shadow: variables.$shadow;
+                filter: saturate(120%);
+            }           
+            transform: scale(1.05);
+        }
+
+
+    }   
+}
+
+body.blog #post-list {
+    padding-top: variables.$gutter-xl;
+}

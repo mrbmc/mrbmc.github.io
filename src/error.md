@@ -1,5 +1,5 @@
 ---
-layout: layout-micro.html
+layout: layout.html
 bodyclass: home
 title: "Brian McConnell | Error"
 permalink: "/error.html"

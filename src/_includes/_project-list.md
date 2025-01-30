@@ -1,4 +1,4 @@
-<section class="project-list" id="{{label | slug}}">
+<section class="project-list {{_class}}" id="{{label | slug}}">
 
 {% if heading %}## {{ heading }}{% endif %}
 
@@ -6,6 +6,7 @@
 
 {% for project in projectList reversed %}{% if forloop.index0 < count %}
 <article class="project{%if bodyclass != "home" %} full{% endif %}" onclick="location.href='{{project.url}}'">
+
 <header>
 
 ### {{ project.data.title }}
