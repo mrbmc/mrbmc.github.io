@@ -15,9 +15,9 @@ cssfile: "css/home.css"
 
 {% endsection %}
 
-{% include "_project-list.md", projectList: collections.work, heading: false count: 6, _class: "fullWidth" %}
+{% include "_project-list.md", projectList: collections.work, heading: "Selected Work", count: 6, class: "fullWidth", description:false %}
 
-{% include "_post-list.md", postList: collections.post, heading: "Recent Posts", count: 4 %}
+{% include "_post-list.md", postList: collections.post, heading: "Recent Posts", count: 4, description:false %}
 
 <script type="module" language="javascript">
 	import { Gradient } from "/js/gradient.min.js";

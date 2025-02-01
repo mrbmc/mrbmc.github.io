@@ -3,10 +3,10 @@ title: NHL
 thumbnail: /images/portfolio/thumbs/nhl-teaser-16x9.jpg
 masthead-image: /images/portfolio/nhl/nhl-teaser-2x1.jpg
 masthead-video: /images/portfolio/nhl/nhl-masthead.mp4
-date: 2019-12-05
+date: 2018-12-05
 tags:
   - work
-description: I led several design programs for the National Hockey League including the NHL.tv streaming service and product-led-growth on NHL App & NHL.com.
+description: Launching the NHL.tv streaming service and leading product-led-growth on the official NHL app and website.
 timeline: 2015-2018
 ---
 I founded, hired, mentored, and led the team that designed the official site, app and streaming service for the National Hockey League. My engagement with the NHL spanned more than five years with my role ranging from team lead, design strategist, art director, storyteller and UX researcher.

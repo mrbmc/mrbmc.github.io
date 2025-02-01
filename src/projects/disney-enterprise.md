@@ -5,7 +5,7 @@ thumbnail: /images/portfolio/disney-enterprise/optumus-mockup.jpg
 eleventyExcludeFromCollections: false
 tags:
   - work
-description: A suite of enterprise SAAS products behind Disney+, Hulu, and ESPN saved $80M/pa and grew MRR 25%.
+description: A suite of enterprise SAAS products behind Disney+, Hulu, and ESPN.
 timeline: 2019-2023
 ---
 

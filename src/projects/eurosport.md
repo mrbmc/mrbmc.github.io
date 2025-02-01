@@ -1,6 +1,6 @@
 ---
 title: Eurosport Player
-thumbnail: /images/portfolio/eurosport/eurosport-thumb.jpg
+thumbnail: /images/portfolio/eurosport/eurosport-thumb-1x1.png
 date: 2018-01-01
 tags:
   - work
