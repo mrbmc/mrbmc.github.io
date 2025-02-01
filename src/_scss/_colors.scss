@@ -45,16 +45,3 @@ $neutral-20:            hslToHex($primary-hue,21%,20%);
 $neutral-10:            hslToHex($primary-hue,34%,12%);
 $neutral-05:            hslToHex($primary-hue,55%,04%);
 $neutral-0:             hslToHex($primary-hue,89%,02%);
-
-// Navbar
-// -------------------------
-$navbar-background:                 var(--body-background);
-$navbar-border:                     var(--border-color);
-$navbar-text:                       var(--text-primary);
-$navbar-primary:                $primary;
-$navbar-link-color:                 var(--link-color);
-$navbar-link-hover-color:           var(--link-color-hover);
-$navbar-link-hover-background:      var(--well-background);
-$navbar-link-active-color:          var(--body-background);
-$navbar-link-active-background:     var(--text-primary);
-

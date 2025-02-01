@@ -5,117 +5,138 @@
 @use '_mixins.scss';
 
 .project-list {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  grid-row-gap: variables.$gutter;
+  grid-column-gap: variables.$gutter;
+
+  .project {
     display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    grid-row-gap: variables.$gutter;
-    grid-column-gap: variables.$gutter;
+    transition: all variables.$speed variables.$easing;
+    column-gap: variables.$gutter;
 
-    .project {
-        display: flex;
-        transition: all variables.$speed variables.$easing;
-        column-gap: variables.$gutter;
+    header {
+      h3 {
+        margin: 0;
+      }
 
-        header {
-            h3 {
-                margin: 0;
-                color: var(--text-secondary);
-            }
-            p {
-                margin-bottom: 0;
-                font-size: variables.$small-font-size;
-            }
-            p.timeline{
-                display: none;
-                font-weight: variables.$bold-font-weight;
-                color: var(--gray-light);
-            }
-        }
-        figure,.figure {
-            border-radius: variables.$border-radius-xl;
-            overflow: hidden;
-            margin: 0;
+      p {
+        color: var(--text-secondary);
+        margin-bottom: 0;
+        font-size: variables.$small-font-size;
+      }
 
-            filter: saturate(95%);
-            transition: all variables.$speed variables.$easing;
-
-            a {
-                display: block;
-            }
-
-            img {
-                display: block;
-                object-fit: cover;
-                // box-sizing: border-box;
-            }
-        }
-
-        &:hover {
-            z-index: 3;
-            figure,p.figure {
-                filter: saturate(1.02) contrast(1.1) brightness(1.1);
-                box-shadow: variables.$shadow;
-            }
-            transform: scale(1.05);
-        }
+      p.timeline {
+        display: none;
+        font-weight: variables.$bold-font-weight;
+        color: var(--gray-light);
+      }
 
     }
+
+    figure, .figure {
+      border-radius: variables.$border-radius-xl;
+      overflow: hidden;
+      margin: 0;
+      filter: saturate(95%);
+      transition: all variables.$speed variables.$easing;
+
+      a {
+        display: block;
+      }
+
+      img {
+        display: block;
+        object-fit: cover;
+        // box-sizing: border-box;
+      }
+
+    }
+
+    &:hover {
+      z-index: 3;
+
+      figure, p.figure {
+        filter: saturate(1.02) contrast(1.1) brightness(1.1);
+        box-shadow: variables.$shadow;
+      }
+
+      transform: scale(1.05);
+    }
+
+  }
+
 }
 
 body.portfolio {
-    .project-list {
-        .project {
-            flex-direction: row-reverse;
-            align-items: center;
+  .project-list {
+    .project {
+      flex-direction: row-reverse;
+      align-items: center;
 
-            @media (max-width: variables.$breakpoint) {
-                flex-direction: column-reverse;
-            }
+      @media (max-width:variables.$breakpoint) {
+        flex-direction: column-reverse;
+      }
 
-            header {
-                flex-basis: 50%;
-            }
-            figure,.figure {
-                flex-basis: 50%;
-                img {
-                    // height: 25vw;
-                }
-            }
+      header {
+        flex-basis: 38%;
+        h3 {
+          a {
+            color: var(--text-secondary);
+          }
         }
+      }
+
+      figure, .figure {
+        flex-basis: 62%;
+
+        img {
+          // height: 25vw;
+        }
+
+      }
+
     }
+
+  }
+
 }
 
 body.home {
-    .project-list {
-      padding: variables.$gutter;
+  .project-list {
+    padding: variables.$gutter;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+    h2 {
+      display: none;
+    }
 
-      @media (min-width:variables.$breakpoint) {
-        grid-template-columns: repeat(3, 1fr);
-      }
+    @media (min-width:variables.$breakpoint) {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
-      .project {
-        flex-direction: column-reverse;
+    .project {
+      flex-direction: column-reverse;
 
-        header {
-          h3 {
-            text-align: center;
-          }
-          p {
-            display: none;
-          }
+      header {
+        h3 {
+          text-align: center;
         }
 
-        figure, .figure {
-          img {
-            height: calc((100vw - (variables.$gutter * 4))/2);
+        p {
+          display: none;
+        }
 
-            @media (min-width:variables.$breakpoint) {
-              height: calc((100vw - (variables.$gutter * 4))/3);
-            }
+      }
 
+      figure, .figure {
+        img {
+          height: calc((100vw - (variables.$gutter * 4))/2);
+
+          @media (min-width:variables.$breakpoint) {
+            height: calc((100vw - (variables.$gutter * 4))/3);
           }
 
         }
@@ -124,6 +145,6 @@ body.home {
 
     }
 
+  }
 
 }
-

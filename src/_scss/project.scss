@@ -14,6 +14,11 @@ body.project {
     #main {
         display: flex;
         flex-direction: column;
+        #masthead {
+            .description,.summary {
+                max-width: variables.$width;
+            }
+        }
         p.summary {
             margin-bottom: (variables.$gutter * 2);
         }

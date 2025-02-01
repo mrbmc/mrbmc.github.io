@@ -79,7 +79,7 @@ nav.pagination {
 	}
 }
 
-p#gallery,div#gallery-wrap {
+p#gallery,div.gallery-wrap {
     @include mixins.fullWidth(100vw);
     display: block;
     margin-bottom: variables.$gutter;

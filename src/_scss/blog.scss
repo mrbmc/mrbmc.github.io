@@ -21,10 +21,13 @@
             flex-basis: 62%;
             h3 {
                 margin: 0;
+                a {
+                  color: var(--text-secondary);
+                }
             }
-            p.date {
-                margin-bottom: 0;
+            p {
                 color: var(--text-secondary);
+                margin-bottom: 0;
             }
         }
         figure,.figure {

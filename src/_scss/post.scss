@@ -11,11 +11,11 @@
 body.blog.post {
 
 	#masthead {
+    	p.summary {
+    		display: none;
+    	}
 	    @media (min-width:variables.$breakpoint) {
 	    	justify-content: space-between;
-	    	p.summary {
-	    		display: none;
-	    	}
 	      h1, h2, p {
 	        max-width: variables.$width;
 	      }

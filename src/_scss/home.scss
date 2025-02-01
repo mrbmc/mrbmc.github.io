@@ -9,18 +9,20 @@ body.home {
     position: absolute;
     background: transparent;
 
-    a {
-      color: var(--hero-text-color);
-
-      &:hover {
-        color: var(--link-color);
-
-        svg {
-          filter: invert(0%);
+    .logo {
+        color: var(--hero-text-color);
+        &:hover {
+            color: var(--well-text-color);
         }
+    }
 
+    #menu {
+      a {
+        color: var(--hero-text-color);
+        &:hover {
+          color: var(--link-color);
+        }
       }
-
     }
 
   }
@@ -45,12 +47,12 @@ body.home {
   }
 
   #gradient-canvas, #masthead canvas {
-    $scaler: 3;
+    $scaler: 2;
     position: absolute;
     width: 100% * $scaler;
-    height: 200%;
-    left: 0%;
-    top: 0%;
+    height: 100% * $scaler;
+    left: -50%;
+    top: -50%;
     --gradient-color-1:var(--primary);
     --gradient-color-2:var(--secondary);
     --gradient-color-3:var(--primary);
