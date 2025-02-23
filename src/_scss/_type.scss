@@ -47,7 +47,7 @@ h1 {
   font-weight: lib.$display-font-weight;
   font-size: calc(1rem * pow(var(--type-scale), 8));
   line-height: 1.0;
-  letter-spacing: 0;
+  letter-spacing: -0.0125em;
 }
 
 h2 {

@@ -11,6 +11,7 @@
     --primary:          #{lib.$primary};
     --secondary:        #{lib.$secondary};
     --tertiary:         #{lib.$tertiary};
+    --quartiary:        #{lib.$quartiary};
     --on-primary:       #{lib.$neutral-100};
     --breakpoint:       #{lib.$breakpoint};
     --success:          #{lib.$success};
@@ -46,7 +47,7 @@
         --white:        #{lib.$neutral-10};
         --white-semi:   #{lib.$neutral-10}54;
 
-        // --primary:      #{lib.$primary-inverse};
+        --primary:      #{lib.$primary-inverse};
     };
 }
 ::selection {

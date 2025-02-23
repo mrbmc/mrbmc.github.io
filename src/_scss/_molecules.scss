@@ -49,7 +49,7 @@ blockquote,.blockquote {
     padding: ( lib.$gutter * .5 ) lib.$gutter;
     border-radius: lib.$border-radius;
     text-decoration: none;
-    box-shadow: inset 0px 1px 1px 0px lib.$neutral-100, lib.$shadow;
+    box-shadow: inset 0px 1px 1px 0px var(--white-semi), lib.$shadow;
 
     &:hover {
       color: var(--hero-bold-color);

@@ -76,21 +76,6 @@ body.about {
         width: 100%;
     }
 
-    img.cover {
-        $w: 100vw;
-        @include lib.fullWidth($w);
-        overflow: hidden;
-        object-fit: cover;
-        // height: (100vw / 2.31);
-        height: lib.div($w, 4);
-
-        &.family {
-            filter: sepia(10%) hue-rotate(0deg) saturate(50%) brightness(100%);
-        }
-
-
-    }
-
     hr {
         margin: lib.$gutter-xl auto;
     }

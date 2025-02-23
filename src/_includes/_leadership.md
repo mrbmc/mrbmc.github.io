@@ -26,7 +26,7 @@ My leadership philosophy is inspired by lessons from nature, science, and histor
 
 [Blog post: Leadership Models in Nature](/blog/leadership-in-nature/)
 
-[![Orca, Lion, Bee](/images/leadership-nature.jpg)](/blog/leadership-in-nature/) {.fullwidths}
+[![Orca, Lion, Bee](/images/about/leadership-nature.jpg)](/blog/leadership-in-nature/) {.fullwidths}
 
 ### Functional Leader
 

@@ -45,19 +45,19 @@ I've led teams of 2 to 25 people through mergers, acquisitions, closures, transf
 
 <section id="leadership">
 
-{% include "./about-leadership.md" %}
+{% include "_leadership.md" %}
 
 </section>
 
 <section id="principles">
 
-{% include "./about-principles.md" %}
+{% include "_principles.md" %}
 
 </section>
 
 <section id="process">
 
-{% include "./about-process.md" %}
+{% include "_process.md" %}
 
 </section>
 <script type="text/javascript">

@@ -3,7 +3,7 @@ layout: layout.html
 bodyclass: resume
 title: Brian McConnell | Design & Product Leadership
 permalink: /resume/
-cssfile: "css/resume.css"
+cssfile: "css/pages/resume.css"
 ---
 Executive design leader with a proven track record of scaling design organizations and driving multi-billion dollar business growth through human-centered product development. Known for building and leading UX teams that transform streaming media businesses, having scaled Disney+ from launch to 126M subscribers and grown design teams from 2 to 26 across global locations. Consistently deliver breakthrough products by combining evidence-based design strategies with exceptional craft.{.large-type .two-col}
 
@@ -161,12 +161,10 @@ Sold computers at a big box store in the late 1900s
 
 ## Education
 
-### New York University  
+### New York University
 #### Bachelor of Music (BMus)
-Class of 199
+Class of 1999
   
 Major in Music Business & Technology
 
 Focus on post-modern composition & synthesis with Morton Subotnik, Dr. Kenneth Peacock, and Ken Walicki.
-
-![NYU](/images/nyu-torch.svg){.torch}

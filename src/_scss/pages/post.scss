@@ -4,6 +4,10 @@
 
 body.blog.post {
 
+	transition: all (lib.$speed * 4) lib.$easing;
+
+	background: var(--well-background);
+
 	#masthead {
     	p.summary {
     		display: none;
@@ -21,9 +25,6 @@ body.blog.post {
 		margin: lib.$gutter-xl 0;
 	}
 
-	transition: all (lib.$speed * 4) lib.$easing;
-
-	background: var(--well-background);
 	&.scrolled {
 		background: var(--body-background);
 	}

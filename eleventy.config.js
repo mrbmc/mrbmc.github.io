@@ -148,9 +148,6 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy({"src/robots.txt": "/robots.txt" });
   eleventyConfig.addPassthroughCopy({"src/images/favicon/favicon.ico":"favicon.ico"});
-  // eleventyConfig.addPassthroughCopy({"src/css/screen.*":"css/"});
-  // don't passthrough the src/css dir because we inline it
-  // eleventyConfig.addPassthroughCopy({"src/css":"css"});
 
   // We enable the passthrough for development purposes.
   // This updates the build with realtime image updates.

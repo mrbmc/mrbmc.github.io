@@ -1,5 +1,4 @@
-@use 'sass:math';
-@use '_colors.scss';
+@use "../library" as lib;
 
 body.colophon {
 	.chip {
@@ -32,11 +31,11 @@ body.colophon {
 			background: var(--primary);
 			color: var(--on-primary);
 		}
-		&.complement {
+		&.tertiary {
 			background: var(--tertiary);
 			color: var(--on-primary);
 		}
-		&.accent {
+		&.secondary {
 			background: var(--secondary);
 			color: var(--on-primary);
 		}
@@ -49,29 +48,31 @@ body.colophon {
 			color: var(--on-primary);
 		}
 		&.primary80 {
-			background: transparentize(colors.$primary,0.2);
-			color: transparent;
+			background: lib.adjust(lib.$primary,$alpha:-0.2);
 		}
-		&.complement80 {
-			background: transparentize(colors.$tertiary,0.2);
-			color: transparent;
+		&.tertiary80 {
+			background: lib.adjust(lib.$tertiary,$alpha:-0.2);
 		}
-		&.accent80 {
-			background: transparentize(colors.$secondary,0.2);
-			color: transparent;
+		&.secondary80 {
+			background: lib.adjust(lib.$secondary,$alpha:-0.2);
+		}
+		&.primary50 {
+			background: lib.adjust(lib.$primary,$alpha:-0.5);
+		}
+		&.tertiary50 {
+			background: lib.adjust(lib.$tertiary,$alpha:-0.5);
+		}
+		&.secondary50 {
+			background: lib.adjust(lib.$secondary,$alpha:-0.5);
 		}
 		&.primary20 {
-			background: transparentize(colors.$primary,0.8);
-			color: var(--gray-light);
-			color: transparent;
+			background: lib.adjust(lib.$primary,$alpha:-0.8);
 		}
-		&.complement20 {
-			background: transparentize(colors.$tertiary,0.8);
-			color: transparent;
+		&.tertiary20 {
+			background: lib.adjust(lib.$tertiary,$alpha:-0.8);
 		}
-		&.accent20 {
-			background: transparentize(colors.$secondary,0.8);
-			color: transparent;
+		&.secondary20 {
+			background: lib.adjust(lib.$secondary,$alpha:-0.8);
 		}
 	}
 }

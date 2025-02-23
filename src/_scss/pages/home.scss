@@ -49,16 +49,16 @@ body.home {
   }
 
   #gradient-canvas, #masthead canvas {
-    $scaler: 2;
     position: absolute;
+    $scaler: 1;
     width: 100% * $scaler;
     height: 100% * $scaler;
-    left: -50%;
-    top: -50%;
+    left: 50% * ($scaler - 1) * -1;
+    top: 50% * ($scaler - 1) * -1;
     --gradient-color-1: var(--primary);
     --gradient-color-2: var(--secondary);
-    --gradient-color-3: var(--primary);
-    --gradient-color-4: var(--tertiary);
+    --gradient-color-3: var(--tertiary);
+    --gradient-color-4: var(--primary);
   }
 
   .project-list {
@@ -75,10 +75,6 @@ body.home {
     @media (min-width:lib.$breakpoint) {
       grid-template-columns: repeat(3, 1fr);
     }
-
-    // @media (min-width:lib.$breakpoint-widescreen) {
-    //   grid-template-columns: repeat(4, 1fr);
-    // }
 
     .project {
       flex-direction: column-reverse;

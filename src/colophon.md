@@ -3,7 +3,7 @@ layout: layout.html
 title: Brian McConnell | Design & Product Leadership
 bodyclass: colophon
 masthead: -1
-cssfile: "css/colophon.css"
+cssfile: "css/pages/colophon.css"
 ---
 
 # Colophon
@@ -104,29 +104,39 @@ Neutral-100{.chip .white}
 
 Primary {.chip .primary}
 
-Secondary {.chip .accent}
+Primary80 {.chip .primary80}
 
-Tertiary {.chip .complement}
+Primary50 {.chip .primary50}
 
-Success{.chip .success}
+Primary20 {.chip .primary20}
+
+&nbsp;{.chip .white}
+
+Secondary {.chip .secondary}
+
+Secondary80 {.chip .secondary80}
+
+Secondary50 {.chip .secondary50}
+
+Secondary20 {.chip .secondary20}
+
+&nbsp;{.chip .white}
+
+Tertiary {.chip .tertiary}
+
+Tertiary80 {.chip .tertiary80}
+
+Tertiary50 {.chip .tertiary50}
+
+Tertiary20 {.chip .tertiary20}
+
+&nbsp;{.chip .white}
 
 Error{.chip .error}
 
-Brand80 {.chip .primary80}
-
-Accent80 {.chip .accent80}
-
-Complement80 {.chip .complement80}
+Success{.chip .success}
 
 &nbsp;{.chip .white}
-
-&nbsp;{.chip .white}
-
-Brand20 {.chip .primary20}
-
-Accent20 {.chip .accent20}
-
-Complement20 {.chip .complement20}
 
 &nbsp;{.chip .white}
 

@@ -52,7 +52,7 @@
         },
         {
             "name": "MCGULP",
-			"shell_cmd": "gulp",
+			"shell_cmd": "gulp quick",
         }
 	],
 }
