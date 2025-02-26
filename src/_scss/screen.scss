@@ -112,16 +112,15 @@ li, dt {
     box-sizing: border-box;
 }
 body {
-    > main {
+    main {
         box-sizing: content-box;
-        max-width: lib.$width;
+        max-width: lib.$grid-width;
         margin: 0 auto;
-        padding: 0 lib.$gutter;
+        padding: 0 var(--gutter);
 
-        // @media (max-width: lib.$breakpoint) {
-        //     margin: 0 lib.$gutter;
-        //     padding: 0;
-        // }
+        section {
+            margin-bottom: var(--gutter-xl);
+        }
     }
 }
 .grid {
@@ -153,9 +152,6 @@ body {
     .card {
       height: 100%;
     }
-}
-main > section {
-    margin-bottom: var(lib.$gutter-xl);
 }
 
 #noiseImage {

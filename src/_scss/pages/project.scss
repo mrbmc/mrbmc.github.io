@@ -33,8 +33,6 @@ body.project {
         }
         img.pullleft {
             @media (min-width: lib.$breakpoint) {
-                // width: 62%;
-                // margin-left: (0 - lib.$margin);
                 width: 38%;
                 margin-right: lib.$gutter;
                 float: left;
@@ -42,8 +40,6 @@ body.project {
         }
         img.pullright {
             @media (min-width: lib.$breakpoint) {
-                // width: 62%;
-                // margin-right: (0 - lib.$margin);
                 width: 38%;
                 margin-left: lib.$gutter;
                 float: right;
@@ -52,7 +48,7 @@ body.project {
 
         #masthead {
             .description,.summary {
-                max-width: lib.$width;
+                max-width: lib.$grid-width;
             }
         }
         p.summary {

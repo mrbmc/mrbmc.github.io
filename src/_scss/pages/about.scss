@@ -54,7 +54,7 @@ body.about {
 
         &.fullwidth {
             @media (min-width: lib.$breakpoint) {
-                padding: lib.$gutter lib.$margin;
+                padding: lib.$gutter lib.$grid-margin;
             }
         }
     }

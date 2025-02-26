@@ -2,7 +2,7 @@
 
 #masthead {
 
-    padding: lib.$gutter lib.$gutter;
+    padding: var(--gutter);
     height: calc(100vh - lib.$navbar-height);
     display: flex;
     flex-direction: column;
@@ -55,11 +55,6 @@
         }
     }
 
-    @media (max-width: lib.$breakpoint) {
-        min-height: 56.25vw;
-        height: auto;
-    }
-
     p:has(.scrollhint),p.scrollhint {
         $size: 3rem;
 
@@ -82,9 +77,5 @@
             height: $size;
         }
     }
-
-    @include lib.hero();
-
-    @include lib.fullWidth(100vw);
 
 }// end masthead

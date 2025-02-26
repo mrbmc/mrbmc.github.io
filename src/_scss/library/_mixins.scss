@@ -58,14 +58,18 @@
 @mixin fullWidth($_limit:100vw) {
   & {
     width: $_limit;
+    --delta: calc(#{$_limit} - #{variables.$grid-width});
+    margin-left: calc( max(var(--delta),var(--gutter-xl)) * -0.5);
+    padding: 0 var(--gutter);
   }
 
-    @media (min-width: variables.$breakpoint) {
-      margin-left: calc((($_limit - variables.$width) * -0.5));
-    }
-    @media (max-width: variables.$breakpoint) {
-        margin-left: (variables.$gutter * -1);
-    }
+  @media (max-width: (variables.$grid-width)) {
+      margin-left: calc(var(--gutter) * -1);
+  }
+  // @media (min-width: variables.$breakpoint) {
+  //   --delta: calc(#{$_limit} - #{variables.$grid-width});
+  //   margin-left: calc( max(var(--delta),var(--delta)*-1) * -0.5);
+  // }
 }
 @mixin fullHeight($limit:calc(100vh - $navbar-height)) {
   height: $limit;

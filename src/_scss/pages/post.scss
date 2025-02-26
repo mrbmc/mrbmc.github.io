@@ -15,7 +15,7 @@ body.blog.post {
 	    @media (min-width:lib.$breakpoint) {
 	    	justify-content: space-between;
 	      h1, h2, p {
-	        max-width: lib.$width;
+	        max-width: lib.$grid-width;
 	      }
 	    }
 	}

@@ -37,6 +37,10 @@
     --hero-background:       #{lib.$neutral-30};
     --hero-text-color:       #{lib.$neutral-90};
     --hero-bold-color:       #{lib.$neutral-100};
+
+    --gutter:                #{lib.$gutter};
+    --gutter-xl:             #{lib.$gutter-xl};
+
 }
 @media (prefers-color-scheme: dark) {
     :root {
