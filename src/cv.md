@@ -7,10 +7,10 @@ cssfile: "css/pages/resume.css"
 ---
 Executive design leader with a proven track record of scaling design organizations and driving multi-billion dollar business growth through human-centered product development. Known for building and leading UX teams that transform streaming media businesses, having scaled Disney+ from launch to 126M subscribers and grown design teams from 2 to 26 across global locations. Consistently deliver breakthrough products by combining evidence-based design strategies with exceptional craft.{.large-type .two-col}
 
-1. **24** years experience{.card .kpi}
-2. **40+** products built{.card .kpi}
-3. **13** years managing teams{.card .kpi}
-4. **26** largest team{.card .kpi}
+1. **24** years experience{.card .kpi .col-3}
+2. **40+** products built{.card .kpi .col-3}
+3. **13** years managing teams{.card .kpi .col-3}
+4. **26** largest team{.card .kpi .col-3}
 {.stats .grid}
 
 [Download 2-Page Resumé](/images/uploads/Brian_McConnell-Resume.pdf){.button .hidden-print}

@@ -35,13 +35,13 @@ In 2016 we redesigned and relaunched NHL's streaming streaming service across mo
 
 ![NHL.tv Supported Devices](/images/portfolio/nhl/nhl-devices@2x.png)
 
-- ![NHL.tv Highlights](/images/portfolio/nhl/nhl-tv-tvos-highlights.png) {.col8 .row2}
-- ![NHL.tv Highlights](/images/portfolio/nhl/nhl-tv-tvos-scores.png) {.col4}
-- ![NHL.tv Highlights](/images/portfolio/nhl/nhl-tv-tvos-player_info.png) {.col4}
-- ![NHL.tv Highlights](/images/portfolio/nhl/nhl-tv-tvos-favorites.png) {.col4}
-- ![NHL.tv Highlights](/images/portfolio/nhl/bug-ps4-timestamp-playhead.png) {.col8 .row2}
-- ![NHL.tv Highlights](/images/portfolio/nhl/nhl-tv-tvos-player.png) {.col4}
-{.mosaic .fullwidth}
+- ![NHL.tv Highlights](/images/portfolio/nhl/nhl-tv-tvos-highlights.png) {.col-8 .row-2}
+- ![NHL.tv Highlights](/images/portfolio/nhl/nhl-tv-tvos-scores.png) {.col-4}
+- ![NHL.tv Highlights](/images/portfolio/nhl/nhl-tv-tvos-player_info.png) {.col-4}
+- ![NHL.tv Highlights](/images/portfolio/nhl/nhl-tv-tvos-favorites.png) {.col-4}
+- ![NHL.tv Highlights](/images/portfolio/nhl/bug-ps4-timestamp-playhead.png) {.col-8 .row-2}
+- ![NHL.tv Highlights](/images/portfolio/nhl/nhl-tv-tvos-player.png) {.col-4}
+{.grid .well .fullwidth}
 
 ## Around The League
 
@@ -49,10 +49,10 @@ One feature we were especially proud of was "Around the League". This was a user
 
 This feature was a cross-functional effort to align the data feeds, UI build and design into a seamles UX.
 
-- ![Shelf](/images/portfolio/nhl/nhl-aroundtheleague-shelf.jpg) {.col4}
-- <video src="/images/portfolio/nhl/nhl-around-the-league.mp4" controls mute muted playslinline autoplay></video> {.col8 .row2}
-- ![Picture in Picture](/images/portfolio/nhl/nhl-aroundtheleague-pip.jpg) {.col4}
-{.mosaic .fullwidth}
+- ![Shelf](/images/portfolio/nhl/nhl-aroundtheleague-shelf.jpg) {.col-4}
+- <video src="/images/portfolio/nhl/nhl-around-the-league.mp4" controls mute muted playslinline autoplay></video> {.col-8 .row-2}
+- ![Picture in Picture](/images/portfolio/nhl/nhl-aroundtheleague-pip.jpg) {.col-4}
+{.grid .well .fullwidth}
 
 
 ## Mobile Redesign - Product Led Growth{#mobile-plg}
@@ -75,10 +75,10 @@ We formed a hypothesis that a light redesign of the team home pages (the most vi
 
 Screens
 
-- ![Before](/images/portfolio/nhl/nhl-mobile-video-before.png) {.col3}
-- ![After](/images/portfolio/nhl/nhl-mobile-video-after.png) {.col3}
-- <video src="/images/portfolio/nhl/1a-Mobile-Video-Improvements.mp4" controls playsinline autoplay style=""></video> {.col6 .row2}
-{.mosaic .fullwidth}
+- ![Before](/images/portfolio/nhl/nhl-mobile-video-before.png) {.col-3}
+- ![After](/images/portfolio/nhl/nhl-mobile-video-after.png) {.col-3}
+- <video src="/images/portfolio/nhl/1a-Mobile-Video-Improvements.mp4" controls playsinline autoplay style=""></video> {.col-6 .row-2}
+{.grid .well .fullwidth}
 
 
 <!-- width:375px;height:750px;display:block;margin:0 auto; -->
@@ -105,18 +105,18 @@ GameFlow™ introduced a groundbreaking way to visualize the momentum of action 
 My role as director was assembling the team of designers, prototypers, and researchers, setting our Design Strategy, and Storytelling to align cross-functional partners. I also designed the v1 interactions and built the visiontype to secure funding.
 
 
-- ![Game Pressure](/images/portfolio/nhl/gameflow_01.png) {.col4}
-- ![Select Key Plays](/images/portfolio/nhl/gameflow_03.png) {.col8 .row2}
-- ![Settings](/images/portfolio/nhl/gameflow_02.png) {.col4}
-- Navigating game highlights through the shot pressure chart in the Mobile App.{.caption .col12}
-{.mosaic .fullwidth}
+- ![Game Pressure](/images/portfolio/nhl/gameflow_01.png) {.col-4}
+- ![Select Key Plays](/images/portfolio/nhl/gameflow_03.png) {.col-8 .row-2}
+- ![Settings](/images/portfolio/nhl/gameflow_02.png) {.col-4}
+- Navigating game highlights through the shot pressure chart in the Mobile App.{.caption .col-12}
+{.grid .well .fullwidth}
 
 
-- ![PiP keeps an eye on the game](/images/portfolio/nhl/gameflow_05.png) {.col8 .row2}
-- ![Send Highlights to TV](/images/portfolio/nhl/gameflow_04.png) {.col4}
-- ![Return to the action](/images/portfolio/nhl/gameflow_06.png) {.col4}
-- The multi-screen interaction lets fans keep an eye on the action while watching highlights.{.caption .col12}
-{.mosaic}
+- ![PiP keeps an eye on the game](/images/portfolio/nhl/gameflow_05.png) {.col-8 .row-2}
+- ![Send Highlights to TV](/images/portfolio/nhl/gameflow_04.png) {.col-4}
+- ![Return to the action](/images/portfolio/nhl/gameflow_06.png) {.col-4}
+- The multi-screen interaction lets fans keep an eye on the action while watching highlights.{.caption .col-12}
+{.grid .well}
 
 ### VisionType
 

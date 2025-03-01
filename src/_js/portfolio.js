@@ -8,15 +8,27 @@ function wrapElement (el, wrapper) {
     wrapper.appendChild(el);
 }
 
+function parseSrcset(srcset) {
+  return srcset.split(',').map(item => {
+    const parts = item.trim().split(' ');
+    return {
+      url: parts[0],
+      width: parts[1] ? parseInt(parts[1], 10) : null,
+      density: parts[1] && parts[1].includes('x') ? parseFloat(parts[1]) : null,
+    };
+  });
+}
+
 function initMosaics() {
-  var mosaics = document.getElementsByClassName('mosaic');
+  var mosaics = document.getElementsByClassName('grid well');
   for (const mos of mosaics) {
     var imgs = mos.getElementsByTagName('img');
     console.log('mosaics',imgs)
     for (const img of imgs) {
       img.addEventListener('click',function(e){
         var newImg = document.createElement('img');
-            newImg.setAttribute('src',this.src);
+        var allSrc = parseSrcset(this.srcset);
+            newImg.setAttribute('src',allSrc.pop().url);
 
         document.getElementById('lightbox').innerHTML = "";
         document.getElementById('lightbox').append(newImg);

@@ -127,26 +127,36 @@ body {
     box-sizing: border-box;
     display: grid;
 
-    grid-template-columns: repeat(auto-fit, minmax(1em,2fr));
+    grid-template-columns: repeat(var(--columns), minmax(1em,2fr));
+    grid-gap: var(--gutter);
     grid-auto-flow: row;
-    grid-gap: lib.$gutter;
 
     &>* {
         box-sizing: border-box;
         list-style: none;
         margin: 0;
     }
-    &.cols2 {
-        grid-template-columns: repeat(2, 1fr);
+
+    @for $i from 1 through lib.$grid-columns {
+        .col-#{$i} {
+          align-self: center;
+          grid-column: span $i;
+        }
+        .row-#{$i} {
+            grid-row: span $i;
+        }
     }
-    &.cols3 {
-        // grid-auto-flow: row;
-        grid-template-columns: repeat(3, 1fr);
-    }
+
     @media (max-width: lib.$breakpoint) {
-        grid-gap: lib.$gutter;
-        &[class*="cols"] {
-            grid-template-columns: repeat(1, 1fr);        
+
+        // .col-1,.col-2,.col-3,.col-4,.col-5 {
+        //     grid-column: span 12;
+        // }
+        // .col-7,.col-8,.col-9,.col-10,.col-11 {
+        //     grid-column: span 12;
+        // }
+        [class^="col-"] {
+            grid-column: span var(--columns);
         }
     }
     .card {

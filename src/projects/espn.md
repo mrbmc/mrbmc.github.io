@@ -50,14 +50,14 @@ ESPN's landmark deal with the UFC presented an opportunity to boost subscribers 
 
 The UI design navigated a web of payment methods across devices, payment methods, and varying entitlements consumers. These flows needed to be seamless and obvious because consumers were making this purchase under duress. 80% of sales were made during the 10 minutes before the event started.
 
-- ![PPV Offer](/images/portfolio/espn/espn-ppv-1.png) {.col6 .row1}
-- ![PPV Offer](/images/portfolio/espn/espn-ppv-2.png) {.col6 .row1}
-- ![PPV Offer](/images/portfolio/espn/espn-ppv-3.png) {.col3 .row1}
-- ![PPV Offer](/images/portfolio/espn/espn-ppv-3a.png) {.col3 .row1}
-- ![PPV Offer](/images/portfolio/espn/espn-ppv-4.png) {.col6 .row2}
-- ![PPV Offer](/images/portfolio/espn/espn-ppv-3b.png) {.col3 .row1}
-- ![PPV Offer](/images/portfolio/espn/espn-ppv-3c.png) {.col3 .row1}
-{.mosaic .fullwidth}
+- ![PPV Offer](/images/portfolio/espn/espn-ppv-1.png) {.col-6 .row-1}
+- ![PPV Offer](/images/portfolio/espn/espn-ppv-2.png) {.col-6 .row-1}
+- ![PPV Offer](/images/portfolio/espn/espn-ppv-3.png) {.col-3 .row-1}
+- ![PPV Offer](/images/portfolio/espn/espn-ppv-3a.png) {.col-3 .row-1}
+- ![PPV Offer](/images/portfolio/espn/espn-ppv-4.png) {.col-6 .row-2}
+- ![PPV Offer](/images/portfolio/espn/espn-ppv-3b.png) {.col-3 .row-1}
+- ![PPV Offer](/images/portfolio/espn/espn-ppv-3c.png) {.col-3 .row-1}
+{.grid .well .fullwidth}
 
 ## Streaming Sports Vision{#terremoto}
 
@@ -90,16 +90,16 @@ This strength of this vision, and conviction of the team, convinced Disney+ to i
 
 **STAR+ grew to 11M subscribers in two years.**
 
-- ![STAR+ Sports](/images/portfolio/espn/starplus-1.png) {.col6 .row2}
-- ![STAR+ Event](/images/portfolio/espn/starplus-3.png) {.col3}
-- ![STAR+ Event](/images/portfolio/espn/starplus-4.png) {.col3}
-- ![STAR+ Event](/images/portfolio/espn/starplus-2.png) {.col6 .row2}
-- ![COMBO+](/images/portfolio/espn/comboplus.png) {.col3}
-- ![STAR+ Event](/images/portfolio/espn/comboplus-signup-success.png) {.col3}
-- ![COMBO+](/images/portfolio/espn/starplus-5.png) {.col4}
-- ![STAR+](/images/portfolio/espn/starplus.jpeg) {.col4}
-- ![COMBO+](/images/portfolio/espn/starplus-6.png) {.col4}
-{.mosaic .fullwidth}
+- ![STAR+ Sports](/images/portfolio/espn/starplus-1.png) {.col-6 .row-2}
+- ![STAR+ Event](/images/portfolio/espn/starplus-3.png) {.col-3}
+- ![STAR+ Event](/images/portfolio/espn/starplus-4.png) {.col-3}
+- ![STAR+ Event](/images/portfolio/espn/starplus-2.png) {.col-6 .row-2}
+- ![COMBO+](/images/portfolio/espn/comboplus.png) {.col-3}
+- ![STAR+ Event](/images/portfolio/espn/comboplus-signup-success.png) {.col-3}
+- ![COMBO+](/images/portfolio/espn/starplus-5.png) {.col-4}
+- ![STAR+](/images/portfolio/espn/starplus.jpeg) {.col-4}
+- ![COMBO+](/images/portfolio/espn/starplus-6.png) {.col-4}
+{.grid .well .fullwidth}
 
 ## ESPN SportsCenter+
 

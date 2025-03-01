@@ -10,7 +10,7 @@ timeline: 2018-2020
 parallaxHeading:
   - "-1"
 ---
-![](/images/portfolio/disney-growth/disney-growth.png){.fullwidth style="object-fit:contain;"}
+![Cover image](/images/portfolio/disney-growth/disney-growth.png){.fullwidth style="object-fit:contain;"}
 
 
 <!--This is the story of how we launched Disney+ and grew it from **0 to 105M subscribers** in two years. It was my mission to build "Growth Design" - the team, process, and outcomes - from inception into a 13-person cross-discipline program.{.large-type}-->
@@ -77,7 +77,7 @@ The internally stated goal for Disney+ was to acquire as many subscribers as pos
 
 The Growth Design team began work long before Disney+ launched; before Disney acquired BAMTech to build its streaming services; even before BAMTech existed. Many of the people on the teams involved had already launched & operated dozens of direct-to-consumer services as part of *MLB Advanced Media*.
 
-![placebolder image: logo cluster of streaming services we'd launched](/images/portfolio/disney-growth/mlbam-clients-grayscale.png){.canzoom}
+![streaming services we launched](/images/portfolio/disney-growth/mlbam-clients-grayscale.png){.canzoom}
 
 Disney acquired BAMTech for its ability to build *content businesses*. In addition to the technology for streaming high-quality video over the internet, BAMTech had the commerce platform turnstile UX to sell content directly to consumers at scale. That experience gave us a basecamp from which to begin our expedition up Disney+. We already had the infrastructure for many core Growth features:
 

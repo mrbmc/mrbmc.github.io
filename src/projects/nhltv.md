@@ -39,8 +39,8 @@ One feature we were especially proud of was "Around the League". This was a user
 
 This feature was a cross-functional effort to align the data feeds, UI build and design into a seamles UX.
 
-- ![Shelf](/images/portfolio/nhl/nhl-aroundtheleague-shelf.jpg) {.col4}
-- <video src="/images/portfolio/nhl/nhl-around-the-league.mp4" controls mute muted playslinline autoplay></video> {.col8 .row2}
-- ![Picture in Picture](/images/portfolio/nhl/nhl-aroundtheleague-pip.jpg) {.col4}
-{.mosaic}
+- ![Shelf](/images/portfolio/nhl/nhl-aroundtheleague-shelf.jpg) {.col-4}
+- <video src="/images/portfolio/nhl/nhl-around-the-league.mp4" controls mute muted playslinline autoplay></video> {.col-8 .row-2}
+- ![Picture in Picture](/images/portfolio/nhl/nhl-aroundtheleague-pip.jpg) {.col-4}
+{.grid .well}
 

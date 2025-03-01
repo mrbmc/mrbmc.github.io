@@ -123,40 +123,36 @@ body.project {
         }
     }
 
-    .mosaic {
-        display: grid;
-        gap: var(lib.$gutter);
-        grid-template-columns: repeat(12, 1fr);
-        background: var(--well-background);
-        grid-auto-flow: row;
-        list-style: none;
-        margin-top: var(lib.$gutter);
-        margin-bottom: var(lib.$gutter);
-        padding: var(lib.$gutter);
-        box-sizing: border-box;
+    .grid.well {
+        // display: grid;
+        // gap: var(--gutter);
+        // grid-template-columns: repeat(12, 1fr);
+        // grid-auto-flow: row;
+        // list-style: none;
+        // margin-top:  var(--gutter);
+        // margin-bottom: var(--gutter);
+        // box-sizing: border-box;
+        // padding: var(--gutter);
+        // background: var(--well-background);
 
         li {
-            padding: 0;
-            margin: 0;
+            height: 100%;
             img {
                 display: block;
                 height: 100%;
                 width: 100%;
                 object-fit: cover;
                 object-position: 50% 0%;
+                border-radius: var(--border-radius);
+                box-shadow: lib.$shadow;
+                &:hover {
+                    cursor: pointer;
+                }
             }
             &.contain {
                 img {
                     object-fit: contain;
                     object-position: 50% 50%;
-                }
-            }
-            @for $i from 1 through 12 {
-                &.col#{$i} {
-                    grid-column: span $i;
-                }
-                &.row#{$i} {
-                    grid-row: span $i;
                 }
             }
             &.clear {

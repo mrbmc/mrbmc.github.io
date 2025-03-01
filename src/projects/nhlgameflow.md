@@ -19,18 +19,18 @@ GameFlow™ introduced a groundbreaking way to visualize the momentum of action 
 My role as director was assembling the team of designers, prototypers, and researchers, setting our Design Strategy, and Storytelling to align cross-functional partners. I also designed the v1 interactions and built the visiontype to secure funding.
 
 
-- ![Game Pressure](/images/portfolio/nhl/gameflow_01.png) {.col4}
-- ![Select Key Plays](/images/portfolio/nhl/gameflow_03.png) {.col8 .row2}
-- ![Settings](/images/portfolio/nhl/gameflow_02.png) {.col4}
-- Navigating game highlights through the shot pressure chart in the Mobile App.{.caption .col12}
-{.mosaic}
+- ![Game Pressure](/images/portfolio/nhl/gameflow_01.png) {.col-4}
+- ![Select Key Plays](/images/portfolio/nhl/gameflow_03.png) {.col-8 .row-2}
+- ![Settings](/images/portfolio/nhl/gameflow_02.png) {.col-4}
+- Navigating game highlights through the shot pressure chart in the Mobile App.{.caption .col-12}
+{.grid .well}
 
 
-- ![PiP keeps an eye on the game](/images/portfolio/nhl/gameflow_05.png) {.col8 .row2}
-- ![Send Highlights to TV](/images/portfolio/nhl/gameflow_04.png) {.col4}
-- ![Return to the action](/images/portfolio/nhl/gameflow_06.png) {.col4}
-- The multi-screen interaction lets fans keep an eye on the action while watching highlights.{.caption .col12}
-{.mosaic}
+- ![PiP keeps an eye on the game](/images/portfolio/nhl/gameflow_05.png) {.col-8 .row-2}
+- ![Send Highlights to TV](/images/portfolio/nhl/gameflow_04.png) {.col-4}
+- ![Return to the action](/images/portfolio/nhl/gameflow_06.png) {.col-4}
+- The multi-screen interaction lets fans keep an eye on the action while watching highlights.{.caption .col-12}
+{.grid .well}
 
 ### VisionType
 

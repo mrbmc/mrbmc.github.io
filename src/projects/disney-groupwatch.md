@@ -82,14 +82,14 @@ Our executive leaders wanted to ensure there was a viable market for social-view
 The market research we collected along with the previous UX research gave us a foundation to start defining guidelines that would guide future product, design, and technology decisions. These were co-authored by teammates from Design, Product, and Product Marketing.
 
 1. **GroupWatch must foster a feeling of being together**  
-    Strengthen social bonds through a positive shared experience. Build on features that touch people simultaneously, like reactions, playback control and rally points.{.card}
+    Strengthen social bonds through a positive shared experience. Build on features that touch people simultaneously, like reactions, playback control and rally points.{.card .col-8}
     
 2. **GroupWatch is for intimate groups, i.e. family & close friends**   
-   GroupWatch will be most used by groups of 2-4 people, as opposed to community viewing (theatre) or massive social viewing party (Twitch).{.card}
+   GroupWatch will be most used by groups of 2-4 people, as opposed to community viewing (theatre) or massive social viewing party (Twitch).{.card .col-4}
    
 3. **GroupWatch is additive to existing behaviors**   
-   Use mobile devices for communication and TVs for viewing. Tap into existing social norms for planning and watching.{.card}
-{.hero .grid .cols3}
+   Use mobile devices for communication and TVs for viewing. Tap into existing social norms for planning and watching.{.card .col-4}
+{.hero .grid}
 ### Design Principles
 
 Principles are a powerful way to align teams in big programs and guide decisions about tradeoffs in the design. Principles must address the specific user goals and business constraints of a project. Generic principles about "ease of use" and "delightful" do not aid critical thinking in a specific context.

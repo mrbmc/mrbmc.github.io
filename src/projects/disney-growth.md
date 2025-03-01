@@ -37,7 +37,9 @@ parallaxHeading:
 
 {.stickynav}
 
-## Chapter 1: Basecamp{#basecamp .section}
+## Chapter 1: Basecamp{#basecamp .section}  
+
+![Basecamp](/images/portfolio/disney-growth/everest-basecamp-large.avif) {.hide}
 
 ### The Mountain of Scope {#full-scope}
 > Features  x Devices x Payment Terms x Regions
@@ -96,8 +98,8 @@ Growth Team in December 2020 {.caption}
 
 We established  **Experience Principles** for Disney+ because we've seen them improve the quality of design decisions on complex projects. Writing these with our cross-functional team made these real living ideas that people would say while collaborating.
 
-<div class="grid cols2 fullwidth">
-	<details class="card">
+<div class="grid fullwidth">
+	<details class="card col-6">
 	<summary>"First stream, first."</summary>
 Disney's competitive advantage is that their content is <strong>already known and beloved</strong>. We believed escorting guests into a browsing experience of familiar content would lead them to their <em>first view</em> as quickly as possible. The first view was more valuable to us than collecting marketing information, or personalized onboarding.
 
@@ -107,7 +109,7 @@ Disney's competitive advantage is that their content is <strong>already known an
 
 This sounds obvious, but it wasn't how our competitors were operating in 2018, or how Disney operated. This mindset shift required significant stakeholder education, reinforced by our 3rd tenet.
 </details>
-<details class="card">
+<details class="card col-6">
 	<summary>"Disney... Aged up"</summary>
 	<div>
 "Aged up" was a phrase that everyone on the design team used on a nearly daily basis. It was a shorthand for explaining that the design needed to be as premium & modern, as it was magical. The dark color palette, modern san-serif type, and restrained graphics exist in service of this tenet.
@@ -116,7 +118,7 @@ Disney had already been on a long and steady brand transformation to appeal to a
 	</div>
 
 </details>
-<details class="card">
+<details class="card col-6">
 	<summary>"Subscribers, Then Revenue"</summary>
 	<div>
 The goal of Disney+ was to deepen our guests' relationship with the stories & characters they love, not to optimize short-term revenue. We accept as an article of faith that this approach maximizes revenue in the long term.
@@ -129,7 +131,7 @@ _Spoiler: this would change six months after the launch._
 	</div>
 
 </details>
-<details class="card">
+<details class="card col-6">
 	<summary>"Disney Hospitality."</summary>
 	<div>
 	
@@ -145,18 +147,20 @@ _Spoiler: this would change six months after the launch._
 
 ## Chapter 2: Ascent {#ascent .section}
 
+![Ascent](/images/portfolio/disney-growth/everest-ascent-large.jpg) {.hide}
+
 ### Landing Page{#landing-page}
 
 The biggest challenge for any growth designer is **communicating value**. Understand what your users truly care about so you can present *the right offer at the right time* to fortify their buying decisions. The organic landing page is a powerful lever for growth because it is a canvas for communicating value. 
 
 What was important to Disney+ subscribers? A variety of content for their whole family.
 
-+ ![Show more content to enforce the value prop](/images/portfolio/disney-growth/olp-v4.jpg) {.col6 .row2}
-+ ![Emphasizing the Bundle offer](/images/portfolio/disney-growth/olp-v3.jpg) {.col3}
-+ ![Updated with the Bundle](/images/portfolio/disney-growth/olp-v2.jpg) {.col3}
-+ ![V1 for beta testing](/images/portfolio/disney-growth/olp-v1.jpg) {.col3}
-+ ![Stimulus for research](/images/portfolio/disney-growth/olp-v0.jpg) {.col3}
-{.grid .mosaic .fullwidth}
++ ![Show more content to enforce the value prop](/images/portfolio/disney-growth/olp-v4.jpg) {.col-6 .row-2}
++ ![Emphasizing the Bundle offer](/images/portfolio/disney-growth/olp-v3.jpg) {.col-3}
++ ![Updated with the Bundle](/images/portfolio/disney-growth/olp-v2.jpg) {.col-3}
++ ![V1 for beta testing](/images/portfolio/disney-growth/olp-v1.jpg) {.col-3}
++ ![Stimulus for research](/images/portfolio/disney-growth/olp-v0.jpg) {.col-3}
+{.grid .well .fullwidth}
 
 The homepage evolved from early 2018 until mid-2021 starting as a stimulus for research teams (marketing and UXR) to help us learn more about our guests, and evolving over time into an optimized proven product with shared ownership between Marketing and Product.  Some changes to call out:
 
@@ -176,12 +180,12 @@ TV is the biggest platform for engagement, with 70% of views on living room devi
 
 Our solution is to create a "reference" design and then make adjustments for each major platform.
 
-+ ![Signup TV Reference](/images/portfolio/disney-growth/tv-reference-signup-1.png) {.col4}
-+ ![Signup TV Reference](/images/portfolio/disney-growth/tv-reference-signup-2.png) {.col4}
-+ ![Signup TV Reference](/images/portfolio/disney-growth/tv-reference-signup-3.png) {.col4}
-+ ![Signup TV Reference](/images/portfolio/disney-growth/tv-reference-signup-4.png) {.col6}
-+ ![Signup TV Reference](/images/portfolio/disney-growth/tv-reference-signup-5.png) {.col6}
-{.fullwidth .mosaic}
++ ![Signup TV Reference](/images/portfolio/disney-growth/tv-reference-signup-1.png) {.col-4}
++ ![Signup TV Reference](/images/portfolio/disney-growth/tv-reference-signup-2.png) {.col-4}
++ ![Signup TV Reference](/images/portfolio/disney-growth/tv-reference-signup-3.png) {.col-4}
++ ![Signup TV Reference](/images/portfolio/disney-growth/tv-reference-signup-4.png) {.col-6}
++ ![Signup TV Reference](/images/portfolio/disney-growth/tv-reference-signup-5.png) {.col-6}
+{.grid .well .fullwidth}
 
 
 #### TVOS{#tvos}
@@ -192,16 +196,16 @@ This purchase flow was the most complex of all TV devices due to Apple's relucta
 
 *Don't let anyone tell you Apple is always easier to use.*
 
-+ ![TVOS Welcome](/images/portfolio/disney-growth/signup-tvos-screen-1.png) {.col2}
-+ ![Create Account](/images/portfolio/disney-growth/signup-tvos-screen-2.png) {.col2}
-+ ![TVOS Email Helper](/images/portfolio/disney-growth/signup-tvos-screen-3.png) {.col4 .row2}
-+ ![User Agreement](/images/portfolio/disney-growth/signup-tvos-screen-5.png) {.col4 .row2}
-+ ![Input Password](/images/portfolio/disney-growth/signup-tvos-screen-6.png) {.col2}
-+ ![Submit Password](/images/portfolio/disney-growth/signup-tvos-screen-7.png) {.col2}
-+ ![Subscriber Agreement](/images/portfolio/disney-growth/signup-tvos-screen-9.png) {.col4 .row2}
-+ ![iTunes Authentication](/images/portfolio/disney-growth/signup-tvos-screen-10.png) {.col4 .row2}
-+ ![TV OS Success](/images/portfolio/disney-growth/signup-tvos-screen-11.png) {.col4 .row2}
-{.mosaic .fullwidth}
++ ![TVOS Welcome](/images/portfolio/disney-growth/signup-tvos-screen-1.png) {.col-2}
++ ![Create Account](/images/portfolio/disney-growth/signup-tvos-screen-2.png) {.col-2}
++ ![TVOS Email Helper](/images/portfolio/disney-growth/signup-tvos-screen-3.png) {.col-4 .row-2}
++ ![User Agreement](/images/portfolio/disney-growth/signup-tvos-screen-5.png) {.col-4 .row-2}
++ ![Input Password](/images/portfolio/disney-growth/signup-tvos-screen-6.png) {.col-2}
++ ![Submit Password](/images/portfolio/disney-growth/signup-tvos-screen-7.png) {.col-2}
++ ![Subscriber Agreement](/images/portfolio/disney-growth/signup-tvos-screen-9.png) {.col-4 .row-2}
++ ![iTunes Authentication](/images/portfolio/disney-growth/signup-tvos-screen-10.png) {.col-4 .row-2}
++ ![TV OS Success](/images/portfolio/disney-growth/signup-tvos-screen-11.png) {.col-4 .row-2}
+{.grid .well .fullwidth}
 
 
 #### Optimizing Signup On TV {#qr-codes}
@@ -217,14 +221,14 @@ We learned two things from qualitative research:
 
 Direct people off the TV to the mobile web for login and signup by using QR Codes or "License Plates".
 
-+ ![QR Code & LP](/images/portfolio/disney-growth/tv-signup-vision-1.png) {.col4}
-+ ![Email](/images/portfolio/disney-growth/tv-signup-vision-2.png) {.col4}
-+ ![Password](/images/portfolio/disney-growth/tv-signup-vision-3.png) {.col4}
-+ ![Contract](/images/portfolio/disney-growth/tv-signup-vision-4.png) {.col3}
-+ ![Payment](/images/portfolio/disney-growth/tv-signup-vision-5.png) {.col3}
-+ ![Confirm Purchase (EU)](/images/portfolio/disney-growth/tv-signup-vision-6.png) {.col3}
-+ ![Success](/images/portfolio/disney-growth/tv-signup-vision-7.png) {.col3}
-{.mosaic .fullwidth}
++ ![QR Code & LP](/images/portfolio/disney-growth/tv-signup-vision-1.png) {.col-4}
++ ![Email](/images/portfolio/disney-growth/tv-signup-vision-2.png) {.col-4}
++ ![Password](/images/portfolio/disney-growth/tv-signup-vision-3.png) {.col-4}
++ ![Contract](/images/portfolio/disney-growth/tv-signup-vision-4.png) {.col-3}
++ ![Payment](/images/portfolio/disney-growth/tv-signup-vision-5.png) {.col-3}
++ ![Confirm Purchase (EU)](/images/portfolio/disney-growth/tv-signup-vision-6.png) {.col-3}
++ ![Success](/images/portfolio/disney-growth/tv-signup-vision-7.png) {.col-3}
+{.grid .well .fullwidth}
 
 ##### Results & Outcomes
 
@@ -236,6 +240,8 @@ In-market we saw a **33% decrease**{.negative} in conversion rate, which was ala
 
 
 ## Chapter 3: Summit{#summit .section}
+
+![Basecamp](/images/portfolio/disney-growth/everest-north-side-sun-over-tibetan-plateau.jpg) {.hide}
 
 ### Global expansion{#global-expansion}
 
@@ -253,13 +259,13 @@ Each region has unique standards for signing a subscription contract, payment me
 
 In Europe, we modified the core signup flow to present users with the license agreement, a step to confirm their purchase, and Direct Debit as the default payment option.
 
-+ ![Landing Page](/images/portfolio/disney-growth/disney+-signup-DE-step_0.jpg) {.col4 .contain}
-+ ![Email Collection](/images/portfolio/disney-growth/disney+-signup-DE-step_1.png) {.col3 .row1}
-+ ![User Agreement](/images/portfolio/disney-growth/disney+-signup-DE-step_2.png) {.col5}
-+ ![Password](/images/portfolio/disney-growth/disney+-signup-DE-step_3.png) {.col3}
-+ ![Payment](/images/portfolio/disney-growth/disney+-signup-DE-step_4.png) {.col3}
-+ ![Confirmation](/images/portfolio/disney-growth/disney+-signup-DE-step_5.png) {.col6}
-{.mosaic .fullwidth}
++ ![Landing Page](/images/portfolio/disney-growth/disney+-signup-DE-step_0.jpg) {.col-4 .contain}
++ ![Email Collection](/images/portfolio/disney-growth/disney+-signup-DE-step_1.png) {.col-3 .row-1}
++ ![User Agreement](/images/portfolio/disney-growth/disney+-signup-DE-step_2.png) {.col-5}
++ ![Password](/images/portfolio/disney-growth/disney+-signup-DE-step_3.png) {.col-3}
++ ![Payment](/images/portfolio/disney-growth/disney+-signup-DE-step_4.png) {.col-3}
++ ![Confirmation](/images/portfolio/disney-growth/disney+-signup-DE-step_5.png) {.col-6}
+{.grid .well .fullwidth}
 
 
 Latin America required additional fields for Tax collection in Argentina and Chile
@@ -289,14 +295,14 @@ One hypothesis was to showcase the different plan options better to guests. A "p
 
 #### Solution
 
-+ ![Landing Page](/images/portfolio/disney-growth/plan-picker-test-1.jpg) {.col6}
-+ ![Plan Picker](/images/portfolio/disney-growth/plan-picker-test-2.jpg) {.col6 .row1}
-+ ![Email](/images/portfolio/disney-growth/plan-picker-test-3.jpg) {.col4}
-+ ![Password](/images/portfolio/disney-growth/plan-picker-test-4.jpg) {.col4}
-+ ![Billing](/images/portfolio/disney-growth/plan-picker-test-5.jpg) {.col4 .row1}
-{.mosaic .fullwidth}
++ ![Landing Page](/images/portfolio/disney-growth/plan-picker-test-1.jpg) {.col-6}
++ ![Plan Picker](/images/portfolio/disney-growth/plan-picker-test-2.jpg) {.col-6 .row-1}
++ ![Email](/images/portfolio/disney-growth/plan-picker-test-3.jpg) {.col-4}
++ ![Password](/images/portfolio/disney-growth/plan-picker-test-4.jpg) {.col-4}
++ ![Billing](/images/portfolio/disney-growth/plan-picker-test-5.jpg) {.col-4 .row-1}
+{.grid .well .fullwidth}
 
-[![Plan Picker Test](/images/portfolio/disney-growth/plan-picker-test-slide.001.jpeg)](/images/portfolio/disney-growth/plan-picker-test-slide.001.jpeg)
+![Plan Picker Test](/images/portfolio/disney-growth/plan-picker-test-slide.001.jpeg)
 A/B flows comparison{.caption}
 
 #### Results
@@ -346,15 +352,15 @@ We also had a list of 6 viable ideas to prototype and test with users.
 
 ## Chapter 4: Descent {#descent .section}
 
+![Basecamp](/images/portfolio/disney-growth/everest-descent.jpeg) {.hide}
+
 ### Outcomes{#outcomes}
 
 Disney+ became the fastest-growing streaming service *ever*. 
 
-<div class="grid"><dl class="card kpi"><dt>Net Subscribers</dt>
-<dd>+103.6 million</dd>
-<dt>Aug 2019 - Dec 2020</dt></dl><dl class="card kpi"><dt>MRR</dt>
-<dd>+$48.36</dd>
-<dt>Aug 2019 - Dec 2020</dt></dl></div>
+* Net Subscribers **103.6 Million** *Aug 2019 - Dec 2020* {.kpi .col-6 .card}
+* AARPU **+$48.36** *Aug 2019 - Dec 2020* {.kpi .col-6 .card}
+{.grid}
 
 {% include "./images/portfolio/disney-growth/chart-disney-growth.svg" %}
 
@@ -376,17 +382,17 @@ main>svg {
 	height: auto;
 }
 h2#basecamp {
-    background-image: url(/images/portfolio/disney-growth/everest-basecamp-web.jpg);
+    background-image: url(/images/optimized/everest-basecamp-large-1440.webp);
 }
 h2#ascent {
-    background-image: url(/images/portfolio/disney-growth/everest-ascent-web.jpg);
+    background-image: url(/images/optimized/everest-ascent-large-1440.webp);
     background-position: top center;
 }
 h2#summit {
-    background-image: url(/images/portfolio/disney-growth/everest-summit-web.jpg);
+    background-image: url(/images/optimized/everest-north-side-sun-over-tibetan-plateau-1440.webp);
 }
 h2#descent {
-    background-image: url(/images/portfolio/disney-growth/everest-descent-web.jpg);
+    background-image: url(/images/optimized/everest-descent-1440.webp);
 }
 </style>
 
