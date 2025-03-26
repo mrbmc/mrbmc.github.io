@@ -58,7 +58,7 @@ The UI design navigated a web of payment methods across devices, payment methods
 - ![PPV Offer](/images/portfolio/espn/espn-ppv-4.png) {.col-6 .row-2}
 - ![PPV Offer](/images/portfolio/espn/espn-ppv-3b.png) {.col-3 .row-1}
 - ![PPV Offer](/images/portfolio/espn/espn-ppv-3c.png) {.col-3 .row-1}
-{.grid .well .fullwidth}
+{.grid .well .full-width}
 
 ## Streaming Sports Vision{#terremoto}
 
@@ -100,7 +100,7 @@ This strength of this vision, and conviction of the team, convinced Disney+ to i
 - ![COMBO+](/images/portfolio/espn/starplus-5.png) {.col-4}
 - ![STAR+](/images/portfolio/espn/starplus.jpeg) {.col-4}
 - ![COMBO+](/images/portfolio/espn/starplus-6.png) {.col-4}
-{.grid .well .fullwidth}
+{.grid .well .full-width}
 
 ## ESPN SportsCenter+
 

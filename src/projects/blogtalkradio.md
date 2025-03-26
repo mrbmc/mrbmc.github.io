@@ -114,10 +114,9 @@ Improved the artwork delivered tangible business impact:
 
 
 
-+ ![New Artwork](/images/portfolio/btr/btr-host-artwork.png){ style="object-position:0% 0;"} {.col-3}
-+ ![New Artwork](/images/portfolio/btr/btr-host-artwork.png){ style="object-position:100% 0;"} {.col-3}
-+ ![New Artwork](/images/portfolio/btr/btr-homepage.jpg) {.col-6}
-{.grid .well .fullwidth}
++ ![New Artwork](/images/portfolio/btr/btr-host-artwork.png){ style="object-position:0% 0;"} {.col-12}
++ ![New Artwork](/images/portfolio/btr/btr-homepage.jpg) {.col-12}
+{.grid .well .}
 ---
 
 ## Virtual Radio Studio{#studio}

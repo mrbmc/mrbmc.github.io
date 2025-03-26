@@ -7,20 +7,22 @@ eleventyExcludeFromCollections: false
 cssfile: "css/pages/home.css"
 ---
 
-{% section "masthead" %}
+{% section "topper" %}
 
 # UX design, product discovery, and cross-functional leadership.{.blur-in}
 
+{% comment %}
 <canvas id="gradient-canvas"></canvas>
-
-{% endsection %}
-
-{% include "_project-list.md", projectList: collections.work, heading: "Selected Work", count: 6, class: "fullWidth", description:false %}
-
-{% include "_post-list.md", postList: collections.post, heading: "Recent Posts", count: 4, description:false %}
-
 <script type="module" language="javascript">
-	import { Gradient } from "/js/gradient.js";
+    import { Gradient } from "/js/gradient.js";
     const gradient = new Gradient();
     gradient.initGradient("#gradient-canvas");
 </script>
+{% endcomment %}
+
+{% endsection %}
+
+{% include "_project-list.md", projectList: collections.work, heading: false, count: 6, class: "", description:false %}
+
+{% include "_post-list.md", postList: collections.post, heading: "Recent Posts", count: 4, description:false %}
+

@@ -5,12 +5,20 @@ thumbnail: /images/portfolio/disney-groupwatch/disney-groupwatch-preview.jpg
 eleventyExcludeFromCollections: false
 tags:
   - work
-description: Social viewing connects people through the stories they love even when they're apart.
+description: Nurturing innovation from concept through launch to adoption by **tens of millions** of guests.
+casestudy: true
+jobtitle: Senior Director, Product Design
+accomplishments: 
+ - Partnered with Engineering to drive innovation by integrating user research insights with novel technology.
+ - Launched to acclaim from consumers and media for serving guests in the pandemic; adopted by 15% of Disney+ accounts (that's tens of millions of people).
 timeline: 2019-2020
 ---
-![GroupWatch Devices](/images/portfolio/disney-groupwatch/disney-groupwatch-devices.png){.fullwidth .blur-in}
 
-## Storytelling is a fundamental human need.
+<video src="/images/portfolio/disney-groupwatch/GW-Demo_02-24.mp4" autoplay loop muted preload="auto" playsinline type="video/mp4"></video>
+
+<!-- ![GroupWatch Devices](/images/portfolio/disney-groupwatch/disney-groupwatch-devices.png){.full-width .blur-in} -->
+
+## Storytelling is a fundamental human need.{.center}
 
 **How might we build social connection into the streaming experience?** I led a cross-discipline team of 20+ product designers, researchers, animators, marketers, and illustrators from deep user research through international roll-out to try and answer this question. We built a beloved feature for Disney+ that connected people when they could not be together.
 
@@ -23,14 +31,14 @@ timeline: 2019-2020
 * [Deliver](#deliver)
 {.stickynav}
 
-## Discover{#discover}
+## Discover{#discover .center}
 ![Double Diamond](/images/portfolio/doublediamond-discover.png){.doublediamond}
 
 ### Formative User Research
 
 Nine months before Disney+ launched we conducted regular research into how families and friends watch content. Our studies taught us how families build a culture around viewing together, how the Disney brand relates to family culture, how families decide (or don't decide) what to watch, and how people are using new technology to stay connected.
 
-![research participants](/images/portfolio/disney-groupwatch/wewatch-interview-participants-5x2.jpg){.-fullwidth}
+![research participants](/images/portfolio/disney-groupwatch/wewatch-interview-participants-5x2.jpg){.full-width}
 
 These research studies helped us identify three specific problems we wanted to solve:
 
@@ -44,15 +52,18 @@ These research studies helped us identify three specific problems we wanted to s
 At the same time the Design team was doing user research, an R&D technology team had invented a new method for synchronizing video across multiple devices. Their patented method made synchronization fast, scalable (supporting many devices and long distances), and unique to this method it was feasible on TV devices. This new tech had several potential applications such as remote controls, safety features, and co-viewing. 
 
 ### Alignment Workshop
+
 ![Ideation Workshop](/images/portfolio/disney-groupwatch/groupwatch-workshop.jpg){.pullright}
 My research & design teams partnered with the R&D team to facilitate a workshop to narrow down the options to one that would be feasible, viable, and desirable. The workshop explored several inventions in the team portfolio. By the end of the day, the group coalesced around an idea that would leverage the new tech *and* solve several of our user goals.
 
-## Define{#define}
+## Define{#define .center}
+
 ![Double Diamond](/images/portfolio/doublediamond-define.png){.doublediamond}
 
 In mid-summer 2019 almost all of Disney was heads down working to build and launch Disney+. Any work on post-release features, or iterative improvements, was a backburner initiative driven by the passion of a few people pushed forward at opportunistic moments.
 
 We needed to rally more support from our executive leadership and from other teams across the company with whom we would partner on the production build.
+
 ### Visiontype
 
 Once we had alignment on the core use cases we wanted to solve, I paired a designer from my team with two developers from the R&D team. They collaborated over the next four weeks on a "Visiontype", a clickable prototype that showed a future state of what this feature could be. 
@@ -75,61 +86,49 @@ Our executive leaders wanted to ensure there was a viable market for social-view
 * ![Tested Concepts](/images/portfolio/disney-groupwatch/groupwatch-research-frame2.jpg)
 * ![Concept Feedback](/images/portfolio/disney-groupwatch/groupwatch-research-frame3.jpg)
 * ![Quant Insights](/images/portfolio/disney-groupwatch/groupwatch-research-frame4.jpg)
-{.gallery style=""}
+{.gallery}
 
 ### Experience Guidelines
 
 The market research we collected along with the previous UX research gave us a foundation to start defining guidelines that would guide future product, design, and technology decisions. These were co-authored by teammates from Design, Product, and Product Marketing.
 
 1. **GroupWatch must foster a feeling of being together**  
-    Strengthen social bonds through a positive shared experience. Build on features that touch people simultaneously, like reactions, playback control and rally points.{.card .col-8}
-    
-2. **GroupWatch is for intimate groups, i.e. family & close friends**   
+   Strengthen social bonds through a positive shared experience. Build on features that touch people simultaneously, like reactions, playback control and rally points.{.card .col-4}
+2. **GroupWatch is for intimate groups, i.e. family & close friends**  
    GroupWatch will be most used by groups of 2-4 people, as opposed to community viewing (theatre) or massive social viewing party (Twitch).{.card .col-4}
-   
-3. **GroupWatch is additive to existing behaviors**   
+3. **GroupWatch is additive to existing behaviors**  
    Use mobile devices for communication and TVs for viewing. Tap into existing social norms for planning and watching.{.card .col-4}
 {.hero .grid}
+
 ### Design Principles
 
 Principles are a powerful way to align teams in big programs and guide decisions about tradeoffs in the design. Principles must address the specific user goals and business constraints of a project. Generic principles about "ease of use" and "delightful" do not aid critical thinking in a specific context.
 ![](/images/portfolio/disney-groupwatch/groupwatch-tenets.png){.canzoom} 
 
-<!--
-
-* **Make Hosts Successful**
-* **Be Our Guest**
-* **Relationships Are Context**
-{.grid}
-----
-* **Group on Mobile, Watch on TV**
-* **Safe As Disney**
-* **Unique & Ownable**
-{.grid}
-
--->
-
 ### Objectives & Key Results
+
 <div class="card">
 
 #### Objective  
+
 Demonstrate Disney’s commitment to innovation and improving the guest experience.  
 
 #### Key Results  
+
 * Positive press coverage and guest sentiment  
 * 20% user activation  
 * Increase Recency, Frequency, and Engagement metrics  (churn indicators)
 
 </div>
 
-## Develop{#develop}
+## Develop{#develop .center}
 ![Double Diamond](/images/portfolio/doublediamond-develop.png){.doublediamond}
 
 
 All the research and feedback helped clarify the primary user archetypes and their JTBDs. The single biggest interaction and UX challenge was helping the Host user archetype with the emotional labor of inviting people to watch together. We knew the invitation flow had to be frictionless and integrate with existing user behaviors.
 
 ![Interaction Design for the Invite](/images/portfolio/disney-groupwatch/groupwatch-ixd.jpg)
-{.fullwidth90}  
+{.full-width-90}  
 
 Interaction design for the invite.{.caption}
 
@@ -166,12 +165,9 @@ Once we had the core invite experience dialed in we moved on to visual design of
 
 ### Motion Design
 
-<video src="/images/portfolio/disney-groupwatch/groupwatch-motion-mobile.mp4" controls autoplay loop class="pullright" style="width:235px;height:482px;margin: 0 0 1em 0;"></video>
 
-Motion design added new depth and usability to the gathering space. The mobile design had to meet these criteria:
-* Communicate the status of the stream and gathering to everyone.
-* Put hosts at the focus of the social group to mimic real-world gatherings.
-* Delight users with subtle animations as guests join their event.
+<video src="/images/portfolio/disney-groupwatch/groupwatch-motion-mobile.mp4" controls autoplay loop class="pullright" style=""></video>
+Motion design added new depth and usability to the gathering space. The mobile design had to meet these criteria: <br />• Communicate the status of the stream and gathering to everyone.<br />• Put hosts at the focus of the social group to mimic real-world gatherings.<br />• Delight users with subtle animations as guests join their event.
 
 ----
 
@@ -197,7 +193,8 @@ We ran the reactions through a couple of rounds of usability and preference test
 
 ![Final reactions illustrations](/images/portfolio/disney-groupwatch/groupwatch-reactions-final.png)
 
-## Deliver{#deliver}
+## Deliver{#deliver .center}
+
 ![Double Diamond - Deliver](/images/portfolio/doublediamond-deliver.png){.doublediamond}
 
 ### Developer Collaboration
@@ -215,7 +212,10 @@ Our client and services engineers had reservations about this design. They were 
 ### Marketing Collaboration
 
 Leading up to the launch of the feature I was able to collaborate with the Marketing Design team on materials in and out of the product to introduce the feature. Unconstrained by the design system and device technical constraints, they were able to elevate the look of GroupWatch and communicate the value proposition much more effectively.
-![Marketing designs](/images/portfolio/disney-groupwatch/groupwatch-marketing.png){.fullwidth}
+
+<video src="/images/portfolio/disney-groupwatch/GWMPT.mp4" controls autoplay loop class="full-width" style="display:block;clear:both;"></video>
+
+![Marketing designs](/images/portfolio/disney-groupwatch/groupwatch-marketing.png){.full-width}
 
 ### Public Reception
 
@@ -232,13 +232,8 @@ GroupWatch found traction quickly with a solid cohort of subscribers. Over time 
 ![Performacne Chart](/images/portfolio/disney-groupwatch/groupwatch-metrics.png)
 
 <style>
-#main h2 {margin: 3rem auto 0;text-align:center; clear:both;}
 img.doublediamond { height:2rem;width:auto;margin:0 auto 3rem auto;display:block;}
 @media (min-width: 43rem) {
 #scrollhint,.scrollhint { display: block;}
-}
-div.gallery-wrap .image-detail {
-height: 62vh;
-margin-top: 1rem;
 }
 </style>

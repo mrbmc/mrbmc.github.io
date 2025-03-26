@@ -20,7 +20,7 @@ header: false
 
 <style type="text/css">
 	main h2 {
-		margin-top: 0;
+		padding-top: 0;
 	}
 	main p { text-align:center; }
 	main>h1,main>h2,main>h3,main>h4 { text-align: center; }

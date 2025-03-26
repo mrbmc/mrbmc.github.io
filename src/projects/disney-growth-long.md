@@ -10,7 +10,7 @@ timeline: 2018-2020
 parallaxHeading:
   - "-1"
 ---
-![Cover image](/images/portfolio/disney-growth/disney-growth.png){.fullwidth style="object-fit:contain;"}
+![Cover image](/images/portfolio/disney-growth/disney-growth.png){.full-width style="object-fit:contain;"}
 
 
 <!--This is the story of how we launched Disney+ and grew it from **0 to 105M subscribers** in two years. It was my mission to build "Growth Design" - the team, process, and outcomes - from inception into a 13-person cross-discipline program.{.large-type}-->
@@ -165,7 +165,7 @@ Example Pod{.caption}
 
 Each pod was able to create their own ways of working, but generally, they found a 2 week cadence of ceremonies to stay in sync, prioritize work, flatten issues, and break out working groups.
 
-![Pods](/images/portfolio/disney-growth/pod-cadence.svg)  {.fullwidth}
+![Pods](/images/portfolio/disney-growth/pod-cadence.svg)  {.full-width}
 
 
 #### Outcomes
@@ -507,7 +507,7 @@ With the trust and credibility we had earned in the launch phase coupled with th
 
 We also had a list of 6 viable ideas to prototype and test with users.
 
-![](/images/portfolio/disney-growth/bundle-workshop-wireframes.jpg){.fullwidth90}
+![](/images/portfolio/disney-growth/bundle-workshop-wireframes.jpg){.full-width-90}
 
 ## Chapter 4: Descent {#descent .section}
 

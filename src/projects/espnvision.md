@@ -37,7 +37,7 @@ These screens represent a small part of the full proposal. I've omitted key stra
 
 Our motion & prototyping team compiled the visiontypes into a 60 second spot for our roadshow.
 
-<video src="/images/portfolio/espn/ESPN-Future-Sizzle-20190210.mp4" controls preload="none" poster="/images/portfolio/espn/ESPN-Future-Sizzle-placeholder.jpg" class="fullwidth90"></video>
+<video src="/images/portfolio/espn/ESPN-Future-Sizzle-20190210.mp4" controls preload="none" poster="/images/portfolio/espn/ESPN-Future-Sizzle-placeholder.jpg" class="full-width-90"></video>
 
 ## ESPN SportsCenter+ Concept
 

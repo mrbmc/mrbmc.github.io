@@ -1,10 +1,7 @@
-@use 'sass:math';
-@use '_colors.scss';
-@use '_grid.scss';
-@use '_variables.scss';
+@use '../library' as lib;
 
 body.photos {
-    $thumbSize: 6vh;
+    --thumb-size: 6vh;
     #header {
          scroll-snap-align: start;
     }
@@ -15,7 +12,8 @@ body.photos {
         padding: 0;
     }
     #masthead {
-        height: calc(100vh - variables.$navbar-height - $thumbSize);
+        height: calc(100vh - var(--navbar-height) - var(--thumb-size));
+        align-content: center;
     }
     section#gallery {
         position: relative;
@@ -26,7 +24,7 @@ body.photos {
             display: block;
             height: 100vh;
             box-sizing: border-box;
-            padding: $thumbSize 0 ($thumbSize * 2) 0;
+            padding: var(--thumb-size) 0 calc(var(--thumb-size) * 2) 0;
             img {
                 height: 100%;
                 object-fit: contain;
@@ -44,7 +42,7 @@ body.photos {
         width: 100%;
         bottom: 0;
         left: 0;
-        height: $thumbSize;
+        height: var(--thumb-size);
         text-align: center;
         white-space: nowrap;
 
@@ -52,13 +50,17 @@ body.photos {
         flex-direction: row;
         justify-content: center;
 
+        p {
+            margin: 0;
+        }
+
         a,.thumbnail {
             display: block;
             padding: .25vh 0.125vh;
             box-sizing: border-box;
-            height: $thumbSize;
+            height: var(--thumb-size);
             opacity: 68;
-            transition: all variables.$speed variables.$easing;
+            transition: all lib.$speed lib.$easing;
             img {
                 height: 100%;
                 width: auto;
@@ -73,7 +75,7 @@ body.photos {
             }
             &.active {
                 img {
-                    border-color: colors.$tertiary;
+                    border-color: var(--outline);
                 }
             }
 
@@ -85,7 +87,7 @@ body.photos {
 
 
 //tablets & phones
-@media (max-width: variables.$breakpoint) {
+@media (max-width: lib.$breakpoint) {
     #gallery {
         .detail {
             height: 100vw;

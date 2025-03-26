@@ -83,7 +83,7 @@ We then expanded this model to more teams from Data and Marketing (and eventuall
 
 Each pod had the autonomy to define their ways of working, but generally, they found a 2-week cadence of ceremonies to stay in sync, prioritize work, flatten issues, and break out working groups.
 
-![Pods](/images/portfolio/disney-growth/ceremony-cadence.svg)  {._fullwidth90}
+![Pods](/images/portfolio/disney-growth/ceremony-cadence.svg)  {._full-width-90}
 
 #### Outcomes
 
@@ -131,7 +131,7 @@ What was important to Disney+ subscribers? A variety of content for their whole 
 + ![Updated with the Bundle](/images/portfolio/disney-growth/olp-v2.jpg) {.col-3}
 + ![V1 for beta testing](/images/portfolio/disney-growth/olp-v1.jpg) {.col-3}
 + ![Stimulus for research](/images/portfolio/disney-growth/olp-v0.jpg) {.col-3}
-{.grid .well .fullwidth}
+{.grid .well .full-width}
 
 The homepage evolved from early 2018 until mid-2021 starting as a stimulus for research teams (marketing and UXR) to help us learn more about our guests, and evolving over time into an optimized proven product with shared ownership between Marketing and Product.  Some changes to call out:
 
@@ -156,7 +156,7 @@ Our solution is to create a "reference" design and then make adjustments for eac
 + ![Signup TV Reference](/images/portfolio/disney-growth/tv-reference-signup-3.png) {.col-4}
 + ![Signup TV Reference](/images/portfolio/disney-growth/tv-reference-signup-4.png) {.col-6}
 + ![Signup TV Reference](/images/portfolio/disney-growth/tv-reference-signup-5.png) {.col-6}
-{.grid .well .fullwidth}
+{.grid .well .full-width}
 
 
 #### TVOS{#tvos}
@@ -176,7 +176,7 @@ This purchase flow was the most complex of all TV devices due to Apple's relucta
 + ![Subscriber Agreement](/images/portfolio/disney-growth/signup-tvos-screen-9.png) {.col-4 .row-2}
 + ![iTunes Authentication](/images/portfolio/disney-growth/signup-tvos-screen-10.png) {.col-4 .row-2}
 + ![TV OS Success](/images/portfolio/disney-growth/signup-tvos-screen-11.png) {.col-4 .row-2}
-{.grid .well .fullwidth}
+{.grid .well .full-width}
 
 
 #### Optimizing Signup On TV {#qr-codes}
@@ -199,7 +199,7 @@ Direct people off the TV to the mobile web for login and signup by using QR Code
 + ![Payment](/images/portfolio/disney-growth/tv-signup-vision-5.png) {.col-3}
 + ![Confirm Purchase (EU)](/images/portfolio/disney-growth/tv-signup-vision-6.png) {.col-3}
 + ![Success](/images/portfolio/disney-growth/tv-signup-vision-7.png) {.col-3}
-{.grid .well .fullwidth}
+{.grid .well .full-width}
 
 ##### Results & Outcomes
 
@@ -230,13 +230,13 @@ Each region has unique standards for signing a subscription contract, payment me
 
 In Europe, we modified the core signup flow to present users with the license agreement, a step to confirm their purchase, and Direct Debit as the default payment option.
 
-+ ![Landing Page](/images/portfolio/disney-growth/disney+-signup-DE-step_0.jpg) {.col-4 .contain}
-+ ![Email Collection](/images/portfolio/disney-growth/disney+-signup-DE-step_1.png) {.col-3 .row-1}
-+ ![User Agreement](/images/portfolio/disney-growth/disney+-signup-DE-step_2.png) {.col-5}
++ ![Landing Page](/images/portfolio/disney-growth/disney+-signup-DE-step_0.jpg) {.col-6 .contain}
++ ![Email Collection](/images/portfolio/disney-growth/disney+-signup-DE-step_1.png) {.col-3}
++ ![User Agreement](/images/portfolio/disney-growth/disney+-signup-DE-step_2.png) {.col-3}
 + ![Password](/images/portfolio/disney-growth/disney+-signup-DE-step_3.png) {.col-3}
 + ![Payment](/images/portfolio/disney-growth/disney+-signup-DE-step_4.png) {.col-3}
 + ![Confirmation](/images/portfolio/disney-growth/disney+-signup-DE-step_5.png) {.col-6}
-{.grid .well .fullwidth}
+{.grid .well .full-width}
 
 
 Latin America required additional fields for Tax collection in Argentina and Chile
@@ -271,7 +271,7 @@ One hypothesis was to showcase the different plan options better to guests. A "p
 + ![Email](/images/portfolio/disney-growth/plan-picker-test-3.jpg) {.col-4}
 + ![Password](/images/portfolio/disney-growth/plan-picker-test-4.jpg) {.col-4}
 + ![Billing](/images/portfolio/disney-growth/plan-picker-test-5.jpg) {.col-4 .row-1}
-{.grid .well .fullwidth}
+{.grid .well .full-width}
 
 ![Plan Picker Test](/images/portfolio/disney-growth/plan-picker-test-slide.001.jpeg)
 A/B flows comparison{.caption}
@@ -319,7 +319,7 @@ With the trust and credibility we had earned in the launch phase coupled with th
 
 We also had a list of 6 viable ideas to prototype and test with users.
 
-![](/images/portfolio/disney-growth/bundle-workshop-wireframes.jpg){.fullwidth90}
+![](/images/portfolio/disney-growth/bundle-workshop-wireframes.jpg){.full-width-90}
 
 ## Chapter 4: Descent {#descent .section}
 

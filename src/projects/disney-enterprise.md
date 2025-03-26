@@ -7,7 +7,13 @@ parallaxHeading: true
 eleventyExcludeFromCollections: false
 tags:
   - work
-description: A suite of enterprise SAAS products behind Disney+, Hulu, and ESPN.
+description: Founding & leading design for Disney's streaming platform that **saved $80M per year** and unlocked **25% annual MRR growth**.
+jobtitle: Senior Director, Product Design
+accomplishments: 
+ - Reduced operational costs by $80M annually while enabling a **25% increase in MRR year-over-year**.
+ - Built high-performing design teams through organizational development that **reduced attrition by 50% **and **accelerated hiring efficiency by 80%**.
+ - Established a unified design system and brand architecture across global streaming portfolio.
+casestudy: true
 timeline: 2019-2023
 ---
 
@@ -97,7 +103,7 @@ Features for managine automated price changes grew **MRR by 25% YoY**.
 - ![props 2](/images/portfolio/disney-enterprise/props-list.jpg)  {.col-4}
 - ![genie 2](/images/portfolio/disney-enterprise/genie-campaign.png) {.col-8 .row-2}
 - ![genie 1](/images/portfolio/disney-enterprise/genie-offers.jpg) {.col-4}
-{.grid .well .fullwidth}
+{.grid .well .full-width}
 
 #### Support Agent Tools{#baymax}
 
@@ -110,7 +116,7 @@ These custom built tools for our agents saved Disney **$20M/pa in operating expe
 - ![Support Agent Portal](/images/portfolio/disney-enterprise/baymax-customer.jpg) {.col-8 .row-2}
 - ![Support Agent Portal](/images/portfolio/disney-enterprise/baymax-search_results.png) {.col-4}
 - ![Support Agent Portal](/images/portfolio/disney-enterprise/baymax-cancel.png) {.col-4}
-{.grid .well .fullwidth}
+{.grid .well .full-width}
 
 #### Lifecycle Messaging{#galaxy}
 
@@ -123,7 +129,7 @@ A guiding UX principle across Disney+ is to **put the right offer in front of th
 - ![Messag Localization](/images/portfolio/disney-enterprise/galaxy-localization-1.png) {.col-6}
 - ![Personalized Messaging](/images/portfolio/disney-enterprise/galaxy-v1.png){style="object-fit:contain;max-height:none;"} {.col-6 .row-2}
 - ![Push Messaging](/images/portfolio/disney-enterprise/galaxy-push.png){style="object-fit:contain;"} {.col-6}
-{.grid .well .fullwidth}
+{.grid .well .full-width}
 
 ### Content Platform{#content-tools}
 
@@ -134,7 +140,7 @@ A team of editors steeped in knowledge of the Disney catalog created hundreds of
 - ![Visual Browsing](/images/portfolio/disney-enterprise/polaris-search.png) {.col-4 .contain}
 - ![Visual Browsing](/images/portfolio/disney-enterprise/polaris-visualbrowse.png) {.col-4 .contain}
 - ![Content Curation](/images/portfolio/disney-enterprise/polaris-set-pcs.png) {.col-4}
-{.grid .well .fullwidth}
+{.grid .well .full-width}
 
 #### An Audience of One
 
@@ -148,7 +154,7 @@ The content strategy for most streaming services, including Disney+, is to creat
 - ![Content Targeting](/images/portfolio/disney-enterprise/polaris-edit_cta.png) {.col-3 .contain}
 - ![Content Targeting](/images/portfolio/disney-enterprise/polaris-collection.png) {.col-6 .contain}
 - ![Content Targeting](/images/portfolio/disney-enterprise/polaris-browse.jpg) {.col-3 .contain}
-{.grid .well .fullwidth}
+{.grid .well .full-width}
 
 ### Analytics{#analytics}
 
@@ -167,7 +173,7 @@ This product saved Disney **$30M/pa** over comparable third party products.
 - ![Streaming QoS Analysis](/images/portfolio/disney-enterprise/optumus-session.png) {.col-8 .row-2}
 - ![Streaming QoS Analysis](/images/portfolio/disney-enterprise/optumus-dashboard.png) {.col-4 .contain}
 - ![Streaming QoS Analysis](/images/portfolio/disney-enterprise/optumus-spotlight.png) {.col-4 .contain}
-{.grid .well .fullwidth}
+{.grid .well .full-width}
 
 #### Experimentation, A/B Testing, Feature Flagging {#weaponx}
 
@@ -180,7 +186,7 @@ An home-made tool **saved us $5M/pa** in licensing fees and unlocked MRR growth.
 
 - ![Experimentation](/images/portfolio/disney-enterprise/weaponx-dashboard.jpg) {.col-6}
 - ![Experimentation](/images/portfolio/disney-enterprise/weaponx.png) {.col-6}
-{.grid .well .fullwidth}
+{.grid .well .full-width}
 
 #### Data Portal{#dataportal}
 
@@ -218,7 +224,7 @@ Evangelizing design system adoption begins with a promise of a better future. We
 - ![Experimentation](/images/portfolio/disney-enterprise/new/experiments-results.jpg) {.col-4}
 - ![Advertising](/images/portfolio/disney-enterprise/new/ads-mission-control-scheduling.jpg) {.col-4}
 - ![Developer Productivity](/images/portfolio/disney-enterprise/new/dev-portal.jpg) {.col-4}
-{.grid .well .fullwidth}
+{.grid .well .full-width}
 
 
 <style>
@@ -254,7 +260,7 @@ Why build custom software tools?
 
 Disney has a rich history of building new tools that unlock creative possibilities. One famous example was the Multi-plane camera which massively accelerated animation and enabled parallax motion techniques.
 
-![Multiplane Camera](/images/portfolio/Walt_Disney_Multiplane_Camera_2.jpeg){.fullwidth style="height:62vh;object-position: 50% 38%;"}
+![Multiplane Camera](/images/portfolio/Walt_Disney_Multiplane_Camera_2.jpeg){.full-width style="height:62vh;object-position: 50% 38%;"}
 -->
 
 

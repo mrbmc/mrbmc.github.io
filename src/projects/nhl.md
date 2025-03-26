@@ -1,12 +1,16 @@
 ---
-title: NHL
-thumbnail: /images/portfolio/thumbs/nhl-teaser-16x9.jpg
+title: NHL TV & Mobile
+thumbnail: /images/portfolio/nhl/nhl-thumbnail.png
 masthead-image: /images/portfolio/nhl/nhl-teaser-2x1.jpg
 masthead-video: /images/portfolio/nhl/nhl-masthead.mp4
 date: 2018-12-05
 tags:
   - work
-description: Launching the NHL.tv streaming service and leading product-led-growth on the official NHL app and website.
+description: Launching the NHL.tv streaming service and introducing **product-led-growth** for the official NHL app and website.
+jobtitle: Director, UX & Design
+accomplishments: 
+ - Bootstrapped the UX Research practice for MLB and then Disney.
+ - Established Product-Led-Growth practices that **increased video engagement 150%** and **ad impressions by 25%**
 timeline: 2015-2018
 ---
 I founded, hired, mentored, and led the team that designed the official site, app and streaming service for the National Hockey League. My engagement with the NHL spanned more than five years with my role ranging from team lead, design strategist, art director, storyteller and UX researcher.
@@ -41,18 +45,18 @@ In 2016 we redesigned and relaunched NHL's streaming streaming service across mo
 - ![NHL.tv Highlights](/images/portfolio/nhl/nhl-tv-tvos-favorites.png) {.col-4}
 - ![NHL.tv Highlights](/images/portfolio/nhl/bug-ps4-timestamp-playhead.png) {.col-8 .row-2}
 - ![NHL.tv Highlights](/images/portfolio/nhl/nhl-tv-tvos-player.png) {.col-4}
-{.grid .well .fullwidth}
+{.grid .well .full-width}
 
 ## Around The League
 
 One feature we were especially proud of was "Around the League". This was a user-centered feature that is authentic to the game. Our UX research revealed viewing habits that are unique to the pacing and rhythm of hockey. There are long breaks in the action, during which fans want to check in on exciting moments from rival teams or favorite players. At the same time, their FOMO prevented them from taking their eye off the current game, even though there was a break. ATL provided a fluid way to watch highlights while keeping an eye on your team.
 
-This feature was a cross-functional effort to align the data feeds, UI build and design into a seamles UX.
+This feature was a cross-functional effort to align the data feeds, UI build and design into a seamless UX.
 
 - ![Shelf](/images/portfolio/nhl/nhl-aroundtheleague-shelf.jpg) {.col-4}
 - <video src="/images/portfolio/nhl/nhl-around-the-league.mp4" controls mute muted playslinline autoplay></video> {.col-8 .row-2}
 - ![Picture in Picture](/images/portfolio/nhl/nhl-aroundtheleague-pip.jpg) {.col-4}
-{.grid .well .fullwidth}
+{.grid .well .full-width}
 
 
 ## Mobile Redesign - Product Led Growth{#mobile-plg}
@@ -73,17 +77,17 @@ We formed a hypothesis that a light redesign of the team home pages (the most vi
 - Updated advertising UI with time remaining and playlist queue.
 - Throttling the advertising fill rate from 2 per video play down to 1 every two videos.
 
-Screens
+<br />
 
-- ![Before](/images/portfolio/nhl/nhl-mobile-video-before.png) {.col-3}
-- ![After](/images/portfolio/nhl/nhl-mobile-video-after.png) {.col-3}
-- <video src="/images/portfolio/nhl/1a-Mobile-Video-Improvements.mp4" controls playsinline autoplay style=""></video> {.col-6 .row-2}
-{.grid .well .fullwidth}
+- ![Before](/images/portfolio/nhl/nhl-mobile-video-before.png) {.col-3 .hide}
+- ![After](/images/portfolio/nhl/nhl-mobile-video-after.png){.contain} {.col-start-3 .col-end-6 .row-2}
+- <video src="/images/portfolio/nhl/1a-Mobile-Video-Improvements.mp4" controls playsinline autoplay loop></video> {.col-start-7 .col-end-10 .row-2}
+{.grid .well .full-width}
 
 
 <!-- width:375px;height:750px;display:block;margin:0 auto; -->
 
-### Results
+### Results / Outcomes / Impact
 We saw a **150% increase ↗**{.positive} in  `Recency` and `Frequency`  engagement metrics measuring video consumption. This netted a **25% increase ↗**{.positive} in ad impressions despite the lower fill rate.
 
 ### Web - Keeping up the momentum
@@ -109,7 +113,7 @@ My role as director was assembling the team of designers, prototypers, and resea
 - ![Select Key Plays](/images/portfolio/nhl/gameflow_03.png) {.col-8 .row-2}
 - ![Settings](/images/portfolio/nhl/gameflow_02.png) {.col-4}
 - Navigating game highlights through the shot pressure chart in the Mobile App.{.caption .col-12}
-{.grid .well .fullwidth}
+{.grid .well .full-width}
 
 
 - ![PiP keeps an eye on the game](/images/portfolio/nhl/gameflow_05.png) {.col-8 .row-2}
@@ -122,6 +126,6 @@ My role as director was assembling the team of designers, prototypers, and resea
 
 To secure buy-in from NHL and Disney leadership we needed to shop the feature in context. We built a VisionType in Keynote to walk execs through the experience. It also facilitated collaboration with services and client engineering. Our Apple developers in particular were eager to build new PiP capabilities in TVOs, and experiment with synchronization capabilities between Apple devices.
 
-<video src="/images/portfolio/nhl/GameFlow-Demo.mp4" controls playsinline muted autoplay autoplay="autoplay" class="fullwidth"></video>
+<video src="/images/portfolio/nhl/GameFlow-Demo.mp4" controls playsinline muted autoplay autoplay="autoplay" class="full-width"></video>
 
 [GameFlow™ Press Release](https://www.nhl.com/news/nhl-launching-gameflow-interactive-experience-312169252)

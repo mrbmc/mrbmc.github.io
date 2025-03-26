@@ -9,7 +9,8 @@ tags:
   - personal
 ---
 
-Fusion Family Feast is collection of fusion recipes that blend Ashkenazi Jewish and Korean cuisines. 
+**[Fusion Family Feast](https://www.fusionfamilyfeast.com/)** is a collection of fusion recipes that blend Ashkenazi Jewish and Korean cuisines. 
+
 
 We started Fusion Family Feast in 2020 as a way to share our family's unique journey with the world. Since then we've tested and tasted dozens of new recipes, and compiled the best ones for you here.
 
