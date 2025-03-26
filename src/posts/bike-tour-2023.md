@@ -1,13 +1,17 @@
 ---
 title: Let's go on an adventure!
-masthead-image: /images/blog/vt-tour.jpg
 date: 2023-10-01
+thumbnail: /images/blog/vt-tour.jpg
 description: A four-day ride across the Green Mountain state pushed the limits of my endurance for pedaling and listening to my own thoughts.
 tags:
   - cycling
   - travel
   - focus
+  - bike touring
+  - adventure
 ---
+
+<video src="/images/blog/vt-ride-720p.mp4" autoplay autoplay="autoplay" loop mute muted class="full-width"></video>
 
 >**ad·ven·ture**  
 >*noun*{.small-type}  
@@ -15,12 +19,7 @@ tags:
 
 In August 2023 I rode my bike across the Green Mountains of Vermont, zig-zagging over mountain passes, abandoned logging roads, and working dairy farms. It was the most demanding endurance challenge of my life (maybe). It provided an extended opportunity for reflection on why we do hard things. 
 
-### By the Numbers:
-
-| Distance  | Elevation | Ride Time | Energy    |
-| :-------- | :-------- | :-------- | :-------- |
-| 417.43 km | 5960 m    | 22h 21m   | 9495 kjul |
-| 259 mi    | 18,667 ft |           |           |
+<br />
 
 1. [But Why](#why)
 3. [The Plan](#plan)
@@ -29,11 +28,16 @@ In August 2023 I rode my bike across the Green Mountains of Vermont, zig-zagging
 
 {.stickynav}
 
-<video src="/images/blog/vt-ride-720p.mp4" autoplay autoplay="autoplay" loop mute muted class="fullwidth"></video>
+<br />
 
 [Photo Gallery](https://photos.app.goo.gl/KCDqsEEAQieps4eLA)
 
-&nbsp;
+### By the Numbers:
+
+| Distance  | Elevation | Ride Time | Energy    |
+| :-------- | :-------- | :-------- | :-------- |
+| 417.43 km | 5960 m    | 22h 21m   | 9495 kjul |
+| 259 mi    | 18,667 ft |           |           |
 
 ## Why Go On An Adventure{#why}
 
@@ -83,13 +87,19 @@ These were my requirements for the route:
 8. Find a way home.
 9. Services are open during the mid-week in summer.
 
+### First Draft
+
 [My first draft](https://ridewithgps.com/routes/43625231) followed the Connecticut River along the border of Vermont and New Hampshire. This idea was an early inspiration for the ride: to follow the entire length of the Connecticut River from Saybrook, CT to the border of Quebec, Canada. This idea quickly proved too ambitious for a first tour. It also followed roads that were, frankly, not very interesting for cycling. Investigations into gravel back roads veered too far from the CT River which undermined the core narrative.
+
+### Second Draft
 
 ![route along ct river](/images/blog/bike-tour-2023-route-v1.jpg)
 
 My second draft route tried to plan the route around dining. I [mapped out the best farm-to-table restaurants](https://www.google.com/maps/d/u/0/edit?mid=1D-InlRXJ97PqlSCNHcMuAOjDgjFXiW4&usp=sharing) in Vermont and tried to navigate through them. Unfortunately, this broke my first principle of maximizing time in nature. Most of the best dining options were in Rutland, Brattleboro, or Burlington.
 
 ![route along ct river](/images/blog/bike-tour-2023-route-v2.jpg)
+
+### Final Final Final-v3 Draft
 
 ~~Third~~, ~~Fourth~~, Fifth draft I settled up with a route that zig-zagged through the green mountain forest while ending each day in a civilized town center. 
 
