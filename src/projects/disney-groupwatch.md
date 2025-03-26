@@ -29,7 +29,7 @@ timeline: 2019-2020
 * [Define](#define) 
 * [Develop](#develop) 
 * [Deliver](#deliver)
-{.stickynav}
+{.sticky-nav}
 
 ## Discover{#discover .center}
 ![Double Diamond](/images/portfolio/doublediamond-discover.png){.doublediamond}

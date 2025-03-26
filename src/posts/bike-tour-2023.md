@@ -26,7 +26,7 @@ In August 2023 I rode my bike across the Green Mountains of Vermont, zig-zagging
 4. [The Gear](#gear)  
 1. [Reflections](#results)
 
-{.stickynav}
+{.sticky-nav}
 
 <br />
 

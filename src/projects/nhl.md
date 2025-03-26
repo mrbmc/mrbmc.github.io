@@ -20,7 +20,7 @@ It was also an opportunity to build centers of excellence around UX Research and
 * [NHL.tv](#nhl-tv) 
 * [Mobile Product Led Growth](#mobile-plg) 
 * [GameFlow](#gameflow) 
-{.stickynav}
+{.sticky-nav}
 
 ### Project Highlights
 

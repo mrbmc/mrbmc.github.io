@@ -22,7 +22,7 @@ eleventyExcludeFromCollections: false
 3. [Vision Project](#terremoto)
 4. [STAR+](#starplus)
 
-{.stickynav}
+{.sticky-nav}
 
 "The Worldwide Leader In Sports" is an imprint of Disney and one of its most important (lucrative and prestigious) brands. Joining Disney provided an opportunity to collaborate with the ESPN team in Bristol, CT on several direct-to-consumer initiatives.
 

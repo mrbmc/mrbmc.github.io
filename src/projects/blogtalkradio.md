@@ -22,7 +22,7 @@ BlogTalkRadio was one of the first platforms to support a **Creator Economy** by
 * [Product Strategy](#strategy)
 * [Virtual Radio Studio](#studio)
 * [Host UX](#hostux)
-{.stickynav}
+{.sticky-nav}
 
 | Role                     | Responsibilities                                                                         | Team                                                | Timeline               | Impact                                                           |
 | :----------------------- | :--------------------------------------------------------------------------------------- | :-------------------------------------------------- | :--------------------- | ---------------------------------------------------------------- |

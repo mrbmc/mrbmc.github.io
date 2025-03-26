@@ -42,7 +42,7 @@ timeline: 2018-2020
 	1. [Outcomes](#outcomes)
 	3. [Takeaways](#takeaways)
 
-{.stickynav}
+{.sticky-nav}
 
 Building Disney+ was an adventure. Adventures rarely follow a straight line of progress. You often venture off the beaten path, climb over obstacles, or take one step back and two steps sideways to make progress. I've included just a few of the most interesting UX challenges we faced in the multi-year saga of launching Disney+.
 

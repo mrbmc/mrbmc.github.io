@@ -10,7 +10,7 @@ permalink: /portfolio/
 2. [Speak](#speak)
 3. [Play](#play)
 
-{.stickynav}
+{.sticky-nav}
 
 {% if collections.work.length > 0 %}
 {% include "_project-list.md", projectList: collections.work, heading: "Work", count:12 %}
@@ -27,7 +27,7 @@ permalink: /portfolio/
 {% endif %}
 
 <style type="text/css">
-.stickynav {
+.sticky-nav {
     display: none;
 }
 </style>

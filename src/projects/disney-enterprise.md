@@ -32,7 +32,7 @@ timeline: 2019-2023
    4. [Business Intelligence](#analytics)
    3. [Developer Experience](#developer)
 
-{.stickynav}
+{.sticky-nav}
 
 ## The Strategy (of Streaming){#strategy}
 

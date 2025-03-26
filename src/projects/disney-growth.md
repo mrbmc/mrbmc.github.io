@@ -42,7 +42,7 @@ casestudy: true
 	1. [Outcomes](#outcomes)
 	2. [Takeaways](#takeaways)
 
-{.stickynav}
+{.sticky-nav}
 
 ## Chapter 1: Basecamp{#basecamp .section}  
 

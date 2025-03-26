@@ -1,5 +1,7 @@
 @use "../library" as lib;
 
+@use "../components/sticky-nav";
+
 body.about {
   main, #main {
     padding-top: 0;

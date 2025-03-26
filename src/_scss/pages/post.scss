@@ -2,6 +2,8 @@
 
 @use "../components/masthead";
 
+@use "../components/sticky-nav";
+
 body.blog.post {
   transition: all (lib.$speed * 4) lib.$easing;
   background: var(--body-background);

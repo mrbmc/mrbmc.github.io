@@ -38,7 +38,7 @@ My unique career path has pivoted between design, product, and engineering thank
 * [Design Leadership](#leadership) 
 * [Design Principles](#principles) 
 * [Design Process](#process)
-{.stickynav}
+{.sticky-nav}
 
 ### Recent Highlights{.center #highlights}
 
