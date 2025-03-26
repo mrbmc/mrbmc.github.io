@@ -55,12 +55,19 @@ code, .code {
   color: var(--text-secondary);
 }
 
+ul,ol,dl {
+    padding: 0;
+}
+li, dt, dd {
+  margin-left: var(--gutter);
+  box-sizing: border-box;
+}
+
 ul.inline, ol.inline {
   &>li {
     display: block;
     float: left;
   }
-
 }
 
 hr {

@@ -23,13 +23,17 @@
     background: var(--well-background);
 }
 
+.well.grid {
+  padding: var(--gutter);
+}
+
 .hero {
 
     padding-top: var(--gutter);
     padding-bottom: var(--gutter);
     margin-bottom: var(--gutter-xl);
 
-    @include lib.full-width(var(--gutter));
+    // @include lib.full-width(var(--gutter));
     @include lib.inverse(var(--hero-background));
 
     li {
@@ -61,6 +65,7 @@ blockquote,.blockquote {
       color: var(--hero-bold-color);
     }
 }
+
 table {
   width: 100%;
   max-width: 100%;
@@ -116,3 +121,106 @@ table {
 
 }
 
+ul.nav, ol.nav {
+  display: flex;
+  flex-direction: row;
+
+  li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    a {
+      padding: 0 1em 0 0;
+    }
+
+  }
+
+}
+
+details {
+  summary {
+    cursor: pointer;
+  }
+
+  &[open] {
+    summary {
+      margin-bottom: lib.$gutter;
+    }
+
+    & > summary:before {
+      transform: rotate(90deg);
+    }
+
+  }
+
+}
+
+.kpi {
+  dt, em, i {
+    font-style: normal;
+  }
+
+  b, strong, dd {
+    // font-weight: lib.$bold-font-weight;
+    font-size: 2em;
+  }
+
+  em, i, b, strong, code, s, dt, dd {
+    display: block;
+    // margin: 0;
+    // padding: 0;
+    // width: 100%;
+  }
+
+  em, i, dd+dt {
+    color: var(--text-secondary);
+    font-size: lib.$small-font-size;
+  }
+
+  b, strong, dd {
+    color: var(--text-tertiary);
+  }
+
+}
+
+.tooltip, .fly-out {
+    display: block;
+    box-sizing: border-box;
+    width: 25vw;
+    padding: .25rem;
+    font-size: 0.81rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    box-shadow: lib.$shadow;
+    background: var(--card-background);
+    color: var(--card-text-color);
+    opacity: 0;
+    transition: 
+        transform (lib.$speed * 1.5) lib.$easing, 
+        left (lib.$speed * 1.5) lib.$easing, 
+        top (lib.$speed * 1.5) lib.$easing, 
+        opacity (lib.$speed * 1) lib.$easing;
+    &.in {
+        opacity: 1;
+    }
+}
+
+
+ul.tags {
+  li {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    margin: 0 var(--gutter) var(--gutter) 0;
+    a {
+      margin: 0;
+      padding: .125em .5em;
+      display: inline-block;
+      background: var(--hero-background);
+      color: var(--hero-text-color);
+      text-decoration: none;
+      border-radius: var(--border-radius);
+    }
+  }
+}

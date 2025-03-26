@@ -39,10 +39,12 @@
     --hero-text-color:       #{lib.$neutral-90};
     --hero-bold-color:       #{lib.$neutral-100};
 
+
+    --width:                 #{lib.$grid-width};
     --columns:               #{lib.$grid-columns};
     --gutter:                #{lib.$gutter};
     --gutter-xl:             calc(var(--gutter) * 2);
-    --grid-margin:           #{lib.$grid-margin};
+    --margin:                #{lib.$grid-margin};
     --border-radius:         calc(var(--gutter) * .25);//#{lib.$gutter * 0.25};
     --border-radius-xl:      var(--gutter);
 
@@ -65,7 +67,7 @@
 
     @media (max-width: (lib.$grid-width)) {
       // --gutter: 1rem;
-      --grid-margin: var(--gutter);
+      --margin: var(--gutter);
     }
 }
 @media (prefers-color-scheme: dark) {

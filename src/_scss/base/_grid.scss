@@ -1,0 +1,97 @@
+@use "library" as lib;
+
+// ======================================================================
+// GRID
+@mixin fullwidth ($fluid:false) {
+  box-sizing: border-box;
+  width: 100vw;
+  margin-left: calc( max(var(--margin),var(--gutter)) * -1);
+  margin-right: 0;
+
+  // we set this to zero because it's component agnostic. 
+  // set padding inside components.
+  @if $fluid {
+    padding-left: 0;
+    padding-right: 0;
+  } @else {
+    padding-left: var(--margin);
+    padding-right: var(--margin);
+  }
+}
+
+//this fills the window and expands the grid
+.full-grid {
+  @include fullwidth(true);
+}
+//this fills the window but constraints the grid
+.full-width {
+  @include fullwidth(false);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-column-gap: var(--gutter);
+    grid-row-gap: var(--gutter-xl);
+    grid-auto-flow: row;
+
+    &>* {
+        box-sizing: border-box;
+        list-style: none;
+        margin: 0;
+    }
+
+    @for $i from 1 through lib.$grid-columns {
+        .col-start-#{$i} {
+          grid-column-start: $i;
+        }
+        .col-end-#{$i} {
+          grid-column-end: ($i + 1);
+        }
+        .col-#{$i} {
+        //   align-self: center;
+          grid-column: span $i;
+        }
+        .row-#{$i} {
+            grid-row: span $i;
+        }
+    }
+
+    h1,h2,h3,h4,h5 {
+        grid-column: span var(--columns);
+    }
+
+    @media (max-width: lib.$breakpoint) {
+        gap: var(--gutter);
+        .col-1,.col-2,.col-3,.col-4,.col-5 {
+            grid-column: span var(--columns);
+        }
+        .col-7,.col-8,.col-9,.col-10,.col-11 {
+            grid-column: span var(--columns);
+        }
+    }
+    .card {
+      height: 100%;
+    }
+}
+
+body > main {
+  box-sizing: content-box;
+  max-width: var(--width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+  position: relative;
+  z-index: 1;
+
+  // Phones & Tablets
+  @media (max-width: lib.$breakpoint) {
+    // margin: 0 var(--gutter);
+  }
+}
+
+
+body > header,body > footer {
+  @include fullwidth(false);
+  margin-left: 0;
+}
+
