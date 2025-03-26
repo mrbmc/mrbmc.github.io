@@ -1,13 +1,6 @@
 @use '../library' as lib;
 
 p#gallery,div.gallery-wrap {
-    // display: block;
-    // margin-bottom: lib.$gutter;
-    // background: var(--hero-background);
-    // box-shadow: inset lib.$shadow;
-    // overflow: auto;//this prevents collapsing margins
-    // position: relative;
-
     @include lib.full-width(vw);
     @include lib.inverse();
 

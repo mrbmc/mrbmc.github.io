@@ -63,10 +63,6 @@ body.project {
         p.summary {
             margin-bottom: (lib.$gutter * 2);
         }
-        h2,h3 {
-            // margin-top: var(--gutter-xl);
-            // margin-bottom: var(--gutter);
-        }
     }
     @media (max-width: lib.$breakpoint) {
         #scrollhint {
@@ -130,17 +126,6 @@ body.project {
     }
 
     .grid.well {
-        // display: grid;
-        // gap: var(--gutter);
-        // grid-template-columns: repeat(12, 1fr);
-        // grid-auto-flow: row;
-        // list-style: none;
-        // margin-top:  var(--gutter);
-        // margin-bottom: var(--gutter);
-        // box-sizing: border-box;
-        // padding: var(--gutter);
-        // background: var(--well-background);
-
         li {
             height: 100%;
             img,video {

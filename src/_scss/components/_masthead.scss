@@ -17,10 +17,6 @@
         lib.$neutral-30,
         lib.$neutral-60,
         lib.$neutral-0,
-        // lib.$primary,
-        // lib.adjust(lib.$secondary,$alpha:-0.2),
-        // lib.adjust(lib.$tertiary,$alpha:-0.0),
-        // lib.adjust(lib.$primary,$alpha:-0.5),
         );
 
     @include lib.full-width();
@@ -65,8 +61,6 @@
             position: absolute;
             right: lib.$gutter;
             bottom: lib.$gutter;
-            // text-shadow: 0 1px 4px rgba(0,0,0,0.8);
-            // color: var(--well-bold-color);
         }
     }
 
