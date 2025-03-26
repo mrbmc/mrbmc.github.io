@@ -1,15 +1,23 @@
+function getSrc (img) {
+    var srcs = parseSrcset(img.srcset);
+    return srcs.pop().url;
+}
+
+
 function galleryLoad (e) {
     if(DEBUG) console.log('galleryLoad',arguments);
     var galleries = document.getElementsByClassName('gallery'),
         src = "#";
+
     Object.entries(galleries).forEach(([key, gallery]) => {
         // console.log(`${key}: ${gallery}`)
  
         // add anchors to images
         var images = gallery.getElementsByTagName('img');
         Object.entries(images).forEach(([key, img]) => {
+            var src = getSrc(img);
             var a = document.createElement('a');
-                a.setAttribute('href',"#" + img.getAttribute('src'));
+                a.setAttribute('href',"#" + src);
             wrapElement(img,a);
 
             var caption = document.createElement('p');
@@ -24,7 +32,10 @@ function galleryLoad (e) {
         wrapElement(gallery, wrapper);
 
         // create the detail image
-        src = gallery.getElementsByTagName('img')[0].getAttribute('src');
+        // src = gallery.getElementsByTagName('img')[0].getAttribute('src');
+        var allSrc = parseSrcset(gallery.getElementsByTagName('img')[0].srcset);
+            src = allSrc.pop().url;
+
         var newImg = document.createElement('img');
             newImg.src = src;
             newImg.setAttribute('class','image-detail');
@@ -123,6 +134,7 @@ function nextImage(e) {
 
     if(nextImage != null) {
         var src = nextImage.querySelectorAll('a')[0].getAttribute('href');
+        // var src = getSrc
         history.pushState({},"",src);
         galleryPopstate(e);
     }

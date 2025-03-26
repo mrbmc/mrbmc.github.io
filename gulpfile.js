@@ -15,12 +15,16 @@ const argv = yargs.argv;
 // Define paths
 const paths = {
   js: [
-    'src/_js/mrbmc.js'
-    ,'src/_js/gradient.js'
-    ,'src/_js/photos.js'
-    ,'src/_js/portfolio.js'
-    ,'src/_js/gallery-inline.js'
-    ,'src/_js/boids.js'
+    'src/_js/*.js'
+    // 'src/_js/mrbmc.js'
+    // ,'src/_js/gradient.js'
+    // ,'src/_js/photos.js'
+    // ,'src/_js/portfolio.js'
+    // ,'src/_js/gallery-inline.js'
+    // ,'src/_js/boids.js'
+    // ,'src/_js/boidsgl.js'
+    // ,'src/_js/life.js'
+    // ,'src/_js/smoke.js'
   ],
   css: [
     'src/_scss/**/!(_*).scss'

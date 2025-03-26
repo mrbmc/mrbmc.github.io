@@ -1,7 +1,8 @@
 let DEBUG = (document.location.hostname == "localhost" || document.location.href.includes('debug'));
 var PLAY = true;
 const OPTIMIZATION_TYPE = "grid";//"grid" or "quadTree" or "geoMap"
-const BOID_COUNT = 2400;
+const BOID_COUNT = 5000;
+const BOID_COLOR = "#00DDFF33";
 
 /* ----------------------------------------
 BOIDS DEFINITIONS
@@ -11,7 +12,7 @@ let boids = Array(BOID_COUNT);
 class Boid 
 {
     static size = 0.005;
-    static _color = "#00DDFF33";
+    static _color = BOID_COLOR;
 
     // These variables control the motion
     static minDistance = Boid.size * 2;
