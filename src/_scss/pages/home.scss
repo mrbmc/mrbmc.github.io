@@ -1,99 +1,73 @@
 @use '../library' as lib;
 
-@use "../components/masthead";
+@use "../base/molecules";
+
+// @use "../components/masthead";
 
 @use '../components/project-list';
 
 @use '../components/post-list';
 
 body.home {
-  #header {
-    // position: absolute;
-    // background: transparent;
-
-    // .logo {
-    //     color: var(--hero-text-color);
-    //     &:hover {
-    //         color: var(--well-text-color);
-    //     }
-    // }
-
-    // #menu {
-    //   a {
-    //     color: var(--hero-text-color);
-    //     &:hover {
-    //       color: var(--link-color);
-    //     }
-    //   }
-    // }
-
-  }
-
   main {
-    padding-top: 0;
+    // padding-top: 0;
   }
 
-  #topper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: var(--body-background);
+   #bio {
+      box-sizing: border-box;
+      position: relative;
+      padding: 6rem 0;
+      // height: 81vh;
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: center;
 
-    // &:after {
-    //     content: "";
-    //     width: 100%;
-    //     height: 100%;
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     z-index: 2;
-    //     filter: url(#noiseFilter) opacity(10%);
-    // }
+      // padding: lib.$gutter-xl lib.$gutter;
 
-    h1 {
-      z-index: 3;
+      p.portrait {
+        border-radius: var(--border-radius-xl);
+        overflow: hidden;
 
-      // @include lib.hero(
-      //     lib.$primary,
-      //     lib.adjust(lib.$secondary,$alpha:-0.2),
-      //     lib.adjust(lib.$tertiary,$alpha:-0.0),
-      //     lib.adjust(lib.$primary,$alpha:-0.5),
-      //     );
+        img {
+          display: block;
+        }
 
-      $c1: lib.$primary;
-      $c2: lib.$secondary;
-      $c3: lib.$tertiary;
-      $c4: lib.$primary;
-      background-color: $c1;
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-      background-image:
-      radial-gradient(ellipse 100% 100% at 0% 100%, $c4 0px, transparent 100%),
-      radial-gradient(ellipse 100% 200% at 0% 10%, $c3 0px, transparent 100%),
-      conic-gradient(from 0.75turn at 81% 138%, transparent 0%, $c2 20%, transparent 40%, transparent 99%),
-      ;    
-
-      background-clip: text;
-      -webkit-background-clip: text;
-      color: transparent;
-
-    }
-    @media (min-width:lib.$breakpoint) {
-      min-height: calc(81vh);
-      height: auto;
-      // margin-bottom: 0;
-    }
-
-    @media (max-width:lib.$breakpoint) {
-      padding-top: var(--navbar-height);
-    }
-
-    @media (min-width:lib.$breakpoint) {
-      h1, h2, p.bio {
-        // max-width: lib.$grid-width;
       }
+
+      p.large-type {
+        margin-top: 0;
+      }
+
+      #killabmc {
+        position: absolute;
+        z-index: 100;
+        width: 25vw !important;
+      }
+
+      @media (min-width:lib.$breakpoint) {
+        $pic-size: 33%;
+
+        h1,h2,p {
+          width: calc((100% - $pic-size) - var(--gutter-xl) - var(--gutter-xl));
+        }
+        p.large-type:last-of-type {
+          margin: 0;
+        }
+        h1,h2 {
+          margin: 0 0 var(--gutter);
+        }
+
+        p.portrait {
+          position: absolute;
+          right: lib.$gutter;
+          top: 50%;
+          width: calc($pic-size);
+          margin: ($pic-size * -.5) 0 0 0;
+        }
+
+      }
+
     }
-  }
 
   // #gradient-canvas, #masthead canvas {
   //   display: none;
@@ -126,7 +100,6 @@ body.home {
     padding-right: var(--gutter);
 
     h2 {
-      // display: none;
       grid-column: span 2;
     }
 
@@ -137,13 +110,6 @@ body.home {
       }
     }
 
-    // @media (min-width:lib.$breakpoint-widescreen) {
-    //   grid-template-columns: repeat(4, 1fr);
-    //   h2 {
-    //     grid-column: span 4;
-    //   }
-    // }
-
     .project {
       flex-direction: column-reverse;
       justify-content: flex-end;
@@ -153,7 +119,7 @@ body.home {
           text-align: center;
         }
 
-        p {
+        p,ul {
           display: none;
         }
 

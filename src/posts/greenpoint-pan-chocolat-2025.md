@@ -1,11 +1,12 @@
 ---
-title: Pan au Chocolat of Greenpoint
+title: Finding The Best Pan au Chocolat in Greenpoint
 date: 2025-04-02
 tags:
   - brooklyn
   - baking
   - greenpoint
   - pan au chocolat
+  - chocolate croissant
   - science
   - experimentation
 eleventyExcludeFromCollections: false

@@ -9,6 +9,7 @@ tags:
   - design thinking
 masthead-image: /images/portfolio/prototyping-talk/bamtech-prototyping-masthead.jpg
 thumbnail: /images/portfolio/prototyping-talk/bamtech-prototyping-thumb.jpg
+description: Presented at Vertigo 2016
 eleventyExcludeFromCollections: false
 ---
 > The clothes just fit differently when you try them on.

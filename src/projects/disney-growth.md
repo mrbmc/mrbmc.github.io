@@ -9,7 +9,7 @@ description: Leading the Growth Design program that propelled Disney+ from **0 -
 jobtitle: Senior Director, Product Design
 sponsor: Disney Streaming
 accomplishments: 
- - Led zero-to-one Design on identity, payment, profile and account surfaces for Disney+ launch across 13 device classes and into 4 global regions.
+ - Directed zero-to-one Design on identity, payment, profile and account surfaces for Disney+ launch across 13 device classes and into 4 global regions.
  - Built a *consumer-first approach* with Product, Engineering, and Marketing across the enterprise to grow **105M subscribers in 2 years**.
  - Led growth design tactics - optimization, segmentation, and expansion - that **grew MRR & AARPU 25% YoY**.
 timeline: 2018-2020

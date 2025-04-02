@@ -1,4 +1,4 @@
-{% section "process","" %}
+{% section "process","full-width hero" %}
 
 ## The Design Process Is Storytelling
 

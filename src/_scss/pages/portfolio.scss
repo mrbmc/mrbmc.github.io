@@ -2,6 +2,61 @@
 
 @use "../components/project-list";
 
+body.work {
+  h5 {
+    color: var(--text-secondary);
+  }
+  main header li {
+    color: var(--text-secondary);
+  }
+
+  #work {
+    display: flex;
+    flex-direction: column;
+  }
+  .project-list {
+    row-gap: calc(var(--gutter-xl) * 2);
+  }
+
+  article {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: var(--gutter-xl);
+    align-items: center;
+    header,figure {
+      flex-basis: 50%;
+    }
+    header {
+      h3,h4,h5 {
+        margin-bottom: 0.5rem;
+      }
+    }
+    figure {
+      margin: 0;
+      img {
+        border-radius: var(--border-radius);
+        display: block;
+        aspect-ratio: 1.78;
+        object-fit: cover;
+      }
+    }
+  }
+
+
+  #impact-projects {
+    article {
+      figure {
+        img {
+          aspect-ratio: 1;
+        }
+      }
+    }
+
+  }
+
+}
+
+
 body.portfolio {
   .project-list {
     .project {
@@ -14,11 +69,6 @@ body.portfolio {
 
       header {
         flex-basis: 38%;
-        // h3 {
-        //   a {
-        //     color: var(--text-secondary);
-        //   }
-        // }
       }
 
       figure, .figure {
@@ -27,11 +77,13 @@ body.portfolio {
         img {
           // height: 25vw;
         }
-
       }
 
     }
 
   }
+}
 
+.sticky-nav {
+    display: none;
 }

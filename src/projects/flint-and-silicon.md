@@ -9,6 +9,7 @@ tags:
   - anthropology
 masthead-image: /images/portfolio/flint-and-silicon-masthead.jpg
 thumbnail: /images/portfolio/flint-and-silicon-thumb.jpg
+description: Presented at Disney UX Summit 2022
 eleventyExcludeFromCollections: false
 ---
 I had the distinct pleasure of presenting at the 2022 Disney UX Summit. My talk implored designers to think about the long-term impact of their design decisions. The history of product design shows how things we make will impact our culture, cognition, and even our bodies for generations to come.

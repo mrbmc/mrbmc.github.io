@@ -1,61 +1,12 @@
 @use "../library" as lib;
 
 @use "../base/molecules";
+
 @use "../components/sticky-nav";
 
 body.about {
   main, #main {
     padding-top: 0;
-
-    #bio {
-      box-sizing: border-box;
-      height: 81vh;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-
-      // padding: lib.$gutter-xl lib.$gutter;
-
-      p.portrait {
-        border-radius: var(--border-radius-xl);
-        overflow: hidden;
-
-        img {
-          display: block;
-        }
-
-      }
-
-      p.large-type {
-        margin-top: 0;
-      }
-
-      @media (min-width:lib.$breakpoint) {
-        $pic-size: 33%;
-
-        h1,h2,p {
-          width: calc((100% - $pic-size) - var(--gutter-xl) - var(--gutter-xl));
-        }
-        p.large-type:last-of-type {
-          margin: 0;
-        }
-        h1,h2 {
-          margin: 0 0 var(--gutter);
-        }
-
-        p.portrait {
-          position: absolute;
-          right: lib.$gutter;
-          top: 50%;
-          width: calc($pic-size);
-          margin: ($pic-size * -.5) 0 0 0;
-        }
-
-      }
-
-    }
-
   }
 
   section {
@@ -63,6 +14,7 @@ body.about {
       border-radius: var(--border-radius);
     }
   }
+
   #leadership {
     @include lib.clearfix();
   }
@@ -101,12 +53,6 @@ body.about {
 
   hr {
     margin: lib.$gutter-xl auto;
-  }
-
-  #killabmc {
-    position: absolute;
-    z-index: 100;
-    width: 25vw !important;
   }
 
 }

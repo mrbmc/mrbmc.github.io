@@ -1,4 +1,4 @@
-{% section "principles","full-width hero" %}
+{% section "principles" %}
 
 ## Design Principles
 

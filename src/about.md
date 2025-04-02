@@ -3,8 +3,9 @@ layout: layout.html
 bodyclass: about
 title: Design & Product Leadership
 description: Brian McConnell is a design executive with a unique background as a designer, founder, product manager, and engineer. He builds sustainable businesses by designing products that meet real human needs.
-permalink: /about/
+permalink: /about-bak/
 cssfile: "css/pages/about.css"
+eleventyExcludeFromCollections: true
 ---
 
 {% section "bio","" %}
@@ -72,16 +73,9 @@ window.addEventListener('load', function(e) {
         const tip = document.getElementById('killabmc');
         var xposition = (event.clientX - this.offsetLeft);
         var yposition = (event.clientY - this.offsetTop);
-        // tip.style.transform = "translate("+ xposition + "px," + yposition + "px)";
-        // tip.style.left = "calc("+this.offsetLeft + "px - 5rem)";
-        // tip.style.top = "calc("+this.offsetTop+"px - 4rem)";
         tip.style.left = (this.offsetLeft - (tip.offsetWidth / 2)) + "px";
         tip.style.top = (this.offsetTop - tip.offsetHeight) + "px";
         tip.classList.add("in");
-        // console.log("debug", {
-        //     "this":this,
-        //     "offsetLeft":this.offsetLeft
-        // });
     });
     document.querySelector("a[href='#killabmc']").addEventListener('mouseout',function(event){
         const tip = document.getElementById('killabmc');

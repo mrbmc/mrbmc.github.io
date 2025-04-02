@@ -3,7 +3,8 @@ layout: layout.html
 bodyclass: portfolio list
 title: "Portfolio"
 cssfile: "css/pages/portfolio.css"
-permalink: /portfolio/
+permalink: /portfolio-bak/
+eleventyExcludeFromCollections: true
 ---
 
 1. [Work](#work)
@@ -25,9 +26,3 @@ permalink: /portfolio/
 {% if collections.personal.length > 0 %}
 {% include "_project-list.md", projectList: collections.personal, heading: "Play", description: "As a Kinesthetic Learner, I need create new things to refine my thinking, and develop new skills.", count:4 %}
 {% endif %}
-
-<style type="text/css">
-.sticky-nav {
-    display: none;
-}
-</style>
