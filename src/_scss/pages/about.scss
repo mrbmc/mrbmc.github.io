@@ -27,6 +27,10 @@ body.about {
 
       }
 
+      p.large-type {
+        margin-top: 0;
+      }
+
       @media (min-width:lib.$breakpoint) {
         $pic-size: 33%;
 
@@ -102,6 +106,7 @@ body.about {
   #killabmc {
     position: absolute;
     z-index: 100;
+    width: 25vw !important;
   }
 
 }

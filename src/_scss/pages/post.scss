@@ -7,10 +7,13 @@
 @use "../components/sticky-nav";
 
 body.blog.post {
-  transition: all (lib.$speed * 4) lib.$easing;
-  background: var(--body-background);
+  transition: background (lib.$speed * 4) lib.$easing;
+  background: var(--well-background);
 
   #masthead {
+
+    margin-bottom: var(--gutter-xl);
+
     p.summary {
       display: none;
     }
@@ -42,6 +45,15 @@ body.blog.post {
 
     }
 
+    .pullright,.pull-right {
+        clear: both;
+        @media (min-width: lib.$breakpoint) {
+            width: 38%;
+            float: right;
+            margin: 0 0 0 var(--gutter);
+        }
+    }
+
   }
 
   .related-posts {
@@ -49,8 +61,8 @@ body.blog.post {
     margin: lib.$gutter-xl 0;
   }
 
-  // &.scrolled {
-  //   background: var(--body-background);
-  // }
+  &.scrolled {
+    background: var(--body-background);
+  }
 
 }

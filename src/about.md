@@ -13,9 +13,9 @@ cssfile: "css/pages/about.css"
 
 My family calls me **Brian**. My friends call me **BMC[\*](#killabmc){onclick="event.preventDefault();return false;"}**. I am a father 👧🏻 👦🏻, [husband 👩🏻](https://www.bettykang.com/), New Yorker 🗽, ️[cyclist 🚲](https://www.strava.com/athletes/773650), [divemaster 🤿](https://www.steelgills.com), short order cook 👨‍🍳, [world traveler 🌎](https://www.google.com/maps/d/u/0/edit?mid=1jAS6t-WP2zKeOYag3KsGKZtqxERvSfE), and **[digital product maker 👨‍💻](/portfolio/)**.{.large-type}
 
-![Portrait of Brian](/images/profile/mrbmc-20241121.jpeg) {.portrait  .blur-in}
+Short for "killaBMC", my genuine wu-tang-name betrothed by the GZA{#killabmc .tooltip}
 
-<span id="killabmc" class="tooltip">Short for "killaBMC", my genuine wu-tang-name betrothed by the GZA</span>
+![Portrait of Brian](/images/profile/mrbmc-20241121.jpeg) {.portrait  .blur-in}
 
 {% endsection %}
 

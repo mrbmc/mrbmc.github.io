@@ -18,14 +18,13 @@ local usage=(
 "metrics-sh [-v|--verbose] [-s|--skipdownload] [-r|--raw] [-f|--from=<start-date>] [-u|--until=<stop-date>] [-t|--term=<duration>] [-i|--ip=ip.to.investigate]"
 )
 
-goaccess_opt="--no-progress "
-goaccess_opt+="--log-format=CLOUDFRONT "
+goaccess_opt="--log-format=CLOUDFRONT "
 goaccess_opt+="--no-query-string "
 goaccess_opt+="--agent-list "
 goaccess_opt+="--ignore-crawlers "
 goaccess_opt+="--unknowns-as-crawlers "
 goaccess_opt+="--tz='America/New York' "
-goaccess_opt+="--geoip-database=/Users/brianmcconnell/Downloads/GeoLite2-City/GeoLite2-City.mmdb"
+goaccess_opt+="--geoip-database=$BASE/GeoLite2-City_20250401/GeoLite2-City.mmdb "
 
 
 # ==================================================
@@ -42,17 +41,15 @@ function download () {
 	fi
 
 	echo "========================================";
-	echo "DOWNLOADING DATA";
+	echo "DOWNLOADING DATA from s3://brianmcconnell.me";
 	[[ -z "$flag_verbose" ]] || { echo "----------------------------------------";}
 
 	if (( $#flag_verbose )); then
-		echo "Downloading from s3://brianmcconnell.me"
 		aws s3 sync s3://brianmcconnell.me $BASE/downloads
 	else
 		aws s3 sync s3://brianmcconnell.me $BASE/downloads --quiet
 	fi
 
-	# [[ -z "$flag_verbose" ]] || { echo "Unzipping Logs"; }
 	tempstartmonth=$start_month;
 	if [[ "$arg_duration[-1]" != "all" ]]; then
 		tempstartmonth=$stop_month;
@@ -65,6 +62,7 @@ function download () {
     local diff_days=$(((stop_seconds - start_seconds) / 86400))
 	local last_date="";
 
+	[[ -z "$flag_verbose" ]] || { echo "----------------------------------------";}
 	for ((i = $diff_days; i > 0; i--)); do
 
 	    target_date=$(date -v-$i"d" -j -f %Y%m%d $stop_date +%Y-%m)
@@ -78,8 +76,6 @@ function download () {
 		fi
 
 	done
-
-
 }
 
 
@@ -88,11 +84,9 @@ function parse () {
 	echo "PREPARING DATA" $1;
 	[[ -z "$flag_verbose" ]] || { echo "----------------------------------------";}
 
-
 	if (( $#flag_raw )); then
-		# [[ -z "$flag_verbose" ]] || { echo "Concatenating 2024 raw"; }
-		# zcat -f $BASE/logs/log_raw_2024-* > $BASE/logs/log_raw;
-		return true;
+		[[ -z "$flag_verbose" ]] || { echo "Concatenating all raw logs"; }
+		zcat -f $BASE/logs/log_raw_202* > $BASE/logs/log_raw;
 	else
 	    local diff_days=$(((stop_seconds - start_seconds) / 86400))
 		local last_date="";
@@ -116,9 +110,11 @@ function parse () {
 
 		[[ -z "$flag_verbose" ]] || { echo "Concatenating 2024 clean"; }
 		zcat -f $BASE/logs/log_clean_2024-* > $BASE/logs/log_clean;
+		[[ -z "$flag_verbose" ]] || { echo "Concatenating 2025 clean"; }
 		zcat -f $BASE/logs/log_clean_2025-* >> $BASE/logs/log_clean;
 	fi
 
+	return true;
 }
 
 
@@ -126,14 +122,9 @@ function analyze () {
 
 	echo "========================================";
 	echo "ANALYZING DATA";
-	[[ -z "$flag_verbose" ]] || { 
-		echo "----------------------------------------";
-	}
-	if [[ "$arg_start_date[-1]" && "$arg_stop_date[-1]" ]]; then
-		analyze-range;
-		return 1;
-	fi
-
+	[[ -z "$flag_verbose" ]] || { echo "----------------------------------------";}
+	[[ -z "$flag_verbose" ]] || { echo "GoAccess options: $goaccess_opt";}
+	[[ -z "$flag_verbose" ]] || { echo "----------------------------------------";}
 
     local diff_days=$(((stop_seconds - start_seconds) / 86400))
 	local last_date="";
@@ -142,36 +133,32 @@ function analyze () {
 	    target_date=$(date -v-$i"d" -j -f %Y%m%d $stop_date +%Y-%m)
 
 	    if [[ $target_date != $last_date ]]; then
-	    
 
 			if (( $#flag_raw )); then
 				# raw logs
-				[[ -z "$flag_verbose" ]] || { echo "Analyzing 2024-$i RAW"; }
+				[[ -z "$flag_verbose" ]] || { echo "Analyzing $target_date RAW"; }
 				goaccess_cmd="goaccess $BASE/logs/log_raw_$target_date -o $BASE/www/$target_date-raw.html ";
 			else
 				# clean logs
-				[[ -z "$flag_verbose" ]] || { echo "Analyzing 2024-$i CLEAN"; }
+				[[ -z "$flag_verbose" ]] || { echo "Analyzing $target_date CLEAN"; }
 				goaccess_cmd="goaccess $BASE/logs/log_clean_$target_date -o $BASE/www/$target_date.html ";
 			fi
 
 			goaccess_cmd+="$goaccess_opt";
 			eval ${goaccess_cmd}
 
-
 			last_date=$target_date;
 		fi
 
 	done
 
-
 	periods_opt=('7d' '30d' '90d')
 	for duration in $periods_opt
 	do
+		[[ -z "$flag_verbose" ]] || { echo "Analyzing -$duration";}
 		if (( $#flag_raw )); then
-			[[ -z "$flag_verbose" ]] || { echo "Analyzing -$duration RAW";}
 			sed_cmd="sed -n '/'$(date -v-$duration +%Y-%m-%d)'/,/$(date -v+1d +%Y-%m-%d)/ p' $BASE/logs/log_raw | goaccess -a -o $BASE/../metrics/www/l$duration-raw.html $goaccess_opt";
 		else
-			[[ -z "$flag_verbose" ]] || { echo "Analyzing -$duration CLEAN";}
 			sed_cmd="sed -n '/$(date -v-$duration +%Y-%m-%d)/,/$(date -v+1d +%Y-%m-%d)/ p' $BASE/logs/log_clean | goaccess -a -o $BASE/../metrics/www/l$duration.html $goaccess_opt";
 		fi
 		eval ${sed_cmd}
@@ -188,13 +175,15 @@ function analyze () {
 
 function analyze-range () {
 
-	echo "Analyzing $start_date-$stop_date";
+	echo "========================================";
+	echo "ANALYZING RANGE $start_date-$stop_date";
+	[[ -z "$flag_verbose" ]] || { echo "----------------------------------------";}
 
 	sed_cmd="sed -n '" \
-	sed_cmd+="/2024\-'$(date -j -f %Y%m%d $start_date +%m)'\-'$(date -j -f %Y%m%d $start_date +%d)'/"
+	sed_cmd+="/'$(date -j -f %Y%m%d $start_date +%Y)'\-'$(date -j -f %Y%m%d $start_date +%m)'\-'$(date -j -f %Y%m%d $start_date +%d)'/"
 	filename="$start_date";
 	if [[ $start_date != $stop_date ]]; then
-		sed_cmd+=",/2024\-'$(date -j -v+1d -f %Y%m%d $stop_date +%m)'\-'$(date -j -v+1d -f %Y%m%d $stop_date +%d)'/"
+		sed_cmd+=",/'$(date -j -v+1d -f %Y%m%d $stop_date +%Y)'\-'$(date -j -v+1d -f %Y%m%d $stop_date +%m)'\-'$(date -j -v+1d -f %Y%m%d $stop_date +%d)'/"
 		filename+="-$stop_date";
 	fi
 	if (( $#flag_raw )); then
@@ -254,7 +243,6 @@ zparseopts -D -F -K -- \
 return 1
 
 [[ -z "$flag_help" ]] || { print -l $usage && return }
-# [[ -z "$flag_verbose" ]] || { print "verbose mode" }
 
 if [[ "$arg_start_date[-1]" ]]; then
 	start_date=$(date -j -f %Y%m%d $arg_start_date[-1] +%Y%m%d);
@@ -265,9 +253,9 @@ fi
 
 if [[ "$arg_stop_date[-1]" ]]; then
 	stop_date=$(date -j -f %Y%m%d $arg_stop_date[-1] +%Y%m%d);
-	stop_day=$(date -j -f %Y%m%d $stop_date +%d);
-	stop_month=$(date -j -f %Y%m%d $stop_date +%m);
-	stop_seconds=$(date -j -f %Y%m%d $stop_date +%s);
+	stop_day=$(date -j -f %Y%m%d $arg_stop_date[-1] +%d);
+	stop_month=$(date -j -f %Y%m%d $arg_stop_date[-1] +%m);
+	stop_seconds=$(date -j -f %Y%m%d $arg_stop_date[-1] +%s);
 fi
 
 if [[ "$arg_duration[-1]" = "all" ]]; then
@@ -276,6 +264,13 @@ if [[ "$arg_duration[-1]" = "all" ]]; then
 	start_month=$(date -j -f %Y%m%d $start_date +%m);
 	start_seconds=$(date -j -f %Y%m%d $start_date +%s);
 fi
+
+if (( $#flag_verbose )); then
+	goaccess_opt+="";
+else
+	goaccess_opt+=" --no-progress ";
+fi
+
 
 # ==================================================
 # RUN ACTIONS
@@ -288,9 +283,7 @@ fi
 
 echo "========================================";
 echo "LOG ANALYSIS";
-[[ -z "$flag_verbose" ]] || { 
-	echo "----------------------------------------";
-}
+[[ -z "$flag_verbose" ]] || { echo "----------------------------------------";}
 [[ -z "$flag_verbose" ]] || { 
 	echo "TIMEFRAME: $start_date – $stop_date";
 }
@@ -299,7 +292,12 @@ download;
 
 parse;
 
-analyze;
+if [[ "$arg_start_date[-1]" && "$arg_stop_date[-1]" ]]; then
+	analyze-range;
+else
+	analyze;
+fi
+
 
 echo "========================================";
 echo "LOG ANALYSIS COMPLETE";
