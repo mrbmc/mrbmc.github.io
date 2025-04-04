@@ -40,6 +40,10 @@ body.work {
         object-fit: cover;
       }
     }
+    @media (max-width:lib.$breakpoint) {
+      flex-direction: column-reverse;
+      row-gap: 1rem;
+    }
   }
 
 
