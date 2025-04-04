@@ -6,12 +6,13 @@ masthead-image: /images/portfolio/disney-enterprise/ivan-cockpit.webp
 eleventyExcludeFromCollections: false
 tags:
   - work
-description: Founding & leading design for Disney's streaming platform that **saved $80M per year** and unlocked **25% annual MRR growth**.
+description: Founding & leading design for Disney's streaming platform behind Disney+, Hulu, and ESPN+.
 jobtitle: Senior Director, Product Design
 accomplishments: 
- - Reduced operational costs by $80M annually while enabling a **25% increase in MRR year-over-year**.
- - Built high-performing design teams through organizational development that **reduced attrition by 50% **and **accelerated hiring efficiency by 80%**.
- - Established a unified design system and brand architecture across global streaming portfolio.
+ - Reduced operational costs by **$80M annually** by building products competitive with industry leaders.
+ - Enabled a **25% increase in MRR year-over-year** by building commerce orchestration, CRM, and content products.
+ - Built high-performing design teams through organizational development that **reduced attrition 50%** and **accelerated hiring efficiency 80%**.
+ - Established a unified design system and brand architecture across a global streaming portfolio.
 casestudy: true
 timeline: 2019-2023
 ---

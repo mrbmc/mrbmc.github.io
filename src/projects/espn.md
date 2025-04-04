@@ -5,15 +5,15 @@ masthead-image: /images/portfolio/espn/espn-masthead-16x9.jpg
 masthead-video: /images/portfolio/espn/ESPN-ORGANIC_MLP_Generic.mp4
 date: 2019-11-12
 timeline: 2017-2021
-description: Leading Growth Design for ESPN+, and a vision for the future of streaming sports that **grew 11M subscribers** in Latin America.
+description: Leading Growth Design for ESPN+, and a vision for the future of streaming sports in Latin America.
 tags:
   - work
 jobtitle: Director, Product Design
 accomplishments:
-- Launched ESPN+ and grew it to 21M subscribers in four years.
+- Launched ESPN+ and grew it to **21M subscribers** in four years.
 - Established Growth Design as a center of excellence within Disney,  hiring the team, defining the mission, and engaging with teams across the enterprise.
-- Grew subscribers and revenue with the introduction of Pay-per-view on ESPN.
-- Led the design vision for the future of Streaming Sports, the foundation for STAR+ and ESPN D2C.
+- Oversaw the design of Pay-per-view on ESPN+ which **grew revenue** and subscribers.
+- Led the design vision for the future of Streaming Sports, the foundation for STAR+, **subcribing 11M people** in two years.
 eleventyExcludeFromCollections: false
 ---
 

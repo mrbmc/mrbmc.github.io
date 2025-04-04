@@ -5,12 +5,12 @@ thumbnail: /images/portfolio/disney-groupwatch/disney-groupwatch-preview.jpg
 eleventyExcludeFromCollections: false
 tags:
   - work
-description: Nurturing innovation from concept through launch to adoption by **tens of millions** of guests.
+description: Nurturing an innovative feature that connects guests to friends & loved ones from concept through launch to adoption.
 casestudy: true
 jobtitle: Senior Director, Product Design
 accomplishments: 
+ - Launched to acclaim from consumers and media for serving guests in the pandemic; adopted by 15% of Disney+ accounts (that's **tens of millions of people**).
  - Partnered with Engineering to drive innovation by integrating user research insights with novel technology.
- - Launched to acclaim from consumers and media for serving guests in the pandemic; adopted by 15% of Disney+ accounts (that's tens of millions of people).
 timeline: 2019-2020
 ---
 

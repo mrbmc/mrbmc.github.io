@@ -11,6 +11,7 @@ jobtitle: Director, UX & Design
 accomplishments: 
  - Bootstrapped the UX Research practice for MLB and then Disney.
  - Established Product-Led-Growth practices that **increased video engagement 150%** and **ad impressions by 25%**
+ - Led the design of innovative fan-service features like GameFlow™ and Around The League boosting engagement.
 timeline: 2015-2018
 ---
 I founded, hired, mentored, and led the team that designed the official site, app and streaming service for the National Hockey League. My engagement with the NHL spanned more than five years with my role ranging from team lead, design strategist, art director, storyteller and UX researcher.
