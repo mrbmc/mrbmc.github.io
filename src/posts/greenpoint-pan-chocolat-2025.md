@@ -59,12 +59,25 @@ It's about balance. Salty and sweet. Bready but not yeasty. Buttery but not dair
 
 The chocolate should surprise without dominating the conversation. A hint of bitterness from the richness of the cocoa. Never ever milk chocolate.
 
+∞ Flavor and Chocolat-iness were combined during scoring.
+
 #### Texture
 
 Perhaps the best and most important attribute of a good pan au chocolat, and what separates it from other pastries, is the balance of flake and chew. The outer layers need to crackle as you bite into them, giving way to the soft chewy folds within. Freshness is key here. Pan au chocolate can not sit.
 
-º We didn't evaluate price. [Explanation here](#%C2%BA).  
-∞ Flavor and Chocolat-iness were combined during scoring.
+We chose not to consider price as we believe it would introduce too much bias into the judging. There was a slight inverse correlation between price and score. The prices ranged from $4.50 to $7.50 with most costing about $5.50. 
+
+### Tasting Notes
+
+All of these pastries were fantastic. 
+
+Charlotte's pastry volume was a standard deviation larger than the others. I think this swayed some judges in the appearance category.
+
+The Radio Bakery entry chose a unique approach, infusing their dough with chocolate. Paradoxically this did not heighten the chocolat-iness of the flavor. I think this also made it difficult to compare the appearance objectively. 
+
+Nick & Sons slightly burnt the bottom of their pastry lowering their flavor score. On another day they might have ranked better, but how you show up is how you show up.
+
+Pan Pan and Bakeri were extremely similar in most regards. The differences probably came down to personal preference.
 
 ----
 
@@ -107,7 +120,7 @@ Brian: 	Bakeri
 
 ## Conclusion
 
-All of these pastries were fantastic. There was not a bad item here. These scores are a relative comparison between this cohort. Please do not interpret lower scores as a condemnation in any way because you will have a great experience eating any of these pan au chocolat. We did.
+There was not a bad item here. These scores are a relative comparison between this cohort. Please do not interpret lower scores as a condemnation in any way because you will have a great experience eating any of these pan au chocolat. We did.
 
 Unfortunately the reality of competition is there must be a winner 💪 
 
@@ -125,18 +138,6 @@ The highly anticipated overall winner across all judges and measured criteria fo
 ![Charlotte Patisserie](/images/blog/pan-choclat-charlotte.jpeg)
 
 Congratulations to Charlotte Patisserie, but I think the real winner today is everyone who ate 5 *pan au chocolat*.
-
-### Additional notes.
-
-Charlotte's pastry was a standard deviation larger in volume than the others. I think this swayed some judges in the appearance category.
-
-The Radio Bakery entry chose a unique approach, infusing their dough with chocolate. Paradoxically this did not heighten the chocolat-iness of the flavor. I think this also made it difficult to compare the appearance objectively. 
-
-Nick & Sons slightly burnt the bottom of their pastry lowering their flavor score. On another day they might have ranked better, but how you show up is how you show up.
-
-Pan Pan and Bakeri were extremely similar in most regards. The differences probably came down to personal preference.
-
-<a name="º"></a> º We chose not to consider price as we believe it would introduce too much bias into the judging. There was a slight inverse correlation between price and score. The prices ranged from $4.50 to $7.50 with most costing about $5.50. 
 
 ## All the data
 

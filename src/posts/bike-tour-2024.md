@@ -32,7 +32,7 @@ It was another opportunity to satisfy my wanderlust and thirst for physical chal
 
 ## The Route{#route}
 
-My [original plan](https://www.komoot.com/collection/3356041/-ma-to-fl) for 2024's "Big Ride" was very different. I had planned a route along the Appalachian mountains, including a climb of Mt Mitchell, the highest peak east of the Rockies. That was the plan until Hurricane Helene unleashed havoc on the southeast.
+My [original route](https://www.komoot.com/collection/3356041/-ma-to-fl) for 2024's "Big Ride" was very different. I had hoped to ride along the Appalachian mountains, including a climb of Mt Mitchell, the highest peak east of the Rockies. That was the idea until Hurricane Helene unleashed havoc on the southeast.
 
 I quickly pivoted to a viable plug & play tour route: The GAP + C&O.
 
