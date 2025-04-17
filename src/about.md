@@ -7,24 +7,23 @@ permalink: /about/
 cssfile: "css/pages/about.css"
 ---
 
-{% section "intro","well full-width" %}
+{% section "intro","" %}
 
-### I love making stuff that is useful to people.
+# Making products that are useful to people.
 
-Design has an incredible power to give form to ideas. The process of **listening, making, and learning** unlocks critical thinking for everyone. 
+My unique career path has pivoted between design, product, and engineering thanks to an entrepreneurial instinct to run towards ~~problems~~ opportunities. The common thread has been using Design to deliver through ambiguity at any scale. 
 
-My unique career path has pivoted between design, product, and engineering thanks to an entrepreneurial instinct to run towards ~~problems~~ opportunities. The common thread has been using design thinking to deliver through ambiguity at any scale. 
+Design has an incredible power to give form to ideas. The process of **listening, making, and collaborating** unlocks critical thinking for everyone. 
 
-<br />
-
-[CV & Resumé](/resume/){.button}
+[CV & Resumé](/images/uploads/Brian_McConnell-Resume_2025.pdf)
 
 {% endsection %}
+
 
 * [Design Principles](#principles) 
 * [Design Storytelling](#process)
 * [Design Leadership](#leadership) 
-{.sticky-nav}
+{.sticky-nav style="margin-top: var(--gutter-xl);margin-bottom: var(--gutter-xl);"}
 
 {% include "_principles.md" %}
 

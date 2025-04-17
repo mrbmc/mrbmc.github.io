@@ -179,17 +179,50 @@ function cleanUp() {
   return src(paths.garbage).pipe(clean());
 }
 
-exports.quick = series(
+function upload() {
+  let cmd = "aws s3 sync www s3://"+S3BUCKET+" --delete";
+  if(debug) {
+    cmd += " --dryrun";
+    console.log(cmd);
+  }
+  return exec(cmd)
+    .on('error',(err)=>{
+      console.error(`Error deploying: ${err}`);
+      process.exit(1);
+    })
+}
+function uncache() {
+  let cmd = "aws cloudfront create-invalidation"+(debug?" --debug":"")+" --distribution-id "+CFDISTRO+" --paths ";
+
+  paths.caches.forEach((path)=>{
+    cmd += `"`+path+`" `;
+  });
+
+  if(debug) {
+    console.log(cmd);
+    return true;
+  }
+
+  return exec(cmd)
+    .on('error',(err)=>{
+      console.error(`Error deploying: ${err}`);
+      process.exit(1);
+    })
+}
+
+exports.deploy = series(
+  upload,
+  uncache
+);
+
+exports.dev = series(
   buildJSDev,
   compileCSSDev,
-  // buildHTML,
-  // syncAssets,
-  // syncBackups,
-  // cleanUp
+  syncAssets,
 );
 
 // Define default task
-exports.full = series(
+exports.build = series(
   buildJSPro,
   compileCSSPro,
   buildHTML,
