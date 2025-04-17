@@ -32,7 +32,7 @@ My leadership philosophy is inspired by lessons from nature, science, and histor
 
 ### Management Framework
 
-As a functional expert I created a framework for nurturing high-performing teams:
+As a functional expert I created a framework for nurturing high-performing teams that I call Triple-C.
 
 ![Puzzle](/images/about/puzzle.svg){style="height:50vh;"}
 
