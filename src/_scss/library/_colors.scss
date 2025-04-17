@@ -16,7 +16,7 @@
   @return ##{$r+$g+$b};
 }
 
-// COLOR
+// PRIMITIVE COLORS
 // -------------------------
 $_indigo:               #1e22a9;//hsl(238,70%,39%);//rgb(30, 34, 169)
 $_rose:                 hslToHex(340,70%,70%);
@@ -29,8 +29,6 @@ $_orange:               #FF4F00;//international orange
 // SEMANTIC MAPPING
 $primary:               $_indigo;
 $primary-hue:           238;
-// $primary-inverse:       hsl($primary-hue, 70%, 62%);
-// $primary-inverse:       color.adjust($primary,$lightness: 24%);
 $primary-inverse:       #5A5FE2;
 $secondary:             $_pink;
 $tertiary:              $_teal;

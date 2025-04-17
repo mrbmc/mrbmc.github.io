@@ -20,14 +20,14 @@
   flex: 1 0 math.div(100%, $cols);
 }
 
-@mixin inverse($c1:var(--hero-background),$c2:false,$c3:false,$c4:false) {
+@mixin inverse($c1:var(--accent-background),$c2:false,$c3:false,$c4:false) {
   & {
     background-color: $c1;
-    color: var(--hero-text-color);
-    h1,h2,h3,h4,h5,a,strong,b {
+    color: var(--accent-foreground);
+    &>h1,&>h2,&>h3,&>h4,&>h5,&>a,&>strong,&>b {
       color: var(--hero-bold-color);
       &:hover {
-        color: var(--hero-text-color);
+        color: var(--accent-foreground);
       }
     }   
   }

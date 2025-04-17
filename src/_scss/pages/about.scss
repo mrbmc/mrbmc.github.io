@@ -68,7 +68,7 @@ ul.timeline {
     margin: 0;
     position: relative;
     padding: 0 0 lib.$gutter-xl lib.$gutter;
-    border-left: 2px solid var(--text-secondary);
+    border-left: 2px solid var(--muted-foreground);
     list-style: none;
 
     &:last-of-type {
@@ -83,7 +83,7 @@ ul.timeline {
       height: $bullet-size;
       border-radius: var(--border-radius);
       margin: 0 lib.$gutter 0 calc((lib.$gutter * -1) - ($bullet-size * .5) - 1px);
-      background: var(--text-secondary);
+      background: var(--muted-foreground);
     }
 
   }

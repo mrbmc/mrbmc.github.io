@@ -54,10 +54,10 @@ Summary of the work done
 		margin: 0;
 	}
 	h5 {
-		color: var(--text-secondary);
+		color: var(--muted-foreground);
 	}
 	main header li {
-		color: var(--text-secondary);
+		color: var(--muted-foreground);
 	}
 	#work {
 		display: flex;

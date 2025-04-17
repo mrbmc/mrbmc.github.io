@@ -21,23 +21,22 @@
 
     // TOKENS
     // ------------------------------------------------------------
-    --text-primary:          var(--gray-dark);
-    --text-secondary:        var(--gray-mid);
-    // --text-bold-color:       var(--black);
+    // --text-bold-color:    var(--black);
     --link-color:            var(--black);
     --link-color-hover:      var(--primary);
 
     --body-background:       var(--white);
-    --border-color:          var(--gray-light);
+    --body-foreground:       var(--gray-dark);
     --card-background:       var(--white);
-    --card-text-color:       var(--gray-dark);
+    --card-foreground:       var(--gray-dark);
     --card-bold-color:       var(--black);
-    --well-background:       var(--gray-light);
-    --well-text-color:       var(--gray-dark);
+    --muted-background:      var(--gray-light);
+    --muted-foreground:      var(--gray-dark);
     --well-bold-color:       var(--black);
-    --hero-background:       #{lib.$neutral-30};
-    --hero-text-color:       #{lib.$neutral-90};
+    --accent-background:       #{lib.$neutral-30};
+    --accent-foreground:       #{lib.$neutral-90};
     --hero-bold-color:       #{lib.$neutral-100};
+    --border-color:          var(--gray-light);
 
     // GRID & LAYOUT
     // ------------------------------------------------------------
@@ -50,21 +49,21 @@
     --border-radius-xl:      var(--gutter);
 
     // Defining shadows as a CSS var doesn't work for some reason
-    // --shadow: 0 2px 8px var(--hero-background), 0 calc(var(--gutter * .25)) var(--gutter) var(--hero-background);
-    // --shadow-xl: 0 2px 8px var(--hero-background), 0 calc(var(--gutter * 1)) var(--gutter-xl) var(--hero-background);
+    // --shadow: 0 2px 8px var(--accent-background), 0 calc(var(--gutter * .25)) var(--gutter) var(--accent-background);
+    // --shadow-xl: 0 2px 8px var(--accent-background), 0 calc(var(--gutter * 1)) var(--gutter-xl) var(--accent-background);
 
     // NAVBAR
     // ------------------------------------------------------------
     --navbar-height:                calc(#{lib.$base-line-height} * 1.38);
     // --navbar-background:            var(--card-background);
     // --navbar-border:                var(--border-color);
-    // --navbar-text:                  var(--text-primary);
+    // --navbar-text:                  var(--body-foreground);
     // --navbar-primary:               var(--primary);
     // --navbar-link-color:            var(--link-color);
     // --navbar-link-hover-color:      var(--link-color-hover);
-    // --navbar-link-hover-background: var(--well-background);
+    // --navbar-link-hover-background: var(--muted-background);
     // --navbar-link-active-color:     var(--body-background);
-    // --navbar-link-active-background: var(--text-primary);
+    // --navbar-link-active-background: var(--body-foreground);
 
     @media (max-width: (lib.$grid-width)) {
       // --gutter: 1rem;
@@ -92,5 +91,5 @@ html {
 body {
     margin: 0;
     background: var(--body-background);
-    color: var(--text-primary);
+    color: var(--body-foreground);
 }

@@ -37,17 +37,17 @@ p#gallery,div.gallery-wrap {
         }
         &::-webkit-scrollbar-thumb {
             border-radius: lib.$gutter;
-            border: 2px solid var(--well-background); /* should match background, can't be transparent */
+            border: 2px solid var(--muted-background); /* should match background, can't be transparent */
             background-color: lib.adjust(lib.$primary,$alpha:-0.2);
         }
         &::-webkit-scrollbar-track { 
-            background-color: var(--well-background); 
+            background-color: var(--muted-background); 
         } 
 
         li {
             list-style: none;
             margin: 0;
-			// color: var(--text-secondary);
+			// color: var(--muted-foreground);
             img {
                 display: block;
                 height: $thumb-size;

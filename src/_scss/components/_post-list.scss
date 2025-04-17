@@ -20,11 +20,11 @@
                 margin: 0;
                 a {
                     transition: color lib.$speed lib.$easing;
-                //   color: var(--text-secondary);
+                //   color: var(--muted-foreground);
                 }
             }
             p {
-                color: var(--text-secondary);
+                color: var(--muted-foreground);
                 margin-bottom: 0;
             }
         }
@@ -76,7 +76,7 @@
         article:not(:hover) header {
             h3 {
                 a {
-                  color: var(--text-secondary);
+                  color: var(--muted-foreground);
                 }
             }
         }
