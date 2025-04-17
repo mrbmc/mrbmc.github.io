@@ -1,30 +1,10 @@
-const { src, dest, series } = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
-const uglify = require('gulp-uglify');
-const cleanCSS = require('gulp-clean-css'); // If you want CSS minification
-const sourcemaps = require('gulp-sourcemaps');
-const rsync = require('gulp-rsync');
-const exec = require('child_process').exec;
-const yargs = require('yargs');
-const clean = require('gulp-clean');
-const fsCache = require( 'gulp-fs-cache' );
-
-// Command-line arguments parsing
-const argv = yargs.argv;
-
-// Define paths
+const localenv = "http://localhost:8000";
+const localdir = "mrbmc";
+const S3BUCKET = "www.brianmcconnell.me"
+const CFDISTRO = "E1TNSK7JF24IAY";
 const paths = {
   js: [
     'src/_js/*.js'
-    // 'src/_js/mrbmc.js'
-    // ,'src/_js/gradient.js'
-    // ,'src/_js/photos.js'
-    // ,'src/_js/portfolio.js'
-    // ,'src/_js/gallery-inline.js'
-    // ,'src/_js/boids.js'
-    // ,'src/_js/boidsgl.js'
-    // ,'src/_js/life.js'
-    // ,'src/_js/smoke.js'
   ],
   css: [
     'src/_scss/**/!(_*).scss'
@@ -36,7 +16,7 @@ const paths = {
       'dst':'www/images'
     },
     {
-      'src':'src/_fonts/LT_Univers*',
+      'src':'src/_fonts/',
       'dst':'www/css/fonts'
     }
   ],
@@ -50,24 +30,70 @@ const paths = {
     {"src":'backup/2023/www/',"dst":'www/2023'}
   ],
   garbage: [
-    // `${__dirname}/www/*/node_modules/**`,
-    // `${__dirname}/www/metrics/**`,
     `${__dirname}/www/**/.DS_Store`
+  ],
+  caches: [
+    "/",
+    "/index.html",
+    "/404.html",
+    "/error.html",
+    "/sitemap.xml",
+    "/images/*",
+    "/css/*",
+    "/js/*",
+    "/portfolio/*",
+    "/blog/*",
+    "/about/*",
+    "/resume/*",
+    "/gaia/*",
+    "/colophon/*"
   ]
 };
 
+
+
+
+const debug = false;
+const { src, dest, series } = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
+const uglify = require('gulp-uglify');
+const cleanCSS = require('gulp-clean-css'); // If you want CSS minification
+const sourcemaps = require('gulp-sourcemaps');
+const rsync = require('gulp-rsync');
+const exec = require('child_process').exec;
+const yargs = require('yargs');
+const clean = require('gulp-clean');
+const fsCache = require( 'gulp-fs-cache' );
+const argv = yargs.argv;
 
 // Compile and minify JavaScript
 function buildJSPro() {
   const log = argv.verbose ? console.log : () => {};
   return src(paths.js)
-    .pipe(uglify())
+    .pipe(uglify({
+      mangle: true,
+      compress: {
+        drop_console: true
+      },
+      output: {
+          beautify: false,
+          comments: false
+      }
+    }))
     .on('data', file => log(`Raw ${file.path}`))
     .pipe(dest('www/js'));
 }
 function buildJSDev() {
   const log = argv.verbose ? console.log : () => {};
   return src(paths.js)
+    .pipe(sourcemaps.init())
+    .pipe(uglify({
+      mangle: false,
+      output: {
+          beautify: true
+      }
+    }))
+    .pipe(sourcemaps.write())
     .on('data', file => log(`Uglified ${file.path}`))
     .pipe(dest('www/js'));
 }
@@ -110,20 +136,28 @@ function syncAssets() {
   //exec is much MUCH faster than calling gulp-rsync
 
   let foo = [];
-  let command = `rsync -av #src #dst --exclude="DS_Store"`;
-  let optimizedImageMask = ['avif','jpg','jpeg','png','webp','gif'];
-  optimizedImageMask.forEach(ext=>{
-    command += " --exclude='blog/*\."+ext+"'";    
-    command += " --exclude='portfolio/*\."+ext+"'";
-    command += " --exclude='portfolio/**/*\."+ext+"'";
-  });
+  let command = `rsync -av #src #dst`;
+      command += " --exclude='.DS_Store'";
+      command += " --include='blog/*.mp4'";
+      command += " --exclude='blog/*'";
+      command += " --include='portfolio/**/'";
+      command += " --include='portfolio/**/*.mp4'";
+      command += " --exclude='portfolio/*'";
+      command += " --exclude='portfolio/**/*'";
+
+  // let optimizedImageMask = ['avif','jpg','jpeg','png','webp','gif'];
+  // optimizedImageMask.forEach(ext=>{
+  //   command += " --exclude='blog/*\."+ext+"'";    
+  //   command += " --exclude='portfolio/*\."+ext+"'";
+  //   command += " --exclude='portfolio/**/*\."+ext+"'";
+  // });
 
   paths.assets.forEach((path)=>{
     let cmd = command
       .replace(/\#src/ig,path.src)
       .replace(/\#dst/ig,path.dst);
 
-    // console.log(cmd);
+    if(argv.verbose) console.log(cmd);
 
     foo.push(
       exec(cmd)
@@ -162,7 +196,7 @@ function syncBackups() {
 }
 
 function checkLinks() {
-  return exec('blc http://localhost:8000 -roe > link-report.log')
+  return exec('blc '+localenv+' -roe > link-report.log')
     .on('error', (err) => {
       console.error(`Error checking links: ${err}`);
       process.exit(1);
