@@ -4,24 +4,11 @@
 
 > A design leader is both a functional expert, *and* a human leader, who can give the business a competitive advantage by design.{.blockquote}
 
-A good leader has a clarity of purpose and the ability to rally others toward that cause. I believe it is a privilege to lead because it means other people are investing themselves in your purpose.
-
-<!-- 	Listen more than you talk.  
-	Help your peers achieve their goals.  
-	Never air dirty laundry.  
-	Bad news doesn't improve with age.  
-	Trust people until proven otherwise.
-Here are some more leadership frameworks that have influenced my approach: 
-* [Four quadrants](https://www.petermerholz.com/blog/coach-diplomat-champion-architect-a-framework-for-understanding-and-assessing-design-leadership/) by Peter Merholz
-* [*Ikigai* People Management](https://management30.com/blog/redefining-purpose-with-ikigai/)
-* [Five Ps](https://www.i4design.com/chickenscratch/2017/4/23/5ps-management) by Paolo Malabuyo
-* [Servant Leadership Theory](https://www.pon.harvard.edu/daily/leadership-skills-daily/servant-leadership-theory/) from HBR 
-* I also draw tremendous inspiration from [leadership in science and nature](/blog/leadership-in-nature/).
- -->
+A good leader has a clarity of purpose and can rally others toward that cause. I believe it is a privilege to lead because it means other people are investing their time & expertise in your purpose.
 
 ### Leadership Values 
 
-My leadership philosophy is inspired by lessons from nature, science, and history. There are highly effective leadership models in the animal kingdom that demonstrate the values I want to embody as a leader:
+How I show up as a leader is inspired by lessons from nature, science, and history. There are highly effective leadership models in the animal kingdom that demonstrate the values I want to embody as a leader:
 + **mentorship**
 + **psychological safety**
 + **collaboration**.
@@ -45,28 +32,28 @@ I believe culture can be designed by rewarding behavior that reinforces our valu
 ![Culture](/images/about/puzzle-culture.svg){.pull-right}
 
 - Team Mission
-- Values
+- Cultural Values
 - Hiring Process
 - Performance Management
-- Routines & Rituals
+- Routines & Rituals (critiques, sharing, celebrations)
 
 &nbsp;
 
 #### Craft
 
-Making things that meet high quality standards requires learned skills applied in a repeatable process.
+Making things that meet high-quality standards requires learned skills applied in a repeatable process.
 
 ##### Supporting Elements
 
-![Culture](/images/about/puzzle-craft.svg)
+![Craft](/images/about/puzzle-craft.svg)
 {.pull-right}
 
 - Quality Standards
-- Career Guides
-- Continuing Education & mentorship
-- Design Processes
-- Skills: Visiual, Motion, Content
+- Process Playbook
+- Coaching & Mentorship
+- Skill Development: Visual, Motion, Content
 - Design Systems
+- Career Frameworks
 
 &nbsp;
 
@@ -88,7 +75,7 @@ Design is a business function built on creativity. The acts of research, ideatio
 <style>
 .pull-right {
     width:19vw;
-    float:right;
+    float: right;
 @media (max-width: 767px) {
     width:38vw;
 }
