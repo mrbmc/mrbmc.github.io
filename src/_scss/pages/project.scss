@@ -119,8 +119,18 @@ body.project {
         }
     }
 
+// h2.section {
+//     padding: 0;
+// }
+// h2.section picture {
+// }
+// h2.section picture img {
+//     display: block;
+// }
     h1.section,h2.section {
-        padding-left: var(--gutter);
+        // padding-left: var(--gutter);
+        padding: 0;
+        position: relative;
         display: flex;
         align-items: center;
         height: 83.3vh;
@@ -130,6 +140,19 @@ body.project {
         background-attachment: fixed;
         background-repeat: no-repeat;
         background-size: cover;
+
+        // picture {
+        //     position: absolute;
+        //     display: block;
+        //     width: 10vw;
+        //     left: 0;
+        //     top: 0;
+        //     z-index: -1;
+        //     img {
+        //         display: block;
+        //         object-fit: cover;
+        //     }
+        // }
 
         @media (max-width: lib.$breakpoint) {
             height: 56.25vw;

@@ -3,7 +3,7 @@
 .sticky-nav {
   position: sticky;
   z-index: 90;
-  top: calc(100vh - 2.125rem);
+  top: calc(100vh - 2.375rem);
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
@@ -13,7 +13,6 @@
   border-radius: var(--border-radius-xl);
   -webkit-backdrop-filter: blur(.2rem);
   backdrop-filter: blur(.2rem);
-  // background: hsla(var(--white), 0.8);
   background: var(--white-semi);
 
   &>li {
@@ -24,17 +23,22 @@
 
     &:first-of-type {
       border-radius: var(--border-radius-xl) 0 0 var(--border-radius-xl);
+      a {
+        padding-left: 1em;
+      }
     }
-
     &:last-of-type {
       border-radius: 0 var(--border-radius-xl) var(--border-radius-xl) 0;
+      a {
+        padding-right: 1em;
+      }
     }
 
     a {
       display: flex;
       text-decoration: none;
       text-align: center;
-      padding: .125em .5em;
+      padding: .375em .5em;
       font-size: .85rem;
 
       &:hover {

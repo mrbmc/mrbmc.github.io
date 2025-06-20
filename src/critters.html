@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG.js Polygon Animation</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.2.0/svg.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #111;
+            font-family: Arial, sans-serif;
+            height: 200vh; /* Make page scrollable */
+        }
+        .container {
+/*             position: relative;
+            display: flex;
+            flex-direction: column;
+ */            height: 100%;
+        }
+        #svg-container {
+            position: sticky;
+            z-index: 90;
+            top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            box-sizing: border-box;
+            width:  128px;
+            height:  128px;
+        }
+        h1 {
+            color: #FF4F00;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+        .scroll-indicator {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            color: #FF4F00;
+            font-size: 14px;
+            background: rgba(0,0,0,0.8);
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #FF4F00;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>UX Design, Product Discovery, and Cross-functional Leadership</h1>
+        <div id="svg-container"></div>
+    </div>
+    
+    <div class="scroll-indicator">
+        <div>Scroll Progress: <span id="progress">0%</span></div>
+        <div>Frame: <span id="frame">1</span> / 4</div>
+    </div>
+
+    <script>
+        // Create SVG canvas
+        const draw = SVG().addTo('#svg-container').size(128, 128).viewbox(0, 0, 1024, 1024);
+
+        // Define the animation keyframes for each polygon
+        const polygon1Frames = [
+            "526,350.84 946.25,773 264.88,610.79",
+            "681.14,276.72 681.14,642.26 90.18,642.26",
+            "583.08,342.46 893.98,850.56 268.79,534.77",
+            "334.63,201.88 702.22,227.03 661.57,821.31",
+        ];
+
+        const polygon2Frames = [
+            "898.46,240.48 679.62,472.91 542.56,335.84",
+            "707.4,450.25 1024,642.56 707.4,642.56",
+            "251.49,557.07 425.25,643 118.66,847.36",
+            "319.54,226.33 498.05,548.66 219.64,392.44",
+        ];
+
+        const polygon3Frames = [
+            "128.91,478.91 316.12,529.16 247.64,597.64",
+            "0,472.33 168.75,564.59 86.7,614.59",
+            "583.99,243.06 751.89,243.06 582.9,339.9",
+            "719.71,238.64 801.14,291.07 710.23,432.25",
+        ];
+
+        const polygon4Frames = [
+            "464.11,677.13 557.24,701.96 478.43,725.64 464.11,677.13",
+            "89.21,665.24 140.59,665.24 89.21,746.88",
+            "149.9,517.58 226.57,547.48 208.15,594.96",
+            "443.27,539.59 488.09,563.05 405.47,612.69",
+        ];
+
+        const polygon5Frames = [
+            "113.82,491.75 136.07,514.15 77.75,527.21",
+            "642.88,665.24 674.96,665.24 642.88,715.43",
+            "616.58,171.66 616.58,222.25 584.6,222.25",
+            "729.12,511.23 743.52,569.23 707.23,533.99",
+        ];
+
+        // Create polygons
+        const poly1 = draw.polygon(polygon1Frames[0]).fill('#FF4F00');
+        const poly2 = draw.polygon(polygon2Frames[0]).fill('#FF4F00');
+        const poly3 = draw.polygon(polygon3Frames[0]).fill('#FF4F00');
+        const poly4 = draw.polygon(polygon4Frames[0]).fill('#FF4F00');
+        const poly5 = draw.polygon(polygon5Frames[0]).fill('#FF4F00');
+
+        // Store all polygons and their frames
+        const polygons = [
+            { element: poly1, frames: polygon1Frames },
+            { element: poly2, frames: polygon2Frames },
+            { element: poly3, frames: polygon3Frames },
+            { element: poly4, frames: polygon4Frames },
+            { element: poly5, frames: polygon5Frames }
+        ];
+
+        // Function to parse polygon points string into array of coordinates
+        function parsePoints(pointsString) {
+            return pointsString.split(' ').map(point => {
+                const [x, y] = point.split(',').map(Number);
+                return { x, y };
+            });
+        }
+
+        // Function to interpolate between two sets of points
+        function interpolatePoints(points1, points2, t) {
+            const result = [];
+            const maxLength = Math.max(points1.length, points2.length);
+            
+            for (let i = 0; i < maxLength; i++) {
+                const p1 = points1[i % points1.length];
+                const p2 = points2[i % points2.length];
+                
+                result.push({
+                    x: p1.x + (p2.x - p1.x) * t,
+                    y: p1.y + (p2.y - p1.y) * t
+                });
+            }
+            
+            return result;
+        }
+
+        // Function to convert points array back to string
+        function pointsToString(points) {
+            return points.map(p => `${p.x},${p.y}`).join(' ');
+        }
+
+        // Function to update polygons based on scroll progress
+        function updatePolygons(progress) {
+            const totalFrames = 4;
+            const frameProgress = progress * (totalFrames - 1);
+            const currentFrame = Math.floor(frameProgress);
+            const frameT = frameProgress - currentFrame;
+            
+            // Update UI indicators
+            document.getElementById('progress').textContent = Math.round(progress * 100) + '%';
+            document.getElementById('frame').textContent = Math.min(currentFrame + 1, totalFrames);
+            
+            polygons.forEach(({ element, frames }) => {
+                const frame1Index = currentFrame;
+                const frame2Index = (currentFrame + 1) % frames.length;
+                
+                const points1 = parsePoints(frames[frame1Index]);
+                const points2 = parsePoints(frames[frame2Index]);
+                
+                const interpolatedPoints = interpolatePoints(points1, points2, frameT);
+                const newPointsString = pointsToString(interpolatedPoints);
+                
+                element.plot(newPointsString);
+            });
+        }
+
+        // Scroll event handler
+        function handleScroll() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollProgress = Math.max(0, Math.min(1, scrollTop / scrollHeight));
+            
+            updatePolygons(scrollProgress);
+        }
+
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScroll);
+        
+        // Initialize with first frame
+        updatePolygons(0);
+
+        // Smooth scrolling for better experience
+        let ticking = false;
+        function smoothScroll() {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    handleScroll();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }
+
+        window.addEventListener('scroll', smoothScroll);
+    </script>
+</body>
+</html>

@@ -6,7 +6,7 @@ tags:
   - design-strategy
   - design
   - process
-eleventyExcludeFromCollections: false
+eleventyExcludeFromCollections: true
 description: 
 ---
 

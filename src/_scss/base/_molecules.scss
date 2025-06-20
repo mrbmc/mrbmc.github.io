@@ -35,7 +35,7 @@
 
 // we assume that this is a mosaic
 .well.grid {
-  padding: var(--gutter);
+  padding: var(--gutter) calc(var(--navbar-height) + 1rem);
 }
 
 .hero {

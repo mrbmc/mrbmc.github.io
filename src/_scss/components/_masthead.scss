@@ -3,7 +3,8 @@
 #masthead {
 
     height: calc(100vh - var(--navbar-height));
-    padding: var(--gutter);
+    padding-top: var(--gutter);
+    padding-bottom: var(--gutter);
 
     display: flex;
     flex-direction: column;
@@ -14,10 +15,10 @@
     z-index: 10;
 
     @include lib.inverse(
-        lib.$neutral-0,
-        lib.$neutral-30,
-        lib.$neutral-60,
-        lib.$neutral-0,
+        lib.$primary,
+        lib.$secondary,
+        lib.$primary,
+        lib.$tertiary,
         );
 
     @media (max-width: lib.$breakpoint) {

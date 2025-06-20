@@ -5,7 +5,7 @@
 
 {% if description %}{{ description }}{% endif %}
 
-{% section _heading, _class %}
+{% section "project-list", _class %}
 
 {% for project in projectList reversed %}{% if forloop.index0 < count %}
 <article class="project">
@@ -22,7 +22,7 @@
 - {{ product }}
 {% endfor %}{.small-type}
 
-<span class="muted">{{project.content | timeToRead}} to read</span>  
+<span class="muted">{{project.templateContent | timeToRead}} to read</span>  
 
 </header>
 

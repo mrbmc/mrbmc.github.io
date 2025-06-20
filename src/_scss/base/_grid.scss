@@ -11,8 +11,8 @@
   // we set this to zero because it's component agnostic. 
   // set padding inside components.
   @if $fluid {
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: calc(var(--navbar-height) + 1rem);
+    padding-right: calc(var(--navbar-height) + 1rem);
   } @else {
     padding-left: var(--margin);
     padding-right: var(--margin);
@@ -22,6 +22,10 @@
 //this fills the window and expands the grid
 .full-grid {
   @include fullwidth(true);
+  @media (max-width: lib.$breakpoint) {
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+  }
 }
 //this fills the window but constraints the grid
 .full-width {
@@ -95,8 +99,8 @@ body > main {
 }
 
 
-body > header,body > footer {
-  @include fullwidth(false);
-  margin-left: 0;
-}
+// body > header,body > footer {
+//   @include fullwidth(false);
+//   margin-left: 0;
+// }
 

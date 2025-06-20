@@ -7,25 +7,21 @@ eleventyExcludeFromCollections: false
 cssfile: "css/pages/home.css"
 ---
 
-{% section "bio","full-grid" %}
+{% section "masthead","full-grid" %}
 
-# Hello there.
-
-My family calls me **Brian**. My friends call me **BMC[\*](#killabmc){onclick="event.preventDefault();return false;"}**. I am a father 👧🏻 👦🏻, [husband 👩🏻](https://www.bettykang.com/), New Yorker 🗽, ️[cyclist 🚲](https://www.strava.com/athletes/773650), [divemaster 🤿](https://www.steelgills.com), short order cook 👨‍🍳, [world traveler 🌎](https://www.google.com/maps/d/u/0/edit?mid=1jAS6t-WP2zKeOYag3KsGKZtqxERvSfE), and **[digital product maker 👨‍💻](/portfolio/)**.{.large-type}
-
-Short for "killaBMC", my genuine wu-tang-name betrothed by the GZA{#killabmc .tooltip}
-
-![Portrait of Brian](/images/profile/headshot-slash.png) {.portrait  .blur-in}
-
-<canvas id="gradient-canvas"></canvas>
+# Design, Product Discovery, and Cross-Functional Leadership
 
 {% endsection %}
+
+{#critters}
+
+{% comment %}
+<canvas id="gradient-canvas"></canvas>
 <script type="module" language="javascript">
     import { Gradient } from "/js/gradient.js";
     const gradient = new Gradient();
     gradient.initGradient("#gradient-canvas");
 </script>
-{% comment %}
 {% endcomment %}
 
 {% include "_project-list.md", projectList: collections.work, heading: false, count: 6, class: "full-grid", description:false %}
@@ -34,17 +30,5 @@ Short for "killaBMC", my genuine wu-tang-name betrothed by the GZA{#killabmc .to
 
 <script type="text/javascript">
 window.addEventListener('load', function(e) {
-    document.querySelector("a[href='#killabmc']").addEventListener('mouseover',function(event){
-        const tip = document.getElementById('killabmc');
-        var xposition = (event.clientX - this.offsetLeft);
-        var yposition = (event.clientY - this.offsetTop);
-        tip.style.left = (this.offsetLeft - (tip.offsetWidth / 2)) + "px";
-        tip.style.top = (this.offsetTop - tip.offsetHeight) + "px";
-        tip.classList.add("in");
-    });
-    document.querySelector("a[href='#killabmc']").addEventListener('mouseout',function(event){
-        const tip = document.getElementById('killabmc');
-        tip.classList.remove("in");
-    });
 });
 </script>

@@ -7,6 +7,27 @@ permalink: /about/
 cssfile: "css/pages/about.css"
 ---
 
+{% section "bio","full-grid" %}
+
+# Hello there.
+
+My family calls me **Brian**. My friends call me **[BMC\*](#killabmc){onclick="event.preventDefault();return false;"}**. I am a father 👧🏻 👦🏻, husband 👩🏻, New Yorker 🗽, ️[cyclist](https://www.strava.com/athletes/773650) 🚲, [divemaster](https://www.steelgills.com) 🤿, [fusion chef](https://www.fusionfamilyfeast.com/) 👨‍🍳, [world traveler](https://www.google.com/maps/d/u/0/edit?mid=1jAS6t-WP2zKeOYag3KsGKZtqxERvSfE) 🌎, and **[digital product maker](/portfolio/)** 👨‍💻.{.large-type}
+
+Short for "killaBMC", my genuine wu-tang-name betrothed by the GZA{#killabmc .tooltip}
+
+![Portrait of Brian](/images/profile/headshot-slash.png) {.portrait  .blur-in}
+<!-- ![Portrait of Brian](/images/profile/headshot-slash.png) {.portrait  .blur-in} -->
+
+
+{% endsection %}
+
+1. [Mission](#intro) 
+1. [UX Principles](#principles) 
+1. [Design Storytelling](#process)
+1. [Leadership Philosophy](#leadership) 
+
+{.sticky-nav}
+
 {% section "intro","" %}
 
 # Ridding the world of crummy software.
@@ -24,12 +45,6 @@ My unique career path has pivoted between design, product, and engineering thank
 {% endsection %}
 
 
-1. [Design Principles](#principles) 
-2. [Design Storytelling](#process)
-3. [Design Leadership](#leadership) 
-
-{.sticky-nav}
-
 {% include "_principles.md" %}
 
 {% include "_process.md" %}
@@ -44,21 +59,13 @@ window.addEventListener('load', function(e) {
     Array.from(document.getElementsByClassName('fade-in')).map(element => {
         element.classList.add('in',true);
     });
-
     document.querySelector("a[href='#killabmc']").addEventListener('mouseover',function(event){
         const tip = document.getElementById('killabmc');
         var xposition = (event.clientX - this.offsetLeft);
         var yposition = (event.clientY - this.offsetTop);
-        // tip.style.transform = "translate("+ xposition + "px," + yposition + "px)";
-        // tip.style.left = "calc("+this.offsetLeft + "px - 5rem)";
-        // tip.style.top = "calc("+this.offsetTop+"px - 4rem)";
         tip.style.left = (this.offsetLeft - (tip.offsetWidth / 2)) + "px";
         tip.style.top = (this.offsetTop - tip.offsetHeight) + "px";
         tip.classList.add("in");
-        // console.log("debug", {
-        //     "this":this,
-        //     "offsetLeft":this.offsetLeft
-        // });
     });
     document.querySelector("a[href='#killabmc']").addEventListener('mouseout',function(event){
         const tip = document.getElementById('killabmc');

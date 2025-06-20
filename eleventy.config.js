@@ -57,12 +57,13 @@ module.exports = function(eleventyConfig) {
     outputDir: "www/images/optimized/",
 
     // optional, output image formats
-    // formats: ["auto"],
-    formats: ["webp","gif"],
+    formats: ["webp","svg"],
 
     // optional, output image widths
     // widths: ["auto"],
-    widths: [640,1024,1440],
+    widths: [640,1024,1440,"auto"],
+
+    svgShortCircuit: true,
 
     sharpOptions: {
       animated: true,

@@ -44,9 +44,9 @@ casestudy: true
 
 {.sticky-nav}
 
-## Chapter 1: Basecamp{#basecamp .section .full-grid}
+<!-- ## Chapter 1: Basecamp{#basecamp .section .full-grid} -->
 
-![Basecamp](/images/portfolio/disney-growth/everest-basecamp-large.avif) {.hide}
+## Chapter 1: Basecamp{#basecamp .section .full-grid}
 
 ### The Mountain of Scope {#full-scope}
 > Features  x Devices x Payment Terms x Regions
@@ -390,7 +390,7 @@ main>svg {
 	height: auto;
 }
 h2#basecamp {
-    background-image: url(/images/optimized/everest-basecamp-large-1440.webp);
+  background-image: url(/images/optimized/everest-basecamp-large-1440.webp);
 }
 h2#ascent {
     background-image: url(/images/optimized/everest-ascent-large-1440.webp);

@@ -4,6 +4,96 @@
 @use "../components/sticky-nav";
 
 body.about {
+
+  #header {
+    background: transparent;
+  }
+
+  #bio {
+    // margin-top: calc(var(--navbar-height) * -1);
+    box-sizing: border-box;
+    position: relative;
+    height: calc(100vh - var(--navbar-height));
+    // height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    margin-bottom: var(--gutter-xl);
+
+
+    p.portrait {
+      overflow: hidden;
+      margin: 0;
+      height: 50vh;
+
+      img {
+        display: block;
+        height: 100%;
+      }
+
+    }
+
+    p.large-type {
+      margin-top: 0;
+    }
+
+    #killabmc {
+      position: absolute;
+      z-index: 100;
+      width: 25vw !important;
+    }
+
+    // &:before {
+    //   content: "";
+    //   width: 100vw;
+    //   height: 100vh;
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   z-index: 0;
+    //   filter: url(#noiseFilter) opacity(10%);
+    // }
+
+    @media (min-width:lib.$breakpoint) {
+      $pic-w: 62vh;
+      $pic-h: 100vh;
+      padding-left: var(--gutter);
+      padding-right: var(--gutter);
+      // $pic-size: calc(lib.$grid-width * .33);
+      padding-left: $pic-w;
+
+      // transform:skew(-45deg);
+
+      h1,h2,p {
+        width: calc((100vw - $pic-w) - var(--gutter-xl) - var(--gutter-xl));
+        // transform:skew(45deg);
+      }
+      p.large-type:last-of-type {
+        margin: 0;
+      }
+      h1,h2 {
+        margin: 0 0 var(--gutter);
+      }
+
+      p.portrait {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        width: $pic-w;
+        height: $pic-h;
+        margin: ($pic-h * -.5) 0 0 0;
+      }
+
+    }
+    @media (max-width:lib.$breakpoint) {
+      padding-left: var(--gutter);
+      padding-right: var(--gutter);
+    }
+
+  }
+
+
   main, #main {
     padding-top: 0;
     display: flex;
