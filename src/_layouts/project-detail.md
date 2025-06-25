@@ -19,5 +19,4 @@ cssfile: "css/pages/project.css"
 
 <div id="lightbox" class=""></div>
 
-<script type="text/javascript" language="javascript" src="/js/gallery-inline.js"></script>
-<script type="text/javascript" language="javascript" src="/js/portfolio.js"></script>
+<script type="module" src="/js/portfolio.js"></script>

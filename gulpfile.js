@@ -4,7 +4,8 @@ const S3BUCKET = "www.brianmcconnell.me"
 const CFDISTRO = "E1TNSK7JF24IAY";
 const paths = {
   js: [
-    'src/_js/*.js'
+    'src/_js/*.js',
+    'src/_js/*/*.mjs'
   ],
   css: [
     'src/_scss/**/!(_*).scss'

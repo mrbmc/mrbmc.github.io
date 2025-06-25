@@ -245,8 +245,8 @@ table#summary tr {
     grid-template-rows: 3fr 1fr 1fr 2fr;
 }
 </style>
-{% comment %}
 
+{% comment %}
 <!--
 
 All of the products we designed or consulted on:

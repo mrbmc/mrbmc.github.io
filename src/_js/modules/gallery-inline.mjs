@@ -1,13 +1,18 @@
+import { parseSrcset,wrapElement } from "./dom_utils.mjs";
+
+
 function getSrc (img) {
     var srcs = parseSrcset(img.srcset);
     return srcs.pop().url;
 }
 
 
-function galleryLoad (e) {
+export function initGallery (e) {
     if(DEBUG) console.log('galleryLoad',arguments);
     var galleries = document.getElementsByClassName('gallery'),
         src = "#";
+
+    console.log('galleries',galleries);
 
     Object.entries(galleries).forEach(([key, gallery]) => {
         // console.log(`${key}: ${gallery}`)
@@ -140,13 +145,13 @@ function nextImage(e) {
     }
 }
 
-function galleryPopstate (e) {
+export function galleryPopstate (e) {
     if(DEBUG) console.log("Gallery.onPopState",e);
 
     return updateDetailImage(e);
 };
 
-function galleryKeyPress(e) {
+export function galleryKeyPress(e) {
 
     e = e || window.event;
 
@@ -167,8 +172,8 @@ function galleryKeyPress(e) {
 
 }
 
-window.addEventListener('load', function(e) {
-    console.log('project.window.load',e);
-    galleryLoad(e);
-});
+// window.addEventListener('load', function(e) {
+//     console.log('project.window.load',e);
+//     galleryLoad(e);
+// });
 

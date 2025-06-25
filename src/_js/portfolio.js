@@ -1,52 +1,12 @@
-var DEBUG = (document.location.hostname == "localhost" || document.location.href.includes('debug')),
-    VERBOSE = false && DEBUG,
-    last_known_scroll_position = 0,
-    ticking = false;
+import "./modules/dom_utils.mjs";
+import { name, parallax } from "./modules/parallax.mjs";
+import { initGallery, galleryPopstate, galleryKeyPress } from "./modules/gallery-inline.mjs";
 
-function wrapElement (el, wrapper) {
-    el.parentNode.insertBefore(wrapper, el);
-    wrapper.appendChild(el);
-}
+globalThis.DEBUG = (document.location.hostname == "localhost" || document.location.href.includes('debug'));
+globalThis.VERBOSE = false && DEBUG;
 
-function isInViewport (elem) {
-    var bounding = elem.getBoundingClientRect(),
-        peek = 0;//bounding.height / 10;
-    // if(VERBOSE) console.log('isInViewport',elem);
-    return (
-        bounding.bottom >= (0 - peek) &&
-        bounding.top <= ((window.innerHeight || document.documentElement.clientHeight) - peek) &&
-        // bounding.left >= 0 &&
-        // bounding.right <= (window.innerWidth || document.documentElement.clientWidth)
-        true
-    );
-}
-
-function parseSrcset(srcset) {
-  return srcset.split(',').map(item => {
-    const parts = item.trim().split(' ');
-    return {
-      url: parts[0],
-      width: parts[1] ? parseInt(parts[1], 10) : null,
-      density: parts[1] && parts[1].includes('x') ? parseFloat(parts[1]) : null,
-    };
-  });
-}
-
-function doParallax (yPos) {
-    var spies = document.querySelectorAll('[data-parallax]');
-    if(VERBOSE) console.log('doParallax',spies);
-    spies.forEach(function(value,index,array){
-        var me = array[index],
-            isVisible = isInViewport(me.parentElement),
-            innerHeight = window.innerHeight,
-            scrolledPercent = ((yPos / (innerHeight * 1)) - 0),
-            movementRange = parseInt(me.dataset.parallax),
-            val = scrolledPercent * (innerHeight * movementRange / 100);
-
-        if(isVisible) me.style.transform = "translate(0, " + val + "px)";
-        // if(isVisible) me.style.opacity = (1 - (scrolledPercent * .75));
-    });
-}
+var last_known_scroll_position = 0,
+    p_ticking = false;
 
 function initMosaics() {
   var mosaics = document.getElementsByClassName('grid well');
@@ -73,15 +33,16 @@ function initMosaics() {
 function onScroll (e) {
     if(VERBOSE) console.log("onScroll",e);
     last_known_scroll_position = window.scrollY;
-    if (!ticking) {
-        window.requestAnimationFrame(function() {
-            // scrollSpy(last_known_scroll_position);
-            doParallax(last_known_scroll_position);
-            // doScrollFade(last_known_scroll_position);
-            ticking = false;
-        });
-        ticking = true;
-    }
+    // scrollSpy(last_known_scroll_position);
+    parallax(last_known_scroll_position);
+    // doScrollFade(last_known_scroll_position);
+
+    // if (!ticking) {
+    //     window.requestAnimationFrame(function() {
+    //         p_ticking = false;
+    //     });
+    //     p_ticking = true;
+    // }
 }
 
 window.addEventListener('keydown', function(e) {
@@ -111,7 +72,8 @@ window.addEventListener('load', function(e) {
         });
     });
 
-    initMosaics();
+    initMosaics(e);
+    initGallery(e);
     window.addEventListener('scroll', onScroll, false);
 
 });
