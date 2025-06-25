@@ -14,6 +14,8 @@ Getting links from: http://localhost:8000/
 ├───OK─── http://localhost:8000/images/optimized/espn-thumbnail-1x1-640.webp
 ├───OK─── http://localhost:8000/portfolio/nhl/
 ├───OK─── http://localhost:8000/images/optimized/nhl-thumbnail-640.webp
+├───OK─── http://localhost:8000/portfolio/eurosport/
+├───OK─── http://localhost:8000/images/optimized/eurosport-thumb-1x1-640.webp
 ├───OK─── http://localhost:8000/portfolio/blogtalkradio/
 ├───OK─── http://localhost:8000/images/optimized/btr-hosttools-teaser-2x1-640.webp
 ├───OK─── http://localhost:8000/blog/job-market-2025/
@@ -24,7 +26,7 @@ Getting links from: http://localhost:8000/
 ├───OK─── http://localhost:8000/blog/design-quality/
 ├───OK─── http://localhost:8000/colophon/
 └───OK─── http://localhost:8000/privacy/
-Finished! 46 links found. 21 excluded. 0 broken.
+Finished! 50 links found. 23 excluded. 0 broken.
 
 Getting links from: http://localhost:8000/about/
 ├───OK─── http://localhost:8000/images/optimized/headshot-slash-640.webp
@@ -56,7 +58,7 @@ Getting links from: http://localhost:8000/portfolio/
 ├───OK─── http://localhost:8000/images/optimized/PAL9100-tablet-640.webp
 ├───OK─── http://localhost:8000/portfolio/boids/
 ├───OK─── http://localhost:8000/images/optimized/boids-thumb-640.webp
-Finished! 59 links found. 45 excluded. 0 broken.
+Finished! 62 links found. 48 excluded. 0 broken.
 
 Getting links from: http://localhost:8000/resume/
 Finished! 30 links found. 30 excluded. 0 broken.
@@ -135,6 +137,7 @@ Finished! 75 links found. 45 excluded. 0 broken.
 
 Getting links from: http://localhost:8000/portfolio/disney-growth/
 ├───OK─── http://localhost:8000/images/optimized/disney-growth-640.webp
+├───OK─── http://localhost:8000/images/optimized/everest-basecamp-large-640.webp
 ├───OK─── http://localhost:8000/images/optimized/growth-team-start-640.webp
 ├───OK─── http://localhost:8000/images/optimized/growth-team-end-640.webp
 ├───OK─── http://localhost:8000/images/optimized/product-operating-model-640.webp
@@ -191,7 +194,7 @@ Getting links from: http://localhost:8000/portfolio/disney-growth/
 ├───OK─── http://localhost:8000/images/optimized/workshop-agenda-640.webp
 ├───OK─── http://localhost:8000/images/optimized/bundle-workshop-wireframes-640.webp
 ├───OK─── http://localhost:8000/images/optimized/everest-descent-640.webp
-Finished! 100 links found. 43 excluded. 0 broken.
+Finished! 101 links found. 43 excluded. 0 broken.
 
 Getting links from: http://localhost:8000/portfolio/disney-groupwatch/
 ├───OK─── http://localhost:8000/images/portfolio/disney-groupwatch/GW-Demo_02-24.mp4
@@ -343,6 +346,17 @@ Getting links from: http://localhost:8000/portfolio/nhl/
 ├───OK─── http://localhost:8000/images/optimized/gameflow_06-640.webp
 ├───OK─── http://localhost:8000/images/portfolio/nhl/GameFlow-Demo.mp4
 Finished! 49 links found. 27 excluded. 0 broken.
+
+Getting links from: http://localhost:8000/portfolio/eurosport/
+├───OK─── http://localhost:8000/images/optimized/eurosport-product-lineup-2x1-640.webp
+├───OK─── http://localhost:8000/images/optimized/eurosport-4-640.webp
+├───OK─── http://localhost:8000/images/optimized/eurosport-5-640.webp
+├───OK─── http://localhost:8000/images/optimized/eurosport-6-640.webp
+├───OK─── http://localhost:8000/images/optimized/eurosport-7-640.webp
+├───OK─── http://localhost:8000/images/optimized/eurosport-2-640.webp
+├───OK─── http://localhost:8000/images/optimized/eurosport-8-640.webp
+├───OK─── http://localhost:8000/images/optimized/eurosport-9-640.webp
+Finished! 29 links found. 21 excluded. 0 broken.
 
 Getting links from: http://localhost:8000/portfolio/blogtalkradio/
 ├───OK─── http://localhost:8000/images/optimized/btr-customer-experience-map-hosts-640.webp
@@ -753,5 +767,5 @@ Finished! 22 links found. 22 excluded. 0 broken.
 Getting links from: http://localhost:8000/tags/ai-art
 Finished! 22 links found. 22 excluded. 0 broken.
 
-Finished! 2979 links found. 2527 excluded. 0 broken.
-Elapsed time: 2 seconds
+Finished! 3016 links found. 2553 excluded. 0 broken.
+Elapsed time: 1 second
