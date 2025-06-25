@@ -17,7 +17,17 @@ body.home {
       color: var(--body-foreground);
     }
     @media (min-width: lib.$breakpoint) {
-      height: calc(38vw - var(--navbar-height));
+      // height: calc(38vw - var(--navbar-height));
+      height: 80vh;
+      padding-right: 40vh;
+      justify-content: center;
+    }
+    canvas#boids {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 80vh;
+      height: 80vh;
     }
   }
 

@@ -11,9 +11,9 @@ cssfile: "css/pages/home.css"
 
 # Design, Product Discovery, and Cross-Functional Leadership
 
-{% endsection %}
+<canvas id="boids"></canvas>
 
-{#critters}
+{% endsection %}
 
 {% comment %}
 <canvas id="gradient-canvas"></canvas>
@@ -24,9 +24,12 @@ cssfile: "css/pages/home.css"
 </script>
 {% endcomment %}
 
-{% include "_project-list.md", projectList: collections.work, heading: false, count: 6, class: "full-grid", description:false %}
+{% include "_project-list.md", projectList: collections.work, heading: false, count: 9, class: "full-grid", description:false %}
 
 {% include "_post-list.md", postList: collections.post, heading: "Recent Posts", count: 4, description:false %}
+
+<script type="text/javascript" language="javascript" src="/js/molf.js"></script>
+
 
 <script type="text/javascript">
 window.addEventListener('load', function(e) {
