@@ -99,8 +99,12 @@ function parse () {
 		    
 				[[ -z "$flag_verbose" ]] || { echo "Cleaning $target_date"; }
 				cat  $BASE'/logs/log_raw_'$target_date |\
+				grep -iE "Mozilla/5\.0.*Gecko" |\
+				grep -Eiv "\s(/css/|/js/|/icons/|/images/|favicon\.ico|\?)" |\
+				grep -iE "GET\t" |\
+				grep -iEv "\t301\t" |\
 				grep -E -v -i -f $BASE/blacklist-agents.txt |\
-				grep -E -v -i -f $BASE/blacklist-urls.txt\
+				grep -Evi -f $BASE/blacklist-urls.txt\
 				> $BASE'/logs/log_clean_'$target_date
 
 				last_date=$target_date;

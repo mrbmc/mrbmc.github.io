@@ -1,13 +1,21 @@
 .aws
 .env
+.htaccess
 .git
 .local
 .php
 .production
 .remote
-/.json
+\.json
+\.yml
+\.yaml
+\.py
+\.config
+\.toml
+/api
 /app
 /aspera
+/config
 /debug
 /info
 /login/
@@ -27,10 +35,14 @@ config.json
 credentials
 dbweb
 drupal
+gatsby-config
 laravel
 robots.txt
+s3.js
+server-info
 sellers
 sellers.json
+server\.js
 shopdb
 spider
 sql
@@ -38,7 +50,7 @@ Telerik
 temp
 traffic-advice
 ueditor
+webpack
 wp-includes
 wp-login
 xmlrpc
-	404	
