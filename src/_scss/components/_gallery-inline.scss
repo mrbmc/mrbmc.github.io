@@ -3,13 +3,16 @@
 p#gallery,div.gallery-wrap {
     @include lib.inverse();
 
-    $thumb-size: 15vh;
+    $thumb-size: 10vh;
+    & {
+        padding: 0;
+    }
 
     .image-detail {
         box-sizing: border-box;
         max-height: calc(100vh - $thumb-size - var(--gutter));
         object-fit: contain;
-        padding: var(--gutter) 0;
+        padding: var(--gutter);
         margin: 0;
         display: block;
 
@@ -46,7 +49,7 @@ p#gallery,div.gallery-wrap {
 
         li {
             list-style: none;
-            margin: 0;
+            margin: 0 .25rem 0 0;
 			// color: var(--muted-foreground);
             img {
                 display: block;
