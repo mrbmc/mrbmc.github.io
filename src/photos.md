@@ -54,4 +54,4 @@ html {
     scroll-snap-type: y mandatory;
 }
 </style>
-<script type="text/javascript" language="javascript" src="/js/photos.js"></script>
+<script type="text/javascript" language="javascript" src="/js/photos.bundle.js"></script>

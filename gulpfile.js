@@ -36,6 +36,10 @@ const paths = {
     {
       input: 'src/_js/portfolio.js',
       output: 'www/js/portfolio.bundle.js'
+    },
+    {
+      input: 'src/_js/photos.js',
+      output: 'www/js/photos.bundle.js'
     }
   ],
   js: [
