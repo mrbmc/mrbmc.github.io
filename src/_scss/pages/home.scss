@@ -17,7 +17,6 @@ body.home {
       color: var(--body-foreground);
     }
     @media (min-width: lib.$breakpoint) {
-      // height: calc(38vw - var(--navbar-height));
       height: 80vh;
       padding-right: 40vh;
       justify-content: center;
@@ -27,7 +26,12 @@ body.home {
       top: 0;
       right: 0;
       width: 80vh;
-      height: 80vh;
+      height: 76vh;
+      @media (max-width: lib.$breakpoint) {
+        width: 90vw;
+        height: 38vh;
+        right: 5vw;
+      }
     }
   }
 
