@@ -22,8 +22,8 @@ const CFDISTRO = "E1TNSK7JF24IAY";
 const paths = {
   jsbundles: [
     {
-      input: 'src/_js/mrbmc.js',
-      output: 'www/js/mrbmc.bundle.js'
+      input: 'src/_js/base.js',
+      output: 'www/js/base.bundle.js'
     },
     {
       input: 'src/_js/home.js',

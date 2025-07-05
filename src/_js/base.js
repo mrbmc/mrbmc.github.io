@@ -1,10 +1,12 @@
-var DEBUG = (document.location.hostname == "localhost" || document.location.href.includes('debug')),
-    VERBOSE = false && DEBUG,
+const DEBUG = (document.location.hostname == "localhost" || document.location.href.includes('debug'));
+const MOBILE = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent);
+var VERBOSE = false && DEBUG,
     last_known_scroll_position = 0,
     ticking = false;
 
+
 function initEmails(){
-    // console.log('initEmails');
+    if(DEBUG) console.log('initEmails');
     Array.from(document.getElementsByClassName('link-email')).map(link => {
       var attrs = link.dataset;
       link.setAttribute(
