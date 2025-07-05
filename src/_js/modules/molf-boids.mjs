@@ -166,6 +166,7 @@ const setupScene = (window, options = {}) => {
     window.addEventListener("resize", updateCanvas);
     updateCanvas();
     
+/*
     // Mouse/touch interaction variables
     let mouseX = 0, mouseY = 0;
     let velocityX = 0, velocityY = 0;
@@ -239,7 +240,7 @@ const setupScene = (window, options = {}) => {
             mouseY = velocityY = mouseX = velocityX = 0;
         }
     );
-
+*/
     return {
         gl: initWebGL(canvas),
         camera: camera
@@ -262,6 +263,7 @@ const updateProjectionMatrix = (matrix, {fieldOfView, aspectRatio = 1, near = 2,
 };
 
 // Setup mouse/touch controls
+/*
 const setupControls = (window, onMove, onEnd) => {
     let lastX = 0, lastY = 0;
     const bodyStyle = window.document.body.style;
@@ -308,6 +310,7 @@ const setupControls = (window, onMove, onEnd) => {
     window.addEventListener("pointercancel", handlePointerEnd);
     
 };
+*/
 
 // Initialize the scene
 const {gl, camera} = setupScene(window, {lockOrientation: false});
@@ -615,16 +618,13 @@ const startRenderLoop = () => {
         // Draw boids twice (for ping-pong textures)
         gl.bindTexture(gl.TEXTURE_2D, currentTexture);
         gl.drawArrays(gl.POINTS, 0, numBoids);
-        gl.bindTexture(gl.TEXTURE_2D, nextTexture);
-        gl.drawArrays(gl.POINTS, 0, numBoids);
+        // gl.bindTexture(gl.TEXTURE_2D, nextTexture);
+        // gl.drawArrays(gl.POINTS, 0, numBoids);
         
         gl.disable(gl.DEPTH_TEST);
     };
     
     requestAnimationFrame(renderFrame);
 };
-
-// Start the simulation
-startRenderLoop();
 
 export { startRenderLoop };
