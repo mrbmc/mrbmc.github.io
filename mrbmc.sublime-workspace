@@ -4,8 +4,64 @@
 		"selected_items":
 		[
 			[
+				"fun",
+				"function"
+			],
+			[
+				"i",
+				"isProduction"
+			],
+			[
+				"rol",
+				"rollupJS"
+			],
+			[
+				"compil",
+				"compileCSSDev"
+			],
+			[
+				"build",
+				"buildJSDev"
+			],
+			[
+				"in",
+				"inputFile"
+			],
+			[
+				"gallery",
+				"galleryKeyPress"
+			],
+			[
+				"wrap",
+				"wrapElement"
+			],
+			[
+				"is",
+				"isInViewport"
+			],
+			[
+				"num",
+				"numBoids"
+			],
+			[
+				"nu",
+				"numBoids"
+			],
+			[
 				"pos",
 				"position"
+			],
+			[
+				"geome",
+				"geometry"
+			],
+			[
+				"ge",
+				"geometry"
+			],
+			[
+				"Geo",
+				"ShapeGeometry"
 			],
 			[
 				"padding",
@@ -114,10 +170,6 @@
 			[
 				"comp",
 				"compileCSSDev"
-			],
-			[
-				"fun",
-				"function"
 			],
 			[
 				"text-",
@@ -408,10 +460,6 @@
 				"getElementsByClassName"
 			],
 			[
-				"in",
-				"innerHTML"
-			],
-			[
 				"getEle",
 				"getElementsByTagName"
 			],
@@ -466,345 +514,33 @@
 			[
 				"brand",
 				"brand-color"
-			],
-			[
-				"space",
-				"spacer-horizontal"
-			],
-			[
-				"navbar",
-				"navbar-background"
-			],
-			[
-				"link",
-				"link-color-hover"
-			],
-			[
-				"sa",
-				"shadow-offset"
-			],
-			[
-				"shadow",
-				"shadow-depth"
-			],
-			[
-				"secon",
-				"brand-secondary"
-			],
-			[
-				"sedh",
-				"sedhackday"
-			],
-			[
-				"coll",
-				"collection"
-			],
-			[
-				"hero",
-				"hero-heading-color"
-			],
-			[
-				"anim",
-				"animation-easing"
-			],
-			[
-				"stop",
-				"stopdate"
-			],
-			[
-				"star",
-				"startdatemonth"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "src/index.md",
+			"contents": "const { src, dest, watch, series, parallel } = require('gulp');\nconst argv = yargs.argv;\nconst clean = require('gulp-clean');\nconst cleanCSS = require('gulp-clean-css'); // If you want CSS minification\nconst exec = require('child_process').exec;\nconst fsCache = require( 'gulp-fs-cache' );\nconst gulpif = require('gulp-if');\nconst rename = require('gulp-rename');\nconst rollup = require('rollup');\nconst rsync = require('gulp-rsync');\nconst sass = require('gulp-sass')(require('sass'));\nconst sourcemaps = require('gulp-sourcemaps');\nconst terser  = require('@rollup/plugin-terser');\nconst uglify = require('gulp-uglify');\nconst yargs = require('yargs');\n\n\nconst localenv = \"http://localhost:8000\";\nconst localdir = \"mrbmc\";\nconst S3BUCKET = \"www.brianmcconnell.me\"\nconst CFDISTRO = \"E1TNSK7JF24IAY\";\nconst paths = {\n  jsbundles: [\n    {\n      input: 'src/_js/mrbmc.js',\n      output: 'www/js/mrbmc.bundle.js'\n    },\n    {\n      input: 'src/_js/home.js',\n      output: 'www/js/home.bundle.js'\n    },\n    {\n      input: 'src/_js/blogpost.js', \n      output: 'www/js/blogpost.bundle.js'\n    },\n    {\n      input: 'src/_js/portfolio.js',\n      output: 'www/js/portfolio.bundle.js'\n    }\n  ],\n  js: [\n    'src/_js/gaia/*.js'\n  ],\n  css: [\n    'src/_scss/**/!(_*).scss'\n  ],\n  html: ['src/**/*.md', 'src/**/*.njk'], // Eleventy source files (assuming Markdown or Nunjucks)\n  assets: [\n    {\n      'src':'src/images/',\n      'dst':'www/images'\n    },\n    {\n      'src':'src/_fonts/',\n      'dst':'www/css/fonts'\n    }\n  ],\n  backups: [\n    {\"src\":'backup/1999/',\"dst\":'www/1999'},\n    {\"src\":'backup/2000/',\"dst\":'www/2000'},\n    {\"src\":'backup/2001/',\"dst\":'www/2001'},\n    {\"src\":'backup/2002/',\"dst\":'www/2002'},\n    {\"src\":'backup/2015/',\"dst\":'www/2015'},\n    {\"src\":'backup/2022/',\"dst\":'www/2022'},\n    {\"src\":'backup/2023/www/',\"dst\":'www/2023'}\n  ],\n  garbage: [\n    `${__dirname}/www/**/.DS_Store`\n  ],\n  caches: [\n    \"/\",\n    \"/index.html\",\n    \"/404.html\",\n    \"/error.html\",\n    \"/sitemap.xml\",\n    \"/images/*\",\n    \"/css/*\",\n    \"/js/*\",\n    \"/portfolio/*\",\n    \"/blog/*\",\n    \"/about/*\",\n    \"/resume/*\",\n    \"/gaia/*\",\n    \"/colophon/*\"\n  ]\n};\nconst dryrun = argv.dryrun || argv.debug == \"dryrun\";\nconst isProduction = argv.prod || argv.env === 'production';\n\n\nasync function rollupJS() {\n  const log = argv.verbose ? console.log : () => {};\n  const plugins = [];\n\n  if (isProduction) {\n    plugins.push(terser());\n  }\n\n  const buildPromises = paths.jsbundles.map(async (config) => {\n    const bundle = await rollup.rollup({\n      input: config.input,\n      plugins: plugins\n    });\n    \n    const result = await bundle.write({\n      file: config.output,\n      format: 'es',\n      sourcemap: !isProduction\n    });\n    \n    log(`Built ${config.output}`);\n    return result;\n  });\n\n  return Promise.all(buildPromises);\n\n}\n\nfunction buildJS() {\n  const log = argv.verbose ? console.log : () => {};\n\n  return src(paths.js)\n    .pipe(gulpif(!isProduction,sourcemaps.init()))\n    .pipe(uglify({\n      mangle: isProduction,\n      compress: {\n        drop_console: isProduction\n      },\n      output: {\n          beautify: !isProduction,\n          comments: !isProduction\n      }\n    }))\n    .pipe(gulpif(!isProduction,sourcemaps.write()))\n    .on('data', file => log(`Uglified ${file.path}`))\n    .pipe(dest('www/js'));\n}\n\n// Compile SCSS to CSS\nfunction compileCSS() {\n  const log = argv.verbose ? console.log : () => {};\n  const format = isProduction ? '' : 'beautify';\n  return src(paths.css)\n    .pipe(gulpif(!isProduction,sourcemaps.init()))\n    .pipe(sass().on('error', sass.logError))\n    .pipe(cleanCSS({format: format}))\n    .pipe(gulpif(!isProduction,sourcemaps.write()))\n    .on('data', file => log(`Minified ${file.path}`))\n    .pipe(dest('www/css'));\n}\n\n// Build HTML with Eleventy\nfunction buildHTML() {\n  const log = argv.verbose ? console.log : () => {};\n  if(!isProduction) return Promise.resolve();\n\n  return exec('npx @11ty/eleventy', function (err, stdout, stderr) {\n        if(argv.verbose) {\n          console.log(stdout);\n          console.log(stderr);      \n        }\n      }).on('error',(err)=>{\n          console.error(`Error synching assets: ${err}`);\n          process.exit(1);\n      });\n}\n\n// Sync static assets (images)\nfunction syncAssets() {\n  const log = argv.verbose ? console.log : () => {};\n  if(!isProduction) return Promise.resolve();\n\n  //exec is much MUCH faster than calling gulp-rsync\n\n  let foo = [];\n  let command = `rsync -av #src #dst`;\n      command += \" --exclude='.DS_Store'\";\n      command += \" --include='blog/*.mp4'\";\n      command += \" --exclude='blog/*'\";\n      command += \" --include='portfolio/**/'\";\n      command += \" --include='portfolio/**/*.mp4'\";\n      command += \" --exclude='portfolio/*'\";\n      command += \" --exclude='portfolio/**/*'\";\n\n  // let optimizedImageMask = ['avif','jpg','jpeg','png','webp','gif'];\n  // optimizedImageMask.forEach(ext=>{\n  //   command += \" --exclude='blog/*\\.\"+ext+\"'\";    \n  //   command += \" --exclude='portfolio/*\\.\"+ext+\"'\";\n  //   command += \" --exclude='portfolio/**/*\\.\"+ext+\"'\";\n  // });\n\n  paths.assets.forEach((path)=>{\n    let cmd = command\n      .replace(/\\#src/ig,path.src)\n      .replace(/\\#dst/ig,path.dst);\n\n    if(argv.verbose) console.log(cmd);\n\n    foo.push(\n      exec(cmd, function (err, stdout, stderr) {\n        if(argv.verbose) {\n          console.log(stdout);\n          console.log(stderr);      \n        }\n      }).on('error',(err)=>{\n          console.error(`Error synching assets: ${err}`);\n          process.exit(1);\n      })\n    )\n  })\n  return foo.pop();\n}\n\nfunction syncBackups() {\n  const log = argv.verbose ? console.log : () => {};\n  if(!isProduction) return Promise.resolve();\n\n  //exec is much MUCH faster than calling gulp-rsync\n  let foo = [];\n  let command = `rsync -av #src #dst --exclude=\"DS_Store\"`;\n   paths.backups.forEach((path)=>{\n    let cmd = command\n      .replace(/\\#src/ig,path.src)\n      .replace(/\\#dst/ig,path.dst);\n    // console.log(cmd);\n    foo.push(\n      exec(cmd)\n        .on('data', data => log(data.toString()))\n        .on('error', (err) => {\n          console.error(`Error synching assets: ${err}`);\n          process.exit(1);\n        })\n    )\n  })\n  return foo.pop();\n\n}\n\nfunction checkLinks() {\n  if(!isProduction) return Promise.resolve();\n  return exec('blc '+localenv+' -roe > link-report.log')\n    .on('error', (err) => {\n      console.error(`Error checking links: ${err}`);\n      process.exit(1);\n    });\n}\n\nfunction cleanUp() {\n  if(!isProduction) return Promise.resolve();\n  let r = exec('find ~/Sites/mrbmc/ -name \".DS_Store\" -type f -delete')\n    .on('data', (err,stdout,stderr)=> {\n      log(stdout.toString());\n    })\n    .on('error', (err) => {\n      console.error(`Error cleaning: ${err}`);\n      process.exit(1);\n    });\n  return src(paths.garbage).pipe(clean());\n}\n\nfunction upload() {\n  const log = argv.verbose ? console.log : () => {};\n  let cmd = \"aws s3 sync www s3://\"+S3BUCKET+\" --delete\";\n  if(dryrun) {\n    cmd += \" --dryrun\";\n    console.log(cmd);\n  }\n  return exec(cmd, function (err, stdout, stderr) {\n    if(argv.verbose) {\n      console.log(stdout);\n      console.log(stderr);      \n    }\n  }).on('error',(err)=>{\n      console.error(`Error deploying: ${err}`);\n      process.exit(1);\n  });\n}\n\nfunction uncache() {\n  let cmd = \"aws cloudfront create-invalidation\"+(dryrun?\" --debug\":\"\")+\" --distribution-id \"+CFDISTRO+\" --paths \";\n\n  paths.caches.forEach((path)=>{\n    cmd += `\"`+path+`\" `;\n  });\n\n  if(dryrun) {\n    console.log(cmd);\n    return true;\n  }\n\n  return exec(cmd, function (err, stdout, stderr) {\n    if(argv.verbose) {\n      console.log(stdout);\n      console.log(stderr);      \n    }\n  }).on('error',(err)=>{\n      console.error(`Error deploying: ${err}`);\n      process.exit(1);\n  })\n}\n\n\nexports.deploy = series(\n  upload,\n  uncache\n);\n\n// Define default task\nexports.build = series(\n  rollupJS,\n  buildJS,\n  compileCSS,\n  buildHTML,\n  syncAssets,\n  syncBackups,\n  cleanUp,\n  checkLinks\n);\n\n",
+			"file": "gulpfile.js",
+			"file_size": 8001,
+			"file_write_time": 133955058980683972,
 			"settings":
 			{
-				"buffer_size": 1086,
+				"buffer_size": 8001,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			},
 			"undo_stack":
 			[
 				[
-					6,
+					55,
 					1,
-					"insert",
+					"sort_lines",
 					{
-						"characters": "9"
+						"case_sensitive": false
 					},
-					"AQAAAEQDAAAAAAAARQMAAAAAAAABAAAANg",
-					"AQAAAAAAAAABAAAARQMAAAAAAABEAwAAAAAAAAAAAAAAAPC/"
-				]
-			]
-		},
-		{
-			"file": "src/projects/disney-growth.md",
-			"settings":
-			{
-				"buffer_size": 23378,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			},
-			"undo_stack":
-			[
-				[
-					23,
-					1,
-					"insert",
-					{
-						"characters": "ç"
-					},
-					"AQAAAF8IAAAAAAAAYAgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAXwgAAAAAAABfCAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					24,
-					1,
-					"left_delete",
-					null,
-					"AQAAAF8IAAAAAAAAXwgAAAAAAAACAAAAw6c",
-					"AQAAAAAAAAABAAAAYAgAAAAAAABgCAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					25,
-					1,
-					"paste",
-					null,
-					"AQAAAF8IAAAAAAAArAgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAXwgAAAAAAABfCAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					29,
-					1,
-					"insert",
-					{
-						"characters": "Basecamp"
-					},
-					"CAAAAGEIAAAAAAAAYggAAAAAAAAGAAAAQXNjZW50YggAAAAAAABjCAAAAAAAAAAAAABjCAAAAAAAAGQIAAAAAAAAAAAAAGQIAAAAAAAAZQgAAAAAAAAAAAAAZQgAAAAAAABmCAAAAAAAAAAAAABmCAAAAAAAAGcIAAAAAAAAAAAAAGcIAAAAAAAAaAgAAAAAAAAAAAAAaAgAAAAAAABpCAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAZwgAAAAAAABhCAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					34,
-					1,
-					"insert",
-					{
-						"characters": "basecamp"
-					},
-					"CAAAAJMIAAAAAAAAlAgAAAAAAAAGAAAAYXNjZW50lAgAAAAAAACVCAAAAAAAAAAAAACVCAAAAAAAAJYIAAAAAAAAAAAAAJYIAAAAAAAAlwgAAAAAAAAAAAAAlwgAAAAAAACYCAAAAAAAAAAAAACYCAAAAAAAAJkIAAAAAAAAAAAAAJkIAAAAAAAAmggAAAAAAAAAAAAAmggAAAAAAACbCAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAkwgAAAAAAACZCAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					52,
-					1,
-					"insert",
-					{
-						"characters": "s"
-					},
-					"AQAAAKIIAAAAAAAAowgAAAAAAAADAAAAanBn",
-					"AQAAAAAAAAABAAAAoggAAAAAAAClCAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					53,
-					1,
-					"left_delete",
-					null,
-					"AQAAAKIIAAAAAAAAoggAAAAAAAABAAAAcw",
-					"AQAAAAAAAAABAAAAowgAAAAAAACjCAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					54,
-					1,
-					"insert",
-					{
-						"characters": "avif"
-					},
-					"BAAAAKIIAAAAAAAAowgAAAAAAAAAAAAAowgAAAAAAACkCAAAAAAAAAAAAACkCAAAAAAAAKUIAAAAAAAAAAAAAKUIAAAAAAAApggAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAoggAAAAAAACiCAAAAAAAAAAAAAAAAPC/"
-				]
-			]
-		},
-		{
-			"file": "src/_js/portfolio.js",
-			"settings":
-			{
-				"buffer_size": 3834,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			},
-			"undo_stack":
-			[
-				[
-					22,
-					1,
-					"insert",
-					{
-						"characters": "p_"
-					},
-					"AgAAAKsAAAAAAAAArAAAAAAAAAAAAAAArAAAAAAAAACtAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAqwAAAAAAAACrAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					29,
-					1,
-					"paste",
-					null,
-					"AQAAAGAKAAAAAAAAaQoAAAAAAAAHAAAAdGlja2luZw",
-					"AQAAAAAAAAABAAAAYAoAAAAAAABnCgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					31,
-					1,
-					"paste",
-					null,
-					"AQAAAE4LAAAAAAAAVwsAAAAAAAAHAAAAdGlja2luZw",
-					"AQAAAAAAAAABAAAATgsAAAAAAABVCwAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					33,
-					1,
-					"paste",
-					null,
-					"AQAAAHULAAAAAAAAfgsAAAAAAAAHAAAAdGlja2luZw",
-					"AQAAAAAAAAABAAAAdQsAAAAAAAB8CwAAAAAAAAAAAAAAAPC/"
-				]
-			]
-		},
-		{
-			"file": "src/_includes/_project-list.md",
-			"redo_stack":
-			[
-				[
-					58,
-					1,
-					"left_delete",
-					null,
-					"AQAAAMcCAAAAAAAAyAIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAxwIAAAAAAADHAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					56,
-					1,
-					"left_delete",
-					null,
-					"AgAAAMgCAAAAAAAAyQIAAAAAAAAAAAAAyQIAAAAAAADKAgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAyAIAAAAAAADIAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					51,
-					1,
-					"toggle_comment",
-					{
-						"block": false
-					},
-					"AgAAAHcCAAAAAAAAdwIAAAAAAAAFAAAAPCEtLSDEAgAAAAAAAMQCAAAAAAAABAAAACAtLT4",
-					"AQAAAAAAAAABAAAAxwIAAAAAAAB8AgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					39,
-					1,
-					"left_delete",
-					null,
-					"AQAAANECAAAAAAAA0gIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA0QIAAAAAAADRAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					32,
-					1,
-					"left_delete",
-					null,
-					"AwAAAAsDAAAAAAAADAMAAAAAAAAAAAAADAMAAAAAAAANAwAAAAAAAAAAAAANAwAAAAAAAA4DAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAACwMAAAAAAAALAwAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					28,
-					1,
-					"left_delete",
-					null,
-					"AQAAAA0DAAAAAAAAHAMAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAADQMAAAAAAAANAwAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					17,
-					1,
-					"paste",
-					null,
-					"AQAAAFYBAAAAAAAAawEAAAAAAAAYAAAAe3sgcHJvamVjdC5kYXRhLnRpdGxlIH19",
-					"AQAAAAAAAAABAAAAbgEAAAAAAABuAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					14,
-					1,
-					"cut",
-					null,
-					"AQAAAFcBAAAAAAAAbwEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAVwEAAAAAAABXAQAAAAAAAAAAAAAAAPC/"
-				]
-			],
-			"settings":
-			{
-				"buffer_size": 884,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			},
-			"undo_stack":
-			[
-			]
-		},
-		{
-			"file": "src/projects/eurosport.md",
-			"settings":
-			{
-				"buffer_size": 1650,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			},
-			"undo_stack":
-			[
-				[
-					3,
-					1,
-					"delete_word",
-					{
-						"forward": false
-					},
-					"AQAAAJsAAAAAAAAAmwAAAAAAAAAEAAAAdHJ1ZQ",
-					"AQAAAAAAAAABAAAAnwAAAAAAAACfAAAAAAAAAP///////+9/"
-				],
-				[
-					4,
-					1,
-					"insert",
-					{
-						"characters": "false"
-					},
-					"BQAAAJsAAAAAAAAAnAAAAAAAAAAAAAAAnAAAAAAAAACdAAAAAAAAAAAAAACdAAAAAAAAAJ4AAAAAAAAAAAAAAJ4AAAAAAAAAnwAAAAAAAAAAAAAAnwAAAAAAAACgAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAmwAAAAAAAACbAAAAAAAAAAAAAAAAAPC/"
-				]
-			]
-		},
-		{
-			"file": "src/portfolio.md",
-			"settings":
-			{
-				"buffer_size": 726,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			},
-			"undo_stack":
-			[
-				[
-					5,
-					1,
-					"insert",
-					{
-						"characters": "10"
-					},
-					"AgAAAPMAAAAAAAAA9AAAAAAAAAABAAAANvQAAAAAAAAA9QAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA9AAAAAAAAADzAAAAAAAAAAAAAAAAAPC/"
+					"AQAAAEAAAAAAAAAAjgIAAAAAAABOAgAAY29uc3Qgc2FzcyA9IHJlcXVpcmUoJ2d1bHAtc2FzcycpKHJlcXVpcmUoJ3Nhc3MnKSk7CmNvbnN0IHJzeW5jID0gcmVxdWlyZSgnZ3VscC1yc3luYycpOwpjb25zdCByZW5hbWUgPSByZXF1aXJlKCdndWxwLXJlbmFtZScpOwpjb25zdCB1Z2xpZnkgPSByZXF1aXJlKCdndWxwLXVnbGlmeScpOwpjb25zdCBjbGVhbkNTUyA9IHJlcXVpcmUoJ2d1bHAtY2xlYW4tY3NzJyk7IC8vIElmIHlvdSB3YW50IENTUyBtaW5pZmljYXRpb24KY29uc3Qgc291cmNlbWFwcyA9IHJlcXVpcmUoJ2d1bHAtc291cmNlbWFwcycpOwpjb25zdCBleGVjID0gcmVxdWlyZSgnY2hpbGRfcHJvY2VzcycpLmV4ZWM7CmNvbnN0IHlhcmdzID0gcmVxdWlyZSgneWFyZ3MnKTsKY29uc3QgY2xlYW4gPSByZXF1aXJlKCdndWxwLWNsZWFuJyk7CmNvbnN0IGZzQ2FjaGUgPSByZXF1aXJlKCAnZ3VscC1mcy1jYWNoZScgKTsKY29uc3QgYXJndiA9IHlhcmdzLmFyZ3Y7CmNvbnN0IHJvbGx1cCA9IHJlcXVpcmUoJ3JvbGx1cCcpOwpjb25zdCB0ZXJzZXIgID0gcmVxdWlyZSgnQHJvbGx1cC9wbHVnaW4tdGVyc2VyJyk7CmNvbnN0IGd1bHBpZiA9IHJlcXVpcmUoJ2d1bHAtaWYnKTs",
+					"AQAAAAAAAAABAAAAjgIAAAAAAABAAAAAAAAAAAAAAAAAAPC/"
 				]
 			]
 		}
@@ -875,6 +611,10 @@
 			[
 				"sort",
 				"Sort Lines"
+			],
+			[
+				"livereloa",
+				"LiveReload: Enable/disable plug-ins"
 			],
 			[
 				"insta",
@@ -1038,10 +778,6 @@
 			],
 			[
 				"LiveReload: Enable/disable plugins",
-				"LiveReload: Enable/disable plug-ins"
-			],
-			[
-				"livereloa",
 				"LiveReload: Enable/disable plug-ins"
 			],
 			[
@@ -1224,26 +960,69 @@
 		"/Users/brianmcconnell/Sites/mrbmc",
 		"/Users/brianmcconnell/Sites/mrbmc/src",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_js",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_scss",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/pages"
+		"/Users/brianmcconnell/Sites/mrbmc/src/_js/modules"
 	],
 	"file_history":
 	[
-		"/Users/brianmcconnell/Sites/mrbmc/eleventy.config.js",
+		"/Users/brianmcconnell/Sites/mrbmc/gulpfile.js",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_js/molf.js",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_layouts/project-detail.md",
+		"/Users/brianmcconnell/Sites/mrbmc/src/index.md",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_js/home.js",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_js/modules/molf-boids.mjs",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_js/modules/stripe-gradient.mjs",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_js/modules/parallax.mjs",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_js/portfolio.js",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_layouts/post-detail.md",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_layouts/layout.html",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_js/blogpost.js",
+		"/Users/brianmcconnell/Sites/mrbmc/node_modules/relateurl/lib/parse/port.js",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_js/mrbmc.js",
+		"/Users/brianmcconnell/Sites/mrbmc/rollup.config.js",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_js/modules/gallery-inline.mjs",
+		"/Users/brianmcconnell/Sites/mrbmc/mrbmc.sublime-project",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_js/modules/mixins.js",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_includes/_header.html",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_js/modules/critters.mjs",
+		"/Users/brianmcconnell/Sites/mrbmc/backup/2022/boids.html",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_js/modules/ga.js",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_js/init-buffers.js",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_js/modules/dom_utils.mjs",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_js/mixins.js",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_js/modules/markdown-utils.js",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_js/file-management.js",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_js/blog.js",
+		"/Users/brianmcconnell/Sites/mrbmc/www/js/bundle.js",
+		"/Users/brianmcconnell/Sites/mrbmc/webpack.config.js",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/components/_header.scss",
+		"/Users/brianmcconnell/Sites/mrbmc/src/projects/disney-groupwatch.md",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/pages/project.scss",
-		"/Users/brianmcconnell/Sites/mrbmc/metrics/blacklist-urls.txt",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/components/_gallery-inline.scss",
+		"/Users/brianmcconnell/Sites/mrbmc/src/projects/disney-enterprise.md",
+		"/Users/brianmcconnell/Library/Application Support/Sublime Text 3/Packages/User/SublimeOnSaveBuild.sublime-settings",
+		"/Users/brianmcconnell/Library/Application Support/Sublime Text 3/Packages/SublimeOnSaveBuild/SublimeOnSaveBuild.sublime-settings",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_includes/_masthead.md",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_js/gallery-inline.js",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_js/modules/parallax.js",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/pages/portfolio.scss",
+		"/Users/brianmcconnell/Sites/mrbmc/src/gaia/airflow.html",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_js/airflow.js",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/pages/home.scss",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_js/critters.js",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/gaia.scss",
+		"/Users/brianmcconnell/Sites/mrbmc/package.json",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_layouts/gaia.html",
+		"/Users/brianmcconnell/Sites/mrbmc/src/portfolio.md",
+		"/Users/brianmcconnell/Sites/mrbmc/src/projects/eurosport.md",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_includes/_project-list.md",
 		"/Users/brianmcconnell/Sites/mrbmc/src/projects/disney-growth.md",
+		"/Users/brianmcconnell/Sites/mrbmc/eleventy.config.js",
+		"/Users/brianmcconnell/Sites/mrbmc/metrics/blacklist-urls.txt",
 		"/Users/brianmcconnell/Sites/mrbmc/metrics/metrics.sh",
 		"/Users/brianmcconnell/Sites/mrbmc/metrics/blacklist-agents.txt",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/pages/about.scss",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/components/_header.scss",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/base/_grid.scss",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/pages/home.scss",
 		"/Users/brianmcconnell/Sites/mrbmc/src/about.md",
-		"/Users/brianmcconnell/Sites/mrbmc/src/index.md",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_includes/_project-list.md",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_js/critters.js",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_includes/_header.html",
 		"/Users/brianmcconnell/Sites/mrbmc/src/images/profile/kageki-crane.svg",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/base/_root.scss",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/base/_molecules.scss",
@@ -1252,8 +1031,6 @@
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/library/_variables.scss",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/components/_project-list.scss",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/components/_masthead.scss",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_layouts/project-detail.md",
-		"/Users/brianmcconnell/Sites/mrbmc/src/portfolio.md",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_includes/_post-list.md",
 		"/Users/brianmcconnell/Sites/mrbmc/src/critters.html",
 		"/Users/brianmcconnell/Sites/mrbmc/src/posts/bike-tour-2024.md",
@@ -1262,48 +1039,34 @@
 		"/Users/brianmcconnell/Sites/mrbmc/www/images/profile/kageki-animals.svg",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/screen.scss",
 		"/Users/brianmcconnell/Sites/mrbmc/src/blog.md",
-		"/Users/brianmcconnell/Sites/mrbmc/package.json",
 		"/Users/brianmcconnell/Sites/mrbmc/node_modules/robot-directives/lib/group.js",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_layouts/layout.html",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_includes/_footer.html",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/components/_footer.scss",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/base/_type.scss",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/base/_index.scss",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/library/_index.scss",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/pages/post.scss",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/pages/portfolio.scss",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_js/portfolio.js",
 		"/Users/brianmcconnell/Sites/mrbmc/src/404.md",
-		"/Users/brianmcconnell/Sites/mrbmc/gulpfile.js",
 		"/Users/brianmcconnell/Sites/mrbmc/src/tags.md",
 		"/Users/brianmcconnell/Sites/mrbmc/node_modules/eleventy-plugin-time-to-read/index.js",
 		"/Users/brianmcconnell/Sites/mrbmc/node_modules/eleventy-plugin-time-to-read/components/measure-time.js",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_layouts/post-detail.md",
 		"/Users/brianmcconnell/Sites/mrbmc/src/rss.njk",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/components/_post-list.scss",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_includes/_masthead.md",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/base/_atoms.scss",
-		"/Users/brianmcconnell/Sites/mrbmc/mrbmc.sublime-project",
-		"/Users/brianmcconnell/Library/Application Support/Sublime Text 3/Packages/User/SublimeOnSaveBuild.sublime-settings",
-		"/Users/brianmcconnell/Sites/mrbmc/src/projects/disney-enterprise.md",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/library/_mixins.scss",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_js/gallery-inline.js",
 		"/Users/brianmcconnell/Sites/mrbmc/src/projects/blogtalkradio.md",
 		"/Users/brianmcconnell/Sites/mrbmc/src/posts/bike-tour-2023.md",
 		"/Users/brianmcconnell/Sites/mrbmc/src/projects/pal-9100.md",
 		"/Users/brianmcconnell/Sites/mrbmc/src/projects/nhltv.md",
 		"/Users/brianmcconnell/Sites/mrbmc/src/projects/nhlgameflow.md",
 		"/Users/brianmcconnell/Sites/mrbmc/src/projects/nhl.md",
-		"/Users/brianmcconnell/Sites/mrbmc/src/projects/eurosport.md",
 		"/Users/brianmcconnell/Sites/mrbmc/src/projects/espnvision.md",
 		"/Users/brianmcconnell/Sites/mrbmc/src/projects/espn.md",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_includes/_leadership.md",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_includes/_process.md",
-		"/Users/brianmcconnell/Sites/mrbmc/src/projects/disney-groupwatch.md",
 		"/Users/brianmcconnell/Sites/mrbmc/src/projects/disney-growth-long.md",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_includes/_work-list.md",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/pages/resume.scss",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/components/_gallery-inline.scss",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/pages/photos.scss",
 		"/Users/brianmcconnell/Sites/mrbmc/metrics/bogus.log",
 		"/Users/brianmcconnell/Sites/mrbmc/metrics/bogus_filter.txt",
@@ -1328,39 +1091,11 @@
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/pages/blog.scss",
 		"/Users/brianmcconnell/Sites/mrbmc/src/projects/steelgills.md",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/pages/colophon.scss",
-		"/Users/brianmcconnell/Sites/mrbmc/www/css/pages/project.css",
-		"/Users/brianmcconnell/Sites/mrbmc/src/posts/growth-design-idioms.md",
-		"/Users/brianmcconnell/Sites/mrbmc/src/projects/.obsidian/types.json",
-		"/Users/brianmcconnell/Sites/mrbmc/src/posts/posts.json",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_includes/_masthead.html",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_layouts/project-detail.html",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_layouts/_project-detail.md",
-		"/Users/brianmcconnell/Sites/mrbmc/src/projects/projects.json",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_layouts/post-detail.html",
-		"/Users/brianmcconnell/Sites/mrbmc/node_modules/lodash/_root.js",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/_molecules.scss",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/_animation.scss",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_js/mrbmc.js",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/_root.scss",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/_type.scss",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_js/blog.js",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/_atoms.scss",
-		"/Users/brianmcconnell/Sites/mrbmc/www/css/pages/photos.css",
-		"/Users/brianmcconnell/Sites/mrbmc/backup/2023/src/_less/_gallery.less",
-		"/Users/brianmcconnell/Desktop/jd.txt",
-		"/Users/brianmcconnell/Desktop/resume.txt",
-		"/Users/brianmcconnell/Desktop/pvp.txt",
-		"/Users/brianmcconnell/Sites/mrbmc/backup/2003/less/_variables.less",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_data/site.json",
-		"/Users/brianmcconnell/Sites/mrbmc/src/photos.md",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/_photos.scss",
-		"/Users/brianmcconnell/Sites/mrbmc/src/links.md",
-		"/Users/brianmcconnell/Sites/kageki/data-maker.js",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_includes/_work.md"
+		"/Users/brianmcconnell/Sites/mrbmc/www/css/pages/project.css"
 	],
 	"find":
 	{
-		"height": 38.0
+		"height": 24.0
 	},
 	"find_in_files":
 	{
@@ -1502,6 +1237,119 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"jsbundles",
+			"applyRotation",
+			"beta",
+			"const",
+			"setupControls",
+			"renderFrame",
+			"requestAnimationFrame",
+			"touch",
+			"anim",
+			"onMove",
+			"lastX",
+			"startRenderLoop",
+			"\\./",
+			"\\./www/js",
+			"builds",
+			"parallax",
+			"debug",
+			"verbpose",
+			"debug",
+			"verbose",
+			"debug",
+			"terser",
+			"getSrc",
+			"syncAssets",
+			"compileCSS",
+			"rollupJS",
+			"compileCSS",
+			"isProduction",
+			"buildJS",
+			"initMosaics",
+			"onScroll",
+			"parallax",
+			"header",
+			"prevScrollpos",
+			"transpile",
+			"dirname",
+			"buffer",
+			"transpile",
+			"source",
+			"options",
+			"rollup",
+			"transpile",
+			"series",
+			"rollup",
+			"parseMarkdown",
+			"initBuffer",
+			"getLayer",
+			"gallery-hbs",
+			"js",
+			"parseSrcset",
+			"parseSrcset\\$1",
+			"isVisible",
+			"parallax",
+			"\\.canzoom",
+			"canzoom",
+			"galleryKeyPress",
+			"galleryPopstate",
+			"updateDetailImage",
+			"p_ticking",
+			"\\.gallery",
+			"initGallery",
+			"galleryLoad",
+			"isinViewport",
+			"doParallax",
+			"scroll",
+			"\\.figure",
+			"figure",
+			"onScroll",
+			"doParallax",
+			"parallax",
+			"doParallax",
+			"p_ticking",
+			"attractor",
+			"attraction",
+			"lockOrientation",
+			"setupControls",
+			"animate",
+			"mouseX",
+			"isDragging",
+			"touch",
+			"textureSize",
+			"numBoids",
+			"commented",
+			"setupScene",
+			"canvas",
+			"initWebGL",
+			"p",
+			"p\\.",
+			"getcontext",
+			"p\\.",
+			"p.",
+			"p",
+			"L",
+			"numBoids",
+			"32768",
+			",",
+			"4096",
+			"numBoids",
+			"4096",
+			"numBoids",
+			"4096",
+			"numBoids",
+			"drawingBufferWidth",
+			"4096",
+			"40",
+			"viewport",
+			"drawingBufferWidth",
+			"numBoids",
+			"material",
+			"boidShape",
+			"heart",
+			"cube",
+			"renderer",
 			"ticking",
 			"images",
 			"ascent",
@@ -1516,120 +1364,7 @@
 			"basecamp",
 			"#basecamp",
 			"1440",
-			"basecamp",
-			"killabmc",
-			"@media",
-			"hover",
-			"transition",
-			"\\-\\-white\\-semi",
-			"\\-\\-primary",
-			"polygons",
-			"updatePolygons",
-			"draw",
-			"#FF4F00",
-			"well.grid",
-			"padd",
-			"blur",
-			"console",
-			"poly2",
-			"poly5",
-			"#FF4F00",
-			"handleScroll",
-			"smoothScroll",
-			"updatePolygons",
-			"handleScroll",
-			"smoothScroll",
-			"handleScroll",
-			"duration",
-			"334\\.88",
-			"#fff",
-			"gapco-potomac-preview",
-			"\\.gif",
-			"gif",
-			"image",
-			"chip",
-			"portra",
-			"portrait",
-			"navbar-height",
-			"portrait",
-			"noiseImage",
-			"noise",
-			"pic\\-size",
-			"portrait",
-			"pic\\-size",
-			"portrait",
-			"timeToRead",
-			"base-line-height",
-			"gutter",
-			"\\$?lib\\.",
-			"\\$lib\\.",
-			"content",
-			"figure",
-			"\\.project",
-			"upper",
-			"display\\-font\\-family",
-			"navbar\\-font\\-family",
-			"jpg",
-			"canzoom",
-			"serif",
-			"Cormorant",
-			"coromant",
-			"serif",
-			"fonts\\.google",
-			"readingTime",
-			"images",
-			"Time\\-to\\-read's input",
-			"readingTime",
-			"reading\\-time",
-			"reading-time",
-			"getSimilarCategories",
-			"htmlmin",
-			"markdownLib",
-			"timeToRead",
-			"content",
-			"input",
-			"\\.full-width",
-			"full-width-90",
-			"timeToRead",
-			"readingTime",
-			"timeToRead",
-			"full",
-			"portrait",
-			"verbose",
-			"erbose",
-			"log",
-			"upload",
-			"cmd",
-			"sticky-nav",
-			"\\-\\-white",
-			"white-semi",
-			"sticky",
-			"sticky\\-nav",
-			"stick",
-			"border\\-radius",
-			"border",
-			"well\\-bold\\-color",
-			"hero\\-bold\\-color",
-			"full\\-width\\-bak",
-			"###",
-			"full-grid-bak",
-			"full-width",
-			"full-grid",
-			"full-width",
-			"full-grid",
-			"zoom",
-			"well",
-			"blockquote",
-			"\\-\\-hero\\-foreground",
-			"\\-\\-hero\\-background",
-			"\\-\\-well\\-background",
-			"--well-foreground",
-			"\\-\\-secondary\\-foreground",
-			"\\-\\-text\\-primary",
-			"\\-\\-text\\-secondary",
-			"\\-text\\-color",
-			"-text-color",
-			"primary\\-inverse"
+			"basecamp"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1637,6 +1372,8 @@
 		"regex": true,
 		"replace_history":
 		[
+			"canvas.",
+			"boid",
 			"currentColor",
 			"library.",
 			"$library",
@@ -1762,9 +1499,7 @@
 			"start_date",
 			"stop_date",
 			"stop_month",
-			"stop_day",
-			"start_month",
-			"start_day"
+			"stop_day"
 		],
 		"reverse": false,
 		"scrollbar_highlights": true,
@@ -1781,184 +1516,33 @@
 			[
 				{
 					"buffer": 0,
-					"file": "src/index.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1086,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								837,
-								837
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Liquid/Syntaxes/Markdown (Liquid).sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"stack_multiselect": false,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/projects/disney-growth.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 23378,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2214,
-								2214
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Liquid/Syntaxes/Markdown (Liquid).sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 554.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"stack_multiselect": false,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/_js/portfolio.js",
+					"file": "gulpfile.js",
 					"selected": true,
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3834,
+						"buffer_size": 8001,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2942,
-								2942
+								2272,
+								2830
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 838.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"stack_multiselect": false,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "src/_includes/_project-list.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 884,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								343,
-								367
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Liquid/Syntaxes/Markdown (Liquid).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"stack_multiselect": false,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "src/projects/eurosport.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1650,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								160,
-								160
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Liquid/Syntaxes/Markdown (Liquid).sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1262.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
-					"stack_multiselect": false,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/portfolio.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 726,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								245,
-								245
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Liquid/Syntaxes/Markdown (Liquid).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
+					"stack_index": 0,
 					"stack_multiselect": false,
 					"type": "text"
 				}
@@ -2012,7 +1596,7 @@
 	},
 	"output.exec":
 	{
-		"height": 256.0,
+		"height": 220.0,
 		"history":
 		[
 		]
@@ -2042,8 +1626,188 @@
 		"selected_items":
 		[
 			[
+				"gulp",
+				"gulpfile.js"
+			],
+			[
+				"molf-",
+				"src/_js/modules/molf-boids.mjs"
+			],
+			[
+				"project",
+				"src/_layouts/project-detail.md"
+			],
+			[
+				"index",
+				"src/index.md"
+			],
+			[
+				"project-de",
+				"src/_layouts/project-detail.md"
+			],
+			[
+				"layout",
+				"src/_layouts/layout.html"
+			],
+			[
+				"post-de",
+				"src/_layouts/post-detail.md"
+			],
+			[
+				"portf.js",
+				"src/_js/portfolio.js"
+			],
+			[
+				"port.js",
+				"node_modules/relateurl/lib/parse/port.js"
+			],
+			[
+				"parallax",
+				"src/_js/modules/parallax.mjs"
+			],
+			[
 				"portfolio.js",
 				"src/_js/portfolio.js"
+			],
+			[
+				"blogpost",
+				"src/_js/blogpost.js"
+			],
+			[
+				"mr",
+				"src/_js/mrbmc.js"
+			],
+			[
+				"paral",
+				"src/_js/modules/parallax.mjs"
+			],
+			[
+				"gallery-in",
+				"src/_js/modules/gallery-inline.mjs"
+			],
+			[
+				"roll",
+				"rollup.config.js"
+			],
+			[
+				"project-deta",
+				"src/_layouts/project-detail.md"
+			],
+			[
+				"lay",
+				"src/_layouts/layout.html"
+			],
+			[
+				"boids",
+				"backup/2022/boids.html"
+			],
+			[
+				"portfo.js",
+				"src/_js/portfolio.js"
+			],
+			[
+				"critt",
+				"src/_js/modules/critters.mjs"
+			],
+			[
+				"header.ht",
+				"src/_includes/_header.html"
+			],
+			[
+				"layou",
+				"src/_layouts/layout.html"
+			],
+			[
+				"dom_i",
+				"src/_js/modules/dom_utils.mjs"
+			],
+			[
+				"post-det",
+				"src/_layouts/post-detail.md"
+			],
+			[
+				"dom_ut",
+				"src/_js/modules/dom_utils.mjs"
+			],
+			[
+				"bund",
+				"www/js/bundle.js"
+			],
+			[
+				"portfolio js",
+				"src/_js/portfolio.js"
+			],
+			[
+				"bundle",
+				"www/js/bundle.js"
+			],
+			[
+				"portfo",
+				"src/_js/portfolio.js"
+			],
+			[
+				"paralax",
+				"src/_js/modules/parallax.mjs"
+			],
+			[
+				"header.scs",
+				"src/_scss/components/_header.scss"
+			],
+			[
+				"portfolio",
+				"src/_js/portfolio.js"
+			],
+			[
+				"-groupwatch",
+				"src/projects/disney-groupwatch.md"
+			],
+			[
+				"_head",
+				"src/_includes/_header.html"
+			],
+			[
+				"project-",
+				"src/_layouts/project-detail.md"
+			],
+			[
+				"galler-inline.scs",
+				"src/_scss/components/_gallery-inline.scss"
+			],
+			[
+				"_gallery-in",
+				"src/_scss/components/_gallery-inline.scss"
+			],
+			[
+				"para",
+				"src/_js/modules/parallax.mjs"
+			],
+			[
+				"gallery-inline",
+				"src/_js/gallery-inline.js"
+			],
+			[
+				"masthead",
+				"src/_includes/_masthead.md"
+			],
+			[
+				"_home",
+				"src/_scss/pages/home.scss"
+			],
+			[
+				"airfl",
+				"src/_js/airflow.js"
+			],
+			[
+				"gaia",
+				"src/_scss/gaia.scss"
+			],
+			[
+				"mrbmc.js",
+				"src/_js/mrbmc.js"
+			],
+			[
+				"pack",
+				"package.json"
 			],
 			[
 				"ele",
@@ -2052,10 +1816,6 @@
 			[
 				"disney-gr",
 				"src/projects/disney-growth.md"
-			],
-			[
-				"index",
-				"src/index.md"
 			],
 			[
 				"portf",
@@ -2080,10 +1840,6 @@
 			[
 				"metric",
 				"metrics/metrics.sh"
-			],
-			[
-				"project",
-				"src/_scss/pages/project.scss"
 			],
 			[
 				"-growth",
@@ -2134,23 +1890,11 @@
 				"src/images/profile/kageki-crane.svg"
 			],
 			[
-				"_head",
-				"src/_scss/components/_header.scss"
-			],
-			[
 				"_header",
 				"src/_includes/_header.html"
 			],
 			[
 				"home.scs",
-				"src/_scss/pages/home.scss"
-			],
-			[
-				"masthead",
-				"src/_scss/components/_masthead.scss"
-			],
-			[
-				"_home",
 				"src/_scss/pages/home.scss"
 			],
 			[
@@ -2210,24 +1954,12 @@
 				"src/_includes/_project-list.md"
 			],
 			[
-				"pack",
-				"package.json"
-			],
-			[
 				"ject-lit",
 				"src/_includes/_project-list.md"
 			],
 			[
-				"project-",
-				"src/_layouts/project-detail.md"
-			],
-			[
 				"disney-gro",
 				"src/projects/disney-growth.md"
-			],
-			[
-				"layou",
-				"src/_layouts/layout.html"
 			],
 			[
 				"footer",
@@ -2266,10 +1998,6 @@
 				"src/_scss/base/_type.scss"
 			],
 			[
-				"gulp",
-				"gulpfile.js"
-			],
-			[
 				"404",
 				"src/404.md"
 			],
@@ -2298,20 +2026,12 @@
 				"src/_includes/_masthead.md"
 			],
 			[
-				"portfolio",
-				"src/portfolio.md"
-			],
-			[
 				"root.css",
 				"src/_scss/base/_root.scss"
 			],
 			[
 				"atoms",
 				"src/_scss/base/_atoms.scss"
-			],
-			[
-				"post-det",
-				"src/_layouts/post-detail.md"
 			],
 			[
 				"portfolio.scss",
@@ -2416,142 +2136,6 @@
 			[
 				"g",
 				"gulpfile.js"
-			],
-			[
-				"packa",
-				"package.json"
-			],
-			[
-				"design",
-				"src/design.md"
-			],
-			[
-				"abou",
-				"src/about.md"
-			],
-			[
-				"portfol",
-				"src/portfolio.md"
-			],
-			[
-				"team-c",
-				"src/projects/team-charter-workshop.md"
-			],
-			[
-				"flint",
-				"src/projects/flint-and-silicon.md"
-			],
-			[
-				"prototyping",
-				"src/projects/design-prototyping-201.md"
-			],
-			[
-				"_proce",
-				"src/_includes/_process.md"
-			],
-			[
-				"princ",
-				"src/_includes/_principles.md"
-			],
-			[
-				"port",
-				"src/portfolio.md"
-			],
-			[
-				"work.m",
-				"src/work.md"
-			],
-			[
-				"invest",
-				"metrics/logs/investigation.log"
-			],
-			[
-				"2025-04",
-				"metrics/logs/log_clean_2025-04"
-			],
-			[
-				"robot",
-				"src/robots.txt"
-			],
-			[
-				"lay",
-				"src/_layouts/layout.html"
-			],
-			[
-				"blog.scs",
-				"src/_scss/pages/blog.scss"
-			],
-			[
-				"disney",
-				"src/projects/disney-growth.md"
-			],
-			[
-				"projec",
-				"src/_scss/pages/project.scss"
-			],
-			[
-				"mole",
-				"src/_scss/base/_molecules.scss"
-			],
-			[
-				"post.scs",
-				"src/_scss/pages/post.scss"
-			],
-			[
-				"project.scs",
-				"src/_scss/pages/project.scss"
-			],
-			[
-				"scree",
-				"src/_scss/screen.scss"
-			],
-			[
-				"_atoms",
-				"src/_scss/base/_atoms.scss"
-			],
-			[
-				"_col",
-				"src/_scss/library/_colors.scss"
-			],
-			[
-				"_mix",
-				"src/_scss/library/_mixins.scss"
-			],
-			[
-				"_heade",
-				"src/_scss/components/_header.scss"
-			],
-			[
-				"_mole",
-				"src/_scss/base/_molecules.scss"
-			],
-			[
-				"bike",
-				"src/posts/bike-tour-2024.md"
-			],
-			[
-				"project-d",
-				"src/_layouts/project-detail.md"
-			],
-			[
-				"project-deta",
-				"src/_layouts/project-detail.html"
-			],
-			[
-				"Project.",
-				"src/_scss/pages/project.scss"
-			],
-			[
-				"Project.scs",
-				"src/_scss/pages/project.scss"
-			],
-			[
-				"_mast",
-				"src/_scss/components/_masthead.scss"
-			],
-			[
-				"enter",
-				"src/projects/disney-enterprise.md"
 			]
 		],
 		"width": 0.0
@@ -2586,7 +2170,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 171.0,
+	"side_bar_width": 234.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
