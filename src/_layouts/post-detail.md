@@ -8,7 +8,7 @@ cssfile: "css/pages/post.css"
 {% include "_masthead.md" %}
 {% else %}
 # {{ title }}{.blur-in}
-**{{date | date: "%B %d, %Y" }}**{.date} &bull; {{ content | timeToRead }} to read {.metadata data-parallax="50"}
+**{{date | date: "%B %d, %Y" }}**{.date} &bull; {{ content | timeToRead }} to read {.metadata}
 {% endif %}
 
 <a id="content"></a>

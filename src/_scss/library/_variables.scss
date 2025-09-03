@@ -5,29 +5,29 @@
 // Typography
 // -------------------------
 $system-font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
-$sans-font-family: "Monument","Helvetica Neue", $system-font-family;
-$serif-font-family: "Cormorant", "Palatino", "Georgia", "Roboto Serif", Times, serif;
-$mono-font-family: "Courier New", monospace;
+$sans-font-family: "Adelle Sans","Helvetica Neue", $system-font-family;
+$serif-font-family: "Adelle", "Palatino", "Georgia", "Roboto Serif", Times, serif;
+$mono-font-family: monospace,"Courier","Courier New";
 $base-font-family: $sans-font-family;
-$base-font-weight: 400;
-$bold-font-weight: 600;
-$serif-font-weight: 500;
+$base-font-weight: 300;
+$bold-font-weight: 300;
+$serif-font-weight: 400;
 $base-font-size: 1.5em;
 //math.div(24, 16);
 //16px is the browser default so the numerator is your desired p size
 $base-line-height: 1.38em;
 $small-font-size: .81em;
 $large-font-size: 1.19em;
-$heading-font-family: $base-font-family;
-$heading-font-weight: $base-font-weight;
-$heading-font-kerning: -0.025em;
+$head-font-family: $serif-font-family;
+$head-font-weight: $serif-font-weight;
+$head-font-kerning: -0.025em;
 $heading-line-height: 1.2;
 $display-font-family: $base-font-family;
 $display-font-weight: $base-font-weight;
-$display-font-kerning: -0.0375em;
-$display-line-height: 1.2;
-$navbar-font-family: $heading-font-family;
-$navbar-font-weight: $heading-font-weight;
+$display-font-kerning: -0.025em;
+$display-line-height: 1.0;
+$navbar-font-family: $display-font-family;
+$navbar-font-weight: $display-font-weight;
 
 // GRID
 // --------------------------------------------------
@@ -72,10 +72,10 @@ $shadow-inset: inset 0 2px 8px hsla(colors.$neutral-hue, 100%, 12%, 0.05), inset
 // -------------------------
 // $navbar-background: var(--body-background);
 // $navbar-border: var(--border-color);
-// $navbar-text: var(--text-primary);
+// $navbar-text: var(--body-emphasized);
 // $navbar-primary: $primary;
 // $navbar-link-color: var(--link-color);
 // $navbar-link-hover-color: var(--link-color-hover);
 // $navbar-link-hover-background: var(--muted-background);
 // $navbar-link-active-color: var(--body-background);
-// $navbar-link-active-background: var(--text-primary);
+// $navbar-link-active-background: var(--body-emphasized);

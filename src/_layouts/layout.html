@@ -56,3 +56,13 @@
 </svg>
 
 <script type="module" src="/js/base.bundle.js"></script>
+<script type="application/javascript">
+document.addEventListener('DOMContentLoaded', (e)=> {
+    Array
+    .from(document.getElementsByClassName('blur-in'))
+    .slice(0,2)
+    .map(element => {
+        element.classList.toggle('in',true);
+    });
+});
+</script>

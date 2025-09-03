@@ -9,41 +9,36 @@ cssfile: "css/pages/about.css"
 
 {% section "bio","full-grid" %}
 
-# Hello there.
+# Hello there.{.blur-in}
 
-My family calls me **Brian**. My friends call me **[BMC\*](#killabmc){onclick="event.preventDefault();return false;"}**. I am a father 👧🏻 👦🏻, husband 👩🏻, New Yorker 🗽, ️[cyclist](https://www.strava.com/athletes/773650) 🚲, [divemaster](https://www.steelgills.com) 🤿, [fusion chef](https://www.fusionfamilyfeast.com/) 👨‍🍳, [world traveler](https://www.google.com/maps/d/u/0/edit?mid=1jAS6t-WP2zKeOYag3KsGKZtqxERvSfE) 🌎, and **[digital product maker](/portfolio/)** 👨‍💻.{.large-type}
+<span id="parallelogram"></span>My family calls me **Brian**. My friends call me **[BMC\*](#killabmc){onclick="event.preventDefault();return false;"}**. I am a father 👧🏻 👦🏻, husband 👩🏻, New Yorker 🗽, ️[cyclist](https://www.strava.com/athletes/773650) 🚲, [divemaster](https://www.steelgills.com) 🤿, [fusion chef](https://www.fusionfamilyfeast.com/) 👨‍🍳, [world traveler](https://www.google.com/maps/d/u/0/edit?mid=1jAS6t-WP2zKeOYag3KsGKZtqxERvSfE) 🌎, and **[digital product maker](/portfolio/)** 👨‍💻.{.large-type .blur-in}
 
 Short for "killaBMC", my genuine wu-tang-name betrothed by the GZA{#killabmc .tooltip}
 
-![Portrait of Brian](/images/profile/headshot-slash.png) {.portrait  .blur-in}
-<!-- ![Portrait of Brian](/images/profile/headshot-slash.png) {.portrait  .blur-in} -->
-
+![Portrait of Brian](/images/profile/mrbmc-20241121.jpeg) {#portrait .blur-in}
 
 {% endsection %}
 
-1. [Mission](#intro) 
+<svg viewBox="0 0 600 600" style="height:0;">
+  <defs>
+    <clipPath id="portrait_mask" clipPathUnits="objectBoundingBox">
+      <path fill="none" d="
+      M 0.1,0.0 
+      L 0.0,1.0 
+      L 0.9,1.0
+      L 1.0,0.0"/>
+    </clipPath>
+  </defs>
+</svg>
+
+1. [Mission](#mission) 
 1. [UX Principles](#principles) 
 1. [Design Storytelling](#process)
 1. [Leadership Philosophy](#leadership) 
 
 {.sticky-nav}
 
-{% section "intro","" %}
-
-# Ridding the world of crummy software.
-
-I have always been fascinated by tools. Tools augment our capability as a species. They empower us, change us, and mold our view of the world. The power conferred can spark a conversation with evolution. 
-
-Software is a tool that influences our capabilities in unprecedented ways.
-
-Making good software, that is inherently good, has been my career mission. I love the balance of creativity and analysis required to create something that is both useful to people and inherently good. Software Design has an incredible power to give form to ideas. The process of **listening, making, and collaborating** unlocks critical thinking for everyone. 
-
-My unique career path has pivoted between design, product, and engineering thanks to an entrepreneurial instinct to run towards ~~problems~~ opportunities. The common thread has been using Design to deliver through ambiguity at any scale. 
-
-[CV & Resumé](/images/uploads/Brian_McConnell-Resume_2025.pdf)
-
-{% endsection %}
-
+{% include "_mission.md" %}
 
 {% include "_principles.md" %}
 

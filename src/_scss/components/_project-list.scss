@@ -4,8 +4,8 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  grid-row-gap: lib.$gutter;
-  grid-column-gap: lib.$gutter;
+  grid-row-gap: var(--gutter);
+  grid-column-gap: var(--gutter-xl);
 
   .project {
     display: flex;

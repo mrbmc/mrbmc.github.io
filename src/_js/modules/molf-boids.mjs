@@ -128,7 +128,8 @@ const setupScene = (window, options = {}) => {
         customTarget
     } = options;
     
-    const canvas = window.document.getElementById('boids');
+    const canvas = document.createElement('canvas');
+    window.document.getElementById('boids').appendChild(canvas);
     const camera = {
         viewMatrix: createIdentityMatrix(),
         projectionMatrix: createIdentityMatrix(),
@@ -137,7 +138,7 @@ const setupScene = (window, options = {}) => {
         minDimension: 1
     };
     
-    applyRotation(camera.projectionMatrix, beta, gamma);
+    // applyRotation(camera.projectionMatrix, beta, gamma);
     
     // Handle canvas resizing
     const updateCanvas = () => {
@@ -146,8 +147,10 @@ const setupScene = (window, options = {}) => {
         if (square) {
             canvas.className = "sq";
         } else {
-            camera.aspectRatio = canvas.clientWidth / canvas.clientHeight;
+            camera.aspectRatio = 1;//canvas.clientHeight / canvas.clientWidth;
         }
+        console.log('square',square);
+        console.log('camera',camera);
         
         canvas.width = camera.pixelRatio * canvas.clientWidth;
         canvas.height = camera.pixelRatio * canvas.clientHeight;

@@ -105,10 +105,10 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setLibrary('md', markdownLib);
   eleventyConfig.addPlugin(timeToRead);
 
-  eleventyConfig.addPairedShortcode('section', (children,_id,_class) => {
+  eleventyConfig.addPairedShortcode('section', (children,elementId,elementClass) => {
     let result = `<section`;
-    if(_id) result += ` id="${_id}"`;
-    if(_class) result += ` class="${_class}"`;
+    if(elementId) result += ` id="${elementId}"`;
+    if(elementClass) result += ` class="${elementClass}"`;
     result += `>${children}</section>`;
     return result;
   });

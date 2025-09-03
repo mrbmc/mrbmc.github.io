@@ -1,12 +1,14 @@
-@use "library" as lib;
+@use "../library" as lib;
 
 :root {
     // PRIMITIVES
     // ------------------------------------------------------------
-    --black:            #{lib.$neutral-10};
+    --black:            #{lib.$neutral-05};
+    --off-black:        #{lib.$neutral-10};
     --gray-dark:        #{lib.$neutral-30};
     --gray-mid:         #{lib.$neutral-50};
     --gray-light:       #{lib.$neutral-90};
+    --off-white:        #{lib.$neutral-95};
     --white:            #{lib.$neutral-100};
     --white-semi:       #{lib.$neutral-100}61;
 
@@ -21,22 +23,26 @@
 
     // SEMANTIC TOKENS
     // ------------------------------------------------------------
-    // --text-bold-color:    var(--black);
-    --link-color:            var(--black);
-    --link-color-hover:      var(--primary);
-
-    --body-background:       var(--white);
+    --body-background:       var(--off-white);
     --body-foreground:       var(--gray-dark);
+    --body-emphasized:       var(--black);
+
     --card-background:       var(--white);
     --card-foreground:       var(--gray-dark);
     --card-bold-color:       var(--black);
+    //nee well-background
     --muted-background:      var(--gray-light);
     --muted-foreground:      var(--gray-mid);
-    --muted-emphasized:       var(--black);
-    --accent-background:       #{lib.$neutral-30};
+    --muted-emphasized:      var(--black);
+    //nee hero-background
+    --accent-background:       #{lib.$neutral-20};
     --accent-foreground:       #{lib.$neutral-90};
     --accent-emphasized:       #{lib.$neutral-100};
-    --border-color:          var(--gray-light);
+
+    --border-color:          var(--gray-mid);
+
+    --link-color:            var(--black);
+    --link-color-hover:      var(--primary);
 
     // GRID & LAYOUT
     // ------------------------------------------------------------
@@ -51,6 +57,13 @@
     // Defining shadows as a CSS var doesn't work for some reason
     // --shadow: 0 2px 8px var(--accent-background), 0 calc(var(--gutter * .25)) var(--gutter) var(--accent-background);
     // --shadow-xl: 0 2px 8px var(--accent-background), 0 calc(var(--gutter * 1)) var(--gutter-xl) var(--accent-background);
+
+    // TYPE
+    // ------------------------------------------------------------
+    --base-font: #{lib.$base-font-family};
+    --mono-font: #{lib.$mono-font-family};
+    --head-font: #{lib.$head-font-family};
+    --serif-font: #{lib.$serif-font-family};
 
     // NAVBAR
     // ------------------------------------------------------------
@@ -73,11 +86,13 @@
 @media (prefers-color-scheme: dark) {
     :root {
         --black:        #{lib.$neutral-100};
+        --off-black:    #{lib.$neutral-95};
         --gray-dark:    #{lib.$neutral-90};
         --gray-mid:     #{lib.$neutral-50};
         --gray-light:   #{lib.$neutral-30};
         --white:        #{lib.$neutral-10};
-        --white-semi:   #{lib.$neutral-10}61;
+        --off-white:    #{lib.$neutral-05};
+        --white-semi:   #{lib.$neutral-05}61;
 
         --primary:      #{lib.$primary-inverse};
     };

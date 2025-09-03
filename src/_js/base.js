@@ -1,9 +1,16 @@
+/* * * * * * * * * * * * * * * * * * * * *
+CONFIGURATION
+* * * * * * * * * * * * * * * * * * * * */
 const DEBUG = (document.location.hostname == "localhost" || document.location.href.includes('debug'));
 const MOBILE = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent);
 var VERBOSE = false && DEBUG,
     last_known_scroll_position = 0,
     ticking = false;
 
+/* * * * * * * * * * * * * * * * * * * * *
+FUNCTIONS
+* * * * * * * * * * * * * * * * * * * * */
+import { isInViewport } from './modules/dom_utils.mjs';
 
 function initEmails(){
     if(DEBUG) console.log('initEmails');
@@ -16,21 +23,40 @@ function initEmails(){
   })
 }
 
-function initAnimations() {
-    Array.from(document.getElementsByClassName('blur-in')).map(element => {
-        element.classList.toggle('in',true);
+function animateElementsInView() {
+    Array
+    .from(document.querySelectorAll('.blur-in,.fade-in,.build-in'))
+    .map(element => {
+        element.classList.toggle('in',isInViewport(element));
     });
-    Array.from(document.getElementsByClassName('fade-in')).map(element => {
-        element.classList.add('in',true);
-    });
-};
+}
 
+function baseScroll (e) {
+    if (!ticking) {
+        requestAnimationFrame(() => {
+            animateElementsInView();
+            ticking = false;
+        });
+        ticking = true;
+    }
+}
+
+/* * * * * * * * * * * * * * * * * * * * *
+EVENT LISTENERS
+* * * * * * * * * * * * * * * * * * * * */
 window.addEventListener('load', function(e) {
     "use strict";
     initEmails();
-    initAnimations();
+    animateElementsInView();
 },false);
 
+window.addEventListener('scroll', baseScroll);
 
+
+
+/* * * * * * * * * * * * * * * * * * * * *
+MODULES
+* * * * * * * * * * * * * * * * * * * * */
 import "./modules/critters.mjs";
+
 // import "./modules/ga.mjs";

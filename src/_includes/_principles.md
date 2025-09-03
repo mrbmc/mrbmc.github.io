@@ -12,9 +12,9 @@ These mantras - which colleagues have heard me repeat - help guide consistent hi
 
 <div class="col-7">
 
-##### Ask, don't assume.
+#### Ask, don't assume.
 
-Bring a beginner's mindset to your work so you are open to evidence that confirms your view of the problem and validates your solution. So much of what we think we know is inference, and asking questions distinguishes real constraints from perceived limitations.
+Bring a beginner's mindset to your work so you can stay open to evidence that elucidates the problem and expands your view of potential solutions. So much of what we think we know is inference, and asking dumb questions distinguishes real constraints from preconceived limitations.
 
 <!--Our perception of the world is a rich sensory hallucination inferred from assumptions and previous experiences. The human brain uses perceptual completion to construct narratives that fill in gaps in data. We can reduce ambiguity in Product Design in two ways. We collect evidence - qualitative and quantitative research - to fill gaps in our understanding. We use repeated, iterative, communication, to build alignment up, down, and across work streams.-->
 
@@ -22,7 +22,7 @@ Bring a beginner's mindset to your work so you are open to evidence that confirm
   
 <div class="col-7">
 
-##### "If you want to go fast, go alone.<br />If you want to go far, go together."
+#### "If you want to go fast, go alone.<br />If you want to go far, go together."
 
 Success is an infinite sum game that can be grown through collaboration. A great outcome depends on collaboration from experts with <em>diverse skills</em> and not a lone genius creator.
 
@@ -34,7 +34,7 @@ Success is an infinite sum game that can be grown through collaboration. A great
 
 <div class="col-7">
 
-##### "Momentum is the best plan."
+#### "Momentum is the best plan."
 
 It's so much easier to pivot or accelerate if you're already in motion. A sealion balances a ball on its nose by <em>intentionally</em> moving the ball where it wants to go. 
 
@@ -44,7 +44,7 @@ It's so much easier to pivot or accelerate if you're already in motion. A sealio
   
 <div class="col-7">
 
-##### "Walk all the way around the tree to find the best fruit."
+#### "Walk all the way around the tree to find the best fruit."
 
 The solution in design often seems obvious but is usually the product of a rigorous process. In the rare event that you find a viable solution quickly, you still have the burden of proof to be sure.
 

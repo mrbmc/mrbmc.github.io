@@ -7,7 +7,7 @@
   padding: 0 0.5rem;
   height: var(--navbar-height);
   width: 100%;
-  background: var(--card-background);
+  background: var(--navbar-background);
 
   display: flex;
   justify-content: space-between;
@@ -20,7 +20,7 @@
   }
 
   .logo {
-    $logo-size: calc(var(--navbar-height) * 1);
+    $logo-size: calc(var(--navbar-height) * 0.8);
     width: $logo-size;
     height: $logo-size;
     z-index: 30;
@@ -44,7 +44,8 @@
     backdrop-filter: blur(.25rem);
     border-radius: 6vh;
     transition: transform lib.$speed lib.$easing;
-    mix-blend-mode: exclusion !important; 
+    mix-blend-mode: exclusion !important;
+    transform-origin: 50% 0% 0;
     svg {
     }
     &:hover {
@@ -70,10 +71,6 @@
       border-radius: var(--border-radius-xl);
       // text-transform: uppercase;
       text-decoration: none;
-
-      // these are hacks for the Univers font
-      // line-height: 1;
-      padding: .125em .75rem;
 
       &:hover {
         background: var(--muted-background);

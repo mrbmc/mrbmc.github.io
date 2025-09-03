@@ -1,13 +1,14 @@
-{% assign _heading = heading | slug %}
+{% assign slug = heading | slug %}
+{% unless id %}{% assign id = slug %}{% endunless %}
 {% assign _class = "project-list " | append: class %}
 
 {% if heading %}## {{ heading }}{% endif %}
 
 {% if description %}{{ description }}{% endif %}
 
-{% section "project-list", _class %}
+{% section id, _class %}
 
-{% for project in projectList reversed %}{% if forloop.index0 < count %}
+{% for project in collection reversed %}{% if forloop.index0 < count %}
 <article class="project">
 
 <header>
@@ -22,7 +23,7 @@
 - {{ product }}
 {% endfor %}{.small-type}
 
-<span class="muted">{{project.templateContent | timeToRead}} to read</span>  
+{{project.templateContent | timeToRead}} to read{.muted .duration}
 
 </header>
 

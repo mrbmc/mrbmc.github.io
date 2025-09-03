@@ -17,11 +17,11 @@ casestudy: true
 timeline: 2019-2023
 ---
 
-## How might we connect consumers to the stories & characters they love through a streaming service?
+## A glass-to-glass connection from consumers to the stories & characters they love.
 
 | Role & Responsibility                                                                                                                                          | Team                                   | Timeline            | Impact                                                                     |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- | ------------------- | -------------------------------------------------------------------------- |
-| **Sr. Director, Product Design**<br>Team hiring, management, and organization design. Design strategy. Partner management. Budgeting. Culture development. | 12 FT Designers + 6 Design Contractors | Jan 2019 - Aug 2023 | • Saved **$80M** p/a in operating costs<br>• Supported **25% YoY growth in MRR** | 
+| **Sr. Director, Product Design**<br>Team hiring, management, and organization design. Design strategy. Stakeholder & Partner management. Budgeting. Culture culturation. | 11 FTE Designers + 1 Program Manager + 6 Design Contractors | Jan 2019 - Aug 2023 | • Saved **$80M** p/a in operating costs<br>• Supported **25% YoY growth in MRR** | 
 
 {.rotate #summary}
 
@@ -37,35 +37,44 @@ timeline: 2019-2023
 
 ## The Strategy (of Streaming){#strategy}
 
->To create something truly novel you need novel tools.  
--Brian McConnell
+Building a global streaming service that meets consumer expectations requires an **entire industry** of components in commerce, content, support, data insights, and developer tools. The costs & privacy considerations at Disney's scale required us to build novel solutions.
 
-Building a global streaming service that meets consumer expectations requires an **entire industry** of components in commerce, content, support, data insights, and developer tools. Disney's costs at scale & privacy policies required us to build novel solutions.
+**To create something truly novel, you need novel tools.**
 
-I was accountable for investing design in the biggest business opportunities of:  
-customer acquisition - `Net Subs`  
-revenue growth - `MRR`  
-cost optimization - `OpEx`  
-customer engagement - `RFE`
+The purview of the Enterprise Experience team was a suite of products that had comparable commercial offerings. We created unique variants of these tailored to Disney at lower costs.
 
-| Platform Need | Kpi | Commercial Analog(s) | Disney Product |
-| -- | -- | -- | -- |
-| Commerce Orchestration | Net Subs, MRR | [Orb](https://www.withorb.com/), [Metronome](https://metronome.com/) | [Genie](#genie) |
-| Content Curation | RFE | [Contentful](https://www.contentful.com/) | [Polaris](#content-tools) |
-| Content Review | RFE, OpEx | [ContentStudio](https://contentstudio.io/) | [Tesseract](#content-tools) |
-| Experimentation & Feature Flagging | Net Subs, MRR, RFE | Optimizely, Launch Darkly | [WeaponX](#weaponx)|
-| Customer Support Portal | OpEx, Gross Margin | [Zendesk](https://www.zendesk.com/) | [Baymax](#baymax) |
-| Streaming Quality Analysis | OpEx | [Conviva](https://www.conviva.com/) | [Optumus](#optumus) |
-| Centralized resources for managing developer resources (services, APIs, documentation, etc) | OpEx | n/a | Developer Platform |
-| Insights & Data portal | n/a | [Tableau](https://www.tableau.com/), [Zoho](https://www.zoho.com/analytics/) | [DATA Portal](#dataportal)|
-| Advertising curation, provisioning, and deployment. | MRR | [Google AdSense](https://adsense.google.com/), Amazon Advertising | Ad Manager, Mission Control |
-| Testing APIs, documentation, and issue tracking for developers building with Disney's SDK. | Net Subs, MRR | [GitLabs](https://about.gitlab.com/) | Partner Portal |
-| Personalized messaging (Email, SMS, Push) | Net Subs, MRR | [salesforce](https://www.salesforce.com/) + [braze](https://www.braze.com/) | [Galaxy](#galaxy) |
+| Product Use Case | Kpi | Commercial Analog(s) |
+| -- | -- | -- |
+| [Commerce Orchestration](#genie) | Net Subs, MRR | Orb + Metronome |
+| [Content Curation](#content-tools) | RFE | Contentful |
+| [Content Catalog Management](#content-tools) | RFE, OpEx | ContentStudio\|io |
+| [Experimentation & Feature Flagging](#weaponx) | Net Subs, MRR, RFE | Optimizely + Launch Darkly |
+| [Customer Experience Controls](#baymax) | OpEx, Gross Margin | Zendesk |
+| [Streaming Quality Analysis](#optumus) | OpEx | Conviva |
+| [Developer resources management](#developerportal)<br>(services, APIs, documentation, etc) | OpEx | GitHub + AWS |
+| [Insights & Data portal](#dataportal) | n/a | Tableau + Zoho |
+| Advertising curation, provisioning, and deployment. | MRR | Google AdSense + Amazon Advertising |
+| Testing APIs, documentation, and issue tracking for Disney+ SDK. | Net Subs, MRR | GitLabs |
+| [Personalized messaging](#galaxy)<br />(Email, SMS, Push) | Net Subs, MRR | Salesforce + Braze |
 
+{#scope-table}
 
-I used a **Growth Framework** to prioritize investment in each of these products. This helped in securing funding for staffing, contract, and roadmap priority. We proceeded from the top right to the lower left in sequencing our hiring and projects.
+### Setting Priority
+
+I was the design executive accountable for investing design in these biggest business outcomes: 
+ 
+`Subs` - customer acquisition  
+`MRR` - revenue growth  
+`OpEx` - cost optimization  
+`RFE` - customer engagement
+
+When everything is a priority, nothing is. I used a **Growth Framework** in collaboration with opportunity estimates from Product and Effort Estimates from engineering, to align Executives and Partners on where to invest our fixed resources.
+
+This model helped in securing funding for staffing, contractors, and roadmap priority. We sequenced our work from the top right to lower left in hiring and project planning.
 
 ![Enterprise ROI](/images/portfolio/disney-enterprise/exd-roi-framework.png)
+
+----
 
 ## The Team{#team}
 
@@ -86,38 +95,41 @@ Culture can be designed with intentional reinforcement of the behaviors that ali
 
 To tackle such a large surface area, we organized the team into pods for each topical area. These subjects aligned with business outcomes as well.
 
+Aligning our team with these business areas enabled long lived product teams that increased performance over time. It also empowered our designers with ownership and subject matter expertise; this helped develop their influence.
+
 ![](/images/portfolio/disney-enterprise/exd-pods.png){.card}
 
+----
 
 ## The Products {#products}
 
 ### Commerce Tools{#commerce}
 
-#### Commerce Orchestration {#genie}
+#### Commerce Orchestration - Codename "Genie" {#genie}
 
-*codename "Genie"*
+Putting the right offer in front of the right user at the right time is deceptively complex. Our global scale required 1000+ combinations of content rights, currencies, payment terms, and devices. 
 
-Putting the right offer in front of the right user at the right time is depetively complex. At global scale that means 1000+ combinations of content rights, currency, payment terms, and devices. Running our own commerce stack unlocked Disney+'s global expansion from 25M subscribers domestically to **105M net subscribers** globally.
+Bespoke commerce operations unlocked Disney+'s global expansion from 25M subscribers domestically to **105M net subscribers** globally. Features for managing automated price changes grew **MRR by 25% YoY**.
 
-Features for managine automated price changes grew **MRR by 25% YoY**.
+##### Design Principles
+
+The design of this product was guided by the principles of **"Safety"** and **"Agility"**. These principles guided real design tradeoffs between discoverability vs progressive disclosure, or reviews vs completion time. 
 
 - ![props 2](/images/portfolio/disney-enterprise/props-list.jpg)  {.col-4}
 - ![genie 2](/images/portfolio/disney-enterprise/genie-campaign.png) {.col-8 .row-2}
 - ![genie 1](/images/portfolio/disney-enterprise/genie-offers.jpg) {.col-4}
-{.grid .well .full-width}
+{.grid .well .full-grid}
 
-#### Support Agent Tools{#baymax}
-
-*codename Baymax*
+#### Support Agent Tools - codename "Baymax"{#baymax}
 
 Disney provides its guests with exceptional care because we believe the brand experience provides long-term commercial value. Be that as it may, customer care can be a significant cost center. *How might we deliver personal care at scale?* 
 
-These custom built tools for our agents saved Disney **$20M/pa in operating expenses** by shortening **case resolution time**, increasing **CSAT** scores, and giving agents **upsell** capability.
+These custom-built tools for our agents saved Disney **$20M/pa in operating expenses** by shortening **case resolution time**, increasing **CSAT** scores, and giving agents **upsell** capability.
 
 - ![Support Agent Portal](/images/portfolio/disney-enterprise/baymax-customer.jpg) {.col-8 .row-2}
 - ![Support Agent Portal](/images/portfolio/disney-enterprise/baymax-search_results.png) {.col-4}
 - ![Support Agent Portal](/images/portfolio/disney-enterprise/baymax-cancel.png) {.col-4}
-{.grid .well .full-width}
+{.grid .well .full-grid}
 
 #### Lifecycle Messaging{#galaxy}
 
@@ -130,7 +142,7 @@ A guiding UX principle across Disney+ is to **put the right offer in front of th
 - ![Messag Localization](/images/portfolio/disney-enterprise/galaxy-localization-1.png) {.col-6}
 - ![Personalized Messaging](/images/portfolio/disney-enterprise/galaxy-v1.png){style="object-fit:contain;max-height:none;"} {.col-6 .row-2}
 - ![Push Messaging](/images/portfolio/disney-enterprise/galaxy-push.png){style="object-fit:contain;"} {.col-6}
-{.grid .well .full-width}
+{.grid .well .full-grid}
 
 ### Content Platform{#content-tools}
 
@@ -147,14 +159,14 @@ The content strategy for most streaming services, including Disney+, is to creat
 - ![Visual Browsing](/images/portfolio/disney-enterprise/polaris-search.png) {.col-4 .contain}
 - ![Visual Browsing](/images/portfolio/disney-enterprise/polaris-visualbrowse.png) {.col-4 .contain}
 - ![Content Curation](/images/portfolio/disney-enterprise/polaris-set-pcs.png) {.col-4}
-{.grid .well .full-width}
+{.grid .well .full-grid}
 
 A team of editors steeped in knowledge of the Disney catalog created hundreds of content collections around themes, brands, characters. We built a WYSIWYG editor that showed the custom artwork for each title so editors could organize collections in a visually harmonious way. We saw **engagement**{.success} and **CVR**{.success} lift from doing this.
 
 - ![Content Targeting](/images/portfolio/disney-enterprise/polaris-edit_cta.png) {.col-3 .contain}
 - ![Content Targeting](/images/portfolio/disney-enterprise/polaris-collection.png) {.col-6 .contain}
 - ![Content Targeting](/images/portfolio/disney-enterprise/polaris-browse.jpg) {.col-3 .contain}
-{.grid .well .full-width}
+{.grid .well .full-grid}
 
 ### Analytics{#analytics}
 
@@ -173,7 +185,7 @@ This product saved Disney **$30M/pa** over comparable third party products.
 - ![Streaming QoS Analysis](/images/portfolio/disney-enterprise/optumus-session.png) {.col-8 .row-2}
 - ![Streaming QoS Analysis](/images/portfolio/disney-enterprise/optumus-dashboard.png) {.col-4 .contain}
 - ![Streaming QoS Analysis](/images/portfolio/disney-enterprise/optumus-spotlight.png) {.col-4 .contain}
-{.grid .well .full-width}
+{.grid .well .full-grid}
 
 #### Experimentation, A/B Testing, Feature Flagging {#weaponx}
 
@@ -186,7 +198,7 @@ An home-made tool **saved us $5M/pa** in licensing fees and unlocked MRR growth.
 
 - ![Experimentation](/images/portfolio/disney-enterprise/weaponx-dashboard.jpg) {.col-6}
 - ![Experimentation](/images/portfolio/disney-enterprise/weaponx.png) {.col-6}
-{.grid .well .full-width}
+{.grid .well .full-grid}
 
 #### Data Portal{#dataportal}
 
@@ -224,7 +236,7 @@ Evangelizing design system adoption begins with a promise of a better future. We
 - ![Experimentation](/images/portfolio/disney-enterprise/new/experiments-results.jpg) {.col-4}
 - ![Advertising](/images/portfolio/disney-enterprise/new/ads-mission-control-scheduling.jpg) {.col-4}
 - ![Developer Productivity](/images/portfolio/disney-enterprise/new/dev-portal.jpg) {.col-4}
-{.grid .well .full-width}
+{.grid .well .full-grid}
 
 
 <style>
@@ -243,6 +255,9 @@ Evangelizing design system adoption begins with a promise of a better future. We
 }
 table#summary tr {
     grid-template-rows: 3fr 1fr 1fr 2fr;
+}
+#scope-table tbody tr td:nth-of-type(2) {
+    font-family: var(--mono-font);
 }
 </style>
 

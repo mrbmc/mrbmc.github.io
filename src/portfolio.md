@@ -1,17 +1,30 @@
 ---
 layout: layout.html
-bodyclass: work list
+bodyclass: portfolio list
 title: "Portfolio"
 cssfile: "css/pages/portfolio.css"
 permalink: /portfolio/
+eleventyImport:
+  collections: ["work","talk","personal"]
 ---
 
-{% include "_project-list.md", projectList: collections.work, heading: "Impact Projects", description: false, count:10 %}
+{% include "_project-list.md", 
+	collection: collections.work, 
+	count:10,
+	id: "work", 
+	heading: "Impact Projects", 
+	description: false %}
 
-{% if collections.talk.length > 0 %}
-{% include "_project-list.md", projectList: collections.talk, heading: "Talks", description: "A great way to learn is to share what you think you know.", count:3 %}
-{% endif %}
+{% include "_project-list.md", 
+	collection: collections.talk, 
+	count:3, 
+	id: "talk",
+	heading: "Talks", 
+	description: "A great way to learn is to share what you think you know." %}
 
-{% if collections.personal.length > 0 %}
-{% include "_project-list.md", projectList: collections.personal, heading: "Play", description: "As a Kinesthetic Learner, I need create new things to refine my thinking, and develop new skills.", count:4 %}
-{% endif %}
+{% include "_project-list.md", 
+	collection: collections.personal, 
+	count:4, 
+	id: "personal",
+	heading: "Play", 
+	description: "As a Kinesthetic Learner, I need create new things to refine my thinking, and develop new skills."%}

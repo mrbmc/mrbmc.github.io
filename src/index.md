@@ -9,9 +9,9 @@ cssfile: "css/pages/home.css"
 
 {% section "masthead","full-grid" %}
 
-# Design, Product Discovery, and Cross-Functional Leadership
+## Design, Product Discovery, and Cross-Functional Leadership across B2C and B2B, from early startups to global enterprises.{.blur-in}
 
-<canvas id="boids"></canvas>
+{#boids}
 
 {% endsection %}
 
@@ -24,11 +24,16 @@ cssfile: "css/pages/home.css"
 </script>
 {% endcomment %}
 
-{% include "_project-list.md", projectList: collections.work, heading: false, count: 9, class: "full-grid", description:false %}
+{% include "_project-list.md", 
+    count: 9, 
+    collection: collections.work, 
+    id: "work",
+    class: " full-grid", 
+    heading: false, 
+    description:false%}
 
 {% include "_post-list.md", postList: collections.post, heading: "Recent Posts", count: 4, description:false %}
 
-<!-- <script type="text/javascript" language="javascript" src="/js/modules/molf.mjs"></script> -->
 
 <script type="module" src="/js/home.bundle.js"></script>
 

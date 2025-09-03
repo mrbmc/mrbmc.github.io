@@ -13,25 +13,40 @@ body.home {
 
   #masthead {
     background: var(--body-background);
-    h1,h2 {
+    margin-bottom: var(--gutter-xl);
+    justify-content: center;
+
+    h1,h2,h3,p {
       color: var(--body-foreground);
+    }
+
+    #boids {
+      padding: 0 var(--gutter-xl);
+      box-sizing: border-box;
+      canvas {
+        width: 100%;
+        height: 100%;
+      }
+      @media (max-width: lib.$breakpoint) {
+        height: 62vw;
+      }
     }
     @media (min-width: lib.$breakpoint) {
       height: 80vh;
-      padding-right: 40vh;
-      justify-content: center;
-    }
-    canvas#boids {
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 80vh;
-      height: 76vh;
-      @media (max-width: lib.$breakpoint) {
-        width: 90vw;
-        height: 38vh;
-        right: 5vw;
+      // justify-content: flex-end;
+      h1,h2,h3 {
+        width: 60vw;
       }
+      #boids {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 80vh;
+      }
+    }
+    @media (max-width: lib.$breakpoint) {
+      flex-direction: column-reverse;
     }
   }
 
@@ -62,10 +77,7 @@ body.home {
   }
 */
 
-  #project-list {
-    // background: var(--body-background);
-    // position: relative;
-    // z-index: 10;
+  .project-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 

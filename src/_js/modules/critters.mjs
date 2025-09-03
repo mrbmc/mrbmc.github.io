@@ -1,6 +1,7 @@
 // Get polygon elements
 const polygons = document.querySelectorAll('.nav-top svg polygon');
-
+const link = document.querySelectorAll('.nav-top');
+const svg = document.querySelectorAll('.nav-top svg');
 // Define the animation keyframes for each polygon
 const keyframes = [
 [
@@ -104,6 +105,17 @@ function updatePolygons(progress) {
     });
 }
 
+function updateShadows(velocity) {
+    let vOffset = (velocity / -10);
+    let spread = 4 * Math.abs(velocity / 100);
+    let vScale = 1 + Math.abs(velocity / 100);
+    let vPos = 0;//(velocity / -100);
+    let blur = Math.abs(velocity / 150) * 2;
+    document.querySelector('.nav-top').style.boxShadow = '0 '+vOffset+'px '+spread+'px rgba(0, 0, 0, 0.13)';
+    document.querySelector('.nav-top svg').style.transform = "scale(1.0,"+vScale+")  translateY("+vPos+"px)";
+    document.querySelector('.nav-top svg').style.filter = "blur("+blur+"px)";
+}
+
 //This pauses the animation at specified points while scrolling
 // function scrollPause (scrollProgress) {
 //     let scrollPause = 0.25;//when to stop animation
@@ -127,16 +139,21 @@ function updatePolygons(progress) {
 
 // Throttled scroll handler for better performance
 let ticking = false;
+let lastScroll = 0;
 export function critterScroll() {
     if (!ticking) {
         requestAnimationFrame(() => {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
             let scrollProgress = Math.max(0, Math.min(1, scrollTop / scrollHeight));
-
             // scrollProgress = scrollPause(scrollProgress);
-            
             updatePolygons(scrollProgress);
+
+
+            let velocity = scrollTop - lastScroll;
+            updateShadows(velocity);
+            lastScroll = scrollTop;
+
             ticking = false;
         });
         ticking = true;
@@ -145,9 +162,6 @@ export function critterScroll() {
 
 // Add scroll event listener
 window.addEventListener('scroll', critterScroll);
-
-// Initialize with first frame
-updatePolygons(0);
 
 // Optional: Add keyboard controls for precise scrubbing
 /*
@@ -193,3 +207,7 @@ document.addEventListener('touchmove', (e) => {
     e.preventDefault();
 });
 */
+
+// Initialize with first frame
+updatePolygons(0);
+

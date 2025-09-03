@@ -1,8 +1,12 @@
+/* * * * * * * * * * * * * * * * * * * * 
+DEPENDENCIES
+* * * * * * * * * * * * * * * * * * * */
 const { src, dest, watch, series, parallel } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const rsync = require('gulp-rsync');
 const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
+const ruglify = require("@lopatnov/rollup-plugin-uglify");
 const cleanCSS = require('gulp-clean-css'); // If you want CSS minification
 const sourcemaps = require('gulp-sourcemaps');
 const exec = require('child_process').exec;
@@ -11,17 +15,23 @@ const clean = require('gulp-clean');
 const fsCache = require( 'gulp-fs-cache' );
 const argv = yargs.argv;
 const rollup = require('rollup');
-const terser  = require('@rollup/plugin-terser');
+const nodeResolve = require('@rollup/plugin-node-resolve');
 const gulpif = require('gulp-if');
 
-
+/* * * * * * * * * * * * * * * * * * * * 
+CONFIGURATION
+* * * * * * * * * * * * * * * * * * * */
 const localenv = "http://localhost:8000";
 const localdir = "mrbmc";
-const S3BUCKET = "www.brianmcconnell.me"
+const S3BUCKET = "s3://www.brianmcconnell.me"
 const CFDISTRO = "E1TNSK7JF24IAY";
 const paths = {
   jsbundles: [
     {
+    //   input: 'src/_js/gaia/pixi.js',
+    //   output: 'www/js/pixi.bundle.js'
+    // },
+    // {
       input: 'src/_js/base.js',
       output: 'www/js/base.bundle.js'
     },
@@ -48,7 +58,6 @@ const paths = {
   css: [
     'src/_scss/**/!(_*).scss'
   ],
-  html: ['src/**/*.md', 'src/**/*.njk'], // Eleventy source files (assuming Markdown or Nunjucks)
   assets: [
     {
       'src':'src/images/',
@@ -92,13 +101,27 @@ const dryrun = argv.dryrun || argv.debug == "dryrun";
 const isProduction = argv.prod || argv.env === 'production';
 
 
-async function rollupJS() {
-  const log = argv.verbose ? console.log : () => {};
-  const plugins = [];
 
-  if (isProduction) {
-    plugins.push(terser());
-  }
+
+/* * * * * * * * * * * * * * * * * * * * 
+FUNCTIONS
+* * * * * * * * * * * * * * * * * * * */
+
+async function bundleJS() {
+  const log = argv.verbose ? console.log : () => {};
+  const plugins = [
+    nodeResolve(),
+    ruglify({
+    mangle: isProduction,
+    compress: {
+      drop_console: isProduction
+    },
+    output: {
+        beautify: !isProduction,
+        comments: !isProduction
+    }
+    })
+  ];
 
   const buildPromises = paths.jsbundles.map(async (config) => {
     const bundle = await rollup.rollup({
@@ -108,8 +131,7 @@ async function rollupJS() {
     
     const result = await bundle.write({
       file: config.output,
-      format: 'es',
-      sourcemap: !isProduction
+      format: 'es'
     });
     
     log(`Built ${config.output}`);
@@ -117,10 +139,9 @@ async function rollupJS() {
   });
 
   return Promise.all(buildPromises);
-
 }
 
-function buildJS() {
+function transpileJS() {
   const log = argv.verbose ? console.log : () => {};
 
   return src(paths.js)
@@ -140,8 +161,7 @@ function buildJS() {
     .pipe(dest('www/js'));
 }
 
-// Compile SCSS to CSS
-function compileCSS() {
+function transpileCSS() {
   const log = argv.verbose ? console.log : () => {};
   const format = isProduction ? '' : 'beautify';
   return src(paths.css)
@@ -176,13 +196,13 @@ function syncAssets() {
 
   //exec is much MUCH faster than calling gulp-rsync
 
-  let foo = [];
+  let promises = [];
   let command = `rsync -av #src #dst`;
       command += " --exclude='.DS_Store'";
-      command += " --include='blog/*.mp4'";
+      command += " --include='**/*.mp4'";
+      command += " --include='**/**/'";
+      command += " --include='**/**/*.mp4'";
       command += " --exclude='blog/*'";
-      command += " --include='portfolio/**/'";
-      command += " --include='portfolio/**/*.mp4'";
       command += " --exclude='portfolio/*'";
       command += " --exclude='portfolio/**/*'";
 
@@ -200,7 +220,7 @@ function syncAssets() {
 
     if(argv.verbose) console.log(cmd);
 
-    foo.push(
+    promises.push(
       exec(cmd, function (err, stdout, stderr) {
         if(argv.verbose) {
           console.log(stdout);
@@ -212,7 +232,7 @@ function syncAssets() {
       })
     )
   })
-  return foo.pop();
+  return promises.pop();
 }
 
 function syncBackups() {
@@ -264,7 +284,7 @@ function cleanUp() {
 
 function upload() {
   const log = argv.verbose ? console.log : () => {};
-  let cmd = "aws s3 sync www s3://"+S3BUCKET+" --delete";
+  let cmd = "aws s3 sync www "+S3BUCKET+" --delete";
   if(dryrun) {
     cmd += " --dryrun";
     console.log(cmd);
@@ -304,6 +324,10 @@ function uncache() {
 }
 
 
+/* * * * * * * * * * * * * * * * * * * * 
+INVOCATION
+* * * * * * * * * * * * * * * * * * * */
+
 exports.deploy = series(
   upload,
   uncache
@@ -311,9 +335,9 @@ exports.deploy = series(
 
 // Define default task
 exports.build = series(
-  rollupJS,
-  buildJS,
-  compileCSS,
+  transpileJS,
+  bundleJS,
+  transpileCSS,
   buildHTML,
   syncAssets,
   syncBackups,

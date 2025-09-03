@@ -19,6 +19,7 @@
   box-sizing: border-box;
   padding: var(--gutter);
   background: var(--muted-background);
+  // color: var(--muted-foreground);
   border-radius: var(--border-radius-xl);
   box-shadow: lib.$shadow-inset;
   &.full-width,
@@ -80,12 +81,14 @@ table {
   max-width: 100%;
   border-spacing: 0em;
   margin-bottom: var(--gutter);
-  // background: var(--body-background);
   overflow-x: scroll;
   display: block;
 
   th, td {
-    padding: .5em 1em;
+    padding: 0.5em 1em 0.5em 0;
+    &:last-of-type {
+      padding-right: 0;
+    }
   }
 
   th {
@@ -94,7 +97,7 @@ table {
     border: 0 solid var(--border-color);
     border-width: 0 0 1px 0;
     text-align: left;
-    color: var(--muted-foreground);
+    color: var(--body-emphasized);
   }
 
   td {
@@ -171,7 +174,6 @@ details {
   }
 
   b, strong, dd {
-    // font-weight: lib.$bold-font-weight;
     font-size: 2em;
   }
 

@@ -73,11 +73,15 @@ This also aligned our cross-functional teams between product, design, engineerin
 - [Designing compelling cover art](#coverart) that scales across distribution channels
 - Getting to your third episode
 
-!['Journey Map'](/images/portfolio/btr/btr-customer-experience-map-hosts.jpg){.full}
+!['Journey Map'](/images/portfolio/btr/btr-customer-experience-map-hosts.png){.full-width}
+Starting A Show{.caption #journeymap}
 
-### Hypothesis: Flywheel of Growth
+!['Journey Map'](/images/portfolio/btr/btr-episode-experience-map.png){.full-width}
+Creating An Episode Map{.caption}
 
-The success of the platform relied on interlocking incentives: 
+### Hypothesis: Flywheel of Growth{#hypothesis}
+
+The success of the platform relied on interconnected incentives: 
 
 {% include "images/portfolio/btr/btr-dynamo-illustration.svg" %}
 
@@ -168,5 +172,11 @@ Improved the artwork delivered tangible business impact:
 
 
 <style>
+#hypothesis ~ svg {
+display: block;
+max-height: 62vh;
+margin: 0 auto;
+}
+
 </style>
 

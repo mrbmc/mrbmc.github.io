@@ -1,4 +1,4 @@
-@use "library" as lib;
+@use "../library" as lib;
 
 // ======================================================================
 // GRID
@@ -28,13 +28,8 @@
   }
 }
 //this fills the window but constraints the grid
-.full-width {
+.full-width, .full-width-90 {
   @include fullwidth(false);
-}
-.full-width-90 {
-  @include fullwidth(true);
-  width: 90vw;
-  padding-left: 5vw;
 }
 
 .grid {

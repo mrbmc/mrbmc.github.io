@@ -121,7 +121,7 @@ Demonstrate Disney’s commitment to innovation and improving the guest experien
 
 The biggest design challenge was to **reduce the emotional labor of group "Hosts"**. We knew the invitation flow had to be frictionless and integrate with existing user behaviors.
 
-![Interaction Design for the Invite](/images/portfolio/disney-groupwatch/groupwatch-ixd.jpg){.full-width-90}
+![Interaction Design for the Invite](/images/portfolio/disney-groupwatch/groupwatch-ixd.jpg){.full-width}
 
 
 Interaction design for the invite.{.caption}
@@ -144,7 +144,7 @@ We took cues from our colleagues designing Disney parks and created a "weenie", 
 
 **The Lobby** was our virtual meeting point for guests and hosts. 
 
-![The Lobby](/images/portfolio/disney-groupwatch/disney-groupwatch-devices.png){.full-width-90 .canzoom}
+![The Lobby](/images/portfolio/disney-groupwatch/disney-groupwatch-devices.png){.full-grid .canzoom}
 
 ### Visual Design
 

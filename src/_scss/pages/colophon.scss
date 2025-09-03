@@ -77,4 +77,15 @@ body.colophon {
 			background: lib.adjust(lib.$secondary,$alpha:-0.8);
 		}
 	}
+
+	.critters {
+		display: flex;
+		flex-direction: row;
+		@media (max-width: lib.$breakpoint) {
+			flex-wrap: wrap;
+			svg {
+				flex-basis: 50%;
+			}
+		}
+	}
 }

@@ -2,6 +2,7 @@
 title: Launching & Scaling Disney+
 date: 2020-12-01
 thumbnail: /images/portfolio/disney-growth/disney-growth-thumb.jpg
+masthead-image: /images/portfolio/disney-growth/disney-growth-thumb.jpg
 eleventyExcludeFromCollections: false
 tags:
   - work
@@ -16,7 +17,7 @@ timeline: 2018-2020
 casestudy: true
 ---
 
-![Disney+ Welcome on All Devices](/images/portfolio/disney-growth/disney-growth.jpg){.blur-in}
+![Disney+ Welcome on All Devices](/images/portfolio/disney-growth/disney-growth.jpg){.blur-in .full-grid}
 
 &nbsp;
 
@@ -44,9 +45,7 @@ casestudy: true
 
 {.sticky-nav}
 
-<!-- ## Chapter 1: Basecamp{#basecamp .section .full-grid} -->
-
-## Chapter 1: Basecamp{#basecamp .section .full-grid}
+## Chapter 1: Basecamp{#basecamp .section .full-grid .fade-in}
 
 ![Basecamp](/images/portfolio/disney-growth/everest-basecamp-large.avif) {.hide}
 
@@ -122,7 +121,7 @@ We established  **Experience Principles** for Disney+ because we've seen them im
 
 {.grid}
 
-## Chapter 2: Ascent {#ascent .section .full-grid}
+## Chapter 2: Ascent {#ascent .section .full-grid .fade-in}
 
 ![Ascent](/images/portfolio/disney-growth/everest-ascent-large.jpg) {.hide}
 
@@ -249,7 +248,7 @@ Our redemption flow enabled us to serve multiple use cases:
 + ![](/images/portfolio/disney-growth/b2b2c-canal-success.png) {.col-2 .row-2}
 {.grid .well .full-grid}
 
-## Chapter 3: Summit{#summit .section .full-grid}
+## Chapter 3: Summit{#summit .section .full-grid .fade-in}
 
 ![Basecamp](/images/portfolio/disney-growth/everest-north-side-sun-over-tibetan-plateau.jpg) {.hide}
 
@@ -358,9 +357,9 @@ With the trust and credibility we had earned in the launch phase coupled with th
 
 We also had a list of 6 viable ideas to prototype and test with users.
 
-![](/images/portfolio/disney-growth/bundle-workshop-wireframes.jpg){.full-width-90}
+![](/images/portfolio/disney-growth/bundle-workshop-wireframes.jpg){.full-width}
 
-## Chapter 4: Descent {#descent .section .full-grid}
+## Chapter 4: Descent {#descent .section .full-grid .fade-in}
 
 ![Basecamp](/images/portfolio/disney-growth/everest-descent.jpeg) {.hide}
 

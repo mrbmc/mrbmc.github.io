@@ -1,18 +1,67 @@
 @use 'sass:math';
-@use 'library' as lib;
+@use '../library' as lib;
 
+
+// @font-face {
+//   font-family: "Monument";
+//   font-weight: lib.$base-font-weight;
+//   src: url('/css/fonts/ABCMonumentGrotesk-Regular-Trial.woff2');
+// }
+
+// @font-face {
+//   font-family: "Monument";
+//   font-weight: lib.$bold-font-weight;
+//   src: url('/css/fonts/ABCMonumentGrotesk-Bold-Trial.woff2');
+// }
 
 @font-face {
-  font-family: "Monument";
-  font-weight: lib.$base-font-weight;
-  src: url('/css/fonts/ABCMonumentGrotesk-Light-Trial.woff2');
+  font-family: "Adelle Sans";
+  font-weight: 300;
+  src: url('/css/fonts/Adelle_Sans_Light.woff');
 }
+// @font-face {
+//   font-family: "Adelle Sans";
+//   font-weight: 400;
+//   src: url('/css/fonts/Adelle_Sans.woff');
+// }
+// @font-face {
+//   font-family: "Adelle Sans";
+//   font-weight: 500;
+//   src: url('/css/fonts/Adelle_Sans_Semibold.woff');
+// }
+// @font-face {
+//   font-family: "Adelle Sans";
+//   font-weight: 600;
+//   src: url('/css/fonts/Adelle_Sans_Bold.woff');
+// }
 
 @font-face {
-  font-family: "Monument";
-  font-weight: lib.$bold-font-weight;
-  src: url('/css/fonts/ABCMonumentGrotesk-Medium-Trial.woff2');
+  font-family: "Adelle";
+  font-weight: 400;
+  src: url('/css/fonts/Adelle-Regular.woff2');
 }
+
+// @font-face {
+//   font-family: "Adelle";
+//   font-weight: 500;
+//   src: url('/css/fonts/Adelle-SemiBold.woff2');
+// }
+
+// @font-face {
+//   font-family: "Whitney";
+//   font-weight: lib.$base-font-weight;
+//   src: url('/css/fonts/whitneybook.woff2');
+// }
+// @font-face {
+//   font-family: "Whitney";
+//   font-weight: 500;
+//   src: url('/css/fonts/whitneysemibold.woff2');
+// }
+// @font-face {
+//   font-family: "Whitney";
+//   font-weight: 600;
+//   src: url('/css/fonts/whitneybold.woff2');
+// }
 
 :root {
   -webkit-font-smoothing: antialiased;
@@ -37,10 +86,10 @@ a {
   text-decoration: underline;
 }
 h1, h2, h3, h4, h5 {
-  font-family: lib.$heading-font-family;
-  font-weight: lib.$heading-font-weight;
+  font-family: lib.$head-font-family;
+  font-weight: lib.$head-font-weight;
   line-height: lib.$heading-line-height;
-  letter-spacing: lib.$heading-font-kerning;
+  letter-spacing: lib.$head-font-kerning;
   a {
     text-decoration: none;
   }
@@ -48,6 +97,7 @@ h1, h2, h3, h4, h5 {
 h1 {
   font-family: lib.$display-font-family;
   font-weight: lib.$display-font-weight;
+  line-height: lib.$display-line-height;
   letter-spacing: lib.$display-font-kerning;
 }
 h1 {

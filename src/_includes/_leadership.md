@@ -11,7 +11,7 @@ A good leader has a clarity of purpose and can rally others toward that cause. I
 How I show up as a leader is inspired by lessons from nature, science, and history. There are highly effective leadership models in the animal kingdom that demonstrate the values I want to embody as a leader:
 + **mentorship**
 + **psychological safety**
-+ **collaboration**.
++ **collaboration**
 
 [Blog post: Leadership Models in Nature](/blog/leadership-in-nature/)
 

@@ -35,7 +35,7 @@ Transportation provided by custom-built bikes:
 
 ---
 
-## Social Footprint
+## Social Footprint{#social}
 
 * [Strava](http://app.strava.com/athletes/773650)
 * [Twitter](http://twitter.com/mrbmc)
@@ -56,11 +56,9 @@ Transportation provided by custom-built bikes:
 
 ## Style Guide
 
-### Typography
+### Typography{#type}
 
-The primary typeface is [Monument Grotesk by ABC Dinamo](https://abcdinamo.com/buy/monument-grotesk) because it aligns with my design principles: modern, pragmatic, and versatile.
-
-For extended prose we use a native serif: Hoefler on MacOS & iOS, Palatino on Android and Windows.
+The primary typeface is [Adelle Sans by Type Together](https://www.type-together.com/adelle-sans-font) because it aligns with my design principles: modern, humanist, and efficient.
 
 {% assign typefactor = 1.2 %}
 
@@ -115,15 +113,17 @@ Whenever I find myself growing grim about the mouth; whenever it is a damp, driz
 
 This is my substitute for pistol and ball. With a philosophical flourish Cato throws himself upon his sword; I quietly take to the ship. There is nothing surprising in this. If they but knew it, almost all men in their degree, some time or other, cherish very nearly the same feelings towards the ocean with me. {.serif}
 
-### Color
+---
 
-Neutral-00{.chip .black}
+### Color{#color}
 
-Neutral-20{.chip .gray-dark}
+Neutral-10{.chip .black}
+
+Neutral-30{.chip .gray-dark}
 
 Neutral-50{.chip .gray-mid}
 
-Neutral-80{.chip .gray-light}
+Neutral-90{.chip .gray-light}
 
 Neutral-100{.chip .white}
 
@@ -167,3 +167,16 @@ Success{.chip .success}
 
 &nbsp;{.chip .white}
 
+---
+
+### Icons{#icons}
+
+
+<div class="critters">
+{% include "images/profile/critter-crane.svg" %}
+{% include "images/profile/critter-fish.svg" %}
+{% include "images/profile/critter-elephant.svg" %}
+{% include "images/profile/critter-dog.svg" %}
+{% include "images/profile/critter-jellyfish.svg" %}
+{% include "images/profile/critter-pig.svg" %}
+</div>

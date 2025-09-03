@@ -1,38 +1,37 @@
 ---
 title: NHL TV & Mobile
-thumbnail: /images/portfolio/nhl/nhl-thumbnail.png
-masthead-image: /images/portfolio/nhl/nhl-teaser-2x1.jpg
-masthead-video: /images/portfolio/nhl/nhl-masthead.mp4
 date: 2018-12-05
+thumbnail: /images/portfolio/nhl/nhl-thumbnail.png
+masthead-video: /images/portfolio/nhl/nhl-masthead.mp4
+masthead-image: /images/portfolio/nhl/nhl-teaser-2x1.jpg
 tags:
   - work
 description: Launching the NHL.tv streaming service and introducing **product-led-growth** for the official NHL app and website.
 jobtitle: Director, UX & Design
+sponsor: MLB Advaned Media
 accomplishments: 
- - Bootstrapped the UX Research practice for MLB and then Disney.
+ - Founded the UX Research program for MLB and then Disney.
  - Established Product-Led-Growth practices that **increased video engagement 150%** and **ad impressions by 25%**
  - Led the design of innovative fan-service features like GameFlow™ and Around The League boosting engagement.
 timeline: 2015-2018
+casestudy: true
 ---
+
 I founded, hired, mentored, and led the team that designed the official site, app and streaming service for the National Hockey League. My engagement with the NHL spanned more than five years with my role ranging from team lead, design strategist, art director, storyteller and UX researcher.
 
-It was also an opportunity to build centers of excellence around UX Research and Prototyping for BAMTech Media.
+| Role | Contributions | Design Team | Timeline |
+| -- | -- | -- | -- |
+| Director, UX & Design | **2015** conducted the first user research at MLB leading to innovative new features, reduced development costs, and increased engagement.<br><br>**2016** [launched the NHL.tv streaming service](#nhl-tv)<br><br>**2017** added innovative video features to the TV experience including [Around The League](#around-the-league) and MultiGame view<br><br>**2018** Advised executive leadership on a [product-led-growth program](#mobile-plg) to boost mobile video engagement 200%.<br /><br />**2019** Led the design of the innovative [GameFlow™ data visualization](#gameflow) and multi-screen viewing experience | 3 Product Designers<br>1 Researcher<br>1 Creative Director<br>1 Program Manager | Sep 2015 - May 2019 |
+
+{.rotate #summary}
+
 
 * [NHL.tv](#nhl-tv) 
-* [Mobile Product Led Growth](#mobile-plg) 
+* [Around the league](#around-the-league)
+* [Product Led Growth](#mobile-plg) 
 * [GameFlow](#gameflow) 
 {.sticky-nav}
 
-### Project Highlights
-
-- **2015** conducted the first user research at MLB
-- **2016** launched the NHL.tv streaming service
-- **2017** added innovative video features to TV apps including Around The League and MultiGame view
-- **2018** Advised executive leadership on a product-led-growth program to boost mobile video engagement 200%.
-- **2019** Led the design of the innovative GameFlow™ data visualization and multi-screen viewing experience
-{.timeline .card}
-
----
 
 ## NHL.tv{#nhl-tv}
 
@@ -48,17 +47,22 @@ In 2016 we redesigned and relaunched NHL's streaming streaming service across mo
 - ![NHL.tv Highlights](/images/portfolio/nhl/nhl-tv-tvos-player.png) {.col-4}
 {.grid .well .full-width}
 
-## Around The League
+----
 
-One feature we were especially proud of was "Around the League". This was a user-centered feature that is authentic to the game. Our UX research revealed viewing habits that are unique to the pacing and rhythm of hockey. There are long breaks in the action, during which fans want to check in on exciting moments from rival teams or favorite players. At the same time, their FOMO prevented them from taking their eye off the current game, even though there was a break. ATL provided a fluid way to watch highlights while keeping an eye on your team.
+## Around The League{#around-the-league}
 
-This feature was a cross-functional effort to align the data feeds, UI build and design into a seamless UX.
+User Research into fan viewing behavior revealed an opportunity to harness the power of streaming and interactive apps to create a more exciting viewing experience for fans.
+
+Hockey's two intermissions and extended downtime during changeovers offers chance to deliver exciting moments from other games going on and highlights from the current game.
+
+Around the league provided a fluid way to watch highlights while keeping an eye on your team. It was a proactive version of the halftime show. This feature was a cross-functional effort to align the data feeds, UI build and design into a seamless UX.
 
 - ![Shelf](/images/portfolio/nhl/nhl-aroundtheleague-shelf.jpg) {.col-4}
 - <video src="/images/portfolio/nhl/nhl-around-the-league.mp4" controls mute muted playslinline autoplay></video> {.col-8 .row-2}
 - ![Picture in Picture](/images/portfolio/nhl/nhl-aroundtheleague-pip.jpg) {.col-4}
 {.grid .well .full-width}
 
+----
 
 ## Mobile Redesign - Product Led Growth{#mobile-plg}
 
@@ -88,14 +92,15 @@ We formed a hypothesis that a light redesign of the team home pages (the most vi
 
 <!-- width:375px;height:750px;display:block;margin:0 auto; -->
 
-### Results / Outcomes / Impact
-We saw a **150% increase ↗**{.positive} in  `Recency` and `Frequency`  engagement metrics measuring video consumption. This netted a **25% increase ↗**{.positive} in ad impressions despite the lower fill rate.
-
 ### Web - Keeping up the momentum
 
 Based on these findings we carried over the same idea of improving curated playlists and non-blocking browsing to the web experience. We branded this new feature "On The Fly". The results were not quite as impressive as on mobile but still positive.
 
 <video src="/images/portfolio/nhl/on-the-fly.mp4" controls playsinline autoplay style="display:block;margin:0 auto;"></video>
+
+### Results / Outcomes / Impact
+We saw a **150% increase ↗**{.positive} in  `Recency` and `Frequency`  engagement metrics measuring video consumption. This netted a **25% increase ↗**{.positive} in ad impressions despite the lower fill rate.
+
 
 ----
 
@@ -130,3 +135,9 @@ To secure buy-in from NHL and Disney leadership we needed to shop the feature in
 <video src="/images/portfolio/nhl/GameFlow-Demo.mp4" controls playsinline muted autoplay autoplay="autoplay" class="full-width"></video>
 
 [GameFlow™ Press Release](https://www.nhl.com/news/nhl-launching-gameflow-interactive-experience-312169252)
+
+<style>
+table#summary tr{
+  grid-template-rows: 1fr 6fr 2fr 1fr;
+}
+</style>

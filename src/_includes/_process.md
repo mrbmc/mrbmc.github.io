@@ -4,7 +4,7 @@
 
 Good product design is good storytelling. Storytelling is about _transformation_. Users are transformed by your product. [User Scenarios](https://articles.centercentre.com/when-it-comes-to-personas-the-real-value-is-in-the-scenarios/), [Jobs-To-Be-Done](https://jobs-to-be-done.com/), and [Linear Issues](https://linear.app/method/write-issues-not-user-stories) all exist because they force critical thinking about user transformation (when used correctly).
 
-To avoid some of the pre-conceived notions attached to these methods, and maybe the influence of Disney, I've recently begun leaning on a classic writing tool, the **Story Spine**. It maps very well to design:
+To avoid some of the pre-conceived notions attached to these methods, and maybe the influence of Disney, I've recently begun leaning on a classic writing tool, the **"Story Spine"**. It maps very well to design:
 
 Once upon a time there was <span class="underline">&nbsp;</span>,  
 Every day __________,  

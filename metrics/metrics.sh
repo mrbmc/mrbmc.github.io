@@ -100,7 +100,7 @@ function parse () {
 				[[ -z "$flag_verbose" ]] || { echo "Cleaning $target_date"; }
 				cat  $BASE'/logs/log_raw_'$target_date |\
 				grep -iE "Mozilla/5\.0.*Gecko" |\
-				grep -Eiv "\s(/css/|/js/|/icons/|/images/|favicon\.ico|\?)" |\
+				grep -Eiv "\s(/\.css/|/js/|/icons/|/images/|favicon|\?)" |\
 				grep -iE "GET\t" |\
 				grep -iEv "\t301\t" |\
 				grep -E -v -i -f $BASE/blacklist-agents.txt |\
@@ -156,7 +156,7 @@ function analyze () {
 
 	done
 
-	periods_opt=('7d' '14d' '30d' '90d')
+	periods_opt=('7d' '14d' '30d' '90d' '365d')
 	for duration in $periods_opt
 	do
 		[[ -z "$flag_verbose" ]] || { echo "Analyzing -$duration";}

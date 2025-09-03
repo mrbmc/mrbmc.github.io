@@ -505,7 +505,7 @@ With the trust and credibility we had earned in the launch phase coupled with th
 
 We also had a list of 6 viable ideas to prototype and test with users.
 
-![](/images/portfolio/disney-growth/bundle-workshop-wireframes.jpg){.full-width-90}
+![](/images/portfolio/disney-growth/bundle-workshop-wireframes.jpg){.full-width}
 
 ## Chapter 4: Descent {#descent .section}
 

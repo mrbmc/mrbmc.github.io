@@ -16,12 +16,17 @@ body > footer {
     color: var(--accent-foreground);
 
     &>div {
+        height: 100%;
         nav {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             a {
                 color: var(--accent-foreground);
-                margin: 0 (lib.$gutter * 0.5);
+                // margin: 0 (lib.$gutter * 0.5);
+                &:hover {
+                    color: var(--white);
+                }
             }
         }
         p {
@@ -41,10 +46,10 @@ body > footer {
             $itemsize: 1.38rem;
 
             a {
-                font-size: $itemsize;
-                line-height: $itemsize;
-                width: $itemsize;
-                height: $itemsize;
+                // font-size: $itemsize;
+                // line-height: $itemsize;
+                // width: $itemsize;
+                // height: $itemsize;
                 overflow: hidden;
             }
             img,svg {

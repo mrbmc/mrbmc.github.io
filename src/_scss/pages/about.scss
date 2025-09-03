@@ -4,13 +4,9 @@
 @use "../components/sticky-nav";
 
 body.about {
-
-  #header {
-    background: transparent;
-  }
+  // overflow-x: hidden;
 
   #bio {
-    // margin-top: calc(var(--navbar-height) * -1);
     box-sizing: border-box;
     position: relative;
     height: calc(100vh - var(--navbar-height));
@@ -19,67 +15,51 @@ body.about {
     justify-content: center;
     overflow: hidden;
 
-    p.portrait {
-      overflow: hidden;
-      margin: 0;
-      height: 50vh;
-
-      img {
-        display: block;
-        height: 100%;
-      }
-
-    }
-
-    p.large-type {
-      margin-top: 0;
-    }
-
     #killabmc {
       position: absolute;
       z-index: 100;
       width: 25vw !important;
     }
 
-    // &:before {
-    //   content: "";
-    //   width: 100vw;
-    //   height: 100vh;
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   z-index: 0;
-    //   filter: url(#noiseFilter) opacity(10%);
-    // }
-
     @media (min-width:lib.$breakpoint) {
       $pic-w: 62vh;
-      $pic-h: 100vh;
+      $pic-h: 62vh;//calc(100vh - var(--navbar-height));
       padding-left: var(--gutter);
       padding-right: var(--gutter);
-      // $pic-size: calc(lib.$grid-width * .33);
-      padding-left: $pic-w;
+      padding-left: calc($pic-w + var(--gutter-xl));
 
-      // transform:skew(-45deg);
-
-      h1,h2,p {
-        width: calc((100vw - $pic-w) - var(--gutter-xl) - var(--gutter-xl));
-        // transform:skew(45deg);
-      }
-      p.large-type:last-of-type {
-        margin: 0;
-      }
-      h1,h2 {
-        margin: 0 0 var(--gutter);
+      transform: skew(-10deg,0);
+      &>*{
+        transform: skew(10deg,0);
       }
 
-      p.portrait {
+      #parallelogram {
+        shape-outside: polygon(90% 0, 100% 0, 10% 100%, 0 100%);
+        float: left;
+        height: 4rem;
+        width: 0.5rem;
+      }
+
+      #portrait {
+        box-sizing: border-box;
         position: absolute;
-        left: 0;
+        left: var(--gutter);
         top: 50%;
+        margin-top: calc($pic-h * -0.5);
         width: $pic-w;
         height: $pic-h;
-        margin: ($pic-h * -.5) 0 0 0;
+        // border-radius: $pic-h;
+        overflow: hidden;
+
+        img, image {
+            // filter: brightness(1.1) contrast(110%);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            clip-path: url(#portrait_mask);
+            // border-radius: 1rem;
+        }
+
       }
 
     }
@@ -90,6 +70,9 @@ body.about {
 
   }
 
+  #intro {
+    margin-bottom: var(--gutter-xl);
+  }
 
   main, #main {
     padding-top: 0;

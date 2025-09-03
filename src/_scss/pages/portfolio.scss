@@ -2,7 +2,7 @@
 
 @use "../components/project-list";
 
-body.work {
+body.portfolio {
   h5 {
     color: var(--muted-foreground);
   }
@@ -10,52 +10,54 @@ body.work {
     color: var(--muted-foreground);
   }
 
-  #work {
-    display: flex;
-    flex-direction: column;
-  }
   .project-list {
-    row-gap: calc(var(--gutter-xl) * 2);
-  }
+    // row-gap: calc(var(--gutter-xl) * 2);
 
-  article {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: var(--gutter-xl);
-    align-items: center;
-    &.full-grid {
-      padding-left: var(--gutter-xl);
-      padding-right: var(--gutter-xl);
-    }
-    header,.figure {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    .project {
       flex-basis: 50%;
-    }
-    header {
-      h3,h4,h5 {
-        margin-bottom: 0.5rem;
+      // display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      &.full-grid {
+        padding-left: var(--gutter-xl);
+        padding-right: var(--gutter-xl);
       }
-    }
-    .figure {
-      margin: 0;
-      img {
-        border-radius: var(--border-radius);
-        display: block;
-        aspect-ratio: 1.78;
-        object-fit: cover;
+      header {
+        flex-basis: 38%;
+        h3,h4,h5 {
+          margin-bottom: 0.5rem;
+        }
+        .summary, .duration {
+          display: none;
+        }
+      }
+      .figure {
+        flex-basis: 62%;
+        margin: 0;
+        img {
+          border-radius: var(--border-radius);
+          display: block;
+          aspect-ratio: 1.78;
+          object-fit: cover;
+        }
+      }
+
+      ol,ul {
+        display: none;
+      }
+      @media (max-width:lib.$breakpoint) {
+        flex-direction: column-reverse;
+        row-gap: 1rem;
       }
     }
 
-    ol,ul {
-      display: none;
-    }
-    @media (max-width:lib.$breakpoint) {
-      flex-direction: column-reverse;
-      row-gap: 1rem;
-    }
   }
 
 
-  #impact-projects {
+  #work {
     article {
       .figure {
         img {
@@ -66,34 +68,6 @@ body.work {
 
   }
 
-}
-
-
-body.portfolio {
-  .project-list {
-    .project {
-      flex-direction: row-reverse;
-      align-items: center;
-
-      @media (max-width:lib.$breakpoint) {
-        flex-direction: column-reverse;
-      }
-
-      header {
-        flex-basis: 38%;
-      }
-
-      figure, .figure {
-        flex-basis: 62%;
-
-        img {
-          // height: 25vw;
-        }
-      }
-
-    }
-
-  }
 }
 
 .sticky-nav {
