@@ -1,25 +1,54 @@
 @use '../library' as lib;
 
 .project-list {
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   grid-row-gap: var(--gutter);
-  grid-column-gap: var(--gutter-xl);
+  grid-column-gap: var(--gutter);
+  box-sizing: border-box;
+
+  @media (min-width:lib.$breakpoint-widescreen) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  h2,p {
+    grid-column: span 2;
+    @media (min-width:lib.$breakpoint-widescreen) {
+      grid-column: span 3;
+    }
+  }
 
   .project {
     display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-end;
     transition: all lib.$speed lib.$easing;
     column-gap: lib.$gutter;
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+
+    @media (max-width:lib.$breakpoint) {
+      flex-direction: column-reverse;
+      row-gap: 1rem;
+    }
 
     header {
+      display: none;
+      box-sizing: border-box;
+      background: var(--card-background);
+      padding: 0 var(--gutter);
+      height: 100%;
+
+      h3,h4,h5 {
+        margin-bottom: 0.0em;
+      }
       p {
         margin-top: 0;
       }
-
+      .summary, .duration {
+      }
       .timeline {
-        display: none;
-        // font-weight: lib.$bold-font-weight;
         margin: 0;
         color: var(--muted-foreground);
       }
@@ -27,8 +56,7 @@
     }
 
     figure, .figure {
-      border-radius: var(--border-radius-xl);
-      overflow: hidden;
+
       margin: 0;
       filter: saturate(95%);
       transition: all lib.$speed lib.$easing;
@@ -40,18 +68,21 @@
       img {
         display: block;
         object-fit: cover;
-        // box-sizing: border-box;
+        aspect-ratio: 1.71;
+        // border-radius: var(--border-radius);
       }
 
     }
 
     &:hover {
       z-index: 3;
+      box-shadow: lib.$shadow;
 
       figure, p.figure {
         filter: saturate(1.02) contrast(1.1) brightness(1.1);
-        box-shadow: lib.$shadow;
       }
+      header {
+      }      
 
       transform: scale(1.02);
     }

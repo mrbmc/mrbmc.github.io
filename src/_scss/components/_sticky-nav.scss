@@ -10,10 +10,13 @@
   max-width: 100%;
   margin: var(--gutter) auto;
   box-shadow: lib.$shadow;
-  border-radius: var(--border-radius-xl);
   -webkit-backdrop-filter: blur(.2rem);
   backdrop-filter: blur(.2rem);
   background: var(--white-semi);
+  border-radius: var(--border-radius-xl);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-right-color: rgba(0,0,0,0.2);
+  border-bottom-color: rgba(0,0,0,0.2);
 
   &>li {
     list-style: none;
@@ -46,6 +49,10 @@
         color: var(--muted-foreground);
       }
 
+      &.on {
+        background: var(--accent-background);
+        color: var(--accent-foreground);
+      }
     }
 
     //SUBNAVS

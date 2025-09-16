@@ -4,6 +4,30 @@
 		"selected_items":
 		[
 			[
+				"border-ra",
+				"border-bottom-right-radius"
+			],
+			[
+				"tran",
+				"transition"
+			],
+			[
+				"flex-",
+				"flex-start"
+			],
+			[
+				"b",
+				"bVisible"
+			],
+			[
+				"cl",
+				"classList"
+			],
+			[
+				"for",
+				"for\tfor (…) {…}"
+			],
+			[
 				"grid-",
 				"grid-column"
 			],
@@ -14,10 +38,6 @@
 			[
 				"padding",
 				"padding-left"
-			],
-			[
-				"flex-",
-				"flex-basis"
 			],
 			[
 				"over",
@@ -46,10 +66,6 @@
 			[
 				"margin-",
 				"margin-bottom"
-			],
-			[
-				"tran",
-				"transform"
 			],
 			[
 				"portra",
@@ -324,10 +340,6 @@
 				"base-line-height"
 			],
 			[
-				"for",
-				"forEach"
-			],
-			[
 				"ma",
 				"margin"
 			],
@@ -420,10 +432,6 @@
 				"align-content"
 			],
 			[
-				"border-ra",
-				"border-radius"
-			],
-			[
 				"s",
 				"script"
 			],
@@ -506,68 +514,1064 @@
 			[
 				"ini",
 				"initAnimations"
-			],
-			[
-				"getE",
-				"getElementsByClassName"
-			],
-			[
-				"getEle",
-				"getElementsByTagName"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "src/index.md",
+			"file": "src/_scss/library/_variables.scss",
 			"settings":
 			{
-				"buffer_size": 1164,
+				"buffer_size": 3164,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			},
 			"undo_stack":
 			[
 				[
-					9,
+					6,
 					1,
 					"left_delete",
 					null,
-					"AQAAAKQDAAAAAAAApAMAAAAAAAABAAAAIA",
-					"AQAAAAAAAAABAAAApQMAAAAAAAClAwAAAAAAAAAAAAAAAPC/"
+					"AQAAADYBAAAAAAAANgEAAAAAAAAOAAAAIkFkZWxsZSBTYW5zIiw",
+					"AQAAAAAAAAABAAAANgEAAAAAAABEAQAAAAAAAAAAAAAAAPC/"
 				],
 				[
-					13,
+					25,
 					1,
 					"insert",
 					{
-						"characters": " "
+						"characters": "Whitney"
 					},
-					"AQAAAKQDAAAAAAAApQMAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAApAMAAAAAAACkAwAAAAAAAAAAAAAAAPC/"
+					"BwAAACwBAAAAAAAALQEAAAAAAAAIAAAATW9udW1lbnQtAQAAAAAAAC4BAAAAAAAAAAAAAC4BAAAAAAAALwEAAAAAAAAAAAAALwEAAAAAAAAwAQAAAAAAAAAAAAAwAQAAAAAAADEBAAAAAAAAAAAAADEBAAAAAAAAMgEAAAAAAAAAAAAAMgEAAAAAAAAzAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAANAEAAAAAAAAsAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					34,
+					1,
+					"insert",
+					{
+						"characters": "Monument"
+					},
+					"CAAAACwBAAAAAAAALQEAAAAAAAAHAAAAV2hpdG5leS0BAAAAAAAALgEAAAAAAAAAAAAALgEAAAAAAAAvAQAAAAAAAAAAAAAvAQAAAAAAADABAAAAAAAAAAAAADABAAAAAAAAMQEAAAAAAAAAAAAAMQEAAAAAAAAyAQAAAAAAAAAAAAAyAQAAAAAAADMBAAAAAAAAAAAAADMBAAAAAAAANAEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAALAEAAAAAAAAzAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					37,
+					1,
+					"insert",
+					{
+						"characters": "Whitney"
+					},
+					"BwAAACwBAAAAAAAALQEAAAAAAAAIAAAATW9udW1lbnQtAQAAAAAAAC4BAAAAAAAAAAAAAC4BAAAAAAAALwEAAAAAAAAAAAAALwEAAAAAAAAwAQAAAAAAAAAAAAAwAQAAAAAAADEBAAAAAAAAAAAAADEBAAAAAAAAMgEAAAAAAAAAAAAAMgEAAAAAAAAzAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAANAEAAAAAAAAsAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					44,
+					1,
+					"insert",
+					{
+						"characters": ","
+					},
+					"AQAAADUBAAAAAAAANgEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAANQEAAAAAAAA1AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					46,
+					1,
+					"insert",
+					{
+						"characters": "\"\""
+					},
+					"AgAAADUBAAAAAAAANgEAAAAAAAAAAAAANgEAAAAAAAA3AQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAANQEAAAAAAAA1AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					48,
+					1,
+					"insert",
+					{
+						"characters": "Adelle"
+					},
+					"BgAAADYBAAAAAAAANwEAAAAAAAAAAAAANwEAAAAAAAA4AQAAAAAAAAAAAAA4AQAAAAAAADkBAAAAAAAAAAAAADkBAAAAAAAAOgEAAAAAAAAAAAAAOgEAAAAAAAA7AQAAAAAAAAAAAAA7AQAAAAAAADwBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAANgEAAAAAAAA2AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					50,
+					1,
+					"insert",
+					{
+						"characters": " Sans"
+					},
+					"BQAAADwBAAAAAAAAPQEAAAAAAAAAAAAAPQEAAAAAAAA+AQAAAAAAAAAAAAA+AQAAAAAAAD8BAAAAAAAAAAAAAD8BAAAAAAAAQAEAAAAAAAAAAAAAQAEAAAAAAABBAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAPAEAAAAAAAA8AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					54,
+					1,
+					"cut",
+					null,
+					"AQAAADUBAAAAAAAANQEAAAAAAAAOAAAAIkFkZWxsZSBTYW5zIiw",
+					"AQAAAAAAAAABAAAAQwEAAAAAAAA1AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					61,
+					1,
+					"paste",
+					null,
+					"AQAAACsBAAAAAAAAOQEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAKwEAAAAAAAArAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					73,
+					1,
+					"left_delete",
+					null,
+					"AQAAAH4BAAAAAAAAfgEAAAAAAAAKAAAAIkFkZWxsZSIsIA",
+					"AQAAAAAAAAABAAAAfgEAAAAAAACIAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					83,
+					1,
+					"left_delete",
+					null,
+					"AQAAACsBAAAAAAAAKwEAAAAAAAAOAAAAIkFkZWxsZSBTYW5zIiw",
+					"AQAAAAAAAAABAAAAKwEAAAAAAAA5AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					89,
+					1,
+					"left_delete",
+					null,
+					"AQAAAEYBAAAAAAAARgEAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAARwEAAAAAAABHAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					91,
+					1,
+					"left_delete",
+					null,
+					"AQAAADUBAAAAAAAANQEAAAAAAAARAAAAIkhlbHZldGljYSBOZXVlIiw",
+					"AQAAAAAAAAABAAAARgEAAAAAAAA1AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					97,
+					1,
+					"insert",
+					{
+						"characters": "Pelikan"
+					},
+					"BwAAACwBAAAAAAAALQEAAAAAAAAHAAAAV2hpdG5leS0BAAAAAAAALgEAAAAAAAAAAAAALgEAAAAAAAAvAQAAAAAAAAAAAAAvAQAAAAAAADABAAAAAAAAAAAAADABAAAAAAAAMQEAAAAAAAAAAAAAMQEAAAAAAAAyAQAAAAAAAAAAAAAyAQAAAAAAADMBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAMwEAAAAAAAAsAQAAAAAAAAAAAAAAAPC/"
 				]
 			]
 		},
 		{
-			"file": "src/_scss/pages/portfolio.scss",
+			"file": "src/_scss/base/_type.scss",
 			"settings":
 			{
-				"buffer_size": 1316,
+				"buffer_size": 2718,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			},
 			"undo_stack":
 			[
 				[
-					4,
+					5,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"BQAAANMBAAAAAAAA1gEAAAAAAAAAAAAAogEAAAAAAAClAQAAAAAAAAAAAAB8AQAAAAAAAH8BAAAAAAAAAAAAAF4BAAAAAAAAYQEAAAAAAAAAAAAAUQEAAAAAAABUAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAUQEAAAAAAADVAQAAAAAAAAAAAAAAAAAA"
+				],
+				[
+					9,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"BQAAAOQCAAAAAAAA5wIAAAAAAAAAAAAAsAIAAAAAAACzAgAAAAAAAAAAAACKAgAAAAAAAI0CAAAAAAAAAAAAAGwCAAAAAAAAbwIAAAAAAAAAAAAAXwIAAAAAAABiAgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAXwIAAAAAAADmAgAAAAAAAAAAAAAAAAAA"
+				],
+				[
+					19,
+					1,
+					"left_delete",
+					null,
+					"CAAAAD0BAAAAAAAAPQEAAAAAAAABAAAAdDwBAAAAAAAAPAEAAAAAAAABAAAAbjsBAAAAAAAAOwEAAAAAAAABAAAAZToBAAAAAAAAOgEAAAAAAAABAAAAbTkBAAAAAAAAOQEAAAAAAAABAAAAdTgBAAAAAAAAOAEAAAAAAAABAAAAbjcBAAAAAAAANwEAAAAAAAABAAAAbzYBAAAAAAAANgEAAAAAAAABAAAATQ",
+					"AQAAAAAAAAABAAAAPgEAAAAAAAA+AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					20,
 					1,
 					"insert",
 					{
-						"characters": ",p"
+						"characters": "Medium"
 					},
-					"AgAAAEABAAAAAAAAQQEAAAAAAAAAAAAAQQEAAAAAAABCAQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAQAEAAAAAAABAAQAAAAAAAAAAAAAAAPC/"
+					"BgAAADYBAAAAAAAANwEAAAAAAAAAAAAANwEAAAAAAAA4AQAAAAAAAAAAAAA4AQAAAAAAADkBAAAAAAAAAAAAADkBAAAAAAAAOgEAAAAAAAAAAAAAOgEAAAAAAAA7AQAAAAAAAAAAAAA7AQAAAAAAADwBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAANgEAAAAAAAA2AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					37,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"HgAAAGUEAAAAAAAAZQQAAAAAAAADAAAALy8gMgQAAAAAAAAyBAAAAAAAAAMAAAAvLyAbBAAAAAAAABsEAAAAAAAAAwAAAC8vIP8DAAAAAAAA/wMAAAAAAAADAAAALy8g7wMAAAAAAADvAwAAAAAAAAMAAAAvLyDpAwAAAAAAAOkDAAAAAAAAAwAAAC8vILcDAAAAAAAAtwMAAAAAAAADAAAALy8goAMAAAAAAACgAwAAAAAAAAMAAAAvLyCEAwAAAAAAAIQDAAAAAAAAAwAAAC8vIHQDAAAAAAAAdAMAAAAAAAADAAAALy8gbgMAAAAAAABuAwAAAAAAAAMAAAAvLyA7AwAAAAAAADsDAAAAAAAAAwAAAC8vICQDAAAAAAAAJAMAAAAAAAADAAAALy8gAwMAAAAAAAADAwAAAAAAAAMAAAAvLyDzAgAAAAAAAPMCAAAAAAAAAwAAAC8vIO4CAAAAAAAA7gIAAAAAAAADAAAALy8gtwIAAAAAAAC3AgAAAAAAAAMAAAAvLyCOAgAAAAAAAI4CAAAAAAAAAwAAAC8vIG0CAAAAAAAAbQIAAAAAAAADAAAALy8gXQIAAAAAAABdAgAAAAAAAAMAAAAvLyBYAgAAAAAAAFgCAAAAAAAAAwAAAC8vICoCAAAAAAAAKgIAAAAAAAADAAAALy8gEwIAAAAAAAATAgAAAAAAAAMAAAAvLyDyAQAAAAAAAPIBAAAAAAAAAwAAAC8vIOIBAAAAAAAA4gEAAAAAAAADAAAALy8g3QEAAAAAAADdAQAAAAAAAAMAAAAvLyCpAQAAAAAAAKkBAAAAAAAAAwAAAC8vIIABAAAAAAAAgAEAAAAAAAADAAAALy8gXwEAAAAAAABfAQAAAAAAAAMAAAAvLyBPAQAAAAAAAE8BAAAAAAAAAwAAAC8vIA",
+					"AQAAAAAAAAABAAAAVwEAAAAAAABpBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					42,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"BQAAAH4FAAAAAAAAfgUAAAAAAAADAAAALy8gTwUAAAAAAABPBQAAAAAAAAMAAAAvLyA4BQAAAAAAADgFAAAAAAAAAwAAAC8vIBsFAAAAAAAAGwUAAAAAAAADAAAALy8gCwUAAAAAAAALBQAAAAAAAAMAAAAvLyA",
+					"AQAAAAAAAAABAAAADAUAAAAAAACDBQAAAAAAAAAAAAAAABxA"
+				],
+				[
+					49,
+					1,
+					"left_delete",
+					null,
+					"AQAAANMBAAAAAAAA0wEAAAAAAABsAAAAQGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICJBZGVsbGUgU2FucyI7CiAgZm9udC13ZWlnaHQ6IDQwMDsKICBzcmM6IHVybCgnL2Nzcy9mb250cy9BZGVsbGVfU2Fucy53b2ZmJyk7Cn0K",
+					"AQAAAAAAAAABAAAA0wEAAAAAAAA/AgAAAAAAAAAAAAAAAAAA"
+				],
+				[
+					57,
+					1,
+					"left_delete",
+					null,
+					"AQAAAFoCAAAAAAAAWgIAAAAAAAByAAAAQGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICJBZGVsbGUgU2FucyI7CiAgZm9udC13ZWlnaHQ6IDYwMDsKICBzcmM6IHVybCgnL2Nzcy9mb250cy9BZGVsbGVfU2Fuc19Cb2xkLndvZmYnKTsKfQoK",
+					"AQAAAAAAAAABAAAAWgIAAAAAAADMAgAAAAAAAAAAAAAAAAAA"
+				],
+				[
+					62,
+					2,
+					"left_delete",
+					null,
+					"AgAAAMUCAAAAAAAAxQIAAAAAAABtAAAACkBmb250LWZhY2UgewogIGZvbnQtZmFtaWx5OiAiQWRlbGxlIjsKICBmb250LXdlaWdodDogNTAwOwogIHNyYzogdXJsKCcvY3NzL2ZvbnRzL0FkZWxsZS1TZW1pQm9sZC53b2ZmMicpOwp9CsQCAAAAAAAAxAIAAAAAAAABAAAACg",
+					"AQAAAAAAAAABAAAAxQIAAAAAAAAyAwAAAAAAAAAAAAAAAAAA"
+				],
+				[
+					68,
+					1,
+					"insert",
+					{
+						"characters": "lib.$"
+					},
+					"BQAAAI8CAAAAAAAAkAIAAAAAAAADAAAANDAwkAIAAAAAAACRAgAAAAAAAAAAAACRAgAAAAAAAJICAAAAAAAAAAAAAJICAAAAAAAAkwIAAAAAAAAAAAAAkwIAAAAAAACUAgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAkgIAAAAAAACPAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					69,
+					1,
+					"insert",
+					{
+						"characters": "ser"
+					},
+					"AwAAAJQCAAAAAAAAlQIAAAAAAAAAAAAAlQIAAAAAAACWAgAAAAAAAAAAAACWAgAAAAAAAJcCAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAlAIAAAAAAACUAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					70,
+					1,
+					"insert",
+					{
+						"characters": "f-font-weight"
+					},
+					"DQAAAJcCAAAAAAAAmAIAAAAAAAAAAAAAmAIAAAAAAACZAgAAAAAAAAAAAACZAgAAAAAAAJoCAAAAAAAAAAAAAJoCAAAAAAAAmwIAAAAAAAAAAAAAmwIAAAAAAACcAgAAAAAAAAAAAACcAgAAAAAAAJ0CAAAAAAAAAAAAAJ0CAAAAAAAAngIAAAAAAAAAAAAAngIAAAAAAACfAgAAAAAAAAAAAACfAgAAAAAAAKACAAAAAAAAAAAAAKACAAAAAAAAoQIAAAAAAAAAAAAAoQIAAAAAAACiAgAAAAAAAAAAAACiAgAAAAAAAKMCAAAAAAAAAAAAAKMCAAAAAAAApAIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAlwIAAAAAAACXAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					75,
+					1,
+					"insert",
+					{
+						"characters": "i"
+					},
+					"AQAAAJcCAAAAAAAAmAIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAlwIAAAAAAACXAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					80,
+					1,
+					"left_delete",
+					null,
+					"AQAAANIDAAAAAAAA0gMAAAAAAABpAAAAQGZvbnQtZmFjZSB7CiAgZm9udC1mYW1pbHk6ICJXaGl0bmV5IjsKICBmb250LXdlaWdodDogNjAwOwogIHNyYzogdXJsKCcvY3NzL2ZvbnRzL3doaXRuZXlib2xkLndvZmYyJyk7Cn0K",
+					"AQAAAAAAAAABAAAA0gMAAAAAAAA7BAAAAAAAAAAAAAAAAAAA"
+				],
+				[
+					98,
+					1,
+					"left_delete",
+					null,
+					"AQAAALwAAAAAAAAAvAAAAAAAAAABAAAACg",
+					"AQAAAAAAAAABAAAAvQAAAAAAAAC9AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					104,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AQAAANcCAAAAAAAA2AIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA1wIAAAAAAADXAgAAAAAAAAAAAAAAAAAA"
+				],
+				[
+					106,
+					1,
+					"duplicate_line",
+					null,
+					"AQAAANMDAAAAAAAAzgQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA2AIAAAAAAADTAwAAAAAAAAAAAAAAAAAA"
+				],
+				[
+					112,
+					1,
+					"insert",
+					{
+						"characters": "OPe"
+					},
+					"AwAAAPADAAAAAAAA8QMAAAAAAAAHAAAAV2hpdG5lefEDAAAAAAAA8gMAAAAAAAAAAAAA8gMAAAAAAADzAwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA9wMAAAAAAADwAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					113,
+					3,
+					"left_delete",
+					null,
+					"AwAAAPIDAAAAAAAA8gMAAAAAAAABAAAAZfEDAAAAAAAA8QMAAAAAAAABAAAAUPADAAAAAAAA8AMAAAAAAAABAAAATw",
+					"AQAAAAAAAAABAAAA8wMAAAAAAADzAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					114,
+					1,
+					"insert",
+					{
+						"characters": "Pelikan"
+					},
+					"BwAAAPADAAAAAAAA8QMAAAAAAAAAAAAA8QMAAAAAAADyAwAAAAAAAAAAAADyAwAAAAAAAPMDAAAAAAAAAAAAAPMDAAAAAAAA9AMAAAAAAAAAAAAA9AMAAAAAAAD1AwAAAAAAAAAAAAD1AwAAAAAAAPYDAAAAAAAAAAAAAPYDAAAAAAAA9wMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA8AMAAAAAAADwAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					121,
+					1,
+					"paste",
+					null,
+					"AQAAAGsEAAAAAAAAcgQAAAAAAAAHAAAAV2hpdG5leQ",
+					"AQAAAAAAAAABAAAAawQAAAAAAAByBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					129,
+					1,
+					"paste",
+					null,
+					"AQAAADcEAAAAAAAAUwQAAAAAAAARAAAAd2hpdG5leWJvb2sud29mZjI",
+					"AQAAAAAAAAABAAAANwQAAAAAAABIBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					137,
+					1,
+					"paste",
+					null,
+					"AQAAAL0EAAAAAAAA2gQAAAAAAAAVAAAAd2hpdG5leXNlbWlib2xkLndvZmYy",
+					"AQAAAAAAAAABAAAAvQQAAAAAAADSBAAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"file": "src/_scss/library/_colors.scss",
+			"settings":
+			{
+				"buffer_size": 2939,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					7,
+					1,
+					"insert",
+					{
+						"characters": "\n//s"
+					},
+					"BAAAAGkFAAAAAAAAagUAAAAAAAAAAAAAagUAAAAAAABrBQAAAAAAAAAAAABrBQAAAAAAAGwFAAAAAAAAAAAAAGwFAAAAAAAAbQUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAaQUAAAAAAABpBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					8,
+					1,
+					"left_delete",
+					null,
+					"AQAAAGwFAAAAAAAAbAUAAAAAAAABAAAAcw",
+					"AQAAAAAAAAABAAAAbQUAAAAAAABtBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					9,
+					1,
+					"insert",
+					{
+						"characters": "slight"
+					},
+					"BgAAAGwFAAAAAAAAbQUAAAAAAAAAAAAAbQUAAAAAAABuBQAAAAAAAAAAAABuBQAAAAAAAG8FAAAAAAAAAAAAAG8FAAAAAAAAcAUAAAAAAAAAAAAAcAUAAAAAAABxBQAAAAAAAAAAAABxBQAAAAAAAHIFAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAbAUAAAAAAABsBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					10,
+					1,
+					"insert",
+					{
+						"characters": " tone"
+					},
+					"BQAAAHIFAAAAAAAAcwUAAAAAAAAAAAAAcwUAAAAAAAB0BQAAAAAAAAAAAAB0BQAAAAAAAHUFAAAAAAAAAAAAAHUFAAAAAAAAdgUAAAAAAAAAAAAAdgUAAAAAAAB3BQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAcgUAAAAAAAByBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					12,
+					1,
+					"paste",
+					null,
+					"AQAAAFIIAAAAAAAAKwsAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAUggAAAAAAABSCAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					15,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"DQAAABkIAAAAAAAAHAgAAAAAAAAAAAAA4QcAAAAAAADkBwAAAAAAAAAAAACpBwAAAAAAAKwHAAAAAAAAAAAAAHEHAAAAAAAAdAcAAAAAAAAAAAAAOQcAAAAAAAA8BwAAAAAAAAAAAAABBwAAAAAAAAQHAAAAAAAAAAAAAMkGAAAAAAAAzAYAAAAAAAAAAAAAkQYAAAAAAACUBgAAAAAAAAAAAABZBgAAAAAAAFwGAAAAAAAAAAAAACEGAAAAAAAAJAYAAAAAAAAAAAAA6QUAAAAAAADsBQAAAAAAAAAAAACxBQAAAAAAALQFAAAAAAAAAAAAAHgFAAAAAAAAewUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAUQgAAAAAAAB4BQAAAAAAAAAAAAAAAAAA"
+				],
+				[
+					18,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AQAAAHkIAAAAAAAAeggAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAeQgAAAAAAAB5CAAAAAAAAAAAAAAAAAAA"
+				],
+				[
+					20,
+					1,
+					"insert",
+					{
+						"characters": "//cold"
+					},
+					"BgAAAHkIAAAAAAAAeggAAAAAAAAAAAAAeggAAAAAAAB7CAAAAAAAAAAAAAB7CAAAAAAAAHwIAAAAAAAAAAAAAHwIAAAAAAAAfQgAAAAAAAAAAAAAfQgAAAAAAAB+CAAAAAAAAAAAAAB+CAAAAAAAAH8IAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAeQgAAAAAAAB5CAAAAAAAAAAAAAAAAAAA"
+				],
+				[
+					21,
+					1,
+					"insert",
+					{
+						"characters": " gray"
+					},
+					"BQAAAH8IAAAAAAAAgAgAAAAAAAAAAAAAgAgAAAAAAACBCAAAAAAAAAAAAACBCAAAAAAAAIIIAAAAAAAAAAAAAIIIAAAAAAAAgwgAAAAAAAAAAAAAgwgAAAAAAACECAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAfwgAAAAAAAB/CAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					26,
+					1,
+					"insert",
+					{
+						"characters": "0"
+					},
+					"AQAAAOwIAAAAAAAA7QgAAAAAAAACAAAAMzQ",
+					"AQAAAAAAAAABAAAA7ggAAAAAAADsCAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					29,
+					2,
+					"left_delete",
+					null,
+					"AgAAACQJAAAAAAAAJAkAAAAAAAABAAAAMSMJAAAAAAAAIwkAAAAAAAABAAAAMg",
+					"AQAAAAAAAAABAAAAJQkAAAAAAAAlCQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					30,
+					1,
+					"insert",
+					{
+						"characters": "0"
+					},
+					"AQAAACMJAAAAAAAAJAkAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAIwkAAAAAAAAjCQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					33,
+					1,
+					"left_delete",
+					null,
+					"AQAAAFsJAAAAAAAAWwkAAAAAAAABAAAAMw",
+					"AQAAAAAAAAABAAAAWwkAAAAAAABcCQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					35,
+					1,
+					"right_delete",
+					null,
+					"AQAAAJIJAAAAAAAAkgkAAAAAAAABAAAAOA",
+					"AQAAAAAAAAABAAAAkgkAAAAAAACSCQAAAAAAAAAAAAAAkHRA"
+				],
+				[
+					37,
+					1,
+					"right_delete",
+					null,
+					"AQAAAMkJAAAAAAAAyQkAAAAAAAABAAAANQ",
+					"AQAAAAAAAAABAAAAyQkAAAAAAADJCQAAAAAAAAAAAAAAkHRA"
+				],
+				[
+					39,
+					1,
+					"right_delete",
+					null,
+					"AQAAAAAKAAAAAAAAAAoAAAAAAAABAAAAMw",
+					"AQAAAAAAAAABAAAAAAoAAAAAAAAACgAAAAAAAAAAAAAAkHRA"
+				],
+				[
+					42,
+					1,
+					"right_delete",
+					null,
+					"AQAAADcKAAAAAAAANwoAAAAAAAABAAAAMw",
+					"AQAAAAAAAAABAAAANwoAAAAAAAA3CgAAAAAAAAAAAAAAkHRA"
+				],
+				[
+					44,
+					1,
+					"right_delete",
+					null,
+					"AQAAAG4KAAAAAAAAbgoAAAAAAAABAAAANQ",
+					"AQAAAAAAAAABAAAAbgoAAAAAAABuCgAAAAAAAAAAAAAAkHRA"
+				],
+				[
+					46,
+					1,
+					"right_delete",
+					null,
+					"AQAAAKUKAAAAAAAApQoAAAAAAAABAAAAOA",
+					"AQAAAAAAAAABAAAApQoAAAAAAAClCgAAAAAAAAAAAAAAkHRA"
+				],
+				[
+					48,
+					1,
+					"right_delete",
+					null,
+					"AQAAANwKAAAAAAAA3AoAAAAAAAABAAAAMw",
+					"AQAAAAAAAAABAAAA3AoAAAAAAADcCgAAAAAAAAAAAAAAkHRA"
+				],
+				[
+					50,
+					1,
+					"right_delete",
+					null,
+					"AQAAABMLAAAAAAAAEwsAAAAAAAABAAAAMQ",
+					"AQAAAAAAAAABAAAAEwsAAAAAAAATCwAAAAAAAAAAAAAAkHRA"
+				],
+				[
+					52,
+					1,
+					"right_delete",
+					null,
+					"AQAAAEoLAAAAAAAASgsAAAAAAAABAAAANA",
+					"AQAAAAAAAAABAAAASgsAAAAAAABKCwAAAAAAAAAAAAAAkHRA"
+				],
+				[
+					53,
+					1,
+					"left_delete",
+					null,
+					"AQAAAEkLAAAAAAAASQsAAAAAAAABAAAAMw",
+					"AQAAAAAAAAABAAAASgsAAAAAAABKCwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					54,
+					1,
+					"insert",
+					{
+						"characters": "0"
+					},
+					"AQAAAEkLAAAAAAAASgsAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAASQsAAAAAAABJCwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					56,
+					1,
+					"left_delete",
+					null,
+					"AQAAABILAAAAAAAAEgsAAAAAAAABAAAAMg",
+					"AQAAAAAAAAABAAAAEwsAAAAAAAATCwAAAAAAAAAAAAAAkHRA"
+				],
+				[
+					57,
+					1,
+					"insert",
+					{
+						"characters": "0"
+					},
+					"AQAAABILAAAAAAAAEwsAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAEgsAAAAAAAASCwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					59,
+					1,
+					"left_delete",
+					null,
+					"AQAAANsKAAAAAAAA2woAAAAAAAABAAAAMQ",
+					"AQAAAAAAAAABAAAA3AoAAAAAAADcCgAAAAAAAAAAAAAAkHRA"
+				],
+				[
+					60,
+					1,
+					"insert",
+					{
+						"characters": "0"
+					},
+					"AQAAANsKAAAAAAAA3AoAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA2woAAAAAAADbCgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					62,
+					1,
+					"left_delete",
+					null,
+					"AQAAAFoJAAAAAAAAWgkAAAAAAAABAAAAMQ",
+					"AQAAAAAAAAABAAAAWwkAAAAAAABbCQAAAAAAAAAAAAAAkHRA"
+				],
+				[
+					63,
+					1,
+					"insert",
+					{
+						"characters": "0"
+					},
+					"AQAAAFoJAAAAAAAAWwkAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAWgkAAAAAAABaCQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					66,
+					1,
+					"insert",
+					{
+						"characters": "0"
+					},
+					"AQAAAO0IAAAAAAAA7ggAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA7QgAAAAAAADtCAAAAAAAAAAAAAAAkHRA"
+				],
+				[
+					69,
+					1,
+					"insert",
+					{
+						"characters": "0"
+					},
+					"AQAAACUJAAAAAAAAJgkAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAJQkAAAAAAAAlCQAAAAAAAAAAAAAAkHRA"
+				],
+				[
+					72,
+					1,
+					"insert",
+					{
+						"characters": "0"
+					},
+					"AQAAAF0JAAAAAAAAXgkAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAXQkAAAAAAABdCQAAAAAAAAAAAAAAkHRA"
+				],
+				[
+					75,
+					1,
+					"insert",
+					{
+						"characters": "0"
+					},
+					"AQAAAJUJAAAAAAAAlgkAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAlQkAAAAAAACVCQAAAAAAAAAAAAAAkHRA"
+				],
+				[
+					78,
+					1,
+					"insert",
+					{
+						"characters": "0"
+					},
+					"AQAAAM0JAAAAAAAAzgkAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAzQkAAAAAAADNCQAAAAAAAAAAAAAAkHRA"
+				],
+				[
+					81,
+					1,
+					"insert",
+					{
+						"characters": "0"
+					},
+					"AQAAAAUKAAAAAAAABgoAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAABQoAAAAAAAAFCgAAAAAAAAAAAAAAkHRA"
+				],
+				[
+					84,
+					1,
+					"insert",
+					{
+						"characters": "0"
+					},
+					"AQAAAD0KAAAAAAAAPgoAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAPQoAAAAAAAA9CgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					87,
+					1,
+					"insert",
+					{
+						"characters": "0"
+					},
+					"AQAAAHUKAAAAAAAAdgoAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAdQoAAAAAAAB1CgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					90,
+					1,
+					"insert",
+					{
+						"characters": "0"
+					},
+					"AQAAAK0KAAAAAAAArgoAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAArQoAAAAAAACtCgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					93,
+					1,
+					"insert",
+					{
+						"characters": "00"
+					},
+					"AgAAAOUKAAAAAAAA5goAAAAAAAAAAAAA5goAAAAAAADnCgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA5QoAAAAAAADlCgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					97,
+					1,
+					"insert",
+					{
+						"characters": "0"
+					},
+					"AQAAAFYLAAAAAAAAVwsAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAVgsAAAAAAABWCwAAAAAAAAAAAAAAAHVA"
+				],
+				[
+					100,
+					1,
+					"left_delete",
+					null,
+					"AQAAAFYLAAAAAAAAVgsAAAAAAAABAAAAMA",
+					"AQAAAAAAAAABAAAAVwsAAAAAAABXCwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					105,
+					1,
+					"left_delete",
+					null,
+					"AQAAAOUKAAAAAAAA5QoAAAAAAAABAAAAMA",
+					"AQAAAAAAAAABAAAA5goAAAAAAADmCgAAAAAAAAAAAAAAAHVA"
+				],
+				[
+					107,
+					1,
+					"insert",
+					{
+						"characters": "0"
+					},
+					"AQAAAB0LAAAAAAAAHgsAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAHQsAAAAAAAAdCwAAAAAAAAAAAAAAkHRA"
+				],
+				[
+					110,
+					1,
+					"insert",
+					{
+						"characters": "0"
+					},
+					"AQAAAFULAAAAAAAAVgsAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAVQsAAAAAAABVCwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					118,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"DQAAAD0IAAAAAAAAPQgAAAAAAAADAAAALy8gAggAAAAAAAACCAAAAAAAAAMAAAAvLyDHBwAAAAAAAMcHAAAAAAAAAwAAAC8vIIwHAAAAAAAAjAcAAAAAAAADAAAALy8gUQcAAAAAAABRBwAAAAAAAAMAAAAvLyAWBwAAAAAAABYHAAAAAAAAAwAAAC8vINsGAAAAAAAA2wYAAAAAAAADAAAALy8goAYAAAAAAACgBgAAAAAAAAMAAAAvLyBlBgAAAAAAAGUGAAAAAAAAAwAAAC8vICoGAAAAAAAAKgYAAAAAAAADAAAALy8g7wUAAAAAAADvBQAAAAAAAAMAAAAvLyC0BQAAAAAAALQFAAAAAAAAAwAAAC8vIHgFAAAAAAAAeAUAAAAAAAADAAAALy8g",
+					"AQAAAAAAAAABAAAAigUAAAAAAABPCAAAAAAAAAAAAAAAgF9A"
+				],
+				[
+					124,
+					1,
+					"toggle_comment",
+					{
+						"block": false
+					},
+					"DQAAAP8KAAAAAAAAAgsAAAAAAAAAAAAAxwoAAAAAAADKCgAAAAAAAAAAAACPCgAAAAAAAJIKAAAAAAAAAAAAAFcKAAAAAAAAWgoAAAAAAAAAAAAAHwoAAAAAAAAiCgAAAAAAAAAAAADnCQAAAAAAAOoJAAAAAAAAAAAAAK8JAAAAAAAAsgkAAAAAAAAAAAAAdwkAAAAAAAB6CQAAAAAAAAAAAAA/CQAAAAAAAEIJAAAAAAAAAAAAAAcJAAAAAAAACgkAAAAAAAAAAAAAzwgAAAAAAADSCAAAAAAAAAAAAACXCAAAAAAAAJoIAAAAAAAAAAAAAF4IAAAAAAAAYQgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAANwsAAAAAAABeCAAAAAAAAAAAAAAAAAAA"
+				],
+				[
+					149,
+					1,
+					"insert",
+					{
+						"characters": "21"
+					},
+					"AgAAAN8FAAAAAAAA4AUAAAAAAAACAAAAMzTgBQAAAAAAAOEFAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA3wUAAAAAAADhBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					154,
+					1,
+					"insert",
+					{
+						"characters": "13"
+					},
+					"AgAAABcGAAAAAAAAGAYAAAAAAAACAAAAMjEYBgAAAAAAABkGAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAGQYAAAAAAAAXBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					156,
+					2,
+					"left_delete",
+					null,
+					"AgAAAFAGAAAAAAAAUAYAAAAAAAABAAAAM08GAAAAAAAATwYAAAAAAAABAAAAMQ",
+					"AQAAAAAAAAABAAAAUQYAAAAAAABRBgAAAAAAAAAAAAAAAHVA"
+				],
+				[
+					157,
+					1,
+					"insert",
+					{
+						"characters": "08"
+					},
+					"AgAAAE8GAAAAAAAAUAYAAAAAAAAAAAAAUAYAAAAAAABRBgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAATwYAAAAAAABPBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					159,
+					1,
+					"left_delete",
+					null,
+					"AQAAAIgGAAAAAAAAiAYAAAAAAAABAAAAOA",
+					"AQAAAAAAAAABAAAAiQYAAAAAAACJBgAAAAAAAAAAAAAAAHVA"
+				],
+				[
+					160,
+					1,
+					"insert",
+					{
+						"characters": "5"
+					},
+					"AQAAAIgGAAAAAAAAiQYAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAiAYAAAAAAACIBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					162,
+					1,
+					"left_delete",
+					null,
+					"AQAAAMAGAAAAAAAAwAYAAAAAAAABAAAANQ",
+					"AQAAAAAAAAABAAAAwQYAAAAAAADBBgAAAAAAAAAAAAAAAHVA"
+				],
+				[
+					163,
+					1,
+					"insert",
+					{
+						"characters": "4"
+					},
+					"AQAAAMAGAAAAAAAAwQYAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAwAYAAAAAAADABgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					164,
+					1,
+					"left_delete",
+					null,
+					"AQAAAMAGAAAAAAAAwAYAAAAAAAABAAAANA",
+					"AQAAAAAAAAABAAAAwQYAAAAAAADBBgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					165,
+					1,
+					"insert",
+					{
+						"characters": "3"
+					},
+					"AQAAAMAGAAAAAAAAwQYAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAwAYAAAAAAADABgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					167,
+					1,
+					"left_delete",
+					null,
+					"AQAAAPgGAAAAAAAA+AYAAAAAAAABAAAAMw",
+					"AQAAAAAAAAABAAAA+QYAAAAAAAD5BgAAAAAAAAAAAAAAAHVA"
+				],
+				[
+					168,
+					1,
+					"insert",
+					{
+						"characters": "2"
+					},
+					"AQAAAPgGAAAAAAAA+QYAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA+AYAAAAAAAD4BgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					174,
+					1,
+					"left_delete",
+					null,
+					"AQAAADAHAAAAAAAAMAcAAAAAAAABAAAAMw",
+					"AQAAAAAAAAABAAAAMQcAAAAAAAAxBwAAAAAAAAAAAAAAAHVA"
+				],
+				[
+					175,
+					1,
+					"insert",
+					{
+						"characters": "2"
+					},
+					"AQAAADAHAAAAAAAAMQcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAMAcAAAAAAAAwBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					177,
+					2,
+					"left_delete",
+					null,
+					"AgAAAEgIAAAAAAAASAgAAAAAAAABAAAANEcIAAAAAAAARwgAAAAAAAABAAAAMw",
+					"AQAAAAAAAAABAAAASQgAAAAAAABJCAAAAAAAAAAAAAAAAHVA"
+				],
+				[
+					178,
+					1,
+					"insert",
+					{
+						"characters": "21"
+					},
+					"AgAAAEcIAAAAAAAASAgAAAAAAAAAAAAASAgAAAAAAABJCAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAARwgAAAAAAABHCAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					180,
+					2,
+					"left_delete",
+					null,
+					"AgAAABAIAAAAAAAAEAgAAAAAAAABAAAAMQ8IAAAAAAAADwgAAAAAAAABAAAAMg",
+					"AQAAAAAAAAABAAAAEQgAAAAAAAARCAAAAAAAAAAAAAAAAHVA"
+				],
+				[
+					181,
+					1,
+					"insert",
+					{
+						"characters": "13"
+					},
+					"AgAAAA8IAAAAAAAAEAgAAAAAAAAAAAAAEAgAAAAAAAARCAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAADwgAAAAAAAAPCAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					183,
+					2,
+					"left_delete",
+					null,
+					"AgAAANgHAAAAAAAA2AcAAAAAAAABAAAAM9cHAAAAAAAA1wcAAAAAAAABAAAAMQ",
+					"AQAAAAAAAAABAAAA2QcAAAAAAADZBwAAAAAAAAAAAAAAAHVA"
+				],
+				[
+					184,
+					1,
+					"insert",
+					{
+						"characters": "08"
+					},
+					"AgAAANcHAAAAAAAA2AcAAAAAAAAAAAAA2AcAAAAAAADZBwAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA1wcAAAAAAADXBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					186,
+					1,
+					"left_delete",
+					null,
+					"AQAAAKAHAAAAAAAAoAcAAAAAAAABAAAAOA",
+					"AQAAAAAAAAABAAAAoQcAAAAAAAChBwAAAAAAAAAAAAAAAHVA"
+				],
+				[
+					187,
+					1,
+					"insert",
+					{
+						"characters": "5"
+					},
+					"AQAAAKAHAAAAAAAAoQcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAoAcAAAAAAACgBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					189,
+					1,
+					"left_delete",
+					null,
+					"AQAAAGgHAAAAAAAAaAcAAAAAAAABAAAANQ",
+					"AQAAAAAAAAABAAAAaQcAAAAAAABpBwAAAAAAAAAAAAAAAHVA"
+				],
+				[
+					190,
+					1,
+					"insert",
+					{
+						"characters": "3"
+					},
+					"AQAAAGgHAAAAAAAAaQcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAaAcAAAAAAABoBwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					204,
+					1,
+					"duplicate_line",
+					null,
+					"AQAAAGoFAAAAAAAAhgUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAaQUAAAAAAABpBQAAAAAAAAAAAAAAAHVA"
+				],
+				[
+					207,
+					1,
+					"insert",
+					{
+						"characters": "238"
+					},
+					"AwAAAIIFAAAAAAAAgwUAAAAAAAACAAAANTiDBQAAAAAAAIQFAAAAAAAAAAAAAIQFAAAAAAAAhQUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAhAUAAAAAAACCBQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					211,
+					1,
+					"swap_line_up",
+					null,
+					"AgAAAGoFAAAAAAAAagUAAAAAAAAdAAAAJG5ldXRyYWwtaHVlOiAgICAgICAgICAgMjM4OwpOBQAAAAAAAGsFAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAagUAAAAAAABqBQAAAAAAAAAAAAAAAAAA"
 				]
 			]
 		}
@@ -636,6 +1640,10 @@
 		"selected_items":
 		[
 			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
 				"sort",
 				"Sort Lines"
 			],
@@ -650,10 +1658,6 @@
 			[
 				"h",
 				"HTMLBeautify"
-			],
-			[
-				"instal",
-				"Package Control: Install Package"
 			],
 			[
 				"termina",
@@ -986,48 +1990,64 @@
 	[
 		"/Users/brianmcconnell/Sites/mrbmc",
 		"/Users/brianmcconnell/Sites/mrbmc/src",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_includes",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_scss",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/base"
+		"/Users/brianmcconnell/Sites/mrbmc/src/_fonts",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_js",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_layouts"
 	],
 	"file_history":
 	[
-		"/Users/brianmcconnell/Sites/mrbmc/src/_includes/_project-list.md",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/base/_root.scss",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_includes/_project.md",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/pages/portfolio.scss",
-		"/Users/brianmcconnell/Sites/mrbmc/src/portfolio.md",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/library/_variables.scss",
 		"/Users/brianmcconnell/Sites/mrbmc/src/index.md",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_js/home.js",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/pages/home.scss",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/library/_variables.scss",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_includes/_principles.md",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/base/_type.scss",
+		"/Users/brianmcconnell/Sites/mrbmc/src/posts/job-market-2025.md",
 		"/Users/brianmcconnell/Sites/mrbmc/src/projects/disney-enterprise.md",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/components/_header.scss",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/pages/portfolio.scss",
+		"/Users/brianmcconnell/Sites/mrbmc/src/projects/nhl.md",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/components/_project-list.scss",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_includes/_project-list.md",
+		"/Users/brianmcconnell/Sites/mrbmc/src/projects/disney-growth.md",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/components/_sticky-nav.scss",
+		"/Users/brianmcconnell/Sites/mrbmc/src/projects/disney-groupwatch.md",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/base/_molecules.scss",
+		"/Users/brianmcconnell/Sites/mrbmc/src/about.md",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_js/base.js",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_js/modules/dom_utils.mjs",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_js/about.js",
+		"/Users/brianmcconnell/Sites/mrbmc/gulpfile.js",
+		"/Users/brianmcconnell/Sites/mrbmc/node_modules/less/Gruntfile.js",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/pages/about.scss",
+		"/Users/brianmcconnell/Sites/mrbmc/src/photos.md",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/pages/photos.scss",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_includes/_process.md",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_includes/_work-list.md",
 		"/Users/brianmcconnell/Sites/mrbmc/metrics/metrics.sh",
 		"/Users/brianmcconnell/Sites/mrbmc/metrics/blacklist-agents.txt",
-		"/Users/brianmcconnell/Sites/mrbmc/src/projects/disney-growth.md",
+		"/Users/brianmcconnell/Sites/mrbmc/eleventy.config.js",
+		"/Users/brianmcconnell/Sites/mrbmc/src/projects/projects.json",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_layouts/project-detail.md",
+		"/Users/brianmcconnell/Sites/mrbmc/src/colophon.md",
+		"/Users/brianmcconnell/Sites/mrbmc/package.json",
+		"/Users/brianmcconnell/Sites/mrbmc/src/posts/bike-tour-2024.md",
+		"/Users/brianmcconnell/Sites/mrbmc/src/_includes/_project.md",
+		"/Users/brianmcconnell/Sites/mrbmc/src/portfolio.md",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/base/_animation.scss",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/screen.scss",
-		"/Users/brianmcconnell/Sites/mrbmc/package.json",
-		"/Users/brianmcconnell/Sites/mrbmc/gulpfile.js",
 		"/Users/brianmcconnell/Sites/mrbmc/mrbmc.sublime-project",
-		"/Users/brianmcconnell/Sites/mrbmc/src/projects/nhl.md",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_layouts/project-detail.md",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_js/portfolio.js",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_js/base.js",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/components/_footer.scss",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_includes/_footer.html",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_data/site.json",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/base/_atoms.scss",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/base/_molecules.scss",
-		"/Users/brianmcconnell/Sites/mrbmc/src/about.md",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_includes/_process.md",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_includes/_leadership.md",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/pages/about.scss",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/base/_type.scss",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_js/gaia/pixi.js",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_layouts/layout.html",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/gaia.scss",
 		"/Users/brianmcconnell/Sites/LLM-knowledge/BMCCareer/js_braze.txt",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/pages/photos.scss",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/pages/post.scss",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/pages/project.scss",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/pages/resume.scss",
@@ -1035,10 +2055,8 @@
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/pages/colophon.scss",
 		"/Users/brianmcconnell/Library/Application Support/Sublime Text 3/Packages/User/SublimeOnSaveBuild.sublime-settings",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/base/_grid.scss",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/components/_project-list.scss",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/library/_colors.scss",
 		"/Users/brianmcconnell/Sites/mrbmc/node_modules/es-errors/type.js",
-		"/Users/brianmcconnell/Sites/mrbmc/src/colophon.md",
 		"/Users/brianmcconnell/Sites/mrbmc/src/images/profile/critter-crane.svg",
 		"/Users/brianmcconnell/Sites/mrbmc/src/images/profile/critter-dog.svg",
 		"/Users/brianmcconnell/Sites/mrbmc/src/images/profile/critter-elephant.svg",
@@ -1048,20 +2066,15 @@
 		"/Users/brianmcconnell/Sites/mrbmc/src/images/profile/kageki-animals.svg",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_includes/_header.html",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_js/modules/critters.mjs",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/components/_header.scss",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_js/modules/dom_utils.mjs",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_layouts/post-detail.md",
 		"/Users/brianmcconnell/Sites/mrbmc/node_modules/yoctocolors/base.js",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_includes/_principles.md",
 		"/Users/brianmcconnell/Desktop/notes.txt",
 		"/Users/brianmcconnell/Sites/LLM-knowledge/BMCCareer/jd_carescout.txt",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/components/_post-list.scss",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_includes/_post-list.md",
-		"/Users/brianmcconnell/Sites/mrbmc/eleventy.config.js",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_js/modules/molf-boids.mjs",
 		"/Users/brianmcconnell/Sites/mrbmc/src/projects/eurosport.md",
 		"/Users/brianmcconnell/Sites/mrbmc/src/projects/disney-growth-long.md",
-		"/Users/brianmcconnell/Sites/mrbmc/src/projects/disney-groupwatch.md",
 		"/Users/brianmcconnell/Desktop/mask.svg",
 		"/Users/brianmcconnell/Sites/mrbmc/backup/2003/less/_variables.less",
 		"/Users/brianmcconnell/Sites/mrbmc/src/strava.html",
@@ -1071,8 +2084,6 @@
 		"/Users/brianmcconnell/Sites/mrbmc/www/js/pixi.bundle.js",
 		"/Users/brianmcconnell/Sites/mrbmc/www/js/portfolio.bundle.js",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_js/mrbmc.js",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_js/home.js",
-		"/Users/brianmcconnell/Sites/mrbmc/src/photos.md",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_js/photos.js",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/library/_mixins.scss",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_js/blog.js",
@@ -1103,10 +2114,8 @@
 		"/Users/brianmcconnell/Sites/mrbmc/src/_layouts/gaia.html",
 		"/Users/brianmcconnell/Sites/mrbmc/metrics/blacklist-urls.txt",
 		"/Users/brianmcconnell/Sites/mrbmc/src/images/profile/kageki-crane.svg",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/components/_sticky-nav.scss",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/components/_masthead.scss",
 		"/Users/brianmcconnell/Sites/mrbmc/src/critters.html",
-		"/Users/brianmcconnell/Sites/mrbmc/src/posts/bike-tour-2024.md",
 		"/Users/brianmcconnell/Desktop/kageki-elephant.svg",
 		"/Users/brianmcconnell/Sites/mrbmc/www/images/profile/kageki-animals.svg",
 		"/Users/brianmcconnell/Sites/mrbmc/src/blog.md",
@@ -1114,12 +2123,7 @@
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/base/_index.scss",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/library/_index.scss",
 		"/Users/brianmcconnell/Sites/mrbmc/src/404.md",
-		"/Users/brianmcconnell/Sites/mrbmc/src/tags.md",
-		"/Users/brianmcconnell/Sites/mrbmc/node_modules/eleventy-plugin-time-to-read/index.js",
-		"/Users/brianmcconnell/Sites/mrbmc/node_modules/eleventy-plugin-time-to-read/components/measure-time.js",
-		"/Users/brianmcconnell/Sites/mrbmc/src/rss.njk",
-		"/Users/brianmcconnell/Sites/mrbmc/src/projects/blogtalkradio.md",
-		"/Users/brianmcconnell/Sites/mrbmc/src/posts/bike-tour-2023.md"
+		"/Users/brianmcconnell/Sites/mrbmc/src/tags.md"
 	],
 	"find":
 	{
@@ -1130,6 +2134,8 @@
 		"height": 101.0,
 		"where_history":
 		[
+			"/Users/brianmcconnell/Sites/mrbmc/src,<project filters>",
+			"/Users/brianmcconnell/Sites/mrbmc/src/_scss,<project filters>",
 			"/Users/brianmcconnell/Sites/mrbmc/src",
 			"/Users/brianmcconnell/Sites/mrbmc/src/images/profile,<project filters>",
 			"/Users/brianmcconnell/Sites/mrbmc/src/images/about,<project filters>",
@@ -1255,9 +2261,7 @@
 			"/Users/brianmcconnell/Sites/mrbmc/_src/less/,<project filters>",
 			"/Users/brianmcconnell/Sites/mrbmc/src/less/,<project filters>",
 			"/Users/brianmcconnell/Sites/mrbmc/src/,<project filters>",
-			"/Users/brianmcconnell/Sites/mrbmc/src/_less/,<project filters>",
-			"/Users/brianmcconnell/Sites/mrbmc/src,<project filters>",
-			"/Users/brianmcconnell/Sites/mrbmc/src/_less,<project filters>"
+			"/Users/brianmcconnell/Sites/mrbmc/src/_less/,<project filters>"
 		]
 	},
 	"find_state":
@@ -1265,6 +2269,44 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"boids",
+			"dreyfus",
+			"height",
+			"overflow",
+			"radius",
+			"project",
+			"xl",
+			"blur",
+			"white\\-semi",
+			"h1",
+			"baseScroll",
+			"animateElementsInView",
+			"scroll\\-snap",
+			"scroll\\-snap\\-",
+			"scroll-snap",
+			"snap",
+			"principles",
+			"timeline",
+			"30d",
+			"easeOut",
+			"bold\\-font\\-weight",
+			"bold",
+			"sort",
+			"baseScroll",
+			"spies",
+			"index",
+			"value",
+			"spies",
+			"collection",
+			"posts",
+			"projects\\.json",
+			"projects",
+			"const",
+			"collection",
+			"include",
+			"projcet",
+			"focus",
+			"argv",
 			"\\.full-width",
 			"small",
 			"h1",
@@ -1354,45 +2396,7 @@
 			"html",
 			"CFDISTRO",
 			"localenv",
-			"localdir",
-			"S3BUCKET",
-			"uglify",
-			"terser",
-			"rollupJS",
-			"isProduction",
-			"jsbundles",
-			"js",
-			"mrbmc\\-bundle",
-			"mrbmc-bundle\\.js",
-			"mrbmc\\.js",
-			"mrbmc.js",
-			"full-width",
-			"\\.well",
-			"critterScroll",
-			"easeInOutCubic",
-			"ticking",
-			"critterScroll",
-			"numBoids",
-			"toggleClass",
-			"onScroll",
-			"ticking",
-			"oldPage",
-			"startRenderLoop",
-			"jsbundles",
-			"applyRotation",
-			"beta",
-			"const",
-			"setupControls",
-			"renderFrame",
-			"requestAnimationFrame",
-			"touch",
-			"anim",
-			"onMove",
-			"lastX",
-			"startRenderLoop",
-			"\\./",
-			"\\./www/js",
-			"builds"
+			"localdir"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1544,51 +2548,49 @@
 			[
 				{
 					"buffer": 0,
-					"file": "src/index.md",
+					"file": "src/_scss/library/_variables.scss",
+					"selected": true,
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1164,
+						"buffer_size": 3164,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								933,
-								933
+								307,
+								307
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Liquid/Syntaxes/Markdown (Liquid).sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Sass/Syntaxes/SCSS.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"stack_multiselect": false,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "src/_scss/pages/portfolio.scss",
-					"selected": true,
+					"file": "src/_scss/base/_type.scss",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1316,
+						"buffer_size": 2718,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								322,
-								322
+								1242,
+								1242
 							]
 						],
 						"settings":
@@ -1601,7 +2603,38 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/_scss/library/_colors.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2939,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1428,
+								1428
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/SCSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"stack_multiselect": false,
 					"type": "text"
 				}
@@ -1655,7 +2688,7 @@
 	},
 	"output.exec":
 	{
-		"height": 112.0,
+		"height": 231.0,
 		"history":
 		[
 		]
@@ -1675,7 +2708,7 @@
 	"project": "mrbmc.sublime-project",
 	"replace":
 	{
-		"height": 68.0
+		"height": 44.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1685,16 +2718,176 @@
 		"selected_items":
 		[
 			[
-				"portf.sc",
-				"src/_scss/pages/portfolio.scss"
+				"_ty",
+				"src/_scss/base/_type.scss"
+			],
+			[
+				"_root",
+				"src/_scss/base/_root.scss"
+			],
+			[
+				"color",
+				"src/_scss/library/_colors.scss"
+			],
+			[
+				"_var",
+				"src/_scss/library/_variables.scss"
+			],
+			[
+				"home",
+				"src/_js/home.js"
+			],
+			[
+				"home.scs",
+				"src/_scss/pages/home.scss"
+			],
+			[
+				"index",
+				"src/index.md"
+			],
+			[
+				"enter",
+				"src/projects/disney-enterprise.md"
+			],
+			[
+				"prince",
+				"src/_includes/_principles.md"
 			],
 			[
 				"project-list",
 				"src/_includes/_project-list.md"
 			],
 			[
-				"index",
-				"src/index.md"
+				"disney-",
+				"src/projects/disney-growth.md"
+			],
+			[
+				"nhl",
+				"src/projects/nhl.md"
+			],
+			[
+				"_Var",
+				"src/_scss/library/_variables.scss"
+			],
+			[
+				"portfolio.scs",
+				"src/_scss/pages/portfolio.scss"
+			],
+			[
+				"_hea",
+				"src/_scss/components/_header.scss"
+			],
+			[
+				"_head",
+				"src/_scss/components/_header.scss"
+			],
+			[
+				"-groupwat",
+				"src/projects/disney-groupwatch.md"
+			],
+			[
+				"_t",
+				"src/_scss/base/_type.scss"
+			],
+			[
+				"about",
+				"src/about.md"
+			],
+			[
+				"princ",
+				"src/_includes/_principles.md"
+			],
+			[
+				"sticky-nav",
+				"src/_scss/components/_sticky-nav.scss"
+			],
+			[
+				"header.scs",
+				"src/_scss/components/_header.scss"
+			],
+			[
+				"dom_ut",
+				"src/_js/modules/dom_utils.mjs"
+			],
+			[
+				"base",
+				"src/_js/base.js"
+			],
+			[
+				"gulp",
+				"gulpfile.js"
+			],
+			[
+				"grunt",
+				"node_modules/less/Gruntfile.js"
+			],
+			[
+				"phot",
+				"src/_scss/pages/photos.scss"
+			],
+			[
+				"process.m",
+				"src/_includes/_process.md"
+			],
+			[
+				"photos.scs",
+				"src/_scss/pages/photos.scss"
+			],
+			[
+				"photo",
+				"src/photos.md"
+			],
+			[
+				"about.scs",
+				"src/_scss/pages/about.scss"
+			],
+			[
+				"princi",
+				"src/_includes/_principles.md"
+			],
+			[
+				"black",
+				"metrics/blacklist-agents.txt"
+			],
+			[
+				"metric",
+				"metrics/metrics.sh"
+			],
+			[
+				"_type",
+				"src/_scss/base/_type.scss"
+			],
+			[
+				"eleve",
+				"eleventy.config.js"
+			],
+			[
+				"elev",
+				"eleventy.config.js"
+			],
+			[
+				"project-de",
+				"src/_layouts/project-detail.md"
+			],
+			[
+				"ele",
+				"eleventy.config.js"
+			],
+			[
+				"project-li",
+				"src/_includes/_project-list.md"
+			],
+			[
+				"pack",
+				"package.json"
+			],
+			[
+				"bike-",
+				"src/posts/bike-tour-2024.md"
+			],
+			[
+				"portf.sc",
+				"src/_scss/pages/portfolio.scss"
 			],
 			[
 				"portfol",
@@ -1705,28 +2898,12 @@
 				"src/_scss/base/_root.scss"
 			],
 			[
-				"portfolio.scs",
-				"src/_scss/pages/portfolio.scss"
-			],
-			[
-				"_var",
-				"src/_scss/library/_variables.scss"
-			],
-			[
-				"home",
-				"src/_scss/pages/home.scss"
-			],
-			[
 				"-enter",
 				"src/projects/disney-enterprise.md"
 			],
 			[
 				"porfolio.s",
 				"src/_scss/pages/portfolio.scss"
-			],
-			[
-				"black",
-				"metrics/blacklist-agents.txt"
 			],
 			[
 				"metr",
@@ -1741,18 +2918,6 @@
 				"package.json"
 			],
 			[
-				"gulp",
-				"gulpfile.js"
-			],
-			[
-				"nhl",
-				"src/projects/nhl.md"
-			],
-			[
-				"project-de",
-				"src/_layouts/project-detail.md"
-			],
-			[
 				"port",
 				"src/portfolio.md"
 			],
@@ -1765,28 +2930,12 @@
 				"src/_includes/_footer.html"
 			],
 			[
-				"about.scs",
-				"src/_scss/pages/about.scss"
-			],
-			[
 				"_proces",
 				"src/_includes/_process.md"
 			],
 			[
-				"about",
-				"src/about.md"
-			],
-			[
-				"_root",
-				"src/_scss/base/_root.scss"
-			],
-			[
 				"atom",
 				"src/_scss/base/_atoms.scss"
-			],
-			[
-				"_ty",
-				"src/_scss/base/_type.scss"
 			],
 			[
 				"_footer.scs",
@@ -1799,10 +2948,6 @@
 			[
 				"gul",
 				"gulpfile.js"
-			],
-			[
-				"pack",
-				"package.json"
 			],
 			[
 				"scre",
@@ -1851,10 +2996,6 @@
 			[
 				"_r",
 				"src/_scss/base/_root.scss"
-			],
-			[
-				"_type",
-				"src/_scss/base/_type.scss"
 			],
 			[
 				"type",
@@ -1913,10 +3054,6 @@
 				"src/_js/modules/critters.mjs"
 			],
 			[
-				"base",
-				"src/_js/base.js"
-			],
-			[
 				"critters",
 				"src/_js/modules/critters.mjs"
 			],
@@ -1949,23 +3086,11 @@
 				"src/_scss/library/_colors.scss"
 			],
 			[
-				"_head",
-				"src/_scss/components/_header.scss"
-			],
-			[
 				"_typ",
 				"src/_scss/base/_type.scss"
 			],
 			[
-				"princi",
-				"src/_includes/_principles.md"
-			],
-			[
 				"color.scs",
-				"src/_scss/library/_colors.scss"
-			],
-			[
-				"color",
 				"src/_scss/library/_colors.scss"
 			],
 			[
@@ -1979,10 +3104,6 @@
 			[
 				"euro",
 				"src/projects/eurosport.md"
-			],
-			[
-				"ele",
-				"eleventy.config.js"
 			],
 			[
 				"_project",
@@ -2011,10 +3132,6 @@
 			[
 				"boids.mjs",
 				"src/_js/modules/molf-boids.mjs"
-			],
-			[
-				"home.scs",
-				"src/_scss/pages/home.scss"
 			],
 			[
 				"link",
@@ -2069,10 +3186,6 @@
 				"src/photos.md"
 			],
 			[
-				"photos.scs",
-				"src/_scss/pages/photos.scss"
-			],
-			[
 				"mr",
 				"src/_js/mrbmc.js"
 			],
@@ -2115,86 +3228,6 @@
 			[
 				"project-deta",
 				"src/_layouts/project-detail.md"
-			],
-			[
-				"boids",
-				"backup/2022/boids.html"
-			],
-			[
-				"portfo.js",
-				"src/_js/portfolio.js"
-			],
-			[
-				"header.ht",
-				"src/_includes/_header.html"
-			],
-			[
-				"dom_i",
-				"src/_js/modules/dom_utils.mjs"
-			],
-			[
-				"post-det",
-				"src/_layouts/post-detail.md"
-			],
-			[
-				"dom_ut",
-				"src/_js/modules/dom_utils.mjs"
-			],
-			[
-				"bund",
-				"www/js/bundle.js"
-			],
-			[
-				"portfolio js",
-				"src/_js/portfolio.js"
-			],
-			[
-				"bundle",
-				"www/js/bundle.js"
-			],
-			[
-				"portfo",
-				"src/_js/portfolio.js"
-			],
-			[
-				"paralax",
-				"src/_js/modules/parallax.mjs"
-			],
-			[
-				"header.scs",
-				"src/_scss/components/_header.scss"
-			],
-			[
-				"portfolio",
-				"src/_js/portfolio.js"
-			],
-			[
-				"-groupwatch",
-				"src/projects/disney-groupwatch.md"
-			],
-			[
-				"project-",
-				"src/_layouts/project-detail.md"
-			],
-			[
-				"galler-inline.scs",
-				"src/_scss/components/_gallery-inline.scss"
-			],
-			[
-				"_gallery-in",
-				"src/_scss/components/_gallery-inline.scss"
-			],
-			[
-				"para",
-				"src/_js/modules/parallax.mjs"
-			],
-			[
-				"gallery-inline",
-				"src/_js/gallery-inline.js"
-			],
-			[
-				"masthead",
-				"src/_includes/_masthead.md"
 			]
 		],
 		"width": 0.0
@@ -2229,7 +3262,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 181.0,
+	"side_bar_width": 178.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

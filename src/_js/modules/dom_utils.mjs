@@ -3,10 +3,10 @@ export function wrapElement (el, wrapper) {
     wrapper.appendChild(el);
 }
 
-export function isInViewport (elem) {
-    // if(VERBOSE) console.log('isInViewport',elem);
+export function isInViewport (elem,_peek) {
+    // console.log('isInViewport',elem);
     var bounding = elem.getBoundingClientRect(),
-        peek = bounding.height / 2;
+        peek = _peek ? _peek : (bounding.height / 2);
     return (
         bounding.bottom >= (0 - peek) &&
         bounding.top <= ((window.innerHeight || document.documentElement.clientHeight) - peek) &&

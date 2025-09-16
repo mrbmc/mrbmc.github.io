@@ -7,7 +7,7 @@
 
 {% if heading %}## {{ heading }}{% endif %}
 
-{% if description %}{{ description }}{% endif %}
+{% if summary %}{{ summary }}{% endif %}
 
 {% for project in collection reversed %}{% if forloop.index0 < count %}{% include "_project.md" %}{% endif %}{% endfor %}
 

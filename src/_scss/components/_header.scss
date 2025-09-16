@@ -1,6 +1,5 @@
 @use '../library' as lib;
 
-
 #header {
   box-sizing: border-box;
   z-index: 100;
@@ -19,6 +18,11 @@
     margin-left: 0;
   }
 
+  a {
+    font-family: lib.$navbar-font-family;
+    font-weight: lib.$navbar-font-weight;
+  }
+
   .logo {
     $logo-size: calc(var(--navbar-height) * 0.8);
     width: $logo-size;
@@ -28,7 +32,7 @@
     // margin: -0.25em;
     padding: 0.25em;
     overflow: hidden;
-    border-radius: var(--border-radius-xl);
+    border-radius: var(--border-radius);
 
     &:hover {
       // background: var(--muted-background);
@@ -68,7 +72,7 @@
       transition: all lib.$speed lib.$easing;
       padding: 0 calc(var(--gutter) * .5);
       margin: 0 0 0 var(--gutter);
-      border-radius: var(--border-radius-xl);
+      border-radius: var(--border-radius);
       // text-transform: uppercase;
       text-decoration: none;
 

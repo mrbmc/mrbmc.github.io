@@ -4,23 +4,22 @@
 
 These mantras - which colleagues have heard me repeat - help guide consistent high-quality product decisions.
 
-<br />
+<div class="grid full-grid">
 
-<div class="grid">
+![Alt Text](/images/portfolio/disney-groupwatch/wewatch-interview-participants-3x3.jpg) {.col-start-1 .col-end-5}
 
-![Alt Text](/images/portfolio/disney-groupwatch/wewatch-interview-participants-3x3.jpg) {.col-5}
-
-<div class="col-7">
+<div class="col-start-7 col-end-12">
 
 #### Ask, don't assume.
 
 Bring a beginner's mindset to your work so you can stay open to evidence that elucidates the problem and expands your view of potential solutions. So much of what we think we know is inference, and asking dumb questions distinguishes real constraints from preconceived limitations.
 
-<!--Our perception of the world is a rich sensory hallucination inferred from assumptions and previous experiences. The human brain uses perceptual completion to construct narratives that fill in gaps in data. We can reduce ambiguity in Product Design in two ways. We collect evidence - qualitative and quantitative research - to fill gaps in our understanding. We use repeated, iterative, communication, to build alignment up, down, and across work streams.-->
+</div>
 
 </div>
-  
-<div class="col-7">
+<div class="grid full-grid">
+
+<div class="col-start-1 col-end-6">
 
 #### "If you want to go fast, go alone.<br />If you want to go far, go together."
 
@@ -28,11 +27,14 @@ Success is an infinite sum game that can be grown through collaboration. A great
 
 </div>
   
-![Alt Text](/images/portfolio/disney-growth/workshop-pictogram.jpg) {.col-5}
+![Alt Text](/images/portfolio/disney-growth/workshop-pictogram.jpg) {.col-start-8 .col-end-12}
 
-![Alt Text](/images/blog/sealion-balance.jpg) {.col-5}
+</div>
+<div class="grid full-grid">
 
-<div class="col-7">
+![Alt Text](/images/blog/sealion-balance.jpg) {.col-start-1 .col-end-5}
+
+<div class="col-start-7 col-end-12">
 
 #### "Momentum is the best plan."
 
@@ -42,7 +44,10 @@ It's so much easier to pivot or accelerate if you're already in motion. A sealio
 
 </div>
   
-<div class="col-7">
+</div>
+<div class="grid full-grid">
+
+<div class="col-start-1 col-end-6">
 
 #### "Walk all the way around the tree to find the best fruit."
 
@@ -50,7 +55,9 @@ The solution in design often seems obvious but is usually the product of a rigor
 
 </div>
   
-![Alt Text](/images/about/about-wireframes-xl.jpg) {.col-5}
+![Alt Text](/images/about/about-wireframes-xl.jpg) {.col-start-8 .col-end-12}
+
+</div>
 
 </div>
 

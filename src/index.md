@@ -9,7 +9,7 @@ cssfile: "css/pages/home.css"
 
 {% section "masthead","full-grid" %}
 
-## Design, Product Discovery, and Cross-Functional Leadership across B2C and B2B, from early startups to global enterprises.{.blur-in}
+# Design, Product Discovery, and Cross-Functional Leadership across B2C and B2B, from early startups to global enterprises.{.blur-in}
 
 {#boids}
 
@@ -32,8 +32,9 @@ cssfile: "css/pages/home.css"
     heading: false, 
     description:false%}
 
-{% include "_post-list.md", postList: collections.post, heading: "Recent Posts", count: 4, description:false %}
+----
+
+{% include "_post-list.md", postList: collections.post, heading: "Recent Blog Posts", count: 4, description:false %}
 
 
 <script type="module" src="/js/home.bundle.js"></script>
-

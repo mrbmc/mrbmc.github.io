@@ -111,13 +111,13 @@ The art direction was inspired by high-end Audio and video authoring application
 + !['Ad Break'](/images/portfolio/btr/btr-studio-ad-break.png) {.col-4 .row-1}
 + !['Macbook'](/images/portfolio/btr/btr-studio-imac.png) {.col-12 .contain}
 
-{.grid .well .full-width}
+{.grid .well .full-grid}
 
 ### Ad Breaks
 
 Hosts wanted total control over when and how ads cut into their shows. We built an web-based audio editor that allowed hosts to splice in ads at the frame level.
 
-!['Ad Editor'](/images/portfolio/btr/btr-ad-editor.png) 
+!['Ad Editor'](/images/portfolio/btr/btr-ad-editor.png){.canzoom} 
  
 
 ----
@@ -132,7 +132,7 @@ By far the most common workflow we saw almost every host take in the dashboard w
 + ![Listens Overview](/images/portfolio/btr/btr-stats-episode.png) {.col-6}
 + ![Podcast Host Dashboard](/images/portfolio/btr/btr-dashboard-laptop.png) {.col-12}
 
-{.grid .well .full-width}
+{.grid .well .full-grid}
 
 ### Content Guidance
 
@@ -148,7 +148,7 @@ We built features, like **Signal Strength**, and **Template Episodes** to help i
 + !['Manage Episodes'](/images/portfolio/btr/btr-episodes-list.png) {.col-4 .hide}
 + !['Manage Episodes'](/images/portfolio/btr/btr-episodes-list-select.png) {.col-6}
 + !['Order Transcript'](/images/portfolio/btr/btr-episodes-list-transcript.png) {.col-6}
-{.grid .well .full-width}
+{.grid .well .full-grid}
 
 ### Improved Show Artwork{#coverart}
 
@@ -164,9 +164,9 @@ Improved the artwork delivered tangible business impact:
 
 
 
-![New Artwork](/images/portfolio/btr/btr-host-artwork.png){ style="object-position:0% 0;" .col-12}
+![New Artwork](/images/portfolio/btr/btr-host-artwork.png){.col-12 .canzoom}
 
-![New Artwork](/images/portfolio/btr/btr-homepage.jpg){.col-12}
+![New Artwork](/images/portfolio/btr/btr-homepage.jpg){.col-12 .canzoom}
 
 ---
 

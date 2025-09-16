@@ -16,7 +16,11 @@ timeline: 2019-2020
 
 <video src="/images/portfolio/disney-groupwatch/GW-Demo_02-24.mp4" autoplay loop muted preload="auto" playsinline type="video/mp4" class="full-grid"></video>
 
-<!-- ![GroupWatch Devices](/images/portfolio/disney-groupwatch/disney-groupwatch-devices.png){.full-width .blur-in} -->
+* [Discover](#discover) 
+* [Define](#define) 
+* [Develop](#develop) 
+* [Deliver](#deliver)
+{.sticky-nav}
 
 ## Storytelling is a fundamental human need.{.center}
 
@@ -24,12 +28,6 @@ timeline: 2019-2020
 
 ![](/images/portfolio/disney-groupwatch/disney-groupwatch-cover.jpg)
 
-
-* [Discover](#discover) 
-* [Define](#define) 
-* [Develop](#develop) 
-* [Deliver](#deliver)
-{.sticky-nav}
 
 ## Discover{#discover .center}
 ![Double Diamond](/images/portfolio/doublediamond-discover.png){.doublediamond}
@@ -241,8 +239,10 @@ GroupWatch found traction quickly with a solid cohort of subscribers. Over time 
 ![Performacne Chart](/images/portfolio/disney-groupwatch/groupwatch-metrics.png)
 
 <style>
-img.doublediamond { height:2rem;width:auto;margin:0 auto 3rem auto;display:block;}
-@media (min-width: 43rem) {
-#scrollhint,.scrollhint { display: block;}
+img.doublediamond {
+   height:2rem;
+   width:auto;
+   margin:0 auto 3rem auto;
+   display:block;
 }
 </style>

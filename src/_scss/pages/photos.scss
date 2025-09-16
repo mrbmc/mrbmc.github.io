@@ -1,5 +1,9 @@
 @use '../library' as lib;
 
+html {
+    scroll-snap-type: y mandatory;
+}
+
 body.photos {
     --thumb-size: 6vh;
     #header {

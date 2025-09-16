@@ -34,15 +34,16 @@ body.home {
     @media (min-width: lib.$breakpoint) {
       height: 80vh;
       // justify-content: flex-end;
-      h1,h2,h3 {
-        width: 60vw;
-      }
+      // h1,h2,h3,p {
+      //   width: 62%;
+      // }
       #boids {
         position: absolute;
-        top: 0;
-        right: 0;
-        width: 50%;
-        height: 80vh;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        opacity: 0.38;
       }
     }
     @media (max-width: lib.$breakpoint) {
@@ -77,16 +78,11 @@ body.home {
   }
 */
 
+/*
   .project-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-
-    h2 {
-      grid-column: span 2;
-    }
 
     @media (min-width:lib.$breakpoint) {
-      grid-template-columns: repeat(3, 1fr);
+      // grid-template-columns: repeat(3, 1fr);
       h2 {
         grid-column: span 3;
       }
@@ -116,10 +112,12 @@ body.home {
     }
 
   }
-
+*/
+/*
   #post-list {
-    // background: var(--body-background);
-    // position: relative;
-    // z-index: 10;
+    background: var(--body-background);
+    position: relative;
+    z-index: 10;
   }
+*/
 }

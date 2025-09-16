@@ -36,9 +36,11 @@ Short for "killaBMC", my genuine wu-tang-name betrothed by the GZA{#killabmc .to
 1. [Design Storytelling](#process)
 1. [Leadership Philosophy](#leadership) 
 
-{.sticky-nav}
+{#pagenav .sticky-nav}
 
 {% include "_mission.md" %}
+
+----
 
 {% include "_principles.md" %}
 

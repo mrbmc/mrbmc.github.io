@@ -3,6 +3,10 @@
 @use "../base/molecules";
 @use "../components/sticky-nav";
 
+html {
+    scroll-snap-type: y proximity;
+}
+
 body.about {
   // overflow-x: hidden;
 
@@ -91,6 +95,16 @@ body.about {
     @include lib.clearfix();
   }
 
+  #principles {
+    .grid {
+      height: 100vh;
+      scroll-snap-align: center;
+    }
+  }
+
+  #process {
+  }
+
   .grid {
     h5 {
       margin-top: 0;
@@ -112,16 +126,6 @@ body.about {
     margin-right: .25em;
   }
 
-  #travel-map {
-    width: 100%;
-    height: auto;
-    // filter: hue-rotate(60deg);
-  }
-
-  #strava-rides, #strava-profile {
-    height: 454px;
-    width: 100%;
-  }
 
   hr {
     margin: lib.$gutter-xl auto;

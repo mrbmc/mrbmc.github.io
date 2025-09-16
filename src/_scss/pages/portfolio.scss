@@ -10,69 +10,6 @@ body.portfolio {
   main header li {
     color: var(--muted-foreground);
   }
-
-  .project-list {
-    // row-gap: calc(var(--gutter-xl) * 2);
-
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-
-    h2,p {
-      grid-column: span 2;
-    }
-
-    .project {
-      flex-basis: 50%;
-      // display: flex;
-      flex-direction: column-reverse;
-      align-items: center;
-      &.full-grid {
-        padding-left: var(--gutter-xl);
-        padding-right: var(--gutter-xl);
-      }
-      header {
-        flex-basis: 38%;
-        h3,h4,h5 {
-          margin-bottom: 0.5rem;
-        }
-        .summary, .duration {
-          display: none;
-        }
-      }
-      .figure {
-        flex-basis: 62%;
-        margin: 0;
-        img {
-          border-radius: var(--border-radius);
-          display: block;
-          aspect-ratio: 1.78;
-          object-fit: cover;
-        }
-      }
-
-      ol,ul {
-        display: none;
-      }
-      @media (max-width:lib.$breakpoint) {
-        flex-direction: column-reverse;
-        row-gap: 1rem;
-      }
-    }
-
-  }
-
-
-  #work {
-    article {
-      .figure {
-        img {
-          aspect-ratio: 1;
-        }
-      }
-    }
-
-  }
-
 }
 
 .sticky-nav {

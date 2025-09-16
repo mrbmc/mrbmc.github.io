@@ -2,11 +2,12 @@
 title: Disney Enterprise XD
 date: 2020-09-01
 thumbnail: /images/portfolio/disney-enterprise/optumus-mockup.jpg
-masthead-image: /images/portfolio/disney-enterprise/ivan-cockpit.webp
+# masthead-image: /images/portfolio/disney-enterprise/ivan-cockpit.webp
 eleventyExcludeFromCollections: false
 tags:
   - work
-description: Founding & leading design for Disney's streaming platform behind Disney+, Hulu, and ESPN+.
+summary: Founding & leading design for Disney's streaming platform behind Disney+, Hulu, and ESPN+.
+description: I founded the program, and grew a team from 1 to 16 designers, for Disney's Streaming As A Service platform. The Enterprise XD team designed a suite of 30+ industrial grade products that operate Disney+, ESPN+, Hulu, and STAR+. The platform saved Disney $80M per year, and increased MRR 25% YoY.
 jobtitle: Senior Director, Product Design
 accomplishments: 
  - Reduced operational costs by **$80M annually** by building products competitive with industry leaders.
@@ -17,13 +18,7 @@ casestudy: true
 timeline: 2019-2023
 ---
 
-## A glass-to-glass connection from consumers to the stories & characters they love.
-
-| Role & Responsibility                                                                                                                                          | Team                                   | Timeline            | Impact                                                                     |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- | ------------------- | -------------------------------------------------------------------------- |
-| **Sr. Director, Product Design**<br>Team hiring, management, and organization design. Design strategy. Stakeholder & Partner management. Budgeting. Culture culturation. | 11 FTE Designers + 1 Program Manager + 6 Design Contractors | Jan 2019 - Aug 2023 | • Saved **$80M** p/a in operating costs<br>• Supported **25% YoY growth in MRR** | 
-
-{.rotate #summary}
+![Cockpit](/images/portfolio/disney-enterprise/ivan-cockpit.webp)
 
 1. [The Strategy](#strategy)
 2. [The Team](#team)
@@ -35,15 +30,24 @@ timeline: 2019-2023
 
 {.sticky-nav}
 
+
+| Role & Responsibility                                                                                                                                          | Team                                   | Timeline            | Impact                                                                     |
+| -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- | ------------------- | -------------------------------------------------------------------------- |
+| **Sr. Director, Product Design**<br>Team budgeting, hiring, people management, and organization design. Design strategy. Stakeholder & Partner management. Culture culturation. | 11 FTE Designers + 1 Program Manager + 6 Design Contractors | Jan 2019 - Aug 2023 | • Saved **$80M** p/a in operating costs<br>• Supported **25% YoY growth in MRR** | 
+
+{.rotate #summary}
+
 ## The Strategy (of Streaming){#strategy}
 
 Building a global streaming service that meets consumer expectations requires an **entire industry** of components in commerce, content, support, data insights, and developer tools. The costs & privacy considerations at Disney's scale required us to build novel solutions.
 
 **To create something truly novel, you need novel tools.**
 
-The purview of the Enterprise Experience team was a suite of products that had comparable commercial offerings. We created unique variants of these tailored to Disney at lower costs.
+The purview of the Enterprise Experience team was a suite of products that had comparable commercial offerings. We created unique variants of these tailored to Disney at lower costs and unique features.
 
-| Product Use Case | Kpi | Commercial Analog(s) |
+Each product had goals that laddered up to a company-wide KPI.
+
+| Product Use Case | KPI | Commercial Analog(s) |
 | -- | -- | -- |
 | [Commerce Orchestration](#genie) | Net Subs, MRR | Orb + Metronome |
 | [Content Curation](#content-tools) | RFE | Contentful |
@@ -52,27 +56,26 @@ The purview of the Enterprise Experience team was a suite of products that had c
 | [Customer Experience Controls](#baymax) | OpEx, Gross Margin | Zendesk |
 | [Streaming Quality Analysis](#optumus) | OpEx | Conviva |
 | [Developer resources management](#developerportal)<br>(services, APIs, documentation, etc) | OpEx | GitHub + AWS |
-| [Insights & Data portal](#dataportal) | n/a | Tableau + Zoho |
+| [Insights & Data portal](#dataportal) | OpEx | Tableau + Zoho |
 | Advertising curation, provisioning, and deployment. | MRR | Google AdSense + Amazon Advertising |
 | Testing APIs, documentation, and issue tracking for Disney+ SDK. | Net Subs, MRR | GitLabs |
 | [Personalized messaging](#galaxy)<br />(Email, SMS, Push) | Net Subs, MRR | Salesforce + Braze |
 
 {#scope-table}
+ 
+`Net Subs` - customer acquisition  
+`MRR` - revenue growth  
+`OpEx` - cost optimization  
+`RFE` - customer engagement (Recency, Frequency, Engagement)
+{.caption}
 
 ### Setting Priority
 
-I was the design executive accountable for investing design in these biggest business outcomes: 
- 
-`Subs` - customer acquisition  
-`MRR` - revenue growth  
-`OpEx` - cost optimization  
-`RFE` - customer engagement
-
-When everything is a priority, nothing is. I used a **Growth Framework** in collaboration with opportunity estimates from Product and Effort Estimates from engineering, to align Executives and Partners on where to invest our fixed resources.
+I was the design executive accountable for investing design in these biggest business outcomes, often with competing priorities. When everything is a priority, nothing is. I used a **Growth Framework** in collaboration with opportunity estimates from Product and Effort Estimates from engineering, to align Executives and Partners on where to invest our fixed resources.
 
 This model helped in securing funding for staffing, contractors, and roadmap priority. We sequenced our work from the top right to lower left in hiring and project planning.
 
-![Enterprise ROI](/images/portfolio/disney-enterprise/exd-roi-framework.png)
+![Enterprise ROI](/images/portfolio/disney-enterprise/exd-roi-framework.png){.canzoom}
 
 ----
 
