@@ -18,6 +18,7 @@ const rollup = require('rollup');
 const nodeResolve = require('@rollup/plugin-node-resolve');
 const gulpif = require('gulp-if');
 
+
 /* * * * * * * * * * * * * * * * * * * * 
 CONFIGURATION
 * * * * * * * * * * * * * * * * * * * */
@@ -38,6 +39,10 @@ const paths = {
     {
       input: 'src/_js/home.js',
       output: 'www/js/home.bundle.js'
+    },
+    {
+      input: 'src/_js/about.js',
+      output: 'www/js/about.bundle.js'
     },
     {
       input: 'src/_js/blogpost.js', 

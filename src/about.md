@@ -46,25 +46,4 @@ Short for "killaBMC", my genuine wu-tang-name betrothed by the GZA{#killabmc .to
 
 {% include "_leadership.md" %}
 
-<script type="text/javascript">
-window.addEventListener('load', function(e) {
-    Array.from(document.getElementsByClassName('blur-in')).map(element => {
-        element.classList.toggle('in',true);
-    });
-    Array.from(document.getElementsByClassName('fade-in')).map(element => {
-        element.classList.add('in',true);
-    });
-    document.querySelector("a[href='#killabmc']").addEventListener('mouseover',function(event){
-        const tip = document.getElementById('killabmc');
-        var xposition = (event.clientX - this.offsetLeft);
-        var yposition = (event.clientY - this.offsetTop);
-        tip.style.left = (this.offsetLeft - (tip.offsetWidth / 2)) + "px";
-        tip.style.top = (this.offsetTop - tip.offsetHeight) + "px";
-        tip.classList.add("in");
-    });
-    document.querySelector("a[href='#killabmc']").addEventListener('mouseout',function(event){
-        const tip = document.getElementById('killabmc');
-        tip.classList.remove("in");
-    });
-});
-</script>
+<script type="module" src="/js/about.bundle.js"></script>
