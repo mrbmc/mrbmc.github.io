@@ -38,16 +38,16 @@ Short for "killaBMC", my genuine wu-tang-name betrothed by the GZA{#killabmc .to
 
 {#pagenav .sticky-nav}
 
-{% include "_mission.md" %}
+{% include "about_mission.md" %}
 
 &nbsp;
 
 &nbsp;
 
-{% include "_principles.md" %}
+{% include "about_principles.md" %}
 
-{% include "_process.md" %}
+{% include "about_process.md" %}
 
-{% include "_leadership.md" %}
+{% include "about_leadership.md" %}
 
 <script type="module" src="/js/about.bundle.js"></script>
