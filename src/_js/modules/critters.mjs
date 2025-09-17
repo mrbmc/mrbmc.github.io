@@ -111,7 +111,10 @@ function updateShadows(velocity) {
     let vScale = 1 + Math.abs(velocity / 100);
     let vPos = 0;//(velocity / -100);
     let blur = Math.abs(velocity / 150) * 2;
-    document.querySelector('.nav-top').style.boxShadow = '0 '+vOffset+'px '+spread+'px rgba(0, 0, 0, 0.13)';
+
+
+    // add a motion blur
+    // document.querySelector('.nav-top').style.boxShadow = '0 '+vOffset+'px '+spread+'px rgba(0, 0, 0, 0.13)';
     document.querySelector('.nav-top svg').style.transform = "scale(1.0,"+vScale+")  translateY("+vPos+"px)";
     document.querySelector('.nav-top svg').style.filter = "blur("+blur+"px)";
 }

@@ -5,8 +5,9 @@
   z-index: 90;
   top: calc(100vh - 2.375em);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   box-sizing: border-box;
+  width: fit-content;
   max-width: 100%;
   margin: 0 auto -2.375em;
   box-shadow: lib.$shadow;
@@ -18,26 +19,25 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    overflow: hidden;
 
-    &:first-of-type {
-      border-radius: var(--border-radius-xl) 0 0 var(--border-radius-xl);
-      a {
-        padding-left: 1em;
-      }
-    }
-    &:last-of-type {
-      border-radius: 0 var(--border-radius-xl) var(--border-radius-xl) 0;
-      a {
-        padding-right: 1em;
-      }
-    }
+    // &:first-of-type {
+    //   border-radius: var(--border-radius-xl) 0 0 var(--border-radius-xl);
+    //   a {
+    //     padding-left: 1em;
+    //   }
+    // }
+    // &:last-of-type {
+    //   border-radius: 0 var(--border-radius-xl) var(--border-radius-xl) 0;
+    //   a {
+    //     padding-right: 1em;
+    //   }
+    // }
 
     a {
       display: flex;
       text-decoration: none;
       text-align: center;
-      padding: .375em .5em;
+      padding: .375em 1em;
       font-size: .85rem;
       transition: all lib.$speed lib.$easing;
 
