@@ -2,7 +2,7 @@
 
 ## Design Leadership Philopsophy
 
-> A design leader is both a functional expert, *and* a human leader, who can give the business a competitive advantage by design.{.blockquote}
+> A design leader is both a functional expert, *and* a human leader, who can give the business a competitive advantage by design.
 
 A good leader has a clarity of purpose and can rally others toward that cause. I believe it is a privilege to lead because it means other people are investing their time & expertise in your purpose.
 

@@ -27,12 +27,12 @@ Success is an infinite sum game that can be grown through collaboration. A great
 
 </div>
   
-![Alt Text](/images/portfolio/disney-growth/workshop-pictogram.jpg) {.col-start-8 .col-end-11 .canzoom}
+![Workshop](/images/portfolio/disney-growth/workshop-pictogram.jpg) {.col-start-8 .col-end-11 .canzoom}
 
 </div>
 <div class="grid full-grid">
 
-![Alt Text](/images/blog/sealion-balance.jpg) {.col-start-2 .col-end-5}
+![Sea Lion](/images/blog/sealion-balance.jpg) {.col-start-2 .col-end-5 .canzoom}
 
 <div class="col-start-7 col-end-11">
 
@@ -55,7 +55,7 @@ The solution in design often seems obvious but is usually the product of a rigor
 
 </div>
   
-![Alt Text](/images/about/about-wireframes-xl.jpg) {.col-start-8 .col-end-11}
+![Wireframes](/images/about/about-wireframes-xl.jpg) {.col-start-8 .col-end-11 .canzoom}
 
 </div>
 

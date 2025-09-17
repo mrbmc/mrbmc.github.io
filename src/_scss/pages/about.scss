@@ -8,16 +8,9 @@ html {
 }
 
 body.about {
-  // overflow-x: hidden;
-
   #bio {
-    box-sizing: border-box;
-    position: relative;
-    height: calc(100vh - var(--navbar-height));
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    overflow: hidden;
+
+    row-gap: var(--gutter);
 
     #killabmc {
       position: absolute;
@@ -26,69 +19,60 @@ body.about {
     }
 
     @media (min-width:lib.$breakpoint) {
-      $pic-w: 62vh;
-      $pic-h: 62vh;//calc(100vh - var(--navbar-height));
-      padding-left: var(--gutter);
-      padding-right: var(--gutter);
-      padding-left: calc($pic-w + var(--gutter-xl));
+      height: calc(100vh - var(--navbar-height));
 
-      // transform: skew(-10deg,0);
-      // &>*{
-      //   transform: skew(10deg,0);
-      // }
 
-      #parallelogram {
+      .parallelogram {
         shape-outside: polygon(90% 0, 100% 0, 10% 100%, 0 100%);
         float: left;
-        height: 4rem;
+        height: 4em;
         width: 0.5rem;
       }
 
+      h1 {
+        order: 2;
+        align-self: end;
+        .parallelogram {
+          height: 1em;
+          width: 1rem;
+        }
+      }
+
+      p {
+        order: 3;
+        align-self: start;
+      }
       #portrait {
         box-sizing: border-box;
-        position: absolute;
-        left: var(--gutter);
-        top: 50%;
-        margin-top: calc($pic-h * -0.5);
-        width: $pic-w;
-        height: $pic-h;
-        // border-radius: $pic-h;
         overflow: hidden;
+        order: 1;
+        align-self: center;
 
         img, image {
-            // filter: brightness(1.1) contrast(110%);
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            clip-path: url(#portrait_mask);
-            // border-radius: 1rem;
+          clip-path: url(#portrait_mask);
         }
 
       }
 
     }
     @media (max-width:lib.$breakpoint) {
-      padding-left: var(--gutter);
-      padding-right: var(--gutter);
+      padding-top: var(--gutter-xl);
+      padding-bottom: var(--gutter-xl);
+
+      #portrait {
+        overflow: hidden;
+        border-radius: var(--border-radius-xl);
+      }
     }
 
-  }
-
-  #intro {
-    margin-bottom: var(--gutter-xl);
-  }
-
-  main, #main {
-    padding-top: 0;
-    display: flex;
-    flex-direction: column;
   }
 
   section {
+    padding-top: var(--gutter-xl);
+    padding-bottom: var(--gutter-xl);
     img {
       border-radius: var(--border-radius);
     }
-    // padding-bottom: var(--gutter-xl);
   }
 
   #leadership {
@@ -99,6 +83,14 @@ body.about {
     .grid {
       height: 100vh;
       scroll-snap-align: center;
+      @media (min-width:lib.$breakpoint) {
+      }
+      @media (max-width:lib.$breakpoint) {
+        align-content: center;
+        .canzoom {
+          order: 3;
+        }
+      }
     }
   }
 
@@ -111,24 +103,9 @@ body.about {
     }
 
     [class*="col-"] {
-      // align-items: center;
-      // justify-content: center;
       align-self: center;
     }
 
-  }
-
-  img[alt="Disney"] {
-    height: 1.62em;
-    width: auto;
-    display: inline;
-    margin-bottom: -.4em;
-    margin-right: .25em;
-  }
-
-
-  hr {
-    margin: lib.$gutter-xl auto;
   }
 
 }

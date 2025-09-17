@@ -7,15 +7,15 @@ permalink: /about/
 cssfile: "css/pages/about.css"
 ---
 
-{% section "bio","full-grid" %}
+{% section "bio","full-grid grid" %}
 
-# Hello there.{.blur-in}
+# <span class="parallelogram"></span>Hello there.{.blur-in .col-7}
 
-<span id="parallelogram"></span>My family calls me **Brian**. My friends call me **[BMC\*](#killabmc){onclick="event.preventDefault();return false;"}**. I am a father 👧🏻 👦🏻, husband 👩🏻, New Yorker 🗽, ️[cyclist](https://www.strava.com/athletes/773650) 🚲, [divemaster](https://www.steelgills.com) 🤿, [fusion chef](https://www.fusionfamilyfeast.com/) 👨‍🍳, [world traveler](https://www.google.com/maps/d/u/0/edit?mid=1jAS6t-WP2zKeOYag3KsGKZtqxERvSfE) 🌎, and **[digital product maker](/portfolio/)** 👨‍💻.{.large-type .blur-in}
+<span class="parallelogram"></span>My family calls me **Brian**. My friends call me **[BMC\*](#killabmc){onclick="event.preventDefault();return false;"}**. I am a father 👧🏻 👦🏻, husband 👩🏻, New Yorker 🗽, ️[cyclist](https://www.strava.com/athletes/773650) 🚲, [divemaster](https://www.steelgills.com) 🤿, [fusion chef](https://www.fusionfamilyfeast.com/) 👨‍🍳, [world traveler](https://www.google.com/maps/d/u/0/edit?mid=1jAS6t-WP2zKeOYag3KsGKZtqxERvSfE) 🌎, and **[digital product maker](/portfolio/)** 👨‍💻.{.large-type .blur-in .col-7}
 
 Short for "killaBMC", my genuine wu-tang-name betrothed by the GZA{#killabmc .tooltip}
 
-![Portrait of Brian](/images/profile/mrbmc-20241121.jpeg) {#portrait .blur-in}
+![Portrait of Brian](/images/profile/mrbmc-20241121.jpeg) {#portrait .blur-in .col-5 .row-2}
 
 {% endsection %}
 

@@ -9,8 +9,6 @@
     transition: all lib.$speed lib.$easing;
     column-gap: lib.$gutter;
     position: relative;
-    border-radius: var(--border-radius);
-    overflow: hidden;
 
     @media (max-width:lib.$breakpoint) {
       flex-direction: column-reverse;
@@ -19,19 +17,8 @@
 
     header {
       box-sizing: border-box;
-      // background: var(--card-background);
-      // padding: 0 var(--gutter);
-      // height: 100%;
-      // width: 100%;
-      // position: absolute;
-      // top: 0;
-      // left: 0;
-      // z-index: 1;
       display: flex;
       flex-direction: column;
-      // justify-content: center;
-      // align-items: center;
-      // opacity: 0;
       transition: opacity lib.$speed lib.$easing;
 
       h3,h4,h5,p {
@@ -58,6 +45,8 @@
       margin: 0;
       filter: saturate(95%);
       transition: all lib.$speed lib.$easing;
+      border-radius: var(--border-radius);
+      overflow: hidden;
 
       a {
         display: block;
@@ -77,13 +66,13 @@
       // box-shadow: lib.$shadow;
 
       figure, p.figure {
+        transform: scale(1.02);
         filter: saturate(1.02) contrast(1.1) brightness(1.1);
       }
       header {
         opacity: 0.8;
       }      
 
-      transform: scale(1.02);
     }
 
   }

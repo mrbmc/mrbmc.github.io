@@ -9,8 +9,8 @@
   margin-right: 0;
 
   @if $fluid {
-    padding-left: var(--gutter);
-    padding-right: var(--gutter);
+    padding-left: var(--gutter-xl);
+    padding-right: var(--gutter-xl);
   } @else {
     padding-left: var(--margin);
     padding-right: var(--margin);
@@ -34,7 +34,7 @@
     display: grid;
     grid-template-columns: repeat(var(--columns), 1fr);
     grid-column-gap: var(--gutter);
-    grid-row-gap: var(--gutter);
+    grid-row-gap: var(--gutter-xl);
     grid-auto-flow: row;
 
     &>* {
@@ -63,12 +63,9 @@
     }
 
     @media (max-width: lib.$breakpoint) {
-        .col-1,.col-2 {
-            grid-column: span calc(var(--columns) * 0.5);
-        }
-        .col-4,.col-5,.col-7,.col-8,.col-9,.col-10,.col-11 {
-            grid-column: span var(--columns);
-        }
+      [class*="col-"]{
+        grid-column: span var(--columns);
+      }
     }
     .card {
       height: 100%;
@@ -79,7 +76,7 @@ body > main {
   box-sizing: content-box;
   max-width: var(--width);
   margin: 0 auto;
-  padding: 0 var(--gutter);
+  padding: var(--gutter);
   position: relative;
   z-index: 1;
 
