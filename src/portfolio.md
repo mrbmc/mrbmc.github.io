@@ -16,6 +16,8 @@ eleventyImport:
 	heading: "Impact Projects", 
 	description: false %}
 
+----
+
 {% include "_project-list.md", 
 	collection: collections.talk, 
 	count:3, 
@@ -23,6 +25,8 @@ eleventyImport:
 	class: "full-grid",
 	heading: "Talks", 
 	description: "A great way to learn is to share what you think you know." %}
+
+----
 
 {% include "_project-list.md", 
 	collection: collections.personal, 

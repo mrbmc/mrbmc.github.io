@@ -1,6 +1,6 @@
 {% assign slug = heading | slug %}
 {% unless id %}{% assign id = slug %}{% endunless %}
-{% assign _class = "project-list " | append: class %}
+{% assign _class = "project-list grid " | append: class %}
 
 
 {% section id, _class %}
