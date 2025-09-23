@@ -2,6 +2,7 @@
 const polygons = document.querySelectorAll('.nav-top svg polygon');
 const link = document.querySelectorAll('.nav-top');
 const svg = document.querySelectorAll('.nav-top svg');
+
 // Define the animation keyframes for each polygon
 const keyframes = [
 [
@@ -105,13 +106,13 @@ function updatePolygons(progress) {
     });
 }
 
-function updateShadows(velocity) {
+function updateEffects(velocity) {
+    // if(DEBUG) console.log('velocity',velocity);
     let vOffset = (velocity / -10);
     let spread = 4 * Math.abs(velocity / 100);
     let vScale = 1 + Math.abs(velocity / 100);
     let vPos = 0;//(velocity / -100);
     let blur = Math.abs(velocity / 150) * 2;
-
 
     // add a motion blur
     // document.querySelector('.nav-top').style.boxShadow = '0 '+vOffset+'px '+spread+'px rgba(0, 0, 0, 0.13)';
@@ -141,26 +142,24 @@ function updateShadows(velocity) {
 
 
 // Throttled scroll handler for better performance
-let ticking = false;
+let isScrolling = false;
 let lastScroll = 0;
 export function critterScroll() {
-    if (!ticking) {
-        requestAnimationFrame(() => {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-            let scrollProgress = Math.max(0, Math.min(1, scrollTop / scrollHeight));
-            // scrollProgress = scrollPause(scrollProgress);
-            updatePolygons(scrollProgress);
+    window.clearTimeout( isScrolling );
 
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    let scrollProgress = Math.max(0, Math.min(1, scrollTop / scrollHeight));
+    // scrollProgress = scrollPause(scrollProgress);
+    updatePolygons(scrollProgress);
 
-            let velocity = scrollTop - lastScroll;
-            updateShadows(velocity);
-            lastScroll = scrollTop;
+    let velocity = scrollTop - lastScroll;
+    updateEffects(velocity);
+    lastScroll = scrollTop;
 
-            ticking = false;
-        });
-        ticking = true;
-    }
+    isScrolling = setTimeout(()=>{
+        updateEffects(0);
+    }, 66);
 }
 
 // Add scroll event listener
