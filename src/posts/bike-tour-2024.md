@@ -18,13 +18,7 @@ tags:
   Your browser does not support the video tag.
 </video>
 
-<hr />
-
-This October I rode my bike from Pittsburgh, PA to Washington, DC on the famous [GAP + C&O](#route) trails. I rode the route in four days with overnight stops at motels and inns along the way. It was a chance to enjoy Autumn foliage in the Allegheny hills, and the farmlands of western Maryland.
-
-It was another opportunity to satisfy my wanderlust and thirst for physical challenges that were awakened in my [bike tour of 2023](/blog/bike-tour-2023).
-
-## By the Numbers
+This October I rode my bike from Pittsburgh, PA to Washington, DC on the famous [GAP + C&O](#route) trails. I rode the route in four days with overnight stops at motels and inns along the way. It was a chance to enjoy Autumn foliage in the Allegheny hills, and the farmlands of western Maryland. I could also satisfy my wanderlust and thirst for physical challenges that were awakened in my [bike tour of 2023](/blog/bike-tour-2023).
 
 | Distance  | Elevation | Ride Time | Energy    |
 | :-------- | :-------- | :-------- | :-------- |

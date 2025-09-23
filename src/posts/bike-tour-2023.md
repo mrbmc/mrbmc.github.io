@@ -11,7 +11,7 @@ tags:
   - adventure
 ---
 
-<video src="/images/blog/vt-ride-720p.mp4" autoplay autoplay="autoplay" loop mute muted class="full-width"></video>
+<video src="/images/blog/vt-ride-720p.mp4" autoplay autoplay="autoplay" loop mute muted class="full-width">Your browser does not support the video tag.</video>
 
 **ad·ven·ture**  
 */ədˈven(t)SHər/*{.small-type}  
@@ -27,14 +27,9 @@ In August 2023 I rode my bike across the Green Mountains of Vermont, zig-zagging
 3. [The Plan](#plan)
 4. [The Gear](#gear)  
 1. [Reflections](#results)
+1. [Photos](#photos)
 
 {.sticky-nav}
-
-<br />
-
-[Photo Gallery](https://photos.app.goo.gl/KCDqsEEAQieps4eLA)
-
-### By the Numbers:
 
 | Distance  | Elevation | Ride Time | Energy    |
 | :-------- | :-------- | :-------- | :-------- |
@@ -57,9 +52,9 @@ Paradoxically for me, these two passions have never intersected. Bike touring ha
 
 Most of what you perceive to be real on a routine day is a framework constructed by your brain based on past experiences. Processing and framing the flood of stimulation in everyday reality is energy-intensive. The human brain will do just about anything to avoid extra work. You may think you taste your morning coffee but what you are perceiving is the brain replaying what it has tasted in the past. "Oh coffee? I know what that is. I don't need to figure it out again." 
 
-One of the popular theories for why we have dreams is a deferred processing technique for brains to understand the events of the day and correlate them against previous experiences to enrich their meaning. We can't fully understand the world in real time. 
+Venturing outside of the routine routine forces your brain to confront what is happening because it has no frame of reference to compare to. That is why new experiences seem so much more vibrant or frightening. That's reality breaking through the brain's defense.
 
-This gateway our brain is trying to put in front of us is why new experiences seem so much more, vibrant or frightening or whatever. That's reality breaking through the brain's defense. Venturing outside of the routine routine forces your brain to confront what is happening.
+One of the popular theories for why we have dreams is a deferred processing technique for brains to understand the events of the day and correlate them against previous experiences to enrich their meaning. We can't fully understand the world in real time. 
 
 ### Type 2 Fun is Still Fun.
 
@@ -199,3 +194,47 @@ I found that most towns I stopped in were *very* quiet. Many local businesses sh
 
 I never could have done this without the support of my wife. She gave me the time and space to prepare, focus, and go on this adventure. In turn, I will support her in an adventure.
 
+## Photos{#photos}
+
+- ![Beaver Pond](/images/blog/vt-tour/IMG_1514.JPG) {.col-3}
+- ![Lincoln Gap](/images/blog/vt-tour/IMG_1847.JPG) {.col-3}
+- ![Rainy Morning](/images/blog/vt-tour/IMG_1808.JPG) {.col-6 .row-2}
+- ![Tibetan Flags](/images/blog/vt-tour/IMG_1906.JPG) {.col-3}
+- ![Road Closed](/images/blog/vt-tour/IMG_1794.JPG) {.col-3}
+- ![Covered Bridge](/images/blog/vt-tour/IMG_1867.JPG) {.col-6 .row-2}
+- ![The Rig](/images/blog/vt-tour/IMG_1706.JPG) {.col-6 .row-2}
+- ![Lake View](/images/blog/vt-tour/IMG_1762.JPG) {.col-5}
+- ![Swimming Hole](/images/blog/vt-tour/IMG_1612.JPG) {.col-2}
+- ![Bridge](/images/blog/vt-tour/IMG_1731.JPG) {.col-5}
+- ![McConnell Rd](/images/blog/vt-tour/IMG_1753.JPG) {.col-3}
+- ![Logging Road](/images/blog/vt-tour/IMG_1724.JPG) {.col-3}
+- ![Fruit Salad](/images/blog/vt-tour/IMG_1711.JPG) {.col-3}
+- ![Stuffy Sentries](/images/blog/vt-tour/IMG_1698.JPG) {.col-3}
+- ![Shadow Rider](/images/blog/vt-tour/IMG_1544.JPG) {.col-4}
+- ![Red Barns](/images/blog/vt-tour/IMG_1525.JPG) {.col-8}
+- ![Monarch](/images/blog/vt-tour/IMG_1657.JPG) {.col-6}
+- ![Sunset in Ludlow](/images/blog/vt-tour/IMG_1566.JPG) {.col-6}
+- ![Calm Pond](/images/blog/vt-tour/IMG_1509.JPG) {.col-4}
+- ![Rough riding](/images/blog/vt-tour/IMG_1455.JPG) {.col-8 .row-2}
+- ![Modern Bridge](/images/blog/vt-tour/IMG_1393.JPG) {.col-4}
+- ![Fork in the road](/images/blog/vt-tour/IMG_1431.JPG) {.col-3}
+- ![Mt Stratton](/images/blog/vt-tour/IMG_1437.JPG) {.col-3}
+- ![Greylock](/images/blog/vt-tour/IMG_1333.JPG) {.col-3}
+- ![Ashuwilltuck](/images/blog/vt-tour/IMG_1322.JPG) {.col-3}
+- ![Long Descent](/images/blog/vt-tour/IMG_1499.JPG) {.col-8}
+- ![A rare straight road](/images/blog/vt-tour/IMG_1440.JPG) {.col-4}
+- ![Lodging](/images/blog/vt-tour/IMG_1377.JPG) {.col-6}
+- ![Mass MoCA](/images/blog/vt-tour/IMG_1343.JPG) {.col-6}
+
+{.grid .well .full-grid}
+
+<style type="text/css"> 
+.grid.well img {
+display: block;
+height: 100%;
+width: 100%;
+object-fit: cover;
+border-radius: var(--border-radius);
+box-shadow: 0 .25rem .5rem .125rem rgba(0,0,0,13%);
+}
+</style>
