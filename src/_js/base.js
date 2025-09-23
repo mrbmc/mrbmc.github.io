@@ -4,8 +4,7 @@ CONFIGURATION
 const DEBUG = (document.location.hostname == "localhost" || document.location.href.includes('debug'));
 const MOBILE = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent);
 var VERBOSE = false && DEBUG,
-    last_known_scroll_position = 0,
-    ticking = false;
+    last_known_scroll_position = 0;
 
 /* * * * * * * * * * * * * * * * * * * * *
 FUNCTIONS
@@ -32,13 +31,7 @@ function animateElementsInView() {
 }
 
 function baseScroll (e) {
-    if (!ticking) {
-        requestAnimationFrame(() => {
-            animateElementsInView();
-            ticking = false;
-        });
-        ticking = true;
-    }
+    animateElementsInView();
 }
 
 /* * * * * * * * * * * * * * * * * * * * *
