@@ -15,7 +15,7 @@ accomplishments:
 timeline: 2019-2020
 ---
 
-<video src="/images/portfolio/disney-groupwatch/GW-Demo_02-24.mp4" autoplay loop muted preload="auto" playsinline type="video/mp4" class="full-grid"></video>
+<video src="/images/portfolio/disney-groupwatch/GW-Demo_02-24.mp4" autoplay loop muted preload="auto" playsinline type="video/mp4" class="full-width-grid"></video>
 
 * [Discover](#discover) 
 * [Define](#define) 
@@ -97,7 +97,7 @@ The market research we collected along with the previous UX research gave us a f
    GroupWatch will be most used by groups of 2-4 people, as opposed to community viewing (theatre) or massive social viewing party (Twitch).{.card .col-4}
 3. **GroupWatch is additive to existing behaviors**  
    Use mobile devices for communication and TVs for viewing. Tap into existing social norms for planning and watching.{.card .col-4}
-{.hero .grid .full-grid style="padding-left: var(--gutter); padding-right: var(--gutter);"}
+{.hero .grid .full-width-grid style="padding-left: var(--gutter); padding-right: var(--gutter);"}
 
 ### Objectives & Key Results
 
@@ -120,7 +120,7 @@ Demonstrate Disney’s commitment to innovation and improving the guest experien
 
 The biggest design challenge was to **reduce the emotional labor of group "Hosts"**. We knew the invitation flow had to be frictionless and integrate with existing user behaviors.
 
-![Interaction Design for the Invite](/images/portfolio/disney-groupwatch/groupwatch-ixd.jpg){.full-grid .addLightbox}
+![Interaction Design for the Invite](/images/portfolio/disney-groupwatch/groupwatch-ixd.jpg){.full-width-grid .addLightbox}
 
 
 Interaction design for the invite.{.caption}
@@ -143,7 +143,7 @@ We took cues from our colleagues designing Disney parks and created a "weenie", 
 
 **The Lobby** was our virtual meeting point for guests and hosts. 
 
-![The Lobby](/images/portfolio/disney-groupwatch/disney-groupwatch-devices.png){.full-grid .addLightbox}
+![The Lobby](/images/portfolio/disney-groupwatch/disney-groupwatch-devices.png){.full-width-grid .addLightbox}
 
 ### Visual Design
 
@@ -213,7 +213,7 @@ Our client and services engineers were concerned that loading the GroupWatch™ 
 + Shipped Design {.col-6 .center}
 + ![TV desired design](/images/portfolio/disney-groupwatch/groupwatch-tv-desired.jpg) {.col-6}
 + ![TV feasible design](/images/portfolio/disney-groupwatch/groupwatch-tv-actual.jpg) {.col-6}
-{.grid .well .full-grid}
+{.grid .well .full-width-grid}
 
 ### Marketing Collaboration
 

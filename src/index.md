@@ -7,7 +7,7 @@ eleventyExcludeFromCollections: false
 cssfile: "css/pages/home.css"
 ---
 
-{% section "masthead","full-grid" %}
+{% section "masthead","full-width-grid" %}
 
 Design, Product Discovery, and Cross-Functional Leadership across B2C and B2B, from early startups to global enterprises.{.blur-in .large-type .center}
 
@@ -28,13 +28,21 @@ Design, Product Discovery, and Cross-Functional Leadership across B2C and B2B, f
     count: 9, 
     collection: collections.work, 
     id: "work",
-    class: " full-grid", 
+    class: "full-width-grid", 
     heading: false, 
-    description:false%}
+    description:false
+    %}
 
 ----
 
-{% include "_post-list.md", postList: collections.post, heading: "Recent Blog Posts", count: 4, description:false %}
+{% include "_post-list.md", 
+    postList: collections.post, 
+    heading: "Recent Blog Posts", 
+    id: "blog",
+    class: "full-width",
+    count: 4, 
+    description:false 
+    %}
 
 
 <script type="module" src="/js/home.bundle.js"></script>

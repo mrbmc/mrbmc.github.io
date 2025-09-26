@@ -112,7 +112,7 @@ The art direction was inspired by high-end Audio and video authoring application
 + !['Ad Break'](/images/portfolio/btr/btr-studio-ad-break.png) {.col-4 .row-1}
 + !['Macbook'](/images/portfolio/btr/btr-studio-imac.png) {.col-12 .contain}
 
-{.grid .well .full-grid}
+{.grid .well .full-width-grid}
 
 ### Ad Breaks
 
@@ -133,7 +133,7 @@ By far the most common workflow we saw almost every host take in the dashboard w
 + ![Listens Overview](/images/portfolio/btr/btr-stats-episode.png) {.col-6}
 + ![Podcast Host Dashboard](/images/portfolio/btr/btr-dashboard-laptop.png) {.col-12}
 
-{.grid .well .full-grid}
+{.grid .well .full-width-grid}
 
 ### Content Guidance
 
@@ -149,7 +149,7 @@ We built features, like **Signal Strength**, and **Template Episodes** to help i
 + !['Manage Episodes'](/images/portfolio/btr/btr-episodes-list.png) {.col-4 .hide}
 + !['Manage Episodes'](/images/portfolio/btr/btr-episodes-list-select.png) {.col-6}
 + !['Order Transcript'](/images/portfolio/btr/btr-episodes-list-transcript.png) {.col-6}
-{.grid .well .full-grid}
+{.grid .well .full-width-grid}
 
 ### Improved Show Artwork{#coverart}
 
@@ -168,7 +168,7 @@ Improved the artwork delivered tangible business impact:
 + ![New Artwork](/images/portfolio/btr/btr-host-artwork.png){.addLightbox} {.col-6}
 + ![New Artwork](/images/portfolio/btr/btr-homepage.jpg){.addLightbox} {.col-6}
 
-{.grid .full-grid}
+{.grid .full-width-grid}
 
 ---
 

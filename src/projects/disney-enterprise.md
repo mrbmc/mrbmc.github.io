@@ -121,7 +121,7 @@ The design of this product was guided by the principles of **"Safety"** and **"A
 - ![props 2](/images/portfolio/disney-enterprise/props-list.jpg)  {.col-4}
 - ![genie 2](/images/portfolio/disney-enterprise/genie-campaign.png) {.col-8 .row-2}
 - ![genie 1](/images/portfolio/disney-enterprise/genie-offers.jpg) {.col-4}
-{.grid .well .full-grid}
+{.grid .well .full-width-grid}
 
 #### Support Agent Tools - codename "Baymax"{#baymax}
 
@@ -132,7 +132,7 @@ These custom-built tools for our agents saved Disney **$20M/pa in operating expe
 - ![Support Agent Portal](/images/portfolio/disney-enterprise/baymax-customer.jpg) {.col-8 .row-2}
 - ![Support Agent Portal](/images/portfolio/disney-enterprise/baymax-search_results.png) {.col-4}
 - ![Support Agent Portal](/images/portfolio/disney-enterprise/baymax-cancel.png) {.col-4}
-{.grid .well .full-grid}
+{.grid .well .full-width-grid}
 
 #### Lifecycle Messaging{#galaxy}
 
@@ -145,7 +145,7 @@ A guiding UX principle across Disney+ is to **put the right offer in front of th
 - ![Messag Localization](/images/portfolio/disney-enterprise/galaxy-localization-1.png) {.col-6}
 - ![Personalized Messaging](/images/portfolio/disney-enterprise/galaxy-v1.png){style="object-fit:contain;max-height:none;"} {.col-6 .row-2}
 - ![Push Messaging](/images/portfolio/disney-enterprise/galaxy-push.png){style="object-fit:contain;"} {.col-6}
-{.grid .well .full-grid}
+{.grid .well .full-width-grid}
 
 ### Content Platform{#content-tools}
 
@@ -162,14 +162,14 @@ The content strategy for most streaming services, including Disney+, is to creat
 - ![Visual Browsing](/images/portfolio/disney-enterprise/polaris-search.png) {.col-4 .contain}
 - ![Visual Browsing](/images/portfolio/disney-enterprise/polaris-visualbrowse.png) {.col-4 .contain}
 - ![Content Curation](/images/portfolio/disney-enterprise/polaris-set-pcs.png) {.col-4}
-{.grid .well .full-grid}
+{.grid .well .full-width-grid}
 
 A team of editors steeped in knowledge of the Disney catalog created hundreds of content collections around themes, brands, characters. We built a WYSIWYG editor that showed the custom artwork for each title so editors could organize collections in a visually harmonious way. We saw **engagement**{.success} and **CVR**{.success} lift from doing this.
 
 - ![Content Targeting](/images/portfolio/disney-enterprise/polaris-edit_cta.png) {.col-3 .contain}
 - ![Content Targeting](/images/portfolio/disney-enterprise/polaris-collection.png) {.col-6 .contain}
 - ![Content Targeting](/images/portfolio/disney-enterprise/polaris-browse.jpg) {.col-3 .contain}
-{.grid .well .full-grid}
+{.grid .well .full-width-grid}
 
 ### Analytics{#analytics}
 
@@ -188,7 +188,7 @@ This product saved Disney **$30M/pa** over comparable third party products.
 - ![Streaming QoS Analysis](/images/portfolio/disney-enterprise/optumus-session.png) {.col-8 .row-2}
 - ![Streaming QoS Analysis](/images/portfolio/disney-enterprise/optumus-dashboard.png) {.col-4 .contain}
 - ![Streaming QoS Analysis](/images/portfolio/disney-enterprise/optumus-spotlight.png) {.col-4 .contain}
-{.grid .well .full-grid}
+{.grid .well .full-width-grid}
 
 #### Experimentation, A/B Testing, Feature Flagging {#weaponx}
 
@@ -201,7 +201,7 @@ An home-made tool **saved us $5M/pa** in licensing fees and unlocked MRR growth.
 
 - ![Experimentation](/images/portfolio/disney-enterprise/weaponx-dashboard.jpg) {.col-6}
 - ![Experimentation](/images/portfolio/disney-enterprise/weaponx.png) {.col-6}
-{.grid .well .full-grid}
+{.grid .well .full-width-grid}
 
 #### Data Portal{#dataportal}
 
@@ -239,7 +239,7 @@ Evangelizing design system adoption begins with a promise of a better future. We
 - ![Experimentation](/images/portfolio/disney-enterprise/new/experiments-results.jpg) {.col-4}
 - ![Advertising](/images/portfolio/disney-enterprise/new/ads-mission-control-scheduling.jpg) {.col-4}
 - ![Developer Productivity](/images/portfolio/disney-enterprise/new/dev-portal.jpg) {.col-4}
-{.grid .well .full-grid}
+{.grid .well .full-width-grid}
 
 
 <style>

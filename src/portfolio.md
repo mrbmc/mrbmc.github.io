@@ -12,9 +12,9 @@ eleventyImport:
 	collection: collections.work, 
 	count:10,
 	id: "work", 
-	class: "full-grid",
+	class: "",
 	heading: "Impact Projects", 
-	description: false %}
+	summary: false %}
 
 ----
 
@@ -22,9 +22,9 @@ eleventyImport:
 	collection: collections.talk, 
 	count:3, 
 	id: "talk",
-	class: "full-grid",
+	class: "",
 	heading: "Talks", 
-	description: "A great way to learn is to share what you think you know." %}
+	summary: "A great way to learn is to share what you think you know." %}
 
 ----
 
@@ -32,6 +32,6 @@ eleventyImport:
 	collection: collections.personal, 
 	count:4, 
 	id: "personal",
-	class: "full-grid",
+	class: "",
 	heading: "Play", 
-	description: "As a Kinesthetic Learner, I need create new things to refine my thinking, and develop new skills."%}
+	summary: "As a Kinesthetic Learner, I need create new things to refine my thinking, and develop new skills."%}

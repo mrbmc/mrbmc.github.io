@@ -18,7 +18,7 @@ timeline: 2018-2020
 casestudy: true
 ---
 
-![Disney+ Welcome on All Devices](/images/portfolio/disney-growth/disney-growth.jpg){.full-grid}
+![Disney+ Welcome on All Devices](/images/portfolio/disney-growth/disney-growth-device-cluster.jpg){.full-width-grid}
 
 &nbsp;
 
@@ -64,7 +64,7 @@ A good design principle is unique to the product it is written for. It should in
 + **Brand Safe**{.large-type}  
   Go above and beyond legal requirements to protect our consumers and the Disney brand. No dark patterns, legal jargon, or dead ends.{.col-3 .card}
 
-{.grid .full-grid}
+{.grid .full-width-grid}
 
 ### Landing Page{#landing-page}
 
@@ -75,7 +75,7 @@ The homepage evolved from early 2018 until mid-2021 evolving as we learned how t
 + ![Updated with the Bundle](/images/portfolio/disney-growth/olp-v2.jpg) {.col-3}
 + ![V1 for beta testing](/images/portfolio/disney-growth/olp-v1.jpg) {.col-3}
 + ![Stimulus for research](/images/portfolio/disney-growth/olp-v0.jpg) {.col-3}
-{.grid .well .full-grid}
+{.grid .well .full-width-grid}
 
 ### TV & Connected Devices Signup {#tv-signup}
 
@@ -88,7 +88,7 @@ We started with a "reference" design and our happy path; and then adjusted varia
 + ![Signup TV Reference](/images/portfolio/disney-growth/tv-reference-signup-3.png) {.col-4}
 + ![Signup TV Reference](/images/portfolio/disney-growth/tv-reference-signup-4.png) {.col-6}
 + ![Signup TV Reference](/images/portfolio/disney-growth/tv-reference-signup-5.png) {.col-6}
-{.grid .well .full-grid}
+{.grid .well .full-width-grid}
 
 
 **TVOS** from Apple was the most complex of all TV devices due to their unique HIG standards, payment methods, and remote control. We iterated dozens of times to arrive at a design that satisfied Apple's UX standards and supported Disney's business goals. **This set a precedent for all other streaming services**.
@@ -102,7 +102,7 @@ We started with a "reference" design and our happy path; and then adjusted varia
 + ![Subscriber Agreement](/images/portfolio/disney-growth/signup-tvos-screen-9.png) {.col-4 .row-2}
 + ![iTunes Authentication](/images/portfolio/disney-growth/signup-tvos-screen-10.png) {.col-4 .row-2}
 + ![TV OS Success](/images/portfolio/disney-growth/signup-tvos-screen-11.png) {.col-4 .row-2}
-{.grid .well .full-grid}
+{.grid .well .full-width-grid}
 
 
 #### Optimizing Signup On TV {#qr-codes}
@@ -116,11 +116,11 @@ After launch, we observed that login & signup completion rates on Tv were just *
 + ![Payment](/images/portfolio/disney-growth/tv-signup-vision-5.png) {.col-3}
 + ![Confirm Purchase (EU)](/images/portfolio/disney-growth/tv-signup-vision-6.png) {.col-3}
 + ![Success](/images/portfolio/disney-growth/tv-signup-vision-7.png) {.col-3}
-{.grid .well .full-grid}
+{.grid .well .full-width-grid}
 
 **Usability studies** showed us that 96% of participants preferred the QR code to the existing solution even though 45% participants had *never used a QR code before*. People literally "oohed" and "aahhed" during testing.
 
-![UX research](/images/portfolio/disney-growth/tv-off-device-research-4x1.jpg){.full-grid}
+![UX research](/images/portfolio/disney-growth/tv-off-device-research-4x1.jpg){.full-width-grid}
 
 In-market we saw a modest drop in conversion rate, that was offset by an increase in our Bundle take-rate, which made the change **revenue positive**. A solid win for both users and the business.
 
@@ -132,7 +132,7 @@ In-market we saw a modest drop in conversion rate, that was offset by an increas
 
 **30% of our subscribers** come through resellers. We designed a versatile and scalable UX across web and TV devices for our partners to resell Disney+ across global regions. We used a systemic design approach to use one flow for redemptions (gift cards, resellers, bundle activations) and for cable boxes that lack payment methods.
 
-![Redemption Flow](/images/portfolio/disney-growth/disney-redemption-flow.png){.full-grid}
+![Redemption Flow](/images/portfolio/disney-growth/disney-redemption-flow.png){.full-width-grid}
 
 #### Cable Resellers
 
@@ -142,7 +142,7 @@ In-market we saw a modest drop in conversion rate, that was offset by an increas
 + ![](/images/portfolio/disney-growth/b2b2c-password.png) {.col-1 .hide}
 + ![](/images/portfolio/disney-growth/b2b2c-canal-terms.png) {.col-3 .row-3}
 + ![](/images/portfolio/disney-growth/b2b2c-canal-success.png) {.col-2 .row-2}
-{.grid .well .full-grid}
+{.grid .well .full-width-grid}
 
 ### Global expansion{#global-expansion}
 
@@ -160,7 +160,7 @@ We grew Disney+ rapidly by expanding horizontally into new geographic markets. E
 + ![Password](/images/portfolio/disney-growth/disney+-signup-DE-step_3.png) {.col-3}
 + ![Payment](/images/portfolio/disney-growth/disney+-signup-DE-step_4.png) {.col-3}
 + ![Confirmation](/images/portfolio/disney-growth/disney+-signup-DE-step_5.png) {.col-6}
-{.grid .well .full-grid}
+{.grid .well .full-width-grid}
 
 
 Latin America required additional fields for Tax collection in Argentina and Chile
@@ -178,7 +178,7 @@ We designed a new "plan picker" to help consumers pick the best plan for their f
 + ![Email](/images/portfolio/disney-growth/plan-picker-test-3.jpg) {.col-4}
 + ![Password](/images/portfolio/disney-growth/plan-picker-test-4.jpg) {.col-4}
 + ![Billing](/images/portfolio/disney-growth/plan-picker-test-5.jpg) {.col-4 .row-1}
-{.grid .well .full-grid}
+{.grid .well .full-width-grid}
 
 ![Plan Picker Test](/images/portfolio/disney-growth/plan-picker-test-slide.001.jpeg)
 A/B flows comparison{.caption}

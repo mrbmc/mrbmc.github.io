@@ -45,7 +45,7 @@ In 2016 we redesigned and relaunched NHL's streaming streaming service across mo
 - ![NHL.tv Highlights](/images/portfolio/nhl/nhl-tv-tvos-favorites.png) {.col-4}
 - ![NHL.tv Highlights](/images/portfolio/nhl/bug-ps4-timestamp-playhead.png) {.col-8 .row-2}
 - ![NHL.tv Highlights](/images/portfolio/nhl/nhl-tv-tvos-player.png) {.col-4}
-{.grid .well .full-grid}
+{.grid .well .full-width-grid}
 
 ----
 
@@ -60,7 +60,7 @@ Around the league provided a fluid way to watch highlights while keeping an eye 
 - ![Shelf](/images/portfolio/nhl/nhl-aroundtheleague-shelf.jpg) {.col-4}
 - <video src="/images/portfolio/nhl/nhl-around-the-league.mp4" controls mute muted playslinline autoplay></video> {.col-8 .row-2}
 - ![Picture in Picture](/images/portfolio/nhl/nhl-aroundtheleague-pip.jpg) {.col-4}
-{.grid .well .full-grid}
+{.grid .well .full-width-grid}
 
 ----
 

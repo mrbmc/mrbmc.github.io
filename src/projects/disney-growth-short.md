@@ -17,7 +17,7 @@ timeline: 2018-2020
 casestudy: true
 ---
 
-![Disney+ Welcome on All Devices](/images/portfolio/disney-growth/disney-growth.jpg){.blur-in .full-grid}
+![Disney+ Welcome on All Devices](/images/portfolio/disney-growth/disney-growth.jpg){.blur-in .full-width-grid}
 
 &nbsp;
 
@@ -45,7 +45,7 @@ casestudy: true
 
 {.sticky-nav}
 
-## Chapter 1: Basecamp{#basecamp .section .full-grid .fade-in}
+## Chapter 1: Basecamp{#basecamp .section .full-width-grid .fade-in}
 
 ![Basecamp](/images/portfolio/disney-growth/everest-basecamp-large.avif) {.hide}
 
@@ -121,7 +121,7 @@ We established  **Experience Principles** for Disney+ because we've seen them im
 
 {.grid}
 
-## Chapter 2: Ascent {#ascent .section .full-grid .fade-in}
+## Chapter 2: Ascent {#ascent .section .full-width-grid .fade-in}
 
 ![Ascent](/images/portfolio/disney-growth/everest-ascent-large.jpg) {.hide}
 
@@ -136,7 +136,7 @@ What was important to Disney+ subscribers? A variety of content for their whole 
 + ![Updated with the Bundle](/images/portfolio/disney-growth/olp-v2.jpg) {.col-3}
 + ![V1 for beta testing](/images/portfolio/disney-growth/olp-v1.jpg) {.col-3}
 + ![Stimulus for research](/images/portfolio/disney-growth/olp-v0.jpg) {.col-3}
-{.grid .well .full-grid}
+{.grid .well .full-width-grid}
 
 The homepage evolved from early 2018 until mid-2021 starting as a stimulus for research teams (marketing and UXR) to help us learn more about our guests, and evolving over time into an optimized proven product with shared ownership between Marketing and Product.  Some changes to call out:
 
@@ -161,7 +161,7 @@ Our solution is to create a "reference" design and then make adjustments for eac
 + ![Signup TV Reference](/images/portfolio/disney-growth/tv-reference-signup-3.png) {.col-4}
 + ![Signup TV Reference](/images/portfolio/disney-growth/tv-reference-signup-4.png) {.col-6}
 + ![Signup TV Reference](/images/portfolio/disney-growth/tv-reference-signup-5.png) {.col-6}
-{.grid .well .full-grid}
+{.grid .well .full-width-grid}
 
 
 #### TVOS{#tvos}
@@ -181,7 +181,7 @@ This purchase flow was the most complex of all TV devices due to Apple's relucta
 + ![Subscriber Agreement](/images/portfolio/disney-growth/signup-tvos-screen-9.png) {.col-4 .row-2}
 + ![iTunes Authentication](/images/portfolio/disney-growth/signup-tvos-screen-10.png) {.col-4 .row-2}
 + ![TV OS Success](/images/portfolio/disney-growth/signup-tvos-screen-11.png) {.col-4 .row-2}
-{.grid .well .full-grid}
+{.grid .well .full-width-grid}
 
 
 #### Optimizing Signup On TV {#qr-codes}
@@ -204,13 +204,13 @@ Direct people off the TV to the mobile web for login and signup by using QR Code
 + ![Payment](/images/portfolio/disney-growth/tv-signup-vision-5.png) {.col-3}
 + ![Confirm Purchase (EU)](/images/portfolio/disney-growth/tv-signup-vision-6.png) {.col-3}
 + ![Success](/images/portfolio/disney-growth/tv-signup-vision-7.png) {.col-3}
-{.grid .well .full-grid}
+{.grid .well .full-width-grid}
 
 ##### Results & Outcomes
 
 We ran usability studies to determine whether QR codes or "license plate" would be usable to our guests. This was before QR codes were normalized in the pandemic. **96% of participants preferred the QR code** to the existing solution of entering info manually. 45% of those participants had *never used a QR code before* but still preferred that UX.
 
-![UX research](/images/portfolio/disney-growth/tv-off-device-research-4x1.jpg){.full-grid}
+![UX research](/images/portfolio/disney-growth/tv-off-device-research-4x1.jpg){.full-width-grid}
 
 In-market we saw a modest drop in conversion rate, which was alarming. Fortunately, that was offset by an increase in our Bundle take-rate, which made the change **revenue positive**. 
 
@@ -236,7 +236,7 @@ Our redemption flow enabled us to serve multiple use cases:
 - Resellers
 - Bundle Activations
 
-![Redemption Flow](/images/portfolio/disney-growth/disney-redemption-flow.png){.full-grid}
+![Redemption Flow](/images/portfolio/disney-growth/disney-redemption-flow.png){.full-width-grid}
 
 #### Cable Resellers
 
@@ -246,9 +246,9 @@ Our redemption flow enabled us to serve multiple use cases:
 + ![](/images/portfolio/disney-growth/b2b2c-password.png) {.col-1 .hide}
 + ![](/images/portfolio/disney-growth/b2b2c-canal-terms.png) {.col-3 .row-3}
 + ![](/images/portfolio/disney-growth/b2b2c-canal-success.png) {.col-2 .row-2}
-{.grid .well .full-grid}
+{.grid .well .full-width-grid}
 
-## Chapter 3: Summit{#summit .section .full-grid .fade-in}
+## Chapter 3: Summit{#summit .section .full-width-grid .fade-in}
 
 ![Basecamp](/images/portfolio/disney-growth/everest-north-side-sun-over-tibetan-plateau.jpg) {.hide}
 
@@ -274,7 +274,7 @@ In Europe, we modified the core signup flow to present users with the license ag
 + ![Password](/images/portfolio/disney-growth/disney+-signup-DE-step_3.png) {.col-3}
 + ![Payment](/images/portfolio/disney-growth/disney+-signup-DE-step_4.png) {.col-3}
 + ![Confirmation](/images/portfolio/disney-growth/disney+-signup-DE-step_5.png) {.col-6}
-{.grid .well .full-grid}
+{.grid .well .full-width-grid}
 
 
 Latin America required additional fields for Tax collection in Argentina and Chile
@@ -309,7 +309,7 @@ One hypothesis was to showcase the different plan options better to guests. A "p
 + ![Email](/images/portfolio/disney-growth/plan-picker-test-3.jpg) {.col-4}
 + ![Password](/images/portfolio/disney-growth/plan-picker-test-4.jpg) {.col-4}
 + ![Billing](/images/portfolio/disney-growth/plan-picker-test-5.jpg) {.col-4 .row-1}
-{.grid .well .full-grid}
+{.grid .well .full-width-grid}
 
 ![Plan Picker Test](/images/portfolio/disney-growth/plan-picker-test-slide.001.jpeg)
 A/B flows comparison{.caption}
@@ -359,7 +359,7 @@ We also had a list of 6 viable ideas to prototype and test with users.
 
 ![](/images/portfolio/disney-growth/bundle-workshop-wireframes.jpg){.full-width}
 
-## Chapter 4: Descent {#descent .section .full-grid .fade-in}
+## Chapter 4: Descent {#descent .section .full-width-grid .fade-in}
 
 ![Basecamp](/images/portfolio/disney-growth/everest-descent.jpeg) {.hide}
 

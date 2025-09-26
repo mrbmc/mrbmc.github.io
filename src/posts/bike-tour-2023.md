@@ -226,7 +226,7 @@ I never could have done this without the support of my wife. She gave me the tim
 - ![Lodging](/images/blog/vt-tour/IMG_1377.JPG) {.col-6}
 - ![Mass MoCA](/images/blog/vt-tour/IMG_1343.JPG) {.col-6}
 
-{.grid .well .full-grid}
+{.grid .well .full-width-grid}
 
 <style type="text/css"> 
 .grid.well img {
