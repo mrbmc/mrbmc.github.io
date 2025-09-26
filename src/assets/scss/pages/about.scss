@@ -19,6 +19,15 @@ body.about {
       width: 25vw !important;
     }
 
+    #portrait {
+      box-sizing: border-box;
+      overflow: hidden;
+      align-self: center;
+      img, image {
+        clip-path: url(#portrait_mask);
+      }
+    }
+
     @media (min-width:lib.$breakpoint) {
       height: calc(100vh - var(--navbar-height));
 
@@ -44,26 +53,13 @@ body.about {
         align-self: start;
       }
       #portrait {
-        box-sizing: border-box;
-        overflow: hidden;
         order: 1;
-        align-self: center;
-
-        img, image {
-          clip-path: url(#portrait_mask);
-        }
-
       }
 
     }
     @media (max-width:lib.$breakpoint) {
       padding-top: var(--gutter-xl);
       padding-bottom: var(--gutter-xl);
-
-      #portrait {
-        overflow: hidden;
-        border-radius: var(--border-radius-xl);
-      }
     }
 
   }
