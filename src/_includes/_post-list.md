@@ -1,4 +1,8 @@
-{% section "post-list" %}
+{% assign slug = heading | slug %}
+{% unless id %}{% assign id = slug %}{% endunless %}
+{% assign class_local = "post-list " | append: class %}
+
+{% section id, class_local %}
 
 {% if heading %}## {{ heading }}{% endif %}
 
@@ -10,7 +14,9 @@
 
 ### [{{post.data.title}}]({{ post.url }})
 
-{{ post.data.date | date: "%b %-e%q, %Y" }} • {{post.templateContent | timeToRead }} to read{.date}
+{{ post.data.date | date: "%b %-e%q, %Y" }}{.date}
+
+{{post.templateContent | timeToRead }} to read{.duration}
 
 </header>
 

@@ -80,41 +80,19 @@ body.home {
   }
 */
 
-/*
   .project-list {
-
-    @media (min-width:lib.$breakpoint) {
-      // grid-template-columns: repeat(3, 1fr);
-      h2 {
-        grid-column: span 3;
-      }
-    }
-
+    row-gap: 0;
     .project {
-      flex-direction: column-reverse;
-      justify-content: flex-end;
-
       header {
-        h3 {
-          text-align: center;
-        }
-
-        p,ul {
-          display: none;
-        }
-
+        display: none;
       }
-
-      figure, .figure {
-        img {
-          aspect-ratio: 1;
-        }
-      }
-
+      // figure, .figure {
+      //   img {
+      //     aspect-ratio: 1;
+      //   }
+      // }
     }
-
   }
-*/
 /*
   #post-list {
     background: var(--body-background);

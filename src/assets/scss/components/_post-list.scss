@@ -1,6 +1,6 @@
 @use '../library' as lib;
 
-#post-list {
+.post-list {
 
     @media (max-width: lib.$breakpoint) {
         margin-top: 0;
@@ -26,6 +26,13 @@
             p {
                 color: var(--muted-foreground);
                 margin-bottom: 0;
+                &.date:after {
+                    content: "•";
+                    margin: 0 .5em;
+                }
+                &.date,&.duration {
+                    display: inline-block;
+                }
             }
         }
         figure,.figure {
