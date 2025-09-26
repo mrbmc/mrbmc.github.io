@@ -1,4 +1,4 @@
-{% section "masthead","full-grid" %}
+{% section "masthead","full-width-grid" %}
 
 # {{title}} {data-parallax="50"}
 

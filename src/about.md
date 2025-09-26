@@ -7,7 +7,7 @@ permalink: /about/
 cssfile: "css/pages/about.css"
 ---
 
-{% section "bio","full-grid grid" %}
+{% section "bio","full-width-grid grid" %}
 
 # <span class="parallelogram"></span>Hello there.{.blur-in .col-7}
 

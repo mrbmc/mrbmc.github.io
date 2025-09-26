@@ -4,7 +4,7 @@
 
 These mantras - which colleagues have heard me repeat - help guide consistent high-quality product decisions.
 
-<div class="grid full-grid">
+<div class="grid full-width-grid">
 
 ![User Interviews](/images/portfolio/disney-groupwatch/wewatch-interview-participants-3x3.jpg){.addLightbox} {.col-start-2 .col-end-5}
 
@@ -17,7 +17,7 @@ Bring a beginner's mindset to your work so you can stay open to evidence that el
 </div>
 
 </div>
-<div class="grid full-grid">
+<div class="grid full-width-grid">
 
 <div class="col-start-2 col-end-6">
 
@@ -30,7 +30,7 @@ Success is an infinite sum game that can be grown through collaboration. A great
 ![Workshop](/images/portfolio/disney-growth/workshop-pictogram.jpg){.addLightbox} {.col-start-8 .col-end-11}
 
 </div>
-<div class="grid full-grid">
+<div class="grid full-width-grid">
 
 ![Sea Lion](/images/blog/sealion-balance.jpg){.addLightbox} {.col-start-2 .col-end-5}
 
@@ -45,7 +45,7 @@ It's so much easier to pivot or accelerate if you're already in motion. A sealio
 </div>
   
 </div>
-<div class="grid full-grid">
+<div class="grid full-width-grid">
 
 <div class="col-start-2 col-end-6">
 

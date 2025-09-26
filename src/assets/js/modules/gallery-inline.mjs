@@ -33,7 +33,7 @@ export function initGallery (e) {
 
         // create wrapper container
         var wrapper = document.createElement('div');
-            wrapper.setAttribute('class','gallery-wrap full-grid');
+            wrapper.setAttribute('class','gallery-wrap full-width-grid');
         wrapElement(gallery, wrapper);
 
         // create the detail image

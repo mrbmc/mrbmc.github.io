@@ -17,17 +17,17 @@
   }
 }
 
-//this fills the window and expands the grid
-.full-grid {
+//this expands the container to the width of the window
+.full-width, .full-width-90 {
+  @include fullwidth(false);
+}
+//this expands the grid to fill the container and the window
+.full-width-grid {
   @include fullwidth(true);
   @media (max-width: lib.$breakpoint) {
     padding-left: var(--gutter);
     padding-right: var(--gutter);
   }
-}
-//this fills the window but constraints the grid
-.full-width, .full-width-90 {
-  @include fullwidth(false);
 }
 
 .grid {

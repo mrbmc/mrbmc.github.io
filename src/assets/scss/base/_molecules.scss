@@ -23,10 +23,10 @@
   border-radius: var(--border-radius-xl);
   box-shadow: lib.$shadow-inset;
   &.full-width,
-  &.full-grid {
+  &.full-width-grid {
     border-radius: 0;
   }
-  &[class*="full-width"] {
+  &[class~="full-width"] {
     padding-left: var(--margin);
     padding-right: var(--margin);
   }
@@ -41,9 +41,6 @@
 
     padding-top: var(--gutter);
     padding-bottom: var(--gutter);
-    // margin-bottom: var(--gutter-xl);
-
-    // @include lib.full-width(var(--gutter));
     @include lib.inverse(var(--accent-background));
 
     li {
