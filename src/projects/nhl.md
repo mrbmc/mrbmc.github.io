@@ -1,12 +1,12 @@
 ---
-title: NHL TV & Mobile
+title: NHL.TV & NHL Apps
 date: 2018-12-05
 thumbnail: /images/portfolio/nhl/nhl-thumbnail.png
 masthead-video: /images/portfolio/nhl/nhl-masthead.mp4
 masthead-image: /images/portfolio/nhl/nhl-teaser-2x1.jpg
 tags:
   - work
-summary: Innovating the hockey viewing experience.
+summary: Innovating the hockey fan experience.
 description: Launching the NHL.tv streaming service and introducing **product-led-growth** for the official NHL app and website.
 jobtitle: Director, UX & Design
 sponsor: MLB Advaned Media

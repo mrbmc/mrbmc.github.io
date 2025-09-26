@@ -30,18 +30,18 @@ When presented with this embarrassment of riches, a wise person would express gr
 
 We select the Pan au Chocolat from 5 highly regarded Greenpoint Bakeries (in alphabetical order):
 
-+ [Bakeri](https://www.bakeribrooklyn.com/) {.col-4} 
-+ [Charlotte Patisserie](https://www.charlottepatisserie.com/) {.col-4}
-+ [Nick & Sons](https://www.nickandsonsbakery.com/) {.col-4}
-+ ![Bakeri](/images/blog/pan-choclat-bakeri.jpeg) {.col-4}
-+  ![Charlotte Patisserie](/images/blog/pan-choclat-charlotte.jpeg) {.col-4}
-+ ![Nick & Sons](/images/blog/pan-choclat-nicksons.jpeg) {.col-4}
-+ [Pan Pan Vino Vino](https://www.panpanvinovinobk.com/) {.col-4}
-+ [Radio Bakery](https://www.radiobakery.nyc/) {.col-6}
-+ ![Pan Pan](/images/blog/pan-choclat-panpan.jpeg) {.col-4}
-+ ![Radio](/images/blog/pan-choclat-radio.jpeg) {.col-4}
++ ![Bakeri](/images/blog/pan-choclat-bakeri.jpeg) {.col-start-2 .col-end-3}
++  ![Charlotte Patisserie](/images/blog/pan-choclat-charlotte.jpeg) {.col-2}
++ ![Nick & Sons](/images/blog/pan-choclat-nicksons.jpeg) {.col-2}
++ ![Pan Pan](/images/blog/pan-choclat-panpan.jpeg) {.col-2}
++ ![Radio](/images/blog/pan-choclat-radio.jpeg) {.col-2}
++ [Bakeri](https://www.bakeribrooklyn.com/) {.col-start-2 .col-end-3} 
++ [Charlotte Patisserie](https://www.charlottepatisserie.com/) {.col-2}
++ [Nick & Sons](https://www.nickandsonsbakery.com/) {.col-2}
++ [Pan Pan Vino Vino](https://www.panpanvinovinobk.com/) {.col-2}
++ [Radio Bakery](https://www.radiobakery.nyc/) {.col-3}
 
-{.grid .well}
+{.grid .well .full-width-grid}
 
 ### Evaluation Criteria
 
