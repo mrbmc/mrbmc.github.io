@@ -1,17 +1,14 @@
 ---
 title: Disney+ Growth Design
 date: 2020-12-01
-thumbnail: /images/portfolio/disney-growth/disney-growth.png
+thumbnail: /images/portfolio/disney-growth/disney-growth-thumb.jpg
 eleventyExcludeFromCollections: true
 tags:
   - work
 description: This is the story of building the Growth Design program - the team, process, and product - to launch Disney+ from 0 to 105M subscribers in two years.
 timeline: 2018-2020
 ---
-![Cover image](/images/portfolio/disney-growth/disney-growth.png){.full-width style="object-fit:contain;"}
-
-
-<!--This is the story of how we launched Disney+ and grew it from **0 to 105M subscribers** in two years. It was my mission to build "Growth Design" - the team, process, and outcomes - from inception into a 13-person cross-discipline program.{.large-type}-->
+![Disney+ Welcome on All Devices](/images/portfolio/disney-growth/disney-growth-device-cluster.png){.full-width-grid style="object-fit:contain;"}
 
 | Role                            | Responsibilities                                                                     | Team                                                         | Timeline            |
 | :------------------------------ | :----------------------------------------------------------------------------------- | :----------------------------------------------------------- | :------------------ |

@@ -2,12 +2,12 @@
 title: Disney Enterprise XD
 date: 2020-09-01
 thumbnail: /images/portfolio/disney-enterprise/optumus-mockup.jpg
-# masthead-image: /images/portfolio/disney-enterprise/ivan-cockpit.webp
+#masthead-image: /images/portfolio/disney-enterprise/disney-enterprise-sso_gates.png
 eleventyExcludeFromCollections: false
 tags:
   - work
 summary: \"Streaming As A Service\" for Disney+, Hulu, and ESPN+.
-description: I founded the program, and grew a team from 1 to 16 designers, for Disney's Streaming As A Service platform. The Enterprise XD team designed a suite of 30+ industrial grade products that operate Disney+, ESPN+, Hulu, and STAR+. The platform saved Disney $80M per year, and increased MRR 25% YoY.
+description: I founded the program, and grew a team from 1 to 16 designers, for Disney's Streaming As A Service platform. The Enterprise XD team designed a suite of 30+ industrial grade products that operate Disney+, ESPN+, Hulu, and STAR+. The platform saved Disney **$80M per year**, and **increased MRR 25% YoY**.
 jobtitle: Senior Director, Product Design
 accomplishments: 
  - Reduced operational costs by **$80M annually** by building products competitive with industry leaders.
@@ -18,18 +18,17 @@ casestudy: true
 timeline: 2019-2023
 ---
 
-![Cockpit](/images/portfolio/disney-enterprise/ivan-cockpit.webp)
+![SSO Gates](/images/portfolio/disney-enterprise/disney-enterprise-sso_gates.png){.full-width-grid style="padding: 0;"}
 
-1. [The Strategy](#strategy)
-2. [The Team](#team)
 3. [The Products](#products)
    1. [Commerce](#commerce)
    2. [Content](#content-tools)
    4. [Business Intelligence](#analytics)
    3. [Developer Experience](#developer)
+1. [The Strategy](#strategy)
+2. [The Team](#team)
 
 {.sticky-nav}
-
 
 | Role & Responsibility                                                                                                                                          | Team                                   | Timeline            | Impact                                                                     |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- | ------------------- | -------------------------------------------------------------------------- |
@@ -37,72 +36,7 @@ timeline: 2019-2023
 
 {.rotate #summary}
 
-## The Strategy (of Streaming){#strategy}
-
-Building a global streaming service that meets consumer expectations requires an **entire industry** of components in commerce, content, support, data insights, and developer tools. The costs & privacy considerations at Disney's scale required us to build novel solutions.
-
-**To create something truly novel, you need novel tools.**
-
-The purview of the Enterprise Experience team was a suite of products that had comparable commercial offerings. We created unique variants of these tailored to Disney at lower costs and unique features.
-
-Each product had goals that laddered up to a company-wide KPI.
-
-| Product Use Case | KPI | Commercial Analog(s) |
-| -- | -- | -- |
-| [Commerce Orchestration](#genie) | Net Subs, MRR | Orb + Metronome |
-| [Content Curation](#content-tools) | RFE | Contentful |
-| [Content Catalog Management](#content-tools) | RFE, OpEx | ContentStudio\|io |
-| [Experimentation & Feature Flagging](#weaponx) | Net Subs, MRR, RFE | Optimizely + Launch Darkly |
-| [Customer Experience Controls](#baymax) | OpEx, Gross Margin | Zendesk |
-| [Streaming Quality Analysis](#optumus) | OpEx | Conviva |
-| [Developer resources management](#developerportal)<br>(services, APIs, documentation, etc) | OpEx | GitHub + AWS |
-| [Insights & Data portal](#dataportal) | OpEx | Tableau + Zoho |
-| Advertising curation, provisioning, and deployment. | MRR | Google AdSense + Amazon Advertising |
-| Testing APIs, documentation, and issue tracking for Disney+ SDK. | Net Subs, MRR | GitLabs |
-| [Personalized messaging](#galaxy)<br />(Email, SMS, Push) | Net Subs, MRR | Salesforce + Braze |
-
-{#scope-table}
- 
-`Net Subs` - customer acquisition  
-`MRR` - revenue growth  
-`OpEx` - cost optimization  
-`RFE` - customer engagement (Recency, Frequency, Engagement)
-{.caption}
-
-### Setting Priority
-
-I was the design executive accountable for investing design in these biggest business outcomes, often with competing priorities. When everything is a priority, nothing is. I used a **Growth Framework** in collaboration with opportunity estimates from Product and Effort Estimates from engineering, to align Executives and Partners on where to invest our fixed resources.
-
-This model helped in securing funding for staffing, contractors, and roadmap priority. We sequenced our work from the top right to lower left in hiring and project planning.
-
-![Enterprise ROI](/images/portfolio/disney-enterprise/exd-roi-framework.png)
-
-----
-
-## The Team{#team}
-
-![linda](/images/portfolio/disney-enterprise/exd-team-linda.png)![caroline](/images/portfolio/disney-enterprise/exd-team-caroline.png)![dan](/images/portfolio/disney-enterprise/exd-team-dan.png)![alexaf](/images/portfolio/disney-enterprise/exd-team-alexaf.png)![daria](/images/portfolio/disney-enterprise/exd-team-daria.png)![takeem](/images/portfolio/disney-enterprise/exd-team-takeem.png)![alexac](/images/portfolio/disney-enterprise/exd-team-alexac.png)![jenny](/images/portfolio/disney-enterprise/exd-team-jenny.png)![willet](/images/portfolio/disney-enterprise/exd-team-willet.png)![sarah](/images/portfolio/disney-enterprise/exd-team-sarah.png)![kda](/images/portfolio/disney-enterprise/exd-team-kda.png)![cathy](/images/portfolio/disney-enterprise/exd-team-cathy.png)![carol](/images/portfolio/disney-enterprise/exd-team-carol.png)![jon](/images/portfolio/disney-enterprise/exd-team-jon.png)![agency](/images/portfolio/disney-enterprise/exd-team-agency.png)
-{.team}
-
-### Defining Culture
-
-A team is greater than the sum of the individuals. It's a singular unit with a shared purpose. The secret ingredient that binds a group of people together is the culture. I'm proud to say the Enterprise XD team at Disney had a strong culture of **psychological safety**, **authenticity**, and **shared growth**.
-
-![golden circle](/images/portfolio/disney-enterprise/EXD-Golden-Circle.png){style="box-shadow:0 1em 1.38em 0.38em rgba(0,0,0,0.13);"}
-
-Culture can be designed with intentional reinforcement of the behaviors that align with our values. Other teams at Disney saw this and asked for an open-source toolkit for our [Team Charter Workshop](/portfolio/team-charter-workshop/).
-
-<video src="/images/portfolio/culture-workshop/EXD-workshop-timelapse.mp4" autoplay muted loop ></video>
-
-### Operating Model
-
-To tackle such a large surface area, we organized the team into pods for each topical area. These subjects aligned with business outcomes as well.
-
-Aligning our team with these business areas enabled long lived product teams that increased performance over time. It also empowered our designers with ownership and subject matter expertise; this helped develop their influence.
-
-![](/images/portfolio/disney-enterprise/exd-pods.png){.card}
-
-----
+## To create something truly novel, you need novel tools.
 
 ## The Products {#products}
 
@@ -171,7 +105,7 @@ A team of editors steeped in knowledge of the Disney catalog created hundreds of
 - ![Content Targeting](/images/portfolio/disney-enterprise/polaris-browse.jpg) {.col-3 .contain}
 {.grid .well .full-width-grid}
 
-### Analytics{#analytics}
+### Business Intelligence{#analytics}
 
 Improve the quality of decision making for everyone at Disney.
 
@@ -217,52 +151,38 @@ We partnered with a team of engineers who cared deeply about developer productiv
 
 ![Trek Overview](/images/portfolio/disney-enterprise/exd-design-system-overview.jpg){.card}
 
-- ![Inputs](/images/portfolio/disney-enterprise/trek-inputs.jpg) {.col-6 .row-2}
 - ![Color Tokens](/images/portfolio/disney-enterprise/trek-colors.jpg) {.col-3}
 - ![Type Tokens](/images/portfolio/disney-enterprise/trek-type.jpg) {.col-3}
+- ![Inputs](/images/portfolio/disney-enterprise/trek-inputs.jpg) {.col-6 .row-2}
 - ![Navigation](/images/portfolio/disney-enterprise/trek-navigation.jpg) {.col-6 .row-2}
 - ![Buttons](/images/portfolio/disney-enterprise/trek-buttons.jpg) {.col-3}
-{.grid .well}
+- ![Buttons](/images/portfolio/disney-enterprise/trek-buttons.jpg) {.col-3}
+{.grid .well .full-width-grid}
 
 
 ## Unified Platform Vision
 
 Evangelizing design system adoption begins with a promise of a better future. We buy on emotion and rationalize with facts (stability and scalability for developers; operational savings and velocity for business owners; usability and brand trust for designers). We designed a vision-state for a platform of feature products with a shared visual language.
 
-- ![Commerce Portal](/images/portfolio/disney-enterprise/new/commerce-offer-detail.jpg) {.col-4}
-- ![Support Agent Portal](/images/portfolio/disney-enterprise/new/sisu-customer-details.jpg) {.col-4}
-- ![Messaging Portal](/images/portfolio/disney-enterprise/new/messaging-new-email.jpg) {.col-4}
-- ![Content Management](/images/portfolio/disney-enterprise/new/cypher-dictionary.jpg) {.col-4}
-- ![Content Portal](/images/portfolio/disney-enterprise/new/content-portal-episode.jpg) {.col-4}
-- ![Metadata Portal](/images/portfolio/disney-enterprise/new/knowsmore.jpg) {.col-4}
-- ![Streaming Quality](/images/portfolio/disney-enterprise/new/qos-spotlight.jpg) {.col-4}
-- ![Experimentation](/images/portfolio/disney-enterprise/new/experiments-results.jpg) {.col-4}
-- ![Advertising](/images/portfolio/disney-enterprise/new/ads-mission-control-scheduling.jpg) {.col-4}
-- ![Developer Productivity](/images/portfolio/disney-enterprise/new/dev-portal.jpg) {.col-4}
+- ![Commerce Portal](/images/portfolio/disney-enterprise/new/commerce-offers-list.png) {.col-4}
+- ![Commerce Portal](/images/portfolio/disney-enterprise/new/commerce-offer-detail.png) {.col-4}
+- ![Support Agent Portal](/images/portfolio/disney-enterprise/new/sisu-customer-details.png) {.col-4}
+- ![Messaging Portal](/images/portfolio/disney-enterprise/new/messaging-new-email.png) {.col-4}
+- ![String Management](/images/portfolio/disney-enterprise/new/cypher-dictionary.png) {.col-4}
+- ![String Management](/images/portfolio/disney-enterprise/new/cypher-edit-key.png) {.col-4}
+- ![Content Portal](/images/portfolio/disney-enterprise/new/content-portal-entities-episode.png) {.col-4}
+- ![Programming Portal](/images/portfolio/disney-enterprise/new/content-portal-programming-episode.png) {.col-4}
+- ![Metadata Portal](/images/portfolio/disney-enterprise/new/knowsmore.png) {.col-4}
+- ![Streaming Quality](/images/portfolio/disney-enterprise/new/qos-spotlight.png) {.col-4}
+- ![Streaming Quality](/images/portfolio/disney-enterprise/new/qos-workbench.png) {.col-4}
+- ![Experimentation](/images/portfolio/disney-enterprise/new/experiments-results.png) {.col-4}
+- ![Experimentation](/images/portfolio/disney-enterprise/new/experiment-detail.png) {.col-4}
+- ![Advertising](/images/portfolio/disney-enterprise/new/ads-mission-control-scheduling.png) {.col-4}
+- ![Developer Productivity](/images/portfolio/disney-enterprise/new/dev-portal.png) {.col-4}
 {.grid .well .full-width-grid}
 
+----
 
-<style>
-.team {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-gap: 1rem;
-  @media (max-width: 43rem) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-.team img {
-  height: 100%;
-  object-position: 50% 50%;
-  object-fit: contain;
-}
-table#summary tr {
-    grid-template-rows: 3fr 1fr 1fr 2fr;
-}
-#scope-table tbody tr td:nth-of-type(2) {
-    font-family: var(--mono-font);
-}
-</style>
 
 {% comment %}
 <!--
@@ -306,3 +226,90 @@ Disney has a rich history of building new tools that unlock creative possibiliti
 - ![Metadata Portal](/images/portfolio/disney-enterprise/new/knowsmore.jpg) {.col-4 .contain}
 {.gallery}
 {% endcomment %}
+
+
+## Streaming as a Service Strategy{#strategy}
+
+What is worth building?
+
+A global streaming service requires an **entire industry** of tools in commerce, content, customer experience, data insights, and developer support. Off-the-shelf tools could bootstrap Disney+ part way, but at scale the costs, privacy regulations, and business goals required custom products.
+
+We zeroed in on building products that could directly influence a company-wide KPI.
+
+| Product Use Case | KPI | Commercial Analog(s) |
+| -- | -- | -- |
+| [Commerce Orchestration](#genie) | Net Subs, MRR | Orb + Metronome |
+| [Content Curation](#content-tools) | RFE | Contentful |
+| [Content Catalog Management](#content-tools) | RFE, OpEx | ContentStudio\|io |
+| [Experimentation & Feature Flagging](#weaponx) | Net Subs, MRR, RFE | Optimizely + Launch Darkly |
+| [Customer Experience Controls](#baymax) | OpEx, Gross Margin | Zendesk |
+| [Streaming Quality Analysis](#optumus) | OpEx | Conviva |
+| [Developer resources management](#developerportal)<br>(services, APIs, documentation, etc) | OpEx | GitHub + AWS |
+| [Insights & Data portal](#dataportal) | OpEx | Tableau + Zoho |
+| Advertising curation, provisioning, and deployment. | MRR | Google AdSense + Amazon Advertising |
+| Testing APIs, documentation, and issue tracking for Disney+ SDK. | Net Subs, MRR | GitLabs |
+| [Personalized messaging](#galaxy)<br />(Email, SMS, Push) | Net Subs, MRR | Salesforce + Braze |
+
+{#scope-table}
+ 
+`Net Subs` - customer acquisition  
+`MRR` - revenue growth  
+`OpEx` - cost optimization  
+`RFE` - customer engagement (Recency, Frequency, Engagement)
+{.caption}
+
+### Setting Priority
+
+I was the design executive accountable for investing design in these biggest business outcomes, often with competing priorities. When everything is a priority, nothing is. I used a **Growth Framework** in collaboration with opportunity estimates from Product and Effort Estimates from engineering, to align Executives and Partners on where to invest our fixed resources.
+
+This model helped in securing funding for staffing, contractors, and roadmap priority. We sequenced our work from the top right to lower left in hiring and project planning.
+
+![Enterprise ROI](/images/portfolio/disney-enterprise/exd-roi-framework.png)
+
+----
+
+## The Team{#team}
+
+![linda](/images/portfolio/disney-enterprise/exd-team-linda.png)![caroline](/images/portfolio/disney-enterprise/exd-team-caroline.png)![dan](/images/portfolio/disney-enterprise/exd-team-dan.png)![alexaf](/images/portfolio/disney-enterprise/exd-team-alexaf.png)![daria](/images/portfolio/disney-enterprise/exd-team-daria.png)![takeem](/images/portfolio/disney-enterprise/exd-team-takeem.png)![alexac](/images/portfolio/disney-enterprise/exd-team-alexac.png)![jenny](/images/portfolio/disney-enterprise/exd-team-jenny.png)![willet](/images/portfolio/disney-enterprise/exd-team-willet.png)![sarah](/images/portfolio/disney-enterprise/exd-team-sarah.png)![kda](/images/portfolio/disney-enterprise/exd-team-kda.png)![cathy](/images/portfolio/disney-enterprise/exd-team-cathy.png)![carol](/images/portfolio/disney-enterprise/exd-team-carol.png)![jon](/images/portfolio/disney-enterprise/exd-team-jon.png)![agency](/images/portfolio/disney-enterprise/exd-team-agency.png)
+{.team}
+
+### Defining Culture
+
+A team is greater than the sum of the individuals. It's a singular unit with a shared purpose. The secret ingredient that binds a group of people together is the culture. I'm proud to say the Enterprise XD team at Disney had a strong culture of **psychological safety**, **authenticity**, and **shared growth**.
+
+![golden circle](/images/portfolio/disney-enterprise/EXD-Golden-Circle.png){style="box-shadow:0 1em 1.38em 0.38em rgba(0,0,0,0.13);"}
+
+Culture can be designed with intentional reinforcement of the behaviors that align with our values. Other teams at Disney saw this and asked for an open-source toolkit for our [Team Charter Workshop](/portfolio/team-charter-workshop/).
+
+<video src="/images/portfolio/culture-workshop/EXD-workshop-timelapse.mp4" autoplay muted loop ></video>
+
+### Operating Model
+
+To tackle such a large surface area, we organized the team into pods for each topical area. These subjects aligned with business outcomes as well.
+
+Aligning our team with these business areas enabled long lived product teams that increased performance over time. It also empowered our designers with ownership and subject matter expertise; this helped develop their influence.
+
+![](/images/portfolio/disney-enterprise/exd-pods.png){.card}
+
+
+<style>
+.team {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1rem;
+  @media (max-width: 43rem) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.team img {
+  height: 100%;
+  object-position: 50% 50%;
+  object-fit: contain;
+}
+table#summary tr {
+    grid-template-rows: 3fr 1fr 1fr 2fr;
+}
+#scope-table tbody tr td:nth-of-type(2) {
+    font-family: var(--mono-font);
+}
+</style>

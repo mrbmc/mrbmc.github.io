@@ -20,7 +20,7 @@ I joined Disney through their acquisition of MLB/BAMTech to launch their streami
 
 ## Growth Design
 
-[![Growth Design](/images/portfolio/disney-growth/disney-growth.png)](/portfolio/disney-growth/)
+[![Growth Design](/images/portfolio/disney-growth/disney-growth-thumb.jpg)](/portfolio/disney-growth/)
 
 How might we onboard guests to a brand-new streaming service from the most beloved entertainment brand in the world? 
 

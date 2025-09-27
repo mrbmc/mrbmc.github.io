@@ -2,7 +2,6 @@
 title: Launching & Scaling Disney+
 date: 2020-12-01
 thumbnail: /images/portfolio/disney-growth/disney-growth-thumb.jpg
-# masthead-image: /images/portfolio/disney-growth/disney-growth-thumb.jpg
 eleventyExcludeFromCollections: false
 tags:
   - work
@@ -18,7 +17,7 @@ timeline: 2018-2020
 casestudy: true
 ---
 
-![Disney+ Welcome on All Devices](/images/portfolio/disney-growth/disney-growth-device-cluster.jpg){.full-width-grid}
+![Disney+ Welcome on All Devices](/images/portfolio/disney-growth/disney-growth-device-cluster.png){.full-width-grid}
 
 &nbsp;
 
@@ -39,7 +38,7 @@ I collaborated with other design leaders to add specialists from our Motion Stud
 ![](/images/portfolio/disney-growth/growth-team-end.png){.center .addLightbox}
 Growth Team in December 2020 {.caption}
 
-#### The Product-Operating Model
+#### The Product-Operating Model{#operating-model}
 
 The formiddable scale of features, devices, and global territories required a new organization design and process to succeed. I collaborated with my peer Directors and VP of Product to evangelize empowered product teams that had **clear swim-lanes**, **accountability**, and **autonomy**. We expanded the new product operating model to include Data, Marketing, and Operations.
 
