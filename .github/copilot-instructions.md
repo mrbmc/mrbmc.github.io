@@ -5,7 +5,7 @@ This file orients AI coding agents to the `mrbmc` site repo so they can be immed
 **Big Picture**
 - **Site generator:** Eleventy. Source content lives in `src/` and the generated site is `www/` (see `eleventy.config.js`).
 - **Asset pipelines:** Gulp orchestrates CSS and JS transforms; `gulpfile.js` defines the primary build steps. Some JS is bundled programmatically using Rollup inside the gulp tasks; an alternate `rollup.config.js` exists but the canonical runtime bundling is in `gulpfile.js` (`bundleJS` uses `paths.jsbundles`).
-- **Legacy/static build script:** `build.sh` performs an alternate build+deploy path (uglify + rsync + eleventy). Both `gulp` and `build.sh` are used in the repo — prefer `gulp` for automated dev workflows and `build.sh` for manual or CI scripts that mimic the author's historical flow.
+- **Legacy/static build script:** A previous `build.sh` script (legacy manual build + deploy) has been removed from this repository. Gulp is the canonical build/deploy pipeline. If you have a local copy of `build.sh` from history, treat it as legacy — prefer the `gulp` tasks described below.
 
 **Local development (quick commands)**
 - **Install:** `npm install` (project uses Node dev deps listed in `package.json`).
@@ -13,7 +13,7 @@ This file orients AI coding agents to the `mrbmc` site repo so they can be immed
 - **Eleventy only:** `npm run watch:eleventy` -> `npx @11ty/eleventy --ignore-initial --incremental --serve` (dev server configured to port `9999` in `eleventy.config.js`).
 - **Sass only:** `npm run watch:sass` -> `sass --watch src/assets/scss:www/css`.
 - **Build (gulp):** `npm run build` (this runs `gulp build --verbose`). For production builds that toggle minification/behavior pass `--prod` to gulp: `npm run build -- --prod` (or `gulp build --prod`).
-- **Deploy (author's script):** `npm run deploy` calls `./build.sh deploy` which syncs `www/` to S3 and invalidates CloudFront (see `build.sh`).
+- **Deploy:** The `package.json` `deploy` script still references the removed `build.sh` and is therefore stale. Use the gulp deploy task instead: run `npx gulp deploy` (or `gulp deploy` if gulp is installed globally). This runs the `upload` and `uncache` steps defined in `gulpfile.js` to sync `www/` to S3 and create a CloudFront invalidation.
 
 **What `gulp build` does** (see `gulpfile.js` `exports.build`)
 - Runs `transpileJS` (uglify), `bundleJS` (Rollup over `paths.jsbundles`), `transpileCSS` (Sass -> `www/css`), `buildHTML` (invokes Eleventy when in production), `syncAssets` (rsync-like asset sync), `syncBackups`, then cleanup and link-checks. Many tasks are gated by an `isProduction` flag (`--prod`).
@@ -29,10 +29,10 @@ This file orients AI coding agents to the `mrbmc` site repo so they can be immed
 - **Edit `src/` for content or template changes.** Non-source changes should avoid directly editing `www/` (it's generated output).
 - **When modifying the JS pipeline, prefer `gulpfile.js` patterns.** `bundleJS` uses Rollup programmatically and refers to `paths.jsbundles` — change that list rather than adding a separate bundler unless necessary.
 - **Use `--prod` to test production-only behavior.** Many tasks (HTML build, asset sync, link-checking) only run when `isProduction` is true.
-- **Be conservative with deployment constants.** `gulpfile.js` and `build.sh` contain S3 and CloudFront identifiers (`S3BUCKET`, `CFDISTRO`, etc.). Don't alter them unless making an explicit deployment change.
+- **Be conservative with deployment constants.** `gulpfile.js` contains S3 and CloudFront identifiers (`S3BUCKET`, `CFDISTRO`, etc.). Don't alter them unless making an explicit deployment change.
 
 **Integration & external dependencies**
-- **AWS S3 + CloudFront:** Deploy and metrics use S3 buckets and CloudFront invalidation (see `build.sh` and `gulpfile.js`).
+- **AWS S3 + CloudFront:** Deploy and metrics use S3 buckets and CloudFront invalidation (see `gulpfile.js`).
 - **GeoIP / metrics:** `metrics/metrics.sh` downloads logs from S3, cleans, and runs `goaccess` to generate metrics HTML. The `package.json` includes a `geolite2` config — treat that data as sensitive.
 - **Image optimization:** Uses `@11ty/eleventy-img` plugin configured in `eleventy.config.js` (outputs to `www/images/optimized/`).
 
@@ -45,8 +45,7 @@ This file orients AI coding agents to the `mrbmc` site repo so they can be immed
 **Files to inspect first when debugging or changing behavior**
 - `gulpfile.js` — primary build pipeline and where JS/CSS/asset tasks are defined.
 - `eleventy.config.js` — templating, collections, image optimization, dev server settings.
-- `build.sh` — alternate build and deploy script (legacy/manual flows).
-- `rollup.config.js` and `src/_js/` — legacy rollup/uglify based bundling used by `build.sh`.
+- `rollup.config.js` and `src/_js/` — legacy rollup/uglify based bundling used historically (not part of the canonical `gulp` flow).
 - `metrics/metrics.sh` — logs download/clean/analysis workflow (uses `goaccess`).
 
 If anything above is unclear or you'd like this shortened, expanded with examples (PR template snippets, recommended tests, or CI steps), tell me which section to iterate on and I will update the file.
