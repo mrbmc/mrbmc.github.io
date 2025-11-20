@@ -1,7 +1,6 @@
 #!/bin/zsh
 
-# Convert BASE to absolute path
-BASE=$(cd "$(dirname "$0")" && pwd);
+BASE=$(dirname "$0");
 
 start_date=$(date -v-30d +%Y%m%d);
 start_day=$(date -j -f %Y%m%d $start_date +%d);
@@ -13,9 +12,7 @@ stop_day=$(date -j -f %Y%m%d $stop_date +%d);
 stop_month=$(date -j -f %Y%m%d $stop_date +%m);
 stop_seconds=$(date -j -f %Y%m%d $stop_date +%s)
 
-# ...existing code...
-
-local flag_skipdownload flag_skipfilter flag_verbose flag_help flag_raw flag_update_blacklists
+local flag_skipdownload flag_verbose flag_help flag_raw flag_update_blacklists
 local usage=(
 "metrics.sh [-h|--help]"
 "metrics.sh [-v|--verbose] [-s|--skipdownload] [-r|--raw] [-f|--from=<YYYYMMDD>] [-u|--until=<YYYYMMDD>] [-t|--term=<duration>] [-i|--ip=ip.to.investigate]"
@@ -32,9 +29,12 @@ goaccess_opt+="--tz='America/New_York' "
 # GeoIP database: prefer bundled copy in `metrics/` if present, otherwise fall back to common homebrew path
 GEOIP_DB=""
 if [ -f "$BASE/GeoLite2-City_20250401/GeoLite2-City.mmdb" ]; then
-    GEOIP_DB="$BASE/GeoLite2-City_20250401/GeoLite2-City.mmdb"
+	GEOIP_DB="$BASE/GeoLite2-City_20250401/GeoLite2-City.mmdb"
 elif [ -f "/opt/homebrew/var/GeoIP/GeoLite2-City.mmdb" ]; then
-    GEOIP_DB="/opt/homebrew/var/GeoIP/GeoLite2-City.mmdb"
+	GEOIP_DB="/opt/homebrew/var/GeoIP/GeoLite2-City.mmdb"
+fi
+if [[ -n "$GEOIP_DB" ]]; then
+	goaccess_opt+="--geoip-database='$GEOIP_DB' "
 fi
 
 
@@ -87,217 +87,94 @@ function download () {
 
 
 function parse () {
-	if [[ "$flag_skipfilter" ]]; then
-		echo "========================================";
-		echo "SKIP FILTER";
-		return;
+	echo "========================================";
+	echo "PREPARING DATA" $1;
+	[[ -z "$flag_verbose" ]] || { echo "----------------------------------------";}
+
+	if (( $#flag_raw )); then
+		[[ -z "$flag_verbose" ]] || { echo "Concatenating all raw logs"; }
+		zcat -f $BASE/logs/log_raw_202* > $BASE/logs/log_raw;
+	else
+	    local diff_days=$(((stop_seconds - start_seconds) / 86400))
+		local last_date="";
+
+		for ((i = $diff_days; i > 0; i--)); do
+
+		    target_date=$(date -v-$i"d" -j -f %Y%m%d $stop_date +%Y-%m)
+
+		    if [[ $target_date != $last_date ]]; then
+		    
+			[[ -z "$flag_verbose" ]] || { echo "Cleaning $target_date"; }
+\t\t\t[[ -z \"$flag_verbose\" ]] || { echo \"Cleaning $target_date\"; }\n\t\t\tcat  $BASE'/logs/log_raw_'$target_date |\\\n\t\t\t# allow common browser UAs (Chrome/Safari/Firefox/Edge/Opera) — URL/static exclusions live in blacklist-urls.txt\n\t\t\tgrep -iE \"Mozilla/5\\\\.0|AppleWebKit|Chrome|Safari|Firefox|Edge|Opera\" |\\\n\t\t\tgrep -iE \"GET\\t\" |\\\n\t\t\tgrep -iEv \"\\t301\\t\" |\\\n\t\t\tgrep -E -v -i -f $BASE/blacklist-agents.txt |\\\n\t\t\t{ [ -f \"$BASE/blacklist-ips.txt\" ] && grep -E -v -i -f $BASE/blacklist-ips.txt || cat; } |\\\n\t\t\tgrep -Evi -f $BASE/blacklist-urls.txt\\\n\t\t\t> $BASE'/logs/log_clean_'$target_date\n\n\t\t\tlast_date=$target_date;
+			fi
+
+		done
+
+		[[ -z "$flag_verbose" ]] || { echo "Concatenating 2024 clean"; }
+		zcat -f $BASE/logs/log_clean_2024-* > $BASE/logs/log_clean;
+		[[ -z "$flag_verbose" ]] || { echo "Concatenating 2025 clean"; }
+		zcat -f $BASE/logs/log_clean_2025-* >> $BASE/logs/log_clean;
 	fi
 
-    echo "========================================";
-    echo "PREPARING DATA" $1;
-    [[ -z "$flag_verbose" ]] || { echo "----------------------------------------";}
-
-    if (( $#flag_raw )); then
-        [[ -z "$flag_verbose" ]] || { echo "Concatenating all raw logs"; }
-        zcat -f $BASE/logs/log_raw_202* > $BASE/logs/log_raw;
-    else
-        local diff_days=$(((stop_seconds - start_seconds) / 86400))
-        local last_date="";
-
-        [[ -z "$flag_verbose" ]] || { echo "Preparing filters..."; }
-        
-        # Build awk script for fast single-pass filtering
-        local awk_script='
-        BEGIN {
-            FS = "\t";  # CloudFront logs are tab-delimited
-            
-            # Load user-agent patterns (case-insensitive regex)
-            agent_count = 0;
-            while ((getline line < "'$BASE'/blacklists/blacklist-agents.txt") > 0) {
-                if (line !~ /^#/ && line !~ /^[[:space:]]*$/) {
-                    agent_patterns[++agent_count] = tolower(line);
-                }
-            }
-            close("'$BASE'/blacklists/blacklist-agents.txt");
-            
-            # Load IP addresses into hash for O(1) lookup
-            ip_count = 0;
-            while ((getline line < "'$BASE'/blacklists/blacklist-ips.txt") > 0) {
-                if (line !~ /^#/ && line !~ /^[[:space:]]*$/) {
-                    blocked_ips[line] = 1;
-                    ip_count++;
-                }
-            }
-            close("'$BASE'/blacklists/blacklist-ips.txt");
-            
-            # Load URL patterns (case-insensitive regex)
-            url_count = 0;
-            while ((getline line < "'$BASE'/blacklists/blacklist-urls.txt") > 0) {
-                if (line !~ /^#/ && line !~ /^[[:space:]]*$/) {
-                    url_patterns[++url_count] = tolower(line);
-                }
-            }
-            close("'$BASE'/blacklists/blacklist-urls.txt");
-        }
-        {
-            # CloudFront log fields (tab-delimited):
-            # 1=date 2=time 3=x-edge-location 4=sc-bytes 5=c-ip 6=cs-method 
-            # 7=cs(Host) 8=cs-uri-stem 9=sc-status 10=cs(Referer) 11=cs(User-Agent) 
-            # 12=cs-uri-query 13=cs(Cookie) 14=x-edge-result-type 15=x-edge-request-id
-            
-            ip = $5;           # c-ip
-            method = $6;       # cs-method
-            uri = $8;          # cs-uri-stem
-            status = $9;       # sc-status
-            useragent = $11;   # cs(User-Agent) - URL encoded
-            
-            # Filter 1: Must have browser user-agent signatures
-            if (useragent !~ /Mozilla\/5\.0|AppleWebKit|Chrome|Safari|Firefox|Edge|Opera/) next;
-            
-            # Filter 2: Must be GET request
-            if (method !~ /GET/) next;
-            
-            # Filter 3: Exclude 301 redirects
-            if (status ~ /301/) next;
-            
-            # Filter 4: Check if IP is blocked (O(1) hash lookup)
-            if (ip in blocked_ips) next;
-            
-            # Filter 5: Check user-agent patterns (case-insensitive)
-            useragent_lower = tolower(useragent);
-            for (i = 1; i <= agent_count; i++) {
-                if (useragent_lower ~ agent_patterns[i]) next;
-            }
-            
-            # Filter 6: Check URL patterns (case-insensitive)
-            uri_lower = tolower(uri);
-            for (i = 1; i <= url_count; i++) {
-                if (uri_lower ~ url_patterns[i]) next;
-            }
-            
-            # Line passed all filters
-            print $0;
-        }
-        '
-
-        for ((i = $diff_days; i > 0; i--)); do
-            target_date=$(date -v-$i"d" -j -f %Y%m%d $stop_date +%Y-%m)
-
-            if [[ $target_date != $last_date ]]; then
-                [[ -z "$flag_verbose" ]] || { echo "Cleaning $target_date"; }
-                
-                awk "$awk_script" "$BASE/logs/log_raw_$target_date" > "$BASE/logs/log_clean_$target_date"
-                
-                last_date=$target_date;
-            fi
-        done
-
-        [[ -z "$flag_verbose" ]] || { echo "Concatenating 2024 clean"; }
-        zcat -f $BASE/logs/log_clean_2024-* > $BASE/logs/log_clean;
-        [[ -z "$flag_verbose" ]] || { echo "Concatenating 2025 clean"; }
-        zcat -f $BASE/logs/log_clean_2025-* >> $BASE/logs/log_clean;
-    fi
-
-    return true;
+	return true;
 }
+
 
 function analyze () {
 
-    echo "========================================";
-    echo "ANALYZING DATA";
-    [[ -z "$flag_verbose" ]] || { echo "----------------------------------------";}
-    [[ -z "$flag_verbose" ]] || { echo "GoAccess options: $goaccess_opt";}
-    [[ -z "$flag_verbose" ]] || { echo "----------------------------------------";}
+	echo "========================================";
+	echo "ANALYZING DATA";
+	[[ -z "$flag_verbose" ]] || { echo "----------------------------------------";}
+	[[ -z "$flag_verbose" ]] || { echo "GoAccess options: $goaccess_opt";}
+	[[ -z "$flag_verbose" ]] || { echo "----------------------------------------";}
 
     local diff_days=$(((stop_seconds - start_seconds) / 86400))
-    local last_date="";
-    
-    # Build goaccess command with GeoIP if available (for per-month file analysis)
-    local goaccess_file_opts="$goaccess_opt"
-    if [[ -n "$GEOIP_DB" ]]; then
-        goaccess_file_opts+="--geoip-database='$GEOIP_DB' "
-    fi
-    
-    for ((i = $diff_days; i > 0; i--)); do
+	local last_date="";
+	for ((i = $diff_days; i > 0; i--)); do
 
-        target_date=$(date -v-$i"d" -j -f %Y%m%d $stop_date +%Y-%m)
+	    target_date=$(date -v-$i"d" -j -f %Y%m%d $stop_date +%Y-%m)
 
-        if [[ $target_date != $last_date ]]; then
+	    if [[ $target_date != $last_date ]]; then
 
-            if (( $#flag_raw )); then
-                # raw logs
-                [[ -z "$flag_verbose" ]] || { echo "Analyzing $target_date RAW"; }
-                goaccess_cmd="goaccess $BASE/logs/log_raw_$target_date -o $BASE/www/$target_date-raw.html ";
-            else
-                # clean logs
-                [[ -z "$flag_verbose" ]] || { echo "Analyzing $target_date CLEAN"; }
-                goaccess_cmd="goaccess $BASE/logs/log_clean_$target_date -o $BASE/www/$target_date.html ";
-            fi
+			if (( $#flag_raw )); then
+				# raw logs
+				[[ -z "$flag_verbose" ]] || { echo "Analyzing $target_date RAW"; }
+				goaccess_cmd="goaccess $BASE/logs/log_raw_$target_date -o $BASE/www/$target_date-raw.html ";
+			else
+				# clean logs
+				[[ -z "$flag_verbose" ]] || { echo "Analyzing $target_date CLEAN"; }
+				goaccess_cmd="goaccess $BASE/logs/log_clean_$target_date -o $BASE/www/$target_date.html ";
+			fi
 
-            goaccess_cmd+="$goaccess_file_opts";
-            eval ${goaccess_cmd}
+			goaccess_cmd+="$goaccess_opt";
+			eval ${goaccess_cmd}
 
-            last_date=$target_date;
-        fi
+			last_date=$target_date;
+		fi
 
-    done
+	done
 
-    # Build stdin options array (avoids shell quoting issues)
-    local -a stdin_opts
-    stdin_opts=(
-        --date-format='%Y-%m-%d'
-        --time-format='%H:%M:%S'
-        --log-format='%d	%t	%^	%^	%h	%m	%v	%U	%s	%R	%u	%q	%C	%^	%^'
-        --no-query-string
-        --agent-list
-        --ignore-crawlers
-        --unknowns-as-crawlers
-        --tz='America/New_York'
-    )
-    
-    if [[ -n "$GEOIP_DB" ]]; then
-        stdin_opts+=(--geoip-database="$GEOIP_DB")
-    fi
-    
-    if [[ -z "$flag_verbose" ]]; then
-        stdin_opts+=(--no-progress)
-    fi
+	periods_opt=('7d' '14d' '30d' '90d' '365d')
+	for duration in $periods_opt
+	do
+		[[ -z "$flag_verbose" ]] || { echo "Analyzing -$duration";}
+		if (( $#flag_raw )); then
+			sed_cmd="sed -n '/'$(date -v-$duration +%Y-%m-%d)'/,/$(date -v+1d +%Y-%m-%d)/ p' $BASE/logs/log_raw | goaccess -a -o $BASE/../metrics/www/l$duration-raw.html $goaccess_opt";
+		else
+			sed_cmd="sed -n '/$(date -v-$duration +%Y-%m-%d)/,/$(date -v+1d +%Y-%m-%d)/ p' $BASE/logs/log_clean | goaccess -a -o $BASE/../metrics/www/l$duration.html $goaccess_opt";
+		fi
+		eval ${sed_cmd}
+	done
 
-    periods_opt=('7d' '14d' '30d' '90d' '365d')
-    for duration in $periods_opt
-    do
-        [[ -z "$flag_verbose" ]] || { echo "Analyzing -$duration";}
-        
-        # Calculate start date for this period (YYYY-MM-DD format for awk comparison)
-        local period_start=$(date -v-$duration +%Y-%m-%d)
-        local period_end=$(date -v+1d +%Y-%m-%d)
-        
-        if (( $#flag_raw )); then
-            # For raw logs - filter by date with awk, pipe to GoAccess
-            awk -F'\t' -v start="$period_start" -v end="$period_end" \
-                '$1 >= start && $1 < end {print}' \
-                "$BASE/logs/log_raw" | \
-                goaccess -a -o "$BASE/www/l$duration-raw.html" "${stdin_opts[@]}"
-        else
-            # For clean logs - filter by date with awk, pipe to GoAccess
-            awk -F'\t' -v start="$period_start" -v end="$period_end" \
-                '$1 >= start && $1 < end {print}' \
-                "$BASE/logs/log_clean" | \
-                goaccess -a -o "$BASE/www/l$duration.html" "${stdin_opts[@]}"
-        fi
-    done
+	if [[ "$arg_duration[-1]" = "all" ]]; then
+		[[ -z "$flag_verbose" ]] || { echo "Analyzing 2024";}
+		sed_cmd="zcat -f $BASE/logs/log_clean_2024-* | goaccess  -o $BASE'/../metrics/www/2024.html' $goaccess_opt";
+		eval ${sed_cmd}
+	fi
 
-    if [[ "$arg_duration[-1]" = "all" ]]; then
-        [[ -z "$flag_verbose" ]] || { echo "Analyzing 2024";}
-        if (( $#flag_raw )); then
-            zcat -f $BASE/logs/log_raw_2024-* | goaccess -o $BASE'/../metrics/www/2024-raw.html' $goaccess_file_opts
-        else
-            zcat -f $BASE/logs/log_clean_2024-* | goaccess -o $BASE'/../metrics/www/2024.html' $goaccess_file_opts
-        fi
-    fi
-
-    return 1;
+	return 1;
 }
+
 
 function analyze-range () {
 
@@ -394,16 +271,18 @@ function update_blacklists () {
 	echo "----------------------------------------";
 	echo "Processing and merging lists...";
 
-	# Process IPs from FireHOL (strip comments, keep IPs - no escaping for -F matching)
+	# Process IPs from FireHOL (strip comments, keep IPs, escape dots for regex)
 	if [ -f "$BASE/_external/firehol_level1.netset" ]; then
 		grep -v '^#' "$BASE/_external/firehol_level1.netset" | \
-			grep -E '^[0-9]' > "$BASE/_external/firehol_ips.txt" 2>/dev/null
+			grep -E '^[0-9]' | \
+			sed 's/\./\\./g' > "$BASE/_external/firehol_ips.txt" 2>/dev/null
 		echo "  ✓ FireHOL: $(wc -l < $BASE/_external/firehol_ips.txt 2>/dev/null || echo 0) IPs"
 	fi
 
-	# Process CrowdSec IPs (no escaping for -F matching)
+	# Process CrowdSec IPs (escape dots for regex)
 	if [ -f "$BASE/_external/crowdsec_blocklist.txt" ]; then
-		grep -E '^[0-9]' "$BASE/_external/crowdsec_blocklist.txt" > "$BASE/_external/crowdsec_ips.txt" 2>/dev/null
+		grep -E '^[0-9]' "$BASE/_external/crowdsec_blocklist.txt" | \
+			sed 's/\./\\./g' > "$BASE/_external/crowdsec_ips.txt" 2>/dev/null
 		echo "  ✓ CrowdSec: $(wc -l < $BASE/_external/crowdsec_ips.txt 2>/dev/null || echo 0) IPs"
 	fi
 
@@ -426,7 +305,7 @@ function update_blacklists () {
 		fi
 		
 		echo "# Auto-updated IP blocklists ($(date +%Y-%m-%d))" > "$BASE/blacklists/blacklist-ips.txt"
-		echo "# Plain text IPs for fast -F (fixed string) matching" >> "$BASE/blacklists/blacklist-ips.txt"
+		echo "# IPs are escaped for regex matching (dots = \\.)" >> "$BASE/blacklists/blacklist-ips.txt"
 		
 		if [ -f "$BASE/_external/firehol_ips.txt" ]; then
 			cat "$BASE/_external/firehol_ips.txt" >> "$BASE/blacklists/blacklist-ips.txt"
@@ -467,8 +346,7 @@ function update_blacklists () {
 zmodload zsh/zutil
 zparseopts -D -F -K -- \
 {h,-help}=flag_help \
-{s,-skip-download}=flag_skipdownload \
-{F,-skip-filter}=flag_skipfilter \
+{s,-skipdownload}=flag_skipdownload \
 {r,-raw}=flag_raw \
 {v,-verbose}=flag_verbose \
 {b,-update-blacklists}=flag_update_blacklists \
