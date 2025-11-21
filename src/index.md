@@ -9,9 +9,9 @@ cssfile: "css/pages/home.css"
 
 {% section "masthead","full-width-grid" %}
 
-Design, Product Discovery, and Cross-Functional Leadership across B2C and B2B, from early startups to global enterprises.{.blur-in .large-type .center}
+Design, Product Discovery, and Cross-Functional Leadership across B2C and B2B, from early startups to global enterprises.{.blur-in .large-type}
 
-{#boids}
+<canvas id="crane-canvas"></canvas> {#crane}
 
 {% endsection %}
 
@@ -45,4 +45,12 @@ Design, Product Discovery, and Cross-Functional Leadership across B2C and B2B, f
     %}
 
 
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.181.2/build/three.module.js"
+  }
+}
+</script>
 <script type="module" src="/js/home.bundle.js"></script>
+<script type="module" src="/js/crane.bundle.js"></script>

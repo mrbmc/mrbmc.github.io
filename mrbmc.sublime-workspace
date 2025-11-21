@@ -584,6 +584,10 @@
 		"selected_items":
 		[
 			[
+				"term",
+				"Terminus: Toggle Panel"
+			],
+			[
 				"format",
 				"Format: Javascript"
 			],
@@ -697,10 +701,6 @@
 			],
 			[
 				"termin",
-				"Terminus: Toggle Panel"
-			],
-			[
-				"term",
 				"Terminus: Toggle Panel"
 			],
 			[
@@ -941,6 +941,9 @@
 	],
 	"file_history":
 	[
+		"/Users/brianmcconnell/Library/CloudStorage/GoogleDrive-thebmc@gmail.com/My Drive/WORK/BootBox/temp-renaming-code/buttons.c",
+		"/Users/brianmcconnell/Library/CloudStorage/GoogleDrive-thebmc@gmail.com/My Drive/WORK/BootBox/temp-renaming-code/buttons.h",
+		"/Users/brianmcconnell/Library/CloudStorage/GoogleDrive-thebmc@gmail.com/My Drive/Documents/LLM-knowledge/BMCCareer/jd-superhuman-enterprise",
 		"/Users/brianmcconnell/Sites/mrbmc/metrics/metrics.sh",
 		"/Users/brianmcconnell/Sites/mrbmc/src/assets/scss/components/_masthead.scss",
 		"/Users/brianmcconnell/Sites/mrbmc/src/assets/scss/components/_sticky-nav.scss",
@@ -1065,10 +1068,7 @@
 		"/Users/brianmcconnell/Sites/mrbmc/src/_includes/_work-list.md",
 		"/Users/brianmcconnell/Sites/mrbmc/src/colophon.md",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/screen.scss",
-		"/Users/brianmcconnell/Sites/mrbmc/mrbmc.sublime-project",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_data/site.json",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/base/_atoms.scss",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_js/gaia/pixi.js"
+		"/Users/brianmcconnell/Sites/mrbmc/mrbmc.sublime-project"
 	],
 	"find":
 	{

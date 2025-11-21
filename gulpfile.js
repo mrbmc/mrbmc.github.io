@@ -4,19 +4,19 @@ DEPENDENCIES
 const { src, dest, watch, series, parallel } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const rsync = require('gulp-rsync');
-const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
 const ruglify = require("@lopatnov/rollup-plugin-uglify");
 const cleanCSS = require('gulp-clean-css'); // If you want CSS minification
 const sourcemaps = require('gulp-sourcemaps');
 const exec = require('child_process').exec;
-const yargs = require('yargs');
+const yargs = require('yargs/yargs');
+const { hideBin } = require('yargs/helpers');
+const argv = yargs(hideBin(process.argv)).argv;
 const clean = require('gulp-clean');
-const fsCache = require( 'gulp-fs-cache' );
-const argv = yargs.argv;
 const rollup = require('rollup');
 const nodeResolve = require('@rollup/plugin-node-resolve');
 const gulpif = require('gulp-if');
+const { terser } = require('rollup-plugin-terser');
 
 
 /* * * * * * * * * * * * * * * * * * * * 
@@ -29,10 +29,6 @@ const CFDISTRO = "E1TNSK7JF24IAY";
 const paths = {
   jsbundles: [
     {
-    //   input: 'src/assets/js/gaia/pixi.js',
-    //   output: 'www/js/pixi.bundle.js'
-    // },
-    // {
       input: 'src/assets/js/base.js',
       output: 'www/js/base.bundle.js'
     },
@@ -55,7 +51,19 @@ const paths = {
     {
       input: 'src/assets/js/photos.js',
       output: 'www/js/photos.bundle.js'
-    }
+    },
+    {
+      input: 'src/assets/js/crane.js',
+      output: 'www/js/crane.bundle.js',
+      external: ['three'],
+      globals: {
+        'three': 'THREE'
+      }
+    },
+    // {
+    //   input: 'src/assets/js/gaia/pixi.js',
+    //   output: 'www/js/pixi.bundle.js'
+    // },
   ],
   js: [
     'src/assets/js/gaia/*.js'
@@ -115,18 +123,25 @@ FUNCTIONS
 async function bundleJS() {
   const log = argv.verbose ? console.log : () => {};
   const plugins = [
-    nodeResolve(),
-    ruglify({
-    mangle: isProduction,
-    compress: {
-      drop_console: isProduction
-    },
-    output: {
-        beautify: !isProduction,
-        comments: !isProduction
-    }
-    })
+    nodeResolve({
+      browser: true,
+      preferBuiltins: false
+    }),
   ];
+
+  // Only add terser in production
+  if (isProduction) {
+    plugins.push(terser({
+      compress: {
+        drop_console: true,
+        pure_funcs: ['console.log', 'console.info'],
+        passes: 2
+      },
+      mangle: {
+        toplevel: true
+      }
+    }));
+  }
 
   const buildPromises = paths.jsbundles.map(async (config) => {
     const bundle = await rollup.rollup({
@@ -332,6 +347,10 @@ function uncache() {
 /* * * * * * * * * * * * * * * * * * * * 
 INVOCATION
 * * * * * * * * * * * * * * * * * * * */
+exports.watch = function() {
+  watch(['src/assets/js/*.js','src/assets/js/**/*.mjs'], series(bundleJS));
+  // watch(paths.css, transpileCSS);
+}
 
 exports.deploy = series(
   upload,
