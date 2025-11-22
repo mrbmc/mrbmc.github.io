@@ -45,6 +45,7 @@ Design, Product Discovery, and Cross-Functional Leadership across B2C and B2B, f
     %}
 
 
+<script type="module" src="/js/home.bundle.js"></script>
 <script type="importmap">
 {
   "imports": {
@@ -52,5 +53,4 @@ Design, Product Discovery, and Cross-Functional Leadership across B2C and B2B, f
   }
 }
 </script>
-<script type="module" src="/js/home.bundle.js"></script>
 <script type="module" src="/js/crane.bundle.js"></script>

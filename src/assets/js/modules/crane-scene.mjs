@@ -33,15 +33,28 @@ export class CraneScene {
 
     // Configuration
     this.config = {
-      rotationSpeed: 4.0,
-      rotationAmplitude: Math.PI / 4, // 45 degrees
-      mouseSensitivity: 0.005,
+      rotationSpeed: 2.0,
+      rotationAmplitude: Math.PI / 6, // 30 degrees
+      rotationOffset: Math.PI / 12, // 15 degrees base rotation
+      mouseSensitivity: 0.002 ,
       damping: 0.5,
       returnSpeed: 0.025,
       cameraDistance: function() {
         const delta = Math.abs(1.4 - (window.innerWidth / window.innerHeight));
         const factor = 1 + (delta * 1.2);
         return 10 * factor;
+      },
+      // Landscape positioning
+      isLandscape: function() {
+        return window.innerWidth > window.innerHeight && window.innerWidth / window.innerHeight > 1.2;
+      },
+      cameraOffsetX: function() {
+        // Move camera to the left (negative X) so crane appears on right
+        return this.isLandscape() ? 8 : 0;
+      },
+      lookAtOffsetX: function() {
+        // Adjust look-at target to keep crane centered in right half
+        return this.isLandscape() ? 4 : 0;
       }
     };
     
@@ -59,8 +72,10 @@ export class CraneScene {
     // Camera
     const aspect = this.canvas.clientWidth / this.canvas.clientHeight;
     this.camera = new THREE.PerspectiveCamera(45, aspect, 0.2, 1000);
-    this.camera.position.set(0, 0, this.config.cameraDistance());
-    this.camera.lookAt(0, 0, 0);
+    const offsetX = this.config.cameraOffsetX();
+    const lookAtX = this.config.lookAtOffsetX();
+    this.camera.position.set(offsetX, 0, this.config.cameraDistance());
+    this.camera.lookAt(lookAtX, 0, 0);
 
     // Renderer
     this.renderer = new THREE.WebGLRenderer({
@@ -84,6 +99,8 @@ export class CraneScene {
     this.craneMesh = new THREE.Mesh(geometry, material);
     this.craneMesh.castShadow = true;
     this.craneMesh.receiveShadow = true;
+    // Flip horizontally by inverting X scale
+    this.craneMesh.scale.x = -1;
     this.scene.add(this.craneMesh);
 
     // Setup post-processing with subtle bloom
@@ -123,6 +140,11 @@ export class CraneScene {
     this.camera.aspect = width / height;
     this.camera.updateProjectionMatrix();
     this.camera.position.z = this.config.cameraDistance();
+    // Update camera offset for landscape
+    const offsetX = this.config.cameraOffsetX();
+    const lookAtX = this.config.lookAtOffsetX();
+    this.camera.position.x = offsetX;
+    this.camera.lookAt(lookAtX, 0, 0);
     this.renderer.setSize(width, height);
     this.composer.setSize(width, height);
   }
@@ -168,7 +190,7 @@ export class CraneScene {
     if (this.craneMesh) {
       // Calculate target auto-animation rotation
       const elapsed = (Date.now() - this.startTime) * 0.001;
-      const targetRotationY = Math.sin(elapsed * this.config.rotationSpeed * 0.1) * this.config.rotationAmplitude;
+      const targetRotationY = Math.sin(elapsed * this.config.rotationSpeed * 0.1) * this.config.rotationAmplitude + this.config.rotationOffset;
       const targetRotationX = (Math.PI / -30);
       
       if (!this.mouse.hasInteracted) {
@@ -184,11 +206,15 @@ export class CraneScene {
           this.mouse.rotationX = targetRotationX;
         }
         
-        // Move camera in arc to stay perpendicular to crane
-        const cameraAngle = this.mouse.rotationY;
-        this.camera.position.x = Math.sin((cameraAngle/1.5)) * this.config.cameraDistance();
-        this.camera.position.z = Math.cos(cameraAngle/1.5) * this.config.cameraDistance();
-        this.camera.lookAt(0, 0, 0);
+        // // Move camera in arc to stay perpendicular to crane
+        // const cameraAngle = this.mouse.rotationY;
+        // const offsetX = this.config.cameraOffsetX();
+        // const lookAtX = this.config.lookAtOffsetX();
+        // const arcRadius = this.config.cameraDistance();
+        // // Apply offset as a base position, not added to the arc
+        // this.camera.position.x = Math.sin((cameraAngle/1.5)) * arcRadius * 0.3 + offsetX;
+        // this.camera.position.z = Math.cos(cameraAngle/1.5) * arcRadius;
+        // this.camera.lookAt(lookAtX, 0, 0);
       } else if (!this.mouse.isDragging) {
         // Apply damping when released but keep user's rotation
         this.mouse.velocityY *= this.config.damping;

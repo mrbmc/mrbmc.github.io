@@ -10,7 +10,7 @@
 
 
 body.home {
-  &>header {
+  #header {
     position: absolute;
     a {
       color: var(--accent-foreground);
@@ -20,7 +20,6 @@ body.home {
   #masthead {
     background: var(--body-background);
     margin-bottom: var(--gutter-xl);
-    justify-content: flex-end;
 
     h1,h2,h3,p {
       color: var(--accent-foreground);
@@ -38,66 +37,23 @@ body.home {
         height: 100%;
       }
     }
-    /*
-    #boids {
-      padding: 0 var(--gutter-xl);
-      box-sizing: border-box;
-      z-index: 0;
-      canvas {
-        width: 100%;
-        height: 100%;
-      }
-      @media (max-width: lib.$breakpoint) {
-        height: 62vw;
-      }
-    }*/
+
     height: 100vh;
     @media (min-width: lib.$breakpoint) {
+      align-items: flex-end;
+      justify-content: center;
       p.large-type {
         font-size: calc(1rem * pow(var(--type-scale), 2));
         width: 38%;
-        // margin: 0 auto;
       }
-      // #boids {
-      //   position: absolute;
-      //   left: 0;
-      //   width: 100%;
-      //   height: 100%;
-      //   padding: 0;
-      //   opacity: 0.38;
-      // }
     }
     @media (max-width: lib.$breakpoint) {
       flex-direction: column-reverse;
+      p.large-type {
+        margin-top: var(--gutter-xl);
+      }
     }
   }
-
-/*
-  #gradient-canvas, #masthead canvas {
-    // display: none;
-    position: absolute;
-    z-index: -1;
-    $scaler: 1;
-    width: 100% * $scaler;
-    height: 100% * $scaler;
-    left: 50% * ($scaler - 1) * -1;
-    top: 50% * ($scaler - 1) * -1;
-    opacity: .15;
-
-    //full color
-    --gradient-color-1: var(--primary);
-    --gradient-color-2: var(--secondary);
-    --gradient-color-3: var(--tertiary);
-    --gradient-color-4: var(--primary);
-
-    // grayscale
-    // --gradient-color-1: #{lib.$neutral-10};
-    // --gradient-color-2: #{lib.$neutral-30};
-    // --gradient-color-3: #{lib.$neutral-50};
-    // --gradient-color-4: #{lib.$neutral-10};
-
-  }
-*/
 
   .project-list {
     row-gap: 0;
@@ -105,18 +61,6 @@ body.home {
       header {
         display: none;
       }
-      // figure, .figure {
-      //   img {
-      //     aspect-ratio: 1;
-      //   }
-      // }
     }
   }
-/*
-  #post-list {
-    background: var(--body-background);
-    position: relative;
-    z-index: 10;
-  }
-*/
 }

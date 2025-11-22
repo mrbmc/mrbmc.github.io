@@ -89,6 +89,16 @@
 
     }
 
+    @media (min-width: lib.$breakpoint) {
+      width: 38%;
+      justify-content: space-between;
+      margin-right: var(--gutter);
+      a {
+        margin-left: 0;
+      }
+      
+    }
+
   }
 
 }

@@ -26,7 +26,7 @@ Getting links from: http://localhost:8000/
 ├───OK─── http://localhost:8000/blog/design-quality/
 ├───OK─── http://localhost:8000/colophon/
 ├───OK─── http://localhost:8000/privacy/
-Finished! 50 links found. 23 excluded. 0 broken.
+Finished! 51 links found. 24 excluded. 0 broken.
 
 Getting links from: http://localhost:8000/about/
 ├───OK─── http://localhost:8000/images/optimized/mrbmc-20241121-640.webp
@@ -801,5 +801,5 @@ Finished! 23 links found. 23 excluded. 0 broken.
 Getting links from: http://localhost:8000/tags/ai-art
 Finished! 23 links found. 23 excluded. 0 broken.
 
-Finished! 3167 links found. 2673 excluded. 0 broken.
+Finished! 3168 links found. 2674 excluded. 0 broken.
 Elapsed time: 1 second

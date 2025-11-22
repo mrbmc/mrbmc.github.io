@@ -58,7 +58,8 @@ const paths = {
       external: ['three'],
       globals: {
         'three': 'THREE'
-      }
+      },
+      format: 'es'  // Keep ES module format for importmap
     },
     // {
     //   input: 'src/assets/js/gaia/pixi.js',
@@ -125,7 +126,8 @@ async function bundleJS() {
   const plugins = [
     nodeResolve({
       browser: true,
-      preferBuiltins: false
+      preferBuiltins: false,
+      modulesOnly: true  // Enable tree-shaking for ES modules
     }),
   ];
 
@@ -146,12 +148,20 @@ async function bundleJS() {
   const buildPromises = paths.jsbundles.map(async (config) => {
     const bundle = await rollup.rollup({
       input: config.input,
-      plugins: plugins
+      plugins: plugins,
+      external: config.external || [],  // Use external deps if specified
+      treeshake: {
+        moduleSideEffects: false,  // Aggressive tree-shaking
+        propertyReadSideEffects: false,
+        tryCatchDeoptimization: false
+      }
     });
     
     const result = await bundle.write({
       file: config.output,
-      format: 'es'
+      format: config.format || 'es',
+      globals: config.globals || {},
+      name: config.name  // For IIFE format
     });
     
     log(`Built ${config.output}`);
