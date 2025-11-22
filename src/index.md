@@ -9,13 +9,17 @@ cssfile: "css/pages/home.css"
 
 {% section "masthead","full-width-grid" %}
 
-Design, Product Discovery, and Cross-Functional Leadership across B2C and B2B, from early startups to global enterprises.{.blur-in .large-type}
+# Brian McConnell 
+
+Design leader who builds with technology and empathy. I embed human-centered practices into engineering-driven organizations and lead transformations at any scale.{.blur-in .large-type}
 
 <canvas id="crane-canvas"></canvas> {#crane}
 
 {% endsection %}
 
 {% comment %}
+Technical design leader who ships. I combine human-centered rigor and engineering fluency to build impactful products. Experienced leading transformations across startups and enterprises.
+
 <canvas id="gradient-canvas"></canvas>
 <script type="module" language="javascript">
     import { Gradient } from "/js/gradient.js";
