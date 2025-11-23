@@ -2,65 +2,35 @@
 
 ## Design Principles
 
-These mantras - which colleagues have heard me repeat - help guide consistent high-quality product decisions.
+These three principles guide how I navigate design tradeoffs—the tension between what we need and what we want.
 
-<div class="grid full-width-grid">
+### 1. Durability
 
-![User Interviews](/images/portfolio/disney-groupwatch/wewatch-interview-participants-3x3.jpg){.addLightbox} {.col-start-2 .col-end-5}
+Build interfaces that won't need constant redesign. Use familiar patterns users already understand. Choose solutions that scale and evolve rather than chasing trends.
 
-<div class="col-start-7 col-end-11">
+**Navigating tradeoffs:**
 
-#### Ask, don't assume.
+When stakeholders want flashy interactions, durability asks: will this matter in two years? When you're tempted to reinvent common patterns, it reminds you that familiarity reduces cognitive load. It distinguishes between solving real problems and creating maintenance debt.
 
-Bring a beginner's mindset to your work so you can stay open to evidence that elucidates the problem and expands your view of potential solutions. So much of what we think we know is inference, and asking dumb questions distinguishes real constraints from preconceived limitations.
+### 2. Versatility
 
-</div>
+Design for multiple contexts without building separate solutions for each. Anticipate different devices, user needs, and edge cases with flexible components that adapt gracefully.
 
-</div>
-<div class="grid full-width-grid">
+**Navigating tradeoffs:**
 
-<div class="col-start-2 col-end-6">
+When designing for your primary user, versatility asks: what about everyone else? It prevents over-optimization for one scenario at the expense of others. It tells you when one adaptable solution beats multiple specialized ones.
 
-#### "If you want to go fast, go alone.<br />If you want to go far, go together."
+### 3. Efficiency
 
-Success is an infinite sum game that can be grown through collaboration. A great outcome depends on collaboration from experts with <em>diverse skills</em> and not a lone genius creator.
+Remove unnecessary steps. Reduce cognitive load. Get users to their goals with minimal friction.
 
-</div>
-  
-![Workshop](/images/portfolio/disney-growth/workshop-pictogram.jpg){.addLightbox} {.col-start-8 .col-end-11}
+**Navigating tradeoffs:**
 
-</div>
-<div class="grid full-width-grid">
+When someone wants to add "just one more field," efficiency asks: is this truly necessary? It questions whether features add value or clutter. It forces hard conversations about whether something justifies its cognitive cost—designing for user goals, not our desire to showcase capability.
 
-![Sea Lion](/images/blog/sealion-balance.jpg){.addLightbox} {.col-start-2 .col-end-5}
+&bull;&bull;&bull; {.center}
 
-<div class="col-start-7 col-end-11">
+These principles work together. Durability without versatility creates rigid systems. Versatility without efficiency creates bloat. Efficiency without durability doesn't scale.
 
-#### "Momentum is the best plan."
-
-It's so much easier to pivot or accelerate if you're already in motion. A sealion balances a ball on its nose by <em>intentionally</em> moving the ball where it wants to go. 
-
-<a href="/blog/a-little-feedback-often/">Design momentum blog post</a>
-
-</div>
-  
-</div>
-<div class="grid full-width-grid">
-
-<div class="col-start-2 col-end-6">
-
-#### "Walk all the way around the tree to find the best fruit."
-
-The solution in design often seems obvious but is usually the product of a rigorous process. In the rare event that you find a viable solution quickly, you still have the burden of proof to be sure.
-
-</div>
-  
-![Wireframes](/images/about/about-wireframes-xl.jpg){.addLightbox} {.col-start-8 .col-end-11}
-
-</div>
-
-</div>
-
-<!--+ <details class="card"><summary>"Directing is 90% Casting."</summary>This adage comes from film & theater producers. Hiring and developing talent is a leader’s #1 priority. Period. Who we hire is the biggest factor on team culture and quality outcomes. Through my years of hiring, including some hard lessons, I’ve developed a robust hiring framework. Effective hiring builds on objective career guides, DEI policy, and strategic goals.</details>-->
 
 {% endsection %}
