@@ -2,9 +2,16 @@
 
 ## Design Leadership Philopsophy
 
-> A design leader is both a functional expert, *and* a human leader, who can give the business a competitive advantage by design.
+My leadership style flows from a principled approach:
 
-A good leader has a clarity of purpose and can rally others toward that cause. I believe it is a privilege to lead because it means other people are investing their time & expertise in your purpose.
+* Define a clear strategy.
+* Recruit smart, ambitious, people to the strategy.
+* Build operational support for those people to achieve their dreams.
+
+These three points contain multitudes but they define the outline of how I rally teams toward ambitious goals. I lean on my personal strenghts of strategic insight, personalized coaching, and systems thinking. It's a coach-mentor style of leadership more than a charismatic figurehead.
+
+> If you want to build a ship, don't drum up the men to gather wood, divide the work, and give orders. Instead, teach them to yearn for the vast and endless sea.
+> -- Antoine de Sait-Exupery
 
 ### Leadership Values 
 
