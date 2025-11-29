@@ -8,10 +8,10 @@ const ddb = DynamoDBDocumentClient.from(ddbClient);
 const ses = new SESClient({});
 
 // CONFIGURATION - Update these values
-const YOUR_EMAIL = 'brian@kageki.com'; // Email to receive login notifications
-const FROM_EMAIL = 'b@brianmcconnell.me'; // Must be verified in SES
+const YOUR_EMAIL = 'brian@kageki.com';
+const FROM_EMAIL = 'b@brianmcconnell.me';
 const SESSION_EXPIRY_HOURS = 24;
-const COOKIE_DOMAIN = 'brianmcconnell.me'; // e.g., '.example.com' to work on all subdomains
+const COOKIE_DOMAIN = 'brianmcconnell.me';
 
 // determine allowed origin
 const getAllowedOrigin = (event) => {
@@ -24,57 +24,34 @@ const getAllowedOrigin = (event) => {
 };
 
 exports.handler = async (event) => {
-  const headers = {
-    'Access-Control-Allow-Origin': getAllowedOrigin(),
-    'Access-Control-Allow-Headers': 'Content-Type',
-    'Access-Control-Allow-Methods': 'POST, OPTIONS',
-    'Access-Control-Allow-Credentials': 'true',
-    'Content-Type': 'application/json'
-  };
-
-  // Handle CORS preflight
-  if (event.httpMethod === 'OPTIONS') {
-    return { statusCode: 200, headers, body: '' };
-  }
-
   try {
-    let body;
-    if (event.body) {
-      body = typeof event.body === 'string' ? JSON.parse(event.body) : event.body;
-    } else {
-      body = event; // Direct invocation
-    }
-    const email = body.email?.toLowerCase().trim();
-    const otp = body.otp?.trim();
+    // Get token and email from query parameters
+    const token = event.queryStringParameters?.token;
+    const email = event.queryStringParameters?.email?.toLowerCase().trim();
 
-    if (!email || !otp) {
+    if (!token || !email) {
       return {
-        statusCode: 400,
-        headers,
-        body: JSON.stringify({ error: 'Email and OTP required' })
+        statusCode: 302,
+        headers: {
+          'Location': '/login.html?error=invalid_link'
+        },
+        body: ''
       };
     }
 
-    // Get OTP from DynamoDB
+    // Get OTP record from DynamoDB
     const otpResult = await ddb.send(new GetCommand({
       TableName: 'portfolio-otp-codes',
       Key: { email }
     }));
 
-    if (!otpResult.Item) {
+    if (!otpResult.Item || otpResult.Item.magicToken !== token) {
       return {
-        statusCode: 401,
-        headers,
-        body: JSON.stringify({ error: 'Invalid or expired OTP' })
-      };
-    }
-
-    // Verify OTP
-    if (otpResult.Item.otp !== otp) {
-      return {
-        statusCode: 401,
-        headers,
-        body: JSON.stringify({ error: 'Invalid OTP' })
+        statusCode: 302,
+        headers: {
+          'Location': '/login.html?error=invalid_token'
+        },
+        body: ''
       };
     }
 
@@ -86,9 +63,11 @@ exports.handler = async (event) => {
         Key: { email }
       }));
       return {
-        statusCode: 401,
-        headers,
-        body: JSON.stringify({ error: 'OTP has expired' })
+        statusCode: 302,
+        headers: {
+          'Location': '/login.html?error=expired'
+        },
+        body: ''
       };
     }
 
@@ -116,31 +95,33 @@ exports.handler = async (event) => {
         email,
         timestamp: Date.now(),
         ip: event.requestContext?.identity?.sourceIp || 'unknown',
-        userAgent: event.headers?.['User-Agent'] || 'unknown'
+        userAgent: event.headers?.['User-Agent'] || 'unknown',
+        method: 'magic_link'
       }
     }));
 
-    // Delete used OTP
+    // Delete used OTP/magic token
     await ddb.send(new DeleteCommand({
       TableName: 'portfolio-otp-codes',
       Key: { email }
     }));
 
-    // Send notification email to you
+    // Send notification email
     try {
       await ses.send(new SendEmailCommand({
         Source: FROM_EMAIL,
         Destination: { ToAddresses: [YOUR_EMAIL] },
         Message: {
-          Subject: { Data: '🔔 New Portfolio Login' },
+          Subject: { Data: '🔔 New Portfolio Login (Magic Link)' },
           Body: {
             Text: { 
-              Data: `New login to your portfolio:\n\nEmail: ${email}\nTime: ${new Date().toLocaleString()}\nIP: ${event.requestContext?.identity?.sourceIp || 'unknown'}`
+              Data: `New login to your portfolio:\n\nEmail: ${email}\nMethod: Magic Link\nTime: ${new Date().toLocaleString()}\nIP: ${event.requestContext?.identity?.sourceIp || 'unknown'}`
             },
             Html: { 
               Data: `
                 <h2>🔔 New Portfolio Login</h2>
                 <p><strong>Email:</strong> ${email}</p>
+                <p><strong>Method:</strong> Magic Link</p>
                 <p><strong>Time:</strong> ${new Date().toLocaleString()}</p>
                 <p><strong>IP:</strong> ${event.requestContext?.identity?.sourceIp || 'unknown'}</p>
               `
@@ -150,34 +131,32 @@ exports.handler = async (event) => {
       }));
     } catch (emailError) {
       console.error('Failed to send notification email:', emailError);
-      // Don't fail the request if notification fails
     }
 
     // Create secure cookie
     const expiryDate = new Date(expiresAt * 1000).toUTCString();
     const cookieValue = `portfolio_session=${sessionId}; Domain=${COOKIE_DOMAIN}; Path=/; Expires=${expiryDate}; HttpOnly; Secure; SameSite=Lax`;
 
-    console.log(`Session created for ${email}`);
+    console.log(`Magic link session created for ${email}`);
 
+    // Redirect to portfolio with cookie set
     return {
-      statusCode: 200,
+      statusCode: 302,
       headers: {
-        ...headers,
+        'Location': '/portfolio/',
         'Set-Cookie': cookieValue
       },
-      body: JSON.stringify({ 
-        message: 'Authentication successful',
-        sessionId, // Also return in body for client-side storage if needed
-        expiresAt
-      })
+      body: ''
     };
 
   } catch (error) {
     console.error('Error:', error);
     return {
-      statusCode: 500,
-      headers,
-      body: JSON.stringify({ error: 'Authentication failed' })
+      statusCode: 302,
+      headers: {
+        'Location': '/login.html?error=server_error'
+      },
+      body: ''
     };
   }
 };

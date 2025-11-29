@@ -368,7 +368,7 @@ exports.watch = function() {
   // watch(paths.css, transpileCSS);
 }
 
-exports.deploy = series(
+exports.deploy = parallel(
   upload,
   uncache
 );

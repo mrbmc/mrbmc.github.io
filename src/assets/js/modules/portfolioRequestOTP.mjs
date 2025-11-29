@@ -12,9 +12,19 @@ const YOUR_EMAIL = 'brian@kageki.com'; // Email to receive notifications
 const FROM_EMAIL = 'b@brianmcconnell.me'; // Must be verified in SES
 const OTP_EXPIRY_MINUTES = 10;
 
+// determine allowed origin
+const getAllowedOrigin = (event) => {
+  const origin = event.headers?.origin || event.headers?.Origin;
+  const allowedOrigins = [
+    'https://www.brianmcconnell.me',
+    'https://dev.brianmcconnell.me'
+  ];
+  return allowedOrigins.includes(origin) ? origin : allowedOrigins[0];
+};
+
 exports.handler = async (event) => {
   const headers = {
-    'Access-Control-Allow-Origin': 'https://www.brianmcconnell.me',
+    'Access-Control-Allow-Origin': getAllowedOrigin(),
     'Access-Control-Allow-Headers': 'Content-Type',
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
     'Content-Type': 'application/json'
@@ -61,7 +71,8 @@ exports.handler = async (event) => {
     }));
 
     // Create magic link
-    const magicLink = `https://www.brianmcconnell.me/login/?token=${magicToken}&email=${encodeURIComponent(email)}`;
+    const baseUrl = getAllowedOrigin(event);
+    const magicLink = `${baseUrl}/login/?token=${magicToken}&email=${encodeURIComponent(email)}`;
 
     // Send OTP to user
     await ses.send(new SendEmailCommand({
@@ -75,7 +86,7 @@ exports.handler = async (event) => {
             <p>Your one-time access code for Brian's portfolio is:</p>
             <h1 style="font-size: 32px; letter-spacing: 8px; color: #333;">${otp}</h1>
             <p style="margin: 20px 0;">Or click the button below to verify automatically:</p>
-            <a href="${magicLink}" style="display: inline-block; padding: 12px 24px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 8px; font-weight: 600;">Verify Access</a>
+            <a href="${magicLink}" style="display: inline-block; padding: 12px 24px; background: #1F23AD; color: #FFFFFF; text-decoration: none; border-radius: 8px; font-weight: 600;">Verify Access</a>
             <p style="margin-top: 20px; color: #666; font-size: 12px;">This code expires in ${OTP_EXPIRY_MINUTES} minutes.</p>
             <p style="color: #666; font-size: 12px;">If you didn't request this, please ignore this email.</p>
           `}

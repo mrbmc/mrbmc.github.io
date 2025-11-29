@@ -19,12 +19,3 @@ input {
 .form-group,fieldset {
 	margin: 0 0 1rem 0;
 }
-#emailStep, #otpStep {
-	input,button {
-		box-sizing: border-box;
-		width: 100%;
-	}
-}
-#otpStep {
-	display: none;
-}
