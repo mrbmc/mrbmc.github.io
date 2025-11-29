@@ -25,10 +25,10 @@ const getAllowedOrigin = (event) => {
 
 exports.handler = async (event) => {
   const headers = {
-    'Access-Control-Allow-Origin': getAllowedOrigin(),
+    'Access-Control-Allow-Origin': getAllowedOrigin(event),
     'Access-Control-Allow-Headers': 'Content-Type',
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
-    'Access-Control-Allow-Credentials': 'true',
+    // 'Access-Control-Allow-Credentials': 'true',
     'Content-Type': 'application/json'
   };
 

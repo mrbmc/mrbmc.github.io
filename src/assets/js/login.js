@@ -28,7 +28,7 @@ async function checkMagicLink() {
     try {
       const response = await fetch(`${API_ENDPOINT}/verify-magic?token=${encodeURIComponent(token)}&email=${encodeURIComponent(email)}`, {
         method: 'GET',
-        credentials: 'include'
+        // credentials: 'include'
       });
 
       const data = await response.json();
@@ -111,7 +111,7 @@ otpForm.addEventListener('submit', async (e) => {
     const response = await fetch(`${API_ENDPOINT}/verify-otp`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      credentials: 'include',
+      // credentials: 'include',
       body: JSON.stringify({ 
         email: userEmail, 
         otp: otpInput.value 

@@ -11,8 +11,19 @@ exports.handler = async (event) => {
   const request = event.Records[0].cf.request;
   const headers = request.headers;
 
-  // Allow access to login page and auth API
-  if (request.uri === LOGIN_PAGE || request.uri.startsWith('/api/')) {
+  // Allow access to login page, API, and /portfolio/ root
+  if (request.uri === LOGIN_PAGE || 
+      request.uri.startsWith('/api/') ||
+      request.uri === '/portfolio/' ||
+      request.uri === '/portfolio') {
+    return request;
+  }
+
+  // Only protect subpages under /portfolio/
+  const isProtectedPath = request.uri.startsWith('/portfolio/') && request.uri !== '/portfolio/';
+
+  if (!isProtectedPath) {
+    // Not a protected path, allow through
     return request;
   }
 

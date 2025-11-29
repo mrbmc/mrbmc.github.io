@@ -13,17 +13,30 @@ const FROM_EMAIL = 'b@brianmcconnell.me';
 const SESSION_EXPIRY_HOURS = 24;
 const COOKIE_DOMAIN = 'brianmcconnell.me';
 
-// determine allowed origin
+// Helper to get allowed origin
 const getAllowedOrigin = (event) => {
   const origin = event.headers?.origin || event.headers?.Origin;
   const allowedOrigins = [
     'https://www.brianmcconnell.me',
-    'https://dev.brianmcconnell.me'
+    'http://dev.brianmcconnell.me'
   ];
   return allowedOrigins.includes(origin) ? origin : allowedOrigins[0];
 };
 
 exports.handler = async (event) => {
+  const headers = {
+    'Access-Control-Allow-Origin': getAllowedOrigin(event),
+    'Access-Control-Allow-Headers': 'Content-Type',
+    'Access-Control-Allow-Methods': 'GET, OPTIONS',
+    'Access-Control-Allow-Credentials': 'true',
+    'Content-Type': 'application/json'
+  };
+
+  // Handle CORS preflight
+  if (event.httpMethod === 'OPTIONS') {
+    return { statusCode: 200, headers, body: '' };
+  }
+
   try {
     // Get token and email from query parameters
     const token = event.queryStringParameters?.token;
@@ -31,11 +44,9 @@ exports.handler = async (event) => {
 
     if (!token || !email) {
       return {
-        statusCode: 302,
-        headers: {
-          'Location': '/login.html?error=invalid_link'
-        },
-        body: ''
+        statusCode: 400,
+        headers,
+        body: JSON.stringify({ error: 'Invalid link parameters' })
       };
     }
 
@@ -47,11 +58,9 @@ exports.handler = async (event) => {
 
     if (!otpResult.Item || otpResult.Item.magicToken !== token) {
       return {
-        statusCode: 302,
-        headers: {
-          'Location': '/login.html?error=invalid_token'
-        },
-        body: ''
+        statusCode: 401,
+        headers,
+        body: JSON.stringify({ error: 'Invalid or expired token' })
       };
     }
 
@@ -63,11 +72,9 @@ exports.handler = async (event) => {
         Key: { email }
       }));
       return {
-        statusCode: 302,
-        headers: {
-          'Location': '/login.html?error=expired'
-        },
-        body: ''
+        statusCode: 401,
+        headers,
+        body: JSON.stringify({ error: 'Token has expired' })
       };
     }
 
@@ -139,24 +146,23 @@ exports.handler = async (event) => {
 
     console.log(`Magic link session created for ${email}`);
 
-    // Redirect to portfolio with cookie set
+    // Return JSON response with session info
     return {
-      statusCode: 302,
-      headers: {
-        'Location': '/portfolio/',
-        'Set-Cookie': cookieValue
-      },
-      body: ''
+      statusCode: 200,
+      headers,
+      body: JSON.stringify({ 
+        message: 'Authentication successful',
+        sessionId,
+        expiresAt
+      })
     };
 
   } catch (error) {
     console.error('Error:', error);
     return {
-      statusCode: 302,
-      headers: {
-        'Location': '/login.html?error=server_error'
-      },
-      body: ''
+      statusCode: 500,
+      headers,
+      body: JSON.stringify({ error: 'Verification failed' })
     };
   }
 };
