@@ -9,17 +9,13 @@ eleventyExcludeFromCollections: false
 description: Studying history helps us predict what's to come.
 ---
 
-“I’m sure people said they love riding their horse.”
-
-![The First Car](/images/blog/firstbenz-jpggettyimages-905504772.jpg)
-
 Some years ago--never mind how long precisely-- I was having lunch with my team and the topic of autonomous driving came up. A pair of early-20s designers shared deep skepticism about the appeal of self-driving cars.
 
 Designer A opined, “Yeah, maybe it’ll happen, but I love my car. I want to drive.”
 
 Designer B added, “Yup. I do love driving.”
 
-Me, “I’m sure people said they love riding their horse.”
+**Me, “I’m sure people said they love riding their horse.”**
 
 The look of sheer terror on their faces was priceless. Not terror from the vision of the future, but terror from the confrontation of their self-image. These young designers considered themselves progressive modernists. Suddenly they found themselves defending horse-drawn buggies.
 
@@ -46,3 +42,6 @@ by Stewart Lee Allen
 
 [Longitude: The True Story of a Lone Genius Who Solved the Greatest Scientific Problem of His Time](https://www.google.com/books/edition/Longitude/lW8DYSPa6fEC)  
 by Dava Sobel
+
+![The First Car](/images/blog/firstbenz-jpggettyimages-905504772.jpg)
+

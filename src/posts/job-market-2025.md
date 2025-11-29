@@ -1,7 +1,7 @@
 ---
-title: Unlocking The Product Design Job Market In 2025
+title: "Unlocking Design Jobs: Cut Your Key First"
 date: 2025-05-09
-description: Every key has a lock and vice versa.
+description: Your design skills form a unique key that unlocks specific opportunities, not every door. Learn how to cut your key sharp and find the companies where your expertise fits perfectly.
 eleventyExcludeFromCollections: false
 tags:
   - design
@@ -9,38 +9,29 @@ tags:
   - capitalism
 ---
 
-The software-powered intercom system in my condo building broke down. Through a series of [yak-shaving](https://www.youtube.com/watch?v=5W4NFcamRhM) events, this led me to learn more about keys than I thought existed, which in turn gave me some new perspective on the current job market.
+Product designers and hiring managers are struggling to find one another in the current market. Companies are searching for designers with extremely specific combinations of skills, domain expertise, and working styles. Meanwhile designers are searching for companies with an equally specific mix of mission, culture, and growth opportunities. Think of this puzzle like a lock and key: you're the key, the company is the lock.
 
-Yes, keys. The little brass doohickeys you use to unlock locked stuff.
+I learned a lot about keys recently when a broken software intercom in my condo building led me down a [rabbit hole](https://www.youtube.com/watch?v=5W4NFcamRhM) learning about locks and keys. A high-security key cylinder has a unique zig-zag shape that only allows specific keys to fit into it. That shape is called **warding**. The protrusions into the keyhole "ward off" keys that don't have the right grooves along their blade. Only keys from the same lock make and model can fit into that cylinder. 
 
-Take a look at the keyhole on a lock. A "high-security" key cylinder will have a funny little zig-zag shape that only allows specific keys to fit into. That's called **warding**. The "wards" are the protrusions into the keyhole that fit into grooves along the sides of the key, and "ward off" keys that should not fit into the cylinder.
 
-![Warding](/images/blog/key-cylinder-wards.png)
+* ![Warding](/images/blog/key-cylinder-wards.png){style="height:100%;object-fit:cover;"} {.col-4}
+* ![Key anatomy](/images/blog/key-warding-notches.png){style="height:100%;object-fit:cover;"} {.col-4}
+* ![Bitting Cuts](/images/blog/key-biting-wards.png){style="height:100%;object-fit:cover;"} {.col-4}
 
-Keys have different grooves along their "blade" that match the shape of the keyhole so only that brand & model of key can fit into the lock. All keys from the same lock make & model have the same warding.
+{.grid .well .full-width-grid}
 
-![Key anatomy](/images/blog/key-warding-notches.png)
-
-You've probably noticed the jagged teeth running along the top edge (and sometimes side) of the key. These teeth are formed by "bitting cuts" (two Ts, not 'biting') in the key blade. The shape of that ridgeline fits the "bits" inside the lock that block the latching mechanism. Each individual lock requires a unique shape of bitting cuts.
-
-![Bitting Cuts](/images/blog/key-biting-wards.png)
-
-If you take a closer look at the edge, you'll see that the shape is not random. It's a steady pattern of peaks and valleys that align to bits, or pins, inside the locking mechanism. The bits form a gate that prevents the key from turning the latch. If the shape of the key cuts don't match the shape gate, the key won't turn, and the latch stays locked. Most locks have 4 - 8 bits with set lengths ranging from 0 - 7 increments. The sequence of bits and lengths forms a code, eg. 167530, that helps locksmiths cut a key that will match the lock bits.
+The jagged teeth running along the top edge (and sometimes side) of the key may look random. They are actually a steady pattern of "bitting" cuts made in the key blade. The shape of that ridge-line fits the "bits" inside the latch mechanism. The bits form a gate that prevents the key from turning the latch. When the key cuts don't match the gate shape, the latch stays locked. Most locks have between 4 and 8 bits with fixed lengths ranging from 0 to 7 in depth. Locksmiths use a code, e.g. 167530, that describes the order and depth of cuts to match a lock.
 
 <video src="/images/blog/key-bits.mp4" autoplay autoplay="autoplay" loop mute muted controls playsinline></video>
 [Source: Stian Berg Larsen](https://www.youtube.com/watch?v=QiYIYXEX9Ko){.caption}
 
-Keys are simple but complicated. An arbitrary shape of metal that fits through and around an inversely shaped chunk of metal. That shape is what makes the key unique, just like designers.
-
 ----
 
-You can probably already predict where this is going and how it relates to product design. 
+Keys function through precise geometry: an arbitrary shape that matches an inverse shape exactly. That shape makes each key unique. Designers work the same way. As a designer, you have a specific profile formed by your skills and capabilities. Visual design, user research, strategy, and systems thinking are a few example skills. You also have knowledge accrued from the kinds of work you've done. If you've worked in fintech startups or designed e-commerce storefronts, that domain experience is also part of your "design key". 
 
-As a designer you also have a specific shape of skills and capabilities. Visual design, user research, strategy, etc. are just a few of these skills. You also have knowledge accrued from the kinds of work you've done. Maybe you've worked in fintech startups, or you've designed a lot of e-commerce storefronts. That domain experience is also part of your "design key" and possibly more important than hard skills.
+Many design teams have a Career Framework as part of their design operations practice. These frameworks drive hiring decisions, performance management, and organization design. A typical framework defines the skills that the team values in supporting the organizational mission. Department leaders evaluate candidates and team members on these skills to understand how they can grow, or fit into an existing team.
 
-Many design teams have some version of a Career Framework as part of their design operations practice. It's a foundational element in hiring, performance management, and org design. A typical framework defines the skills that the team values in supporting the organizational mission. Department leaders evaluate candidates and team members on these skills to understand how they can grow, or fit into an existing team.
-
-Sometimes the evaluation is informal, but a common rubric for evaluating skills is the [Dreyfus Model of Skill Acquisition](https://www.simonandschuster.com/books/Mind-Over-Machine/Hubert-Dreyfus/9780029080610): novice, advanced beginner, competent, proficient, expert. You could visualize a designer's skill profile using these levels mapped to a career framework:
+A common rubric for evaluating skills is the [Dreyfus Model of Skill Acquisition](https://www.simonandschuster.com/books/Mind-Over-Machine/Hubert-Dreyfus/9780029080610): novice, advanced beginner, competent, proficient, expert. You could visualize a designer's skill profile using these levels mapped to a career framework:
 
 | Product Designer | UX Researcher |
 |----------|----------|
@@ -50,36 +41,45 @@ Sometimes the evaluation is informal, but a common rubric for evaluating skills 
 |----------|----------|
 |![Systems designer](/images/blog/designer-skill-profile-systems.png)|![Systems designer](/images/blog/designer-skill-profile-generalist.png)|
 
-This can be incredibly useful as a design leader trying to build a high-performing team. A common attribute of strong teams is diversity - yes, in general, but specifically in ability. A team with complementary skills might look like this:
+Strong teams share a common trait of diverse skills. A team with complementary skills might look like this:
+
+![Team Skill Profile](/images/blog/designer-skill-profile-team.png)
+
+A well-rounded team can also look like this:
 
 ![A-Team](/images/blog/the-a-team.webp)
 {.caption}
 
-Deep cut for my fellow Gen-X people. Here's an idealized team skill profile visualization:
-
-![Team Skill Profile](/images/blog/designer-skill-profile-team.png)
-
 ----
 
-You're not a key. You're a human being with a richly nuanced set of life experiences that can be over-simplified in a radar chart. In fact, those life experiences are often more important than the hard skills described above. Domain knowledge is the most valuable asset to many hiring managers. 
+Skills charts oversimplify reality. Your domain knowledge, the problems you've already solved, matters more than any framework or radar chart. E-commerce companies hire designers with funnel optimization on their resumé. Finance companies are looking for candidates with finance knowledge. If you’re hiring a doctor to treat an earache, you seek out an ENT who specializes in that field. A good hiring manager will ask, “How does this person make our team stronger?” Domain knowledge provides an easy budget justification for executives. It's so important that it can displace other important hiring factors such as impact, diversity, or seniority—a tradeoff worth acknowledging even as you optimize for your own search.
 
-Companies in e-commerce are hiring designers with e-commerce on their resumé. Finance companies are looking for fintech candidates. Same for healthcare, SAAS, and social media. A hiring manager is hiring because they have a specific problem to solve. They're looking for the person who will solve that problem most efficiently. If you’re hiring a doctor to look at a skin issue or earache, or sprained muscle, you will seek out a doctor who specializes in that area of medicine. One question a good hiring manager asks is, “How might this person make our team stronger?” Existing domain knowledge is an easy attribute that is defensible to leadership (at the expense of diversity, sadly).
-
-Most candidates will have comparable qualifications: foundational training, business acumen, leadership presence, etc. The difference maker is usually experience with the specific problem space that the hiring manager is tasked with. Not all companies are like this. Some of them straight up don’t know how to hire designers, or have preconceived notions about what Design is, but those are exceptions to the rule. 
+When most candidates have similar qualifications, domain expertise becomes the differentiator. This is especially true for companies with low design maturity since the domain is the area they can screen for most effectively. 
 
 ---
 
-If you're a designer looking for a new role, there are a few clear takeaways:
+If you're job hunting, focus on three things:
 
 1. Cut your key
 
-You need to be crystal clear on what your “design superpower” is. What design skills and domain knowledge do you have that others may not? Collect feedback from past colleagues, do some serious introspection, and map the industry to help clarify what you do better than most. Write, revise, and refine your personal value proposition based on the expertise you offer. The unique shape of your skill profile is the “warding” and “biting” of your key. Build your resume and portfolio around your service offering.
+Be crystal clear on what your “design superpower” is. Identify the skills and domain knowledge you excel at. Ask three former colleagues what you excel at. Study job postings in your target industry. List the specific problems you've solved rather than a platitude that every designer says, "I'm a problem solver." Write your personal value proposition in one sentence. The unique shape of your skill profile forms the warding and bitting of your key.
 
 2. Find your lock
 
-Once you know what you have to offer, you can start looking for companies, both those with and without open roles, that need your particular expertise. Your resume and profile won’t open the other doors. Every hiring manager is looking for a specific shape of individual with the right mix of skills, knowledge, and personality to solve their problem.
+Look for companies that need your expertise—whether or not they've posted a role. A generic resume won’t open the doors to companies that don't need your specific key. Every hiring manager is looking for a specific shape of individual with the right mix of skills, knowledge, and personality to solve their problem.
 
-Focusing your pitch to a more specific field of practice could feel like it's closing doors of opportunity. It is, but many of those doors were never open in the first place.
+Specializing feels risky. It isn't. Those doors were already closed. A fintech company isn't going to hire a production artist from a media company. Healthcare teams need designers with regulatory experience more urgently than designers who streamline e-commerce funnels.
 
-I'm still confident that there's a lock out there that needs my shape of design key. I'll continue to refine my unique mix of innovative yet pragmatic UX design until I find it.
+The advice sounds restrictive: narrow your focus, specialize, turn away opportunities. I understand the resistance—I felt it too when I started refining my own positioning.
+
+But here's what I learned: clarity doesn't limit you. It focuses your energy on the right conversations.
+
+    I'm a technical design leader who builds at the intersection of engineering and user needs. I embed human-centered practices into engineering-driven organizations—the ones that ship fast but struggle with design maturity. I've led these transformations across B2B and B2C products, from 10-person startups to enterprise teams of hundreds. That's my key.
+
+Now I'm looking for companies where engineering velocity is high but design practice lags behind—places building complex products that need someone who speaks both languages. Those are my locks.
+
+Your shape will differ from mine. The hard part isn't becoming more specialized—it's admitting what you're actually best at. Once you do, you stop applying to every open role and start targeting the companies that need exactly what you offer.
+
+The doors that close were never yours to open. The ones that unlock? **Those lead somewhere worth going.**
+
 
