@@ -13,11 +13,22 @@ const backLink = document.getElementById('backLink');
 
 let userEmail = '';
 
+async function checkAuth(){
+  const params = new URLSearchParams(window.location.search);
+  const redirect = params.get('redirect');
+  const isAuthorized = (document.cookie.indexOf('portfolio_session')>=0);
+  const url = (redirect!=null) ? redirect : "/portfolio/";
+  if(isAuthorized) {
+    setTimeout(() => window.location.href = url, 0);
+  }
+}
+
 // Check for magic link parameters on page load
 async function checkMagicLink() {
   const params = new URLSearchParams(window.location.search);
   const token = params.get('token');
   const email = params.get('email');
+  const redirect = params.get('redirect');
 
   if (token && email) {
     // Hide both forms and show verifying message
@@ -42,7 +53,7 @@ async function checkMagicLink() {
         document.cookie = `portfolio_session=${data.sessionId}; domain=.brianmcconnell.me; path=/; expires=${expiryDate}; secure; samesite=lax`;
         
         document.getElementById('magicMessage').textContent = '✓ Access verified! Redirecting...';
-        setTimeout(() => window.location.href = '/portfolio/', 1000);
+        setTimeout(() => window.location.href = redirect, 1000);
       } else {
         throw new Error(data.error || 'Verification failed');
       }
@@ -57,14 +68,13 @@ async function checkMagicLink() {
   }
 }
 
-// Run magic link check on load
-checkMagicLink();
-
 // Request OTP
 emailForm.addEventListener('submit', async (e) => {
   e.preventDefault();
   const btn = document.getElementById('emailBtn');
   const messageDiv = document.getElementById('emailMessage');
+  const params = new URLSearchParams(window.location.search);
+  const redirect = decodeURIComponent(params.get('redirect') || '/');
   
   btn.disabled = true;
   btn.textContent = 'Sending...';
@@ -74,7 +84,7 @@ emailForm.addEventListener('submit', async (e) => {
     const response = await fetch(`${API_ENDPOINT}/request-otp`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email: emailInput.value })
+      body: JSON.stringify({ email: emailInput.value, redirect: redirect })
     });
 
     const data = await response.json();
@@ -157,5 +167,11 @@ backLink.addEventListener('click', (e) => {
   document.getElementById('otpMessage').innerHTML = '';
 });
 
+checkAuth();
+
+// Run magic link check on load
+checkMagicLink();
+
 // Auto-focus email on load
 emailInput.focus();
+
