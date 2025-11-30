@@ -36,7 +36,7 @@ body.about {
     }
 
     @media (min-width:lib.$breakpoint) {
-      height: calc(100vh - var(--navbar-height));
+      height: calc(80vh);
 
 
       .parallelogram {
