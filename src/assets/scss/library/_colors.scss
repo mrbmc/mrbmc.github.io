@@ -23,8 +23,8 @@ $_rose:                 hslToHex(340,70%,70%);
 $_pink:                 #ff6699;//hsl(340, 100%,70%);//rgb(255, 102, 153)
 $_sunshine:             #e6de00;//hsl(58, 100%, 45%);//
 $_cyan:              	  hslToHex(180,100%,50%);
-$_teal:                 #00b1cc;//hsl(188,100%,40%);//
-$_orange:               #FF4F00;//international orange
+$_teal:                 hsl(192,62%,35%);
+$_orange:               hsl(19,100%,40%);
 
 // SEMANTIC MAPPING
 $primary:               $_indigo;

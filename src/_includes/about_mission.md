@@ -1,6 +1,6 @@
 {% section "mission","card" %}
 
-## Useful, Usable, Unique
+## Rid The World of Crummy Software
 
 For 20+ years I've tried to design, build, and manage software that is useful to people – from supply-chain tools in the music industry, to the [creator-economy for podcasters](/portfolio/blogtalkradio/), and even [communal viewing for streaming](/portfolio/disney-groupwatch/). I've proven that designing to meet human needs will drive business impact.
 

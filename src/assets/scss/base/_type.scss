@@ -43,21 +43,25 @@
 @font-face {
   font-family: "Pelikan";
   font-weight: 300;
+  font-display: swap;
   src: url('/css/fonts/ABCPelikan-Light-Trial.woff2');
 }
 @font-face {
   font-family: "Pelikan";
   font-weight: 400;
+  font-display: swap;
   src: url('/css/fonts/ABCPelikan-Book-Trial.woff2');
 }
 @font-face {
   font-family: "Pelikan";
   font-weight: 600;
+  font-display: optional;
   src: url('/css/fonts/ABCPelikan-Medium-Trial.woff2');
 }
 @font-face {
   font-family: "Pelikan";
   font-weight: 700;
+  font-display: optional;
   src: url('/css/fonts/ABCPelikan-Bold-Trial.woff2');
 }
 
