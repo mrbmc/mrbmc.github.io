@@ -128,7 +128,5 @@ blockquote, .blockquote {
   font-size: calc(1rem * pow(var(--type-scale), 2));
 }
 strong,b {
-  // font-family: lib.$serif-font-family;
-  // font-weight: lib.$serif-font-weight;
   font-weight: lib.$bold-font-weight;
 }
