@@ -79,6 +79,12 @@ blockquote,.blockquote {
     &:hover {
       color: var(--on-primary);
     }
+
+    &.outline {
+      background: transparent;
+      border: 1px solid var(--border-color);
+      padding: .25em .5em;
+    }
 }
 
 table {
@@ -132,23 +138,6 @@ table {
     }
 
     @media (min-width:lib.$breakpoint) {
-    }
-
-  }
-
-}
-
-ul.nav, ol.nav {
-  display: flex;
-  flex-direction: row;
-
-  li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-
-    a {
-      padding: 0 1em 0 0;
     }
 
   }
