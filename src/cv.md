@@ -5,56 +5,76 @@ title: Brian McConnell | Design & Product Leadership
 permalink: /resume/
 cssfile: "css/pages/resume.css"
 ---
-Executive design leader with a proven track record of scaling design organizations and driving multi-billion dollar business growth through human-centered product development. Known for building and leading UX teams that transform streaming media businesses, having scaled Disney+ from launch to 126M subscribers and grown design teams from 2 to 26 across global locations. Consistently deliver breakthrough products by combining evidence-based design strategies with exceptional craft.{.large-type .two-col}
+
+**Design leader and builder who launches 0-1 teams that drive subscriber and revenue growth.**{.large-type}
+
+Founded 8+ design teams from scratch, led products from zero to 126M subscribers, and navigated strategic pivots across startups and enterprises. Currently designing 0-1 products for mission driven startups.
+{.large-type}
 
 1. **24** years experience{.card .kpi .col-3}
 2. **40+** products built{.card .kpi .col-3}
 3. **13** years managing teams{.card .kpi .col-3}
-4. **26** largest team{.card .kpi .col-3}
+4. **25** largest team{.card .kpi .col-3}
 {.stats .grid}
 
-[Download 2-Page Resumé](/images/uploads/Brian_McConnell-Resume_2025.pdf){.button .hidden-print}
+[📄 Download Resumé PDF](/images/uploads/Brian_McConnell-Resume_2026.pdf){.button .hidden-print}
 
 ---
 
 ## Experience
 
+### Kageki Group
+#### Funder & Principal
+##### Apr 2000 - Present
+
+Product design and team-building advisory for climate tech, secure communications, and AI startups. Recent work includes embedded UI for all-electric heat pump (client raised $1M+ in funding), secure messaging platform (closed $1M in new business), and AI agent for investors. Helped clients hire their first designers and navigate early-stage product development.
+
 ### The Walt Disney Company
+#### Senior Director, Product Design 
+##### Apr 2018 - Aug 2023
+*Promoted following Disney's acquisition of BAMTech/MLB Advanced Media*
 
-#### Senior Director, Product Design  
-April 2018 - August 2023
+Led design teams through Disney's transformation from agency to DTC streaming. Founded 3 specialized teams, launched Disney+, ESPN+, and Star+ (0→137M subscribers), and built internal tools that became foundational infrastructure.
 
-*Née MLB Advanced Media / BAMTech, acquired in August 2017*  
-Led design strategy and operations for Disney's streaming portfolio (Disney+, ESPN+, Hulu, STAR+), driving exceptional business growth and operational efficiency:
+**Product Launches & Growth**
+* **Disney+:** Built Growth Design team (2→8 people), grew platform from 0→105M subscribers in 18 months through evidence-based acquisition and retention optimization
+* **Star+ Latin America:** Founded Sports Design team (2→4 people), designed discovery surfaces that grew Star+ from 0→11.5M subscribers in 2 years
+* **ESPN Monetization:** Led growth features for launch and pay-per-view growing ESPN+ 0→21M subscribers; led vision design for the future of streaming sports
+* **NHL Partnership:** Designed streaming service, app, and NHL.com from scratch; drove significant subscriber growth for NHL
 
-- Scaled Disney+ and ESPN+ from launch to 126M subscribers in two years through strategic design leadership, innovative Growth Design programs, and cross-functional collaboration
-- Transformed streaming operations by implementing 40+ Enterprise SaaS tools, reducing operational costs by $80M annually while increasing monthly recurring revenue by 25%
-- Built high-performing design teams through organizational development initiatives that reduced attrition by 50% and accelerated hiring efficiency by 80%
+**Internal Tooling & Operations**
+* **Built streaming-as-a-service platform** across commerce, content, data, and dev ops that became foundational infrastructure for Disney+, Hulu, and ESPN+ saving $80M annually and increasing MRR 25% YoY
+* **Scrappy to Start:** Began with 1 designer + 2 engineers building tool that collapsed pricing changes from 2 weeks→2 hours (drove 250K subscribers in one weekend) 
+* **Scaled to Win:** Designed 30+ SaaS products (4→16 people)
 
-**Secondary achievements:**
+**Leadership & Team Building**
+* Led teams through acquisition (MLB→Disney), merger (Disney + Hulu), and downsizing; navigated 3 strategic pivots (agency model → launch/subscriber growth → revenue optimization)
+* Scaled teams from 12→24 people; mentored and promoted multiple people into leadership roles including one to director level; reduced attrition 50%, accelerated hiring velocity 80%
 
-- Successfully launched STAR+ in Latin America, reaching 11.5M subscribers through fan-centric sports experience design
-- Led design organizations through major transitions including Disney+ & Hulu merger and BAMTech acquisition
-- Established a unified design system and brand architecture across a global streaming portfolio.
-- Developed leadership pipeline through mentorship of Directors, Managers, and Lead Designers
-
-#### Director, Product Design
-September 2015 - April 2018
+#### Director, UX & Design, BAMTech
+##### Sep 2015 - Apr 2018
 
 Led design strategy for MLB's streaming technology division, building the foundation for a $4B acquisition by Disney. Established the organization's first UX Research practice and design culture while pioneering cost-efficient development processes through innovative prototyping and resource management.
 
-- Scaled streaming design team from 2 to 26 practitioners across US and EU markets, establishing UX Research, Growth Design, and Enterprise SaaS capabilities
-- Launched 6 new streaming services, significantly expanding BAMTech's market position and enterprise value
-- Established design culture and career development framework that enabled rapid team scaling across two continents
+**User Research & Product-Led Growth**
+* **Founded User Research from scratch:** Conducted first research studies to establish practice and prove business value; built cross-functional alignment with legal, marketing, data, and executives; secured investment to grow team to 4 people
+* **Product-led growth:** Implemented strategic design for NHL and MLB.tv video that increased ad revenue & retention 25% YoY
+* **Led product design** on streaming services for NHL, Eurosport, PGA, MLS, ESPN, and MLB
+**Design Systems & Operations**
+* Built white label solutions team that became foundation for Disney+ component library
+* Co-authored career framework foundational to structured hiring and performance evaluation across 148-person design department
+* Hired 7 designers including one manager; promoted multiple, including 1 first-time manager
 
-##### Disney Projects
+**Disney Projects**
+
 - <a href="http://disneyplus.com">Disney+</a>
 - <a href="https://techcrunch.com/2020/09/29/disney-plus-groupwatch/">Disney+ GroupWatch</a>
 - <a href="http://hulu.com">hulu</a>
 - <a href="http://plus.espn.com">ESPN+</a>
 - Disney StreamEngine
 
-##### MLBAM Projects
+**MLBAM Projects**
+
 - [MLB.tv](http://mlb.tv)
 - [NHL.tv](https://nhl.tv/) / [NHL.com](http://nhl.com)
 - [Eurosport Player](https://www.eurosport.com/watch-eurosport.shtml)
@@ -64,23 +84,28 @@ Led design strategy for MLB's streaming technology division, building the founda
 
 
 ### Voxnest / BlogTalkRadio
-#### Sr. Director, Product & UX  
-September 2010 - April 2015
+#### Sr. Director, Product & UX 
+##### Sep 2010 - Apr 2015
 
-Led product and design through a strategic pivot from a live radio platform to a monetized podcasting ecosystem. As the first design leader, established user-centered practices and design operations, while leading a cross-functional team of 7 engineers, designers, and content strategists.
+Led product, design, and engineering (7 people) through strategic pivot from live radio platform to monetized podcasting ecosystem.
 
-* Drove 37% YoY ad revenue growth by architecting a patented programmatic advertising platform (US20170195373A1) for targeted podcast monetization
-* Increased subscription revenue by 42% YoY through the development of comprehensive creator tools including analytics, educational content, and audio processing
+* Drove 37% YoY ad revenue growth by architecting patented programmatic advertising platform for podcasts (US20170195373A1)
+* Increased subscription revenue 42% YoY with creator tools for analytics, educational content, and audio processing
+* Led through strategic pivot: SaaS model (hosts pay for tools) → ad-based model (listener growth, revenue sharing)
+* Took on product management role during pivot; prioritized roadmap while continuing to design and manage team
 
 #### Director of UX Design 
-December 2010 - December 2013
+##### Dec 2010 - Dec 2013
 
-* Grew daily active users 95% YoY by launching a mobile-first listening experience and modernizing platform design
-* Designed Cinchcast, a new enterprise conferencing product, from concept to launch.
+First design hire; established user-centered practices and design operations from scratch.
+
+* Grew daily active users 95% YoY by designing mobile-first experience
+* Hired and grew design team from 0→2 designers
+* Brought consumer design to enterprise with launch of Cinchcast conferencing software
 
 ### BUZZD City Guide
-#### Director of UX  
-August 2009 - August 2010
+#### Director of UX 
+##### Aug 2009 - Aug 2010
 
 Buzzd was a mobile social travel guide for the US. As the UX Director I introduced user-centered product development, directed a brand redesign, and managed agile development process. These accomplishment extended Buzzd's runway by 6 months.
 
@@ -89,46 +114,35 @@ Buzzd was a mobile social travel guide for the US. As the UX Director I introduc
 - Solved the biggest user complaint by increasing app speed 100% with faster location searches, and responsive images.
 
 ### Edelman Digital
-#### Technical Director  
-April 2007 - October 2008
+#### Technical Director 
+##### Apr 2007 - Oct 2008
 
 - Managed a team of 4 web developers including career development and resource management.
 - Led the software architecture and development of projects for Fortune 500 clients.
 - Drove business development as the technology consultant for new clients.
 
-### Kageki Group
-#### Founder & Principal  
-Jan 2000 - Dec 2005
-
-Kageki is a digital consultancy helping companies navigate ambiguity in 0-1 ideas and organizational transition.
-
-- Hired and managed a 4-person cross-functional team of designers, developers, and business analysts.
-- Founded a social network for live music earning revenue from advertising, ticketing, and referral programs. 
-- Saved a client $100ks/pa, and increased sales by 20% by designing an enterprise digital supply chain.
-- Increased sales by 100% for clients with new online presence.
-
----
-
 ### Motionbox
-#### Senior User Interface Developer
-March 2006 - April 2007
+#### Senior User Interface Developer 
+##### Mar 2006 - Apr 2007
 
 Motionbox created a novel UI for editing and sharing short clips of video. I prototyped and developed new interfaces in Flash and HTML.
 
 ### Cambridge Technology Partners
 #### UX Design Technologist
-October 1999 - April 2000  
+##### Oct 1999 - Apr 2000
 
 Designed & built advanced interfaces and interactive installations.
-##### Notable Clients
+
+**Notable Clients**
 Ford, Walmart, GMAC
 
 ### Xceed / Reset
 #### UX Design Technologist
-September 1998 - October 1999
+##### Sep 1998 - Oct 1999
 
 Developed interactive applications and websites.
-##### Notable Clients
+
+**Notable Clients**
 CBS News, Warner Brothers Pictures, Interscope Records, HBO
 
 ----
@@ -159,12 +173,29 @@ Sold computers at a big box store in the late 1900s
 
 ----
 
+## Patents
+#### [US20170195373A1](https://patents.google.com/patent/US20170195373A1/)
+
+System for automatic, custom foreign content insertion into digital content streams
+
+
 ## Education
 
 ### New York University
 #### Bachelor of Music (BMus)
-Class of 1999
+##### 1999
   
 Major in Music Business & Technology
 
 Focus on post-modern composition & synthesis with Morton Subotnik, Dr. Kenneth Peacock, and Ken Walicki.
+
+## Scrum Alliance
+### Certified Scrum Product Owner (CSPO) #### 2012
+
+<style>
+@media print {
+    hr,.button {
+        display: none;
+    }
+}
+</style>
