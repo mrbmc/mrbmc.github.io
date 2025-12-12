@@ -1,4 +1,12 @@
-@use "base/_print";//12.1k
+@use 'library' as lib;
+
+@use "base/root";
+
+@use 'base/type';
+
+@use "base/atoms";
+
+@use "base/molecules";
 
 // ======================================================================
 // ORGANISM STYLES
@@ -6,3 +14,156 @@
 @use "components/header";// 1.7k
 
 @use "components/footer";// 1.1k
+
+:root {
+    --muted-foreground: var(--gray-mid);
+
+    --width:                 100%;
+    --columns:               12;
+    --gutter:                1rem;
+    --gutter-xl:             2rem;
+    --margin:                4rem;
+    --border-radius:         .5rem;
+    --border-radius-xl:      1.5rem;
+    --type-scale: 1.12;
+    font-size: 14px;
+}
+
+img {
+	max-height: 50vh;
+}
+
+hr {
+	width: 38vw;
+	margin: var(--gutter-xl) auto;
+}
+
+h2 {
+  color: var(--muted-foreground);
+  font-size: calc(1rem * pow(var(--type-scale), 8));
+  margin: 1em 0 .5em;
+}
+h3 {
+  font-size: calc(1rem * pow(var(--type-scale), 5));
+  margin: 0.5em 0;
+}
+h4 {
+  color: var(--body-emphasized);
+  font-size: calc(1rem * pow(var(--type-scale), 3));
+  margin: 1em 0;
+}
+h5 {
+  font-size: calc(1rem * pow(var(--type-scale), 2));
+  margin: 1em 0;
+}
+
+.card {
+  box-shadow: none;
+  border: 1px solid var(--border-color);
+}
+
+ul.tags {
+  li  {
+    a {
+      border: 1px solid var(--border-color);
+    }
+  }
+}
+
+#header {
+  .nav-home {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: .5em;
+  }
+  .nav-top {
+    display: none;
+  }
+  #menu {
+    a {
+      display: none;
+    }
+    a.active {
+      display: block;
+    }
+  }
+}
+
+#footer {
+  #contact {
+    display: none;
+  }
+  a {
+    display: none;
+  }
+}
+
+.well {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  box-shadow: none;
+  padding: var(--gutter);
+}
+
+.grid {
+	display: flex;
+	flex-direction: row;
+	gap: var(--gutter);
+
+    &>* {
+        box-sizing: border-box;
+        list-style: none;
+        margin: 0;
+    }
+
+    @for $i from 1 through lib.$grid-columns {
+    //     .col-start-#{$i} {
+    //       grid-column-start: $i;
+    //     }
+    //     .col-end-#{$i} {
+    //       grid-column-end: ($i + 1);
+    //     }
+        .col-#{$i} {
+        	flex-basis: calc( $i / var(--columns) * 100%);
+        }
+    //     .row-#{$i} {
+    //         grid-row: span $i;
+    //     }
+    }
+
+    h1,h2,h3,h4,h5 {
+        grid-column: span var(--columns);
+    }
+}
+
+.gallery {
+	display: flex;
+	gap: var(--gutter);
+	li {
+        box-sizing: border-box;
+        list-style: none;
+        margin: 0;
+	}
+}
+
+.nav-subnav {
+	display: none;
+}
+
+body {
+	background: white;
+	main {
+		padding: var(--gutter);
+		max-width: 100%;
+	}
+}
+
+@media print {
+  @page {
+    size: A4 portrait; /* Sets page size to A4 and orientation to portrait */
+    margin: 1cm; /* Sets a 1cm margin on all sides */
+  }
+}
+
+
