@@ -23,6 +23,7 @@
   <meta property="twitter:image" content="{{site.url}}{{thumbnail | getOptimizedImageSrc}}">
 
   <link rel="preload" as="style" href="/css/screen.css">
+  <link rel="stylesheet" type="text/css" media="print" href="/css/print.css" />
   <link rel="stylesheet" type="text/css" media="screen" href="/css/screen.css" />
 {% if cssfile %}
   <link rel="stylesheet" type="text/css" media="screen" href="/{{cssfile}}" />
@@ -43,17 +44,6 @@
 
 </body>
 </html>
-
-<svg viewBox="0 0 128 128" xmlns='http://www.w3.org/2000/svg' id="noiseImage">
-  <filter id='noiseFilter'>
-   <feTurbulence type="turbulence" baseFrequency="0.5" numOctaves="8" stitchTiles="stitch"/>
-    <feColorMatrix type="matrix" values="
-      0   0   0   1   0
-      0   0   0   1   0
-      0   0   0   1   0
-      1   1   1   1   0" />
-  </filter>
-</svg>
 
 <script type="module" src="/js/base.bundle.js"></script>
 <script type="application/javascript">

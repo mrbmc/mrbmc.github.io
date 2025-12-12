@@ -1,5 +1,7 @@
 @use '../library' as lib;
 
+@use "../base/molecules";
+
 body.resume {
     main {
         margin-top: lib.$gutter;
@@ -8,31 +10,43 @@ body.resume {
         font-family: lib.$serif-font-family;
         font-weight: lib.$serif-font-weight;
     }
+    h1,h2,h3,h4,h5 {
+        margin: 0 0 var(--gutter) 0;
+    }
+    h2 {
+        color: var(--muted-foreground);
+        font-size: calc(1rem * pow(var(--type-scale), 6));
+        margin: 1em 0;
+    }
     h3 {
         color: var(--muted-foreground);
-        clear: both;
+        font-size: calc(1rem * pow(var(--type-scale), 4));
     }
     h4 {
-        text-transform: inherit;
+        // text-transform: inherit;
     }
     h5 {
-        font-size: 120%;
+        // font-size: 120%;
     }
     h4,h5 {
-        margin-top: 0;
     }
-    p,h5,ul {
-        margin-left: 40%;
+    h4 {
+        display: inline-block;
+        margin-right: 0.5rem;
     }
-    h4,h4+p {
-        clear: both;
-        float: left;
-        width: 36%;
-        margin-left: 0;
+    h4+h5 {
+        display: inline-block;
+        color: var(--muted-foreground);
+        font-weight: 400;
+        &:before {
+            content: "(";
+        }
+        &:after {
+            content: ")";
+        }
     }
-    .two-col {
-        margin-left: 0;
-        margin-right: 0;
+    p {
+        margin: 0 0 var(--gutter) 0;
     }
     ol.stats {
         list-style: none;
@@ -45,6 +59,7 @@ body.resume {
 
     hr {
         clear: both;
+        margin: var(--gutter-xl) auto;
     }
 
     #education,.education {
@@ -60,7 +75,7 @@ body.resume {
         margin: 0 auto;
     }
 
-    @media (max-width: lib.$breakpoint) {
+    @media (orientation: portrait) {
         h4,h4+p {
             float: none;
             width: auto;
@@ -70,8 +85,4 @@ body.resume {
         }
     }
 }
-
-
-
-
 
