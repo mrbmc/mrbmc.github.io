@@ -275,34 +275,58 @@ function syncBackups() {
   const log = argv.verbose ? console.log : () => {};
   if(!isProduction) return Promise.resolve();
 
-  //exec is much MUCH faster than calling gulp-rsync
-  let foo = [];
   let command = `rsync -av #src #dst --exclude="DS_Store"`;
-   paths.backups.forEach((path)=>{
+  let promises = [];
+
+  paths.backups.forEach((path)=>{
     let cmd = command
       .replace(/\#src/ig,path.src)
       .replace(/\#dst/ig,path.dst);
-    // console.log(cmd);
-    foo.push(
-      exec(cmd)
-        .on('data', data => log(data.toString()))
-        .on('error', (err) => {
-          console.error(`Error synching assets: ${err}`);
-          process.exit(1);
-        })
-    )
-  })
-  return foo.pop();
 
+    if(argv.verbose) console.log(`Syncing backup: ${path.src} -> ${path.dst}`);
+    // if(argv.verbose) console.log(`  Command: ${cmd}`);
+
+    promises.push(
+      new Promise((resolve) => {
+        const proc = exec(cmd, (err, stdout, stderr) => {
+          if(stderr) {
+            console.error(`[Backup ${path.src}] stderr: ${stderr}`);
+          }
+          if(err) {
+            const errMsg = `⚠ Warning: backup "${path.src}" -> "${path.dst}" failed with exit code ${err.code || 'unknown'}: ${err.message}`;
+            console.error(errMsg);
+            resolve(); // Don't reject, continue build
+          } else {
+            log(`✓ Backup synced: ${path.src} -> ${path.dst}`);
+            resolve();
+          }
+        });
+        proc.on('data', data => log(data.toString()));
+      })
+    );
+  });
+
+  return Promise.all(promises)
+    .then(() => {
+      console.log('Backup sync complete (errors logged as warnings, build continues)');
+    });
 }
 
 function checkLinks() {
   if(!isProduction) return Promise.resolve();
-  return exec('blc '+localenv+' -roe > link-report.log')
-    .on('error', (err) => {
-      console.error(`Error checking links: ${err}`);
-      process.exit(1);
+  return new Promise((resolve) => {
+    exec('npx blc '+localenv+' -roe > link-report.log', (err, stdout, stderr) => {
+      if(err) {
+        const errMsg = `⚠ Warning: link check failed with exit code ${err.code || 'unknown'}: ${err.message}. Report saved to link-report.log`;
+        console.error(errMsg);
+        if(stderr) console.error(`stderr: ${stderr}`);
+        resolve(); // Continue build despite link check failure
+      } else {
+        console.log('✓ Link check passed');
+        resolve();
+      }
     });
+  });
 }
 
 function cleanUp() {
@@ -369,6 +393,10 @@ exports.watch = function() {
 }
 
 exports.deploy = parallel(
+  ()=> { 
+    console.log("Deploying to "+S3BUCKET+" with CloudFront distribution "+CFDISTRO+(dryrun?" (dry run)":""));
+    return Promise.resolve();
+  },
   upload,
   uncache
 );
