@@ -8,7 +8,7 @@ const uglify = require('gulp-uglify');
 const ruglify = require("@lopatnov/rollup-plugin-uglify");
 const cleanCSS = require('gulp-clean-css'); // If you want CSS minification
 const sourcemaps = require('gulp-sourcemaps');
-const exec = require('child_process').exec;
+const { exec, spawn } = require('child_process');
 const yargs = require('yargs/yargs');
 const { hideBin } = require('yargs/helpers');
 const argv = yargs(hideBin(process.argv)).argv;
@@ -211,18 +211,16 @@ function transpileCSS() {
 
 // Build HTML with Eleventy
 function buildHTML() {
-  const log = argv.verbose ? console.log : () => {};
   if(!isProduction) return Promise.resolve();
 
-  return exec('npx @11ty/eleventy', function (err, stdout, stderr) {
-        if(argv.verbose) {
-          console.log(stdout);
-          console.log(stderr);      
-        }
-      }).on('error',(err)=>{
-          console.error(`Error synching assets: ${err}`);
-          process.exit(1);
-      });
+  return new Promise((resolve, reject) => {
+    const proc = spawn('npx', ['@11ty/eleventy'], { stdio: 'inherit' });
+    proc.on('close', (code) => {
+      if (code !== 0) reject(new Error(`eleventy exited with code ${code}`));
+      else resolve();
+    });
+    proc.on('error', reject);
+  });
 }
 
 // Sync static assets (images)
