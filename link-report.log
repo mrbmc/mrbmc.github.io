@@ -92,6 +92,8 @@ Getting links from: http://localhost:8000/photos/
 Finished! 75 links found. 39 excluded. 0 broken.
 
 Getting links from: http://localhost:8000/blog/
+├───OK─── http://localhost:8000/blog/the-decorators-dilemma/
+├───OK─── http://localhost:8000/blog/power-to-the-makers/
 ├───OK─── http://localhost:8000/blog/job-market-2025/
 ├───OK─── http://localhost:8000/blog/greenpoint-pan-chocolat-2025/
 ├───OK─── http://localhost:8000/images/optimized/pan-chocolat-lineup-640.webp
@@ -127,7 +129,7 @@ Getting links from: http://localhost:8000/blog/
 ├───OK─── http://localhost:8000/blog/newtons-laws-of-design/
 ├───OK─── http://localhost:8000/images/optimized/newton-640.webp
 ├───OK─── http://localhost:8000/blog/rss.xml
-Finished! 68 links found. 33 excluded. 0 broken.
+Finished! 70 links found. 33 excluded. 0 broken.
 
 Getting links from: http://localhost:8000/portfolio/blogtalkradio/
 ├───OK─── http://localhost:8000/images/optimized/btr-customer-experience-map-hosts-640.webp
@@ -421,6 +423,15 @@ Getting links from: http://localhost:8000/portfolio/boids/
 ├───OK─── http://localhost:8000/gaia/boids/
 Finished! 23 links found. 21 excluded. 0 broken.
 
+Getting links from: http://localhost:8000/blog/the-decorators-dilemma/
+├───OK─── http://localhost:8000/tags/design
+├───OK─── http://localhost:8000/tags/technology
+├───OK─── http://localhost:8000/tags/capitalism
+Finished! 27 links found. 24 excluded. 0 broken.
+
+Getting links from: http://localhost:8000/blog/power-to-the-makers/
+Finished! 27 links found. 27 excluded. 0 broken.
+
 Getting links from: http://localhost:8000/blog/job-market-2025/
 ├───OK─── http://localhost:8000/images/optimized/key-cylinder-wards-640.webp
 ├───OK─── http://localhost:8000/images/optimized/key-warding-notches-600.webp
@@ -432,10 +443,8 @@ Getting links from: http://localhost:8000/blog/job-market-2025/
 ├───OK─── http://localhost:8000/images/optimized/designer-skill-profile-generalist-559.webp
 ├───OK─── http://localhost:8000/images/optimized/designer-skill-profile-team-559.webp
 ├───OK─── http://localhost:8000/images/optimized/the-a-team-640.webp
-├───OK─── http://localhost:8000/tags/design
 ├───OK─── http://localhost:8000/tags/hiring
-├───OK─── http://localhost:8000/tags/capitalism
-Finished! 40 links found. 27 excluded. 0 broken.
+Finished! 40 links found. 29 excluded. 0 broken.
 
 Getting links from: http://localhost:8000/blog/greenpoint-pan-chocolat-2025/
 ├───OK─── http://localhost:8000/images/optimized/pan-choclat-bakeri-640.webp
@@ -631,19 +640,22 @@ Getting links from: http://localhost:8000/tags/nature
 Finished! 21 links found. 21 excluded. 0 broken.
 
 Getting links from: http://localhost:8000/tags/leadership
-Finished! 28 links found. 28 excluded. 0 broken.
+Finished! 29 links found. 29 excluded. 0 broken.
 
 Getting links from: http://localhost:8000/gaia/boids/
 Finished! 2 links found. 2 excluded. 0 broken.
 
 Getting links from: http://localhost:8000/tags/design
-Finished! 50 links found. 50 excluded. 0 broken.
+Finished! 52 links found. 52 excluded. 0 broken.
 
-Getting links from: http://localhost:8000/tags/hiring
+Getting links from: http://localhost:8000/tags/technology
 Finished! 21 links found. 21 excluded. 0 broken.
 
 Getting links from: http://localhost:8000/tags/capitalism
-Finished! 22 links found. 22 excluded. 0 broken.
+Finished! 24 links found. 24 excluded. 0 broken.
+
+Getting links from: http://localhost:8000/tags/hiring
+Finished! 21 links found. 21 excluded. 0 broken.
 
 Getting links from: http://localhost:8000/tags/brooklyn
 Finished! 23 links found. 23 excluded. 0 broken.
@@ -798,5 +810,5 @@ Finished! 23 links found. 23 excluded. 0 broken.
 Getting links from: http://localhost:8000/tags/ai-art
 Finished! 23 links found. 23 excluded. 0 broken.
 
-Finished! 3092 links found. 2601 excluded. 0 broken.
-Elapsed time: 2 seconds
+Finished! 3174 links found. 2680 excluded. 0 broken.
+Elapsed time: 1 second
