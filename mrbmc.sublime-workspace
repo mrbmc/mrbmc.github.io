@@ -519,6 +519,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 2072,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "Packages/SASS Build/SASS.sublime-build",
 	"build_system_choices":
@@ -932,11 +940,12 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/brianmcconnell/Sites/mrbmc",
-		"/Users/brianmcconnell/Sites/mrbmc/src"
+		"/Users/brian.mcconnell/Sites/mrbmc"
 	],
 	"file_history":
 	[
+		"/Users/brian.mcconnell/.claude/settings.json",
+		"/Users/brian.mcconnell/Sites/mrbmc/mrbmc.sublime-project",
 		"/Users/brianmcconnell/Sites/mrbmc/package.json",
 		"/Users/brianmcconnell/Sites/mrbmc/src/assets/scss/base/_root.scss",
 		"/Users/brianmcconnell/Sites/mrbmc/src/index.md",
@@ -1062,9 +1071,7 @@
 		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/library/_variables.scss",
 		"/Users/brianmcconnell/Sites/mrbmc/backup/2003/less/_variables.less",
 		"/Users/brianmcconnell/Sites/mrbmc/src/_includes/_header.html",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/components/_gallery-inline.scss",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/components/_sticky-nav.scss",
-		"/Users/brianmcconnell/Sites/mrbmc/src/_js/modules/gallery-inline.mjs"
+		"/Users/brianmcconnell/Sites/mrbmc/src/_scss/components/_gallery-inline.scss"
 	],
 	"find":
 	{
@@ -1210,6 +1217,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"isprod",
+			"buildhtml",
+			"buildHTML",
 			"cleaning",
 			"diff_days",
 			"parse",
@@ -1334,10 +1344,7 @@
 			"full-width",
 			"\\.canzoom",
 			"canzoom",
-			"foreach",
-			"canzoom",
-			"img",
-			"zoomies"
+			"foreach"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1487,6 +1494,38 @@
 		{
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "package.json",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2072,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JSON/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 197.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -1566,6 +1605,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"pack",
+				"package.json"
+			],
 			[
 				"packa",
 				"package.json"
@@ -2073,10 +2116,6 @@
 			[
 				"build",
 				"build.sh"
-			],
-			[
-				"_ty",
-				"src/_scss/base/_type.scss"
 			]
 		],
 		"width": 0.0

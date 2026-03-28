@@ -2,7 +2,7 @@
 	"folders":
 	[
 		{
-			"path": "/Users/brianmcconnell/Sites/mrbmc",
+			"path": "/Users/brian.mcconnell/Sites/mrbmc",
 		},
 	],
 	"settings":
@@ -20,7 +20,7 @@
     [
         {
             "name": "SHELL",
-			"shell_cmd": "/Users/brianmcconnell/Sites/mrbmc/build.sh js",
+			"shell_cmd": "/Users/brian.mcconnell/Sites/mrbmc/build.sh js",
         },
         {
             "name": "GULP DEV",
