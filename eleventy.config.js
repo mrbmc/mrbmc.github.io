@@ -34,6 +34,21 @@ module.exports = function(eleventyConfig) {
     return collection;
   });
 
+  // COMBINED PROJECT COLLECTION (work + talk + personal)
+  eleventyConfig.addCollection('allProjects', function(collectionApi) {
+    return [
+      ...collectionApi.getFilteredByTag('work'),
+      ...collectionApi.getFilteredByTag('talk'),
+      ...collectionApi.getFilteredByTag('personal'),
+    ];
+  });
+
+  // LOOKUP COLLECTION ITEM BY FILESLUG
+  eleventyConfig.addLiquidFilter('getBySlug', function(collection, slug) {
+    if (!collection || !slug) return null;
+    return collection.find(item => item.fileSlug === slug) || null;
+  });
+
   // RELATED POSTS
   const getSimilarCategories = function(categoriesA, categoriesB) {
     return categoriesA.filter(Set.prototype.has, new Set(categoriesB)).length;

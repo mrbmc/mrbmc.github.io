@@ -1,37 +1,77 @@
-import { doParallax } from "./modules/parallax.mjs";
-import { addLightbox } from "./modules/lightbox.mjs";
-import { initGallery, galleryPopstate, galleryKeyPress } from "./modules/gallery-inline.mjs";
-import { initStickyNav } from "./modules/sticky-nav.mjs";
-// import { init } from "gulp-sourcemaps";
+const TRANSITION_MS = 350;
 
-globalThis.DEBUG = (document.location.hostname == "localhost" || document.location.href.includes('debug'));
-globalThis.VERBOSE = false && DEBUG;
+function matchesFilter(item, filter) {
+    return filter === 'all' || item.dataset.filter === filter;
+}
 
-var last_known_scroll_position = 0,
-    p_ticking = false;
-
-function initMosaics() {
-    var imgs = document.querySelectorAll('.grid.well img');
-    imgs.forEach(img => {
-        addLightbox(img);
-    })
-    var zoomies = document.querySelectorAll('.addLightbox');
-    zoomies.forEach(el => {
-        addLightbox(el);
+function showItem(item) {
+    item.style.display = '';
+    // Force reflow so the transition fires
+    item.classList.add('is-entering');
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            item.classList.remove('is-entering');
+        });
     });
 }
 
-window.addEventListener('popstate', function(e) {
-    galleryPopstate(e);
+function hideItem(item, onDone) {
+    item.classList.add('is-hiding');
+    setTimeout(() => {
+        item.classList.remove('is-hiding');
+        item.style.display = 'none';
+        if (onDone) onDone();
+    }, TRANSITION_MS);
+}
+
+function initIsotopeFilters() {
+    const filterNav = document.getElementById('isotope-filters');
+    const grid = document.getElementById('isotope-grid');
+    if (!filterNav || !grid) return;
+
+    const filterBtns = Array.from(filterNav.querySelectorAll('.filter-btn'));
+    const items = Array.from(grid.querySelectorAll('.isotope-item'));
+    let currentFilter = 'all';
+    let animating = false;
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const filter = btn.dataset.filter;
+            if (filter === currentFilter || animating) return;
+
+            animating = true;
+            currentFilter = filter;
+
+            // Update active button
+            filterBtns.forEach(b => b.classList.toggle('active', b === btn));
+
+            const toHide = items.filter(item => !matchesFilter(item, filter));
+            const toShow = items.filter(item =>
+                matchesFilter(item, filter) && item.style.display === 'none'
+            );
+
+            let pending = toHide.length;
+
+            if (pending === 0) {
+                // Nothing to hide — just show new items and unlock
+                toShow.forEach(showItem);
+                animating = false;
+                return;
+            }
+
+            toHide.forEach(item => {
+                hideItem(item, () => {
+                    pending--;
+                    if (pending === 0) {
+                        toShow.forEach(showItem);
+                        animating = false;
+                    }
+                });
+            });
+        });
+    });
+}
+
+window.addEventListener('load', () => {
+    initIsotopeFilters();
 });
-
-window.addEventListener('load', function(e) {
-    console.log('project.window.load', e);
-    initMosaics(e);
-    initGallery(e);
-
-    initStickyNav(document.getElementById('subnav'));
-});
-
-window.addEventListener('scroll', doParallax);
-
