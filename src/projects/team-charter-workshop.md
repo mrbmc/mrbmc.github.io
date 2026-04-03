@@ -1,7 +1,7 @@
 ---
 title: Team Charter Workshop
 date: 2022-05-22
-thumbnail: /images/portfolio/culture-workshop/culture-workshop.001.jpeg
+thumbnail: /images/portfolio/culture-workshop/EXD-workshop-voting.jpg
 masthead-video: /images/portfolio/culture-workshop/EXD-workshop-timelapse.mp4
 description: Presented May 2022
 tags:
