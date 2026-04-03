@@ -82,16 +82,19 @@ input[name="iso-filter"] {
 
 .isotope-item {
   // base: 1 col of 3  →  3/12
-  width: calc((100% - var(--gutter) * 2) / 3);
+  width: calc((100% - var(--gutter) * 1) / 4);
+  width: calc(25% - var(--gutter));
 
   &.md {
     // 2 cols of 3  →  6/12
-    width: calc((100% - var(--gutter) * 2) / 3 * 2 + var(--gutter));
+    width: calc((100% - var(--gutter) * 2) / 4 * 2 + var(--gutter));
+    width: calc(50% - var(--gutter));
   }
 
   &.lg {
     // 3 cols of 3  →  9/12 (full row, no gaps needed)
-    width: 100%;
+    width: calc((100% - var(--gutter) * 3) / 4 * 2 + var(--gutter));
+    width: calc(75% - var(--gutter));
   }
 
   @media (orientation: portrait) {
@@ -163,7 +166,8 @@ input[name="iso-filter"] {
     img {
       display: block;
       width: 100%;
-      aspect-ratio: 16 / 9;
+      // aspect-ratio: 16 / 9;
+      height: 16rem;
       object-fit: cover;
       transition:
         transform lib.$speed lib.$easing,
@@ -172,7 +176,7 @@ input[name="iso-filter"] {
     }
 
     &--empty {
-      aspect-ratio: 16 / 9;
+      // aspect-ratio: 16 / 9;
     }
   }
 
@@ -225,7 +229,7 @@ input[name="iso-filter"] {
 // Large item: wider image crop + larger title
 .isotope-item.lg {
   .item-figure img {
-    aspect-ratio: 21 / 9;
+    // aspect-ratio: 21 / 9;
   }
 
   .item-title {
