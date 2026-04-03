@@ -1,101 +1,144 @@
 @use "../library" as lib;
 
 // ======================================================================
-// ISOTOPE FILTER NAV
+// HIDDEN RADIO INPUTS (CSS-only filter state)
+// Inputs sit before .isotope-filters and .isotope-grid in the DOM.
+// All filter logic uses general sibling combinator (~).
+
+input[name="iso-filter"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+// ======================================================================
+// FILTER NAV
+// Labels act as clickable buttons; the associated radio tracks state.
 
 .isotope-filters {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   padding: var(--gutter-xl) 0;
+}
 
-  .filter-btn {
-    appearance: none;
-    background: none;
-    border: 1px solid var(--border-color);
-    border-radius: 2em;
-    padding: 0.25em 1em;
-    font-family: var(--base-font);
-    font-size: lib.$small-font-size;
-    color: var(--body-foreground);
-    cursor: pointer;
-    transition: background lib.$speed lib.$easing,
-                border-color lib.$speed lib.$easing,
-                color lib.$speed lib.$easing;
-    letter-spacing: 0.04em;
+.filter-btn {
+  display: inline-block;
+  border: 1px solid var(--border-color);
+  border-radius: 2em;
+  padding: 0.25em 1em;
+  font-family: var(--base-font);
+  font-size: lib.$small-font-size;
+  color: var(--body-foreground);
+  cursor: pointer;
+  transition:
+    background lib.$speed lib.$easing,
+    border-color lib.$speed lib.$easing,
+    color lib.$speed lib.$easing;
+  letter-spacing: 0.04em;
+  user-select: none;
 
-    &:hover {
-      border-color: var(--body-emphasized);
-      color: var(--body-emphasized);
-    }
-
-    &.active {
-      background: var(--body-emphasized);
-      border-color: var(--body-emphasized);
-      color: var(--body-background);
-    }
+  &:hover {
+    border-color: var(--body-emphasized);
+    color: var(--body-emphasized);
   }
+}
+
+// Active pill state driven entirely by :checked sibling
+#f-all:checked   ~ .isotope-filters label[for="f-all"],
+#f-work:checked  ~ .isotope-filters label[for="f-work"],
+#f-play:checked  ~ .isotope-filters label[for="f-play"],
+#f-write:checked ~ .isotope-filters label[for="f-write"],
+#f-speak:checked ~ .isotope-filters label[for="f-speak"] {
+  background: var(--body-emphasized);
+  border-color: var(--body-emphasized);
+  color: var(--body-background);
 }
 
 
 // ======================================================================
 // ISOTOPE GRID
+// Flex-wrap layout so items physically reflow as siblings shrink to 0.
+// The 12-column conceptual grid is expressed as percentage widths.
+// Column widths (accounting for 2 gutters across 3 columns):
+//   sm  = 3 / 12 = (100% - 2 × gutter) / 3
+//   md  = 6 / 12 = (100% - 2 × gutter) / 3 × 2 + gutter
+//   lg  = 9 / 12 = (100% - 2 × gutter) / 3 × 3 + gutter × 2  = 100%
+//         (lg fills the row)
 
 .isotope-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
   column-gap: var(--gutter);
   row-gap: var(--gutter-xl);
-  grid-auto-flow: row dense;
   padding-bottom: calc(var(--gutter-xl) * 2);
-
-  @media (orientation: portrait) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (max-width: 480px) {
-    grid-template-columns: 1fr;
-  }
 }
 
 
 // ======================================================================
-// ITEM SIZES
+// ITEM SIZES  (3 / 6 / 9 columns of a 12-col system)
 
 .isotope-item {
-  &.sm { grid-column: span 1; }
-  &.md { grid-column: span 2; }
-  &.lg { grid-column: span 3; }
+  // base: 1 col of 3  →  3/12
+  width: calc((100% - var(--gutter) * 2) / 3);
+
+  &.md {
+    // 2 cols of 3  →  6/12
+    width: calc((100% - var(--gutter) * 2) / 3 * 2 + var(--gutter));
+  }
+
+  &.lg {
+    // 3 cols of 3  →  9/12 (full row, no gaps needed)
+    width: 100%;
+  }
 
   @media (orientation: portrait) {
-    &.lg { grid-column: span 2; }
+    // 2-up layout on portrait/tablet
+    width: calc((100% - var(--gutter)) / 2);
+
+    &.lg {
+      width: 100%;
+    }
   }
 
   @media (max-width: 480px) {
-    &.sm,
+    width: 100%;
+
     &.md,
-    &.lg { grid-column: span 1; }
+    &.lg {
+      width: 100%;
+    }
   }
 }
 
 
 // ======================================================================
-// ANIMATION STATES
+// ANIMATION — width collapses to 0, reflow happens naturally in flex
 
 .isotope-item {
-  transition: opacity 350ms lib.$easing, transform 350ms lib.$easing;
-
-  &.is-hiding {
-    opacity: 0;
-    transform: scale(0.95);
-    pointer-events: none;
-  }
-
-  &.is-entering {
-    opacity: 0;
-    transform: scale(0.97);
-  }
+  overflow: hidden;
+  box-sizing: border-box;
+  transition:
+    width  350ms lib.$easing,
+    opacity 350ms lib.$easing,
+    padding 350ms lib.$easing;
 }
+
+// CSS-only "hidden" state toggled by :checked radio siblings.
+// Non-matching items collapse to 0 width; flex reflows the remaining cards.
+@mixin col-zero {
+  width: 0 !important;
+  opacity: 0;
+  padding: 0;
+  pointer-events: none;
+}
+
+#f-work:checked  ~ .isotope-grid .isotope-item:not([data-filter="work"])  { @include col-zero; }
+#f-play:checked  ~ .isotope-grid .isotope-item:not([data-filter="play"])  { @include col-zero; }
+#f-write:checked ~ .isotope-grid .isotope-item:not([data-filter="write"]) { @include col-zero; }
+#f-speak:checked ~ .isotope-grid .isotope-item:not([data-filter="speak"]) { @include col-zero; }
 
 
 // ======================================================================
@@ -122,8 +165,9 @@
       width: 100%;
       aspect-ratio: 16 / 9;
       object-fit: cover;
-      transition: transform lib.$speed lib.$easing,
-                  filter lib.$speed lib.$easing;
+      transition:
+        transform lib.$speed lib.$easing,
+        filter lib.$speed lib.$easing;
       filter: saturate(92%);
     }
 
@@ -166,22 +210,19 @@
     line-height: 1.5;
   }
 
-  // Hover
   &:hover {
     .item-figure img {
       transform: scale(1.03);
       filter: saturate(1.1) brightness(1.05);
     }
+
     .item-title {
       color: var(--link-color-hover);
     }
   }
 }
 
-
-// ======================================================================
-// LARGE ITEM TREATMENT
-
+// Large item: wider image crop + larger title
 .isotope-item.lg {
   .item-figure img {
     aspect-ratio: 21 / 9;

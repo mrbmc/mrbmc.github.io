@@ -3,14 +3,20 @@ layout: layout.html
 bodyclass: portfolio isotope
 title: "Portfolio"
 cssfile: "css/pages/portfolio.css"
-jsfile: "js/portfolio.bundle.js"
 permalink: /portfolio/
+
 eleventyImport:
   collections: ["allProjects","post"]
 ---
 
-<nav class="isotope-filters" id="isotope-filters" aria-label="Filter portfolio items">
-<button class="filter-btn active" data-filter="all">All</button><button class="filter-btn" data-filter="work">Work</button><button class="filter-btn" data-filter="play">Play</button><button class="filter-btn" data-filter="write">Write</button><button class="filter-btn" data-filter="speak">Speak</button>
+<input type="radio" id="f-all" name="iso-filter" checked hidden>
+<input type="radio" id="f-work" name="iso-filter" hidden>
+<input type="radio" id="f-play" name="iso-filter" hidden>
+<input type="radio" id="f-write" name="iso-filter" hidden>
+<input type="radio" id="f-speak" name="iso-filter" hidden>
+
+<nav class="isotope-filters" aria-label="Filter portfolio items">
+<label for="f-all" class="filter-btn">All</label><label for="f-work" class="filter-btn">Work</label><label for="f-play" class="filter-btn">Play</label><label for="f-write" class="filter-btn">Write</label><label for="f-speak" class="filter-btn">Speak</label>
 </nav>
 
 <div class="isotope-grid full-width-grid" id="isotope-grid">
