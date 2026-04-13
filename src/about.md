@@ -9,7 +9,7 @@ cssfile: "css/pages/about.css"
 
 {% section "bio","full-width-grid grid" %}
 
-# Ridding The World Of Crummy Software{.blur-in .col-7 .slide-up}
+# Ridding the World of Crummy Software{.blur-in .col-7 .slide-up}
 
 I'm Brian, a design leader who builds teams and products from scratch. Over 20 years I've scaled design orgs from zero, shipped products to 130M+ users, and helped drive outcomes from a $55M acquisition to a $4B exit.<br /><br />Father 👧🏻 👦🏻, [cyclist](https://www.strava.com/athletes/773650) 🚲, [divemaster](https://www.steelgills.com) 🤿, [chef](https://www.fusionfamilyfeast.com/) 👨‍🍳{.large-type .blur-in .slide-up .col-7}
 
@@ -25,7 +25,7 @@ I'm Brian, a design leader who builds teams and products from scratch. Over 20 y
   </defs>
 </svg>
 
-1. [Mission](#bio) 
+1. [Intro](#bio) 
 1. [Highlights](#highlights)
 1. [Principles](#principles) 
 1. [Leadership](#leadership) 
