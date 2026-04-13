@@ -85,6 +85,12 @@ body.about {
     }
   }
 
+  #highlights {
+    & + ul li {
+      margin-bottom: var(--gutter);
+    }
+  }
+
   #leadership {
     @include lib.clearfix();
   }

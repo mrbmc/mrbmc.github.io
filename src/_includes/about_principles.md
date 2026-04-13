@@ -2,35 +2,24 @@
 
 ## Design Principles
 
-These three principles guide how I navigate design tradeoffs—the tension between what we need and what we want.
+The way I make product decisions and how I build teams are guided by the same principles. Design the conditions for people to do their best work. Design the work to last.
 
 ### 1. Durability
 
-Build interfaces that won't need constant redesign. Use familiar patterns users already understand. Choose solutions that scale and evolve rather than chasing trends.
+Build for two years from now, not the demo next week. That usually means cutting functionality, trusting users over adding guardrails, and buying before building. At Disney+ it meant choosing systems that could scale across global regions rather than over-engineering a single step in the purchase flow. Chasing trends creates maintenance debt.
 
-**Navigating tradeoffs:**
+### 2. Efficiency
 
-When stakeholders want flashy interactions, durability asks: will this matter in two years? When you're tempted to reinvent common patterns, it reminds you that familiarity reduces cognitive load. It distinguishes between solving real problems and creating maintenance debt.
+More code is rarely the answer. The real question is where complexity belongs. On consumer products, you absorb it in the backend. When Disney+ launched the bundle, we automatically healed mismatched Hulu and Disney accounts rather than asking users to resolve it. On internal tools, you surface the business logic and let the operator decide. Complexity doesn't disappear on its own. You have to design where it is carried.
 
-### 2. Versatility
+## Operating Principles
 
-Design for multiple contexts without building separate solutions for each. Anticipate different devices, user needs, and edge cases with flexible components that adapt gracefully.
+### 1. Curiosity
 
-**Navigating tradeoffs:**
+Ask why before how. The best design decisions start with a question that reframes the problem, not a solution looking for justification. I try to stay genuinely uncertain long enough to find the right question. Most bad products were built by people who were sure they knew the answer.
 
-When designing for your primary user, versatility asks: what about everyone else? It prevents over-optimization for one scenario at the expense of others. It tells you when one adaptable solution beats multiple specialized ones.
+### 2. Collaboration
 
-### 3. Efficiency
-
-Remove unnecessary steps. Reduce cognitive load. Get users to their goals with minimal friction.
-
-**Navigating tradeoffs:**
-
-When someone wants to add "just one more field," efficiency asks: is this truly necessary? It questions whether features add value or clutter. It forces hard conversations about whether something justifies its cognitive cost—designing for user goals, not our desire to showcase capability.
-
-&bull;&bull;&bull; {.center}
-
-These principles work together. Durability without versatility creates rigid systems. Versatility without efficiency creates bloat. Efficiency without durability doesn't scale.
-
+Great products aren't designed in isolation. The conditions for collaboration have to be built deliberately, inviting people into the process instead of mystifying it, sharing work before it's ready, making it safe to say the thing nobody wants to say. I've found that the best ideas rarely come from the mythical lone genius.
 
 {% endsection %}

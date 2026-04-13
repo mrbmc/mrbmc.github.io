@@ -2,102 +2,49 @@
 
 ## Design Leadership 
 
+Leadership is **50% inspiration** and **50% operation**. Most leaders trend one way or the other. I've learned to work both sides because I've never found a way to separate them, not because I'm exceptional at either. The inspiration without the operation is just a vision deck. The operation without the inspiration is just a Jira board.
 
-### Leadership Philopsophy
+I lead as a coach and protector more than a front-man. I will fight for what's right and fiercely defend the people doing the work, and every once in a while I can get on stage as a functional figurehead. Over time I've found that's what most people actually want: someone who has their back and clears the path.
 
-* Define a clear strategy.
-* Recruit smart, ambitious, people.
-* Build operational support for those people.
+### The Triple-C Framework
 
-Each of these points contains multitudes, but taken together enable me to rally teams around ambitious goals. I lean on my personal strengths as a **coach-mentor style of leader** more than a charismatic figurehead. This leverages my strongest skills of strategic insight, personalized coaching, and systems thinking.
-
-### Leadership Values 
-
-How I show up as a leader is inspired by lessons from nature, science, and history. There are highly effective leadership models in the animal kingdom that demonstrate the values I want to embody as a leader:
-+ **mentorship**
-+ **psychological safety**
-+ **collaboration**
-
-[Blog post: Leadership Models in Nature](/blog/leadership-in-nature/)
-
-[![Orca, Lion, Bee](/images/about/leadership-nature.jpg)](/blog/leadership-in-nature/) {.full-widths}
-
-### Management Framework
-
-As a functional expert I created a framework for nurturing high-performing teams that I call Triple-C.
-
-![Puzzle](/images/about/puzzle.svg){style="height:50vh;"}
+An operations framework I use to build and sustain high-performing design teams.
 
 #### Culture
 
-I believe culture can be designed by rewarding behavior that reinforces our values,  intentional hiring, and clear performance management.
-
-##### Supporting Elements
-
 ![Culture](/images/about/puzzle-culture.svg){.pull-right}
 
-- Team Mission
-- Cultural Values
-- Hiring Process
-- Performance Management
-- Routines & Rituals (critiques, sharing, celebrations)
+Culture can be designed. It starts with a clear team mission and explicit values, then gets reinforced through intentional hiring, honest performance management, and the rituals that make work feel productive and not performative: critiques, sharing sessions, and celebrations. The team you want emerges from the conditions you build.
 
 &nbsp;
 
 #### Craft
 
-Making things that meet high-quality standards requires learned skills applied in a repeatable process.
-
-##### Supporting Elements
-
 ![Craft](/images/about/puzzle-craft.svg)
 {.pull-right}
 
-- Quality Standards
-- Process Playbook
-- Coaching & Mentorship
-- Skill Development: Visual, Motion, Content
-- Design Systems
-- Career Frameworks
+Quality requires a repeatable process. That means setting clear standards, building a coaching culture, and giving people career frameworks that reward growth. It also means investing in design systems so the team spends its energy on hard problems instead of reinventing solved ones. Craft is a muscle that has to be trained deliberately.
 
 &nbsp;
 
 #### Commerce
 
-Design is a business function built on creativity. The acts of research, ideation, and delivery are used to make an impact.
+![Commerce](/images/about/puzzle-commerce.svg){.pull-right}
 
-##### Supporting Elements
+Design is a business function. Research, ideation, and delivery only matter if they move the needle. I keep teams oriented around a clear design strategy, grounded in evidence and insights, and connected to product vision and program goals. The budget is real, the outcomes are measurable, and the work has to justify both.
 
-![Culture](/images/about/puzzle-commerce.svg){.pull-right}
+![Puzzle](/images/about/puzzle.svg){style="height:50vh;"}
 
-- Design Strategy 
-- Evidence & Insights
-- Product Vision
-- Program management
-- Team Budget
+{% endsection %}
 
 
 <style>
 .pull-right {
-    width:19vw;
+    width: 19vw;
     float: right;
-@media (max-width: 767px) {
-    width:38vw;
+    margin-left: var(--gutter);
+    @media (max-width: 767px) {
+        width:38vw;
+    }
 }
-}
-
-	.pillars {
-		display: flex;
-		justify-content: space-between;
-	}
-	.pillars .kpi {
-		text-align: center;
-		padding: 1rem;
-	}
-	.pillars svg {
-		height: 10vw;
-	}
 </style>
-
-
-{% endsection %}
