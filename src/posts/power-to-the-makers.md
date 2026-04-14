@@ -2,14 +2,12 @@
 title: "Power to the Makers"
 date: 2026-03-28
 description: Designers have a superpower — the ability to make things that don't exist yet. It's time to price that power accordingly.
-eleventyExcludeFromCollections: false
+eleventyExcludeFromCollections: true
 tags:
   - design
   - leadership
   - capitalism
 ---
-
-# Makers and Merchants
 
 Dear Designers,
 

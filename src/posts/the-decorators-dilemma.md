@@ -2,14 +2,12 @@
 title: "The Decorator's Dilemma"
 date: 2026-03-28
 description: Vibe coding makes building cheap by externalizing the real cost onto creators whose work was taken without consent. We've seen this pattern before.
-eleventyExcludeFromCollections: false
+eleventyExcludeFromCollections: true
 tags:
   - design
   - technology
   - capitalism
 ---
-
-# The Decorator's Dilemma
 
 I had two app ideas I was genuinely excited about building. A virtual tour guide for bikepacking routes. A wildlife conservation survey disguised as a scuba diving logbook. Both stalled at the same line: building them meaningfully required AI-generated content derived from models trained on stolen data, and every vibe coding tool was ready to oblige. When I hit that ethical boundary, I stopped. Other people don't.
 
