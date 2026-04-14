@@ -57,6 +57,13 @@ const paths = {
       input: 'src/assets/js/login.js',
       output: 'www/js/login.bundle.js'
     },
+    // {
+    //   input: 'src/assets/js/gaia/pixi.js',
+    //   output: 'www/js/pixi.bundle.js'
+    //   globals: {
+    //     'pixi': 'PIXI'
+    //   },
+    // },
     {
       input: 'src/assets/js/crane.js',
       output: 'www/js/crane.bundle.js',
@@ -66,10 +73,6 @@ const paths = {
       },
       format: 'es'  // Keep ES module format for importmap
     },
-    // {
-    //   input: 'src/assets/js/gaia/pixi.js',
-    //   output: 'www/js/pixi.bundle.js'
-    // },
   ],
   js: [
     'src/assets/js/gaia/*.js'
@@ -396,7 +399,10 @@ function uncache() {
 INVOCATION
 * * * * * * * * * * * * * * * * * * * */
 exports.watch = function() {
-  watch(['src/assets/js/*.js','src/assets/js/**/*.mjs'], series(bundleJS));
+  watch(['src/assets/js/*.js','src/assets/js/**/*.mjs','src/assets/js/gaia/*.js'], series(
+    transpileJS,
+    bundleJS
+  ));
   // watch(paths.css, transpileCSS);
 }
 

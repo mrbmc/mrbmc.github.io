@@ -26,7 +26,7 @@ const perceptionRadius = 10;
 
 // Boid geometry and material
 const boidGeometry = new THREE.SphereGeometry(0.3, 8, 8);
-const boidMaterial = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+const boidMaterial = new THREE.MeshBasicMaterial({ color: 0x0099CC });
 
 // Boids array
 const boids = [];

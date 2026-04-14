@@ -9,9 +9,13 @@ eleventyExcludeFromCollections: false
 # Hello world
 
 
-[Boids Flocking](/gaia/boids/)
+[Boids Pure JS](/gaia/boids/)
 
-[Boids WebGL](/gaia/boidsgl/)
+[Boids WebGL](/gaia/boids-webgl/)
+
+[Boids Three](/gaia/boids-three/)
+
+[Three](/gaia/three/)
 
 [Game of Life](/gaia/life/)
 
@@ -20,6 +24,8 @@ eleventyExcludeFromCollections: false
 [Smoke](/gaia/smoke/)
 
 [Wind](/gaia/wind/)
+
+[Pixi](/gaia/pixi/)
 
 </main>
 
