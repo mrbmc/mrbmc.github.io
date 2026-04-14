@@ -190,7 +190,7 @@ Major in Music Business & Technology
 Focus on post-modern composition & synthesis with Morton Subotnik, Dr. Kenneth Peacock, and Ken Walicki.
 
 ## Scrum Alliance
-### Certified Scrum Product Owner (CSPO) #### 2012
+### Certified Scrum Product Owner (CSPO)#### 2012
 
 <style>
 @media print {
