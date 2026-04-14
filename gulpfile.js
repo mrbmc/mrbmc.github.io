@@ -342,19 +342,24 @@ function cleanUp() {
 
 function upload() {
   const log = argv.verbose ? console.log : () => {};
-  let cmd = "aws s3 sync www "+S3BUCKET+" --delete";
+  let cmd = "aws s3 sync www "+S3BUCKET+" --exclude '.DS_Store'";
   if(dryrun) {
     cmd += " --dryrun";
     console.log(cmd);
   }
-  return exec(cmd, function (err, stdout, stderr) {
-    if(argv.verbose) {
-      console.log(stdout);
-      console.log(stderr);      
-    }
-  }).on('error',(err)=>{
-      console.error(`Error deploying: ${err}`);
-      process.exit(1);
+  return new Promise((resolve, reject) => {
+    exec(cmd, function (err, stdout, stderr) {
+      if (argv.verbose) {
+        console.log(stdout);
+        console.log(stderr);
+      }
+      if (err) {
+        console.error(`Error uploading to S3: ${stderr || err.message}`);
+        reject(err);
+      } else {
+        resolve();
+      }
+    });
   });
 }
 
@@ -367,18 +372,23 @@ function uncache() {
 
   if(dryrun) {
     console.log(cmd);
-    return true;
+    return Promise.resolve();
   }
 
-  return exec(cmd, function (err, stdout, stderr) {
-    if(argv.verbose) {
-      console.log(stdout);
-      console.log(stderr);      
-    }
-  }).on('error',(err)=>{
-      console.error(`Error deploying: ${err}`);
-      process.exit(1);
-  })
+  return new Promise((resolve, reject) => {
+    exec(cmd, function (err, stdout, stderr) {
+      if (argv.verbose) {
+        console.log(stdout);
+        console.log(stderr);
+      }
+      if (err) {
+        console.error(`Error invalidating CloudFront cache: ${stderr || err.message}`);
+        reject(err);
+      } else {
+        resolve();
+      }
+    });
+  });
 }
 
 
