@@ -60,9 +60,9 @@
     --theater-foreground:    var(--white);
 
     --border-color:          var(--gray-mid);
-
-    --link-color:            var(--black);
-    --link-color-hover:      var(--primary);
+ 
+    --link-color:            var(--primary);
+    --link-color-hover:      var(--secondary);
 
     // GRID & LAYOUT
     // ------------------------------------------------------------
@@ -82,8 +82,11 @@
     // ------------------------------------------------------------
     --base-font: #{lib.$base-font-family};
     --mono-font: #{lib.$mono-font-family};
-    --head-font: #{lib.$head-font-family};
+    --heading-font: #{lib.$head-font-family};
     --serif-font: #{lib.$serif-font-family};
+    --base-weight: #{lib.$base-font-weight};
+    --heading-weight: #{lib.$head-font-weight};
+    --display-weight: #{lib.$display-font-weight};
 
     // NAVBAR
     // ------------------------------------------------------------
@@ -94,8 +97,8 @@
     // --navbar-border:                var(--border-color);
     // --navbar-text:                  var(--body-foreground);
     // --navbar-primary:               var(--primary);
-    // --navbar-link-color:            var(--link-color);
-    // --navbar-link-hover-color:      var(--link-color-hover);
+    --navbar-link-color:            var(--body-emphasized);
+    --navbar-link-hover-color:      var(--body-foreground);
     // --navbar-link-hover-background: var(--muted-background);
     // --navbar-link-active-color:     var(--body-background);
     // --navbar-link-active-background: var(--body-foreground);

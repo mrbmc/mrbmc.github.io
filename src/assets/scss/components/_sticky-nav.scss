@@ -35,10 +35,11 @@
       font-size: .85rem;
       transition: all lib.$speed lib.$easing;
       background: var(--navbar-background);
+      color: var(--navbar-link-color);
 
       &:hover {
         background: var(--muted-background);
-        color: var(--body-emphasized);
+        color: var(--navbar-link-hover-color);
       }
 
       &.on {

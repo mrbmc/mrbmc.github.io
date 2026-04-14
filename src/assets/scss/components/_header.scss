@@ -59,11 +59,11 @@
       padding: 0 calc(var(--gutter) * .5);
       border-radius: var(--border-radius);
       text-decoration: none;
-      color: var(--navbar-foreground);
-
+      color: var(--navbar-link-color);
+      
       &:hover {
         background: var(--muted-background);
-        color: var(--navbar-emphasized);
+        color: var(--navbar-link-hover-color);
       }
 
       &.nav-cv, &.nav-resume, &.nav-photos {

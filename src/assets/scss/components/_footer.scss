@@ -24,13 +24,6 @@
             flex-direction: row;
             justify-content: center;
             gap: var(--gutter);
-            a {
-                // color: var(--accent-foreground);
-                // margin: 0 (lib.$gutter * 0.5);
-                &:hover {
-                    // color: var(--white);
-                }
-            }
         }
         p,a {
             text-align: center;
@@ -57,6 +50,7 @@
                 width: $itemsize;
                 height: $itemsize;
                 display: block;
+                color: var(--navbar-link-color);
             }
             a.link-linkedin svg {
                 filter: saturate(0);
