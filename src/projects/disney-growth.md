@@ -7,7 +7,7 @@ eleventyExcludeFromCollections: false
 tags:
   - work
 summary: Leading Growth Design from inception to **105M subscribers**.
-description: Over three years I built the Growth Design team, architected the UX strategy, and managed a cross-functional program to launch Disney+ and scale it across the world. Disney+ became the fastest growing streaming service ever, going from **0 - 105M subscribers** in two years. As we surpassed subscriber targets, we used data-driven design to grow **MRR & AARPU 25% YoY**.
+description: We began with the most ambiguous of goals, connect directly with Disney's consumers. There was no team, no process, and no product. I built the organizational infrastructure from scratch -- securing headcount, designing the operating model, and fighting to get designers into the rooms where design constraints were actually being defined.
 jobtitle: Senior Director, Product Design
 sponsor: Disney Streaming
 accomplishments: 
@@ -17,6 +17,7 @@ accomplishments:
 timeline: 2018-2020
 casestudy: true
 ---
+Disney+ became the fastest growing streaming service ever, going from **0 - 105M subscribers** in two years. We used data-driven design to grow **MRR & AARPU 25% YoY**.
 
 ![Disney+ Welcome on All Devices](/images/portfolio/disney-growth/disney-growth-device-cluster.png){.full-width-grid}
 
@@ -24,30 +25,30 @@ casestudy: true
 
 | Role | Contributions | Design Team | Timeline |
 | -- | -- | -- | -- |
-| Senior Director, Product Design | 1. [Built a high performing team](#project-team) and empowered them to pursue the right outcomes.<br><br>2. Defined [experience principles](#ux-tenets) to align cross-functional teams across timezones and features.<br><br>3. [Communicated the product value](#landing-page) clearly to consumers.<br><br>4. Presented a [native experience](#tv-signup) on every device in every [global region](#global-expansion). | 7 Product Designers<br>2 Researchers<br>4 Design Specialists | Dec 2018 - Dec 2020 |
+| Senior Director, Product Design | Built the org from 3 generalists to a 13-person program including managers, researchers, and specialists<br /><br />Designed the product operating model with the VP of Product<br /><br />Established experience principles adopted across all cross-functional teams<br /><br />Negotiated platform agreements with Apple, Roku, and global resellers<br /><br />Launched and scaled across 30+ devices and 10+ global regions | 7 Product Designers<br>2 Researchers<br>4 Design Specialists | Dec 2018 - Dec 2020 |
 
 {.rotate #summary}
 
 ### Assembling The Team{#project-team}
 
-I established Growth Design as a center of excellence as part of the launch of ESPN+. I secured the funding for headcount, evanglized the roles & responsibilities across the org, and built partnerships with Product, Engineering and Marketing.
+Three generalists. No researchers, no specialists, no managers. That was Growth Design when I took it on.
 
-Over the next two years I grew the team from 3 generalists to a program of 12 designers including a Manager, Principal, Researchers, and a Program Manager. I mentored two new designer leaders into positions leading their teams, with the autonomy to deliver against clear KPIs. 
-
-I collaborated with other design leaders to add specialists from our Motion Studio, Prototyping, Design Systems, and International UX teams.
+Over two years I built it into a 13-person program -- securing headcount, defining roles the org didn't know it needed, and mentoring two designers into leadership positions with real autonomy and clear KPIs. I pulled in specialists from Motion, Prototyping, Design Systems, and International UX as the complexity demanded it.
 
 ![](/images/portfolio/disney-growth/growth-team-end.png){.center .addLightbox}
 Growth Team in December 2020 {.caption}
 
 #### The Product-Operating Model{#operating-model}
 
-The formiddable scale of features, devices, and global territories required a new organization design and process to succeed. I collaborated with my peer Directors and VP of Product to evangelize empowered product teams that had **clear swim-lanes**, **accountability**, and **autonomy**. We expanded the new product operating model to include Data, Marketing, and Operations.
+We had an agency operating model based on fixed scope, budget, and time.  The scale of features, devices, and global territories required a new organization design and process to succeed. 
 
-![Pods](/images/portfolio/disney-growth/product-operating-model.png){.addLightbox}  
+I collaborated with my VP of Product and engineering peer Directors to evangelize empowered product teams that had **clear swim-lanes**, **accountability**, and **autonomy**. With their buy-in we could expand the model to include Data, Marketing, and Operations.
+
+![Disney+ Growth Operating Model](/images/portfolio/disney-growth/product-operating-model.png){.addLightbox}  
 
 Each pod had the autonomy to define their ways of working, but generally, they found a 2-week cadence of ceremonies to stay in sync, prioritize work, flatten issues, and break out working groups.
 
-![Pods](/images/portfolio/disney-growth/ceremony-cadence.svg){.addLightbox}
+![Disney+ Growth Meeting Cadence](/images/portfolio/disney-growth/ceremony-cadence.svg){.addLightbox}
 
 ### Experience Principles (aka Tenets or Axioms){#ux-tenets}
 
@@ -91,7 +92,7 @@ We started with a "reference" design and our happy path; and then adjusted varia
 {.grid .well .full-width-grid}
 
 
-**TVOS** from Apple was the most complex of all TV devices due to their unique HIG standards, payment methods, and remote control. We iterated dozens of times to arrive at a design that satisfied Apple's UX standards and supported Disney's business goals. **This set a precedent for all other streaming services**.
+**tvOS** required navigating Apple's HIG standards while protecting Disney's direct payment model. Dozens of iterations and months of negotiations with Apple followed, but the result **defined the signup experience for every streaming service that followed.**.
 
 + ![TVOS Welcome](/images/portfolio/disney-growth/signup-tvos-screen-1.png) {.col-2}
 + ![Create Account](/images/portfolio/disney-growth/signup-tvos-screen-2.png) {.col-2}
@@ -227,12 +228,7 @@ Disney+ became the fastest-growing streaming service *ever*.
 
 ### Takeaways {#takeaways}
 
-I don't believe that "Growth Design" was responsible for all this success. Disney+ was a desirable product offered at the right time. However, I believe that we did the work necessary – all the user archetypes, devices, payment methods, partnerships, and design systems - to maximize the opportunity.
-
->"We often miss opportunity because it's dressed in overalls and looks like work."  
->–Thomas Edison
-
-In mid-2021 I took on a new opportunity within Disney Streaming to lead design for [STAR+](https://www.starplus.com) our new general entertainment service in Latin America. I handed off the Growth Design team, roadmaps, and partnerships to my colleague to continue Disney+'s growth over the next 18 months. 
+The work -- user archetypes, devices, payment methods, partnerships, and design systems -- was what turned a desirable product into a record-breaking one. The foundation I built continued to contribute to Disney+'s growth for the next 18 months.
 
 <style>
 @media (prefers-color-scheme: dark) {
