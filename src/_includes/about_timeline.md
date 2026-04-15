@@ -6,6 +6,8 @@
 + Led the design of [Disney+ GroupWatch](/portfolio/disney-groupwatch/), a social co-viewing feature that reached 15% adoption and set a new model for how Disney ships consumer innovation.
 + Built & managed a program for [SAAS Tools at Disney](/portfolio/disney-enterprise/), yielding $100M/pa cost savings and 200% growth in AARPU.
 + Led the design of streaming services for NHL, MLB, Eurosport, PGA, and MLS - growing MLB's streaming business toward a $4B exit.
-+ Led the team building a [patented](https://patents.google.com/patent/US20170195373A1/) podcast platform that paid creators a fair commission at [BlogTalkRadio](/portfolio/blogtalkradio/) – leading to a $55M acquisition.
++ Led the team building a [patented](https://patents.google.com/patent/US20170195373A1/) podcast platform that paid creators a fair commission at [BlogTalkRadio](/portfolio/blogtalkradio/) – leading to a $55M acquisition.  
+  
+  [Resume (2 page PDF)](/images/uploads/Brian_McConnell-Resume_2026.pdf){.button}
 
 {.card}
