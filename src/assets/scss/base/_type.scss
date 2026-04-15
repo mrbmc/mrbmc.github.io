@@ -5,12 +5,12 @@
 @font-face {
   font-family: "Monument";
   font-weight: lib.$base-font-weight;
-  src: url('/css/fonts/ABCMonumentGrotesk-Light-Trial.woff2');
+  src: url('/css/fonts/ABCMonumentGrotesk-Regular-Trial.woff2');
 }
 @font-face {
   font-family: "Monument";
   font-weight: lib.$bold-font-weight;
-  src: url('/css/fonts/ABCMonumentGrotesk-Medium-Trial.woff2');
+  src: url('/css/fonts/ABCMonumentGrotesk-Bold-Trial.woff2');
 }
 
 @font-face {
@@ -69,7 +69,8 @@
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  font-size: clamp(18px, 1.6vw, 28px);
+  font-size: 16px;
+  font-size: clamp(18px, 1.2vw, 28px);
   --type-scale: 1.2;
   @media (orientation: portrait) {
     --type-scale: 1.12;
@@ -107,13 +108,13 @@ h2 {
   font-size: calc(1rem * pow(var(--type-scale), 5));
 }
 h3 {
-  font-size: calc(1rem * pow(var(--type-scale), 3));
-}
-h4 {
   font-size: calc(1rem * pow(var(--type-scale), 2));
 }
-h5 {
+h4 {
   font-size: calc(1rem * pow(var(--type-scale), 1));
+}
+h5 {
+  font-size: calc(1rem * pow(var(--type-scale), 0.8));
 }
 .large-type {
   font-size: lib.$large-font-size;
