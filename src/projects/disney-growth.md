@@ -1,6 +1,7 @@
 ---
 title: Launching & Scaling Disney+
-date: 2020-12-01
+order: 1
+date: 2019-11-14
 thumbnail: /images/portfolio/disney-growth/disney-growth-thumb.jpg
 eleventyExcludeFromCollections: false
 tags:

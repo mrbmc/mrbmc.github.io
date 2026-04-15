@@ -1,6 +1,7 @@
 ---
 title: Disney Enterprise XD
-date: 2020-09-01
+order: 2
+date: 2021-10-01
 thumbnail: /images/portfolio/disney-enterprise/optumus-mockup.jpg
 #masthead-image: /images/portfolio/disney-enterprise/disney-enterprise-sso_gates.png
 eleventyExcludeFromCollections: false

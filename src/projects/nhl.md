@@ -1,5 +1,6 @@
 ---
 title: NHL.TV & NHL Apps
+order: 5
 date: 2018-12-05
 thumbnail: /images/portfolio/nhl/nhl-thumbnail.png
 masthead-video: /images/portfolio/nhl/nhl-masthead.mp4

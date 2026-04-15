@@ -10,29 +10,21 @@ hidefooter: true
 
 {% section "masthead","full-width-grid" %}
 
-# Brian McConnell {.blur-in}
+# I level up design teams to drive business outcomes.{.blur-in}
 
-I am a design leader who builds with technology and empathy. I embed human-centered practices into engineering-driven organizations and lead transformations at any scale.{.blur-in .large-type}
-
-* [Portfolio](/portfolio/)
+<!-- * [Portfolio](/portfolio/)
 * [How I Work](/about/)
 * [Blog](/blog/)
 
-{.blur-in .nav #mininav}
-
-<canvas id="crane-canvas"></canvas> {#crane}
+{.blur-in .nav #mininav} -->
 
 {% endsection %}
 
-{% comment %}
-Technical design leader who ships. I combine human-centered rigor and engineering fluency to build impactful products. Experienced leading transformations across startups and enterprises.
-{% endcomment %}
+## Work{.full-width-grid .blur-in}
 
-<script type="importmap">
-{
-  "imports": {
-    "three": "https://cdn.jsdelivr.net/npm/three@0.181.2/build/three.module.js"
-  }
-}
-</script>
-<script type="module" src="/js/home.bundle.js"></script>
+{% include "_project-list.md", 
+	collection: collections.work, 
+	count:6,
+	id: "projects", 
+	class: "full-width-grid blur-in",
+	summary: false %}

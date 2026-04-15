@@ -16,6 +16,13 @@ module.exports = function(eleventyConfig) {
   // ========================================
   // CONTENT PREP
 
+  // WORK PROJECTS — sorted by explicit `order` frontmatter field
+  eleventyConfig.addCollection('work', collectionApi => {
+    return collectionApi.getFilteredByTag('work').sort((a, b) => {
+      return (b.data.order ?? Infinity) - (a.data.order ?? Infinity);
+    });
+  });
+
   // COLLECTION FOR PHOTO GALLERY
   eleventyConfig.addCollection('gallery', async collectionApi => {
     let files = await glob('src/images/gallery/*.jpg');
