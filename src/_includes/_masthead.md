@@ -8,8 +8,7 @@
 
 {% if masthead-image or masthead-video %}
 {% if masthead-video %}
-<video src="{{masthead-video}}" autoplay loop muted preload="auto" playsinline type="video/mp4"></video>
-{.figure}
+<figure data-parallax="81"><video src="{{masthead-video}}" autoplay loop muted preload="auto" playsinline type="video/mp4"></video></figure>
 {% else %}
 <figure data-parallax="81"><img src="{{ masthead-image }}" alt="{{masthead-title}}" /></figure>
 {% endif %}
