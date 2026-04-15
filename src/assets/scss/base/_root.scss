@@ -21,7 +21,7 @@
     --black-semi:       #{lib.$neutral-05}CC;
     --black:            #{lib.$neutral-05};
     --off-black:        #{lib.$neutral-10};
-    --gray-dark:        #{lib.$neutral-30};
+    --gray-dark:        #{lib.$neutral-20};
     --gray-mid:         #{lib.$neutral-40};
     --gray-light:       #{lib.$neutral-90};
     --off-white:        #{lib.$neutral-95};
@@ -113,8 +113,8 @@
         --black:        #{lib.$neutral-100};
         --off-black:    #{lib.$neutral-95};
         --gray-dark:    #{lib.$neutral-90};
-        --gray-mid:     #{lib.$neutral-60};
-        --gray-light:   #{lib.$neutral-30};
+        --gray-mid:     #{lib.$neutral-40};
+        --gray-light:   #{lib.$neutral-10};
         --off-white:    #{lib.$neutral-05};
         --white:        #{lib.$neutral-0};
         --white-semi:   #{lib.$neutral-05}CC;
@@ -131,7 +131,7 @@
     };
 }
 ::selection {
-    background: var(--secondary);
+    background: var(--quartiary);
 }
 html {
     scroll-behavior: smooth;

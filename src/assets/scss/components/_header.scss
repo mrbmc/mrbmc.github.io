@@ -22,16 +22,19 @@
   a {
     font-family: lib.$navbar-font-family;
     font-weight: lib.$navbar-font-weight;
+    color: var(--navbar-link-color);
   }
 
   .nav-home,.nav-top {
     width: $logo-size;
     height: $logo-size;
+    line-height: $logo-size;
     z-index: 30;
     overflow: hidden;
     border-radius: var(--border-radius);
     text-decoration: none;
     svg {
+      color: var(--link-color);
       width: $logo-size;
       height: $logo-size;
     }
@@ -59,7 +62,7 @@
       padding: 0 calc(var(--gutter) * .5);
       border-radius: var(--border-radius);
       text-decoration: none;
-      color: var(--navbar-link-color);
+      margin-left: var(--gutter);
       
       &:hover {
         background: var(--muted-background);
