@@ -9,11 +9,10 @@ eleventyExcludeFromCollections: false
 summary: Redesigning a beloved brand for an ambitious future. 
 description: I led an end-to-end redesign across TV, Mobile and Web of Europe's largest streaming sports service (analogous to ESPN in the US).
 ---
-![](/images/portfolio/eurosport/eurosport-product-lineup-2x1.jpg){.full-width-grid}
 
 I directed a trans-atlantic team of designers & researchers in re-imagining Europe's largest streaming sports service on TV, web, and mobile. We completed the end-to-end design and build in 4 months in advance of the 2018 Winter Olympics.
 
-
+![](/images/portfolio/eurosport/eurosport-product-lineup-2x1.jpg){.full-width-grid}
 
 
 ## A Unified Experience Across Devices

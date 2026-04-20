@@ -8,7 +8,6 @@ cssfile: "css/pages/project.css"
 {% include "_masthead.md" %}
 {% else %}
 # {{title}} { .blur-in}
-{% if description %}{{ description }}{.summary .blur-in .large}{% endif %}
 {% endif %}
 
 {{content}}

@@ -75,6 +75,8 @@ const paths = {
     },
   ],
   js: [
+    'src/assets/js/*.js',
+    'src/assets/js/**/*.mjs',
     'src/assets/js/gaia/*.js'
   ],
   css: [
@@ -399,7 +401,7 @@ function uncache() {
 INVOCATION
 * * * * * * * * * * * * * * * * * * * */
 exports.watch = function() {
-  watch(['src/assets/js/*.js','src/assets/js/**/*.mjs','src/assets/js/gaia/*.js'], series(
+  watch(paths.js, series(
     transpileJS,
     bundleJS
   ));

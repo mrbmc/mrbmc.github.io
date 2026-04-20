@@ -128,7 +128,7 @@ body.project {
                 max-height: calc(100vh - var(--gutter-xl));
                 max-width: calc(100vw - var(--gutter-xl));
                 object-fit: cover;
-                object-position: 50% 0%;
+                // object-position: 50% 0%;
                 border-radius: var(--border-radius);
             }
             video {

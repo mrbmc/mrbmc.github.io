@@ -16,6 +16,8 @@ accomplishments:
 timeline: 2019-2020
 ---
 
+Nurturing an innovative feature that connects guests to friends & loved ones from concept through launch to adoption.
+
 <video src="/images/portfolio/disney-groupwatch/GW-Demo_02-24.mp4" autoplay loop muted preload="auto" playsinline type="video/mp4" class="full-width-grid"></video>
 
 * [Discover](#discover) 

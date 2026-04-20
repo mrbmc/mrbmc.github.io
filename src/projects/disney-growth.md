@@ -17,6 +17,8 @@ accomplishments:
 timeline: 2018-2020
 casestudy: true
 ---
+We began with the most ambiguous of goals, connect directly with Disney's consumers. There was no team, no process, and no product. I built the organizational infrastructure from scratch -- securing headcount, designing the operating model, and fighting to get designers into the rooms where design constraints were actually being defined.
+
 Disney+ became the fastest growing streaming service ever, going from **0 - 105M subscribers** in two years. We used data-driven design to grow **MRR & AARPU 25% YoY**.
 
 ![Disney+ Welcome on All Devices](/images/portfolio/disney-growth/disney-growth-device-cluster.png){.full-width-grid}
@@ -29,7 +31,7 @@ Disney+ became the fastest growing streaming service ever, going from **0 - 105M
 
 {.rotate #summary}
 
-### Assembling The Team{#project-team}
+## Assembling The Team{#project-team}
 
 Three generalists. No researchers, no specialists, no managers. That was Growth Design when I took it on.
 
@@ -38,23 +40,21 @@ Over two years I built it into a 13-person program -- securing headcount, defini
 ![](/images/portfolio/disney-growth/growth-team-end.png){.center .addLightbox}
 Growth Team in December 2020 {.caption}
 
-#### The Product-Operating Model{#operating-model}
+### The Product-Operating Model{#operating-model}
 
-We had an agency operating model based on fixed scope, budget, and time.  The scale of features, devices, and global territories required a new organization design and process to succeed. 
+Coordinating parallel teams working toward an immovable deadline is a design problem. The solution is the same as any other: define the constraints, reduce unnecessary friction, and protect the conditions for good work.
 
-I collaborated with my VP of Product and engineering peer Directors to evangelize empowered product teams that had **clear swim-lanes**, **accountability**, and **autonomy**. With their buy-in we could expand the model to include Data, Marketing, and Operations.
+We started with an agency model - fixed scope, fixed budget, fixed time - that couldn't survive contact with the scale of what we were building. I worked with my VP of Product and engineering peers to replace it with empowered product pods with **clear swim-lanes**, **accountability**, and **autonomy**. Data, Marketing, and Operations joined the model as the work demanded it.
 
 ![Disney+ Growth Operating Model](/images/portfolio/disney-growth/product-operating-model.png){.addLightbox}  
 
-Each pod had the autonomy to define their ways of working, but generally, they found a 2-week cadence of ceremonies to stay in sync, prioritize work, flatten issues, and break out working groups.
+Each pod defined its own ways of working. Most landed on a two-week cadence that balanced coordination with focus. Just enough ceremony to stay in sync, not so much that it consumed the work.
 
 ![Disney+ Growth Meeting Cadence](/images/portfolio/disney-growth/ceremony-cadence.svg){.addLightbox}
 
-### Experience Principles (aka Tenets or Axioms){#ux-tenets}
+## Experience Principles (aka Tenets or Axioms){#ux-tenets}
 
-We established **Experience Principles** for Disney+ because we've seen principles improve the quality, and coherence, of design decisions made on large complex projects. By co-authoring these with our cross-functional teammates, they became real living ideas that people would reference while collaborating.
-
-A good design principle is unique to the product it is written for. It should inform what *not* to do as much as what you should do.
+These four principles were co-authored with our cross-functional teams and used as a shared language in every design review. They were specific enough to tell you what *not* to do, which is the only kind of principle that actually works.
 
 + **"First stream, first."**{.large-type}  
   Disney's beloved content is their competitive advantage. Escorting guests quickly into a browsing experience with familiar titles was more valuable than collecting marketing data, or onboarding through explicit personalization choices. {.col-3 .card}
@@ -67,22 +67,45 @@ A good design principle is unique to the product it is written for. It should in
 
 {.grid .full-width-grid}
 
-### Landing Page{#landing-page}
+## Landing Page{#landing-page}
 
-The homepage evolved from early 2018 until mid-2021 evolving as we learned how to **communicate value** to consumers. The most important factor to Disney+ subscribers was *showing*, not telling, a variety of content for their whole family.
+### Late Breaking Changes
 
-+ ![Show more content to enforce the value prop](/images/portfolio/disney-growth/olp-v4.jpg) {.col-6 .row-2}
-+ ![Emphasizing the Bundle offer](/images/portfolio/disney-growth/olp-v3.jpg) {.col-3}
-+ ![Updated with the Bundle](/images/portfolio/disney-growth/olp-v2.jpg) {.col-3}
-+ ![V1 for beta testing](/images/portfolio/disney-growth/olp-v1.jpg) {.col-3}
-+ ![Stimulus for research](/images/portfolio/disney-growth/olp-v0.jpg) {.col-3}
+Two months before launch, the brief changed. Disney+ would launch alongside a bundle with Hulu and ESPN+ -- two products with their own identities, existing subscribers, and equal strategic weight. We had a nearly finished product and a design system already built.
+
+The question was simple to state and hard to solve: how do you give two products equal weight on the front page of a third without creating confusion? The research couldn't resolve it -- Disney+ hadn't launched yet, and ESPN+ was inherently confusing to users unfamiliar with sports streaming. We made a call: equal weighting, with the explicit plan to pivot once we had real data.
+
+My lead designer drove dozens of homepage treatments, pushing on artwork and offer framing simultaneously. My job was to protect that exploration and make sure every gut reaction in the room had to justify itself.
+
++ ![V1 for beta testing](/images/portfolio/disney-growth/olp-v1.jpg){.contain} {.col-6}
++ ![Updated with the Bundle](/images/portfolio/disney-growth/olp-v2.jpg){.contain} {.col-6}
 {.grid .well .full-width-grid}
 
-### TV & Connected Devices Signup {#tv-signup}
+### Guiding Leadership Through Design
 
-TV is the biggest platform for engagement, with 70% of views on living room devices across *dozens* of devices (Roku, Fire TV, Samsung TVs, tvOS, Playstation, XBox, Smart TVs and Cable Boxes). Each has unique remote controls, payment terms, and graphics rendering capabilities. 
+Every UX session told us the same thing: users responded viscerally to content art. Real scenes, real titles, real breadth. We knew it would sell. We launched brand-forward anyway -- iconic characters, executive stakeholders appeased, ops constraints respected. It was a defensible call.
 
-We started with a "reference" design and our happy path; and then adjusted variants for each device.
+Post-launch we iterated toward what the research had told us all along.
+
++ ![Updated with the Bundle](/images/portfolio/disney-growth/olp-v2.jpg) {.col-6 .contain}
++ ![Show more content to enforce the value prop](/images/portfolio/disney-growth/olp-v4.jpg) {.col-6 .contain}
+{.grid .well .full-width-grid}
+
+## TV & Connected Devices Signup {#tv-signup}
+
+Television is where Disney+ lives. Seventy percent of views happen on living room devices -- which made it the most important surface to get right, and the most complex to design for. 
+
+The complexity wasn't just visual. It was three overlapping problems across *dozens* of devices (Roku, Fire TV, Samsung TVs, tvOS, Playstation, XBox, Smart TVs and Cable Boxes):
+
+1. input models ranging from four-direction d-pad remotes to game controllers to voice; 
+2. payment methods that varied by platform, region, and partner agreement; 
+3. rendering capabilities that differed so dramatically between a Roku and a PlayStation that the same design could look completely different on each.
+
+![tv remotes](/images/portfolio/disney-growth/tv-controllers.png){.card}
+
+The solution was a system. We designed a single reference experience -- the happy path, built around "first stream, first" and the principle of being just a little simpler and smoother than anything else on the market. Then we derived variants for each device class.
+
+### The Reference Design
 
 + ![Signup TV Reference](/images/portfolio/disney-growth/tv-reference-signup-1.png) {.col-4}
 + ![Signup TV Reference](/images/portfolio/disney-growth/tv-reference-signup-2.png) {.col-4}
@@ -91,6 +114,27 @@ We started with a "reference" design and our happy path; and then adjusted varia
 + ![Signup TV Reference](/images/portfolio/disney-growth/tv-reference-signup-5.png) {.col-6}
 {.grid .well .full-width-grid}
 
+### The variants
+
+#### Input Model
+
+D-pad devices like tvOS and Roku required every interaction to be reachable through four directional inputs and a single select. Game consoles like Xbox and PlayStation brought richer input models but different rendering constraints and user expectations.
+
+#### Payment method
+
+Each platform had its own payment infrastructure, terms, and business incentives -- not all of them aligned with Disney's.
+
++ ![Signup PS4](/images/portfolio/disney-growth/signup-ps4-screen-1.png)
++ ![Signup PS4](/images/portfolio/disney-growth/signup-ps4-screen-2.png)
++ ![Signup PS4](/images/portfolio/disney-growth/signup-ps4-screen-3.png)
++ ![Signup PS4](/images/portfolio/disney-growth/signup-ps4-screen-4.png)
++ ![Signup PS4](/images/portfolio/disney-growth/signup-ps4-screen-5.png)
++ ![Signup PS4](/images/portfolio/disney-growth/signup-ps4-screen-6.png)
++ ![Signup PS4](/images/portfolio/disney-growth/signup-ps4-screen-7.png)
++ ![Signup PS4](/images/portfolio/disney-growth/signup-ps4-screen-8.png)
+{.gallery}
+
+#### Platform Agreements
 
 **tvOS** required navigating Apple's HIG standards while protecting Disney's direct payment model. Dozens of iterations and months of negotiations with Apple followed, but the result **defined the signup experience for every streaming service that followed.**.
 
@@ -105,8 +149,9 @@ We started with a "reference" design and our happy path; and then adjusted varia
 + ![TV OS Success](/images/portfolio/disney-growth/signup-tvos-screen-11.png) {.col-4 .row-2}
 {.grid .well .full-width-grid}
 
+Roku presented a different challenge. Rather than navigating design standards, we pushed back on their in-app purchase model entirely -- redirecting subscribers to a direct payment flow that protected Disney's margin and subscriber relationship.
 
-#### Optimizing Signup On TV {#qr-codes}
+### Optimizing Signup On TV {#qr-codes}
 
 After launch, we observed that login & signup completion rates on Tv were just *20%* of those on Mobile and Web. Our hypothesis was to move people off TV and onto their phones for signup by using QR Codes or "License Plates".
 
@@ -129,13 +174,13 @@ In-market we saw a modest drop in conversion rate, that was offset by an increas
 
 **200% increase**{.positive} MRR
 
-### Partnerships{#partners}
+## Partnerships{#partners}
 
 **30% of our subscribers** come through resellers. We designed a versatile and scalable UX across web and TV devices for our partners to resell Disney+ across global regions. We used a systemic design approach to use one flow for redemptions (gift cards, resellers, bundle activations) and for cable boxes that lack payment methods.
 
 ![Redemption Flow](/images/portfolio/disney-growth/disney-redemption-flow.png){.full-width-grid}
 
-#### Cable Resellers
+### Cable Resellers
 
 + ![offer](/images/portfolio/disney-growth/b2b2c-canal-offer.png) {.col-2 .row-2}
 + ![choose plan](/images/portfolio/disney-growth/b2b2c-choose-plan.png) {.col-3 .row-3}
@@ -145,7 +190,7 @@ In-market we saw a modest drop in conversion rate, that was offset by an increas
 + ![](/images/portfolio/disney-growth/b2b2c-canal-success.png) {.col-2 .row-2}
 {.grid .well .full-width-grid}
 
-### Global expansion{#global-expansion}
+## Global expansion{#global-expansion}
 
 We grew Disney+ rapidly by expanding horizontally into new geographic markets. Each region has unique standards for signing a subscription contract, payment methods, and content ratings. Here were some notable new requirements:
 
@@ -168,7 +213,7 @@ Latin America required additional fields for Tax collection in Argentina and Chi
 
 ![payment forms](/images/portfolio/disney-growth/disney+-signup-AR-step_4.png){.addLightbox}
 
-### Optimizing Subscribers for Revenue {#plan-picker}
+## Optimizing Subscribers for Revenue {#plan-picker}
 
 In 2021 as Disney+ subscriber numbers climbed and cable carriage fees dropped, the strategy evolved. We learned that our biggest lever for increasing MRR (or LTV) would be leaning into the Disney Bundle with Hulu and ESPN+. The Disney Bundle provided 4x the LTV as our standalone plan:
 
@@ -184,7 +229,7 @@ We designed a new "plan picker" to help consumers pick the best plan for their f
 ![Plan Picker Test](/images/portfolio/disney-growth/plan-picker-test-slide.001.jpeg)
 A/B flows comparison{.caption}
 
-#### Results
+### Outcomes
 
 **+0.8% Total CVR**{.positive}   
 **-1.2% MRR**{.negative}   
@@ -195,28 +240,25 @@ A/B flows comparison{.caption}
 
 Exact figures redacted for security.{.caption}
 
-Overall conversion rate increased; supported by much higher conversions on the Disney+ standalone offer. Unfortunately, this came at the expense of Bundle sales that went down, bringing overall revenue down with it.
+We gained a surprising insight from the test. Overall conversion rate increased; supported by much higher conversions on the Disney+ standalone offer. We also saw Bundle sales decrease, bringing overall revenue down with it. The design worked as expected, guiding users to their desired product, but it also taught us we needed to market the value of the bundle better.
 
 Our focus formally moved from **net subscribers** to **MRR**. 
 
-### V2 Workshop {#workshop}
+## V2 Workshop {#workshop}
 
-My direct reports propsed a cross-functional summit for everyone across our Pods to refocus and collaborate. I secured the funding, brought leaders (at VP level) to the table, and facilitated several modules. 
+Three months after launch we had something we hadn't had before: real data from paying customers. We also had a hypothesis -- that the next phase of growth required genuine cross-functional collaboration, not just coordinated handoffs.
 
-1. Develop a shared vision for Disney+ Onboarding.
-2. Align on communication for terms, customer segments, and needs.
-3. Explore user journeys; Identify problem areas and opportunities
-4. Determine priorities as a team
+I proposed and co-facilitated a summit that brought product, design, engineering, product marketing, performance marketing, user research, and data science into the same room for the first time. Marketing VPs competed for spots. Some product partners needed more convincing.
+
+We defined "onboarding" together as an organization. We built real user journeys for selling the Bundle. The insights from that room directly contributed to the 25% MRR growth that followed.
 
 ![Growth Summit](/images/portfolio/disney-growth/workshop-pictogram.jpg)
 
 ![Growth Summit](/images/portfolio/disney-growth/workshop-agenda.jpg)
 
-We produced a new unified customer journey and a list of viable ideas to test with users.
-
 ![](/images/portfolio/disney-growth/bundle-workshop-wireframes.jpg){.full-width}
 
-### Outcomes{#outcomes}
+## Outcomes{#outcomes}
 
 Disney+ became the fastest-growing streaming service *ever*. 
 
@@ -225,8 +267,6 @@ Disney+ became the fastest-growing streaming service *ever*.
 {.grid}
 
 {% include "./images/portfolio/disney-growth/chart-disney-growth.svg" %}
-
-### Takeaways {#takeaways}
 
 The work -- user archetypes, devices, payment methods, partnerships, and design systems -- was what turned a desirable product into a record-breaking one. The foundation I built continued to contribute to Disney+'s growth for the next 18 months.
 

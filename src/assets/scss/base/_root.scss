@@ -31,7 +31,7 @@
     --primary:          #{lib.$primary};
     --secondary:        #{lib.$secondary};
     --tertiary:         #{lib.$tertiary};
-    --quartiary:        #{lib.$quartiary};
+    --quaternary:        #{lib.$quaternary};
     --on-primary:       #{lib.$neutral-100};
     --breakpoint:       #{lib.$breakpoint};
     --success:          #{lib.$success};
@@ -131,7 +131,7 @@
     };
 }
 ::selection {
-    background: var(--quartiary);
+    background: var(--quaternary);
 }
 html {
     scroll-behavior: smooth;
