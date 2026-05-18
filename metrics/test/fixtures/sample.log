@@ -1,0 +1,8 @@
+2026-04-01	12:00:00	IAD89-P1	1234	1.2.3.4	GET	mrbmc.com	/blog/post	200	-	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36	-	-	Hit	abc123
+2026-04-01	12:01:00	IAD89-P1	1234	1.2.3.5	GET	mrbmc.com	/	200	-	Googlebot/2.1 (+http://www.google.com/bot.html)	-	-	Hit	abc124
+2026-04-01	12:02:00	IAD89-P1	1234	1.2.3.6	POST	mrbmc.com	/api/data	200	-	Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/120.0.0.0	-	-	Miss	abc125
+2026-04-01	12:03:00	IAD89-P1	1234	1.2.3.7	GET	mrbmc.com	/page	301	-	Mozilla/5.0 (X11; Linux x86_64) Firefox/120.0	-	-	Redirect	abc126
+2026-04-01	12:04:00	IAD89-P1	1234	5.6.7.8	GET	mrbmc.com	/about	200	-	Mozilla/5.0 AppleWebKit/537.36 Chrome/120.0.0.0 Safari/537.36	-	-	Hit	abc127
+2026-04-01	12:05:00	IAD89-P1	1234	1.2.3.9	GET	mrbmc.com	/wp-admin/login.php	200	-	Mozilla/5.0 (compatible; MSIE 10.0)	-	-	Miss	abc128
+2026-04-01	12:06:00	IAD89-P1	1234	1.2.3.10	GET	mrbmc.com	/contact	200	-	Mozilla/5.0 (compatible; SemrushBot/7)	-	-	Hit	abc129
+2026-04-01	12:07:00	IAD89-P1	1234	9.9.9.9	GET	mrbmc.com	/portfolio	200	-	Mozilla/5.0 (iPhone; CPU iPhone OS 17_0) AppleWebKit/605.1.15	-	-	Hit	abc130
