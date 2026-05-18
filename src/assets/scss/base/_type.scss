@@ -14,6 +14,17 @@
 }
 
 @font-face {
+  font-family: "Montreal";
+  font-weight: lib.$base-font-weight;
+  src: url('/css/fonts/PPNeueMontreal-Medium.woff2');
+}
+@font-face {
+  font-family: "Montreal";
+  font-weight: lib.$bold-font-weight;
+  src: url('/css/fonts/PPNeueMontreal-Bold.woff2');
+}
+
+@font-face {
   font-family: "Adelle Sans";
   font-weight: lib.$base-font-weight;
   src: url('/css/fonts/Adelle_Sans_Light.woff');

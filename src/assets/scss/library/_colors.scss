@@ -19,10 +19,9 @@
 // PRIMITIVE COLORS
 // -------------------------
 $_indigo:               #1e22a9;//hsl(238,70%,39%);//rgb(30, 34, 169)
-$_rose:                 hslToHex(340,70%,70%);
-$_pink:                 #ff6699;//hsl(340, 100%,70%);//rgb(255, 102, 153)
-$_sunshine:             #e6de00;//hsl(58, 100%, 45%);//
-$_cyan:              	  hslToHex(180,100%,50%);
+$_pink:                 #E87DA1;//hsl(340, 100%,70%);//rgb(241, 101, 148)
+$_yellow:               #c3be22;//hsl(58, 100%, 45%);//
+$_blue:              	  #2661a1;
 $_teal:                 hsl(192,62%,35%);
 $_orange:               hsl(19,100%,40%);
 
@@ -32,13 +31,13 @@ $primary-hue:           238;
 $primary-inverse:       #5A5FE2;
 $secondary:             $_pink;
 $tertiary:              $_teal;
-$quaternary:             $_sunshine;
+$quaternary:            $_yellow;
 $success:               $_teal;
 $error:                 $_orange;
 
 $neutral-hue:           58;
 $neutral-100:           hslToHex($neutral-hue,00%,100%);
-$neutral-95:            hslToHex($neutral-hue,34%,95%);
+$neutral-95:            hslToHex($neutral-hue,34%,96%);
 $neutral-90:            hslToHex($neutral-hue,21%,90%);
 $neutral-80:            hslToHex($neutral-hue,13%,82%);
 $neutral-70:            hslToHex($neutral-hue,08%,71%);
