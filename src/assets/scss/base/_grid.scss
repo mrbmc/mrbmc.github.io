@@ -4,9 +4,9 @@
 // GRID
 @mixin fullwidth ($fluid:false) {
   box-sizing: border-box;
-  width: 100vw;
-  margin-left: calc( max(var(--margin),var(--gutter)) * -1);
-  margin-right: 0;
+  width: 100dvw;
+  margin-left: calc(50% - 50dvw);
+  margin-right: calc(50% - 50dvw);
 
   @if $fluid {
     padding-left: var(--gutter-xl);
@@ -29,6 +29,12 @@
     padding-left: var(--gutter);
     padding-right: var(--gutter);
   }
+}
+
+img.full-width {
+  @include fullwidth(true);
+  max-height: 90vh !important;
+  object-fit: contain !important;
 }
 
 .grid {

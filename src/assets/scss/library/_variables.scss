@@ -36,7 +36,7 @@ $gutter: 1.38rem;
 $gutter-xl: $base-line-height * 2;
 $grid-columns: 12;
 // $grid-column: math.div(($grid-width - (($grid-columns - 1) * $gutter)), $grid-columns);
-$grid-margin: calc((100vw - $grid-width) * .5);
+$grid-margin: calc((100dvw - $grid-width) * .5);
 $breakpoint: 767px;
 $breakpoint-widescreen: 1599px;
 // $breakpoint-desktop: 960px;

@@ -140,4 +140,6 @@ body {
     margin: 0 auto;
     background: var(--body-background);
     color: var(--body-foreground);
+    overflow-x: hidden;
+    overflow-x: clip;
 }
