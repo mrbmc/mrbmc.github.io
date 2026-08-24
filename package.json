@@ -18,7 +18,9 @@
     "watch:js": "gulp watch",
     "watch": "npm-run-all watch:*",
     "start": "npm-run-all --parallel watch:*",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "metrics": "node metrics/metrics.js",
+    "metrics:test": "node --test metrics/test/parse.test.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
